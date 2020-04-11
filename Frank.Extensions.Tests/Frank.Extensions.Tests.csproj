@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="1.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Frank.Extensions.AutoFixture\Frank.Extensions.AutoFixture.csproj" />
+    <ProjectReference Include="..\Frank.Extensions.Collections\Frank.Extensions.Collections.csproj" />
+    <ProjectReference Include="..\Frank.Extensions.Enums\Frank.Extensions.Enums.csproj" />
+    <ProjectReference Include="..\Frank.Extensions.Json.DependencyInjection\Frank.Extensions.Json.DependencyInjection.csproj" />
+    <ProjectReference Include="..\Frank.Extensions.Json\Frank.Extensions.Json.csproj" />
+    <ProjectReference Include="..\Frank.Extensions.MongoDb\Frank.Extensions.MongoDb.csproj" />
+  </ItemGroup>
+
+</Project>
