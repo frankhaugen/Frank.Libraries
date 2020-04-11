@@ -14,12 +14,6 @@ namespace Frank.Extensions.MongoDb
             _mongoDatabase = mongoClient.GetDatabase(options.Value.DatabaseName);
         }
 
-        public MongoDbContext(TConfig options)
-        {
-            var mongoClient = new MongoClient(MongoClientSettings.FromConnectionString(options.ConnectionString));
-            _mongoDatabase = mongoClient.GetDatabase(options.DatabaseName);
-        }
-
         public IQueryable<TEntity> Collection<TEntity>(string collectionName = nameof(TEntity))
         {
             var name = typeof(TEntity).Name.ToLowerInvariant();

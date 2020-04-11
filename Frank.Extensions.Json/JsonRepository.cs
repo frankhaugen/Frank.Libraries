@@ -5,19 +5,19 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.Json
 {
-    public class JsonRepository<TEntity> : IJsonRepository<TEntity> where TEntity : class, new()
+    public class JsonRepository<TEntity, TConfig> where TConfig : JsonContextConfigurationBase, new()
     {
-        private readonly IJsonContext<TEntity> _jsonContext;
+        private readonly IJsonContext<TConfig> _jsonContext;
         private IQueryable<TEntity> _entities;
 
         public bool PendingChanges { get; private set; }
 
         public string? Folder { get; }
 
-        public JsonRepository(IJsonContext<TEntity> jsonContext)
+        public JsonRepository(IJsonContext<TConfig> jsonContext)
         {
             _jsonContext = jsonContext;
-            Folder = null;
+            Folder = "";
             PendingChanges = false;
         }
 
@@ -25,7 +25,7 @@ namespace Frank.Extensions.Json
         {
             if (_entities == null)
             {
-                _entities = await _jsonContext.GetJsonDataAsync(Folder);
+                _entities = await _jsonContext.GetJsonDataAsync<TEntity>(Folder);
             }
         }
 
@@ -39,7 +39,7 @@ namespace Frank.Extensions.Json
         {
             if (PendingChanges)
             {
-                _entities = await _jsonContext.GetJsonDataAsync(Folder);
+                _entities = await _jsonContext.GetJsonDataAsync<TEntity>(Folder);
                 PendingChanges = false;
             }
         }
@@ -90,7 +90,7 @@ namespace Frank.Extensions.Json
         public async Task RemoveAsync(TEntity entity)
         {
             await InitalizeAsync();
-            _entities = _entities.Where(x => x != entity);
+            _entities = _entities.Where(x => x.GetHashCode() != entity.GetHashCode());
             PendingChanges = true;
             await ChangesCompleted();
         }

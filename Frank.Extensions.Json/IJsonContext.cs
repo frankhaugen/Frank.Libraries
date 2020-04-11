@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.Json
 {
-    public interface IJsonContext<TEntity> where TEntity : class
+    public interface IJsonContext<TConfig> where TConfig : JsonContextConfigurationBase, new()
     {
-        Task<IQueryable<TEntity>> GetJsonDataAsync(string folderName = "");
-        Task SaveJsonDataAsync(IEnumerable<TEntity> records, string folderName = "", bool indented = true);
+        Task<IQueryable<TEntity>> GetJsonDataAsync<TEntity>(string folderName = "");
+        Task SaveJsonDataAsync<TEntity>(IEnumerable<TEntity> records, string folderName = "", bool indented = true);
     }
 }

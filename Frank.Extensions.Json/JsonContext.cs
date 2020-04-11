@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -6,22 +7,23 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.Json
 {
-    public class JsonContext<TEntity> : IJsonContext<TEntity> where TEntity : class, new()
+    public class JsonContext<TConfig> : IJsonContext<TConfig> where TConfig : JsonContextConfigurationBase, new()
     {
-        private readonly string _rootDataFolder;
+        private readonly TConfig _options;
 
         private readonly JsonSerializerOptions _serializerOptions;
 
-        public JsonContext(string rootDataFolder = "Data")
+        public JsonContext(IOptions<TConfig> options)
         {
+            _options = options.Value;
             _serializerOptions = new JsonSerializerOptions();
-            var directory = Directory.CreateDirectory(rootDataFolder);
-            _rootDataFolder = directory.FullName;
+            var directory = Directory.CreateDirectory(_options.RootFolder);
+            _options.RootFolder = directory.FullName;
         }
 
-        public async Task<IQueryable<TEntity>> GetJsonDataAsync(string folderName = "")
+        public async Task<IQueryable<TEntity>> GetJsonDataAsync<TEntity>(string folderName = "")
         {
-            var path = Path.Combine(_rootDataFolder, folderName, nameof(TEntity) + "s.json");
+            var path = Path.Combine(_options.RootFolder, folderName, typeof(TEntity).Name + "s.json");
 
             if (!File.Exists(path))
             {
@@ -33,12 +35,12 @@ namespace Frank.Extensions.Json
             return records.AsQueryable();
         }
 
-        public async Task SaveJsonDataAsync(IEnumerable<TEntity> records, string folderName = "", bool indented = true)
+        public async Task SaveJsonDataAsync<TEntity>(IEnumerable<TEntity> records, string folderName = "", bool indented = true)
         {
             _serializerOptions.WriteIndented = indented;
-            var directory = Directory.CreateDirectory(Path.Combine(_rootDataFolder, folderName));
+            var directory = Directory.CreateDirectory(Path.Combine(_options.RootFolder, folderName));
 
-            var path = Path.Combine(directory.FullName, $"{nameof(TEntity)}s.json");
+            var path = Path.Combine(directory.FullName, $"{typeof(TEntity).Name}s.json");
             var json = JsonSerializer.Serialize(records, _serializerOptions);
             await File.WriteAllTextAsync(path, json);
         }

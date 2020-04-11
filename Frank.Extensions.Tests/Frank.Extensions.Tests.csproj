@@ -24,7 +24,6 @@
     <ProjectReference Include="..\Frank.Extensions.AutoFixture\Frank.Extensions.AutoFixture.csproj" />
     <ProjectReference Include="..\Frank.Extensions.Collections\Frank.Extensions.Collections.csproj" />
     <ProjectReference Include="..\Frank.Extensions.Enums\Frank.Extensions.Enums.csproj" />
-    <ProjectReference Include="..\Frank.Extensions.Json.DependencyInjection\Frank.Extensions.Json.DependencyInjection.csproj" />
     <ProjectReference Include="..\Frank.Extensions.Json\Frank.Extensions.Json.csproj" />
     <ProjectReference Include="..\Frank.Extensions.MongoDb\Frank.Extensions.MongoDb.csproj" />
   </ItemGroup>
