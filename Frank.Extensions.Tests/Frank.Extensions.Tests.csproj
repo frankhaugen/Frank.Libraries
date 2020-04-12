@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Frank.Extensions.AutoFixture\Frank.Extensions.csproj" />
+    <ProjectReference Include="..\Frank.Extensions\Frank.Extensions.csproj" />
   </ItemGroup>
 
 </Project>
