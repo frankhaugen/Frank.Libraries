@@ -5,10 +5,26 @@
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/frankhaugen/Frank.Extensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/frankhaugen/Frank.Extensions</PackageProjectUrl>
+    <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>Extensions, AutoFixture, Test, OmitRecursion, Recursion</PackageTags>
+    <Description>This contains a very useful extension method for AutoFixture that allows you to OmitRecursion, (if a class has multiple nested objects, and/or self-reference, this simple extension method allows you to provent this from being an issue)</Description>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="4.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

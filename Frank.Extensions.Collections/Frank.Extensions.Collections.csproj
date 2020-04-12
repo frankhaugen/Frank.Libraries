@@ -5,6 +5,22 @@
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/frankhaugen/Frank.Extensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/frankhaugen/Frank.Extensions</PackageProjectUrl>
+    <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>IEnumerable, Collections, Enumerable, List, Batch, DataTable, ToDataTable, Random</PackageTags>
+    <Description>Ever wanted to quickly convert an IEnumerable to a DataTable, or quicly do batched operation on a list, or even pull out a random item from an IEnumerable, (Particularly useful for testing)? This Nuget gives you all that and more!</Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
