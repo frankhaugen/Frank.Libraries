@@ -32,3 +32,5 @@ jobs:
       run: dotnet nuget push **/Frank.Extensions.Json.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
     - name: Push MongoDb NuGet
       run: dotnet nuget push **/Frank.Extensions.MongoDb.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+    - name: Push Constants NuGet
+      run: dotnet nuget push **/Frank.Extensions.Constants.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
