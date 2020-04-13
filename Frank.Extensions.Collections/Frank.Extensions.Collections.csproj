@@ -12,6 +12,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageIcon>icon.png</PackageIcon>
+    <Authors>Frank R. Haugen</Authors>
     <PackageTags>IEnumerable, Collections, Enumerable, List, Batch, DataTable, ToDataTable, Random</PackageTags>
     <Description>Ever wanted to quickly convert an IEnumerable to a DataTable, or quicly do batched operation on a list, or even pull out a random item from an IEnumerable, (Particularly useful for testing)? This Nuget gives you all that and more!</Description>
   </PropertyGroup>

@@ -12,6 +12,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageIcon>icon.png</PackageIcon>
+    <Authors>Frank R. Haugen</Authors>
     <PackageTags>Mongo, MongoDb, NOSQL, Repository, IOC, DI, Dependency Injection, context</PackageTags>
     <Description>Tired of MongoDb nugets promising the world, but havn't been updated in years? Here is a very simple context/repository MongoDb wrapper for the MongoDb Driver, dives you as simple operations as possible</Description>
   </PropertyGroup>

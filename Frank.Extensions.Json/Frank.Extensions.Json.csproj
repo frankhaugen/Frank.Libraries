@@ -12,6 +12,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageIcon>icon.png</PackageIcon>
+    <Authors>Frank R. Haugen</Authors>
     <PackageTags>Json, Flat-File, DB, Database, Context, NOSQL, Repository, Pattern, Dependency Injection</PackageTags>
     <Description>Ever wanted to use a flat-file NOSQL database? Here you'll find a repository-pattern-like IOC-ready set of tools, (among others), to give you this esoteric functionality</Description>
   </PropertyGroup>
