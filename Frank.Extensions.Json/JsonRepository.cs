@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.Json
 {
-    public class JsonRepository<TEntity, TConfig> where TConfig : JsonContextConfigurationBase, new()
+    public class JsonRepository<TEntity, TConfig> : IJsonRepository<TEntity, TConfig> where TConfig : JsonContextConfigurationBase, new()
     {
         private readonly IJsonContext<TConfig> _jsonContext;
         private IQueryable<TEntity> _entities;
