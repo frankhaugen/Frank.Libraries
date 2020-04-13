@@ -13,8 +13,8 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageIcon>icon.png</PackageIcon>
     <Authors>Frank R. Haugen</Authors>
-    <PackageTags>Enums, Enum, Countries, Languages, Calling Codes, Planets, Cards, Continents</PackageTags>
-    <Description>A large collection of enums to simplify your life</Description>
+    <PackageTags>Constants, Cards</PackageTags>
+    <Description>Constants that are very useful, like the special characters for playing cards so you can make an online multiplayer blackjack console game</Description>
   </PropertyGroup>
 
   <ItemGroup>
