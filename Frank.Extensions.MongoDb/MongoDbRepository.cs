@@ -1,105 +1,127 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Frank.Extensions.MongoDb
 {
     public class MongoDbRepository<TEntity, TConfig> : IMongoDbRepository<TEntity, TConfig> where TEntity : IMongoEntity, new() where TConfig : MongoDbConfigurationBase, new()
     {
-        private readonly IMongoDbContext<TConfig> _mongoDbContext;
-        private IQueryable<TEntity> _entities;
+        private readonly IMongoCollection<TEntity> _collection;
 
         public MongoDbRepository(IMongoDbContext<TConfig> mongoDbContext)
         {
-            _mongoDbContext = mongoDbContext;
+            _collection = mongoDbContext.Collection<TEntity>();
         }
 
-        public bool PendingChanges { get; private set; }
-
-
-        private async Task InitalizeAsync()
+        public virtual IQueryable<TEntity> AsQueryable()
         {
-            if (_entities == null)
+            return _collection.AsQueryable();
+        }
+
+        public virtual IEnumerable<TEntity> FilterBy(Expression<Func<TEntity, bool>> filterExpression)
+        {
+            return _collection.Find(filterExpression).ToEnumerable();
+        }
+
+        public virtual IEnumerable<TProjected> FilterBy<TProjected>(Expression<Func<TEntity, bool>> filterExpression, Expression<Func<TEntity, TProjected>> projectionExpression)
+        {
+            return _collection.Find(filterExpression).Project(projectionExpression).ToEnumerable();
+        }
+
+        public virtual TEntity FindOne(Expression<Func<TEntity, bool>> filterExpression)
+        {
+            return _collection.Find(filterExpression).FirstOrDefault();
+        }
+
+        public virtual Task<TEntity> FindOneAsync(Expression<Func<TEntity, bool>> filterExpression)
+        {
+            return Task.Run(() => _collection.Find(filterExpression).FirstOrDefaultAsync());
+        }
+
+        public virtual TEntity FindById(ObjectId objectId)
+        {
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, objectId);
+            return _collection.Find(filter).SingleOrDefault();
+        }
+
+        public virtual Task<TEntity> FindByIdAsync(ObjectId objectId)
+        {
+            return Task.Run(() =>
             {
-                _entities = _mongoDbContext.ReadCollection<TEntity>();
-            }
+                var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, objectId);
+                return _collection.Find(filter).SingleOrDefaultAsync();
+            });
         }
 
-        private Task ChangesCompleted()
+        public virtual void InsertOne(TEntity document)
         {
-            PendingChanges = true;
-            return Task.CompletedTask;
+            _collection.InsertOne(document);
         }
 
-        public async Task DiscardChangesAsync()
+        public virtual Task InsertOneAsync(TEntity document)
         {
-            if (PendingChanges)
+            return Task.Run(() => _collection.InsertOneAsync(document));
+        }
+
+        public void InsertMany(ICollection<TEntity> documents)
+        {
+            _collection.InsertMany(documents);
+        }
+
+        public virtual async Task InsertManyAsync(ICollection<TEntity> documents)
+        {
+            await _collection.InsertManyAsync(documents);
+        }
+
+        public void ReplaceOne(TEntity document)
+        {
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, document._Id);
+            _collection.FindOneAndReplace(filter, document);
+        }
+
+        public virtual async Task ReplaceOneAsync(TEntity document)
+        {
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, document._Id);
+            await _collection.FindOneAndReplaceAsync(filter, document);
+        }
+
+        public void DeleteOne(Expression<Func<TEntity, bool>> filterExpression)
+        {
+            _collection.FindOneAndDelete(filterExpression);
+        }
+
+        public Task DeleteOneAsync(Expression<Func<TEntity, bool>> filterExpression)
+        {
+            return Task.Run(() => _collection.FindOneAndDeleteAsync(filterExpression));
+        }
+
+        public void DeleteById(ObjectId objectId)
+        {
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, objectId);
+            _collection.FindOneAndDelete(filter);
+        }
+
+        public Task DeleteByIdAsync(ObjectId objectId)
+        {
+            return Task.Run(() =>
             {
-                _entities = _mongoDbContext.ReadCollection<TEntity>();
-                PendingChanges = false;
-            }
+                var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, objectId);
+                _collection.FindOneAndDeleteAsync(filter);
+            });
         }
 
-        public async Task SaveChangesAsync()
+        public void DeleteMany(Expression<Func<TEntity, bool>> filterExpression)
         {
-            if (PendingChanges)
-            {
-                await _mongoDbContext.WriteCollectionAsync(_entities);
-                PendingChanges = false;
-            }
+            _collection.DeleteMany(filterExpression);
         }
 
-        public async Task<IQueryable<TEntity>> GetAsync()
+        public Task DeleteManyAsync(Expression<Func<TEntity, bool>> filterExpression)
         {
-            await InitalizeAsync();
-            return _entities;
-        }
-
-        public async Task AddAsync(TEntity entity)
-        {
-            await InitalizeAsync();
-            _entities = _entities.Append(entity);
-            await ChangesCompleted();
-        }
-
-        public async Task AddAsync(IEnumerable<TEntity> entities)
-        {
-            await InitalizeAsync();
-            foreach (var entity in entities)
-            {
-                await AddAsync(entity);
-            }
-            await ChangesCompleted();
-        }
-
-        public async Task UpdateAsync(TEntity original, TEntity @new)
-        {
-            await InitalizeAsync();
-            if (!_entities.Contains(original))
-                throw new ArgumentException($"The original entity does not exist");
-
-            await RemoveAsync(original);
-            await AddAsync(@new);
-            await ChangesCompleted();
-        }
-
-        public async Task RemoveAsync(TEntity entity)
-        {
-            await InitalizeAsync();
-            _entities = _entities.Where(x => x.GetHashCode() != entity.GetHashCode());
-            PendingChanges = true;
-            await ChangesCompleted();
-        }
-
-        public async Task RemoveAsync(IEnumerable<TEntity> entities)
-        {
-            await InitalizeAsync();
-            foreach (var entity in entities)
-            {
-                await RemoveAsync(entity);
-            }
-            await ChangesCompleted();
+            return Task.Run(() => _collection.DeleteManyAsync(filterExpression));
         }
     }
 }

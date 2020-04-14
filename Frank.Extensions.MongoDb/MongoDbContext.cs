@@ -1,9 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
-using MongoDB.Bson;
 using MongoDB.Driver;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Frank.Extensions.MongoDb
 {
@@ -17,18 +13,6 @@ namespace Frank.Extensions.MongoDb
             _mongoDatabase = mongoClient.GetDatabase(options.Value.DatabaseName);
         }
 
-        public IQueryable<TEntity> ReadCollection<TEntity>(string collectionName = nameof(TEntity)) where TEntity : IMongoEntity, new()
-        {
-            var name = typeof(TEntity).Name.ToLowerInvariant();
-            return _mongoDatabase.GetCollection<TEntity>(name).AsQueryable();
-        }
-
-        public async Task WriteCollectionAsync<TEntity>(IEnumerable<TEntity> entities) where TEntity : IMongoEntity, new()
-        {
-            var name = typeof(TEntity).Name.ToLowerInvariant();
-            //_mongoDatabase.GetCollection<TEntity>(name).DeleteMany(FilterDefinition<TEntity>.Empty);
-            //var writeModels = entities.Select(x => new InsertOneModel<TEntity>(x));
-            var writeModels = entities.Select(x => x.ToBsonDocument());
-        }
+        public IMongoCollection<T> Collection<T>() => _mongoDatabase.GetCollection<T>(typeof(T).Name);
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -54,10 +55,9 @@ namespace Frank.Extensions.Worker
                 },
             };
 
-            await _mongoDbRepository.AddAsync(cars);
-            await _mongoDbRepository.SaveChangesAsync();
+            await _mongoDbRepository.InsertManyAsync(cars);
 
-            var result = _mongoDbRepository.GetAsync();
+            var result = _mongoDbRepository.AsQueryable().ToList();
 
             Console.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions() { WriteIndented = true }));
         }
