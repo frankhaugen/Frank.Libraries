@@ -30,8 +30,8 @@ namespace Frank.Extensions.Json
                 return new List<TEntity>().AsQueryable();
             }
 
-            var json = await File.ReadAllTextAsync(path);
-            var records = JsonSerializer.Deserialize<IEnumerable<TEntity>>(json);
+            await using var fileStream = File.OpenRead(path);
+            var records = await JsonSerializer.DeserializeAsync<IEnumerable<TEntity>>(fileStream, _serializerOptions);
             return records.AsQueryable();
         }
 
