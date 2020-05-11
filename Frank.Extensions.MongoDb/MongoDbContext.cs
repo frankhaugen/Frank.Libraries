@@ -13,6 +13,6 @@ namespace Frank.Extensions.MongoDb
             _mongoDatabase = mongoClient.GetDatabase(options.Value.DatabaseName);
         }
 
-        public IMongoCollection<T> Collection<T>() => _mongoDatabase.GetCollection<T>(typeof(T).Name);
+        public IMongoCollection<T> Collection<T>() => _mongoDatabase.GetCollection<T>(typeof(T).Name.ToLowerInvariant() + "s");
     }
 }

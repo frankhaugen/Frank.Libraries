@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.MongoDb
 {
-    public class MongoDbRepository<TEntity, TConfig> : IMongoDbRepository<TEntity, TConfig> where TEntity : IMongoEntity, new() where TConfig : MongoDbConfigurationBase, new()
+    public class MongoDbRepository<TEntity, TConfig> : IMongoDbRepository<TEntity, TConfig> where TEntity : MongoEntity, new() where TConfig : MongoDbConfigurationBase, new()
     {
         private readonly IMongoCollection<TEntity> _collection;
 

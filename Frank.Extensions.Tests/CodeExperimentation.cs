@@ -33,7 +33,6 @@ namespace Frank.Extensions.Tests
         {
             var testLines = csv.Split('\n');
             var headerLine = testLines[0];
-
             var dataTable = new DataTable();
 
             foreach (var propertyInfo in typeof(Dude).GetProperties(BindingFlags.Public | BindingFlags.SetProperty))
@@ -48,7 +47,6 @@ namespace Frank.Extensions.Tests
             var decimalValue = "10,10";
             var decimalResult = Identify(decimalValue);
             decimalResult.Should().BeOfType<TypeCode>();
-
         }
 
         private TypeCode Identify(string value)

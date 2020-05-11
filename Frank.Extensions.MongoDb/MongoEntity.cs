@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Frank.Extensions.MongoDb
 {
-    public interface IMongoEntity
+    public class MongoEntity
     {
         [BsonId]
         public ObjectId _Id { get; set; }

@@ -5,11 +5,8 @@ using System;
 
 namespace Frank.Extensions.Worker.Models
 {
-    public class Car : IMongoEntity
+    public class Car : MongoEntity
     {
-        [BsonId]
-        public ObjectId _Id { get; set; }
-
         public string Name { get; set; }
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]

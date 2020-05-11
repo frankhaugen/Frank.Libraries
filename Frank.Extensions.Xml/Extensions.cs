@@ -13,7 +13,7 @@ namespace Frank.Extensions.Xml
         /// <typeparam name="T">An object to serialize to a XML data string.</typeparam>
         /// <param name="toSerialize">A helper method for any type of object to be serialized to a XML data string.</param>
         /// <returns>A string containing XML data of the object.</returns>
-        public static string SerializeObject<T>(this T toSerialize)
+        public static string SerializeObjectToXml<T>(this T toSerialize)
         {
             // create an instance of a XmlSerializer class with the typeof(T)..
             var xmlSerializer = new XmlSerializer(toSerialize.GetType());
@@ -36,7 +36,7 @@ namespace Frank.Extensions.Xml
         /// <param name="toDeserialize">An object of which XML data to deserialize. If the object is null a a default constructor is called.</param>
         /// <param name="xmlData">A string containing a serialized XML data do deserialize.</param>
         /// <returns>An object which is deserialized from the XML data string.</returns>
-        public static T DeserializeObject<T>(this T toDeserialize, string xmlData)
+        public static T DeserializeObjectFromXml<T>(this T toDeserialize, string xmlData)
         {
             // if a null instance of an object called this try to create a "default" instance for it with typeof(T),
             // this will throw an exception no useful constructor is found..
@@ -60,7 +60,7 @@ namespace Frank.Extensions.Xml
         /// <param name="toDeserialize">A type of an object of which XML data to deserialize.</param>
         /// <param name="xmlData">A string containing a serialized XML data do deserialize.</param>
         /// <returns>An object which is deserialized from the XML data string.</returns>
-        public static object DeserializeObject(Type toDeserialize, string xmlData)
+        public static object DeserializeObjectFromXml(Type toDeserialize, string xmlData)
         {
             // create an instance of a XmlSerializer class with the given type toDeserialize..
             var xmlSerializer = new XmlSerializer(toDeserialize);
