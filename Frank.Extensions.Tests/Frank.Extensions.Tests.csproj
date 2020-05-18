@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Frank.Extensions.Xml\Frank.Extensions.Xml.csproj" />
     <ProjectReference Include="..\Frank.Extensions\Frank.Extensions.csproj" />
   </ItemGroup>
 

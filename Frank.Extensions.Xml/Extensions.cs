@@ -33,14 +33,13 @@ namespace Frank.Extensions.Xml
         /// <note type="note">An exception will occur if a null reference is called an no valid constructor of the class is available.</note>
         /// </summary>
         /// <typeparam name="T">An object to deserialize from a XML data string.</typeparam>
-        /// <param name="toDeserialize">An object of which XML data to deserialize. If the object is null a a default constructor is called.</param>
         /// <param name="xmlData">A string containing a serialized XML data do deserialize.</param>
         /// <returns>An object which is deserialized from the XML data string.</returns>
-        public static T DeserializeObjectFromXml<T>(this T toDeserialize, string xmlData)
+        public static T DeserializeObjectFromXml<T>(this string xmlData) where T : class, new()
         {
             // if a null instance of an object called this try to create a "default" instance for it with typeof(T),
             // this will throw an exception no useful constructor is found..
-            object voidInstance = toDeserialize == null ? Activator.CreateInstance(typeof(T)) : toDeserialize;
+            var voidInstance = Activator.CreateInstance(typeof(T));
 
             // create an instance of a XmlSerializer class with the typeof(T)..
             var xmlSerializer = new XmlSerializer(voidInstance.GetType());
@@ -55,21 +54,36 @@ namespace Frank.Extensions.Xml
 
         // THIS: (C): VPKSoft, 2018, https://www.vpksoft.net
         /// <summary>
-        /// Deserializes an object which is saved to an XML data string.
+        /// Tries to deserializes an object which is saved to an XML data string. If the object has no instance a new object will be constructed if possible.
+        /// <note type="note">An exception will occur if a null reference is called an no valid constructor of the class is available.</note>
         /// </summary>
-        /// <param name="toDeserialize">A type of an object of which XML data to deserialize.</param>
+        /// <typeparam name="T">An object to deserialize from a XML data string.</typeparam>
         /// <param name="xmlData">A string containing a serialized XML data do deserialize.</param>
         /// <returns>An object which is deserialized from the XML data string.</returns>
-        public static object DeserializeObjectFromXml(Type toDeserialize, string xmlData)
+        public static bool TryDeserializeObjectFromXml<T>(this string xmlData, out T value) where T : class, new()
         {
-            // create an instance of a XmlSerializer class with the given type toDeserialize..
-            var xmlSerializer = new XmlSerializer(toDeserialize);
-
-            // construct a StringReader class instance of the given xmlData parameter to be deserialized by the XmlSerializer class instance..
-            using (var stringReader = new StringReader(xmlData))
+            try
             {
-                // return the "new" object deserialized via the XmlSerializer class instance..
-                return xmlSerializer.Deserialize(stringReader);
+                // if a null instance of an object called this try to create a "default" instance for it with typeof(T),
+                // this will throw an exception no useful constructor is found..
+                var voidInstance = Activator.CreateInstance(typeof(T));
+
+                // create an instance of a XmlSerializer class with the typeof(T)..
+                var xmlSerializer = new XmlSerializer(voidInstance.GetType());
+
+                // construct a StringReader class instance of the given xmlData parameter to be deserialized by the XmlSerializer class instance..
+                using (var stringReader = new StringReader(xmlData))
+                {
+                    // return the "new" object deserialized via the XmlSerializer class instance..
+                    value = (T)xmlSerializer.Deserialize(stringReader);
+                }
+
+                return true;
+            }
+            catch
+            {
+                value = null;
+                return false;
             }
         }
     }

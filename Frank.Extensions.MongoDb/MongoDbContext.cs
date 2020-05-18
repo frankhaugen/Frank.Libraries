@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System.Linq;
+using System.Reflection;
 
 namespace Frank.Extensions.MongoDb
 {
@@ -13,6 +15,14 @@ namespace Frank.Extensions.MongoDb
             _mongoDatabase = mongoClient.GetDatabase(options.Value.DatabaseName);
         }
 
-        public IMongoCollection<T> Collection<T>() => _mongoDatabase.GetCollection<T>(typeof(T).Name.ToLowerInvariant() + "s");
+        public IMongoCollection<T> Collection<T>()
+        {
+            return _mongoDatabase.GetCollection<T>(GetAttributeCollectionName<T>() + "s");
+        }
+
+        private string GetAttributeCollectionName<T>()
+        {
+            return (typeof(T).GetTypeInfo().GetCustomAttributes(typeof(CollectionName)).FirstOrDefault() as CollectionName)?.Name ?? typeof(T).Name.ToLowerInvariant();
+        }
     }
 }
