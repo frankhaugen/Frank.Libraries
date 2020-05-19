@@ -47,6 +47,8 @@ namespace Frank.Extensions.Tests
             var decimalValue = "10,10";
             var decimalResult = Identify(decimalValue);
             decimalResult.Should().BeOfType<TypeCode>();
+
+            _outputHelper.WriteLine(AppDomain.CurrentDomain.FriendlyName);
         }
 
         private TypeCode Identify(string value)
