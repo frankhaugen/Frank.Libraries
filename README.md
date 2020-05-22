@@ -1,3 +1,4 @@
+![Pipeline](https://github.com/frankhaugen/Frank.Extensions/workflows/Pipeline/badge.svg?branch=master)
 # Frank.Extensions
 A set of extensions libraries for .net standard
 
