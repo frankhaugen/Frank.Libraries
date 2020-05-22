@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Xml.Serialization;
 
-namespace Frank.Extensions.Xml
+namespace Frank.Extensions.Xml.Models.StandardBusinessDocument
 {
     /// <remarks/>
     [GeneratedCode("xsd", "4.8.3928.0")]
@@ -13,9 +13,8 @@ namespace Frank.Extensions.Xml
     [DesignerCategory("code")]
     [XmlType(Namespace = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader")]
     [XmlRoot(Namespace = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader", IsNullable = false)]
-    public partial class CorrelationInformation
+    public class CorrelationInformation
     {
-
         private DateTime _requestingDocumentCreationDateTimeField;
 
         private bool _requestingDocumentCreationDateTimeFieldSpecified;

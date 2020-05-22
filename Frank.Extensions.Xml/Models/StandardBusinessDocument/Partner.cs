@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Xml.Serialization;
 
-namespace Frank.Extensions.Xml
+namespace Frank.Extensions.Xml.Models.StandardBusinessDocument
 {
     /// <remarks/>
     [GeneratedCode("xsd", "4.8.3928.0")]
@@ -13,9 +13,8 @@ namespace Frank.Extensions.Xml
     [DesignerCategory("code")]
     [XmlType(Namespace =
         "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader")]
-    public partial class Partner
+    public class Partner
     {
-
         private PartnerIdentification _identifierField;
 
         private ContactInformation[] _contactInformationField;

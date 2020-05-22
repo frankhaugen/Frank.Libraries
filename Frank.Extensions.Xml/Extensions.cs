@@ -59,6 +59,7 @@ namespace Frank.Extensions.Xml
         /// </summary>
         /// <typeparam name="T">An object to deserialize from a XML data string.</typeparam>
         /// <param name="xmlData">A string containing a serialized XML data do deserialize.</param>
+        /// <param name="value"></param>
         /// <returns>An object which is deserialized from the XML data string.</returns>
         public static bool TryDeserializeObjectFromXml<T>(this string xmlData, out T value) where T : class, new()
         {

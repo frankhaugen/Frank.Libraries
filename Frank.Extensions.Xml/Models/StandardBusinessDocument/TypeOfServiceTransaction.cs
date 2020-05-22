@@ -2,7 +2,7 @@
 using System.CodeDom.Compiler;
 using System.Xml.Serialization;
 
-namespace Frank.Extensions.Xml
+namespace Frank.Extensions.Xml.Models.StandardBusinessDocument
 {
     /// <remarks/>
     [GeneratedCode("xsd", "4.8.3928.0")]

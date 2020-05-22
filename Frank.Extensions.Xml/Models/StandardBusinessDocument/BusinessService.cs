@@ -2,10 +2,9 @@
 using System.CodeDom.Compiler;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Xml;
 using System.Xml.Serialization;
 
-namespace Frank.Extensions.Xml
+namespace Frank.Extensions.Xml.Models.StandardBusinessDocument
 {
     /// <remarks/>
     [GeneratedCode("xsd", "4.8.3928.0")]
@@ -16,26 +15,24 @@ namespace Frank.Extensions.Xml
         "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader")]
     [XmlRoot(
         Namespace = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader", IsNullable = false)]
-    public partial class StandardBusinessDocument
+    public class BusinessService
     {
+        private string _businessServiceNameField;
 
-        private StandardBusinessDocumentHeader _standardBusinessDocumentHeaderField;
-
-        private XmlElement _anyField;
+        private ServiceTransaction _serviceTransactionField;
 
         /// <remarks/>
-        public StandardBusinessDocumentHeader StandardBusinessDocumentHeader
+        public string BusinessServiceName
         {
-            get => _standardBusinessDocumentHeaderField;
-            set => _standardBusinessDocumentHeaderField = value;
+            get => _businessServiceNameField;
+            set => _businessServiceNameField = value;
         }
 
         /// <remarks/>
-        [XmlAnyElement()]
-        public XmlElement Any
+        public ServiceTransaction ServiceTransaction
         {
-            get => _anyField;
-            set => _anyField = value;
+            get => _serviceTransactionField;
+            set => _serviceTransactionField = value;
         }
     }
 }

@@ -16,6 +16,7 @@ using System.CodeDom.Compiler;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Xml.Serialization;
+using Frank.Extensions.Xml.Models.StandardBusinessDocument;
 
 namespace Frank.Extensions.Xml
 {
