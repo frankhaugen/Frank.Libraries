@@ -7,14 +7,12 @@ namespace Frank.Extensions.AzureStorage.FileShare
 {
     public class FileShareClient
     {
-        private FileShareConfiguration _options;
-        private ShareClient _shareClient;
+        private readonly ShareClient _shareClient;
         private readonly IList<ShareFileMetadata> _shareFiles;
 
         public FileShareClient(IOptions<FileShareConfiguration> options)
         {
-            _options = options.Value;
-            _shareClient = new ShareClient(_options.ConnectionString, _shareClient.Name);
+            _shareClient = new ShareClient(options.Value.ConnectionString, _shareClient.Name);
             _shareFiles = new List<ShareFileMetadata>();
             Initialize();
         }
@@ -39,13 +37,13 @@ namespace Frank.Extensions.AzureStorage.FileShare
                     }
                     else
                     {
-                        _shareFiles.Add(new ShareFileMetadata(item.Name, dir.Uri.AbsolutePath, item.FileSize.Value));
+                        if (item.FileSize != null) _shareFiles.Add(new ShareFileMetadata(item.Name, dir.Uri.AbsolutePath, item.FileSize.Value));
                     }
                 }
             }
         }
 
-        public IEnumerable<ShareFileMetadata> FileItems
+        public IEnumerable<ShareFileMetadata>? FileItems
         {
             get
             {

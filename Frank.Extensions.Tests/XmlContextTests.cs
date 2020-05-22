@@ -21,7 +21,7 @@ namespace Frank.Extensions.Tests
         public void GetCollection_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
-            var xmlContext = new XmlContext<XmlTestModel>(Options.Create<XmlConfiguration>(new XmlConfiguration()));
+            var xmlContext = new XmlContext<XmlTestModel>(Options.Create(new XmlConfiguration()));
 
             // Act
             //var result = xmlContext.GetCollection();
@@ -34,8 +34,6 @@ namespace Frank.Extensions.Tests
 
             xmlContext.SaveChanges();
             _outputHelper.WriteLine(xmlContext.GetCollection().ToJson());
-
-
 
             // Assert
             Assert.True(true);

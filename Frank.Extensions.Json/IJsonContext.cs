@@ -4,9 +4,10 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.Json
 {
-    public interface IJsonContext<TConfig> where TConfig : JsonContextConfigurationBase, new()
+    public interface IJsonContext
     {
-        Task<IQueryable<TEntity>> GetJsonDataAsync<TEntity>(string folderName = "");
+        Task<IQueryable<TEntity>> GetJsonDataAsync<TEntity>(string? folderName = "");
+
         Task SaveJsonDataAsync<TEntity>(IEnumerable<TEntity> records, string folderName = "", bool indented = true);
     }
 }

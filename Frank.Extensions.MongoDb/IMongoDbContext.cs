@@ -2,7 +2,7 @@
 
 namespace Frank.Extensions.MongoDb
 {
-    public interface IMongoDbContext<TConfig> where TConfig : MongoDbConfigurationBase
+    public interface IMongoDbContext
     {
         IMongoCollection<T> Collection<T>();
     }

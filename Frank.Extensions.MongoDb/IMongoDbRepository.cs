@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.MongoDb
 {
-    public interface IMongoDbRepository<TEntity, TConfig> where TEntity : MongoEntity, new() where TConfig : MongoDbConfigurationBase, new()
+    public interface IMongoDbRepository<TEntity> where TEntity : MongoEntity, new()
     {
         IQueryable<TEntity> AsQueryable();
 

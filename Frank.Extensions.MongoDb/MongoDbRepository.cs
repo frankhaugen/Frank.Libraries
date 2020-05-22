@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.MongoDb
 {
-    public class MongoDbRepository<TEntity, TConfig> : IMongoDbRepository<TEntity, TConfig> where TEntity : MongoEntity, new() where TConfig : MongoDbConfigurationBase, new()
+    public class MongoDbRepository<TEntity> : IMongoDbRepository<TEntity> where TEntity : MongoEntity, new()
     {
         private readonly IMongoCollection<TEntity> _collection;
 
-        public MongoDbRepository(IMongoDbContext<TConfig> mongoDbContext)
+        public MongoDbRepository(IMongoDbContext mongoDbContext)
         {
             _collection = mongoDbContext.Collection<TEntity>();
         }
@@ -44,7 +44,7 @@ namespace Frank.Extensions.MongoDb
 
         public virtual TEntity FindById(ObjectId objectId)
         {
-            var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, objectId);
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
             return _collection.Find(filter).SingleOrDefault();
         }
 
@@ -52,7 +52,7 @@ namespace Frank.Extensions.MongoDb
         {
             return Task.Run(() =>
             {
-                var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, objectId);
+                var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
                 return _collection.Find(filter).SingleOrDefaultAsync();
             });
         }
@@ -79,13 +79,13 @@ namespace Frank.Extensions.MongoDb
 
         public void ReplaceOne(TEntity document)
         {
-            var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, document._Id);
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, document.Id);
             _collection.FindOneAndReplace(filter, document);
         }
 
         public virtual async Task ReplaceOneAsync(TEntity document)
         {
-            var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, document._Id);
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, document.Id);
             await _collection.FindOneAndReplaceAsync(filter, document);
         }
 
@@ -101,7 +101,7 @@ namespace Frank.Extensions.MongoDb
 
         public void DeleteById(ObjectId objectId)
         {
-            var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, objectId);
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
             _collection.FindOneAndDelete(filter);
         }
 
@@ -109,7 +109,7 @@ namespace Frank.Extensions.MongoDb
         {
             return Task.Run(() =>
             {
-                var filter = Builders<TEntity>.Filter.Eq(doc => doc._Id, objectId);
+                var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
                 _collection.FindOneAndDeleteAsync(filter);
             });
         }

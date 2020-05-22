@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Frank.Extensions.MongoDb
 {
-    public class MongoDbContext<TConfig> : IMongoDbContext<TConfig> where TConfig : MongoDbConfigurationBase, new()
+    public class MongoDbContext<TConfig> : IMongoDbContext where TConfig : MongoDbConfigurationBase, new()
     {
         private readonly IMongoDatabase _mongoDatabase;
 

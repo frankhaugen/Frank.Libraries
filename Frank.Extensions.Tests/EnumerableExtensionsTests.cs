@@ -7,13 +7,13 @@ using Xunit;
 
 namespace Frank.Extensions.Tests
 {
-    public class IEnumerableExtensionsTests
+    public class EnumerableExtensionsTests
     {
-        private Fixture _fixture = new Fixture();
+        private readonly Fixture _fixture = new Fixture();
 
-        private IEnumerable<string> _things;
+        private readonly IEnumerable<string> _things;
 
-        public IEnumerableExtensionsTests()
+        public EnumerableExtensionsTests()
         {
             _things = _fixture.CreateMany<string>(100);
         }

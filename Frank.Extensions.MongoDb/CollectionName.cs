@@ -7,7 +7,7 @@ namespace Frank.Extensions.MongoDb
     {
         public string? Name { get; set; }
 
-        public CollectionName(string name = null)
+        public CollectionName(string name = null!)
         {
             Name = name;
         }

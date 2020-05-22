@@ -1,4 +1,8 @@
-﻿namespace Frank.Extensions.Enums.Countries
+﻿// ReSharper disable InconsistentNaming
+
+// ReSharper disable UnusedMember.Global
+
+namespace Frank.Extensions.Enums.Countries
 {
     public enum FifaAbbreviation
     {

@@ -1,10 +1,16 @@
 ﻿using System.ComponentModel;
 
+// ReSharper disable InconsistentNaming
+
+// ReSharper disable UnusedMember.Global
+
 namespace Frank.Extensions.Enums.Countries
 {
     /// <summary>
     /// ISO 3166-1 Alpha 2 Country Codes
-    /// Taken from: <see cref="https://gist.github.com/jplwood/4f77b55cfedf2820dce0dfcd3ee0c3ea"/>
+    /// Taken from: <see>
+    ///     <cref>https://gist.github.com/jplwood/4f77b55cfedf2820dce0dfcd3ee0c3ea</cref>
+    /// </see>
     /// </summary>
     public enum CountryCode
     {

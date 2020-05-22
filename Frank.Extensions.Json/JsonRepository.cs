@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.Json
 {
-    public class JsonRepository<TEntity, TConfig> : IJsonRepository<TEntity, TConfig> where TConfig : JsonContextConfigurationBase, new()
+    public class JsonRepository<TEntity> : IJsonRepository<TEntity>
     {
-        private readonly IJsonContext<TConfig> _jsonContext;
-        private IQueryable<TEntity> _entities;
+        private readonly IJsonContext _jsonContext;
+        private IQueryable<TEntity> _entities = null!;
 
         public bool PendingChanges { get; private set; }
 
         public string? Folder { get; }
 
-        public JsonRepository(IJsonContext<TConfig> jsonContext)
+        public JsonRepository(IJsonContext jsonContext)
         {
             _jsonContext = jsonContext;
             Folder = "";
@@ -90,7 +90,7 @@ namespace Frank.Extensions.Json
         public async Task RemoveAsync(TEntity entity)
         {
             await InitalizeAsync();
-            _entities = _entities.Where(x => x.GetHashCode() != entity.GetHashCode());
+            _entities = _entities.Where(x => entity != null && (x != null && x.GetHashCode() != entity.GetHashCode()));
             PendingChanges = true;
             await ChangesCompleted();
         }

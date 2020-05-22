@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Frank.Extensions.Json
 {
-    public class JsonContext<TConfig> : IJsonContext<TConfig> where TConfig : JsonContextConfigurationBase, new()
+    public class JsonContext<TConfig> : IJsonContext where TConfig : JsonContextConfigurationBase, new()
     {
         private readonly TConfig _options;
 
@@ -21,7 +21,7 @@ namespace Frank.Extensions.Json
             _options.RootFolder = directory.FullName;
         }
 
-        public async Task<IQueryable<TEntity>> GetJsonDataAsync<TEntity>(string folderName = "")
+        public async Task<IQueryable<TEntity>> GetJsonDataAsync<TEntity>(string? folderName = "")
         {
             var path = Path.Combine(_options.RootFolder, folderName, typeof(TEntity).Name + "s.json");
 

@@ -2,6 +2,6 @@
 {
     public class JsonContextConfigurationBase
     {
-        public string RootFolder { get; set; }
+        public string? RootFolder { get; set; }
     }
 }

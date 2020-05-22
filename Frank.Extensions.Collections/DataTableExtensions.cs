@@ -30,30 +30,32 @@ namespace Frank.Extensions.Collections
 
         public static IEnumerable<TResult> Pivot<TResult, T, TColumn, TRow, TData>(this IEnumerable<T> source, Func<T, TColumn> columnSelector, Expression<Func<T, TRow>> rowSelector, Func<IEnumerable<T>, TData> dataSelector)
         {
+            source = source.ToList();
             var table = new DataTable();
             var rowName = ((MemberExpression)rowSelector.Body).Member.Name;
             table.Columns.Add(new DataColumn(rowName));
-            var columns = source.Select(columnSelector).Distinct();
+            var columns = source.Select(columnSelector).Distinct().ToList();
 
-            foreach (var column in columns)
-                table.Columns.Add(new DataColumn(column.ToString()));
+            foreach (var column in columns.Where(column => column != null))
+                if (column != null)
+                    table.Columns.Add(new DataColumn(column.ToString()));
 
             var rows = source.GroupBy(rowSelector.Compile())
                 .Select(rowGroup => new
                 {
-                    Key = rowGroup.Key,
+                    rowGroup.Key,
                     Values = columns.GroupJoin(
                         rowGroup,
                         c => c,
-                        r => columnSelector(r),
+                        r => columnSelector(r)!,
                         (c, columnGroup) => dataSelector(columnGroup))
-                });
+                }).ToList();
 
             foreach (var row in rows)
             {
                 var dataRow = table.NewRow();
                 var items = row.Values.Cast<object>().ToList();
-                items.Insert(0, row.Key);
+                items.Insert(0, row.Key!);
                 dataRow.ItemArray = items.ToArray();
                 table.Rows.Add(dataRow);
             }
@@ -63,7 +65,7 @@ namespace Frank.Extensions.Collections
 
         public static DataTable Pivot(this DataTable dt, DataColumn pivotColumn, DataColumn pivotValue)
         {
-            // find primary key columns 
+            // find primary key columns
             //(i.e. everything but pivot column and pivot value)
             var temp = dt.Copy();
             temp.Columns.Remove(pivotColumn.ColumnName);
@@ -88,7 +90,7 @@ namespace Frank.Extensions.Collections
                     pkColumnNames
                         .Select(c => row[c])
                         .ToArray());
-                // the aggregate used here is LATEST 
+                // the aggregate used here is LATEST
                 // adjust the next line if you want (SUM, MAX, etc...)
                 aggRow[row[pivotColumn.ColumnName].ToString()] = row[pivotValue.ColumnName];
             }

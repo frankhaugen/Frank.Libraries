@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace Frank.Extensions.Collections
 {
-    public static class IEnumerableExtensions
+    public static class EnumerableExtensions
     {
         public static IEnumerable<IEnumerable<T>> Batch<T>(this IEnumerable<T> items, int maxItems = 256)
         {
@@ -17,6 +17,7 @@ namespace Frank.Extensions.Collections
 
         public static T Random<T>(this IEnumerable<T> items)
         {
+            items = items.ToList();
             var random = new Random();
             var count = items.Count();
 
