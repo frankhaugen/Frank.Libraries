@@ -13,9 +13,9 @@ namespace Frank.Extensions.Worker
 {
     public class MongoDbRepositoryTester : BackgroundService
     {
-        private readonly IMongoDbRepository<Car, MongoSettings> _mongoDbRepository;
+        private readonly IMongoDbRepository<Car> _mongoDbRepository;
 
-        public MongoDbRepositoryTester(IMongoDbRepository<Car, MongoSettings> mongoDbRepository)
+        public MongoDbRepositoryTester(IMongoDbRepository<Car> mongoDbRepository)
         {
             _mongoDbRepository = mongoDbRepository;
         }
@@ -26,25 +26,25 @@ namespace Frank.Extensions.Worker
             {
                 new Car()
                 {
-                    _Id = ObjectId.GenerateNewId(),
+                    Id = ObjectId.GenerateNewId(),
                     Name = "Toyota",
                     Bought = DateTime.UtcNow
                 },
                 new Car()
                 {
-                    _Id = ObjectId.GenerateNewId(),
+                    Id = ObjectId.GenerateNewId(),
                     Name = "Subaru",
                     Bought = DateTime.UtcNow
                 },
                 new Car()
                 {
-                    _Id = ObjectId.GenerateNewId(),
+                    Id = ObjectId.GenerateNewId(),
                     Name = "Mazda",
                     Bought = DateTime.UtcNow
                 },
                 new Car()
                 {
-                    _Id = ObjectId.GenerateNewId(),
+                    Id = ObjectId.GenerateNewId(),
                     Name = "Nissan",
                     Bought = DateTime.UtcNow
                 },

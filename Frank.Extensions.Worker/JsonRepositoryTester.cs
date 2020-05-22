@@ -2,7 +2,6 @@
 using Frank.Extensions.Json;
 using Frank.Extensions.Worker.Models;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Text.Json;
 using System.Threading;
@@ -13,12 +12,10 @@ namespace Frank.Extensions.Worker
     public class JsonRepositoryTester : BackgroundService
     {
         private readonly Fixture _fixture = new Fixture();
-        private readonly ILogger<JsonRepositoryTester> _logger;
-        private readonly IJsonRepository<User, JsonSettings> _jsonRepository;
+        private readonly IJsonRepository<User> _jsonRepository;
 
-        public JsonRepositoryTester(ILogger<JsonRepositoryTester> logger, IJsonRepository<User, JsonSettings> jsonRepository)
+        public JsonRepositoryTester(IJsonRepository<User> jsonRepository)
         {
-            _logger = logger;
             _jsonRepository = jsonRepository;
         }
 
@@ -33,7 +30,6 @@ namespace Frank.Extensions.Worker
             var result = await _jsonRepository.GetAsync();
 
             Console.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions() { WriteIndented = true }));
-
         }
     }
 }
