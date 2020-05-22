@@ -8,11 +8,11 @@ namespace Frank.Extensions.Logging
     public class SqlLoggerProvider : ILoggerProvider
     {
         private readonly ConcurrentDictionary<string, SqlLogger> _loggers = new ConcurrentDictionary<string, SqlLogger>();
-        private readonly string _connectionString;
+        private readonly SqlLoggerConfiguration _configuration;
 
-        public SqlLoggerProvider(string connectionString)
+        public SqlLoggerProvider(SqlLoggerConfiguration configuration)
         {
-            _connectionString = connectionString;
+            _configuration = configuration;
         }
 
         public void Dispose()
@@ -22,12 +22,9 @@ namespace Frank.Extensions.Logging
 
         public ILogger CreateLogger(string categoryName)
         {
-            if (!TableExists())
-            {
-                CreateTable();
-            }
-
-            return _loggers.GetOrAdd(categoryName, name => new SqlLogger(name, _connectionString));
+            if (TableExists()) return _loggers.GetOrAdd(categoryName, name => new SqlLogger(name, _configuration));
+            if (CreateTable()) return _loggers.GetOrAdd(categoryName, name => new SqlLogger(name, _configuration));
+            throw new SqlLoggerException("A table could not be found or created. Make sure your connection string is correct");
         }
 
         private bool TableExists()
@@ -35,7 +32,7 @@ namespace Frank.Extensions.Logging
             var tableName = $"{nameof(LogItem)}s";
             var query = $"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME='{tableName}'";
 
-            using var connection = new SqlConnection(_connectionString);
+            using var connection = new SqlConnection(_configuration.ConnectionString);
             using var sqlCommand = new SqlCommand(query, connection);
             connection.Open();
             var result = sqlCommand.ExecuteScalar();
@@ -60,7 +57,7 @@ namespace Frank.Extensions.Logging
             query.AppendLine($"{nameof(LogItem.Name)} varchar(256),");
             query.AppendLine(")");
 
-            using var connection = new SqlConnection(_connectionString);
+            using var connection = new SqlConnection(_configuration.ConnectionString);
             using var sqlCommand = new SqlCommand(query.ToString(), connection);
             connection.Open();
             return sqlCommand.ExecuteNonQuery() > 0;
