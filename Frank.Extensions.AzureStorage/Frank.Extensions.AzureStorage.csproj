@@ -1,32 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <LangVersion>8.0</LangVersion>
-    <Nullable>enable</Nullable>
-    <IsPackable>false</IsPackable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
+        <RepositoryType>Git</RepositoryType>
+        <RepositoryUrl>https://github.com/frankhaugen/Frank.Extensions</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Extensions</PackageProjectUrl>
+        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageIcon>icon.png</PackageIcon>
+        <Authors>Frank R. Haugen</Authors>
+        <PackageTags>FileShare, Azure, Storage, File, Files, Share, Extension, Client</PackageTags>
+        <Description>Working with fileshares and blobs in code is a hassle so I made this nice tool to help out</Description>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="NewFolder\**" />
-    <EmbeddedResource Remove="NewFolder\**" />
-    <None Remove="NewFolder\**" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Azure.Storage.Files.Shares" Version="12.2.1" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.4" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.2.1" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Blob\" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <None Include="..\icon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Include="..\icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
 </Project>

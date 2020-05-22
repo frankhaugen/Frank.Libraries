@@ -12,7 +12,7 @@ namespace Frank.Extensions.AzureStorage.FileShare
 
         public FileShareClient(IOptions<FileShareConfiguration> options)
         {
-            _shareClient = new ShareClient(options.Value.ConnectionString, _shareClient.Name);
+            _shareClient = new ShareClient(options.Value.ConnectionString, options.Value.ShareName);
             _shareFiles = new List<ShareFileMetadata>();
             Initialize();
         }

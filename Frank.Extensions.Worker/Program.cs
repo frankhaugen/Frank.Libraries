@@ -20,6 +20,7 @@ namespace Frank.Extensions.Worker
                     services.AddLogging();
                     services.AddJsonRepository<User, JsonSettings>(hostContext.Configuration);
                     services.AddMongoDbRepository<Car, MongoSettings>(hostContext.Configuration);
+                    services.AddHostedService<FileShareClientTester>();
                     //services.AddHostedService<MongoDbRepositoryTester>();
                     //services.AddLogging(builder =>
                     //{
