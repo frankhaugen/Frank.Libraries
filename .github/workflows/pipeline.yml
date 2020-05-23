@@ -21,16 +21,4 @@ jobs:
     - name: Pack NuGet
       run: dotnet pack --no-build --output nupkgs -p:PackageVersion=1.$GITHUB_RUN_NUMBER
     - name: Push Primary NuGet
-      run: dotnet nuget push **/Frank.Extensions.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push AutoFixture NuGet
-      run: dotnet nuget push **/Frank.Extensions.AutoFixture.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Collections NuGet
-      run: dotnet nuget push **/Frank.Extensions.Collections.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Enum NuGet
-      run: dotnet nuget push **/Frank.Extensions.Enums.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Json NuGet
-      run: dotnet nuget push **/Frank.Extensions.Json.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push MongoDb NuGet
-      run: dotnet nuget push **/Frank.Extensions.MongoDb.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Constants NuGet
-      run: dotnet nuget push **/Frank.Extensions.Constants.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push **/Frank.Extensions*.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
