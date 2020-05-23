@@ -21,13 +21,6 @@ namespace Frank.Extensions.Worker
                     services.AddJsonRepository<User, JsonSettings>(hostContext.Configuration);
                     services.AddMongoDbRepository<Car, MongoSettings>(hostContext.Configuration);
                     services.AddHostedService<FileShareClientTester>();
-                    //services.AddHostedService<MongoDbRepositoryTester>();
-                    //services.AddLogging(builder =>
-                    //{
-                    //    connectionString = "Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=LoggingDemo;Integrated Security=SSPI;";
-                    //    //builder.AddSqlLogger(connectionString);
-                    //});
-                    //services.AddHostedService<JsonRepositoryTester>();
                 });
     }
 }

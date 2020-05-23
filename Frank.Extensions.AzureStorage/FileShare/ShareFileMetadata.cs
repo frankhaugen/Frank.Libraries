@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Web;
 
 namespace Frank.Extensions.AzureStorage.FileShare
 {
@@ -17,6 +18,8 @@ namespace Frank.Extensions.AzureStorage.FileShare
         public string Extension { get; }
         public long FileSize { get; }
 
-        //public string GetFullPath() => Path.Combine(DirectoryPath, Name);
+        public string GetFullPath => Path.Combine(DirectoryPath, Name);
+
+        public string GetEncodedDirectoryPath => HttpUtility.HtmlEncode(DirectoryPath);
     }
 }

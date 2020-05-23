@@ -3,6 +3,7 @@ using Frank.Extensions.Json;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using System;
+using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -16,13 +17,19 @@ namespace Frank.Extensions.Worker
             var fileShareClient = new FileShareClient(Options.Create(
                 new FileShareConfiguration()
                 {
-                    ConnectionString = "",
+                    ConnectionString =
+                        "",
                     ShareName = ""
                 }));
 
             var items = fileShareClient.FileItems;
 
-            Console.WriteLine(items.Select(x => x.Name).ToJson());
+            var first = items.FirstOrDefault();
+            var download = await fileShareClient.DownloadAsync(first);
+
+            await File.WriteAllBytesAsync($"C:/temp/downloadtest{first.Extension}", download, stoppingToken);
+
+            Console.WriteLine(fileShareClient.DirectoryItems.ToJson());
         }
     }
 }
