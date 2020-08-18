@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
@@ -29,5 +29,12 @@
         <ProjectReference Include="..\Frank.Libraries.Logging\Frank.Libraries.Logging.csproj" />
         <ProjectReference Include="..\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
     </ItemGroup>
 </Project>
