@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
+        <RepositoryType>Git</RepositoryType>
+        <RepositoryUrl>https://github.com/frankhaugen/Frank.Extensions</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Extensions</PackageProjectUrl>
+        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageIcon>icon.png</PackageIcon>
+        <Authors>Frank R. Haugen</Authors>
+        <PackageTags>Extensions, MongoDb, DI, Dependency Injection, Json, Context, Repository, Random, Batch, dotnet, autofixture, enums</PackageTags>
+        <Description>A consolidation NuGet of multiple nugets, all aimed at making some QoL improvements, like .Batch() for IEnumerable Linq and an IOC json "dbcontext" and generic repository</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Frank.Libraries.AutoFixture\Frank.Libraries.AutoFixture.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.AzureServiceBus\Frank.Libraries.AzureServiceBus.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.AzureStorage\Frank.Libraries.AzureStorage.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Constants\Frank.Libraries.Constants.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Extensions\Frank.Libraries.Extensions.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Internet\Frank.Libraries.Internet.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Logging\Frank.Libraries.Logging.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj" />
+    </ItemGroup>
+</Project>

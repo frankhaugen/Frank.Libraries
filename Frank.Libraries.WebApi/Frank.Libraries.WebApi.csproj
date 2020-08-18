@@ -15,5 +15,6 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Frank.Extensions.Logging\Frank.Libraries.Logging.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Logging\Frank.Libraries.Logging.csproj" />
     </ItemGroup>
 </Project>

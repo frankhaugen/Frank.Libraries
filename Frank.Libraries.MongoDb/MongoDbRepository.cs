@@ -1,10 +1,10 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using MongoDB.Bson;
-using MongoDB.Driver;
 
 namespace Frank.Libraries.MongoDb
 {
@@ -48,13 +48,10 @@ namespace Frank.Libraries.MongoDb
             return _collection.Find(filter).SingleOrDefault();
         }
 
-        public virtual Task<TEntity> FindByIdAsync(ObjectId objectId)
+        public virtual async Task<TEntity> FindByIdAsync(ObjectId objectId)
         {
-            return Task.Run((Func<Task>) (() =>
-            {
-                var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
-                return _collection.Find(filter).SingleOrDefaultAsync();
-            }));
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
+            return await _collection.Find(filter).SingleOrDefaultAsync();
         }
 
         public virtual void InsertOne(TEntity document)

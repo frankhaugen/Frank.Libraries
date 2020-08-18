@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AutoFixture;
+﻿using AutoFixture;
 using FluentAssertions;
+using Frank.Libraries.Extensions;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Frank.Libraries.Tests

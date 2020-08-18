@@ -18,17 +18,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Extensions.AutoFixture\Frank.Libraries.AutoFixture.csproj" />
-        <ProjectReference Include="..\Frank.Extensions.AzureStorage\Frank.Libraries.AzureStorage.csproj" />
-        <ProjectReference Include="..\Frank.Extensions.Constants\Frank.Libraries.Constants.csproj" />
-        <ProjectReference Include="..\Frank.Extensions.Enums\Frank.Libraries.Enums.csproj" />
-        <ProjectReference Include="..\Frank.Extensions.Json\Frank.Libraries.Json.csproj" />
-        <ProjectReference Include="..\Frank.Extensions.Logging\Frank.Libraries.Logging.csproj" />
-        <ProjectReference Include="..\Frank.Extensions.MongoDb\Frank.Libraries.MongoDb.csproj" />
-        <ProjectReference Include="..\Frank.Extensions.Xml\Frank.Libraries.Xml.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
         <None Include="..\icon.png">
             <Pack>True</Pack>
             <PackagePath></PackagePath>
