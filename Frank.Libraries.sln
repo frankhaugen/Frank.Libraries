@@ -41,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.WebApi", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.All", "Frank.Libraries.All\Frank.Libraries.All.csproj", "{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.FluentAssertions", "Frank.Libraries.FluentAssertions\Frank.Libraries.FluentAssertions.csproj", "{1AAB8B6F-7345-4C25-BD6A-11570D705A3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Testing", "Frank.Libraries.FluentAssertions\Frank.Libraries.Testing.csproj", "{1AAB8B6F-7345-4C25-BD6A-11570D705A3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
