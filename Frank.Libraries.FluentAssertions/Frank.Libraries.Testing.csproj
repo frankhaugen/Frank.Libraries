@@ -27,8 +27,4 @@
             <PackagePath></PackagePath>
         </None>
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="FluentAssertions\" />
-    </ItemGroup>
 </Project>
