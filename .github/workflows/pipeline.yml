@@ -21,4 +21,4 @@ jobs:
     - name: Pack NuGet
       run: dotnet pack --no-build --output nupkgs -p:PackageVersion=1.$GITHUB_RUN_NUMBER
     - name: Push Primary NuGet
-      run: dotnet nuget push **/Frank.Libraries*.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push **/*.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
