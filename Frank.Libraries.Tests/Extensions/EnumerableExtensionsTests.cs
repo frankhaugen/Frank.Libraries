@@ -1,11 +1,11 @@
-﻿using AutoFixture;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AutoFixture;
 using FluentAssertions;
 using Frank.Libraries.Extensions;
-using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests.Extensions
 {
     public class EnumerableExtensionsTests
     {

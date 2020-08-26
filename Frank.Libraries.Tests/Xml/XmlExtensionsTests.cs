@@ -1,18 +1,18 @@
-﻿using FluentAssertions;
+﻿using System;
+using FluentAssertions;
 using Frank.Libraries.Json;
-using Frank.Libraries.Tests.TestInfrastructure.Models;
+using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Xml;
-using System;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests.Xml
 {
-    public class ExtensionsTests
+    public class XmlExtensionsTests
     {
         private readonly ITestOutputHelper _outputHelper;
 
-        public ExtensionsTests(ITestOutputHelper outputHelper)
+        public XmlExtensionsTests(ITestOutputHelper outputHelper)
         {
             _outputHelper = outputHelper;
         }

@@ -1,12 +1,12 @@
-﻿using Frank.Libraries.Json;
-using Frank.Libraries.Tests.TestInfrastructure.Models;
+﻿using System;
+using Frank.Libraries.Json;
+using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Xml;
 using Microsoft.Extensions.Options;
-using System;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests.Xml
 {
     public class XmlContextTests
     {

@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace Frank.Libraries.Xml
 {
-    public static class Extensions
+    public static class XmlExtensions
     {
         // THIS: (C): https://stackoverflow.com/questions/2434534/serialize-an-object-to-string
         /// <summary>

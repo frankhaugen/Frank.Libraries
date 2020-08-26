@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Frank.Libraries.Tests.TestInfrastructure.Models
+namespace Frank.Libraries.Tests.TestingInfrastructure.Models
 {
     public class XmlTestModel
     {

@@ -13,8 +13,8 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
-        <PackageTags>Frank, Libraries, Fluent, Assertions, FluentAssertions, Test, Testing</PackageTags>
-        <Description>This contains some helpful extensions for FluentAssertions like getting the </Description>
+        <PackageTags>Frank, Libraries, Brreg, Brønnøysundsregisterene, Brønnøysund, Register, Company, Norway, Norwegian, Enhetsregisteret, Selskap, Bedrift, Info</PackageTags>
+        <Description>Have you ever wanted to use data from the norwegian company registry in your application, but it's been too much of a hassle? Now you can do it in this simple and easy manner</Description>
     </PropertyGroup>
 
     <ItemGroup>
@@ -23,4 +23,10 @@
             <PackagePath></PackagePath>
         </None>
     </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flurl.Http" Version="2.4.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
 </Project>

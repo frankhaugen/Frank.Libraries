@@ -21,13 +21,16 @@
         <ProjectReference Include="..\Frank.Libraries.AutoFixture\Frank.Libraries.AutoFixture.csproj" />
         <ProjectReference Include="..\Frank.Libraries.AzureServiceBus\Frank.Libraries.AzureServiceBus.csproj" />
         <ProjectReference Include="..\Frank.Libraries.AzureStorage\Frank.Libraries.AzureStorage.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Brreg\Frank.Libraries.Brreg.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Constants\Frank.Libraries.Constants.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Extensions\Frank.Libraries.Extensions.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.FluentAssertions\Frank.Libraries.Testing.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Internet\Frank.Libraries.Internet.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Logging\Frank.Libraries.Logging.csproj" />
         <ProjectReference Include="..\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Security\Frank.Libraries.Security.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj" />
     </ItemGroup>
 
