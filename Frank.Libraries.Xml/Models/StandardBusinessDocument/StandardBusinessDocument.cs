@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Xml;
 using System.Xml.Serialization;
-using Frank.Extensions.Xml;
+using Frank.Libraries.Xml;
 
 namespace Frank.Libraries.Xml.Models.StandardBusinessDocument
 {

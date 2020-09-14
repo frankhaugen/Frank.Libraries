@@ -6,8 +6,8 @@
         <Nullable>enable</Nullable>
         <IsPackable>true</IsPackable>
         <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Extensions</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Extensions</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
         <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>

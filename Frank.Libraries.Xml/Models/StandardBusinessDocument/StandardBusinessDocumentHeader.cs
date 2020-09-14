@@ -18,7 +18,7 @@ using System.Diagnostics;
 using System.Xml.Serialization;
 using Frank.Libraries.Xml.Models.StandardBusinessDocument;
 
-namespace Frank.Extensions.Xml
+namespace Frank.Libraries.Xml
 {
     /// <remarks/>
     [GeneratedCode("xsd", "4.8.3928.0")]
