@@ -141,4 +141,76 @@ namespace Frank.Libraries.Brreg
         [JsonProperty("kommunenummer")]
         public string? Kommunenummer { get; set; }
     }
+
+    public class Embedded
+    {
+        [JsonProperty("enheter")]
+        public List<Company>? Companies { get; set; }
+    }
+
+    public class First
+    {
+        [JsonProperty("href")]
+        public string? Href { get; set; }
+    }
+
+    public class Self3
+    {
+        [JsonProperty("href")]
+        public string? Href { get; set; }
+    }
+
+    public class Next
+    {
+        [JsonProperty("href")]
+        public string? Href { get; set; }
+    }
+
+    public class Last
+    {
+        [JsonProperty("href")]
+        public string? Href { get; set; }
+    }
+
+    public class Links3
+    {
+        [JsonProperty("first")]
+        public First? First { get; set; }
+
+        [JsonProperty("self")]
+        public Self3? Self { get; set; }
+
+        [JsonProperty("next")]
+        public Next? Next { get; set; }
+
+        [JsonProperty("last")]
+        public Last? Last { get; set; }
+    }
+
+    public class Page
+    {
+        [JsonProperty("size")]
+        public int Size { get; set; }
+
+        [JsonProperty("totalElements")]
+        public int TotalElements { get; set; }
+
+        [JsonProperty("totalPages")]
+        public int TotalPages { get; set; }
+
+        [JsonProperty("number")]
+        public int Number { get; set; }
+    }
+
+    public class CompaniesList
+    {
+        [JsonProperty("_embedded")]
+        public Embedded? Data { get; set; }
+
+        [JsonProperty("_links")]
+        public Links3? Links { get; set; }
+
+        [JsonProperty("page")]
+        public Page? Page { get; set; }
+    }
 }
