@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using Frank.Libraries.Security.Shared;
 
 namespace Frank.Libraries.Security.PasswordGeneration
 {

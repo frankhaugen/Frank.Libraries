@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Frank.Libraries.Security;
 using Frank.Libraries.Security.PasswordGeneration;
+using Frank.Libraries.Security.Shared;
 using Xunit;
 
 namespace Frank.Libraries.Tests.Security

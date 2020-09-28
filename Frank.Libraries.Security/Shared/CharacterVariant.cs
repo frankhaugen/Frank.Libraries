@@ -1,4 +1,4 @@
-﻿namespace Frank.Libraries.Security.PasswordGeneration
+﻿namespace Frank.Libraries.Security.Shared
 {
     public enum CharacterVariant
     {

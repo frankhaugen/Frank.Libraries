@@ -43,8 +43,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Security", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Brreg", "Frank.Libraries.Brreg\Frank.Libraries.Brreg.csproj", "{68079253-D41A-4DE8-B321-C8F9AF39F630}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Asp.Security", "Frank.Libraries.Asp.Security\Frank.Libraries.Asp.Security.csproj", "{C974404E-6FA1-4AC3-9AA0-41C734E44416}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -247,18 +245,6 @@ Global
 		{68079253-D41A-4DE8-B321-C8F9AF39F630}.Release|x64.Build.0 = Release|Any CPU
 		{68079253-D41A-4DE8-B321-C8F9AF39F630}.Release|x86.ActiveCfg = Release|Any CPU
 		{68079253-D41A-4DE8-B321-C8F9AF39F630}.Release|x86.Build.0 = Release|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Debug|x64.Build.0 = Debug|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Debug|x86.Build.0 = Debug|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Release|x64.ActiveCfg = Release|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Release|x64.Build.0 = Release|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Release|x86.ActiveCfg = Release|Any CPU
-		{C974404E-6FA1-4AC3-9AA0-41C734E44416}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,6 +2,7 @@ using Frank.Libraries.Security.PasswordGeneration;
 using System;
 using System.Collections.Generic;
 using FluentAssertions;
+using Frank.Libraries.Security.Shared;
 using Xunit;
 using Xunit.Abstractions;
 

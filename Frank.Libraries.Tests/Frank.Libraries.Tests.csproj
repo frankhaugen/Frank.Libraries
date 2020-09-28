@@ -1,12 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
+    <ItemGroup>
+      <Compile Remove="TestingInfrastructure\Wrappers\**" />
+      <EmbeddedResource Remove="TestingInfrastructure\Wrappers\**" />
+      <None Remove="TestingInfrastructure\Wrappers\**" />
+    </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="ConsoleTableExt" Version="2.0.3" />
         <PackageReference Include="FluentAssertions" Version="5.10.3" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.0" />
         <PackageReference Include="Mongo2Go" Version="2.2.12" />
@@ -26,6 +32,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="MongoDb\" />
+      <Folder Include="Json\" />
     </ItemGroup>
 </Project>

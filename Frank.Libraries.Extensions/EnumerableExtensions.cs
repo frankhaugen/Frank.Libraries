@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 
 namespace Frank.Libraries.Extensions
@@ -49,6 +50,41 @@ namespace Frank.Libraries.Extensions
             }
 
             return tb;
+        }
+
+        public static IEnumerable<TResult> Pivot<TResult, T, TColumn, TRow, TData>(this IEnumerable<T> source, Func<T, TColumn> columnSelector, Expression<Func<T, TRow>> rowSelector, Func<IEnumerable<T>, TData> dataSelector)
+        {
+            source = source.ToList();
+            var table = new DataTable();
+            var rowName = ((MemberExpression)rowSelector.Body).Member.Name;
+            table.Columns.Add(new DataColumn(rowName));
+            var columns = source.Select(columnSelector).Distinct().ToList();
+
+            foreach (var column in columns.Where(column => column != null))
+                if (column != null)
+                    table.Columns.Add(new DataColumn(column.ToString()));
+
+            var rows = source.GroupBy(rowSelector.Compile())
+                .Select(rowGroup => new
+                {
+                    rowGroup.Key,
+                    Values = columns.GroupJoin(
+                        rowGroup,
+                        c => c,
+                        r => columnSelector(r)!,
+                        (c, columnGroup) => dataSelector(columnGroup))
+                }).ToList();
+
+            foreach (var row in rows)
+            {
+                var dataRow = table.NewRow();
+                var items = row.Values.Cast<object>().ToList();
+                items.Insert(0, row.Key!);
+                dataRow.ItemArray = items.ToArray();
+                table.Rows.Add(dataRow);
+            }
+
+            return table.ToEnumerable<TResult>();
         }
     }
 }
