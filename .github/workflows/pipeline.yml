@@ -40,3 +40,5 @@ jobs:
       run: dotnet nuget push **/Frank.Libraries.Brreg.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
     - name: Push XML NuGet
       run: dotnet nuget push **/Frank.Libraries.Xml.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+    - name: Push Security NuGet
+      run: dotnet nuget push **/Frank.Libraries.Security.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
