@@ -15,7 +15,11 @@ namespace Frank.Libraries.Xml
 
         public XmlContext(IOptions<XmlConfiguration>? options = default)
         {
-            _options = options.Value;
+            _options = options!.Value;
+
+            _collection = new List<T>();
+            _tempCollection = new List<T>();
+
             if (string.IsNullOrWhiteSpace(_options.DataFolderName))
             {
                 _options.DataFolderName = "Data";
@@ -35,10 +39,6 @@ namespace Frank.Libraries.Xml
             {
                 File.WriteAllText(_filePath, new List<T>().SerializeObjectToXml());
             }
-
-            _collection = new List<T>();
-            _tempCollection = new List<T>();
-
             _collection = File.ReadAllText(_filePath).DeserializeObjectFromXml<List<T>>();
         }
 

@@ -23,12 +23,11 @@ namespace Frank.Libraries.Tests.Extensions
         }
 
         [Fact]
-        public void ToEnumerable_StateUnderTest_ExpectedBehavior()
+        public void ToEnumerable()
         {
             // Arrange
             var items = CreateTestModels<TestDocument>(2);
             var dataTable = items.ToDataTable();
-
 
             // Act
             var result = dataTable.ToEnumerable<TestDocument>();
@@ -39,7 +38,7 @@ namespace Frank.Libraries.Tests.Extensions
         }
 
         [Fact]
-        public void Pivot_StateUnderTest_ExpectedBehavior()
+        public void Pivot()
         {
             // Arrange
             var items = CreateTestModels<Engine>();

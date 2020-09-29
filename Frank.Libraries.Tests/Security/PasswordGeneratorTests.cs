@@ -1,9 +1,8 @@
+﻿using FluentAssertions;
+using Frank.Libraries.Security;
+using Frank.Libraries.Security.Shared;
 using System;
 using System.Collections.Generic;
-using FluentAssertions;
-using Frank.Libraries.Security;
-using Frank.Libraries.Security.PasswordGeneration;
-using Frank.Libraries.Security.Shared;
 using Xunit;
 
 namespace Frank.Libraries.Tests.Security
@@ -33,8 +32,8 @@ namespace Frank.Libraries.Tests.Security
         {
             // Arrange
             var passwordGenerator = new PasswordGenerator();
-            int characterCount = 10;
-            CharacterVariant[] characterVariants = null;
+            var characterCount = 10;
+            CharacterVariant[] characterVariants = null!;
 
             // Act and Assert
             Assert.Throws<NullReferenceException>(() => passwordGenerator.GeneratePassword(characterCount, characterVariants));
@@ -53,7 +52,7 @@ namespace Frank.Libraries.Tests.Security
         }
 
         [Fact]
-        public void GeneratePassword_StateUnderTest_ExpectedBehavior()
+        public void GeneratePassword()
         {
             // Arrange
             var passwordGenerator = new PasswordGenerator();

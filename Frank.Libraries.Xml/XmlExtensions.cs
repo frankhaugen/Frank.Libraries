@@ -16,15 +16,13 @@ namespace Frank.Libraries.Xml
         public static string SerializeObjectToXml<T>(this T toSerialize)
         {
             // create an instance of a XmlSerializer class with the typeof(T)..
-            var xmlSerializer = new XmlSerializer(toSerialize.GetType());
+            var xmlSerializer = new XmlSerializer(toSerialize!.GetType());
 
             // using is necessary with classes which implement the IDisposable interface..
-            using (var stringWriter = new StringWriter())
-            {
-                // serialize a class to a StringWriter class instance..
-                xmlSerializer.Serialize(stringWriter, toSerialize); // a base class of the StringWriter instance is TextWriter..
-                return stringWriter.ToString(); // return the value..
-            }
+            using var stringWriter = new StringWriter();
+            // serialize a class to a StringWriter class instance..
+            xmlSerializer!.Serialize(stringWriter, toSerialize); // a base class of the StringWriter instance is TextWriter..
+            return stringWriter!.ToString(); // return the value..
         }
 
         // THIS: (C): VPKSoft, 2018, https://www.vpksoft.net
@@ -83,7 +81,7 @@ namespace Frank.Libraries.Xml
             }
             catch
             {
-                value = null;
+                value = null!;
                 return false;
             }
         }

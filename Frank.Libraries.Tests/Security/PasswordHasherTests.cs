@@ -8,7 +8,7 @@ namespace Frank.Libraries.Tests.Security
     public class PasswordHasherTests
     {
         [Fact]
-        public void HashPassword_StateUnderTest_ExpectedBehavior()
+        public void HashPassword()
         {
             // Arrange
             var passwordHasher = new PasswordHasher();
@@ -22,7 +22,7 @@ namespace Frank.Libraries.Tests.Security
         }
 
         [Fact]
-        public void CheckPasswordAgainstHash_StateUnderTest_ExpectedBehavior()
+        public void CheckPasswordAgainstHash()
         {
             // Arrange
             var passwordHasher = new PasswordHasher();

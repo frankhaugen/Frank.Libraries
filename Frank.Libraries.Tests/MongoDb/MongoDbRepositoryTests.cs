@@ -39,7 +39,7 @@ namespace Frank.Libraries.Tests.MongoDb
         private void TearDownRepository() => _runner.Dispose();
 
         [Fact]
-        public async Task AsQueryable_StateUnderTest_ExpectedBehavior()
+        public async Task AsQueryable()
         {
             // Arrange
             var repository = SetupRepository();
@@ -79,7 +79,7 @@ namespace Frank.Libraries.Tests.MongoDb
         }
 
         [Fact]
-        public async Task Insert_StateUnderTest_ExpectedBehavior()
+        public async Task Insert()
         {
             // Arrange
             var repository = SetupRepository();

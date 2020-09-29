@@ -2,6 +2,6 @@
 {
     public class XmlConfiguration
     {
-        public string DataFolderName { get; set; }
+        public string? DataFolderName { get; set; }
     }
 }

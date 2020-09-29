@@ -41,6 +41,7 @@
             public static readonly string Queen = "\U0001F0BC";
             public static readonly string King = "\U0001F0BD";
         }
+
         public static class Diamonds
         {
             public static readonly string Ace = "\U0001F0C1";
@@ -57,6 +58,7 @@
             public static readonly string Queen = "\U0001F0CC";
             public static readonly string King = "\U0001F0CD";
         }
+
         public static class Clubs
         {
             public static readonly string Ace = "\U0001F0D1";

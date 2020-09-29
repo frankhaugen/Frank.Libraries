@@ -18,7 +18,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
         }
 
         [Fact]
-        public void CreatePasswordString_StateUnderTest_ExpectedBehavior()
+        public void CreatePasswordString()
         {
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>();
@@ -37,7 +37,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
         }
 
         [Fact]
-        public void AddCharacterVariantsToDictionary_StateUnderTest_ExpectedBehavior()
+        public void AddCharacterVariantsToDictionary()
         {
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>();
@@ -106,7 +106,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
         }
 
         [Fact]
-        public void GetRandomCharacterVariant_StateUnderTest_ExpectedBehavior()
+        public void GetRandomCharacterVariant()
         {
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>();

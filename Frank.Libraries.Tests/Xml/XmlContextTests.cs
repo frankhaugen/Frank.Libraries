@@ -20,7 +20,7 @@ namespace Frank.Libraries.Tests.Xml
         }
 
         [Fact]
-        public void GetCollection_StateUnderTest_ExpectedBehavior()
+        public void GetCollection()
         {
             // Arrange
             var xmlContext = new XmlContext<XmlTestModel>(Options.Create(new XmlConfiguration()));

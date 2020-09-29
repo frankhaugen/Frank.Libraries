@@ -18,7 +18,7 @@ namespace Frank.Libraries.Tests.Xml
         }
 
         [Fact]
-        public void SerializeObjectToXml_StateUnderTest_ExpectedBehavior()
+        public void SerializeObjectToXml()
         {
             // Arrange
             var objectToSerialize = new XmlTestModel()
@@ -37,7 +37,7 @@ namespace Frank.Libraries.Tests.Xml
         }
 
         [Fact]
-        public void DeserializeObjectFromXml_StateUnderTest_ExpectedBehavior()
+        public void DeserializeObjectFromXml()
         {
             // Arrange
             string xmlData = "<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<XmlTestModel xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <Name>A name</Name>\r\n  <DateOfBirth>2020-05-18T00:00:00+02:00</DateOfBirth>\r\n  <Salary>100000</Salary>\r\n</XmlTestModel>";
