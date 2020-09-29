@@ -6,13 +6,12 @@ namespace Frank.Libraries.Json
     public static class ServiceCollectionExtensions
     {
         /// <summary>
-        /// Add this to register dependencies for this  library
+        /// Add this to register dependencies for the Json Context
         /// </summary>
-        public static void AddJsonRepository<TEntity>(this IServiceCollection services, IConfiguration configuration) where TEntity : JsonEntity, new()
+        public static void AddJson<TEntity>(this IServiceCollection services, IConfiguration configuration) where TEntity : JsonEntity, new()
         {
             services.Configure<JsonConfiguration>(configuration.GetSection(nameof(JsonConfiguration)));
             services.AddSingleton<IJsonContext<TEntity>, JsonContext<TEntity>>();
-            services.AddSingleton<IJsonRepository<TEntity>, JsonRepository<TEntity>>();
         }
     }
 }
