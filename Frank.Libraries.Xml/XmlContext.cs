@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Frank.Libraries.Xml
 {
-    public class XmlContext<T> where T : class, new()
+    public class XmlContext<T> where T : XmlEntity, new()
     {
         private List<T> _collection;
         private List<T> _tempCollection;
@@ -20,19 +20,19 @@ namespace Frank.Libraries.Xml
             _collection = new List<T>();
             _tempCollection = new List<T>();
 
-            if (string.IsNullOrWhiteSpace(_options.DataFolderName))
+            if (string.IsNullOrWhiteSpace(_options.Folder))
             {
-                _options.DataFolderName = "Data";
+                _options.Folder = Path.Combine(Directory.GetCurrentDirectory(), "Data");
             }
-            _filePath = Path.Combine(_options.DataFolderName, typeof(T).Name + ".xml");
+            _filePath = Path.Combine(_options.Folder, typeof(T).Name + ".xml");
             Setup();
         }
 
         private void Setup()
         {
-            if (!Directory.Exists(_options.DataFolderName))
+            if (!Directory.Exists(_options.Folder))
             {
-                Directory.CreateDirectory(_options.DataFolderName);
+                Directory.CreateDirectory(_options.Folder);
             }
 
             if (!File.Exists(_filePath))

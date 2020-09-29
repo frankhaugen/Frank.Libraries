@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using System;
+using System.IO;
+using System.Text.Json;
 
 namespace Frank.Libraries.Logging
 {
@@ -20,6 +22,9 @@ namespace Frank.Libraries.Logging
             {
                 return;
             }
+
+            var line = $"{logLevel};{AppDomain.CurrentDomain.FriendlyName};{formatter(state, exception)};{typeof(TState).Name};{eventId.Id};{eventId.Name};{JsonSerializer.Serialize(exception, new JsonSerializerOptions() { WriteIndented = true })};{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss:fff};{_name}";
+            File.AppendAllLines(Path.Combine(_configuration.Path, "logs.csv"), new[] { line });
         }
 
         public bool IsEnabled(LogLevel logLevel)

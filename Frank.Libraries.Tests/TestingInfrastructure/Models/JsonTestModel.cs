@@ -1,12 +1,12 @@
-﻿using Frank.Libraries.Xml;
+﻿using Frank.Libraries.Json;
 using System;
 
 namespace Frank.Libraries.Tests.TestingInfrastructure.Models
 {
-    public class XmlTestModel : XmlEntity
+    public class JsonTestModel : JsonEntity
     {
         public string? Name { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public int Salary { get; set; }
+        public long YearlySalary { get; set; }
     }
 }

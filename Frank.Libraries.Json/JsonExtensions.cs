@@ -9,5 +9,9 @@ namespace Frank.Libraries.Json
             return JsonSerializer.Serialize(source, new JsonSerializerOptions() { WriteIndented = indented });
         }
 
+        public static T FromJson<T>(this string source) where T : class
+        {
+            return JsonSerializer.Deserialize<T>(source);
+        }
     }
 }

@@ -1,13 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Frank.Libraries.Json
 {
-    public interface IJsonContext
+    public interface IJsonContext<TEntity> where TEntity : JsonEntity
     {
-        Task<IQueryable<TEntity>> GetJsonDataAsync<TEntity>(string? folderName = "");
-
-        Task SaveJsonDataAsync<TEntity>(IEnumerable<TEntity> records, string folderName = "", bool indented = true);
+        IEnumerable<TEntity> GetCollection();
+        IQueryable<TEntity> GetQueryable();
+        TEntity GetById(Guid id);
+        void Delete(Guid id);
+        void Add(TEntity item);
+        void Add(List<TEntity> items);
+        bool SaveChanges();
+        void DiscardChanges();
     }
 }

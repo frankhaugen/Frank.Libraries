@@ -8,10 +8,10 @@ namespace Frank.Libraries.Json
         /// <summary>
         /// Add this to register dependencies for this  library
         /// </summary>
-        public static void AddJsonRepository<TEntity, TConfig>(this IServiceCollection services, IConfiguration configuration) where TEntity : class, new() where TConfig : JsonContextConfigurationBase, new()
+        public static void AddJsonRepository<TEntity>(this IServiceCollection services, IConfiguration configuration) where TEntity : JsonEntity, new()
         {
-            services.Configure<TConfig>(configuration.GetSection(typeof(TConfig).Name));
-            services.AddSingleton<IJsonContext, JsonContext<TConfig>>();
+            services.Configure<JsonConfiguration>(configuration.GetSection(nameof(JsonConfiguration)));
+            services.AddSingleton<IJsonContext<TEntity>, JsonContext<TEntity>>();
             services.AddSingleton<IJsonRepository<TEntity>, JsonRepository<TEntity>>();
         }
     }

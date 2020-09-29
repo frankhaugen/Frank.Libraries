@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace Frank.Libraries.Json
 {
-    public class JsonRepository<TEntity> : IJsonRepository<TEntity>
+    public class JsonRepository<TEntity> : IJsonRepository<TEntity> where TEntity : JsonEntity
     {
-        private readonly IJsonContext _jsonContext;
+        private readonly IJsonContext<TEntity> _jsonContext;
         private IQueryable<TEntity> _entities = null!;
 
         public bool PendingChanges { get; private set; }
 
         public string? Folder { get; }
 
-        public JsonRepository(IJsonContext jsonContext)
+        public JsonRepository(IJsonContext<TEntity> jsonContext)
         {
             _jsonContext = jsonContext;
             Folder = "";
@@ -25,7 +25,7 @@ namespace Frank.Libraries.Json
         {
             if (_entities == null)
             {
-                _entities = await _jsonContext.GetJsonDataAsync<TEntity>(Folder);
+                _entities = _jsonContext.GetQueryable();
             }
         }
 
@@ -39,7 +39,7 @@ namespace Frank.Libraries.Json
         {
             if (PendingChanges)
             {
-                _entities = await _jsonContext.GetJsonDataAsync<TEntity>(Folder);
+                _entities = _jsonContext.GetQueryable();
                 PendingChanges = false;
             }
         }
@@ -48,7 +48,7 @@ namespace Frank.Libraries.Json
         {
             if (PendingChanges)
             {
-                await _jsonContext.SaveJsonDataAsync(_entities);
+                _jsonContext.SaveChanges();
                 PendingChanges = false;
             }
         }
@@ -57,6 +57,12 @@ namespace Frank.Libraries.Json
         {
             await InitalizeAsync();
             return _entities;
+        }
+
+        public async Task<TEntity> GetByIdAsync(Guid id)
+        {
+            await InitalizeAsync();
+            return _entities.FirstOrDefault(x => x.Id == id)!;
         }
 
         public async Task AddAsync(TEntity entity)
@@ -76,21 +82,28 @@ namespace Frank.Libraries.Json
             await ChangesCompleted();
         }
 
-        public async Task UpdateAsync(TEntity original, TEntity @new)
+        public async Task UpdateAsync(Guid id, TEntity entity)
         {
             await InitalizeAsync();
-            if (!_entities.Contains(original))
+
+            var original = await GetByIdAsync(id);
+
+            if (original == null || !_entities.Contains(original))
                 throw new ArgumentException($"The original entity does not exist");
 
-            await RemoveAsync(original);
-            await AddAsync(@new);
+            await RemoveAsync(original.Id);
+            await AddAsync(entity);
             await ChangesCompleted();
         }
 
-        public async Task RemoveAsync(TEntity entity)
+        public Task RemoveAsync(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task RemoveAsync(Guid id)
         {
             await InitalizeAsync();
-            _entities = _entities.Where(x => entity != null && (x != null && x.GetHashCode() != entity.GetHashCode()));
             PendingChanges = true;
             await ChangesCompleted();
         }
@@ -100,7 +113,7 @@ namespace Frank.Libraries.Json
             await InitalizeAsync();
             foreach (var entity in entities)
             {
-                await RemoveAsync(entity);
+                await RemoveAsync(entity.Id);
             }
             await ChangesCompleted();
         }

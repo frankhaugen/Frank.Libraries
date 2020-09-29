@@ -1,8 +1,8 @@
 ﻿using System.IO;
 
-namespace Frank.Libraries.Xml
+namespace Frank.Libraries.Json
 {
-    public class XmlConfiguration
+    public class JsonConfiguration
     {
         public string Folder { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "Data");
     }
