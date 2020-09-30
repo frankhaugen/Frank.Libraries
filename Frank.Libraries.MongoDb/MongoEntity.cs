@@ -7,6 +7,6 @@ namespace Frank.Libraries.MongoDb
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string Id { get; set; } = ObjectId.Empty.ToString();
     }
 }

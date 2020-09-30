@@ -67,7 +67,7 @@ namespace Frank.Libraries.Tests.MongoDb
             await repository.InsertOneAsync(newItem);
 
             // Act
-            var result = await repository.FindByIdAsync(newItem.Id);
+            var result = await repository.FindByIdAsync(newItem.Id.ToObjectId());
 
             // Assert
             result.Should().NotBeNull();
@@ -89,12 +89,12 @@ namespace Frank.Libraries.Tests.MongoDb
             await repository.InsertOneAsync(newItem);
 
             // Assert
-            repository.FindById(newItem.Id).Should().NotBeNull();
+            (await repository.FindByIdAsync(newItem.Id.ToObjectId())).Should().NotBeNull();
 
             TearDownRepository();
         }
 
-        private MongoTestModel CreateTestDocument() => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.Empty).Generate();
-        private List<MongoTestModel> CreateTestDocuments(int count = 10) => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.Empty).Generate(count);
+        private MongoTestModel CreateTestDocument() => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.Empty.ToString).Generate();
+        private List<MongoTestModel> CreateTestDocuments(int count = 10) => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.Empty.ToString).Generate(count);
     }
 }

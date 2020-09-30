@@ -44,13 +44,13 @@ namespace Frank.Libraries.MongoDb
 
         public virtual TEntity FindById(ObjectId objectId)
         {
-            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId.ToString());
             return _collection.Find(filter).SingleOrDefault();
         }
 
         public virtual async Task<TEntity> FindByIdAsync(ObjectId objectId)
         {
-            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId.ToString());
             return await _collection.Find(filter).SingleOrDefaultAsync();
         }
 
@@ -98,7 +98,7 @@ namespace Frank.Libraries.MongoDb
 
         public void DeleteById(ObjectId objectId)
         {
-            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
+            var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId.ToString());
             _collection.FindOneAndDelete(filter);
         }
 
@@ -106,7 +106,7 @@ namespace Frank.Libraries.MongoDb
         {
             return Task.Run(() =>
             {
-                var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
+                var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId.ToString());
                 _collection.FindOneAndDeleteAsync(filter);
             });
         }
