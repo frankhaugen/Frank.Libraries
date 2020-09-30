@@ -94,7 +94,17 @@ namespace Frank.Libraries.Tests.MongoDb
             TearDownRepository();
         }
 
-        private MongoTestModel CreateTestDocument() => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.Empty.ToString).Generate();
-        private List<MongoTestModel> CreateTestDocuments(int count = 10) => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.Empty.ToString).Generate(count);
+        private MongoTestModel CreateTestDocument() => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.GenerateNewId().ToString).Generate();
+
+        private List<MongoTestModel> CreateTestDocuments(int count = 10)
+        {
+            var documents = new List<MongoTestModel>();
+            for (int i = 0; i < count; i++)
+            {
+                documents.Add(CreateTestDocument());
+            }
+
+            return documents;
+        }
     }
 }
