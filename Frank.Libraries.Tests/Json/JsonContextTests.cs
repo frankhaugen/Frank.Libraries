@@ -117,6 +117,7 @@ namespace Frank.Libraries.Tests
             var result = jsonContext.SaveChanges();
 
             // Assert
+            result.Should().BeTrue();
             Teardown(sessionId);
         }
 

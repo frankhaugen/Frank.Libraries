@@ -8,8 +8,8 @@ namespace Frank.Libraries.Xml
 {
     public class XmlContext<TEntity> : IXmlContext<TEntity> where TEntity : XmlEntity, new()
     {
-        private List<TEntity> _collection;
-        private List<TEntity> _tempCollection;
+        private readonly List<TEntity> _collection;
+        private readonly List<TEntity> _tempCollection;
         private readonly XmlConfiguration _options;
         private readonly string _filePath;
         private bool _unsavedChanges;
@@ -40,13 +40,13 @@ namespace Frank.Libraries.Xml
             {
                 File.WriteAllText(_filePath, new List<TEntity>().SerializeObjectToXml());
             }
-            _collection = File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>();
+            _collection.AddRange(File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>());
         }
 
         public IEnumerable<TEntity> GetCollection()
         {
             if (!_collection.Any())
-                _collection = File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>();
+                _collection.AddRange(File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>());
 
             return _collection;
         }

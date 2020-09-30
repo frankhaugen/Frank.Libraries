@@ -1,8 +1,8 @@
+﻿using FluentAssertions;
 using Frank.Libraries.Security.PasswordGeneration;
+using Frank.Libraries.Security.Shared;
 using System;
 using System.Collections.Generic;
-using FluentAssertions;
-using Frank.Libraries.Security.Shared;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -21,10 +21,12 @@ namespace Frank.Libraries.Tests.PasswordGeneration
         public void CreatePasswordString()
         {
             // Arrange
-            var characters = new Dictionary<CharacterVariant, string>();
-            characters.Add(CharacterVariant.Digits, CharacterLists.Digits);
-            characters.Add(CharacterVariant.Lowercase, CharacterLists.Lowercase);
-            characters.Add(CharacterVariant.Uppercase, CharacterLists.Uppercase);
+            var characters = new Dictionary<CharacterVariant, string>
+            {
+                {CharacterVariant.Digits, CharacterLists.Digits},
+                {CharacterVariant.Lowercase, CharacterLists.Lowercase},
+                {CharacterVariant.Uppercase, CharacterLists.Uppercase}
+            };
 
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
             int characterCount = 12;
@@ -55,10 +57,12 @@ namespace Frank.Libraries.Tests.PasswordGeneration
         public void EnsurePositiveCharacterVariantCount_PositiveCount_DoesNotThrow()
         {
             // Arrange
-            var characters = new Dictionary<CharacterVariant, string>();
-            characters.Add(CharacterVariant.Digits, CharacterLists.Digits);
-            characters.Add(CharacterVariant.Lowercase, CharacterLists.Lowercase);
-            characters.Add(CharacterVariant.Uppercase, CharacterLists.Uppercase);
+            var characters = new Dictionary<CharacterVariant, string>
+            {
+                {CharacterVariant.Digits, CharacterLists.Digits},
+                {CharacterVariant.Lowercase, CharacterLists.Lowercase},
+                {CharacterVariant.Uppercase, CharacterLists.Uppercase}
+            };
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
             var characterVariants = new[] { CharacterVariant.Lowercase, CharacterVariant.Special };
 
@@ -94,10 +98,12 @@ namespace Frank.Libraries.Tests.PasswordGeneration
         public void EnsurePositiveCharacterCount_NonPositiveCount_ThrowsArgumentException()
         {
             // Arrange
-            var characters = new Dictionary<CharacterVariant, string>();
-            characters.Add(CharacterVariant.Digits, CharacterLists.Digits);
-            characters.Add(CharacterVariant.Lowercase, CharacterLists.Lowercase);
-            characters.Add(CharacterVariant.Uppercase, CharacterLists.Uppercase);
+            var characters = new Dictionary<CharacterVariant, string>
+            {
+                {CharacterVariant.Digits, CharacterLists.Digits},
+                {CharacterVariant.Lowercase, CharacterLists.Lowercase},
+                {CharacterVariant.Uppercase, CharacterLists.Uppercase}
+            };
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
             int characterCount = 0;
 
@@ -109,10 +115,12 @@ namespace Frank.Libraries.Tests.PasswordGeneration
         public void GetRandomCharacterVariant()
         {
             // Arrange
-            var characters = new Dictionary<CharacterVariant, string>();
-            characters.Add(CharacterVariant.Digits, CharacterLists.Digits);
-            characters.Add(CharacterVariant.Lowercase, CharacterLists.Lowercase);
-            characters.Add(CharacterVariant.Uppercase, CharacterLists.Uppercase);
+            var characters = new Dictionary<CharacterVariant, string>
+            {
+                {CharacterVariant.Digits, CharacterLists.Digits},
+                {CharacterVariant.Lowercase, CharacterLists.Lowercase},
+                {CharacterVariant.Uppercase, CharacterLists.Uppercase}
+            };
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
 
             // Act

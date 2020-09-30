@@ -6,19 +6,11 @@ using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Xml
 {
     public class XmlContextTests
     {
-        private readonly ITestOutputHelper _outputHelper;
-
-        public XmlContextTests(ITestOutputHelper outputHelper)
-        {
-            _outputHelper = outputHelper;
-        }
-
         [Fact]
         public void GetCollection()
         {
@@ -40,15 +32,16 @@ namespace Frank.Libraries.Tests.Xml
         {
             // Arrange
             var xmlContext = new XmlContext<XmlTestModel>(Options.Create(new XmlConfiguration()));
-            var testModel = CreateTestModel();
+            var testModels = CreateTestModels();
 
             // Act
-            xmlContext.Add(testModel);
+            xmlContext.Add(testModels);
             xmlContext.SaveChanges();
             var result = xmlContext.GetCollection();
 
             // Assert
-            result.FirstOrDefault(x => x.Name == testModel.Name).Should().NotBeNull();
+            result.FirstOrDefault().Should().NotBeNull();
+            result.Should().Contain(testModels);
         }
 
         private XmlTestModel CreateTestModel() => new AutoFaker<XmlTestModel>().Generate();

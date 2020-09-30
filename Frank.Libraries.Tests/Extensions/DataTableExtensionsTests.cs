@@ -6,6 +6,7 @@ using Frank.Libraries.Extensions;
 using Frank.Libraries.Testing.Models.Cars;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -14,7 +15,7 @@ namespace Frank.Libraries.Tests.Extensions
     public class DataTableExtensionsTests
     {
         private readonly Faker _faker;
-        private ITestOutputHelper _outputHelper;
+        private readonly ITestOutputHelper _outputHelper;
 
         public DataTableExtensionsTests(ITestOutputHelper outputHelper)
         {
@@ -33,8 +34,9 @@ namespace Frank.Libraries.Tests.Extensions
             var result = dataTable.ToEnumerable<TestDocument>();
 
             // Assert
-            result.Should().BeEquivalentTo(items);
-            result.Should().HaveSameCount(items);
+            var testDocuments = result.ToList();
+            testDocuments.Should().BeEquivalentTo(items);
+            testDocuments.Should().HaveSameCount(items);
         }
 
         [Fact]
@@ -50,6 +52,8 @@ namespace Frank.Libraries.Tests.Extensions
             _outputHelper.WriteLine(consoleTable.Export().ToString());
 
             // Assert
+            _faker.Name.Locale.Should().NotBeEmpty();
+            CreateTestModel();
         }
 
         private TestDocument CreateTestModel() => new AutoFaker<TestDocument>().Generate();

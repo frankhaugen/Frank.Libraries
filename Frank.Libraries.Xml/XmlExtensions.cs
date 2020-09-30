@@ -43,11 +43,9 @@ namespace Frank.Libraries.Xml
             var xmlSerializer = new XmlSerializer(voidInstance.GetType());
 
             // construct a StringReader class instance of the given xmlData parameter to be deserialized by the XmlSerializer class instance..
-            using (var stringReader = new StringReader(xmlData))
-            {
-                // return the "new" object deserialized via the XmlSerializer class instance..
-                return (T)xmlSerializer.Deserialize(stringReader);
-            }
+            using var stringReader = new StringReader(xmlData);
+            // return the "new" object deserialized via the XmlSerializer class instance..
+            return (T)xmlSerializer.Deserialize(stringReader);
         }
 
         // THIS: (C): VPKSoft, 2018, https://www.vpksoft.net

@@ -10,7 +10,7 @@ namespace Frank.Libraries.Json
     {
 
         private List<TEntity> _collection;
-        private List<TEntity> _tempCollection;
+        private readonly List<TEntity> _tempCollection;
         private readonly JsonConfiguration _options;
         private readonly string _filePath;
         private bool _unsavedChanges;

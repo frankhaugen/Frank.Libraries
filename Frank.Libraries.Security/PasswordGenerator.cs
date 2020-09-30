@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using Frank.Libraries.Security.PasswordGeneration;
+﻿using Frank.Libraries.Security.PasswordGeneration;
 using Frank.Libraries.Security.Shared;
+using System.Collections.Generic;
 
 namespace Frank.Libraries.Security
 {
     public class PasswordGenerator
     {
-        private Dictionary<CharacterVariant, string> _characters;
-        private PasswordGeneratorHelper _generatorHelper;
+        private readonly Dictionary<CharacterVariant, string> _characters;
+        private readonly PasswordGeneratorHelper _generatorHelper;
 
         public PasswordGenerator()
         {

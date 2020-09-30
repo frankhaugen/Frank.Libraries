@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Frank.Libraries.Security.Shared;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using Frank.Libraries.Security.Shared;
 
 namespace Frank.Libraries.Security.PasswordGeneration
 {
@@ -13,7 +13,7 @@ namespace Frank.Libraries.Security.PasswordGeneration
     [EditorBrowsable(EditorBrowsableState.Never)]
     public class PasswordGeneratorHelper
     {
-        private Dictionary<CharacterVariant, string> _characters;
+        private readonly Dictionary<CharacterVariant, string> _characters;
 
         public PasswordGeneratorHelper(Dictionary<CharacterVariant, string> characters)
         {

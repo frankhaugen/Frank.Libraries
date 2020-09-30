@@ -1,5 +1,4 @@
 ﻿using AutoBogus;
-using Bogus;
 using FluentAssertions;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
@@ -10,14 +9,9 @@ namespace Frank.Libraries.Tests.Extensions
 {
     public class EnumerableExtensionsTests
     {
-        private readonly Faker _faker;
-
-        //private readonly IEnumerable<string> _things;
-
         public EnumerableExtensionsTests()
         {
-            _faker = new Faker();
-            //_things = _fixture.CreateMany<string>(100);
+            CreateTestModel();
         }
 
         [Fact]

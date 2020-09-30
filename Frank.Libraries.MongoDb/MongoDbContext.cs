@@ -1,11 +1,11 @@
-﻿using System.Linq;
-using System.Reflection;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System.Linq;
+using System.Reflection;
 
 namespace Frank.Libraries.MongoDb
 {
-    public class MongoDbContext<TConfig> : IMongoDbContext where TConfig : MongoDbConfigurationBase, new()
+    public class MongoDbContext<TConfig> : IMongoDbContext where TConfig : MongoConfiguration, new()
     {
         private readonly IMongoDatabase _mongoDatabase;
 

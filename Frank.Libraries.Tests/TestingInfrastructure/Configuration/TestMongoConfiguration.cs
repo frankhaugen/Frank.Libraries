@@ -2,7 +2,7 @@
 
 namespace Frank.Libraries.Tests.TestingInfrastructure.Configuration
 {
-    public class TestMongoConfiguration : MongoDbConfigurationBase
+    public class TestMongoConfiguration : MongoConfiguration
     {
     }
 }

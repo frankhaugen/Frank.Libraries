@@ -1,13 +1,13 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using MongoDB.Bson;
 
 namespace Frank.Libraries.MongoDb
 {
-    public interface IMongoDbRepository<TEntity> where TEntity : MongoEntity, new()
+    public interface IMongoDbRepository<TEntity> where TEntity : IMongoEntity, new()
     {
         IQueryable<TEntity> AsQueryable();
 

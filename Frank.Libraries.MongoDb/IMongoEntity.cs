@@ -3,10 +3,10 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Frank.Libraries.MongoDb
 {
-    public class MongoEntity
+    public interface IMongoEntity
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; } = ObjectId.Empty.ToString();
+        public ObjectId Id { get; set; }
     }
 }

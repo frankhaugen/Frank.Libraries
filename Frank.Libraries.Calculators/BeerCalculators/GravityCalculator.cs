@@ -2,7 +2,7 @@
 {
     public class GravityCalculator
     {
-        private UnitConverter _unitConverter;
+        private readonly UnitConverter _unitConverter;
 
         public GravityCalculator()
         {

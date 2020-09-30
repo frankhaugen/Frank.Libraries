@@ -9,7 +9,7 @@ namespace Frank.Libraries.Security
     /// </summary>
     public class PasswordHasher
     {
-        private PasswordHashingConfiguration _configuration;
+        private readonly PasswordHashingConfiguration _configuration;
 
         /// <summary>
         /// Instantiate with custom configuration
