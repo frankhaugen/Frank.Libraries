@@ -1,21 +1,17 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
+using FluentAssertions;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests
 {
-    public class CodeExperimentation
+    public class CodeExperimentationTests
     {
-        private readonly string _csv = "Name;age;DOB\n" +
-                                       "Bob;28;2000-01-01\n" +
-                                       "Ross;77;2000-01-01\n" +
-                                       "Dave;11;2000-01-01\n" +
-                                       "carl;10;2000-01-01";
+        private readonly string _csv = "Name;age;DOB\nBob;28;2000-01-01\nRoss;77;2000-01-01\nDave;11;2000-01-01\ncarl;10;2000-01-01";
 
         private readonly ITestOutputHelper _outputHelper;
 
-        public CodeExperimentation(ITestOutputHelper outputHelper)
+        public CodeExperimentationTests(ITestOutputHelper outputHelper)
         {
             _outputHelper = outputHelper;
         }

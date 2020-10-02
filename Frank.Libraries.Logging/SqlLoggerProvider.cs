@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Frank.Libraries.Logging
 {
-    public class SqlLoggerProvider : ILoggerProvider
+    public sealed class SqlLoggerProvider : ILoggerProvider
     {
         private readonly ConcurrentDictionary<string, SqlLogger> _loggers = new ConcurrentDictionary<string, SqlLogger>();
         private readonly SqlLoggerConfiguration _configuration;
@@ -58,7 +58,9 @@ namespace Frank.Libraries.Logging
             query.AppendLine(")");
 
             using var connection = new SqlConnection(_configuration.ConnectionString);
+#pragma warning disable CA2100 // Review SQL queries for security vulnerabilities
             using var sqlCommand = new SqlCommand(query.ToString(), connection);
+#pragma warning restore CA2100 // Review SQL queries for security vulnerabilities
             connection.Open();
             return sqlCommand.ExecuteNonQuery() > 0;
         }

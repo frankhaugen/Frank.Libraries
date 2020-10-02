@@ -4,6 +4,7 @@ using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
 
+#pragma warning disable CA2100 // Review SQL queries for security vulnerabilities
 namespace Frank.Libraries.Logging
 {
     public class SqlLogger : ILogger

@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
+using Microsoft.Extensions.Logging;
 
 namespace Frank.Libraries.Logging
 {
-    public class FileLoggerProvider : ILoggerProvider
+    public sealed class FileLoggerProvider : ILoggerProvider
     {
         private readonly ConcurrentDictionary<string, FileLogger> _loggers = new ConcurrentDictionary<string, FileLogger>();
         private readonly FileLoggerConfiguration _configuration;
@@ -13,14 +13,13 @@ namespace Frank.Libraries.Logging
             _configuration = configuration;
         }
 
-        public void Dispose()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public ILogger CreateLogger(string categoryName)
         {
             return _loggers.GetOrAdd(categoryName, name => new FileLogger(name, _configuration));
+        }
+
+        public void Dispose()
+        {
         }
     }
 }
