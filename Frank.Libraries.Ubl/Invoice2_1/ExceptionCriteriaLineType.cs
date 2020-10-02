@@ -10,41 +10,41 @@
     public partial class ExceptionCriteriaLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private ThresholdValueComparisonCodeType thresholdValueComparisonCodeField;
+        private ThresholdValueComparisonCodeType _thresholdValueComparisonCodeField;
 
-        private ThresholdQuantityType thresholdQuantityField;
+        private ThresholdQuantityType _thresholdQuantityField;
 
-        private ExceptionStatusCodeType exceptionStatusCodeField;
+        private ExceptionStatusCodeType _exceptionStatusCodeField;
 
-        private CollaborationPriorityCodeType collaborationPriorityCodeField;
+        private CollaborationPriorityCodeType _collaborationPriorityCodeField;
 
-        private ExceptionResolutionCodeType exceptionResolutionCodeField;
+        private ExceptionResolutionCodeType _exceptionResolutionCodeField;
 
-        private SupplyChainActivityTypeCodeType supplyChainActivityTypeCodeField;
+        private SupplyChainActivityTypeCodeType _supplyChainActivityTypeCodeField;
 
-        private PerformanceMetricTypeCodeType performanceMetricTypeCodeField;
+        private PerformanceMetricTypeCodeType _performanceMetricTypeCodeField;
 
-        private PeriodType effectivePeriodField;
+        private PeriodType _effectivePeriodField;
 
-        private ItemType[] supplyItemField;
+        private ItemType[] _supplyItemField;
 
-        private ForecastExceptionCriterionLineType forecastExceptionCriterionLineField;
+        private ForecastExceptionCriterionLineType _forecastExceptionCriterionLineField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return thresholdValueComparisonCodeField;
+                return _thresholdValueComparisonCodeField;
             }
             set
             {
-                thresholdValueComparisonCodeField = value;
+                _thresholdValueComparisonCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return thresholdQuantityField;
+                return _thresholdQuantityField;
             }
             set
             {
-                thresholdQuantityField = value;
+                _thresholdQuantityField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return exceptionStatusCodeField;
+                return _exceptionStatusCodeField;
             }
             set
             {
-                exceptionStatusCodeField = value;
+                _exceptionStatusCodeField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return collaborationPriorityCodeField;
+                return _collaborationPriorityCodeField;
             }
             set
             {
-                collaborationPriorityCodeField = value;
+                _collaborationPriorityCodeField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return exceptionResolutionCodeField;
+                return _exceptionResolutionCodeField;
             }
             set
             {
-                exceptionResolutionCodeField = value;
+                _exceptionResolutionCodeField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return supplyChainActivityTypeCodeField;
+                return _supplyChainActivityTypeCodeField;
             }
             set
             {
-                supplyChainActivityTypeCodeField = value;
+                _supplyChainActivityTypeCodeField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return performanceMetricTypeCodeField;
+                return _performanceMetricTypeCodeField;
             }
             set
             {
-                performanceMetricTypeCodeField = value;
+                _performanceMetricTypeCodeField = value;
             }
         }
 
@@ -165,11 +165,11 @@
         {
             get
             {
-                return effectivePeriodField;
+                return _effectivePeriodField;
             }
             set
             {
-                effectivePeriodField = value;
+                _effectivePeriodField = value;
             }
         }
 
@@ -179,11 +179,11 @@
         {
             get
             {
-                return supplyItemField;
+                return _supplyItemField;
             }
             set
             {
-                supplyItemField = value;
+                _supplyItemField = value;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                return forecastExceptionCriterionLineField;
+                return _forecastExceptionCriterionLineField;
             }
             set
             {
-                forecastExceptionCriterionLineField = value;
+                _forecastExceptionCriterionLineField = value;
             }
         }
     }

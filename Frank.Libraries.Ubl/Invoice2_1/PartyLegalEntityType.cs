@@ -10,33 +10,33 @@
     public partial class PartyLegalEntityType
     {
 
-        private RegistrationNameType registrationNameField;
+        private RegistrationNameType _registrationNameField;
 
-        private CompanyIDType companyIDField;
+        private CompanyIdType _companyIdField;
 
-        private RegistrationDateType registrationDateField;
+        private RegistrationDateType _registrationDateField;
 
-        private RegistrationExpirationDateType registrationExpirationDateField;
+        private RegistrationExpirationDateType _registrationExpirationDateField;
 
-        private CompanyLegalFormCodeType companyLegalFormCodeField;
+        private CompanyLegalFormCodeType _companyLegalFormCodeField;
 
-        private CompanyLegalFormType companyLegalFormField;
+        private CompanyLegalFormType _companyLegalFormField;
 
-        private SoleProprietorshipIndicatorType soleProprietorshipIndicatorField;
+        private SoleProprietorshipIndicatorType _soleProprietorshipIndicatorField;
 
-        private CompanyLiquidationStatusCodeType companyLiquidationStatusCodeField;
+        private CompanyLiquidationStatusCodeType _companyLiquidationStatusCodeField;
 
-        private CorporateStockAmountType corporateStockAmountField;
+        private CorporateStockAmountType _corporateStockAmountField;
 
-        private FullyPaidSharesIndicatorType fullyPaidSharesIndicatorField;
+        private FullyPaidSharesIndicatorType _fullyPaidSharesIndicatorField;
 
-        private AddressType registrationAddressField;
+        private AddressType _registrationAddressField;
 
-        private CorporateRegistrationSchemeType corporateRegistrationSchemeField;
+        private CorporateRegistrationSchemeType _corporateRegistrationSchemeField;
 
-        private PartyType headOfficePartyField;
+        private PartyType _headOfficePartyField;
 
-        private ShareholderPartyType[] shareholderPartyField;
+        private ShareholderPartyType[] _shareholderPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -44,25 +44,25 @@
         {
             get
             {
-                return registrationNameField;
+                return _registrationNameField;
             }
             set
             {
-                registrationNameField = value;
+                _registrationNameField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public CompanyIDType CompanyID
+        public CompanyIdType CompanyId
         {
             get
             {
-                return companyIDField;
+                return _companyIdField;
             }
             set
             {
-                companyIDField = value;
+                _companyIdField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return registrationDateField;
+                return _registrationDateField;
             }
             set
             {
-                registrationDateField = value;
+                _registrationDateField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return registrationExpirationDateField;
+                return _registrationExpirationDateField;
             }
             set
             {
-                registrationExpirationDateField = value;
+                _registrationExpirationDateField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return companyLegalFormCodeField;
+                return _companyLegalFormCodeField;
             }
             set
             {
-                companyLegalFormCodeField = value;
+                _companyLegalFormCodeField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return companyLegalFormField;
+                return _companyLegalFormField;
             }
             set
             {
-                companyLegalFormField = value;
+                _companyLegalFormField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return soleProprietorshipIndicatorField;
+                return _soleProprietorshipIndicatorField;
             }
             set
             {
-                soleProprietorshipIndicatorField = value;
+                _soleProprietorshipIndicatorField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return companyLiquidationStatusCodeField;
+                return _companyLiquidationStatusCodeField;
             }
             set
             {
-                companyLiquidationStatusCodeField = value;
+                _companyLiquidationStatusCodeField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return corporateStockAmountField;
+                return _corporateStockAmountField;
             }
             set
             {
-                corporateStockAmountField = value;
+                _corporateStockAmountField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return fullyPaidSharesIndicatorField;
+                return _fullyPaidSharesIndicatorField;
             }
             set
             {
-                fullyPaidSharesIndicatorField = value;
+                _fullyPaidSharesIndicatorField = value;
             }
         }
 
@@ -183,11 +183,11 @@
         {
             get
             {
-                return registrationAddressField;
+                return _registrationAddressField;
             }
             set
             {
-                registrationAddressField = value;
+                _registrationAddressField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return corporateRegistrationSchemeField;
+                return _corporateRegistrationSchemeField;
             }
             set
             {
-                corporateRegistrationSchemeField = value;
+                _corporateRegistrationSchemeField = value;
             }
         }
 
@@ -209,11 +209,11 @@
         {
             get
             {
-                return headOfficePartyField;
+                return _headOfficePartyField;
             }
             set
             {
-                headOfficePartyField = value;
+                _headOfficePartyField = value;
             }
         }
 
@@ -223,11 +223,11 @@
         {
             get
             {
-                return shareholderPartyField;
+                return _shareholderPartyField;
             }
             set
             {
-                shareholderPartyField = value;
+                _shareholderPartyField = value;
             }
         }
     }

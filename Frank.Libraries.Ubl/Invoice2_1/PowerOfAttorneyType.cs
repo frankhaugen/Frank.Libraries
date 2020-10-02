@@ -10,33 +10,33 @@
     public partial class PowerOfAttorneyType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private IssueTimeType issueTimeField;
+        private IssueTimeType _issueTimeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private PartyType notaryPartyField;
+        private PartyType _notaryPartyField;
 
-        private PartyType agentPartyField;
+        private PartyType _agentPartyField;
 
-        private PartyType[] witnessPartyField;
+        private PartyType[] _witnessPartyField;
 
-        private DocumentReferenceType[] mandateDocumentReferenceField;
+        private DocumentReferenceType[] _mandateDocumentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return issueTimeField;
+                return _issueTimeField;
             }
             set
             {
-                issueTimeField = value;
+                _issueTimeField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -87,11 +87,11 @@
         {
             get
             {
-                return notaryPartyField;
+                return _notaryPartyField;
             }
             set
             {
-                notaryPartyField = value;
+                _notaryPartyField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return agentPartyField;
+                return _agentPartyField;
             }
             set
             {
-                agentPartyField = value;
+                _agentPartyField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return witnessPartyField;
+                return _witnessPartyField;
             }
             set
             {
-                witnessPartyField = value;
+                _witnessPartyField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return mandateDocumentReferenceField;
+                return _mandateDocumentReferenceField;
             }
             set
             {
-                mandateDocumentReferenceField = value;
+                _mandateDocumentReferenceField = value;
             }
         }
     }

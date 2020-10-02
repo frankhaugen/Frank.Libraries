@@ -10,43 +10,43 @@
     public partial class MeterReadingType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private MeterReadingTypeType meterReadingType1Field;
+        private MeterReadingTypeType _meterReadingType1Field;
 
-        private MeterReadingTypeCodeType meterReadingTypeCodeField;
+        private MeterReadingTypeCodeType _meterReadingTypeCodeField;
 
-        private PreviousMeterReadingDateType previousMeterReadingDateField;
+        private PreviousMeterReadingDateType _previousMeterReadingDateField;
 
-        private PreviousMeterQuantityType previousMeterQuantityField;
+        private PreviousMeterQuantityType _previousMeterQuantityField;
 
-        private LatestMeterReadingDateType latestMeterReadingDateField;
+        private LatestMeterReadingDateType _latestMeterReadingDateField;
 
-        private LatestMeterQuantityType latestMeterQuantityField;
+        private LatestMeterQuantityType _latestMeterQuantityField;
 
-        private PreviousMeterReadingMethodType previousMeterReadingMethodField;
+        private PreviousMeterReadingMethodType _previousMeterReadingMethodField;
 
-        private PreviousMeterReadingMethodCodeType previousMeterReadingMethodCodeField;
+        private PreviousMeterReadingMethodCodeType _previousMeterReadingMethodCodeField;
 
-        private LatestMeterReadingMethodType latestMeterReadingMethodField;
+        private LatestMeterReadingMethodType _latestMeterReadingMethodField;
 
-        private LatestMeterReadingMethodCodeType latestMeterReadingMethodCodeField;
+        private LatestMeterReadingMethodCodeType _latestMeterReadingMethodCodeField;
 
-        private MeterReadingCommentsType[] meterReadingCommentsField;
+        private MeterReadingCommentsType[] _meterReadingCommentsField;
 
-        private DeliveredQuantityType deliveredQuantityField;
+        private DeliveredQuantityType _deliveredQuantityField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return meterReadingType1Field;
+                return _meterReadingType1Field;
             }
             set
             {
-                meterReadingType1Field = value;
+                _meterReadingType1Field = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return meterReadingTypeCodeField;
+                return _meterReadingTypeCodeField;
             }
             set
             {
-                meterReadingTypeCodeField = value;
+                _meterReadingTypeCodeField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return previousMeterReadingDateField;
+                return _previousMeterReadingDateField;
             }
             set
             {
-                previousMeterReadingDateField = value;
+                _previousMeterReadingDateField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return previousMeterQuantityField;
+                return _previousMeterQuantityField;
             }
             set
             {
-                previousMeterQuantityField = value;
+                _previousMeterQuantityField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return latestMeterReadingDateField;
+                return _latestMeterReadingDateField;
             }
             set
             {
-                latestMeterReadingDateField = value;
+                _latestMeterReadingDateField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return latestMeterQuantityField;
+                return _latestMeterQuantityField;
             }
             set
             {
-                latestMeterQuantityField = value;
+                _latestMeterQuantityField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return previousMeterReadingMethodField;
+                return _previousMeterReadingMethodField;
             }
             set
             {
-                previousMeterReadingMethodField = value;
+                _previousMeterReadingMethodField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return previousMeterReadingMethodCodeField;
+                return _previousMeterReadingMethodCodeField;
             }
             set
             {
-                previousMeterReadingMethodCodeField = value;
+                _previousMeterReadingMethodCodeField = value;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                return latestMeterReadingMethodField;
+                return _latestMeterReadingMethodField;
             }
             set
             {
-                latestMeterReadingMethodField = value;
+                _latestMeterReadingMethodField = value;
             }
         }
 
@@ -182,11 +182,11 @@
         {
             get
             {
-                return latestMeterReadingMethodCodeField;
+                return _latestMeterReadingMethodCodeField;
             }
             set
             {
-                latestMeterReadingMethodCodeField = value;
+                _latestMeterReadingMethodCodeField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return meterReadingCommentsField;
+                return _meterReadingCommentsField;
             }
             set
             {
-                meterReadingCommentsField = value;
+                _meterReadingCommentsField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return deliveredQuantityField;
+                return _deliveredQuantityField;
             }
             set
             {
-                deliveredQuantityField = value;
+                _deliveredQuantityField = value;
             }
         }
     }

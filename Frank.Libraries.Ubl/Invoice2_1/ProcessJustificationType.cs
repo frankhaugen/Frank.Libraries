@@ -10,13 +10,13 @@
     public partial class ProcessJustificationType
     {
 
-        private PreviousCancellationReasonCodeType previousCancellationReasonCodeField;
+        private PreviousCancellationReasonCodeType _previousCancellationReasonCodeField;
 
-        private ProcessReasonCodeType processReasonCodeField;
+        private ProcessReasonCodeType _processReasonCodeField;
 
-        private ProcessReasonType[] processReasonField;
+        private ProcessReasonType[] _processReasonField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return previousCancellationReasonCodeField;
+                return _previousCancellationReasonCodeField;
             }
             set
             {
-                previousCancellationReasonCodeField = value;
+                _previousCancellationReasonCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return processReasonCodeField;
+                return _processReasonCodeField;
             }
             set
             {
-                processReasonCodeField = value;
+                _processReasonCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return processReasonField;
+                return _processReasonField;
             }
             set
             {
-                processReasonField = value;
+                _processReasonField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
     }

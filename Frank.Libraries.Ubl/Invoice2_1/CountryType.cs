@@ -10,9 +10,9 @@
     public partial class CountryType
     {
 
-        private IdentificationCodeType identificationCodeField;
+        private IdentificationCodeType _identificationCodeField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return identificationCodeField;
+                return _identificationCodeField;
             }
             set
             {
-                identificationCodeField = value;
+                _identificationCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
     }

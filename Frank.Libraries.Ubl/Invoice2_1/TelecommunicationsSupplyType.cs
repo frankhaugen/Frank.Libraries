@@ -10,17 +10,17 @@
     public partial class TelecommunicationsSupplyType
     {
 
-        private TelecommunicationsSupplyTypeType telecommunicationsSupplyType1Field;
+        private TelecommunicationsSupplyTypeType _telecommunicationsSupplyType1Field;
 
-        private TelecommunicationsSupplyTypeCodeType telecommunicationsSupplyTypeCodeField;
+        private TelecommunicationsSupplyTypeCodeType _telecommunicationsSupplyTypeCodeField;
 
-        private PrivacyCodeType privacyCodeField;
+        private PrivacyCodeType _privacyCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private TotalAmountType totalAmountField;
+        private TotalAmountType _totalAmountField;
 
-        private TelecommunicationsSupplyLineType[] telecommunicationsSupplyLineField;
+        private TelecommunicationsSupplyLineType[] _telecommunicationsSupplyLineField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("TelecommunicationsSupplyType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -28,11 +28,11 @@
         {
             get
             {
-                return telecommunicationsSupplyType1Field;
+                return _telecommunicationsSupplyType1Field;
             }
             set
             {
-                telecommunicationsSupplyType1Field = value;
+                _telecommunicationsSupplyType1Field = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return telecommunicationsSupplyTypeCodeField;
+                return _telecommunicationsSupplyTypeCodeField;
             }
             set
             {
-                telecommunicationsSupplyTypeCodeField = value;
+                _telecommunicationsSupplyTypeCodeField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return privacyCodeField;
+                return _privacyCodeField;
             }
             set
             {
-                privacyCodeField = value;
+                _privacyCodeField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return totalAmountField;
+                return _totalAmountField;
             }
             set
             {
-                totalAmountField = value;
+                _totalAmountField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return telecommunicationsSupplyLineField;
+                return _telecommunicationsSupplyLineField;
             }
             set
             {
-                telecommunicationsSupplyLineField = value;
+                _telecommunicationsSupplyLineField = value;
             }
         }
     }

@@ -10,45 +10,45 @@
     public partial class ImmobilizedSecurityType
     {
 
-        private ImmobilizationCertificateIDType immobilizationCertificateIDField;
+        private ImmobilizationCertificateIdType _immobilizationCertificateIdField;
 
-        private SecurityIDType securityIDField;
+        private SecurityIdType _securityIdField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private FaceValueAmountType faceValueAmountField;
+        private FaceValueAmountType _faceValueAmountField;
 
-        private MarketValueAmountType marketValueAmountField;
+        private MarketValueAmountType _marketValueAmountField;
 
-        private SharesNumberQuantityType sharesNumberQuantityField;
+        private SharesNumberQuantityType _sharesNumberQuantityField;
 
-        private PartyType issuerPartyField;
+        private PartyType _issuerPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ImmobilizationCertificateIDType ImmobilizationCertificateID
+        public ImmobilizationCertificateIdType ImmobilizationCertificateId
         {
             get
             {
-                return immobilizationCertificateIDField;
+                return _immobilizationCertificateIdField;
             }
             set
             {
-                immobilizationCertificateIDField = value;
+                _immobilizationCertificateIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SecurityIDType SecurityID
+        public SecurityIdType SecurityId
         {
             get
             {
-                return securityIDField;
+                return _securityIdField;
             }
             set
             {
-                securityIDField = value;
+                _securityIdField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return faceValueAmountField;
+                return _faceValueAmountField;
             }
             set
             {
-                faceValueAmountField = value;
+                _faceValueAmountField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return marketValueAmountField;
+                return _marketValueAmountField;
             }
             set
             {
-                marketValueAmountField = value;
+                _marketValueAmountField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return sharesNumberQuantityField;
+                return _sharesNumberQuantityField;
             }
             set
             {
-                sharesNumberQuantityField = value;
+                _sharesNumberQuantityField = value;
             }
         }
 
@@ -113,11 +113,11 @@
         {
             get
             {
-                return issuerPartyField;
+                return _issuerPartyField;
             }
             set
             {
-                issuerPartyField = value;
+                _issuerPartyField = value;
             }
         }
     }

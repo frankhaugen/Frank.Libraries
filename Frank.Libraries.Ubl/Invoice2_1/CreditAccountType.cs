@@ -10,19 +10,19 @@
     public partial class CreditAccountType
     {
 
-        private AccountIDType accountIDField;
+        private AccountIdType _accountIdField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public AccountIDType AccountID
+        public AccountIdType AccountId
         {
             get
             {
-                return accountIDField;
+                return _accountIdField;
             }
             set
             {
-                accountIDField = value;
+                _accountIdField = value;
             }
         }
     }

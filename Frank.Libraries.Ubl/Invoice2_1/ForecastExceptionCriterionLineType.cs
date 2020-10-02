@@ -10,15 +10,15 @@
     public partial class ForecastExceptionCriterionLineType
     {
 
-        private ForecastPurposeCodeType forecastPurposeCodeField;
+        private ForecastPurposeCodeType _forecastPurposeCodeField;
 
-        private ForecastTypeCodeType forecastTypeCodeField;
+        private ForecastTypeCodeType _forecastTypeCodeField;
 
-        private ComparisonDataSourceCodeType comparisonDataSourceCodeField;
+        private ComparisonDataSourceCodeType _comparisonDataSourceCodeField;
 
-        private DataSourceCodeType dataSourceCodeField;
+        private DataSourceCodeType _dataSourceCodeField;
 
-        private TimeDeltaDaysQuantityType timeDeltaDaysQuantityField;
+        private TimeDeltaDaysQuantityType _timeDeltaDaysQuantityField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return forecastPurposeCodeField;
+                return _forecastPurposeCodeField;
             }
             set
             {
-                forecastPurposeCodeField = value;
+                _forecastPurposeCodeField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return forecastTypeCodeField;
+                return _forecastTypeCodeField;
             }
             set
             {
-                forecastTypeCodeField = value;
+                _forecastTypeCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return comparisonDataSourceCodeField;
+                return _comparisonDataSourceCodeField;
             }
             set
             {
-                comparisonDataSourceCodeField = value;
+                _comparisonDataSourceCodeField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return dataSourceCodeField;
+                return _dataSourceCodeField;
             }
             set
             {
-                dataSourceCodeField = value;
+                _dataSourceCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return timeDeltaDaysQuantityField;
+                return _timeDeltaDaysQuantityField;
             }
             set
             {
-                timeDeltaDaysQuantityField = value;
+                _timeDeltaDaysQuantityField = value;
             }
         }
     }

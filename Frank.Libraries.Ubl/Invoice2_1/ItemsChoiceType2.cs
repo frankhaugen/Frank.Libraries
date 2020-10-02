@@ -21,13 +21,13 @@
         MgmtData,
 
         /// <remarks/>
-        PGPData,
+        PgpData,
 
         /// <remarks/>
         RetrievalMethod,
 
         /// <remarks/>
-        SPKIData,
+        SpkiData,
 
         /// <remarks/>
         X509Data,

@@ -7,24 +7,24 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [System.Xml.Serialization.XmlRootAttribute("SPKIData", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
-    public partial class SPKIDataType
+    public partial class SpkiDataType
     {
 
-        private byte[][] sPKISexpField;
+        private byte[][] _sPkiSexpField;
 
-        private System.Xml.XmlElement anyField;
+        private System.Xml.XmlElement _anyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SPKISexp", DataType = "base64Binary")]
-        public byte[][] SPKISexp
+        public byte[][] SpkiSexp
         {
             get
             {
-                return sPKISexpField;
+                return _sPkiSexpField;
             }
             set
             {
-                sPKISexpField = value;
+                _sPkiSexpField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return anyField;
+                return _anyField;
             }
             set
             {
-                anyField = value;
+                _anyField = value;
             }
         }
     }

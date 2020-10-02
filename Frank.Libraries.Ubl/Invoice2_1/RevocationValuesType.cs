@@ -10,39 +10,39 @@
     public partial class RevocationValuesType
     {
 
-        private EncapsulatedPKIDataType[] cRLValuesField;
+        private EncapsulatedPkiDataType[] _cRlValuesField;
 
-        private EncapsulatedPKIDataType[] oCSPValuesField;
+        private EncapsulatedPkiDataType[] _oCspValuesField;
 
-        private AnyType[] otherValuesField;
+        private AnyType[] _otherValuesField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("EncapsulatedCRLValue", IsNullable = false)]
-        public EncapsulatedPKIDataType[] CRLValues
+        public EncapsulatedPkiDataType[] CrlValues
         {
             get
             {
-                return cRLValuesField;
+                return _cRlValuesField;
             }
             set
             {
-                cRLValuesField = value;
+                _cRlValuesField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("EncapsulatedOCSPValue", IsNullable = false)]
-        public EncapsulatedPKIDataType[] OCSPValues
+        public EncapsulatedPkiDataType[] OcspValues
         {
             get
             {
-                return oCSPValuesField;
+                return _oCspValuesField;
             }
             set
             {
-                oCSPValuesField = value;
+                _oCspValuesField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return otherValuesField;
+                return _otherValuesField;
             }
             set
             {
-                otherValuesField = value;
+                _otherValuesField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

@@ -10,23 +10,23 @@
     public partial class KeyValueType
     {
 
-        private object itemField;
+        private object _itemField;
 
-        private string[] textField;
+        private string[] _textField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
-        [System.Xml.Serialization.XmlElementAttribute("DSAKeyValue", typeof(DSAKeyValueType))]
-        [System.Xml.Serialization.XmlElementAttribute("RSAKeyValue", typeof(RSAKeyValueType))]
+        [System.Xml.Serialization.XmlElementAttribute("DSAKeyValue", typeof(DsaKeyValueType))]
+        [System.Xml.Serialization.XmlElementAttribute("RSAKeyValue", typeof(RsaKeyValueType))]
         public object Item
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return textField;
+                return _textField;
             }
             set
             {
-                textField = value;
+                _textField = value;
             }
         }
     }

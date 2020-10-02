@@ -10,35 +10,35 @@
     public partial class PickupType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ActualPickupDateType actualPickupDateField;
+        private ActualPickupDateType _actualPickupDateField;
 
-        private ActualPickupTimeType actualPickupTimeField;
+        private ActualPickupTimeType _actualPickupTimeField;
 
-        private EarliestPickupDateType earliestPickupDateField;
+        private EarliestPickupDateType _earliestPickupDateField;
 
-        private EarliestPickupTimeType earliestPickupTimeField;
+        private EarliestPickupTimeType _earliestPickupTimeField;
 
-        private LatestPickupDateType latestPickupDateField;
+        private LatestPickupDateType _latestPickupDateField;
 
-        private LatestPickupTimeType latestPickupTimeField;
+        private LatestPickupTimeType _latestPickupTimeField;
 
-        private LocationType1 pickupLocationField;
+        private LocationType1 _pickupLocationField;
 
-        private PartyType pickupPartyField;
+        private PartyType _pickupPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return actualPickupDateField;
+                return _actualPickupDateField;
             }
             set
             {
-                actualPickupDateField = value;
+                _actualPickupDateField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return actualPickupTimeField;
+                return _actualPickupTimeField;
             }
             set
             {
-                actualPickupTimeField = value;
+                _actualPickupTimeField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return earliestPickupDateField;
+                return _earliestPickupDateField;
             }
             set
             {
-                earliestPickupDateField = value;
+                _earliestPickupDateField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return earliestPickupTimeField;
+                return _earliestPickupTimeField;
             }
             set
             {
-                earliestPickupTimeField = value;
+                _earliestPickupTimeField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return latestPickupDateField;
+                return _latestPickupDateField;
             }
             set
             {
-                latestPickupDateField = value;
+                _latestPickupDateField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return latestPickupTimeField;
+                return _latestPickupTimeField;
             }
             set
             {
-                latestPickupTimeField = value;
+                _latestPickupTimeField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return pickupLocationField;
+                return _pickupLocationField;
             }
             set
             {
-                pickupLocationField = value;
+                _pickupLocationField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return pickupPartyField;
+                return _pickupPartyField;
             }
             set
             {
-                pickupPartyField = value;
+                _pickupPartyField = value;
             }
         }
     }

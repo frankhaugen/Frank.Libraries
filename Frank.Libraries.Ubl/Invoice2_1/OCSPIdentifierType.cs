@@ -6,25 +6,25 @@
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class OCSPIdentifierType
+    public partial class OcspIdentifierType
     {
 
-        private ResponderIDType responderIDField;
+        private ResponderIdType _responderIdField;
 
-        private System.DateTime producedAtField;
+        private System.DateTime _producedAtField;
 
-        private string uRIField;
+        private string _uRiField;
 
         /// <remarks/>
-        public ResponderIDType ResponderID
+        public ResponderIdType ResponderId
         {
             get
             {
-                return responderIDField;
+                return _responderIdField;
             }
             set
             {
-                responderIDField = value;
+                _responderIdField = value;
             }
         }
 
@@ -33,25 +33,25 @@
         {
             get
             {
-                return producedAtField;
+                return _producedAtField;
             }
             set
             {
-                producedAtField = value;
+                _producedAtField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string URI
+        public string Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
     }

@@ -10,13 +10,13 @@
     public partial class CommodityClassificationType
     {
 
-        private NatureCodeType natureCodeField;
+        private NatureCodeType _natureCodeField;
 
-        private CargoTypeCodeType cargoTypeCodeField;
+        private CargoTypeCodeType _cargoTypeCodeField;
 
-        private CommodityCodeType commodityCodeField;
+        private CommodityCodeType _commodityCodeField;
 
-        private ItemClassificationCodeType itemClassificationCodeField;
+        private ItemClassificationCodeType _itemClassificationCodeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return natureCodeField;
+                return _natureCodeField;
             }
             set
             {
-                natureCodeField = value;
+                _natureCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return cargoTypeCodeField;
+                return _cargoTypeCodeField;
             }
             set
             {
-                cargoTypeCodeField = value;
+                _cargoTypeCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return commodityCodeField;
+                return _commodityCodeField;
             }
             set
             {
-                commodityCodeField = value;
+                _commodityCodeField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return itemClassificationCodeField;
+                return _itemClassificationCodeField;
             }
             set
             {
-                itemClassificationCodeField = value;
+                _itemClassificationCodeField = value;
             }
         }
     }

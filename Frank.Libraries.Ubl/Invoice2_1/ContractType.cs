@@ -10,45 +10,45 @@
     public partial class ContractType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private IssueTimeType issueTimeField;
+        private IssueTimeType _issueTimeField;
 
-        private NominationDateType nominationDateField;
+        private NominationDateType _nominationDateField;
 
-        private NominationTimeType nominationTimeField;
+        private NominationTimeType _nominationTimeField;
 
-        private ContractTypeCodeType contractTypeCodeField;
+        private ContractTypeCodeType _contractTypeCodeField;
 
-        private ContractTypeType contractType1Field;
+        private ContractTypeType _contractType1Field;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private VersionIDType versionIDField;
+        private VersionIdType _versionIdField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private PeriodType validityPeriodField;
+        private PeriodType _validityPeriodField;
 
-        private DocumentReferenceType[] contractDocumentReferenceField;
+        private DocumentReferenceType[] _contractDocumentReferenceField;
 
-        private PeriodType nominationPeriodField;
+        private PeriodType _nominationPeriodField;
 
-        private DeliveryType contractualDeliveryField;
+        private DeliveryType _contractualDeliveryField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return issueTimeField;
+                return _issueTimeField;
             }
             set
             {
-                issueTimeField = value;
+                _issueTimeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return nominationDateField;
+                return _nominationDateField;
             }
             set
             {
-                nominationDateField = value;
+                _nominationDateField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return nominationTimeField;
+                return _nominationTimeField;
             }
             set
             {
-                nominationTimeField = value;
+                _nominationTimeField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return contractTypeCodeField;
+                return _contractTypeCodeField;
             }
             set
             {
-                contractTypeCodeField = value;
+                _contractTypeCodeField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return contractType1Field;
+                return _contractType1Field;
             }
             set
             {
-                contractType1Field = value;
+                _contractType1Field = value;
             }
         }
 
@@ -142,25 +142,25 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public VersionIDType VersionID
+        public VersionIdType VersionId
         {
             get
             {
-                return versionIDField;
+                return _versionIdField;
             }
             set
             {
-                versionIDField = value;
+                _versionIdField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -183,11 +183,11 @@
         {
             get
             {
-                return validityPeriodField;
+                return _validityPeriodField;
             }
             set
             {
-                validityPeriodField = value;
+                _validityPeriodField = value;
             }
         }
 
@@ -197,11 +197,11 @@
         {
             get
             {
-                return contractDocumentReferenceField;
+                return _contractDocumentReferenceField;
             }
             set
             {
-                contractDocumentReferenceField = value;
+                _contractDocumentReferenceField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return nominationPeriodField;
+                return _nominationPeriodField;
             }
             set
             {
-                nominationPeriodField = value;
+                _nominationPeriodField = value;
             }
         }
 
@@ -223,11 +223,11 @@
         {
             get
             {
-                return contractualDeliveryField;
+                return _contractualDeliveryField;
             }
             set
             {
-                contractualDeliveryField = value;
+                _contractualDeliveryField = value;
             }
         }
     }

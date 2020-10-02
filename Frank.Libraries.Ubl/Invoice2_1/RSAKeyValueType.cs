@@ -7,12 +7,12 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [System.Xml.Serialization.XmlRootAttribute("RSAKeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
-    public partial class RSAKeyValueType
+    public partial class RsaKeyValueType
     {
 
-        private byte[] modulusField;
+        private byte[] _modulusField;
 
-        private byte[] exponentField;
+        private byte[] _exponentField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return modulusField;
+                return _modulusField;
             }
             set
             {
-                modulusField = value;
+                _modulusField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return exponentField;
+                return _exponentField;
             }
             set
             {
-                exponentField = value;
+                _exponentField = value;
             }
         }
     }

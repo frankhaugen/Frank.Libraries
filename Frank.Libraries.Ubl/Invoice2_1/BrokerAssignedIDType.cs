@@ -7,7 +7,7 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     [System.Xml.Serialization.XmlRootAttribute("BrokerAssignedID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2", IsNullable = false)]
-    public partial class BrokerAssignedIDType : IdentifierType1
+    public partial class BrokerAssignedIdType : IdentifierType1
     {
     }
 }

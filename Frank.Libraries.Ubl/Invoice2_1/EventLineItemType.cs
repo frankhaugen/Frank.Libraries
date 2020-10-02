@@ -10,13 +10,13 @@
     public partial class EventLineItemType
     {
 
-        private LineNumberNumericType lineNumberNumericField;
+        private LineNumberNumericType _lineNumberNumericField;
 
-        private LocationType1 participatingLocationsLocationField;
+        private LocationType1 _participatingLocationsLocationField;
 
-        private RetailPlannedImpactType[] retailPlannedImpactField;
+        private RetailPlannedImpactType[] _retailPlannedImpactField;
 
-        private ItemType supplyItemField;
+        private ItemType _supplyItemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return lineNumberNumericField;
+                return _lineNumberNumericField;
             }
             set
             {
-                lineNumberNumericField = value;
+                _lineNumberNumericField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return participatingLocationsLocationField;
+                return _participatingLocationsLocationField;
             }
             set
             {
-                participatingLocationsLocationField = value;
+                _participatingLocationsLocationField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return retailPlannedImpactField;
+                return _retailPlannedImpactField;
             }
             set
             {
-                retailPlannedImpactField = value;
+                _retailPlannedImpactField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return supplyItemField;
+                return _supplyItemField;
             }
             set
             {
-                supplyItemField = value;
+                _supplyItemField = value;
             }
         }
     }

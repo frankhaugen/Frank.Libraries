@@ -9,20 +9,20 @@
     public partial class X509IssuerSerialType
     {
 
-        private string x509IssuerNameField;
+        private string _x509IssuerNameField;
 
-        private string x509SerialNumberField;
+        private string _x509SerialNumberField;
 
         /// <remarks/>
         public string X509IssuerName
         {
             get
             {
-                return x509IssuerNameField;
+                return _x509IssuerNameField;
             }
             set
             {
-                x509IssuerNameField = value;
+                _x509IssuerNameField = value;
             }
         }
 
@@ -32,11 +32,11 @@
         {
             get
             {
-                return x509SerialNumberField;
+                return _x509SerialNumberField;
             }
             set
             {
-                x509SerialNumberField = value;
+                _x509SerialNumberField = value;
             }
         }
     }

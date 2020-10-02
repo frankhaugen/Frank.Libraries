@@ -10,55 +10,55 @@
     public partial class OrderLineReferenceType
     {
 
-        private LineIDType lineIDField;
+        private LineIdType _lineIdField;
 
-        private SalesOrderLineIDType salesOrderLineIDField;
+        private SalesOrderLineIdType _salesOrderLineIdField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private LineStatusCodeType lineStatusCodeField;
+        private LineStatusCodeType _lineStatusCodeField;
 
-        private OrderReferenceType orderReferenceField;
+        private OrderReferenceType _orderReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LineIDType LineID
+        public LineIdType LineId
         {
             get
             {
-                return lineIDField;
+                return _lineIdField;
             }
             set
             {
-                lineIDField = value;
+                _lineIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SalesOrderLineIDType SalesOrderLineID
+        public SalesOrderLineIdType SalesOrderLineId
         {
             get
             {
-                return salesOrderLineIDField;
+                return _salesOrderLineIdField;
             }
             set
             {
-                salesOrderLineIDField = value;
+                _salesOrderLineIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return lineStatusCodeField;
+                return _lineStatusCodeField;
             }
             set
             {
-                lineStatusCodeField = value;
+                _lineStatusCodeField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return orderReferenceField;
+                return _orderReferenceField;
             }
             set
             {
-                orderReferenceField = value;
+                _orderReferenceField = value;
             }
         }
     }

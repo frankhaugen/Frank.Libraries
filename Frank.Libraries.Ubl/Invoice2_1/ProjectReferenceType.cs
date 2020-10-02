@@ -10,39 +10,39 @@
     public partial class ProjectReferenceType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private WorkPhaseReferenceType[] workPhaseReferenceField;
+        private WorkPhaseReferenceType[] _workPhaseReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return workPhaseReferenceField;
+                return _workPhaseReferenceField;
             }
             set
             {
-                workPhaseReferenceField = value;
+                _workPhaseReferenceField = value;
             }
         }
     }

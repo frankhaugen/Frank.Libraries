@@ -10,45 +10,45 @@
     public partial class ReminderLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private BalanceBroughtForwardIndicatorType balanceBroughtForwardIndicatorField;
+        private BalanceBroughtForwardIndicatorType _balanceBroughtForwardIndicatorField;
 
-        private DebitLineAmountType debitLineAmountField;
+        private DebitLineAmountType _debitLineAmountField;
 
-        private CreditLineAmountType creditLineAmountField;
+        private CreditLineAmountType _creditLineAmountField;
 
-        private AccountingCostCodeType accountingCostCodeField;
+        private AccountingCostCodeType _accountingCostCodeField;
 
-        private AccountingCostType accountingCostField;
+        private AccountingCostType _accountingCostField;
 
-        private PenaltySurchargePercentType penaltySurchargePercentField;
+        private PenaltySurchargePercentType _penaltySurchargePercentField;
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private PaymentPurposeCodeType paymentPurposeCodeField;
+        private PaymentPurposeCodeType _paymentPurposeCodeField;
 
-        private PeriodType[] reminderPeriodField;
+        private PeriodType[] _reminderPeriodField;
 
-        private BillingReferenceType[] billingReferenceField;
+        private BillingReferenceType[] _billingReferenceField;
 
-        private ExchangeRateType exchangeRateField;
+        private ExchangeRateType _exchangeRateField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -58,25 +58,25 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return balanceBroughtForwardIndicatorField;
+                return _balanceBroughtForwardIndicatorField;
             }
             set
             {
-                balanceBroughtForwardIndicatorField = value;
+                _balanceBroughtForwardIndicatorField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return debitLineAmountField;
+                return _debitLineAmountField;
             }
             set
             {
-                debitLineAmountField = value;
+                _debitLineAmountField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return creditLineAmountField;
+                return _creditLineAmountField;
             }
             set
             {
-                creditLineAmountField = value;
+                _creditLineAmountField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return accountingCostCodeField;
+                return _accountingCostCodeField;
             }
             set
             {
-                accountingCostCodeField = value;
+                _accountingCostCodeField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return accountingCostField;
+                return _accountingCostField;
             }
             set
             {
-                accountingCostField = value;
+                _accountingCostField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return penaltySurchargePercentField;
+                return _penaltySurchargePercentField;
             }
             set
             {
-                penaltySurchargePercentField = value;
+                _penaltySurchargePercentField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return paymentPurposeCodeField;
+                return _paymentPurposeCodeField;
             }
             set
             {
-                paymentPurposeCodeField = value;
+                _paymentPurposeCodeField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return reminderPeriodField;
+                return _reminderPeriodField;
             }
             set
             {
-                reminderPeriodField = value;
+                _reminderPeriodField = value;
             }
         }
 
@@ -212,11 +212,11 @@
         {
             get
             {
-                return billingReferenceField;
+                return _billingReferenceField;
             }
             set
             {
-                billingReferenceField = value;
+                _billingReferenceField = value;
             }
         }
 
@@ -225,11 +225,11 @@
         {
             get
             {
-                return exchangeRateField;
+                return _exchangeRateField;
             }
             set
             {
-                exchangeRateField = value;
+                _exchangeRateField = value;
             }
         }
     }

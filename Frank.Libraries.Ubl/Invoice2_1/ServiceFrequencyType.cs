@@ -10,7 +10,7 @@
     public partial class ServiceFrequencyType
     {
 
-        private WeekDayCodeType weekDayCodeField;
+        private WeekDayCodeType _weekDayCodeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -18,11 +18,11 @@
         {
             get
             {
-                return weekDayCodeField;
+                return _weekDayCodeField;
             }
             set
             {
-                weekDayCodeField = value;
+                _weekDayCodeField = value;
             }
         }
     }

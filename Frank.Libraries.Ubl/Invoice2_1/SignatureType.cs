@@ -10,37 +10,37 @@
     public partial class SignatureType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private ValidationDateType validationDateField;
+        private ValidationDateType _validationDateField;
 
-        private ValidationTimeType validationTimeField;
+        private ValidationTimeType _validationTimeField;
 
-        private ValidatorIDType validatorIDField;
+        private ValidatorIdType _validatorIdField;
 
-        private CanonicalizationMethodType canonicalizationMethodField;
+        private CanonicalizationMethodType _canonicalizationMethodField;
 
-        private SignatureMethodType signatureMethodField;
+        private SignatureMethodType _signatureMethodField;
 
-        private PartyType signatoryPartyField;
+        private PartyType _signatoryPartyField;
 
-        private AttachmentType digitalSignatureAttachmentField;
+        private AttachmentType _digitalSignatureAttachmentField;
 
-        private DocumentReferenceType originalDocumentReferenceField;
+        private DocumentReferenceType _originalDocumentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return validationDateField;
+                return _validationDateField;
             }
             set
             {
-                validationDateField = value;
+                _validationDateField = value;
             }
         }
 
@@ -78,25 +78,25 @@
         {
             get
             {
-                return validationTimeField;
+                return _validationTimeField;
             }
             set
             {
-                validationTimeField = value;
+                _validationTimeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ValidatorIDType ValidatorID
+        public ValidatorIdType ValidatorId
         {
             get
             {
-                return validatorIDField;
+                return _validatorIdField;
             }
             set
             {
-                validatorIDField = value;
+                _validatorIdField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return canonicalizationMethodField;
+                return _canonicalizationMethodField;
             }
             set
             {
-                canonicalizationMethodField = value;
+                _canonicalizationMethodField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return signatureMethodField;
+                return _signatureMethodField;
             }
             set
             {
-                signatureMethodField = value;
+                _signatureMethodField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return signatoryPartyField;
+                return _signatoryPartyField;
             }
             set
             {
-                signatoryPartyField = value;
+                _signatoryPartyField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return digitalSignatureAttachmentField;
+                return _digitalSignatureAttachmentField;
             }
             set
             {
-                digitalSignatureAttachmentField = value;
+                _digitalSignatureAttachmentField = value;
             }
         }
 
@@ -159,11 +159,11 @@
         {
             get
             {
-                return originalDocumentReferenceField;
+                return _originalDocumentReferenceField;
             }
             set
             {
-                originalDocumentReferenceField = value;
+                _originalDocumentReferenceField = value;
             }
         }
     }

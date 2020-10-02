@@ -10,29 +10,29 @@
     public partial class TenderPreparationType
     {
 
-        private TenderEnvelopeIDType tenderEnvelopeIDField;
+        private TenderEnvelopeIdType _tenderEnvelopeIdField;
 
-        private TenderEnvelopeTypeCodeType tenderEnvelopeTypeCodeField;
+        private TenderEnvelopeTypeCodeType _tenderEnvelopeTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private OpenTenderIDType openTenderIDField;
+        private OpenTenderIdType _openTenderIdField;
 
-        private ProcurementProjectLotType[] procurementProjectLotField;
+        private ProcurementProjectLotType[] _procurementProjectLotField;
 
-        private TenderRequirementType[] documentTenderRequirementField;
+        private TenderRequirementType[] _documentTenderRequirementField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public TenderEnvelopeIDType TenderEnvelopeID
+        public TenderEnvelopeIdType TenderEnvelopeId
         {
             get
             {
-                return tenderEnvelopeIDField;
+                return _tenderEnvelopeIdField;
             }
             set
             {
-                tenderEnvelopeIDField = value;
+                _tenderEnvelopeIdField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return tenderEnvelopeTypeCodeField;
+                return _tenderEnvelopeTypeCodeField;
             }
             set
             {
-                tenderEnvelopeTypeCodeField = value;
+                _tenderEnvelopeTypeCodeField = value;
             }
         }
 
@@ -56,25 +56,25 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public OpenTenderIDType OpenTenderID
+        public OpenTenderIdType OpenTenderId
         {
             get
             {
-                return openTenderIDField;
+                return _openTenderIdField;
             }
             set
             {
-                openTenderIDField = value;
+                _openTenderIdField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return procurementProjectLotField;
+                return _procurementProjectLotField;
             }
             set
             {
-                procurementProjectLotField = value;
+                _procurementProjectLotField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return documentTenderRequirementField;
+                return _documentTenderRequirementField;
             }
             set
             {
-                documentTenderRequirementField = value;
+                _documentTenderRequirementField = value;
             }
         }
     }

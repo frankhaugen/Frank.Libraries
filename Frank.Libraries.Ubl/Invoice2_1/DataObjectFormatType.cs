@@ -10,26 +10,26 @@
     public partial class DataObjectFormatType
     {
 
-        private string descriptionField;
+        private string _descriptionField;
 
-        private ObjectIdentifierType objectIdentifierField;
+        private ObjectIdentifierType _objectIdentifierField;
 
-        private string mimeTypeField;
+        private string _mimeTypeField;
 
-        private string encodingField;
+        private string _encodingField;
 
-        private string objectReferenceField;
+        private string _objectReferenceField;
 
         /// <remarks/>
         public string Description
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return objectIdentifierField;
+                return _objectIdentifierField;
             }
             set
             {
-                objectIdentifierField = value;
+                _objectIdentifierField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return mimeTypeField;
+                return _mimeTypeField;
             }
             set
             {
-                mimeTypeField = value;
+                _mimeTypeField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return encodingField;
+                return _encodingField;
             }
             set
             {
-                encodingField = value;
+                _encodingField = value;
             }
         }
 
@@ -79,11 +79,11 @@
         {
             get
             {
-                return objectReferenceField;
+                return _objectReferenceField;
             }
             set
             {
-                objectReferenceField = value;
+                _objectReferenceField = value;
             }
         }
     }

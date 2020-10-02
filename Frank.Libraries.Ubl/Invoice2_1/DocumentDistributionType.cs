@@ -10,11 +10,11 @@
     public partial class DocumentDistributionType
     {
 
-        private PrintQualifierType printQualifierField;
+        private PrintQualifierType _printQualifierField;
 
-        private MaximumCopiesNumericType maximumCopiesNumericField;
+        private MaximumCopiesNumericType _maximumCopiesNumericField;
 
-        private PartyType partyField;
+        private PartyType _partyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return printQualifierField;
+                return _printQualifierField;
             }
             set
             {
-                printQualifierField = value;
+                _printQualifierField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return maximumCopiesNumericField;
+                return _maximumCopiesNumericField;
             }
             set
             {
-                maximumCopiesNumericField = value;
+                _maximumCopiesNumericField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return partyField;
+                return _partyField;
             }
             set
             {
-                partyField = value;
+                _partyField = value;
             }
         }
     }

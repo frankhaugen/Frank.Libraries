@@ -10,15 +10,15 @@
     public partial class TaxTotalType
     {
 
-        private TaxAmountType taxAmountField;
+        private TaxAmountType _taxAmountField;
 
-        private RoundingAmountType roundingAmountField;
+        private RoundingAmountType _roundingAmountField;
 
-        private TaxEvidenceIndicatorType taxEvidenceIndicatorField;
+        private TaxEvidenceIndicatorType _taxEvidenceIndicatorField;
 
-        private TaxIncludedIndicatorType taxIncludedIndicatorField;
+        private TaxIncludedIndicatorType _taxIncludedIndicatorField;
 
-        private TaxSubtotalType[] taxSubtotalField;
+        private TaxSubtotalType[] _taxSubtotalField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return taxAmountField;
+                return _taxAmountField;
             }
             set
             {
-                taxAmountField = value;
+                _taxAmountField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return roundingAmountField;
+                return _roundingAmountField;
             }
             set
             {
-                roundingAmountField = value;
+                _roundingAmountField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return taxEvidenceIndicatorField;
+                return _taxEvidenceIndicatorField;
             }
             set
             {
-                taxEvidenceIndicatorField = value;
+                _taxEvidenceIndicatorField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return taxIncludedIndicatorField;
+                return _taxIncludedIndicatorField;
             }
             set
             {
-                taxIncludedIndicatorField = value;
+                _taxIncludedIndicatorField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return taxSubtotalField;
+                return _taxSubtotalField;
             }
             set
             {
-                taxSubtotalField = value;
+                _taxSubtotalField = value;
             }
         }
     }

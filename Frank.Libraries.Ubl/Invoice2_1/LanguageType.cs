@@ -10,23 +10,23 @@
     public partial class LanguageType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private LocaleCodeType localeCodeField;
+        private LocaleCodeType _localeCodeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return localeCodeField;
+                return _localeCodeField;
             }
             set
             {
-                localeCodeField = value;
+                _localeCodeField = value;
             }
         }
     }

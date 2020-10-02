@@ -10,24 +10,24 @@
     public partial class QualifyingPropertiesType
     {
 
-        private SignedPropertiesType signedPropertiesField;
+        private SignedPropertiesType _signedPropertiesField;
 
-        private UnsignedPropertiesType unsignedPropertiesField;
+        private UnsignedPropertiesType _unsignedPropertiesField;
 
-        private string targetField;
+        private string _targetField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         public SignedPropertiesType SignedProperties
         {
             get
             {
-                return signedPropertiesField;
+                return _signedPropertiesField;
             }
             set
             {
-                signedPropertiesField = value;
+                _signedPropertiesField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return unsignedPropertiesField;
+                return _unsignedPropertiesField;
             }
             set
             {
-                unsignedPropertiesField = value;
+                _unsignedPropertiesField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return targetField;
+                return _targetField;
             }
             set
             {
-                targetField = value;
+                _targetField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

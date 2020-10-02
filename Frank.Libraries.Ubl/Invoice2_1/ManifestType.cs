@@ -10,9 +10,9 @@
     public partial class ManifestType
     {
 
-        private ReferenceType1[] referenceField;
+        private ReferenceType1[] _referenceField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Reference")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return referenceField;
+                return _referenceField;
             }
             set
             {
-                referenceField = value;
+                _referenceField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

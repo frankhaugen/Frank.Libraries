@@ -10,21 +10,21 @@
     public partial class ForecastExceptionType
     {
 
-        private ForecastPurposeCodeType forecastPurposeCodeField;
+        private ForecastPurposeCodeType _forecastPurposeCodeField;
 
-        private ForecastTypeCodeType forecastTypeCodeField;
+        private ForecastTypeCodeType _forecastTypeCodeField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private IssueTimeType issueTimeField;
+        private IssueTimeType _issueTimeField;
 
-        private DataSourceCodeType dataSourceCodeField;
+        private DataSourceCodeType _dataSourceCodeField;
 
-        private ComparisonDataCodeType comparisonDataCodeField;
+        private ComparisonDataCodeType _comparisonDataCodeField;
 
-        private ComparisonForecastIssueTimeType comparisonForecastIssueTimeField;
+        private ComparisonForecastIssueTimeType _comparisonForecastIssueTimeField;
 
-        private ComparisonForecastIssueDateType comparisonForecastIssueDateField;
+        private ComparisonForecastIssueDateType _comparisonForecastIssueDateField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -32,11 +32,11 @@
         {
             get
             {
-                return forecastPurposeCodeField;
+                return _forecastPurposeCodeField;
             }
             set
             {
-                forecastPurposeCodeField = value;
+                _forecastPurposeCodeField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return forecastTypeCodeField;
+                return _forecastTypeCodeField;
             }
             set
             {
-                forecastTypeCodeField = value;
+                _forecastTypeCodeField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return issueTimeField;
+                return _issueTimeField;
             }
             set
             {
-                issueTimeField = value;
+                _issueTimeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return dataSourceCodeField;
+                return _dataSourceCodeField;
             }
             set
             {
-                dataSourceCodeField = value;
+                _dataSourceCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return comparisonDataCodeField;
+                return _comparisonDataCodeField;
             }
             set
             {
-                comparisonDataCodeField = value;
+                _comparisonDataCodeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return comparisonForecastIssueTimeField;
+                return _comparisonForecastIssueTimeField;
             }
             set
             {
-                comparisonForecastIssueTimeField = value;
+                _comparisonForecastIssueTimeField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return comparisonForecastIssueDateField;
+                return _comparisonForecastIssueDateField;
             }
             set
             {
-                comparisonForecastIssueDateField = value;
+                _comparisonForecastIssueDateField = value;
             }
         }
     }

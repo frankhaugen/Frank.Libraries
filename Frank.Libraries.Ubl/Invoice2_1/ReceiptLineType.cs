@@ -10,71 +10,71 @@
     public partial class ReceiptLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private ReceivedQuantityType receivedQuantityField;
+        private ReceivedQuantityType _receivedQuantityField;
 
-        private ShortQuantityType shortQuantityField;
+        private ShortQuantityType _shortQuantityField;
 
-        private ShortageActionCodeType shortageActionCodeField;
+        private ShortageActionCodeType _shortageActionCodeField;
 
-        private RejectedQuantityType rejectedQuantityField;
+        private RejectedQuantityType _rejectedQuantityField;
 
-        private RejectReasonCodeType rejectReasonCodeField;
+        private RejectReasonCodeType _rejectReasonCodeField;
 
-        private RejectReasonType[] rejectReasonField;
+        private RejectReasonType[] _rejectReasonField;
 
-        private RejectActionCodeType rejectActionCodeField;
+        private RejectActionCodeType _rejectActionCodeField;
 
-        private QuantityDiscrepancyCodeType quantityDiscrepancyCodeField;
+        private QuantityDiscrepancyCodeType _quantityDiscrepancyCodeField;
 
-        private OversupplyQuantityType oversupplyQuantityField;
+        private OversupplyQuantityType _oversupplyQuantityField;
 
-        private ReceivedDateType receivedDateField;
+        private ReceivedDateType _receivedDateField;
 
-        private TimingComplaintCodeType timingComplaintCodeField;
+        private TimingComplaintCodeType _timingComplaintCodeField;
 
-        private TimingComplaintType timingComplaintField;
+        private TimingComplaintType _timingComplaintField;
 
-        private OrderLineReferenceType orderLineReferenceField;
+        private OrderLineReferenceType _orderLineReferenceField;
 
-        private LineReferenceType[] despatchLineReferenceField;
+        private LineReferenceType[] _despatchLineReferenceField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private ItemType[] itemField;
+        private ItemType[] _itemField;
 
-        private ShipmentType[] shipmentField;
+        private ShipmentType[] _shipmentField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return receivedQuantityField;
+                return _receivedQuantityField;
             }
             set
             {
-                receivedQuantityField = value;
+                _receivedQuantityField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return shortQuantityField;
+                return _shortQuantityField;
             }
             set
             {
-                shortQuantityField = value;
+                _shortQuantityField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return shortageActionCodeField;
+                return _shortageActionCodeField;
             }
             set
             {
-                shortageActionCodeField = value;
+                _shortageActionCodeField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return rejectedQuantityField;
+                return _rejectedQuantityField;
             }
             set
             {
-                rejectedQuantityField = value;
+                _rejectedQuantityField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return rejectReasonCodeField;
+                return _rejectReasonCodeField;
             }
             set
             {
-                rejectReasonCodeField = value;
+                _rejectReasonCodeField = value;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                return rejectReasonField;
+                return _rejectReasonField;
             }
             set
             {
-                rejectReasonField = value;
+                _rejectReasonField = value;
             }
         }
 
@@ -182,11 +182,11 @@
         {
             get
             {
-                return rejectActionCodeField;
+                return _rejectActionCodeField;
             }
             set
             {
-                rejectActionCodeField = value;
+                _rejectActionCodeField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return quantityDiscrepancyCodeField;
+                return _quantityDiscrepancyCodeField;
             }
             set
             {
-                quantityDiscrepancyCodeField = value;
+                _quantityDiscrepancyCodeField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return oversupplyQuantityField;
+                return _oversupplyQuantityField;
             }
             set
             {
-                oversupplyQuantityField = value;
+                _oversupplyQuantityField = value;
             }
         }
 
@@ -224,11 +224,11 @@
         {
             get
             {
-                return receivedDateField;
+                return _receivedDateField;
             }
             set
             {
-                receivedDateField = value;
+                _receivedDateField = value;
             }
         }
 
@@ -238,11 +238,11 @@
         {
             get
             {
-                return timingComplaintCodeField;
+                return _timingComplaintCodeField;
             }
             set
             {
-                timingComplaintCodeField = value;
+                _timingComplaintCodeField = value;
             }
         }
 
@@ -252,11 +252,11 @@
         {
             get
             {
-                return timingComplaintField;
+                return _timingComplaintField;
             }
             set
             {
-                timingComplaintField = value;
+                _timingComplaintField = value;
             }
         }
 
@@ -265,11 +265,11 @@
         {
             get
             {
-                return orderLineReferenceField;
+                return _orderLineReferenceField;
             }
             set
             {
-                orderLineReferenceField = value;
+                _orderLineReferenceField = value;
             }
         }
 
@@ -279,11 +279,11 @@
         {
             get
             {
-                return despatchLineReferenceField;
+                return _despatchLineReferenceField;
             }
             set
             {
-                despatchLineReferenceField = value;
+                _despatchLineReferenceField = value;
             }
         }
 
@@ -293,11 +293,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -307,11 +307,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -321,11 +321,11 @@
         {
             get
             {
-                return shipmentField;
+                return _shipmentField;
             }
             set
             {
-                shipmentField = value;
+                _shipmentField = value;
             }
         }
     }

@@ -10,35 +10,35 @@
     public partial class RailTransportType
     {
 
-        private TrainIDType trainIDField;
+        private TrainIdType _trainIdField;
 
-        private RailCarIDType railCarIDField;
+        private RailCarIdType _railCarIdField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public TrainIDType TrainID
+        public TrainIdType TrainId
         {
             get
             {
-                return trainIDField;
+                return _trainIdField;
             }
             set
             {
-                trainIDField = value;
+                _trainIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public RailCarIDType RailCarID
+        public RailCarIdType RailCarId
         {
             get
             {
-                return railCarIDField;
+                return _railCarIdField;
             }
             set
             {
-                railCarIDField = value;
+                _railCarIdField = value;
             }
         }
     }

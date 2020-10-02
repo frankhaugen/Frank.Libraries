@@ -10,45 +10,45 @@
     public partial class SupplierPartyType
     {
 
-        private CustomerAssignedAccountIDType customerAssignedAccountIDField;
+        private CustomerAssignedAccountIdType _customerAssignedAccountIdField;
 
-        private AdditionalAccountIDType[] additionalAccountIDField;
+        private AdditionalAccountIdType[] _additionalAccountIdField;
 
-        private DataSendingCapabilityType dataSendingCapabilityField;
+        private DataSendingCapabilityType _dataSendingCapabilityField;
 
-        private PartyType partyField;
+        private PartyType _partyField;
 
-        private ContactType despatchContactField;
+        private ContactType _despatchContactField;
 
-        private ContactType accountingContactField;
+        private ContactType _accountingContactField;
 
-        private ContactType sellerContactField;
+        private ContactType _sellerContactField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public CustomerAssignedAccountIDType CustomerAssignedAccountID
+        public CustomerAssignedAccountIdType CustomerAssignedAccountId
         {
             get
             {
-                return customerAssignedAccountIDField;
+                return _customerAssignedAccountIdField;
             }
             set
             {
-                customerAssignedAccountIDField = value;
+                _customerAssignedAccountIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AdditionalAccountID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public AdditionalAccountIDType[] AdditionalAccountID
+        public AdditionalAccountIdType[] AdditionalAccountId
         {
             get
             {
-                return additionalAccountIDField;
+                return _additionalAccountIdField;
             }
             set
             {
-                additionalAccountIDField = value;
+                _additionalAccountIdField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return dataSendingCapabilityField;
+                return _dataSendingCapabilityField;
             }
             set
             {
-                dataSendingCapabilityField = value;
+                _dataSendingCapabilityField = value;
             }
         }
 
@@ -71,11 +71,11 @@
         {
             get
             {
-                return partyField;
+                return _partyField;
             }
             set
             {
-                partyField = value;
+                _partyField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return despatchContactField;
+                return _despatchContactField;
             }
             set
             {
-                despatchContactField = value;
+                _despatchContactField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return accountingContactField;
+                return _accountingContactField;
             }
             set
             {
-                accountingContactField = value;
+                _accountingContactField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return sellerContactField;
+                return _sellerContactField;
             }
             set
             {
-                sellerContactField = value;
+                _sellerContactField = value;
             }
         }
     }

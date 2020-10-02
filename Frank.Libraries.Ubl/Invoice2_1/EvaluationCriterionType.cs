@@ -10,21 +10,21 @@
     public partial class EvaluationCriterionType
     {
 
-        private EvaluationCriterionTypeCodeType evaluationCriterionTypeCodeField;
+        private EvaluationCriterionTypeCodeType _evaluationCriterionTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private ThresholdAmountType thresholdAmountField;
+        private ThresholdAmountType _thresholdAmountField;
 
-        private ThresholdQuantityType thresholdQuantityField;
+        private ThresholdQuantityType _thresholdQuantityField;
 
-        private ExpressionCodeType expressionCodeField;
+        private ExpressionCodeType _expressionCodeField;
 
-        private ExpressionType[] expressionField;
+        private ExpressionType[] _expressionField;
 
-        private PeriodType durationPeriodField;
+        private PeriodType _durationPeriodField;
 
-        private EvidenceType[] suggestedEvidenceField;
+        private EvidenceType[] _suggestedEvidenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -32,11 +32,11 @@
         {
             get
             {
-                return evaluationCriterionTypeCodeField;
+                return _evaluationCriterionTypeCodeField;
             }
             set
             {
-                evaluationCriterionTypeCodeField = value;
+                _evaluationCriterionTypeCodeField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return thresholdAmountField;
+                return _thresholdAmountField;
             }
             set
             {
-                thresholdAmountField = value;
+                _thresholdAmountField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return thresholdQuantityField;
+                return _thresholdQuantityField;
             }
             set
             {
-                thresholdQuantityField = value;
+                _thresholdQuantityField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return expressionCodeField;
+                return _expressionCodeField;
             }
             set
             {
-                expressionCodeField = value;
+                _expressionCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return expressionField;
+                return _expressionField;
             }
             set
             {
-                expressionField = value;
+                _expressionField = value;
             }
         }
 
@@ -115,11 +115,11 @@
         {
             get
             {
-                return durationPeriodField;
+                return _durationPeriodField;
             }
             set
             {
-                durationPeriodField = value;
+                _durationPeriodField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return suggestedEvidenceField;
+                return _suggestedEvidenceField;
             }
             set
             {
-                suggestedEvidenceField = value;
+                _suggestedEvidenceField = value;
             }
         }
     }

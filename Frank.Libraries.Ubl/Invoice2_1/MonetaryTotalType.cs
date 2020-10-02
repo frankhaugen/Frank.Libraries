@@ -10,23 +10,23 @@
     public partial class MonetaryTotalType
     {
 
-        private LineExtensionAmountType lineExtensionAmountField;
+        private LineExtensionAmountType _lineExtensionAmountField;
 
-        private TaxExclusiveAmountType taxExclusiveAmountField;
+        private TaxExclusiveAmountType _taxExclusiveAmountField;
 
-        private TaxInclusiveAmountType taxInclusiveAmountField;
+        private TaxInclusiveAmountType _taxInclusiveAmountField;
 
-        private AllowanceTotalAmountType allowanceTotalAmountField;
+        private AllowanceTotalAmountType _allowanceTotalAmountField;
 
-        private ChargeTotalAmountType chargeTotalAmountField;
+        private ChargeTotalAmountType _chargeTotalAmountField;
 
-        private PrepaidAmountType prepaidAmountField;
+        private PrepaidAmountType _prepaidAmountField;
 
-        private PayableRoundingAmountType payableRoundingAmountField;
+        private PayableRoundingAmountType _payableRoundingAmountField;
 
-        private PayableAmountType payableAmountField;
+        private PayableAmountType _payableAmountField;
 
-        private PayableAlternativeAmountType payableAlternativeAmountField;
+        private PayableAlternativeAmountType _payableAlternativeAmountField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -34,11 +34,11 @@
         {
             get
             {
-                return lineExtensionAmountField;
+                return _lineExtensionAmountField;
             }
             set
             {
-                lineExtensionAmountField = value;
+                _lineExtensionAmountField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return taxExclusiveAmountField;
+                return _taxExclusiveAmountField;
             }
             set
             {
-                taxExclusiveAmountField = value;
+                _taxExclusiveAmountField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return taxInclusiveAmountField;
+                return _taxInclusiveAmountField;
             }
             set
             {
-                taxInclusiveAmountField = value;
+                _taxInclusiveAmountField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return allowanceTotalAmountField;
+                return _allowanceTotalAmountField;
             }
             set
             {
-                allowanceTotalAmountField = value;
+                _allowanceTotalAmountField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return chargeTotalAmountField;
+                return _chargeTotalAmountField;
             }
             set
             {
-                chargeTotalAmountField = value;
+                _chargeTotalAmountField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return prepaidAmountField;
+                return _prepaidAmountField;
             }
             set
             {
-                prepaidAmountField = value;
+                _prepaidAmountField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return payableRoundingAmountField;
+                return _payableRoundingAmountField;
             }
             set
             {
-                payableRoundingAmountField = value;
+                _payableRoundingAmountField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return payableAmountField;
+                return _payableAmountField;
             }
             set
             {
-                payableAmountField = value;
+                _payableAmountField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return payableAlternativeAmountField;
+                return _payableAlternativeAmountField;
             }
             set
             {
-                payableAlternativeAmountField = value;
+                _payableAlternativeAmountField = value;
             }
         }
     }

@@ -10,11 +10,11 @@
     public partial class TradingTermsType
     {
 
-        private InformationType[] informationField;
+        private InformationType[] _informationField;
 
-        private ReferenceType referenceField;
+        private ReferenceType _referenceField;
 
-        private AddressType applicableAddressField;
+        private AddressType _applicableAddressField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Information", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return informationField;
+                return _informationField;
             }
             set
             {
-                informationField = value;
+                _informationField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return referenceField;
+                return _referenceField;
             }
             set
             {
-                referenceField = value;
+                _referenceField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return applicableAddressField;
+                return _applicableAddressField;
             }
             set
             {
-                applicableAddressField = value;
+                _applicableAddressField = value;
             }
         }
     }

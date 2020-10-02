@@ -10,29 +10,29 @@
     public partial class PaymentType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private PaidAmountType paidAmountField;
+        private PaidAmountType _paidAmountField;
 
-        private ReceivedDateType receivedDateField;
+        private ReceivedDateType _receivedDateField;
 
-        private PaidDateType paidDateField;
+        private PaidDateType _paidDateField;
 
-        private PaidTimeType paidTimeField;
+        private PaidTimeType _paidTimeField;
 
-        private InstructionIDType instructionIDField;
+        private InstructionIdType _instructionIdField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return paidAmountField;
+                return _paidAmountField;
             }
             set
             {
-                paidAmountField = value;
+                _paidAmountField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return receivedDateField;
+                return _receivedDateField;
             }
             set
             {
-                receivedDateField = value;
+                _receivedDateField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return paidDateField;
+                return _paidDateField;
             }
             set
             {
-                paidDateField = value;
+                _paidDateField = value;
             }
         }
 
@@ -84,25 +84,25 @@
         {
             get
             {
-                return paidTimeField;
+                return _paidTimeField;
             }
             set
             {
-                paidTimeField = value;
+                _paidTimeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public InstructionIDType InstructionID
+        public InstructionIdType InstructionId
         {
             get
             {
-                return instructionIDField;
+                return _instructionIdField;
             }
             set
             {
-                instructionIDField = value;
+                _instructionIdField = value;
             }
         }
     }

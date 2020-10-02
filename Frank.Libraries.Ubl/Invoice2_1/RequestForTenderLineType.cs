@@ -10,63 +10,63 @@
     public partial class RequestForTenderLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private MinimumQuantityType minimumQuantityField;
+        private MinimumQuantityType _minimumQuantityField;
 
-        private MaximumQuantityType maximumQuantityField;
+        private MaximumQuantityType _maximumQuantityField;
 
-        private TaxIncludedIndicatorType taxIncludedIndicatorField;
+        private TaxIncludedIndicatorType _taxIncludedIndicatorField;
 
-        private MinimumAmountType minimumAmountField;
+        private MinimumAmountType _minimumAmountField;
 
-        private MaximumAmountType maximumAmountField;
+        private MaximumAmountType _maximumAmountField;
 
-        private EstimatedAmountType estimatedAmountField;
+        private EstimatedAmountType _estimatedAmountField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private PeriodType[] deliveryPeriodField;
+        private PeriodType[] _deliveryPeriodField;
 
-        private ItemLocationQuantityType[] requiredItemLocationQuantityField;
+        private ItemLocationQuantityType[] _requiredItemLocationQuantityField;
 
-        private PeriodType warrantyValidityPeriodField;
+        private PeriodType _warrantyValidityPeriodField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
-        private RequestForTenderLineType[] subRequestForTenderLineField;
+        private RequestForTenderLineType[] _subRequestForTenderLineField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return minimumQuantityField;
+                return _minimumQuantityField;
             }
             set
             {
-                minimumQuantityField = value;
+                _minimumQuantityField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return maximumQuantityField;
+                return _maximumQuantityField;
             }
             set
             {
-                maximumQuantityField = value;
+                _maximumQuantityField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return taxIncludedIndicatorField;
+                return _taxIncludedIndicatorField;
             }
             set
             {
-                taxIncludedIndicatorField = value;
+                _taxIncludedIndicatorField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return minimumAmountField;
+                return _minimumAmountField;
             }
             set
             {
-                minimumAmountField = value;
+                _minimumAmountField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return maximumAmountField;
+                return _maximumAmountField;
             }
             set
             {
-                maximumAmountField = value;
+                _maximumAmountField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return estimatedAmountField;
+                return _estimatedAmountField;
             }
             set
             {
-                estimatedAmountField = value;
+                _estimatedAmountField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -202,11 +202,11 @@
         {
             get
             {
-                return deliveryPeriodField;
+                return _deliveryPeriodField;
             }
             set
             {
-                deliveryPeriodField = value;
+                _deliveryPeriodField = value;
             }
         }
 
@@ -216,11 +216,11 @@
         {
             get
             {
-                return requiredItemLocationQuantityField;
+                return _requiredItemLocationQuantityField;
             }
             set
             {
-                requiredItemLocationQuantityField = value;
+                _requiredItemLocationQuantityField = value;
             }
         }
 
@@ -229,11 +229,11 @@
         {
             get
             {
-                return warrantyValidityPeriodField;
+                return _warrantyValidityPeriodField;
             }
             set
             {
-                warrantyValidityPeriodField = value;
+                _warrantyValidityPeriodField = value;
             }
         }
 
@@ -242,11 +242,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -256,11 +256,11 @@
         {
             get
             {
-                return subRequestForTenderLineField;
+                return _subRequestForTenderLineField;
             }
             set
             {
-                subRequestForTenderLineField = value;
+                _subRequestForTenderLineField = value;
             }
         }
     }

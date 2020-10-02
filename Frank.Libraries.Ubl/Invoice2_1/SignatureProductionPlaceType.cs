@@ -10,24 +10,24 @@
     public partial class SignatureProductionPlaceType
     {
 
-        private string cityField;
+        private string _cityField;
 
-        private string stateOrProvinceField;
+        private string _stateOrProvinceField;
 
-        private string postalCodeField;
+        private string _postalCodeField;
 
-        private string countryNameField;
+        private string _countryNameField;
 
         /// <remarks/>
         public string City
         {
             get
             {
-                return cityField;
+                return _cityField;
             }
             set
             {
-                cityField = value;
+                _cityField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return stateOrProvinceField;
+                return _stateOrProvinceField;
             }
             set
             {
-                stateOrProvinceField = value;
+                _stateOrProvinceField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return postalCodeField;
+                return _postalCodeField;
             }
             set
             {
-                postalCodeField = value;
+                _postalCodeField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return countryNameField;
+                return _countryNameField;
             }
             set
             {
-                countryNameField = value;
+                _countryNameField = value;
             }
         }
     }

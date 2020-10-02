@@ -10,53 +10,53 @@
     public partial class ConsumptionReportType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ConsumptionTypeType consumptionTypeField;
+        private ConsumptionTypeType _consumptionTypeField;
 
-        private ConsumptionTypeCodeType consumptionTypeCodeField;
+        private ConsumptionTypeCodeType _consumptionTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private TotalConsumedQuantityType totalConsumedQuantityField;
+        private TotalConsumedQuantityType _totalConsumedQuantityField;
 
-        private BasicConsumedQuantityType basicConsumedQuantityField;
+        private BasicConsumedQuantityType _basicConsumedQuantityField;
 
-        private ResidentOccupantsNumericType residentOccupantsNumericField;
+        private ResidentOccupantsNumericType _residentOccupantsNumericField;
 
-        private ConsumersEnergyLevelCodeType consumersEnergyLevelCodeField;
+        private ConsumersEnergyLevelCodeType _consumersEnergyLevelCodeField;
 
-        private ConsumersEnergyLevelType consumersEnergyLevelField;
+        private ConsumersEnergyLevelType _consumersEnergyLevelField;
 
-        private ResidenceTypeType residenceTypeField;
+        private ResidenceTypeType _residenceTypeField;
 
-        private ResidenceTypeCodeType residenceTypeCodeField;
+        private ResidenceTypeCodeType _residenceTypeCodeField;
 
-        private HeatingTypeType heatingTypeField;
+        private HeatingTypeType _heatingTypeField;
 
-        private HeatingTypeCodeType heatingTypeCodeField;
+        private HeatingTypeCodeType _heatingTypeCodeField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
-        private DocumentReferenceType guidanceDocumentReferenceField;
+        private DocumentReferenceType _guidanceDocumentReferenceField;
 
-        private DocumentReferenceType documentReferenceField;
+        private DocumentReferenceType _documentReferenceField;
 
-        private ConsumptionReportReferenceType[] consumptionReportReferenceField;
+        private ConsumptionReportReferenceType[] _consumptionReportReferenceField;
 
-        private ConsumptionHistoryType[] consumptionHistoryField;
+        private ConsumptionHistoryType[] _consumptionHistoryField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return consumptionTypeField;
+                return _consumptionTypeField;
             }
             set
             {
-                consumptionTypeField = value;
+                _consumptionTypeField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return consumptionTypeCodeField;
+                return _consumptionTypeCodeField;
             }
             set
             {
-                consumptionTypeCodeField = value;
+                _consumptionTypeCodeField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return totalConsumedQuantityField;
+                return _totalConsumedQuantityField;
             }
             set
             {
-                totalConsumedQuantityField = value;
+                _totalConsumedQuantityField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return basicConsumedQuantityField;
+                return _basicConsumedQuantityField;
             }
             set
             {
-                basicConsumedQuantityField = value;
+                _basicConsumedQuantityField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return residentOccupantsNumericField;
+                return _residentOccupantsNumericField;
             }
             set
             {
-                residentOccupantsNumericField = value;
+                _residentOccupantsNumericField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return consumersEnergyLevelCodeField;
+                return _consumersEnergyLevelCodeField;
             }
             set
             {
-                consumersEnergyLevelCodeField = value;
+                _consumersEnergyLevelCodeField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return consumersEnergyLevelField;
+                return _consumersEnergyLevelField;
             }
             set
             {
-                consumersEnergyLevelField = value;
+                _consumersEnergyLevelField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return residenceTypeField;
+                return _residenceTypeField;
             }
             set
             {
-                residenceTypeField = value;
+                _residenceTypeField = value;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                return residenceTypeCodeField;
+                return _residenceTypeCodeField;
             }
             set
             {
-                residenceTypeCodeField = value;
+                _residenceTypeCodeField = value;
             }
         }
 
@@ -206,11 +206,11 @@
         {
             get
             {
-                return heatingTypeField;
+                return _heatingTypeField;
             }
             set
             {
-                heatingTypeField = value;
+                _heatingTypeField = value;
             }
         }
 
@@ -220,11 +220,11 @@
         {
             get
             {
-                return heatingTypeCodeField;
+                return _heatingTypeCodeField;
             }
             set
             {
-                heatingTypeCodeField = value;
+                _heatingTypeCodeField = value;
             }
         }
 
@@ -233,11 +233,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
 
@@ -246,11 +246,11 @@
         {
             get
             {
-                return guidanceDocumentReferenceField;
+                return _guidanceDocumentReferenceField;
             }
             set
             {
-                guidanceDocumentReferenceField = value;
+                _guidanceDocumentReferenceField = value;
             }
         }
 
@@ -259,11 +259,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -273,11 +273,11 @@
         {
             get
             {
-                return consumptionReportReferenceField;
+                return _consumptionReportReferenceField;
             }
             set
             {
-                consumptionReportReferenceField = value;
+                _consumptionReportReferenceField = value;
             }
         }
 
@@ -287,11 +287,11 @@
         {
             get
             {
-                return consumptionHistoryField;
+                return _consumptionHistoryField;
             }
             set
             {
-                consumptionHistoryField = value;
+                _consumptionHistoryField = value;
             }
         }
     }

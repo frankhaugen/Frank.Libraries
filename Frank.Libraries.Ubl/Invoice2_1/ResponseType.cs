@@ -10,29 +10,29 @@
     public partial class ResponseType
     {
 
-        private ReferenceIDType referenceIDField;
+        private ReferenceIdType _referenceIdField;
 
-        private ResponseCodeType responseCodeField;
+        private ResponseCodeType _responseCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private EffectiveDateType effectiveDateField;
+        private EffectiveDateType _effectiveDateField;
 
-        private EffectiveTimeType effectiveTimeField;
+        private EffectiveTimeType _effectiveTimeField;
 
-        private StatusType[] statusField;
+        private StatusType[] _statusField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ReferenceIDType ReferenceID
+        public ReferenceIdType ReferenceId
         {
             get
             {
-                return referenceIDField;
+                return _referenceIdField;
             }
             set
             {
-                referenceIDField = value;
+                _referenceIdField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return responseCodeField;
+                return _responseCodeField;
             }
             set
             {
-                responseCodeField = value;
+                _responseCodeField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return effectiveDateField;
+                return _effectiveDateField;
             }
             set
             {
-                effectiveDateField = value;
+                _effectiveDateField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return effectiveTimeField;
+                return _effectiveTimeField;
             }
             set
             {
-                effectiveTimeField = value;
+                _effectiveTimeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return statusField;
+                return _statusField;
             }
             set
             {
-                statusField = value;
+                _statusField = value;
             }
         }
     }

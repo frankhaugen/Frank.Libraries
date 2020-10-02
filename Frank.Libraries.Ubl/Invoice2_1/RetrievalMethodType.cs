@@ -10,11 +10,11 @@
     public partial class RetrievalMethodType
     {
 
-        private TransformType[] transformsField;
+        private TransformType[] _transformsField;
 
-        private string uRIField;
+        private string _uRiField;
 
-        private string typeField;
+        private string _typeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("Transform", IsNullable = false)]
@@ -22,25 +22,25 @@
         {
             get
             {
-                return transformsField;
+                return _transformsField;
             }
             set
             {
-                transformsField = value;
+                _transformsField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string URI
+        public string Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return typeField;
+                return _typeField;
             }
             set
             {
-                typeField = value;
+                _typeField = value;
             }
         }
     }

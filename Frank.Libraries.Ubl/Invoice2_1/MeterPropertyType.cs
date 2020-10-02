@@ -10,15 +10,15 @@
     public partial class MeterPropertyType
     {
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private NameCodeType nameCodeField;
+        private NameCodeType _nameCodeField;
 
-        private ValueType valueField;
+        private ValueType _valueField;
 
-        private ValueQuantityType valueQuantityField;
+        private ValueQuantityType _valueQuantityField;
 
-        private ValueQualifierType[] valueQualifierField;
+        private ValueQualifierType[] _valueQualifierField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return nameCodeField;
+                return _nameCodeField;
             }
             set
             {
-                nameCodeField = value;
+                _nameCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return valueQuantityField;
+                return _valueQuantityField;
             }
             set
             {
-                valueQuantityField = value;
+                _valueQuantityField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return valueQualifierField;
+                return _valueQualifierField;
             }
             set
             {
-                valueQualifierField = value;
+                _valueQualifierField = value;
             }
         }
     }

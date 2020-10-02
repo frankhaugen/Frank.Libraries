@@ -10,15 +10,15 @@
     public partial class ContractExtensionType
     {
 
-        private OptionsDescriptionType[] optionsDescriptionField;
+        private OptionsDescriptionType[] _optionsDescriptionField;
 
-        private MinimumNumberNumericType minimumNumberNumericField;
+        private MinimumNumberNumericType _minimumNumberNumericField;
 
-        private MaximumNumberNumericType maximumNumberNumericField;
+        private MaximumNumberNumericType _maximumNumberNumericField;
 
-        private PeriodType optionValidityPeriodField;
+        private PeriodType _optionValidityPeriodField;
 
-        private RenewalType[] renewalField;
+        private RenewalType[] _renewalField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("OptionsDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return optionsDescriptionField;
+                return _optionsDescriptionField;
             }
             set
             {
-                optionsDescriptionField = value;
+                _optionsDescriptionField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return minimumNumberNumericField;
+                return _minimumNumberNumericField;
             }
             set
             {
-                minimumNumberNumericField = value;
+                _minimumNumberNumericField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return maximumNumberNumericField;
+                return _maximumNumberNumericField;
             }
             set
             {
-                maximumNumberNumericField = value;
+                _maximumNumberNumericField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return optionValidityPeriodField;
+                return _optionValidityPeriodField;
             }
             set
             {
-                optionValidityPeriodField = value;
+                _optionValidityPeriodField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return renewalField;
+                return _renewalField;
             }
             set
             {
-                renewalField = value;
+                _renewalField = value;
             }
         }
     }

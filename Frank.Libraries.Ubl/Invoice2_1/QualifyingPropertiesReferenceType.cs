@@ -10,21 +10,21 @@
     public partial class QualifyingPropertiesReferenceType
     {
 
-        private string uRIField;
+        private string _uRiField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string URI
+        public string Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

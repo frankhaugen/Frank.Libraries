@@ -10,9 +10,9 @@
     public partial class UnsignedDataObjectPropertiesType
     {
 
-        private AnyType[] unsignedDataObjectPropertyField;
+        private AnyType[] _unsignedDataObjectPropertyField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("UnsignedDataObjectProperty")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return unsignedDataObjectPropertyField;
+                return _unsignedDataObjectPropertyField;
             }
             set
             {
-                unsignedDataObjectPropertyField = value;
+                _unsignedDataObjectPropertyField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

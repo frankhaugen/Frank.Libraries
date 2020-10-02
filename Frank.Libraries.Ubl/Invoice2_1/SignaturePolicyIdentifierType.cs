@@ -10,7 +10,7 @@
     public partial class SignaturePolicyIdentifierType
     {
 
-        private object itemField;
+        private object _itemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SignaturePolicyId", typeof(SignaturePolicyIdType))]
@@ -19,11 +19,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
     }

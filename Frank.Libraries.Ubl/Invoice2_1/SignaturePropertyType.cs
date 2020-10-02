@@ -10,13 +10,13 @@
     public partial class SignaturePropertyType
     {
 
-        private System.Xml.XmlElement[] itemsField;
+        private System.Xml.XmlElement[] _itemsField;
 
-        private string[] textField;
+        private string[] _textField;
 
-        private string targetField;
+        private string _targetField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return textField;
+                return _textField;
             }
             set
             {
-                textField = value;
+                _textField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return targetField;
+                return _targetField;
             }
             set
             {
-                targetField = value;
+                _targetField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

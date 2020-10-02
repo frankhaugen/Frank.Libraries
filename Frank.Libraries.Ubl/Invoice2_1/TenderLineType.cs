@@ -10,59 +10,59 @@
     public partial class TenderLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private LineExtensionAmountType lineExtensionAmountField;
+        private LineExtensionAmountType _lineExtensionAmountField;
 
-        private TotalTaxAmountType totalTaxAmountField;
+        private TotalTaxAmountType _totalTaxAmountField;
 
-        private OrderableUnitType orderableUnitField;
+        private OrderableUnitType _orderableUnitField;
 
-        private ContentUnitQuantityType contentUnitQuantityField;
+        private ContentUnitQuantityType _contentUnitQuantityField;
 
-        private OrderQuantityIncrementNumericType orderQuantityIncrementNumericField;
+        private OrderQuantityIncrementNumericType _orderQuantityIncrementNumericField;
 
-        private MinimumOrderQuantityType minimumOrderQuantityField;
+        private MinimumOrderQuantityType _minimumOrderQuantityField;
 
-        private MaximumOrderQuantityType maximumOrderQuantityField;
+        private MaximumOrderQuantityType _maximumOrderQuantityField;
 
-        private WarrantyInformationType[] warrantyInformationField;
+        private WarrantyInformationType[] _warrantyInformationField;
 
-        private PackLevelCodeType packLevelCodeField;
+        private PackLevelCodeType _packLevelCodeField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
-        private ItemLocationQuantityType[] offeredItemLocationQuantityField;
+        private ItemLocationQuantityType[] _offeredItemLocationQuantityField;
 
-        private RelatedItemType[] replacementRelatedItemField;
+        private RelatedItemType[] _replacementRelatedItemField;
 
-        private PartyType warrantyPartyField;
+        private PartyType _warrantyPartyField;
 
-        private PeriodType warrantyValidityPeriodField;
+        private PeriodType _warrantyValidityPeriodField;
 
-        private TenderLineType[] subTenderLineField;
+        private TenderLineType[] _subTenderLineField;
 
-        private LineReferenceType callForTendersLineReferenceField;
+        private LineReferenceType _callForTendersLineReferenceField;
 
-        private DocumentReferenceType callForTendersDocumentReferenceField;
+        private DocumentReferenceType _callForTendersDocumentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return lineExtensionAmountField;
+                return _lineExtensionAmountField;
             }
             set
             {
-                lineExtensionAmountField = value;
+                _lineExtensionAmountField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return totalTaxAmountField;
+                return _totalTaxAmountField;
             }
             set
             {
-                totalTaxAmountField = value;
+                _totalTaxAmountField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return orderableUnitField;
+                return _orderableUnitField;
             }
             set
             {
-                orderableUnitField = value;
+                _orderableUnitField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return contentUnitQuantityField;
+                return _contentUnitQuantityField;
             }
             set
             {
-                contentUnitQuantityField = value;
+                _contentUnitQuantityField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return orderQuantityIncrementNumericField;
+                return _orderQuantityIncrementNumericField;
             }
             set
             {
-                orderQuantityIncrementNumericField = value;
+                _orderQuantityIncrementNumericField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return minimumOrderQuantityField;
+                return _minimumOrderQuantityField;
             }
             set
             {
-                minimumOrderQuantityField = value;
+                _minimumOrderQuantityField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return maximumOrderQuantityField;
+                return _maximumOrderQuantityField;
             }
             set
             {
-                maximumOrderQuantityField = value;
+                _maximumOrderQuantityField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return warrantyInformationField;
+                return _warrantyInformationField;
             }
             set
             {
-                warrantyInformationField = value;
+                _warrantyInformationField = value;
             }
         }
 
@@ -212,11 +212,11 @@
         {
             get
             {
-                return packLevelCodeField;
+                return _packLevelCodeField;
             }
             set
             {
-                packLevelCodeField = value;
+                _packLevelCodeField = value;
             }
         }
 
@@ -226,11 +226,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -239,11 +239,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -253,11 +253,11 @@
         {
             get
             {
-                return offeredItemLocationQuantityField;
+                return _offeredItemLocationQuantityField;
             }
             set
             {
-                offeredItemLocationQuantityField = value;
+                _offeredItemLocationQuantityField = value;
             }
         }
 
@@ -267,11 +267,11 @@
         {
             get
             {
-                return replacementRelatedItemField;
+                return _replacementRelatedItemField;
             }
             set
             {
-                replacementRelatedItemField = value;
+                _replacementRelatedItemField = value;
             }
         }
 
@@ -280,11 +280,11 @@
         {
             get
             {
-                return warrantyPartyField;
+                return _warrantyPartyField;
             }
             set
             {
-                warrantyPartyField = value;
+                _warrantyPartyField = value;
             }
         }
 
@@ -293,11 +293,11 @@
         {
             get
             {
-                return warrantyValidityPeriodField;
+                return _warrantyValidityPeriodField;
             }
             set
             {
-                warrantyValidityPeriodField = value;
+                _warrantyValidityPeriodField = value;
             }
         }
 
@@ -307,11 +307,11 @@
         {
             get
             {
-                return subTenderLineField;
+                return _subTenderLineField;
             }
             set
             {
-                subTenderLineField = value;
+                _subTenderLineField = value;
             }
         }
 
@@ -320,11 +320,11 @@
         {
             get
             {
-                return callForTendersLineReferenceField;
+                return _callForTendersLineReferenceField;
             }
             set
             {
-                callForTendersLineReferenceField = value;
+                _callForTendersLineReferenceField = value;
             }
         }
 
@@ -333,11 +333,11 @@
         {
             get
             {
-                return callForTendersDocumentReferenceField;
+                return _callForTendersDocumentReferenceField;
             }
             set
             {
-                callForTendersDocumentReferenceField = value;
+                _callForTendersDocumentReferenceField = value;
             }
         }
     }

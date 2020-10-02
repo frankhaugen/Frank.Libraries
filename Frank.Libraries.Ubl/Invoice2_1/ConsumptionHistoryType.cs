@@ -10,19 +10,19 @@
     public partial class ConsumptionHistoryType
     {
 
-        private MeterNumberType meterNumberField;
+        private MeterNumberType _meterNumberField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private ConsumptionLevelCodeType consumptionLevelCodeField;
+        private ConsumptionLevelCodeType _consumptionLevelCodeField;
 
-        private ConsumptionLevelType consumptionLevelField;
+        private ConsumptionLevelType _consumptionLevelField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return meterNumberField;
+                return _meterNumberField;
             }
             set
             {
-                meterNumberField = value;
+                _meterNumberField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return consumptionLevelCodeField;
+                return _consumptionLevelCodeField;
             }
             set
             {
-                consumptionLevelCodeField = value;
+                _consumptionLevelCodeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return consumptionLevelField;
+                return _consumptionLevelField;
             }
             set
             {
-                consumptionLevelField = value;
+                _consumptionLevelField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -113,11 +113,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
     }

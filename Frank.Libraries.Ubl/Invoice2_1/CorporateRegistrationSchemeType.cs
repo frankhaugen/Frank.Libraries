@@ -10,25 +10,25 @@
     public partial class CorporateRegistrationSchemeType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private CorporateRegistrationTypeCodeType corporateRegistrationTypeCodeField;
+        private CorporateRegistrationTypeCodeType _corporateRegistrationTypeCodeField;
 
-        private AddressType[] jurisdictionRegionAddressField;
+        private AddressType[] _jurisdictionRegionAddressField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return corporateRegistrationTypeCodeField;
+                return _corporateRegistrationTypeCodeField;
             }
             set
             {
-                corporateRegistrationTypeCodeField = value;
+                _corporateRegistrationTypeCodeField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return jurisdictionRegionAddressField;
+                return _jurisdictionRegionAddressField;
             }
             set
             {
-                jurisdictionRegionAddressField = value;
+                _jurisdictionRegionAddressField = value;
             }
         }
     }

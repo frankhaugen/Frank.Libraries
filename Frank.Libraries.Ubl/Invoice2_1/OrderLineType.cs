@@ -10,25 +10,25 @@
     public partial class OrderLineType
     {
 
-        private SubstitutionStatusCodeType substitutionStatusCodeField;
+        private SubstitutionStatusCodeType _substitutionStatusCodeField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private LineItemType lineItemField;
+        private LineItemType _lineItemField;
 
-        private LineItemType[] sellerProposedSubstituteLineItemField;
+        private LineItemType[] _sellerProposedSubstituteLineItemField;
 
-        private LineItemType[] sellerSubstitutedLineItemField;
+        private LineItemType[] _sellerSubstitutedLineItemField;
 
-        private LineItemType[] buyerProposedSubstituteLineItemField;
+        private LineItemType[] _buyerProposedSubstituteLineItemField;
 
-        private LineReferenceType catalogueLineReferenceField;
+        private LineReferenceType _catalogueLineReferenceField;
 
-        private LineReferenceType quotationLineReferenceField;
+        private LineReferenceType _quotationLineReferenceField;
 
-        private OrderLineReferenceType[] orderLineReferenceField;
+        private OrderLineReferenceType[] _orderLineReferenceField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -36,11 +36,11 @@
         {
             get
             {
-                return substitutionStatusCodeField;
+                return _substitutionStatusCodeField;
             }
             set
             {
-                substitutionStatusCodeField = value;
+                _substitutionStatusCodeField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -63,11 +63,11 @@
         {
             get
             {
-                return lineItemField;
+                return _lineItemField;
             }
             set
             {
-                lineItemField = value;
+                _lineItemField = value;
             }
         }
 
@@ -77,11 +77,11 @@
         {
             get
             {
-                return sellerProposedSubstituteLineItemField;
+                return _sellerProposedSubstituteLineItemField;
             }
             set
             {
-                sellerProposedSubstituteLineItemField = value;
+                _sellerProposedSubstituteLineItemField = value;
             }
         }
 
@@ -91,11 +91,11 @@
         {
             get
             {
-                return sellerSubstitutedLineItemField;
+                return _sellerSubstitutedLineItemField;
             }
             set
             {
-                sellerSubstitutedLineItemField = value;
+                _sellerSubstitutedLineItemField = value;
             }
         }
 
@@ -105,11 +105,11 @@
         {
             get
             {
-                return buyerProposedSubstituteLineItemField;
+                return _buyerProposedSubstituteLineItemField;
             }
             set
             {
-                buyerProposedSubstituteLineItemField = value;
+                _buyerProposedSubstituteLineItemField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return catalogueLineReferenceField;
+                return _catalogueLineReferenceField;
             }
             set
             {
-                catalogueLineReferenceField = value;
+                _catalogueLineReferenceField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return quotationLineReferenceField;
+                return _quotationLineReferenceField;
             }
             set
             {
-                quotationLineReferenceField = value;
+                _quotationLineReferenceField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return orderLineReferenceField;
+                return _orderLineReferenceField;
             }
             set
             {
-                orderLineReferenceField = value;
+                _orderLineReferenceField = value;
             }
         }
 
@@ -159,11 +159,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
     }

@@ -10,25 +10,25 @@
     public partial class PriceType
     {
 
-        private PriceAmountType priceAmountField;
+        private PriceAmountType _priceAmountField;
 
-        private BaseQuantityType baseQuantityField;
+        private BaseQuantityType _baseQuantityField;
 
-        private PriceChangeReasonType[] priceChangeReasonField;
+        private PriceChangeReasonType[] _priceChangeReasonField;
 
-        private PriceTypeCodeType priceTypeCodeField;
+        private PriceTypeCodeType _priceTypeCodeField;
 
-        private PriceTypeType priceType1Field;
+        private PriceTypeType _priceType1Field;
 
-        private OrderableUnitFactorRateType orderableUnitFactorRateField;
+        private OrderableUnitFactorRateType _orderableUnitFactorRateField;
 
-        private PeriodType[] validityPeriodField;
+        private PeriodType[] _validityPeriodField;
 
-        private PriceListType priceListField;
+        private PriceListType _priceListField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private ExchangeRateType pricingExchangeRateField;
+        private ExchangeRateType _pricingExchangeRateField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -36,11 +36,11 @@
         {
             get
             {
-                return priceAmountField;
+                return _priceAmountField;
             }
             set
             {
-                priceAmountField = value;
+                _priceAmountField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return baseQuantityField;
+                return _baseQuantityField;
             }
             set
             {
-                baseQuantityField = value;
+                _baseQuantityField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return priceChangeReasonField;
+                return _priceChangeReasonField;
             }
             set
             {
-                priceChangeReasonField = value;
+                _priceChangeReasonField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return priceTypeCodeField;
+                return _priceTypeCodeField;
             }
             set
             {
-                priceTypeCodeField = value;
+                _priceTypeCodeField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return priceType1Field;
+                return _priceType1Field;
             }
             set
             {
-                priceType1Field = value;
+                _priceType1Field = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return orderableUnitFactorRateField;
+                return _orderableUnitFactorRateField;
             }
             set
             {
-                orderableUnitFactorRateField = value;
+                _orderableUnitFactorRateField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return validityPeriodField;
+                return _validityPeriodField;
             }
             set
             {
-                validityPeriodField = value;
+                _validityPeriodField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return priceListField;
+                return _priceListField;
             }
             set
             {
-                priceListField = value;
+                _priceListField = value;
             }
         }
 
@@ -147,11 +147,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return pricingExchangeRateField;
+                return _pricingExchangeRateField;
             }
             set
             {
-                pricingExchangeRateField = value;
+                _pricingExchangeRateField = value;
             }
         }
     }

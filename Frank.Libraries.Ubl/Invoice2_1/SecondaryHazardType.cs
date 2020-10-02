@@ -10,27 +10,27 @@
     public partial class SecondaryHazardType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private PlacardNotationType placardNotationField;
+        private PlacardNotationType _placardNotationField;
 
-        private PlacardEndorsementType placardEndorsementField;
+        private PlacardEndorsementType _placardEndorsementField;
 
-        private EmergencyProceduresCodeType emergencyProceduresCodeField;
+        private EmergencyProceduresCodeType _emergencyProceduresCodeField;
 
-        private ExtensionType[] extensionField;
+        private ExtensionType[] _extensionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return placardNotationField;
+                return _placardNotationField;
             }
             set
             {
-                placardNotationField = value;
+                _placardNotationField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return placardEndorsementField;
+                return _placardEndorsementField;
             }
             set
             {
-                placardEndorsementField = value;
+                _placardEndorsementField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return emergencyProceduresCodeField;
+                return _emergencyProceduresCodeField;
             }
             set
             {
-                emergencyProceduresCodeField = value;
+                _emergencyProceduresCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return extensionField;
+                return _extensionField;
             }
             set
             {
-                extensionField = value;
+                _extensionField = value;
             }
         }
     }

@@ -10,11 +10,11 @@
     public partial class DeliveryUnitType
     {
 
-        private BatchQuantityType batchQuantityField;
+        private BatchQuantityType _batchQuantityField;
 
-        private ConsumerUnitQuantityType consumerUnitQuantityField;
+        private ConsumerUnitQuantityType _consumerUnitQuantityField;
 
-        private HazardousRiskIndicatorType hazardousRiskIndicatorField;
+        private HazardousRiskIndicatorType _hazardousRiskIndicatorField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return batchQuantityField;
+                return _batchQuantityField;
             }
             set
             {
-                batchQuantityField = value;
+                _batchQuantityField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return consumerUnitQuantityField;
+                return _consumerUnitQuantityField;
             }
             set
             {
-                consumerUnitQuantityField = value;
+                _consumerUnitQuantityField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return hazardousRiskIndicatorField;
+                return _hazardousRiskIndicatorField;
             }
             set
             {
-                hazardousRiskIndicatorField = value;
+                _hazardousRiskIndicatorField = value;
             }
         }
     }

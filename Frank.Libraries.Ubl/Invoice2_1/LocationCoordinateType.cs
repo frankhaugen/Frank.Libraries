@@ -10,21 +10,21 @@
     public partial class LocationCoordinateType
     {
 
-        private CoordinateSystemCodeType coordinateSystemCodeField;
+        private CoordinateSystemCodeType _coordinateSystemCodeField;
 
-        private LatitudeDegreesMeasureType latitudeDegreesMeasureField;
+        private LatitudeDegreesMeasureType _latitudeDegreesMeasureField;
 
-        private LatitudeMinutesMeasureType latitudeMinutesMeasureField;
+        private LatitudeMinutesMeasureType _latitudeMinutesMeasureField;
 
-        private LatitudeDirectionCodeType latitudeDirectionCodeField;
+        private LatitudeDirectionCodeType _latitudeDirectionCodeField;
 
-        private LongitudeDegreesMeasureType longitudeDegreesMeasureField;
+        private LongitudeDegreesMeasureType _longitudeDegreesMeasureField;
 
-        private LongitudeMinutesMeasureType longitudeMinutesMeasureField;
+        private LongitudeMinutesMeasureType _longitudeMinutesMeasureField;
 
-        private LongitudeDirectionCodeType longitudeDirectionCodeField;
+        private LongitudeDirectionCodeType _longitudeDirectionCodeField;
 
-        private AltitudeMeasureType altitudeMeasureField;
+        private AltitudeMeasureType _altitudeMeasureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -32,11 +32,11 @@
         {
             get
             {
-                return coordinateSystemCodeField;
+                return _coordinateSystemCodeField;
             }
             set
             {
-                coordinateSystemCodeField = value;
+                _coordinateSystemCodeField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return latitudeDegreesMeasureField;
+                return _latitudeDegreesMeasureField;
             }
             set
             {
-                latitudeDegreesMeasureField = value;
+                _latitudeDegreesMeasureField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return latitudeMinutesMeasureField;
+                return _latitudeMinutesMeasureField;
             }
             set
             {
-                latitudeMinutesMeasureField = value;
+                _latitudeMinutesMeasureField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return latitudeDirectionCodeField;
+                return _latitudeDirectionCodeField;
             }
             set
             {
-                latitudeDirectionCodeField = value;
+                _latitudeDirectionCodeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return longitudeDegreesMeasureField;
+                return _longitudeDegreesMeasureField;
             }
             set
             {
-                longitudeDegreesMeasureField = value;
+                _longitudeDegreesMeasureField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return longitudeMinutesMeasureField;
+                return _longitudeMinutesMeasureField;
             }
             set
             {
-                longitudeMinutesMeasureField = value;
+                _longitudeMinutesMeasureField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return longitudeDirectionCodeField;
+                return _longitudeDirectionCodeField;
             }
             set
             {
-                longitudeDirectionCodeField = value;
+                _longitudeDirectionCodeField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return altitudeMeasureField;
+                return _altitudeMeasureField;
             }
             set
             {
-                altitudeMeasureField = value;
+                _altitudeMeasureField = value;
             }
         }
     }

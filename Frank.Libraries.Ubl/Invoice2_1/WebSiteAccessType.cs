@@ -10,23 +10,23 @@
     public partial class WebSiteAccessType
     {
 
-        private URIType uRIField;
+        private UriType _uRiField;
 
-        private PasswordType passwordField;
+        private PasswordType _passwordField;
 
-        private LoginType loginField;
+        private LoginType _loginField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public URIType URI
+        public UriType Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return passwordField;
+                return _passwordField;
             }
             set
             {
-                passwordField = value;
+                _passwordField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return loginField;
+                return _loginField;
             }
             set
             {
-                loginField = value;
+                _loginField = value;
             }
         }
     }

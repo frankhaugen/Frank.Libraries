@@ -10,9 +10,9 @@
     public partial class ActivityPropertyType
     {
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private ValueType valueField;
+        private ValueType _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

@@ -10,22 +10,22 @@
     public partial class CertificateValuesType
     {
 
-        private object[] itemsField;
+        private object[] _itemsField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EncapsulatedX509Certificate", typeof(EncapsulatedPKIDataType))]
+        [System.Xml.Serialization.XmlElementAttribute("EncapsulatedX509Certificate", typeof(EncapsulatedPkiDataType))]
         [System.Xml.Serialization.XmlElementAttribute("OtherCertificate", typeof(AnyType))]
         public object[] Items
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

@@ -10,59 +10,59 @@
     public partial class CustomerPartyType
     {
 
-        private CustomerAssignedAccountIDType customerAssignedAccountIDField;
+        private CustomerAssignedAccountIdType _customerAssignedAccountIdField;
 
-        private SupplierAssignedAccountIDType supplierAssignedAccountIDField;
+        private SupplierAssignedAccountIdType _supplierAssignedAccountIdField;
 
-        private AdditionalAccountIDType[] additionalAccountIDField;
+        private AdditionalAccountIdType[] _additionalAccountIdField;
 
-        private PartyType partyField;
+        private PartyType _partyField;
 
-        private ContactType deliveryContactField;
+        private ContactType _deliveryContactField;
 
-        private ContactType accountingContactField;
+        private ContactType _accountingContactField;
 
-        private ContactType buyerContactField;
+        private ContactType _buyerContactField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public CustomerAssignedAccountIDType CustomerAssignedAccountID
+        public CustomerAssignedAccountIdType CustomerAssignedAccountId
         {
             get
             {
-                return customerAssignedAccountIDField;
+                return _customerAssignedAccountIdField;
             }
             set
             {
-                customerAssignedAccountIDField = value;
+                _customerAssignedAccountIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SupplierAssignedAccountIDType SupplierAssignedAccountID
+        public SupplierAssignedAccountIdType SupplierAssignedAccountId
         {
             get
             {
-                return supplierAssignedAccountIDField;
+                return _supplierAssignedAccountIdField;
             }
             set
             {
-                supplierAssignedAccountIDField = value;
+                _supplierAssignedAccountIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AdditionalAccountID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public AdditionalAccountIDType[] AdditionalAccountID
+        public AdditionalAccountIdType[] AdditionalAccountId
         {
             get
             {
-                return additionalAccountIDField;
+                return _additionalAccountIdField;
             }
             set
             {
-                additionalAccountIDField = value;
+                _additionalAccountIdField = value;
             }
         }
 
@@ -71,11 +71,11 @@
         {
             get
             {
-                return partyField;
+                return _partyField;
             }
             set
             {
-                partyField = value;
+                _partyField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return deliveryContactField;
+                return _deliveryContactField;
             }
             set
             {
-                deliveryContactField = value;
+                _deliveryContactField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return accountingContactField;
+                return _accountingContactField;
             }
             set
             {
-                accountingContactField = value;
+                _accountingContactField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return buyerContactField;
+                return _buyerContactField;
             }
             set
             {
-                buyerContactField = value;
+                _buyerContactField = value;
             }
         }
     }

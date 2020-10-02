@@ -10,15 +10,15 @@
     public partial class TendererRequirementType
     {
 
-        private NameType1[] nameField;
+        private NameType1[] _nameField;
 
-        private TendererRequirementTypeCodeType tendererRequirementTypeCodeField;
+        private TendererRequirementTypeCodeType _tendererRequirementTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private LegalReferenceType legalReferenceField;
+        private LegalReferenceType _legalReferenceField;
 
-        private EvidenceType[] suggestedEvidenceField;
+        private EvidenceType[] _suggestedEvidenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return tendererRequirementTypeCodeField;
+                return _tendererRequirementTypeCodeField;
             }
             set
             {
-                tendererRequirementTypeCodeField = value;
+                _tendererRequirementTypeCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return legalReferenceField;
+                return _legalReferenceField;
             }
             set
             {
-                legalReferenceField = value;
+                _legalReferenceField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return suggestedEvidenceField;
+                return _suggestedEvidenceField;
             }
             set
             {
-                suggestedEvidenceField = value;
+                _suggestedEvidenceField = value;
             }
         }
     }

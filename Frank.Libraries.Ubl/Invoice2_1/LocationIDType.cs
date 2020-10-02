@@ -7,7 +7,7 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     [System.Xml.Serialization.XmlRootAttribute("LocationID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2", IsNullable = false)]
-    public partial class LocationIDType : IdentifierType1
+    public partial class LocationIdType : IdentifierType1
     {
     }
 }

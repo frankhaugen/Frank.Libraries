@@ -10,31 +10,31 @@
     public partial class CertificateType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private CertificateTypeCodeType certificateTypeCodeField;
+        private CertificateTypeCodeType _certificateTypeCodeField;
 
-        private CertificateTypeType certificateType1Field;
+        private CertificateTypeType _certificateType1Field;
 
-        private RemarksType[] remarksField;
+        private RemarksType[] _remarksField;
 
-        private PartyType issuerPartyField;
+        private PartyType _issuerPartyField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private SignatureType[] signatureField;
+        private SignatureType[] _signatureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return certificateTypeCodeField;
+                return _certificateTypeCodeField;
             }
             set
             {
-                certificateTypeCodeField = value;
+                _certificateTypeCodeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return certificateType1Field;
+                return _certificateType1Field;
             }
             set
             {
-                certificateType1Field = value;
+                _certificateType1Field = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return remarksField;
+                return _remarksField;
             }
             set
             {
-                remarksField = value;
+                _remarksField = value;
             }
         }
 
@@ -85,11 +85,11 @@
         {
             get
             {
-                return issuerPartyField;
+                return _issuerPartyField;
             }
             set
             {
-                issuerPartyField = value;
+                _issuerPartyField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -113,11 +113,11 @@
         {
             get
             {
-                return signatureField;
+                return _signatureField;
             }
             set
             {
-                signatureField = value;
+                _signatureField = value;
             }
         }
     }

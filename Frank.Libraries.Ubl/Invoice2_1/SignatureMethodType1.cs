@@ -10,23 +10,23 @@
     public partial class SignatureMethodType1
     {
 
-        private string hMACOutputLengthField;
+        private string _hMacOutputLengthField;
 
-        private System.Xml.XmlNode[] anyField;
+        private System.Xml.XmlNode[] _anyField;
 
-        private string algorithmField;
+        private string _algorithmField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
-        public string HMACOutputLength
+        public string HmacOutputLength
         {
             get
             {
-                return hMACOutputLengthField;
+                return _hMacOutputLengthField;
             }
             set
             {
-                hMACOutputLengthField = value;
+                _hMacOutputLengthField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return anyField;
+                return _anyField;
             }
             set
             {
-                anyField = value;
+                _anyField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return algorithmField;
+                return _algorithmField;
             }
             set
             {
-                algorithmField = value;
+                _algorithmField = value;
             }
         }
     }

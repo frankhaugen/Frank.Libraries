@@ -7,7 +7,7 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2")]
     [System.Xml.Serialization.XmlRootAttribute("ReferencedSignatureID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2", IsNullable = false)]
-    public partial class ReferencedSignatureIDType : IdentifierType1
+    public partial class ReferencedSignatureIdType : IdentifierType1
     {
     }
 }

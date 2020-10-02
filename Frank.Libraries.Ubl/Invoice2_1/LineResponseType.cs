@@ -10,20 +10,20 @@
     public partial class LineResponseType
     {
 
-        private LineReferenceType lineReferenceField;
+        private LineReferenceType _lineReferenceField;
 
-        private ResponseType[] responseField;
+        private ResponseType[] _responseField;
 
         /// <remarks/>
         public LineReferenceType LineReference
         {
             get
             {
-                return lineReferenceField;
+                return _lineReferenceField;
             }
             set
             {
-                lineReferenceField = value;
+                _lineReferenceField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return responseField;
+                return _responseField;
             }
             set
             {
-                responseField = value;
+                _responseField = value;
             }
         }
     }

@@ -15,101 +15,101 @@
     public partial class BinaryObjectType
     {
 
-        private string formatField;
+        private string _formatField;
 
-        private string mimeCodeField;
+        private string _mimeCodeField;
 
-        private string encodingCodeField;
+        private string _encodingCodeField;
 
-        private string characterSetCodeField;
+        private string _characterSetCodeField;
 
-        private string uriField;
+        private string _uriField;
 
-        private string filenameField;
+        private string _filenameField;
 
-        private byte[] valueField;
+        private byte[] _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string format
+        public string Format
         {
             get
             {
-                return formatField;
+                return _formatField;
             }
             set
             {
-                formatField = value;
+                _formatField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string mimeCode
+        public string MimeCode
         {
             get
             {
-                return mimeCodeField;
+                return _mimeCodeField;
             }
             set
             {
-                mimeCodeField = value;
+                _mimeCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string encodingCode
+        public string EncodingCode
         {
             get
             {
-                return encodingCodeField;
+                return _encodingCodeField;
             }
             set
             {
-                encodingCodeField = value;
+                _encodingCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string characterSetCode
+        public string CharacterSetCode
         {
             get
             {
-                return characterSetCodeField;
+                return _characterSetCodeField;
             }
             set
             {
-                characterSetCodeField = value;
+                _characterSetCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string uri
+        public string Uri
         {
             get
             {
-                return uriField;
+                return _uriField;
             }
             set
             {
-                uriField = value;
+                _uriField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string filename
+        public string Filename
         {
             get
             {
-                return filenameField;
+                return _filenameField;
             }
             set
             {
-                filenameField = value;
+                _filenameField = value;
             }
         }
 
@@ -119,11 +119,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

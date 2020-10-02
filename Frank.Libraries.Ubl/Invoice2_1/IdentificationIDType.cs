@@ -7,7 +7,7 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     [System.Xml.Serialization.XmlRootAttribute("IdentificationID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2", IsNullable = false)]
-    public partial class IdentificationIDType : IdentifierType1
+    public partial class IdentificationIdType : IdentifierType1
     {
     }
 }

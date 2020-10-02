@@ -10,27 +10,27 @@
     public partial class TransportExecutionTermsType
     {
 
-        private TransportUserSpecialTermsType[] transportUserSpecialTermsField;
+        private TransportUserSpecialTermsType[] _transportUserSpecialTermsField;
 
-        private TransportServiceProviderSpecialTermsType[] transportServiceProviderSpecialTermsField;
+        private TransportServiceProviderSpecialTermsType[] _transportServiceProviderSpecialTermsField;
 
-        private ChangeConditionsType[] changeConditionsField;
+        private ChangeConditionsType[] _changeConditionsField;
 
-        private PaymentTermsType[] paymentTermsField;
+        private PaymentTermsType[] _paymentTermsField;
 
-        private DeliveryTermsType[] deliveryTermsField;
+        private DeliveryTermsType[] _deliveryTermsField;
 
-        private PaymentTermsType bonusPaymentTermsField;
+        private PaymentTermsType _bonusPaymentTermsField;
 
-        private PaymentTermsType commissionPaymentTermsField;
+        private PaymentTermsType _commissionPaymentTermsField;
 
-        private PaymentTermsType penaltyPaymentTermsField;
+        private PaymentTermsType _penaltyPaymentTermsField;
 
-        private EnvironmentalEmissionType[] environmentalEmissionField;
+        private EnvironmentalEmissionType[] _environmentalEmissionField;
 
-        private NotificationRequirementType[] notificationRequirementField;
+        private NotificationRequirementType[] _notificationRequirementField;
 
-        private PaymentTermsType serviceChargePaymentTermsField;
+        private PaymentTermsType _serviceChargePaymentTermsField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("TransportUserSpecialTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -38,11 +38,11 @@
         {
             get
             {
-                return transportUserSpecialTermsField;
+                return _transportUserSpecialTermsField;
             }
             set
             {
-                transportUserSpecialTermsField = value;
+                _transportUserSpecialTermsField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return transportServiceProviderSpecialTermsField;
+                return _transportServiceProviderSpecialTermsField;
             }
             set
             {
-                transportServiceProviderSpecialTermsField = value;
+                _transportServiceProviderSpecialTermsField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return changeConditionsField;
+                return _changeConditionsField;
             }
             set
             {
-                changeConditionsField = value;
+                _changeConditionsField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return paymentTermsField;
+                return _paymentTermsField;
             }
             set
             {
-                paymentTermsField = value;
+                _paymentTermsField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return deliveryTermsField;
+                return _deliveryTermsField;
             }
             set
             {
-                deliveryTermsField = value;
+                _deliveryTermsField = value;
             }
         }
 
@@ -107,11 +107,11 @@
         {
             get
             {
-                return bonusPaymentTermsField;
+                return _bonusPaymentTermsField;
             }
             set
             {
-                bonusPaymentTermsField = value;
+                _bonusPaymentTermsField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return commissionPaymentTermsField;
+                return _commissionPaymentTermsField;
             }
             set
             {
-                commissionPaymentTermsField = value;
+                _commissionPaymentTermsField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return penaltyPaymentTermsField;
+                return _penaltyPaymentTermsField;
             }
             set
             {
-                penaltyPaymentTermsField = value;
+                _penaltyPaymentTermsField = value;
             }
         }
 
@@ -147,11 +147,11 @@
         {
             get
             {
-                return environmentalEmissionField;
+                return _environmentalEmissionField;
             }
             set
             {
-                environmentalEmissionField = value;
+                _environmentalEmissionField = value;
             }
         }
 
@@ -161,11 +161,11 @@
         {
             get
             {
-                return notificationRequirementField;
+                return _notificationRequirementField;
             }
             set
             {
-                notificationRequirementField = value;
+                _notificationRequirementField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return serviceChargePaymentTermsField;
+                return _serviceChargePaymentTermsField;
             }
             set
             {
-                serviceChargePaymentTermsField = value;
+                _serviceChargePaymentTermsField = value;
             }
         }
     }

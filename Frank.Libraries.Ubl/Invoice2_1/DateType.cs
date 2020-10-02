@@ -63,7 +63,7 @@
     public partial class DateType
     {
 
-        private System.DateTime valueField;
+        private System.DateTime _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute(DataType = "date")]
@@ -71,11 +71,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

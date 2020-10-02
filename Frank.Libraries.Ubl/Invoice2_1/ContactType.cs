@@ -10,31 +10,31 @@
     public partial class ContactType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private TelephoneType telephoneField;
+        private TelephoneType _telephoneField;
 
-        private TelefaxType telefaxField;
+        private TelefaxType _telefaxField;
 
-        private ElectronicMailType electronicMailField;
+        private ElectronicMailType _electronicMailField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private CommunicationType[] otherCommunicationField;
+        private CommunicationType[] _otherCommunicationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return telephoneField;
+                return _telephoneField;
             }
             set
             {
-                telephoneField = value;
+                _telephoneField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return telefaxField;
+                return _telefaxField;
             }
             set
             {
-                telefaxField = value;
+                _telefaxField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return electronicMailField;
+                return _electronicMailField;
             }
             set
             {
-                electronicMailField = value;
+                _electronicMailField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return otherCommunicationField;
+                return _otherCommunicationField;
             }
             set
             {
-                otherCommunicationField = value;
+                _otherCommunicationField = value;
             }
         }
     }

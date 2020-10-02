@@ -10,17 +10,17 @@
     public partial class CapabilityType
     {
 
-        private CapabilityTypeCodeType capabilityTypeCodeField;
+        private CapabilityTypeCodeType _capabilityTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private ValueAmountType valueAmountField;
+        private ValueAmountType _valueAmountField;
 
-        private ValueQuantityType valueQuantityField;
+        private ValueQuantityType _valueQuantityField;
 
-        private EvidenceSuppliedType[] evidenceSuppliedField;
+        private EvidenceSuppliedType[] _evidenceSuppliedField;
 
-        private PeriodType validityPeriodField;
+        private PeriodType _validityPeriodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -28,11 +28,11 @@
         {
             get
             {
-                return capabilityTypeCodeField;
+                return _capabilityTypeCodeField;
             }
             set
             {
-                capabilityTypeCodeField = value;
+                _capabilityTypeCodeField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return valueAmountField;
+                return _valueAmountField;
             }
             set
             {
-                valueAmountField = value;
+                _valueAmountField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return valueQuantityField;
+                return _valueQuantityField;
             }
             set
             {
-                valueQuantityField = value;
+                _valueQuantityField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return evidenceSuppliedField;
+                return _evidenceSuppliedField;
             }
             set
             {
-                evidenceSuppliedField = value;
+                _evidenceSuppliedField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return validityPeriodField;
+                return _validityPeriodField;
             }
             set
             {
-                validityPeriodField = value;
+                _validityPeriodField = value;
             }
         }
     }

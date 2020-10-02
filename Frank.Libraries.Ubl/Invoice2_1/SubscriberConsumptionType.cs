@@ -10,35 +10,35 @@
     public partial class SubscriberConsumptionType
     {
 
-        private ConsumptionIDType consumptionIDField;
+        private ConsumptionIdType _consumptionIdField;
 
-        private SpecificationTypeCodeType specificationTypeCodeField;
+        private SpecificationTypeCodeType _specificationTypeCodeField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private TotalMeteredQuantityType totalMeteredQuantityField;
+        private TotalMeteredQuantityType _totalMeteredQuantityField;
 
-        private PartyType subscriberPartyField;
+        private PartyType _subscriberPartyField;
 
-        private ConsumptionPointType utilityConsumptionPointField;
+        private ConsumptionPointType _utilityConsumptionPointField;
 
-        private OnAccountPaymentType[] onAccountPaymentField;
+        private OnAccountPaymentType[] _onAccountPaymentField;
 
-        private ConsumptionType consumptionField;
+        private ConsumptionType _consumptionField;
 
-        private SupplierConsumptionType[] supplierConsumptionField;
+        private SupplierConsumptionType[] _supplierConsumptionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ConsumptionIDType ConsumptionID
+        public ConsumptionIdType ConsumptionId
         {
             get
             {
-                return consumptionIDField;
+                return _consumptionIdField;
             }
             set
             {
-                consumptionIDField = value;
+                _consumptionIdField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return specificationTypeCodeField;
+                return _specificationTypeCodeField;
             }
             set
             {
-                specificationTypeCodeField = value;
+                _specificationTypeCodeField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return totalMeteredQuantityField;
+                return _totalMeteredQuantityField;
             }
             set
             {
-                totalMeteredQuantityField = value;
+                _totalMeteredQuantityField = value;
             }
         }
 
@@ -89,11 +89,11 @@
         {
             get
             {
-                return subscriberPartyField;
+                return _subscriberPartyField;
             }
             set
             {
-                subscriberPartyField = value;
+                _subscriberPartyField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return utilityConsumptionPointField;
+                return _utilityConsumptionPointField;
             }
             set
             {
-                utilityConsumptionPointField = value;
+                _utilityConsumptionPointField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return onAccountPaymentField;
+                return _onAccountPaymentField;
             }
             set
             {
-                onAccountPaymentField = value;
+                _onAccountPaymentField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return consumptionField;
+                return _consumptionField;
             }
             set
             {
-                consumptionField = value;
+                _consumptionField = value;
             }
         }
 
@@ -143,11 +143,11 @@
         {
             get
             {
-                return supplierConsumptionField;
+                return _supplierConsumptionField;
             }
             set
             {
-                supplierConsumptionField = value;
+                _supplierConsumptionField = value;
             }
         }
     }

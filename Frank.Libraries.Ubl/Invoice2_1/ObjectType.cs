@@ -10,13 +10,13 @@
     public partial class ObjectType
     {
 
-        private System.Xml.XmlNode[] anyField;
+        private System.Xml.XmlNode[] _anyField;
 
-        private string idField;
+        private string _idField;
 
-        private string mimeTypeField;
+        private string _mimeTypeField;
 
-        private string encodingField;
+        private string _encodingField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
@@ -25,11 +25,11 @@
         {
             get
             {
-                return anyField;
+                return _anyField;
             }
             set
             {
-                anyField = value;
+                _anyField = value;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -53,11 +53,11 @@
         {
             get
             {
-                return mimeTypeField;
+                return _mimeTypeField;
             }
             set
             {
-                mimeTypeField = value;
+                _mimeTypeField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return encodingField;
+                return _encodingField;
             }
             set
             {
-                encodingField = value;
+                _encodingField = value;
             }
         }
     }

@@ -10,9 +10,9 @@
     public partial class EconomicOperatorRoleType
     {
 
-        private RoleCodeType roleCodeField;
+        private RoleCodeType _roleCodeField;
 
-        private RoleDescriptionType[] roleDescriptionField;
+        private RoleDescriptionType[] _roleDescriptionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return roleCodeField;
+                return _roleCodeField;
             }
             set
             {
-                roleCodeField = value;
+                _roleCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return roleDescriptionField;
+                return _roleDescriptionField;
             }
             set
             {
-                roleDescriptionField = value;
+                _roleDescriptionField = value;
             }
         }
     }

@@ -10,25 +10,25 @@
     public partial class ContractingPartyType
     {
 
-        private BuyerProfileURIType buyerProfileURIField;
+        private BuyerProfileUriType _buyerProfileUriField;
 
-        private ContractingPartyTypeType[] contractingPartyType1Field;
+        private ContractingPartyTypeType[] _contractingPartyType1Field;
 
-        private ContractingActivityType[] contractingActivityField;
+        private ContractingActivityType[] _contractingActivityField;
 
-        private PartyType partyField;
+        private PartyType _partyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public BuyerProfileURIType BuyerProfileURI
+        public BuyerProfileUriType BuyerProfileUri
         {
             get
             {
-                return buyerProfileURIField;
+                return _buyerProfileUriField;
             }
             set
             {
-                buyerProfileURIField = value;
+                _buyerProfileUriField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return contractingPartyType1Field;
+                return _contractingPartyType1Field;
             }
             set
             {
-                contractingPartyType1Field = value;
+                _contractingPartyType1Field = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return contractingActivityField;
+                return _contractingActivityField;
             }
             set
             {
-                contractingActivityField = value;
+                _contractingActivityField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return partyField;
+                return _partyField;
             }
             set
             {
-                partyField = value;
+                _partyField = value;
             }
         }
     }

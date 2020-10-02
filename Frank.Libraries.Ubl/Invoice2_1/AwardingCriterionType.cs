@@ -10,43 +10,43 @@
     public partial class AwardingCriterionType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private AwardingCriterionTypeCodeType awardingCriterionTypeCodeField;
+        private AwardingCriterionTypeCodeType _awardingCriterionTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private WeightNumericType weightNumericField;
+        private WeightNumericType _weightNumericField;
 
-        private WeightType[] weightField;
+        private WeightType[] _weightField;
 
-        private CalculationExpressionType[] calculationExpressionField;
+        private CalculationExpressionType[] _calculationExpressionField;
 
-        private CalculationExpressionCodeType calculationExpressionCodeField;
+        private CalculationExpressionCodeType _calculationExpressionCodeField;
 
-        private MinimumQuantityType minimumQuantityField;
+        private MinimumQuantityType _minimumQuantityField;
 
-        private MaximumQuantityType maximumQuantityField;
+        private MaximumQuantityType _maximumQuantityField;
 
-        private MinimumAmountType minimumAmountField;
+        private MinimumAmountType _minimumAmountField;
 
-        private MaximumAmountType maximumAmountField;
+        private MaximumAmountType _maximumAmountField;
 
-        private MinimumImprovementBidType[] minimumImprovementBidField;
+        private MinimumImprovementBidType[] _minimumImprovementBidField;
 
-        private AwardingCriterionType[] subordinateAwardingCriterionField;
+        private AwardingCriterionType[] _subordinateAwardingCriterionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return awardingCriterionTypeCodeField;
+                return _awardingCriterionTypeCodeField;
             }
             set
             {
-                awardingCriterionTypeCodeField = value;
+                _awardingCriterionTypeCodeField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return weightNumericField;
+                return _weightNumericField;
             }
             set
             {
-                weightNumericField = value;
+                _weightNumericField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return weightField;
+                return _weightField;
             }
             set
             {
-                weightField = value;
+                _weightField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return calculationExpressionField;
+                return _calculationExpressionField;
             }
             set
             {
-                calculationExpressionField = value;
+                _calculationExpressionField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return calculationExpressionCodeField;
+                return _calculationExpressionCodeField;
             }
             set
             {
-                calculationExpressionCodeField = value;
+                _calculationExpressionCodeField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return minimumQuantityField;
+                return _minimumQuantityField;
             }
             set
             {
-                minimumQuantityField = value;
+                _minimumQuantityField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return maximumQuantityField;
+                return _maximumQuantityField;
             }
             set
             {
-                maximumQuantityField = value;
+                _maximumQuantityField = value;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                return minimumAmountField;
+                return _minimumAmountField;
             }
             set
             {
-                minimumAmountField = value;
+                _minimumAmountField = value;
             }
         }
 
@@ -182,11 +182,11 @@
         {
             get
             {
-                return maximumAmountField;
+                return _maximumAmountField;
             }
             set
             {
-                maximumAmountField = value;
+                _maximumAmountField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return minimumImprovementBidField;
+                return _minimumImprovementBidField;
             }
             set
             {
-                minimumImprovementBidField = value;
+                _minimumImprovementBidField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return subordinateAwardingCriterionField;
+                return _subordinateAwardingCriterionField;
             }
             set
             {
-                subordinateAwardingCriterionField = value;
+                _subordinateAwardingCriterionField = value;
             }
         }
     }

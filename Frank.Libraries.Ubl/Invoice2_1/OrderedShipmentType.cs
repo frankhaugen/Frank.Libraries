@@ -10,20 +10,20 @@
     public partial class OrderedShipmentType
     {
 
-        private ShipmentType shipmentField;
+        private ShipmentType _shipmentField;
 
-        private PackageType[] packageField;
+        private PackageType[] _packageField;
 
         /// <remarks/>
         public ShipmentType Shipment
         {
             get
             {
-                return shipmentField;
+                return _shipmentField;
             }
             set
             {
-                shipmentField = value;
+                _shipmentField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return packageField;
+                return _packageField;
             }
             set
             {
-                packageField = value;
+                _packageField = value;
             }
         }
     }

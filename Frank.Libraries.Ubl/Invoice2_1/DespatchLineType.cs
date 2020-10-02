@@ -10,59 +10,59 @@
     public partial class DespatchLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private LineStatusCodeType lineStatusCodeField;
+        private LineStatusCodeType _lineStatusCodeField;
 
-        private DeliveredQuantityType deliveredQuantityField;
+        private DeliveredQuantityType _deliveredQuantityField;
 
-        private BackorderQuantityType backorderQuantityField;
+        private BackorderQuantityType _backorderQuantityField;
 
-        private BackorderReasonType[] backorderReasonField;
+        private BackorderReasonType[] _backorderReasonField;
 
-        private OutstandingQuantityType outstandingQuantityField;
+        private OutstandingQuantityType _outstandingQuantityField;
 
-        private OutstandingReasonType[] outstandingReasonField;
+        private OutstandingReasonType[] _outstandingReasonField;
 
-        private OversupplyQuantityType oversupplyQuantityField;
+        private OversupplyQuantityType _oversupplyQuantityField;
 
-        private OrderLineReferenceType[] orderLineReferenceField;
+        private OrderLineReferenceType[] _orderLineReferenceField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
-        private ShipmentType[] shipmentField;
+        private ShipmentType[] _shipmentField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return lineStatusCodeField;
+                return _lineStatusCodeField;
             }
             set
             {
-                lineStatusCodeField = value;
+                _lineStatusCodeField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return deliveredQuantityField;
+                return _deliveredQuantityField;
             }
             set
             {
-                deliveredQuantityField = value;
+                _deliveredQuantityField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return backorderQuantityField;
+                return _backorderQuantityField;
             }
             set
             {
-                backorderQuantityField = value;
+                _backorderQuantityField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return backorderReasonField;
+                return _backorderReasonField;
             }
             set
             {
-                backorderReasonField = value;
+                _backorderReasonField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return outstandingQuantityField;
+                return _outstandingQuantityField;
             }
             set
             {
-                outstandingQuantityField = value;
+                _outstandingQuantityField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return outstandingReasonField;
+                return _outstandingReasonField;
             }
             set
             {
-                outstandingReasonField = value;
+                _outstandingReasonField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return oversupplyQuantityField;
+                return _oversupplyQuantityField;
             }
             set
             {
-                oversupplyQuantityField = value;
+                _oversupplyQuantityField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return orderLineReferenceField;
+                return _orderLineReferenceField;
             }
             set
             {
-                orderLineReferenceField = value;
+                _orderLineReferenceField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -211,11 +211,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -225,11 +225,11 @@
         {
             get
             {
-                return shipmentField;
+                return _shipmentField;
             }
             set
             {
-                shipmentField = value;
+                _shipmentField = value;
             }
         }
     }

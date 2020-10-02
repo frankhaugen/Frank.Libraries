@@ -10,17 +10,17 @@
     public partial class FrameworkAgreementType
     {
 
-        private ExpectedOperatorQuantityType expectedOperatorQuantityField;
+        private ExpectedOperatorQuantityType _expectedOperatorQuantityField;
 
-        private MaximumOperatorQuantityType maximumOperatorQuantityField;
+        private MaximumOperatorQuantityType _maximumOperatorQuantityField;
 
-        private JustificationType[] justificationField;
+        private JustificationType[] _justificationField;
 
-        private FrequencyType[] frequencyField;
+        private FrequencyType[] _frequencyField;
 
-        private PeriodType durationPeriodField;
+        private PeriodType _durationPeriodField;
 
-        private TenderRequirementType[] subsequentProcessTenderRequirementField;
+        private TenderRequirementType[] _subsequentProcessTenderRequirementField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -28,11 +28,11 @@
         {
             get
             {
-                return expectedOperatorQuantityField;
+                return _expectedOperatorQuantityField;
             }
             set
             {
-                expectedOperatorQuantityField = value;
+                _expectedOperatorQuantityField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return maximumOperatorQuantityField;
+                return _maximumOperatorQuantityField;
             }
             set
             {
-                maximumOperatorQuantityField = value;
+                _maximumOperatorQuantityField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return justificationField;
+                return _justificationField;
             }
             set
             {
-                justificationField = value;
+                _justificationField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return frequencyField;
+                return _frequencyField;
             }
             set
             {
-                frequencyField = value;
+                _frequencyField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return durationPeriodField;
+                return _durationPeriodField;
             }
             set
             {
-                durationPeriodField = value;
+                _durationPeriodField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return subsequentProcessTenderRequirementField;
+                return _subsequentProcessTenderRequirementField;
             }
             set
             {
-                subsequentProcessTenderRequirementField = value;
+                _subsequentProcessTenderRequirementField = value;
             }
         }
     }

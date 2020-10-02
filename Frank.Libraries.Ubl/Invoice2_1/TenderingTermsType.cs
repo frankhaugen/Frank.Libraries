@@ -10,91 +10,91 @@
     public partial class TenderingTermsType
     {
 
-        private AwardingMethodTypeCodeType awardingMethodTypeCodeField;
+        private AwardingMethodTypeCodeType _awardingMethodTypeCodeField;
 
-        private PriceEvaluationCodeType priceEvaluationCodeField;
+        private PriceEvaluationCodeType _priceEvaluationCodeField;
 
-        private MaximumVariantQuantityType maximumVariantQuantityField;
+        private MaximumVariantQuantityType _maximumVariantQuantityField;
 
-        private VariantConstraintIndicatorType variantConstraintIndicatorField;
+        private VariantConstraintIndicatorType _variantConstraintIndicatorField;
 
-        private AcceptedVariantsDescriptionType[] acceptedVariantsDescriptionField;
+        private AcceptedVariantsDescriptionType[] _acceptedVariantsDescriptionField;
 
-        private PriceRevisionFormulaDescriptionType[] priceRevisionFormulaDescriptionField;
+        private PriceRevisionFormulaDescriptionType[] _priceRevisionFormulaDescriptionField;
 
-        private FundingProgramCodeType fundingProgramCodeField;
+        private FundingProgramCodeType _fundingProgramCodeField;
 
-        private FundingProgramType[] fundingProgramField;
+        private FundingProgramType[] _fundingProgramField;
 
-        private MaximumAdvertisementAmountType maximumAdvertisementAmountField;
+        private MaximumAdvertisementAmountType _maximumAdvertisementAmountField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private PaymentFrequencyCodeType paymentFrequencyCodeField;
+        private PaymentFrequencyCodeType _paymentFrequencyCodeField;
 
-        private EconomicOperatorRegistryURIType economicOperatorRegistryURIField;
+        private EconomicOperatorRegistryUriType _economicOperatorRegistryUriField;
 
-        private RequiredCurriculaIndicatorType requiredCurriculaIndicatorField;
+        private RequiredCurriculaIndicatorType _requiredCurriculaIndicatorField;
 
-        private OtherConditionsIndicatorType otherConditionsIndicatorField;
+        private OtherConditionsIndicatorType _otherConditionsIndicatorField;
 
-        private AdditionalConditionsType[] additionalConditionsField;
+        private AdditionalConditionsType[] _additionalConditionsField;
 
-        private LatestSecurityClearanceDateType latestSecurityClearanceDateField;
+        private LatestSecurityClearanceDateType _latestSecurityClearanceDateField;
 
-        private DocumentationFeeAmountType documentationFeeAmountField;
+        private DocumentationFeeAmountType _documentationFeeAmountField;
 
-        private ClauseType[] penaltyClauseField;
+        private ClauseType[] _penaltyClauseField;
 
-        private FinancialGuaranteeType[] requiredFinancialGuaranteeField;
+        private FinancialGuaranteeType[] _requiredFinancialGuaranteeField;
 
-        private DocumentReferenceType procurementLegislationDocumentReferenceField;
+        private DocumentReferenceType _procurementLegislationDocumentReferenceField;
 
-        private DocumentReferenceType fiscalLegislationDocumentReferenceField;
+        private DocumentReferenceType _fiscalLegislationDocumentReferenceField;
 
-        private DocumentReferenceType environmentalLegislationDocumentReferenceField;
+        private DocumentReferenceType _environmentalLegislationDocumentReferenceField;
 
-        private DocumentReferenceType employmentLegislationDocumentReferenceField;
+        private DocumentReferenceType _employmentLegislationDocumentReferenceField;
 
-        private DocumentReferenceType[] contractualDocumentReferenceField;
+        private DocumentReferenceType[] _contractualDocumentReferenceField;
 
-        private DocumentReferenceType callForTendersDocumentReferenceField;
+        private DocumentReferenceType _callForTendersDocumentReferenceField;
 
-        private PeriodType warrantyValidityPeriodField;
+        private PeriodType _warrantyValidityPeriodField;
 
-        private PaymentTermsType[] paymentTermsField;
+        private PaymentTermsType[] _paymentTermsField;
 
-        private TendererQualificationRequestType[] tendererQualificationRequestField;
+        private TendererQualificationRequestType[] _tendererQualificationRequestField;
 
-        private SubcontractTermsType[] allowedSubcontractTermsField;
+        private SubcontractTermsType[] _allowedSubcontractTermsField;
 
-        private TenderPreparationType[] tenderPreparationField;
+        private TenderPreparationType[] _tenderPreparationField;
 
-        private ContractExecutionRequirementType[] contractExecutionRequirementField;
+        private ContractExecutionRequirementType[] _contractExecutionRequirementField;
 
-        private AwardingTermsType awardingTermsField;
+        private AwardingTermsType _awardingTermsField;
 
-        private PartyType additionalInformationPartyField;
+        private PartyType _additionalInformationPartyField;
 
-        private PartyType documentProviderPartyField;
+        private PartyType _documentProviderPartyField;
 
-        private PartyType tenderRecipientPartyField;
+        private PartyType _tenderRecipientPartyField;
 
-        private PartyType contractResponsiblePartyField;
+        private PartyType _contractResponsiblePartyField;
 
-        private PartyType[] tenderEvaluationPartyField;
+        private PartyType[] _tenderEvaluationPartyField;
 
-        private PeriodType tenderValidityPeriodField;
+        private PeriodType _tenderValidityPeriodField;
 
-        private PeriodType contractAcceptancePeriodField;
+        private PeriodType _contractAcceptancePeriodField;
 
-        private AppealTermsType appealTermsField;
+        private AppealTermsType _appealTermsField;
 
-        private LanguageType[] languageField;
+        private LanguageType[] _languageField;
 
-        private BudgetAccountLineType[] budgetAccountLineField;
+        private BudgetAccountLineType[] _budgetAccountLineField;
 
-        private DocumentReferenceType replacedNoticeDocumentReferenceField;
+        private DocumentReferenceType _replacedNoticeDocumentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -102,11 +102,11 @@
         {
             get
             {
-                return awardingMethodTypeCodeField;
+                return _awardingMethodTypeCodeField;
             }
             set
             {
-                awardingMethodTypeCodeField = value;
+                _awardingMethodTypeCodeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return priceEvaluationCodeField;
+                return _priceEvaluationCodeField;
             }
             set
             {
-                priceEvaluationCodeField = value;
+                _priceEvaluationCodeField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return maximumVariantQuantityField;
+                return _maximumVariantQuantityField;
             }
             set
             {
-                maximumVariantQuantityField = value;
+                _maximumVariantQuantityField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return variantConstraintIndicatorField;
+                return _variantConstraintIndicatorField;
             }
             set
             {
-                variantConstraintIndicatorField = value;
+                _variantConstraintIndicatorField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return acceptedVariantsDescriptionField;
+                return _acceptedVariantsDescriptionField;
             }
             set
             {
-                acceptedVariantsDescriptionField = value;
+                _acceptedVariantsDescriptionField = value;
             }
         }
 
@@ -172,11 +172,11 @@
         {
             get
             {
-                return priceRevisionFormulaDescriptionField;
+                return _priceRevisionFormulaDescriptionField;
             }
             set
             {
-                priceRevisionFormulaDescriptionField = value;
+                _priceRevisionFormulaDescriptionField = value;
             }
         }
 
@@ -186,11 +186,11 @@
         {
             get
             {
-                return fundingProgramCodeField;
+                return _fundingProgramCodeField;
             }
             set
             {
-                fundingProgramCodeField = value;
+                _fundingProgramCodeField = value;
             }
         }
 
@@ -200,11 +200,11 @@
         {
             get
             {
-                return fundingProgramField;
+                return _fundingProgramField;
             }
             set
             {
-                fundingProgramField = value;
+                _fundingProgramField = value;
             }
         }
 
@@ -214,11 +214,11 @@
         {
             get
             {
-                return maximumAdvertisementAmountField;
+                return _maximumAdvertisementAmountField;
             }
             set
             {
-                maximumAdvertisementAmountField = value;
+                _maximumAdvertisementAmountField = value;
             }
         }
 
@@ -228,11 +228,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -242,25 +242,25 @@
         {
             get
             {
-                return paymentFrequencyCodeField;
+                return _paymentFrequencyCodeField;
             }
             set
             {
-                paymentFrequencyCodeField = value;
+                _paymentFrequencyCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public EconomicOperatorRegistryURIType EconomicOperatorRegistryURI
+        public EconomicOperatorRegistryUriType EconomicOperatorRegistryUri
         {
             get
             {
-                return economicOperatorRegistryURIField;
+                return _economicOperatorRegistryUriField;
             }
             set
             {
-                economicOperatorRegistryURIField = value;
+                _economicOperatorRegistryUriField = value;
             }
         }
 
@@ -270,11 +270,11 @@
         {
             get
             {
-                return requiredCurriculaIndicatorField;
+                return _requiredCurriculaIndicatorField;
             }
             set
             {
-                requiredCurriculaIndicatorField = value;
+                _requiredCurriculaIndicatorField = value;
             }
         }
 
@@ -284,11 +284,11 @@
         {
             get
             {
-                return otherConditionsIndicatorField;
+                return _otherConditionsIndicatorField;
             }
             set
             {
-                otherConditionsIndicatorField = value;
+                _otherConditionsIndicatorField = value;
             }
         }
 
@@ -298,11 +298,11 @@
         {
             get
             {
-                return additionalConditionsField;
+                return _additionalConditionsField;
             }
             set
             {
-                additionalConditionsField = value;
+                _additionalConditionsField = value;
             }
         }
 
@@ -312,11 +312,11 @@
         {
             get
             {
-                return latestSecurityClearanceDateField;
+                return _latestSecurityClearanceDateField;
             }
             set
             {
-                latestSecurityClearanceDateField = value;
+                _latestSecurityClearanceDateField = value;
             }
         }
 
@@ -326,11 +326,11 @@
         {
             get
             {
-                return documentationFeeAmountField;
+                return _documentationFeeAmountField;
             }
             set
             {
-                documentationFeeAmountField = value;
+                _documentationFeeAmountField = value;
             }
         }
 
@@ -340,11 +340,11 @@
         {
             get
             {
-                return penaltyClauseField;
+                return _penaltyClauseField;
             }
             set
             {
-                penaltyClauseField = value;
+                _penaltyClauseField = value;
             }
         }
 
@@ -354,11 +354,11 @@
         {
             get
             {
-                return requiredFinancialGuaranteeField;
+                return _requiredFinancialGuaranteeField;
             }
             set
             {
-                requiredFinancialGuaranteeField = value;
+                _requiredFinancialGuaranteeField = value;
             }
         }
 
@@ -367,11 +367,11 @@
         {
             get
             {
-                return procurementLegislationDocumentReferenceField;
+                return _procurementLegislationDocumentReferenceField;
             }
             set
             {
-                procurementLegislationDocumentReferenceField = value;
+                _procurementLegislationDocumentReferenceField = value;
             }
         }
 
@@ -380,11 +380,11 @@
         {
             get
             {
-                return fiscalLegislationDocumentReferenceField;
+                return _fiscalLegislationDocumentReferenceField;
             }
             set
             {
-                fiscalLegislationDocumentReferenceField = value;
+                _fiscalLegislationDocumentReferenceField = value;
             }
         }
 
@@ -393,11 +393,11 @@
         {
             get
             {
-                return environmentalLegislationDocumentReferenceField;
+                return _environmentalLegislationDocumentReferenceField;
             }
             set
             {
-                environmentalLegislationDocumentReferenceField = value;
+                _environmentalLegislationDocumentReferenceField = value;
             }
         }
 
@@ -406,11 +406,11 @@
         {
             get
             {
-                return employmentLegislationDocumentReferenceField;
+                return _employmentLegislationDocumentReferenceField;
             }
             set
             {
-                employmentLegislationDocumentReferenceField = value;
+                _employmentLegislationDocumentReferenceField = value;
             }
         }
 
@@ -420,11 +420,11 @@
         {
             get
             {
-                return contractualDocumentReferenceField;
+                return _contractualDocumentReferenceField;
             }
             set
             {
-                contractualDocumentReferenceField = value;
+                _contractualDocumentReferenceField = value;
             }
         }
 
@@ -433,11 +433,11 @@
         {
             get
             {
-                return callForTendersDocumentReferenceField;
+                return _callForTendersDocumentReferenceField;
             }
             set
             {
-                callForTendersDocumentReferenceField = value;
+                _callForTendersDocumentReferenceField = value;
             }
         }
 
@@ -446,11 +446,11 @@
         {
             get
             {
-                return warrantyValidityPeriodField;
+                return _warrantyValidityPeriodField;
             }
             set
             {
-                warrantyValidityPeriodField = value;
+                _warrantyValidityPeriodField = value;
             }
         }
 
@@ -460,11 +460,11 @@
         {
             get
             {
-                return paymentTermsField;
+                return _paymentTermsField;
             }
             set
             {
-                paymentTermsField = value;
+                _paymentTermsField = value;
             }
         }
 
@@ -474,11 +474,11 @@
         {
             get
             {
-                return tendererQualificationRequestField;
+                return _tendererQualificationRequestField;
             }
             set
             {
-                tendererQualificationRequestField = value;
+                _tendererQualificationRequestField = value;
             }
         }
 
@@ -488,11 +488,11 @@
         {
             get
             {
-                return allowedSubcontractTermsField;
+                return _allowedSubcontractTermsField;
             }
             set
             {
-                allowedSubcontractTermsField = value;
+                _allowedSubcontractTermsField = value;
             }
         }
 
@@ -502,11 +502,11 @@
         {
             get
             {
-                return tenderPreparationField;
+                return _tenderPreparationField;
             }
             set
             {
-                tenderPreparationField = value;
+                _tenderPreparationField = value;
             }
         }
 
@@ -516,11 +516,11 @@
         {
             get
             {
-                return contractExecutionRequirementField;
+                return _contractExecutionRequirementField;
             }
             set
             {
-                contractExecutionRequirementField = value;
+                _contractExecutionRequirementField = value;
             }
         }
 
@@ -529,11 +529,11 @@
         {
             get
             {
-                return awardingTermsField;
+                return _awardingTermsField;
             }
             set
             {
-                awardingTermsField = value;
+                _awardingTermsField = value;
             }
         }
 
@@ -542,11 +542,11 @@
         {
             get
             {
-                return additionalInformationPartyField;
+                return _additionalInformationPartyField;
             }
             set
             {
-                additionalInformationPartyField = value;
+                _additionalInformationPartyField = value;
             }
         }
 
@@ -555,11 +555,11 @@
         {
             get
             {
-                return documentProviderPartyField;
+                return _documentProviderPartyField;
             }
             set
             {
-                documentProviderPartyField = value;
+                _documentProviderPartyField = value;
             }
         }
 
@@ -568,11 +568,11 @@
         {
             get
             {
-                return tenderRecipientPartyField;
+                return _tenderRecipientPartyField;
             }
             set
             {
-                tenderRecipientPartyField = value;
+                _tenderRecipientPartyField = value;
             }
         }
 
@@ -581,11 +581,11 @@
         {
             get
             {
-                return contractResponsiblePartyField;
+                return _contractResponsiblePartyField;
             }
             set
             {
-                contractResponsiblePartyField = value;
+                _contractResponsiblePartyField = value;
             }
         }
 
@@ -595,11 +595,11 @@
         {
             get
             {
-                return tenderEvaluationPartyField;
+                return _tenderEvaluationPartyField;
             }
             set
             {
-                tenderEvaluationPartyField = value;
+                _tenderEvaluationPartyField = value;
             }
         }
 
@@ -608,11 +608,11 @@
         {
             get
             {
-                return tenderValidityPeriodField;
+                return _tenderValidityPeriodField;
             }
             set
             {
-                tenderValidityPeriodField = value;
+                _tenderValidityPeriodField = value;
             }
         }
 
@@ -621,11 +621,11 @@
         {
             get
             {
-                return contractAcceptancePeriodField;
+                return _contractAcceptancePeriodField;
             }
             set
             {
-                contractAcceptancePeriodField = value;
+                _contractAcceptancePeriodField = value;
             }
         }
 
@@ -634,11 +634,11 @@
         {
             get
             {
-                return appealTermsField;
+                return _appealTermsField;
             }
             set
             {
-                appealTermsField = value;
+                _appealTermsField = value;
             }
         }
 
@@ -648,11 +648,11 @@
         {
             get
             {
-                return languageField;
+                return _languageField;
             }
             set
             {
-                languageField = value;
+                _languageField = value;
             }
         }
 
@@ -662,11 +662,11 @@
         {
             get
             {
-                return budgetAccountLineField;
+                return _budgetAccountLineField;
             }
             set
             {
-                budgetAccountLineField = value;
+                _budgetAccountLineField = value;
             }
         }
 
@@ -675,11 +675,11 @@
         {
             get
             {
-                return replacedNoticeDocumentReferenceField;
+                return _replacedNoticeDocumentReferenceField;
             }
             set
             {
-                replacedNoticeDocumentReferenceField = value;
+                _replacedNoticeDocumentReferenceField = value;
             }
         }
     }

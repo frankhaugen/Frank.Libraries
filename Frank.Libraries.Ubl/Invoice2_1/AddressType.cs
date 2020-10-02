@@ -10,71 +10,71 @@
     public partial class AddressType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private AddressTypeCodeType addressTypeCodeField;
+        private AddressTypeCodeType _addressTypeCodeField;
 
-        private AddressFormatCodeType addressFormatCodeField;
+        private AddressFormatCodeType _addressFormatCodeField;
 
-        private PostboxType postboxField;
+        private PostboxType _postboxField;
 
-        private FloorType floorField;
+        private FloorType _floorField;
 
-        private RoomType roomField;
+        private RoomType _roomField;
 
-        private StreetNameType streetNameField;
+        private StreetNameType _streetNameField;
 
-        private AdditionalStreetNameType additionalStreetNameField;
+        private AdditionalStreetNameType _additionalStreetNameField;
 
-        private BlockNameType blockNameField;
+        private BlockNameType _blockNameField;
 
-        private BuildingNameType buildingNameField;
+        private BuildingNameType _buildingNameField;
 
-        private BuildingNumberType buildingNumberField;
+        private BuildingNumberType _buildingNumberField;
 
-        private InhouseMailType inhouseMailField;
+        private InhouseMailType _inhouseMailField;
 
-        private DepartmentType departmentField;
+        private DepartmentType _departmentField;
 
-        private MarkAttentionType markAttentionField;
+        private MarkAttentionType _markAttentionField;
 
-        private MarkCareType markCareField;
+        private MarkCareType _markCareField;
 
-        private PlotIdentificationType plotIdentificationField;
+        private PlotIdentificationType _plotIdentificationField;
 
-        private CitySubdivisionNameType citySubdivisionNameField;
+        private CitySubdivisionNameType _citySubdivisionNameField;
 
-        private CityNameType cityNameField;
+        private CityNameType _cityNameField;
 
-        private PostalZoneType postalZoneField;
+        private PostalZoneType _postalZoneField;
 
-        private CountrySubentityType countrySubentityField;
+        private CountrySubentityType _countrySubentityField;
 
-        private CountrySubentityCodeType countrySubentityCodeField;
+        private CountrySubentityCodeType _countrySubentityCodeField;
 
-        private RegionType regionField;
+        private RegionType _regionField;
 
-        private DistrictType districtField;
+        private DistrictType _districtField;
 
-        private TimezoneOffsetType timezoneOffsetField;
+        private TimezoneOffsetType _timezoneOffsetField;
 
-        private AddressLineType[] addressLineField;
+        private AddressLineType[] _addressLineField;
 
-        private CountryType countryField;
+        private CountryType _countryField;
 
-        private LocationCoordinateType[] locationCoordinateField;
+        private LocationCoordinateType[] _locationCoordinateField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return addressTypeCodeField;
+                return _addressTypeCodeField;
             }
             set
             {
-                addressTypeCodeField = value;
+                _addressTypeCodeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return addressFormatCodeField;
+                return _addressFormatCodeField;
             }
             set
             {
-                addressFormatCodeField = value;
+                _addressFormatCodeField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return postboxField;
+                return _postboxField;
             }
             set
             {
-                postboxField = value;
+                _postboxField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return floorField;
+                return _floorField;
             }
             set
             {
-                floorField = value;
+                _floorField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return roomField;
+                return _roomField;
             }
             set
             {
-                roomField = value;
+                _roomField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return streetNameField;
+                return _streetNameField;
             }
             set
             {
-                streetNameField = value;
+                _streetNameField = value;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                return additionalStreetNameField;
+                return _additionalStreetNameField;
             }
             set
             {
-                additionalStreetNameField = value;
+                _additionalStreetNameField = value;
             }
         }
 
@@ -182,11 +182,11 @@
         {
             get
             {
-                return blockNameField;
+                return _blockNameField;
             }
             set
             {
-                blockNameField = value;
+                _blockNameField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return buildingNameField;
+                return _buildingNameField;
             }
             set
             {
-                buildingNameField = value;
+                _buildingNameField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return buildingNumberField;
+                return _buildingNumberField;
             }
             set
             {
-                buildingNumberField = value;
+                _buildingNumberField = value;
             }
         }
 
@@ -224,11 +224,11 @@
         {
             get
             {
-                return inhouseMailField;
+                return _inhouseMailField;
             }
             set
             {
-                inhouseMailField = value;
+                _inhouseMailField = value;
             }
         }
 
@@ -238,11 +238,11 @@
         {
             get
             {
-                return departmentField;
+                return _departmentField;
             }
             set
             {
-                departmentField = value;
+                _departmentField = value;
             }
         }
 
@@ -252,11 +252,11 @@
         {
             get
             {
-                return markAttentionField;
+                return _markAttentionField;
             }
             set
             {
-                markAttentionField = value;
+                _markAttentionField = value;
             }
         }
 
@@ -266,11 +266,11 @@
         {
             get
             {
-                return markCareField;
+                return _markCareField;
             }
             set
             {
-                markCareField = value;
+                _markCareField = value;
             }
         }
 
@@ -280,11 +280,11 @@
         {
             get
             {
-                return plotIdentificationField;
+                return _plotIdentificationField;
             }
             set
             {
-                plotIdentificationField = value;
+                _plotIdentificationField = value;
             }
         }
 
@@ -294,11 +294,11 @@
         {
             get
             {
-                return citySubdivisionNameField;
+                return _citySubdivisionNameField;
             }
             set
             {
-                citySubdivisionNameField = value;
+                _citySubdivisionNameField = value;
             }
         }
 
@@ -308,11 +308,11 @@
         {
             get
             {
-                return cityNameField;
+                return _cityNameField;
             }
             set
             {
-                cityNameField = value;
+                _cityNameField = value;
             }
         }
 
@@ -322,11 +322,11 @@
         {
             get
             {
-                return postalZoneField;
+                return _postalZoneField;
             }
             set
             {
-                postalZoneField = value;
+                _postalZoneField = value;
             }
         }
 
@@ -336,11 +336,11 @@
         {
             get
             {
-                return countrySubentityField;
+                return _countrySubentityField;
             }
             set
             {
-                countrySubentityField = value;
+                _countrySubentityField = value;
             }
         }
 
@@ -350,11 +350,11 @@
         {
             get
             {
-                return countrySubentityCodeField;
+                return _countrySubentityCodeField;
             }
             set
             {
-                countrySubentityCodeField = value;
+                _countrySubentityCodeField = value;
             }
         }
 
@@ -364,11 +364,11 @@
         {
             get
             {
-                return regionField;
+                return _regionField;
             }
             set
             {
-                regionField = value;
+                _regionField = value;
             }
         }
 
@@ -378,11 +378,11 @@
         {
             get
             {
-                return districtField;
+                return _districtField;
             }
             set
             {
-                districtField = value;
+                _districtField = value;
             }
         }
 
@@ -392,11 +392,11 @@
         {
             get
             {
-                return timezoneOffsetField;
+                return _timezoneOffsetField;
             }
             set
             {
-                timezoneOffsetField = value;
+                _timezoneOffsetField = value;
             }
         }
 
@@ -406,11 +406,11 @@
         {
             get
             {
-                return addressLineField;
+                return _addressLineField;
             }
             set
             {
-                addressLineField = value;
+                _addressLineField = value;
             }
         }
 
@@ -419,11 +419,11 @@
         {
             get
             {
-                return countryField;
+                return _countryField;
             }
             set
             {
-                countryField = value;
+                _countryField = value;
             }
         }
 
@@ -433,11 +433,11 @@
         {
             get
             {
-                return locationCoordinateField;
+                return _locationCoordinateField;
             }
             set
             {
-                locationCoordinateField = value;
+                _locationCoordinateField = value;
             }
         }
     }

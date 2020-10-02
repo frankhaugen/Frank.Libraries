@@ -10,26 +10,26 @@
     public partial class DocumentResponseType
     {
 
-        private ResponseType responseField;
+        private ResponseType _responseField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private PartyType issuerPartyField;
+        private PartyType _issuerPartyField;
 
-        private PartyType recipientPartyField;
+        private PartyType _recipientPartyField;
 
-        private LineResponseType[] lineResponseField;
+        private LineResponseType[] _lineResponseField;
 
         /// <remarks/>
         public ResponseType Response
         {
             get
             {
-                return responseField;
+                return _responseField;
             }
             set
             {
-                responseField = value;
+                _responseField = value;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return issuerPartyField;
+                return _issuerPartyField;
             }
             set
             {
-                issuerPartyField = value;
+                _issuerPartyField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return recipientPartyField;
+                return _recipientPartyField;
             }
             set
             {
-                recipientPartyField = value;
+                _recipientPartyField = value;
             }
         }
 
@@ -79,11 +79,11 @@
         {
             get
             {
-                return lineResponseField;
+                return _lineResponseField;
             }
             set
             {
-                lineResponseField = value;
+                _lineResponseField = value;
             }
         }
     }

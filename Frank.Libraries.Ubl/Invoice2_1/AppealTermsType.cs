@@ -10,15 +10,15 @@
     public partial class AppealTermsType
     {
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private PeriodType presentationPeriodField;
+        private PeriodType _presentationPeriodField;
 
-        private PartyType appealInformationPartyField;
+        private PartyType _appealInformationPartyField;
 
-        private PartyType appealReceiverPartyField;
+        private PartyType _appealReceiverPartyField;
 
-        private PartyType mediationPartyField;
+        private PartyType _mediationPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                return presentationPeriodField;
+                return _presentationPeriodField;
             }
             set
             {
-                presentationPeriodField = value;
+                _presentationPeriodField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return appealInformationPartyField;
+                return _appealInformationPartyField;
             }
             set
             {
-                appealInformationPartyField = value;
+                _appealInformationPartyField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return appealReceiverPartyField;
+                return _appealReceiverPartyField;
             }
             set
             {
-                appealReceiverPartyField = value;
+                _appealReceiverPartyField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return mediationPartyField;
+                return _mediationPartyField;
             }
             set
             {
-                mediationPartyField = value;
+                _mediationPartyField = value;
             }
         }
     }

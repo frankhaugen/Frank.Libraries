@@ -10,20 +10,20 @@
     public partial class PricingReferenceType
     {
 
-        private ItemLocationQuantityType originalItemLocationQuantityField;
+        private ItemLocationQuantityType _originalItemLocationQuantityField;
 
-        private PriceType[] alternativeConditionPriceField;
+        private PriceType[] _alternativeConditionPriceField;
 
         /// <remarks/>
         public ItemLocationQuantityType OriginalItemLocationQuantity
         {
             get
             {
-                return originalItemLocationQuantityField;
+                return _originalItemLocationQuantityField;
             }
             set
             {
-                originalItemLocationQuantityField = value;
+                _originalItemLocationQuantityField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return alternativeConditionPriceField;
+                return _alternativeConditionPriceField;
             }
             set
             {
-                alternativeConditionPriceField = value;
+                _alternativeConditionPriceField = value;
             }
         }
     }

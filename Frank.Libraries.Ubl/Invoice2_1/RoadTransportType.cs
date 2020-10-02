@@ -10,19 +10,19 @@
     public partial class RoadTransportType
     {
 
-        private LicensePlateIDType licensePlateIDField;
+        private LicensePlateIdType _licensePlateIdField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LicensePlateIDType LicensePlateID
+        public LicensePlateIdType LicensePlateId
         {
             get
             {
-                return licensePlateIDField;
+                return _licensePlateIdField;
             }
             set
             {
-                licensePlateIDField = value;
+                _licensePlateIdField = value;
             }
         }
     }

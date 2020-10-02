@@ -10,31 +10,31 @@
     public partial class DeliveryTermsType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private SpecialTermsType[] specialTermsField;
+        private SpecialTermsType[] _specialTermsField;
 
-        private LossRiskResponsibilityCodeType lossRiskResponsibilityCodeField;
+        private LossRiskResponsibilityCodeType _lossRiskResponsibilityCodeField;
 
-        private LossRiskType[] lossRiskField;
+        private LossRiskType[] _lossRiskField;
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private LocationType1 deliveryLocationField;
+        private LocationType1 _deliveryLocationField;
 
-        private AllowanceChargeType allowanceChargeField;
+        private AllowanceChargeType _allowanceChargeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return specialTermsField;
+                return _specialTermsField;
             }
             set
             {
-                specialTermsField = value;
+                _specialTermsField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return lossRiskResponsibilityCodeField;
+                return _lossRiskResponsibilityCodeField;
             }
             set
             {
-                lossRiskResponsibilityCodeField = value;
+                _lossRiskResponsibilityCodeField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return lossRiskField;
+                return _lossRiskField;
             }
             set
             {
-                lossRiskField = value;
+                _lossRiskField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return deliveryLocationField;
+                return _deliveryLocationField;
             }
             set
             {
-                deliveryLocationField = value;
+                _deliveryLocationField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
     }

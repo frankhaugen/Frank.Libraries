@@ -10,27 +10,27 @@
     public partial class ConsumptionReportReferenceType
     {
 
-        private ConsumptionReportIDType consumptionReportIDField;
+        private ConsumptionReportIdType _consumptionReportIdField;
 
-        private ConsumptionTypeType consumptionTypeField;
+        private ConsumptionTypeType _consumptionTypeField;
 
-        private ConsumptionTypeCodeType consumptionTypeCodeField;
+        private ConsumptionTypeCodeType _consumptionTypeCodeField;
 
-        private TotalConsumedQuantityType totalConsumedQuantityField;
+        private TotalConsumedQuantityType _totalConsumedQuantityField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ConsumptionReportIDType ConsumptionReportID
+        public ConsumptionReportIdType ConsumptionReportId
         {
             get
             {
-                return consumptionReportIDField;
+                return _consumptionReportIdField;
             }
             set
             {
-                consumptionReportIDField = value;
+                _consumptionReportIdField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return consumptionTypeField;
+                return _consumptionTypeField;
             }
             set
             {
-                consumptionTypeField = value;
+                _consumptionTypeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return consumptionTypeCodeField;
+                return _consumptionTypeCodeField;
             }
             set
             {
-                consumptionTypeCodeField = value;
+                _consumptionTypeCodeField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return totalConsumedQuantityField;
+                return _totalConsumedQuantityField;
             }
             set
             {
-                totalConsumedQuantityField = value;
+                _totalConsumedQuantityField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
     }

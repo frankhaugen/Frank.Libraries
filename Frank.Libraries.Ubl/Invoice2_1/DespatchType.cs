@@ -10,55 +10,55 @@
     public partial class DespatchType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private RequestedDespatchDateType requestedDespatchDateField;
+        private RequestedDespatchDateType _requestedDespatchDateField;
 
-        private RequestedDespatchTimeType requestedDespatchTimeField;
+        private RequestedDespatchTimeType _requestedDespatchTimeField;
 
-        private EstimatedDespatchDateType estimatedDespatchDateField;
+        private EstimatedDespatchDateType _estimatedDespatchDateField;
 
-        private EstimatedDespatchTimeType estimatedDespatchTimeField;
+        private EstimatedDespatchTimeType _estimatedDespatchTimeField;
 
-        private ActualDespatchDateType actualDespatchDateField;
+        private ActualDespatchDateType _actualDespatchDateField;
 
-        private ActualDespatchTimeType actualDespatchTimeField;
+        private ActualDespatchTimeType _actualDespatchTimeField;
 
-        private GuaranteedDespatchDateType guaranteedDespatchDateField;
+        private GuaranteedDespatchDateType _guaranteedDespatchDateField;
 
-        private GuaranteedDespatchTimeType guaranteedDespatchTimeField;
+        private GuaranteedDespatchTimeType _guaranteedDespatchTimeField;
 
-        private ReleaseIDType releaseIDField;
+        private ReleaseIdType _releaseIdField;
 
-        private InstructionsType[] instructionsField;
+        private InstructionsType[] _instructionsField;
 
-        private AddressType despatchAddressField;
+        private AddressType _despatchAddressField;
 
-        private LocationType1 despatchLocationField;
+        private LocationType1 _despatchLocationField;
 
-        private PartyType despatchPartyField;
+        private PartyType _despatchPartyField;
 
-        private PartyType carrierPartyField;
+        private PartyType _carrierPartyField;
 
-        private PartyType[] notifyPartyField;
+        private PartyType[] _notifyPartyField;
 
-        private ContactType contactField;
+        private ContactType _contactField;
 
-        private PeriodType estimatedDespatchPeriodField;
+        private PeriodType _estimatedDespatchPeriodField;
 
-        private PeriodType requestedDespatchPeriodField;
+        private PeriodType _requestedDespatchPeriodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return requestedDespatchDateField;
+                return _requestedDespatchDateField;
             }
             set
             {
-                requestedDespatchDateField = value;
+                _requestedDespatchDateField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return requestedDespatchTimeField;
+                return _requestedDespatchTimeField;
             }
             set
             {
-                requestedDespatchTimeField = value;
+                _requestedDespatchTimeField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return estimatedDespatchDateField;
+                return _estimatedDespatchDateField;
             }
             set
             {
-                estimatedDespatchDateField = value;
+                _estimatedDespatchDateField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return estimatedDespatchTimeField;
+                return _estimatedDespatchTimeField;
             }
             set
             {
-                estimatedDespatchTimeField = value;
+                _estimatedDespatchTimeField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return actualDespatchDateField;
+                return _actualDespatchDateField;
             }
             set
             {
-                actualDespatchDateField = value;
+                _actualDespatchDateField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return actualDespatchTimeField;
+                return _actualDespatchTimeField;
             }
             set
             {
-                actualDespatchTimeField = value;
+                _actualDespatchTimeField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return guaranteedDespatchDateField;
+                return _guaranteedDespatchDateField;
             }
             set
             {
-                guaranteedDespatchDateField = value;
+                _guaranteedDespatchDateField = value;
             }
         }
 
@@ -166,25 +166,25 @@
         {
             get
             {
-                return guaranteedDespatchTimeField;
+                return _guaranteedDespatchTimeField;
             }
             set
             {
-                guaranteedDespatchTimeField = value;
+                _guaranteedDespatchTimeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ReleaseIDType ReleaseID
+        public ReleaseIdType ReleaseId
         {
             get
             {
-                return releaseIDField;
+                return _releaseIdField;
             }
             set
             {
-                releaseIDField = value;
+                _releaseIdField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return instructionsField;
+                return _instructionsField;
             }
             set
             {
-                instructionsField = value;
+                _instructionsField = value;
             }
         }
 
@@ -207,11 +207,11 @@
         {
             get
             {
-                return despatchAddressField;
+                return _despatchAddressField;
             }
             set
             {
-                despatchAddressField = value;
+                _despatchAddressField = value;
             }
         }
 
@@ -220,11 +220,11 @@
         {
             get
             {
-                return despatchLocationField;
+                return _despatchLocationField;
             }
             set
             {
-                despatchLocationField = value;
+                _despatchLocationField = value;
             }
         }
 
@@ -233,11 +233,11 @@
         {
             get
             {
-                return despatchPartyField;
+                return _despatchPartyField;
             }
             set
             {
-                despatchPartyField = value;
+                _despatchPartyField = value;
             }
         }
 
@@ -246,11 +246,11 @@
         {
             get
             {
-                return carrierPartyField;
+                return _carrierPartyField;
             }
             set
             {
-                carrierPartyField = value;
+                _carrierPartyField = value;
             }
         }
 
@@ -260,11 +260,11 @@
         {
             get
             {
-                return notifyPartyField;
+                return _notifyPartyField;
             }
             set
             {
-                notifyPartyField = value;
+                _notifyPartyField = value;
             }
         }
 
@@ -273,11 +273,11 @@
         {
             get
             {
-                return contactField;
+                return _contactField;
             }
             set
             {
-                contactField = value;
+                _contactField = value;
             }
         }
 
@@ -286,11 +286,11 @@
         {
             get
             {
-                return estimatedDespatchPeriodField;
+                return _estimatedDespatchPeriodField;
             }
             set
             {
-                estimatedDespatchPeriodField = value;
+                _estimatedDespatchPeriodField = value;
             }
         }
 
@@ -299,11 +299,11 @@
         {
             get
             {
-                return requestedDespatchPeriodField;
+                return _requestedDespatchPeriodField;
             }
             set
             {
-                requestedDespatchPeriodField = value;
+                _requestedDespatchPeriodField = value;
             }
         }
     }

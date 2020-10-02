@@ -10,73 +10,73 @@
     public partial class DebitNoteLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private DebitedQuantityType debitedQuantityField;
+        private DebitedQuantityType _debitedQuantityField;
 
-        private LineExtensionAmountType lineExtensionAmountField;
+        private LineExtensionAmountType _lineExtensionAmountField;
 
-        private TaxPointDateType taxPointDateField;
+        private TaxPointDateType _taxPointDateField;
 
-        private AccountingCostCodeType accountingCostCodeField;
+        private AccountingCostCodeType _accountingCostCodeField;
 
-        private AccountingCostType accountingCostField;
+        private AccountingCostType _accountingCostField;
 
-        private PaymentPurposeCodeType paymentPurposeCodeField;
+        private PaymentPurposeCodeType _paymentPurposeCodeField;
 
-        private ResponseType[] discrepancyResponseField;
+        private ResponseType[] _discrepancyResponseField;
 
-        private LineReferenceType[] despatchLineReferenceField;
+        private LineReferenceType[] _despatchLineReferenceField;
 
-        private LineReferenceType[] receiptLineReferenceField;
+        private LineReferenceType[] _receiptLineReferenceField;
 
-        private BillingReferenceType[] billingReferenceField;
+        private BillingReferenceType[] _billingReferenceField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private PricingReferenceType pricingReferenceField;
+        private PricingReferenceType _pricingReferenceField;
 
-        private DeliveryType[] deliveryField;
+        private DeliveryType[] _deliveryField;
 
-        private TaxTotalType[] taxTotalField;
+        private TaxTotalType[] _taxTotalField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
-        private PriceType priceField;
+        private PriceType _priceField;
 
-        private DebitNoteLineType[] subDebitNoteLineField;
+        private DebitNoteLineType[] _subDebitNoteLineField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return debitedQuantityField;
+                return _debitedQuantityField;
             }
             set
             {
-                debitedQuantityField = value;
+                _debitedQuantityField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return lineExtensionAmountField;
+                return _lineExtensionAmountField;
             }
             set
             {
-                lineExtensionAmountField = value;
+                _lineExtensionAmountField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return taxPointDateField;
+                return _taxPointDateField;
             }
             set
             {
-                taxPointDateField = value;
+                _taxPointDateField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return accountingCostCodeField;
+                return _accountingCostCodeField;
             }
             set
             {
-                accountingCostCodeField = value;
+                _accountingCostCodeField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return accountingCostField;
+                return _accountingCostField;
             }
             set
             {
-                accountingCostField = value;
+                _accountingCostField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return paymentPurposeCodeField;
+                return _paymentPurposeCodeField;
             }
             set
             {
-                paymentPurposeCodeField = value;
+                _paymentPurposeCodeField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return discrepancyResponseField;
+                return _discrepancyResponseField;
             }
             set
             {
-                discrepancyResponseField = value;
+                _discrepancyResponseField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return despatchLineReferenceField;
+                return _despatchLineReferenceField;
             }
             set
             {
-                despatchLineReferenceField = value;
+                _despatchLineReferenceField = value;
             }
         }
 
@@ -212,11 +212,11 @@
         {
             get
             {
-                return receiptLineReferenceField;
+                return _receiptLineReferenceField;
             }
             set
             {
-                receiptLineReferenceField = value;
+                _receiptLineReferenceField = value;
             }
         }
 
@@ -226,11 +226,11 @@
         {
             get
             {
-                return billingReferenceField;
+                return _billingReferenceField;
             }
             set
             {
-                billingReferenceField = value;
+                _billingReferenceField = value;
             }
         }
 
@@ -240,11 +240,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -253,11 +253,11 @@
         {
             get
             {
-                return pricingReferenceField;
+                return _pricingReferenceField;
             }
             set
             {
-                pricingReferenceField = value;
+                _pricingReferenceField = value;
             }
         }
 
@@ -267,11 +267,11 @@
         {
             get
             {
-                return deliveryField;
+                return _deliveryField;
             }
             set
             {
-                deliveryField = value;
+                _deliveryField = value;
             }
         }
 
@@ -281,11 +281,11 @@
         {
             get
             {
-                return taxTotalField;
+                return _taxTotalField;
             }
             set
             {
-                taxTotalField = value;
+                _taxTotalField = value;
             }
         }
 
@@ -295,11 +295,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -308,11 +308,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -321,11 +321,11 @@
         {
             get
             {
-                return priceField;
+                return _priceField;
             }
             set
             {
-                priceField = value;
+                _priceField = value;
             }
         }
 
@@ -335,11 +335,11 @@
         {
             get
             {
-                return subDebitNoteLineField;
+                return _subDebitNoteLineField;
             }
             set
             {
-                subDebitNoteLineField = value;
+                _subDebitNoteLineField = value;
             }
         }
     }

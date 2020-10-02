@@ -10,35 +10,35 @@
     public partial class ConsumptionPointType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private SubscriberIDType subscriberIDField;
+        private SubscriberIdType _subscriberIdField;
 
-        private SubscriberTypeType subscriberTypeField;
+        private SubscriberTypeType _subscriberTypeField;
 
-        private SubscriberTypeCodeType subscriberTypeCodeField;
+        private SubscriberTypeCodeType _subscriberTypeCodeField;
 
-        private TotalDeliveredQuantityType totalDeliveredQuantityField;
+        private TotalDeliveredQuantityType _totalDeliveredQuantityField;
 
-        private AddressType addressField;
+        private AddressType _addressField;
 
-        private WebSiteAccessType webSiteAccessField;
+        private WebSiteAccessType _webSiteAccessField;
 
-        private MeterType[] utilityMeterField;
+        private MeterType[] _utilityMeterField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -48,25 +48,25 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SubscriberIDType SubscriberID
+        public SubscriberIdType SubscriberId
         {
             get
             {
-                return subscriberIDField;
+                return _subscriberIdField;
             }
             set
             {
-                subscriberIDField = value;
+                _subscriberIdField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return subscriberTypeField;
+                return _subscriberTypeField;
             }
             set
             {
-                subscriberTypeField = value;
+                _subscriberTypeField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return subscriberTypeCodeField;
+                return _subscriberTypeCodeField;
             }
             set
             {
-                subscriberTypeCodeField = value;
+                _subscriberTypeCodeField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return totalDeliveredQuantityField;
+                return _totalDeliveredQuantityField;
             }
             set
             {
-                totalDeliveredQuantityField = value;
+                _totalDeliveredQuantityField = value;
             }
         }
 
@@ -117,11 +117,11 @@
         {
             get
             {
-                return addressField;
+                return _addressField;
             }
             set
             {
-                addressField = value;
+                _addressField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return webSiteAccessField;
+                return _webSiteAccessField;
             }
             set
             {
-                webSiteAccessField = value;
+                _webSiteAccessField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return utilityMeterField;
+                return _utilityMeterField;
             }
             set
             {
-                utilityMeterField = value;
+                _utilityMeterField = value;
             }
         }
     }

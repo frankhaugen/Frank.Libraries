@@ -10,23 +10,23 @@
     public partial class PromotionalSpecificationType
     {
 
-        private SpecificationIDType specificationIDField;
+        private SpecificationIdType _specificationIdField;
 
-        private PromotionalEventLineItemType[] promotionalEventLineItemField;
+        private PromotionalEventLineItemType[] _promotionalEventLineItemField;
 
-        private EventTacticType[] eventTacticField;
+        private EventTacticType[] _eventTacticField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SpecificationIDType SpecificationID
+        public SpecificationIdType SpecificationId
         {
             get
             {
-                return specificationIDField;
+                return _specificationIdField;
             }
             set
             {
-                specificationIDField = value;
+                _specificationIdField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return promotionalEventLineItemField;
+                return _promotionalEventLineItemField;
             }
             set
             {
-                promotionalEventLineItemField = value;
+                _promotionalEventLineItemField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return eventTacticField;
+                return _eventTacticField;
             }
             set
             {
-                eventTacticField = value;
+                _eventTacticField = value;
             }
         }
     }

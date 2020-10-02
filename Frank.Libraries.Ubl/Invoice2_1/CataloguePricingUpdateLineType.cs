@@ -10,25 +10,25 @@
     public partial class CataloguePricingUpdateLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private CustomerPartyType contractorCustomerPartyField;
+        private CustomerPartyType _contractorCustomerPartyField;
 
-        private SupplierPartyType sellerSupplierPartyField;
+        private SupplierPartyType _sellerSupplierPartyField;
 
-        private ItemLocationQuantityType[] requiredItemLocationQuantityField;
+        private ItemLocationQuantityType[] _requiredItemLocationQuantityField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return contractorCustomerPartyField;
+                return _contractorCustomerPartyField;
             }
             set
             {
-                contractorCustomerPartyField = value;
+                _contractorCustomerPartyField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return sellerSupplierPartyField;
+                return _sellerSupplierPartyField;
             }
             set
             {
-                sellerSupplierPartyField = value;
+                _sellerSupplierPartyField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return requiredItemLocationQuantityField;
+                return _requiredItemLocationQuantityField;
             }
             set
             {
-                requiredItemLocationQuantityField = value;
+                _requiredItemLocationQuantityField = value;
             }
         }
     }

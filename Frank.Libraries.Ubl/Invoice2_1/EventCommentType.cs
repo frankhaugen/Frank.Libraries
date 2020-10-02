@@ -10,11 +10,11 @@
     public partial class EventCommentType
     {
 
-        private CommentType commentField;
+        private CommentType _commentField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private IssueTimeType issueTimeField;
+        private IssueTimeType _issueTimeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return commentField;
+                return _commentField;
             }
             set
             {
-                commentField = value;
+                _commentField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return issueTimeField;
+                return _issueTimeField;
             }
             set
             {
-                issueTimeField = value;
+                _issueTimeField = value;
             }
         }
     }

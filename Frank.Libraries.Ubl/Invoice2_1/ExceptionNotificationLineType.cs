@@ -10,47 +10,47 @@
     public partial class ExceptionNotificationLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private ExceptionStatusCodeType exceptionStatusCodeField;
+        private ExceptionStatusCodeType _exceptionStatusCodeField;
 
-        private CollaborationPriorityCodeType collaborationPriorityCodeField;
+        private CollaborationPriorityCodeType _collaborationPriorityCodeField;
 
-        private ResolutionCodeType resolutionCodeField;
+        private ResolutionCodeType _resolutionCodeField;
 
-        private ComparedValueMeasureType comparedValueMeasureField;
+        private ComparedValueMeasureType _comparedValueMeasureField;
 
-        private SourceValueMeasureType sourceValueMeasureField;
+        private SourceValueMeasureType _sourceValueMeasureField;
 
-        private VarianceQuantityType varianceQuantityField;
+        private VarianceQuantityType _varianceQuantityField;
 
-        private SupplyChainActivityTypeCodeType supplyChainActivityTypeCodeField;
+        private SupplyChainActivityTypeCodeType _supplyChainActivityTypeCodeField;
 
-        private PerformanceMetricTypeCodeType performanceMetricTypeCodeField;
+        private PerformanceMetricTypeCodeType _performanceMetricTypeCodeField;
 
-        private PeriodType exceptionObservationPeriodField;
+        private PeriodType _exceptionObservationPeriodField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private ForecastExceptionType forecastExceptionField;
+        private ForecastExceptionType _forecastExceptionField;
 
-        private ItemType supplyItemField;
+        private ItemType _supplyItemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return exceptionStatusCodeField;
+                return _exceptionStatusCodeField;
             }
             set
             {
-                exceptionStatusCodeField = value;
+                _exceptionStatusCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return collaborationPriorityCodeField;
+                return _collaborationPriorityCodeField;
             }
             set
             {
-                collaborationPriorityCodeField = value;
+                _collaborationPriorityCodeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return resolutionCodeField;
+                return _resolutionCodeField;
             }
             set
             {
-                resolutionCodeField = value;
+                _resolutionCodeField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return comparedValueMeasureField;
+                return _comparedValueMeasureField;
             }
             set
             {
-                comparedValueMeasureField = value;
+                _comparedValueMeasureField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return sourceValueMeasureField;
+                return _sourceValueMeasureField;
             }
             set
             {
-                sourceValueMeasureField = value;
+                _sourceValueMeasureField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return varianceQuantityField;
+                return _varianceQuantityField;
             }
             set
             {
-                varianceQuantityField = value;
+                _varianceQuantityField = value;
             }
         }
 
@@ -172,11 +172,11 @@
         {
             get
             {
-                return supplyChainActivityTypeCodeField;
+                return _supplyChainActivityTypeCodeField;
             }
             set
             {
-                supplyChainActivityTypeCodeField = value;
+                _supplyChainActivityTypeCodeField = value;
             }
         }
 
@@ -186,11 +186,11 @@
         {
             get
             {
-                return performanceMetricTypeCodeField;
+                return _performanceMetricTypeCodeField;
             }
             set
             {
-                performanceMetricTypeCodeField = value;
+                _performanceMetricTypeCodeField = value;
             }
         }
 
@@ -199,11 +199,11 @@
         {
             get
             {
-                return exceptionObservationPeriodField;
+                return _exceptionObservationPeriodField;
             }
             set
             {
-                exceptionObservationPeriodField = value;
+                _exceptionObservationPeriodField = value;
             }
         }
 
@@ -213,11 +213,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -226,11 +226,11 @@
         {
             get
             {
-                return forecastExceptionField;
+                return _forecastExceptionField;
             }
             set
             {
-                forecastExceptionField = value;
+                _forecastExceptionField = value;
             }
         }
 
@@ -239,11 +239,11 @@
         {
             get
             {
-                return supplyItemField;
+                return _supplyItemField;
             }
             set
             {
-                supplyItemField = value;
+                _supplyItemField = value;
             }
         }
     }

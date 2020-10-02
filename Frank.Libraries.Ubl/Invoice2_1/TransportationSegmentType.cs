@@ -10,17 +10,17 @@
     public partial class TransportationSegmentType
     {
 
-        private SequenceNumericType sequenceNumericField;
+        private SequenceNumericType _sequenceNumericField;
 
-        private TransportExecutionPlanReferenceIDType transportExecutionPlanReferenceIDField;
+        private TransportExecutionPlanReferenceIdType _transportExecutionPlanReferenceIdField;
 
-        private TransportationServiceType transportationServiceField;
+        private TransportationServiceType _transportationServiceField;
 
-        private PartyType transportServiceProviderPartyField;
+        private PartyType _transportServiceProviderPartyField;
 
-        private ConsignmentType referencedConsignmentField;
+        private ConsignmentType _referencedConsignmentField;
 
-        private ShipmentStageType[] shipmentStageField;
+        private ShipmentStageType[] _shipmentStageField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -28,25 +28,25 @@
         {
             get
             {
-                return sequenceNumericField;
+                return _sequenceNumericField;
             }
             set
             {
-                sequenceNumericField = value;
+                _sequenceNumericField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public TransportExecutionPlanReferenceIDType TransportExecutionPlanReferenceID
+        public TransportExecutionPlanReferenceIdType TransportExecutionPlanReferenceId
         {
             get
             {
-                return transportExecutionPlanReferenceIDField;
+                return _transportExecutionPlanReferenceIdField;
             }
             set
             {
-                transportExecutionPlanReferenceIDField = value;
+                _transportExecutionPlanReferenceIdField = value;
             }
         }
 
@@ -55,11 +55,11 @@
         {
             get
             {
-                return transportationServiceField;
+                return _transportationServiceField;
             }
             set
             {
-                transportationServiceField = value;
+                _transportationServiceField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return transportServiceProviderPartyField;
+                return _transportServiceProviderPartyField;
             }
             set
             {
-                transportServiceProviderPartyField = value;
+                _transportServiceProviderPartyField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return referencedConsignmentField;
+                return _referencedConsignmentField;
             }
             set
             {
-                referencedConsignmentField = value;
+                _referencedConsignmentField = value;
             }
         }
 
@@ -95,11 +95,11 @@
         {
             get
             {
-                return shipmentStageField;
+                return _shipmentStageField;
             }
             set
             {
-                shipmentStageField = value;
+                _shipmentStageField = value;
             }
         }
     }

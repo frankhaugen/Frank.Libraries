@@ -10,23 +10,23 @@
     public partial class BudgetAccountLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private TotalAmountType totalAmountField;
+        private TotalAmountType _totalAmountField;
 
-        private BudgetAccountType[] budgetAccountField;
+        private BudgetAccountType[] _budgetAccountField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return totalAmountField;
+                return _totalAmountField;
             }
             set
             {
-                totalAmountField = value;
+                _totalAmountField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return budgetAccountField;
+                return _budgetAccountField;
             }
             set
             {
-                budgetAccountField = value;
+                _budgetAccountField = value;
             }
         }
     }

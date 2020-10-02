@@ -50,21 +50,21 @@
     public partial class NumericType
     {
 
-        private string formatField;
+        private string _formatField;
 
-        private decimal valueField;
+        private decimal _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string format
+        public string Format
         {
             get
             {
-                return formatField;
+                return _formatField;
             }
             set
             {
-                formatField = value;
+                _formatField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

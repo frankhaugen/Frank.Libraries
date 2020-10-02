@@ -10,9 +10,9 @@
     public partial class RenewalType
     {
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
     }

@@ -7,12 +7,12 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [System.Xml.Serialization.XmlRootAttribute("PGPData", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
-    public partial class PGPDataType
+    public partial class PgpDataType
     {
 
-        private object[] itemsField;
+        private object[] _itemsField;
 
-        private ItemsChoiceType1[] itemsElementNameField;
+        private ItemsChoiceType1[] _itemsElementNameField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
@@ -23,11 +23,11 @@
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return itemsElementNameField;
+                return _itemsElementNameField;
             }
             set
             {
-                itemsElementNameField = value;
+                _itemsElementNameField = value;
             }
         }
     }

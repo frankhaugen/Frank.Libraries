@@ -10,9 +10,9 @@
     public partial class UnstructuredPriceType
     {
 
-        private PriceAmountType priceAmountField;
+        private PriceAmountType _priceAmountField;
 
-        private TimeAmountType timeAmountField;
+        private TimeAmountType _timeAmountField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return priceAmountField;
+                return _priceAmountField;
             }
             set
             {
-                priceAmountField = value;
+                _priceAmountField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return timeAmountField;
+                return _timeAmountField;
             }
             set
             {
-                timeAmountField = value;
+                _timeAmountField = value;
             }
         }
     }

@@ -10,9 +10,9 @@
     public partial class WinningPartyType
     {
 
-        private RankType rankField;
+        private RankType _rankField;
 
-        private PartyType partyField;
+        private PartyType _partyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return rankField;
+                return _rankField;
             }
             set
             {
-                rankField = value;
+                _rankField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return partyField;
+                return _partyField;
             }
             set
             {
-                partyField = value;
+                _partyField = value;
             }
         }
     }

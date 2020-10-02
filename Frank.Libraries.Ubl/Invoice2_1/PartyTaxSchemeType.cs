@@ -10,19 +10,19 @@
     public partial class PartyTaxSchemeType
     {
 
-        private RegistrationNameType registrationNameField;
+        private RegistrationNameType _registrationNameField;
 
-        private CompanyIDType companyIDField;
+        private CompanyIdType _companyIdField;
 
-        private TaxLevelCodeType taxLevelCodeField;
+        private TaxLevelCodeType _taxLevelCodeField;
 
-        private ExemptionReasonCodeType exemptionReasonCodeField;
+        private ExemptionReasonCodeType _exemptionReasonCodeField;
 
-        private ExemptionReasonType[] exemptionReasonField;
+        private ExemptionReasonType[] _exemptionReasonField;
 
-        private AddressType registrationAddressField;
+        private AddressType _registrationAddressField;
 
-        private TaxSchemeType taxSchemeField;
+        private TaxSchemeType _taxSchemeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,25 +30,25 @@
         {
             get
             {
-                return registrationNameField;
+                return _registrationNameField;
             }
             set
             {
-                registrationNameField = value;
+                _registrationNameField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public CompanyIDType CompanyID
+        public CompanyIdType CompanyId
         {
             get
             {
-                return companyIDField;
+                return _companyIdField;
             }
             set
             {
-                companyIDField = value;
+                _companyIdField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return taxLevelCodeField;
+                return _taxLevelCodeField;
             }
             set
             {
-                taxLevelCodeField = value;
+                _taxLevelCodeField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return exemptionReasonCodeField;
+                return _exemptionReasonCodeField;
             }
             set
             {
-                exemptionReasonCodeField = value;
+                _exemptionReasonCodeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return exemptionReasonField;
+                return _exemptionReasonField;
             }
             set
             {
-                exemptionReasonField = value;
+                _exemptionReasonField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return registrationAddressField;
+                return _registrationAddressField;
             }
             set
             {
-                registrationAddressField = value;
+                _registrationAddressField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return taxSchemeField;
+                return _taxSchemeField;
             }
             set
             {
-                taxSchemeField = value;
+                _taxSchemeField = value;
             }
         }
     }

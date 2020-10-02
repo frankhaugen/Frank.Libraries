@@ -10,35 +10,35 @@
     public partial class EventType
     {
 
-        private IdentificationIDType identificationIDField;
+        private IdentificationIdType _identificationIdField;
 
-        private OccurrenceDateType occurrenceDateField;
+        private OccurrenceDateType _occurrenceDateField;
 
-        private OccurrenceTimeType occurrenceTimeField;
+        private OccurrenceTimeType _occurrenceTimeField;
 
-        private TypeCodeType typeCodeField;
+        private TypeCodeType _typeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private CompletionIndicatorType completionIndicatorField;
+        private CompletionIndicatorType _completionIndicatorField;
 
-        private StatusType[] currentStatusField;
+        private StatusType[] _currentStatusField;
 
-        private ContactType[] contactField;
+        private ContactType[] _contactField;
 
-        private LocationType1 occurenceLocationField;
+        private LocationType1 _occurenceLocationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IdentificationIDType IdentificationID
+        public IdentificationIdType IdentificationId
         {
             get
             {
-                return identificationIDField;
+                return _identificationIdField;
             }
             set
             {
-                identificationIDField = value;
+                _identificationIdField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return occurrenceDateField;
+                return _occurrenceDateField;
             }
             set
             {
-                occurrenceDateField = value;
+                _occurrenceDateField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return occurrenceTimeField;
+                return _occurrenceTimeField;
             }
             set
             {
-                occurrenceTimeField = value;
+                _occurrenceTimeField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return typeCodeField;
+                return _typeCodeField;
             }
             set
             {
-                typeCodeField = value;
+                _typeCodeField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return completionIndicatorField;
+                return _completionIndicatorField;
             }
             set
             {
-                completionIndicatorField = value;
+                _completionIndicatorField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return currentStatusField;
+                return _currentStatusField;
             }
             set
             {
-                currentStatusField = value;
+                _currentStatusField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return contactField;
+                return _contactField;
             }
             set
             {
-                contactField = value;
+                _contactField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return occurenceLocationField;
+                return _occurenceLocationField;
             }
             set
             {
-                occurenceLocationField = value;
+                _occurenceLocationField = value;
             }
         }
     }

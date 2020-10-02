@@ -10,65 +10,65 @@
     public partial class ItemType
     {
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private PackQuantityType packQuantityField;
+        private PackQuantityType _packQuantityField;
 
-        private PackSizeNumericType packSizeNumericField;
+        private PackSizeNumericType _packSizeNumericField;
 
-        private CatalogueIndicatorType catalogueIndicatorField;
+        private CatalogueIndicatorType _catalogueIndicatorField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private HazardousRiskIndicatorType hazardousRiskIndicatorField;
+        private HazardousRiskIndicatorType _hazardousRiskIndicatorField;
 
-        private AdditionalInformationType[] additionalInformationField;
+        private AdditionalInformationType[] _additionalInformationField;
 
-        private KeywordType[] keywordField;
+        private KeywordType[] _keywordField;
 
-        private BrandNameType[] brandNameField;
+        private BrandNameType[] _brandNameField;
 
-        private ModelNameType[] modelNameField;
+        private ModelNameType[] _modelNameField;
 
-        private ItemIdentificationType buyersItemIdentificationField;
+        private ItemIdentificationType _buyersItemIdentificationField;
 
-        private ItemIdentificationType sellersItemIdentificationField;
+        private ItemIdentificationType _sellersItemIdentificationField;
 
-        private ItemIdentificationType[] manufacturersItemIdentificationField;
+        private ItemIdentificationType[] _manufacturersItemIdentificationField;
 
-        private ItemIdentificationType standardItemIdentificationField;
+        private ItemIdentificationType _standardItemIdentificationField;
 
-        private ItemIdentificationType catalogueItemIdentificationField;
+        private ItemIdentificationType _catalogueItemIdentificationField;
 
-        private ItemIdentificationType[] additionalItemIdentificationField;
+        private ItemIdentificationType[] _additionalItemIdentificationField;
 
-        private DocumentReferenceType catalogueDocumentReferenceField;
+        private DocumentReferenceType _catalogueDocumentReferenceField;
 
-        private DocumentReferenceType[] itemSpecificationDocumentReferenceField;
+        private DocumentReferenceType[] _itemSpecificationDocumentReferenceField;
 
-        private CountryType originCountryField;
+        private CountryType _originCountryField;
 
-        private CommodityClassificationType[] commodityClassificationField;
+        private CommodityClassificationType[] _commodityClassificationField;
 
-        private TransactionConditionsType[] transactionConditionsField;
+        private TransactionConditionsType[] _transactionConditionsField;
 
-        private HazardousItemType[] hazardousItemField;
+        private HazardousItemType[] _hazardousItemField;
 
-        private TaxCategoryType[] classifiedTaxCategoryField;
+        private TaxCategoryType[] _classifiedTaxCategoryField;
 
-        private ItemPropertyType[] additionalItemPropertyField;
+        private ItemPropertyType[] _additionalItemPropertyField;
 
-        private PartyType[] manufacturerPartyField;
+        private PartyType[] _manufacturerPartyField;
 
-        private PartyType informationContentProviderPartyField;
+        private PartyType _informationContentProviderPartyField;
 
-        private AddressType[] originAddressField;
+        private AddressType[] _originAddressField;
 
-        private ItemInstanceType[] itemInstanceField;
+        private ItemInstanceType[] _itemInstanceField;
 
-        private CertificateType[] certificateField;
+        private CertificateType[] _certificateField;
 
-        private DimensionType[] dimensionField;
+        private DimensionType[] _dimensionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -76,11 +76,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return packQuantityField;
+                return _packQuantityField;
             }
             set
             {
-                packQuantityField = value;
+                _packQuantityField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return packSizeNumericField;
+                return _packSizeNumericField;
             }
             set
             {
-                packSizeNumericField = value;
+                _packSizeNumericField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return catalogueIndicatorField;
+                return _catalogueIndicatorField;
             }
             set
             {
-                catalogueIndicatorField = value;
+                _catalogueIndicatorField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return hazardousRiskIndicatorField;
+                return _hazardousRiskIndicatorField;
             }
             set
             {
-                hazardousRiskIndicatorField = value;
+                _hazardousRiskIndicatorField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return additionalInformationField;
+                return _additionalInformationField;
             }
             set
             {
-                additionalInformationField = value;
+                _additionalInformationField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return keywordField;
+                return _keywordField;
             }
             set
             {
-                keywordField = value;
+                _keywordField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return brandNameField;
+                return _brandNameField;
             }
             set
             {
-                brandNameField = value;
+                _brandNameField = value;
             }
         }
 
@@ -202,11 +202,11 @@
         {
             get
             {
-                return modelNameField;
+                return _modelNameField;
             }
             set
             {
-                modelNameField = value;
+                _modelNameField = value;
             }
         }
 
@@ -215,11 +215,11 @@
         {
             get
             {
-                return buyersItemIdentificationField;
+                return _buyersItemIdentificationField;
             }
             set
             {
-                buyersItemIdentificationField = value;
+                _buyersItemIdentificationField = value;
             }
         }
 
@@ -228,11 +228,11 @@
         {
             get
             {
-                return sellersItemIdentificationField;
+                return _sellersItemIdentificationField;
             }
             set
             {
-                sellersItemIdentificationField = value;
+                _sellersItemIdentificationField = value;
             }
         }
 
@@ -242,11 +242,11 @@
         {
             get
             {
-                return manufacturersItemIdentificationField;
+                return _manufacturersItemIdentificationField;
             }
             set
             {
-                manufacturersItemIdentificationField = value;
+                _manufacturersItemIdentificationField = value;
             }
         }
 
@@ -255,11 +255,11 @@
         {
             get
             {
-                return standardItemIdentificationField;
+                return _standardItemIdentificationField;
             }
             set
             {
-                standardItemIdentificationField = value;
+                _standardItemIdentificationField = value;
             }
         }
 
@@ -268,11 +268,11 @@
         {
             get
             {
-                return catalogueItemIdentificationField;
+                return _catalogueItemIdentificationField;
             }
             set
             {
-                catalogueItemIdentificationField = value;
+                _catalogueItemIdentificationField = value;
             }
         }
 
@@ -282,11 +282,11 @@
         {
             get
             {
-                return additionalItemIdentificationField;
+                return _additionalItemIdentificationField;
             }
             set
             {
-                additionalItemIdentificationField = value;
+                _additionalItemIdentificationField = value;
             }
         }
 
@@ -295,11 +295,11 @@
         {
             get
             {
-                return catalogueDocumentReferenceField;
+                return _catalogueDocumentReferenceField;
             }
             set
             {
-                catalogueDocumentReferenceField = value;
+                _catalogueDocumentReferenceField = value;
             }
         }
 
@@ -309,11 +309,11 @@
         {
             get
             {
-                return itemSpecificationDocumentReferenceField;
+                return _itemSpecificationDocumentReferenceField;
             }
             set
             {
-                itemSpecificationDocumentReferenceField = value;
+                _itemSpecificationDocumentReferenceField = value;
             }
         }
 
@@ -322,11 +322,11 @@
         {
             get
             {
-                return originCountryField;
+                return _originCountryField;
             }
             set
             {
-                originCountryField = value;
+                _originCountryField = value;
             }
         }
 
@@ -336,11 +336,11 @@
         {
             get
             {
-                return commodityClassificationField;
+                return _commodityClassificationField;
             }
             set
             {
-                commodityClassificationField = value;
+                _commodityClassificationField = value;
             }
         }
 
@@ -350,11 +350,11 @@
         {
             get
             {
-                return transactionConditionsField;
+                return _transactionConditionsField;
             }
             set
             {
-                transactionConditionsField = value;
+                _transactionConditionsField = value;
             }
         }
 
@@ -364,11 +364,11 @@
         {
             get
             {
-                return hazardousItemField;
+                return _hazardousItemField;
             }
             set
             {
-                hazardousItemField = value;
+                _hazardousItemField = value;
             }
         }
 
@@ -378,11 +378,11 @@
         {
             get
             {
-                return classifiedTaxCategoryField;
+                return _classifiedTaxCategoryField;
             }
             set
             {
-                classifiedTaxCategoryField = value;
+                _classifiedTaxCategoryField = value;
             }
         }
 
@@ -392,11 +392,11 @@
         {
             get
             {
-                return additionalItemPropertyField;
+                return _additionalItemPropertyField;
             }
             set
             {
-                additionalItemPropertyField = value;
+                _additionalItemPropertyField = value;
             }
         }
 
@@ -406,11 +406,11 @@
         {
             get
             {
-                return manufacturerPartyField;
+                return _manufacturerPartyField;
             }
             set
             {
-                manufacturerPartyField = value;
+                _manufacturerPartyField = value;
             }
         }
 
@@ -419,11 +419,11 @@
         {
             get
             {
-                return informationContentProviderPartyField;
+                return _informationContentProviderPartyField;
             }
             set
             {
-                informationContentProviderPartyField = value;
+                _informationContentProviderPartyField = value;
             }
         }
 
@@ -433,11 +433,11 @@
         {
             get
             {
-                return originAddressField;
+                return _originAddressField;
             }
             set
             {
-                originAddressField = value;
+                _originAddressField = value;
             }
         }
 
@@ -447,11 +447,11 @@
         {
             get
             {
-                return itemInstanceField;
+                return _itemInstanceField;
             }
             set
             {
-                itemInstanceField = value;
+                _itemInstanceField = value;
             }
         }
 
@@ -461,11 +461,11 @@
         {
             get
             {
-                return certificateField;
+                return _certificateField;
             }
             set
             {
-                certificateField = value;
+                _certificateField = value;
             }
         }
 
@@ -475,11 +475,11 @@
         {
             get
             {
-                return dimensionField;
+                return _dimensionField;
             }
             set
             {
-                dimensionField = value;
+                _dimensionField = value;
             }
         }
     }

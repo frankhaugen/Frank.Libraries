@@ -10,11 +10,11 @@
     public partial class DependentPriceReferenceType
     {
 
-        private PercentType1 percentField;
+        private PercentType1 _percentField;
 
-        private AddressType locationAddressField;
+        private AddressType _locationAddressField;
 
-        private LineReferenceType dependentLineReferenceField;
+        private LineReferenceType _dependentLineReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return percentField;
+                return _percentField;
             }
             set
             {
-                percentField = value;
+                _percentField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return locationAddressField;
+                return _locationAddressField;
             }
             set
             {
-                locationAddressField = value;
+                _locationAddressField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return dependentLineReferenceField;
+                return _dependentLineReferenceField;
             }
             set
             {
-                dependentLineReferenceField = value;
+                _dependentLineReferenceField = value;
             }
         }
     }

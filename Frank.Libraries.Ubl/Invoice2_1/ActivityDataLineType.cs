@@ -10,33 +10,33 @@
     public partial class ActivityDataLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private SupplyChainActivityTypeCodeType supplyChainActivityTypeCodeField;
+        private SupplyChainActivityTypeCodeType _supplyChainActivityTypeCodeField;
 
-        private CustomerPartyType buyerCustomerPartyField;
+        private CustomerPartyType _buyerCustomerPartyField;
 
-        private SupplierPartyType sellerSupplierPartyField;
+        private SupplierPartyType _sellerSupplierPartyField;
 
-        private PeriodType activityPeriodField;
+        private PeriodType _activityPeriodField;
 
-        private LocationType1 activityOriginLocationField;
+        private LocationType1 _activityOriginLocationField;
 
-        private LocationType1 activityFinalLocationField;
+        private LocationType1 _activityFinalLocationField;
 
-        private SalesItemType[] salesItemField;
+        private SalesItemType[] _salesItemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return supplyChainActivityTypeCodeField;
+                return _supplyChainActivityTypeCodeField;
             }
             set
             {
-                supplyChainActivityTypeCodeField = value;
+                _supplyChainActivityTypeCodeField = value;
             }
         }
 
@@ -59,11 +59,11 @@
         {
             get
             {
-                return buyerCustomerPartyField;
+                return _buyerCustomerPartyField;
             }
             set
             {
-                buyerCustomerPartyField = value;
+                _buyerCustomerPartyField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return sellerSupplierPartyField;
+                return _sellerSupplierPartyField;
             }
             set
             {
-                sellerSupplierPartyField = value;
+                _sellerSupplierPartyField = value;
             }
         }
 
@@ -85,11 +85,11 @@
         {
             get
             {
-                return activityPeriodField;
+                return _activityPeriodField;
             }
             set
             {
-                activityPeriodField = value;
+                _activityPeriodField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return activityOriginLocationField;
+                return _activityOriginLocationField;
             }
             set
             {
-                activityOriginLocationField = value;
+                _activityOriginLocationField = value;
             }
         }
 
@@ -111,11 +111,11 @@
         {
             get
             {
-                return activityFinalLocationField;
+                return _activityFinalLocationField;
             }
             set
             {
-                activityFinalLocationField = value;
+                _activityFinalLocationField = value;
             }
         }
 
@@ -125,11 +125,11 @@
         {
             get
             {
-                return salesItemField;
+                return _salesItemField;
             }
             set
             {
-                salesItemField = value;
+                _salesItemField = value;
             }
         }
     }

@@ -10,29 +10,29 @@
     public partial class ItemLocationQuantityType
     {
 
-        private LeadTimeMeasureType leadTimeMeasureField;
+        private LeadTimeMeasureType _leadTimeMeasureField;
 
-        private MinimumQuantityType minimumQuantityField;
+        private MinimumQuantityType _minimumQuantityField;
 
-        private MaximumQuantityType maximumQuantityField;
+        private MaximumQuantityType _maximumQuantityField;
 
-        private HazardousRiskIndicatorType hazardousRiskIndicatorField;
+        private HazardousRiskIndicatorType _hazardousRiskIndicatorField;
 
-        private TradingRestrictionsType[] tradingRestrictionsField;
+        private TradingRestrictionsType[] _tradingRestrictionsField;
 
-        private AddressType[] applicableTerritoryAddressField;
+        private AddressType[] _applicableTerritoryAddressField;
 
-        private PriceType priceField;
+        private PriceType _priceField;
 
-        private DeliveryUnitType[] deliveryUnitField;
+        private DeliveryUnitType[] _deliveryUnitField;
 
-        private TaxCategoryType[] applicableTaxCategoryField;
+        private TaxCategoryType[] _applicableTaxCategoryField;
 
-        private PackageType packageField;
+        private PackageType _packageField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private DependentPriceReferenceType dependentPriceReferenceField;
+        private DependentPriceReferenceType _dependentPriceReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -40,11 +40,11 @@
         {
             get
             {
-                return leadTimeMeasureField;
+                return _leadTimeMeasureField;
             }
             set
             {
-                leadTimeMeasureField = value;
+                _leadTimeMeasureField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return minimumQuantityField;
+                return _minimumQuantityField;
             }
             set
             {
-                minimumQuantityField = value;
+                _minimumQuantityField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return maximumQuantityField;
+                return _maximumQuantityField;
             }
             set
             {
-                maximumQuantityField = value;
+                _maximumQuantityField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return hazardousRiskIndicatorField;
+                return _hazardousRiskIndicatorField;
             }
             set
             {
-                hazardousRiskIndicatorField = value;
+                _hazardousRiskIndicatorField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return tradingRestrictionsField;
+                return _tradingRestrictionsField;
             }
             set
             {
-                tradingRestrictionsField = value;
+                _tradingRestrictionsField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return applicableTerritoryAddressField;
+                return _applicableTerritoryAddressField;
             }
             set
             {
-                applicableTerritoryAddressField = value;
+                _applicableTerritoryAddressField = value;
             }
         }
 
@@ -123,11 +123,11 @@
         {
             get
             {
-                return priceField;
+                return _priceField;
             }
             set
             {
-                priceField = value;
+                _priceField = value;
             }
         }
 
@@ -137,11 +137,11 @@
         {
             get
             {
-                return deliveryUnitField;
+                return _deliveryUnitField;
             }
             set
             {
-                deliveryUnitField = value;
+                _deliveryUnitField = value;
             }
         }
 
@@ -151,11 +151,11 @@
         {
             get
             {
-                return applicableTaxCategoryField;
+                return _applicableTaxCategoryField;
             }
             set
             {
-                applicableTaxCategoryField = value;
+                _applicableTaxCategoryField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return packageField;
+                return _packageField;
             }
             set
             {
-                packageField = value;
+                _packageField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -191,11 +191,11 @@
         {
             get
             {
-                return dependentPriceReferenceField;
+                return _dependentPriceReferenceField;
             }
             set
             {
-                dependentPriceReferenceField = value;
+                _dependentPriceReferenceField = value;
             }
         }
     }

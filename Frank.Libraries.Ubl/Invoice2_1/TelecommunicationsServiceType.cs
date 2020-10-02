@@ -10,59 +10,59 @@
     public partial class TelecommunicationsServiceType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private CallDateType callDateField;
+        private CallDateType _callDateField;
 
-        private CallTimeType callTimeField;
+        private CallTimeType _callTimeField;
 
-        private ServiceNumberCalledType serviceNumberCalledField;
+        private ServiceNumberCalledType _serviceNumberCalledField;
 
-        private TelecommunicationsServiceCategoryType telecommunicationsServiceCategoryField;
+        private TelecommunicationsServiceCategoryType _telecommunicationsServiceCategoryField;
 
-        private TelecommunicationsServiceCategoryCodeType telecommunicationsServiceCategoryCodeField;
+        private TelecommunicationsServiceCategoryCodeType _telecommunicationsServiceCategoryCodeField;
 
-        private MovieTitleType movieTitleField;
+        private MovieTitleType _movieTitleField;
 
-        private RoamingPartnerNameType roamingPartnerNameField;
+        private RoamingPartnerNameType _roamingPartnerNameField;
 
-        private PayPerViewType payPerViewField;
+        private PayPerViewType _payPerViewField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private TelecommunicationsServiceCallType telecommunicationsServiceCallField;
+        private TelecommunicationsServiceCallType _telecommunicationsServiceCallField;
 
-        private TelecommunicationsServiceCallCodeType telecommunicationsServiceCallCodeField;
+        private TelecommunicationsServiceCallCodeType _telecommunicationsServiceCallCodeField;
 
-        private CallBaseAmountType callBaseAmountField;
+        private CallBaseAmountType _callBaseAmountField;
 
-        private CallExtensionAmountType callExtensionAmountField;
+        private CallExtensionAmountType _callExtensionAmountField;
 
-        private PriceType priceField;
+        private PriceType _priceField;
 
-        private CountryType countryField;
+        private CountryType _countryField;
 
-        private ExchangeRateType[] exchangeRateField;
+        private ExchangeRateType[] _exchangeRateField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private TaxTotalType[] taxTotalField;
+        private TaxTotalType[] _taxTotalField;
 
-        private DutyType1[] callDutyField;
+        private DutyType1[] _callDutyField;
 
-        private DutyType1[] timeDutyField;
+        private DutyType1[] _timeDutyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return callDateField;
+                return _callDateField;
             }
             set
             {
-                callDateField = value;
+                _callDateField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return callTimeField;
+                return _callTimeField;
             }
             set
             {
-                callTimeField = value;
+                _callTimeField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return serviceNumberCalledField;
+                return _serviceNumberCalledField;
             }
             set
             {
-                serviceNumberCalledField = value;
+                _serviceNumberCalledField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return telecommunicationsServiceCategoryField;
+                return _telecommunicationsServiceCategoryField;
             }
             set
             {
-                telecommunicationsServiceCategoryField = value;
+                _telecommunicationsServiceCategoryField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return telecommunicationsServiceCategoryCodeField;
+                return _telecommunicationsServiceCategoryCodeField;
             }
             set
             {
-                telecommunicationsServiceCategoryCodeField = value;
+                _telecommunicationsServiceCategoryCodeField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return movieTitleField;
+                return _movieTitleField;
             }
             set
             {
-                movieTitleField = value;
+                _movieTitleField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return roamingPartnerNameField;
+                return _roamingPartnerNameField;
             }
             set
             {
-                roamingPartnerNameField = value;
+                _roamingPartnerNameField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return payPerViewField;
+                return _payPerViewField;
             }
             set
             {
-                payPerViewField = value;
+                _payPerViewField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return telecommunicationsServiceCallField;
+                return _telecommunicationsServiceCallField;
             }
             set
             {
-                telecommunicationsServiceCallField = value;
+                _telecommunicationsServiceCallField = value;
             }
         }
 
@@ -212,11 +212,11 @@
         {
             get
             {
-                return telecommunicationsServiceCallCodeField;
+                return _telecommunicationsServiceCallCodeField;
             }
             set
             {
-                telecommunicationsServiceCallCodeField = value;
+                _telecommunicationsServiceCallCodeField = value;
             }
         }
 
@@ -226,11 +226,11 @@
         {
             get
             {
-                return callBaseAmountField;
+                return _callBaseAmountField;
             }
             set
             {
-                callBaseAmountField = value;
+                _callBaseAmountField = value;
             }
         }
 
@@ -240,11 +240,11 @@
         {
             get
             {
-                return callExtensionAmountField;
+                return _callExtensionAmountField;
             }
             set
             {
-                callExtensionAmountField = value;
+                _callExtensionAmountField = value;
             }
         }
 
@@ -253,11 +253,11 @@
         {
             get
             {
-                return priceField;
+                return _priceField;
             }
             set
             {
-                priceField = value;
+                _priceField = value;
             }
         }
 
@@ -266,11 +266,11 @@
         {
             get
             {
-                return countryField;
+                return _countryField;
             }
             set
             {
-                countryField = value;
+                _countryField = value;
             }
         }
 
@@ -280,11 +280,11 @@
         {
             get
             {
-                return exchangeRateField;
+                return _exchangeRateField;
             }
             set
             {
-                exchangeRateField = value;
+                _exchangeRateField = value;
             }
         }
 
@@ -294,11 +294,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -308,11 +308,11 @@
         {
             get
             {
-                return taxTotalField;
+                return _taxTotalField;
             }
             set
             {
-                taxTotalField = value;
+                _taxTotalField = value;
             }
         }
 
@@ -322,11 +322,11 @@
         {
             get
             {
-                return callDutyField;
+                return _callDutyField;
             }
             set
             {
-                callDutyField = value;
+                _callDutyField = value;
             }
         }
 
@@ -336,11 +336,11 @@
         {
             get
             {
-                return timeDutyField;
+                return _timeDutyField;
             }
             set
             {
-                timeDutyField = value;
+                _timeDutyField = value;
             }
         }
     }

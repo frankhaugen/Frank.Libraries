@@ -10,27 +10,27 @@
     public partial class AwardingTermsType
     {
 
-        private WeightingAlgorithmCodeType weightingAlgorithmCodeField;
+        private WeightingAlgorithmCodeType _weightingAlgorithmCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private TechnicalCommitteeDescriptionType[] technicalCommitteeDescriptionField;
+        private TechnicalCommitteeDescriptionType[] _technicalCommitteeDescriptionField;
 
-        private LowTendersDescriptionType[] lowTendersDescriptionField;
+        private LowTendersDescriptionType[] _lowTendersDescriptionField;
 
-        private PrizeIndicatorType prizeIndicatorField;
+        private PrizeIndicatorType _prizeIndicatorField;
 
-        private PrizeDescriptionType[] prizeDescriptionField;
+        private PrizeDescriptionType[] _prizeDescriptionField;
 
-        private PaymentDescriptionType[] paymentDescriptionField;
+        private PaymentDescriptionType[] _paymentDescriptionField;
 
-        private FollowupContractIndicatorType followupContractIndicatorField;
+        private FollowupContractIndicatorType _followupContractIndicatorField;
 
-        private BindingOnBuyerIndicatorType bindingOnBuyerIndicatorField;
+        private BindingOnBuyerIndicatorType _bindingOnBuyerIndicatorField;
 
-        private AwardingCriterionType[] awardingCriterionField;
+        private AwardingCriterionType[] _awardingCriterionField;
 
-        private PersonType[] technicalCommitteePersonField;
+        private PersonType[] _technicalCommitteePersonField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -38,11 +38,11 @@
         {
             get
             {
-                return weightingAlgorithmCodeField;
+                return _weightingAlgorithmCodeField;
             }
             set
             {
-                weightingAlgorithmCodeField = value;
+                _weightingAlgorithmCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return technicalCommitteeDescriptionField;
+                return _technicalCommitteeDescriptionField;
             }
             set
             {
-                technicalCommitteeDescriptionField = value;
+                _technicalCommitteeDescriptionField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return lowTendersDescriptionField;
+                return _lowTendersDescriptionField;
             }
             set
             {
-                lowTendersDescriptionField = value;
+                _lowTendersDescriptionField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return prizeIndicatorField;
+                return _prizeIndicatorField;
             }
             set
             {
-                prizeIndicatorField = value;
+                _prizeIndicatorField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return prizeDescriptionField;
+                return _prizeDescriptionField;
             }
             set
             {
-                prizeDescriptionField = value;
+                _prizeDescriptionField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return paymentDescriptionField;
+                return _paymentDescriptionField;
             }
             set
             {
-                paymentDescriptionField = value;
+                _paymentDescriptionField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return followupContractIndicatorField;
+                return _followupContractIndicatorField;
             }
             set
             {
-                followupContractIndicatorField = value;
+                _followupContractIndicatorField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return bindingOnBuyerIndicatorField;
+                return _bindingOnBuyerIndicatorField;
             }
             set
             {
-                bindingOnBuyerIndicatorField = value;
+                _bindingOnBuyerIndicatorField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return awardingCriterionField;
+                return _awardingCriterionField;
             }
             set
             {
-                awardingCriterionField = value;
+                _awardingCriterionField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return technicalCommitteePersonField;
+                return _technicalCommitteePersonField;
             }
             set
             {
-                technicalCommitteePersonField = value;
+                _technicalCommitteePersonField = value;
             }
         }
     }

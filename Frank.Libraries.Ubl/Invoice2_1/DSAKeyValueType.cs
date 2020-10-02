@@ -7,22 +7,22 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
     [System.Xml.Serialization.XmlRootAttribute("DSAKeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
-    public partial class DSAKeyValueType
+    public partial class DsaKeyValueType
     {
 
-        private byte[] pField;
+        private byte[] _pField;
 
-        private byte[] qField;
+        private byte[] _qField;
 
-        private byte[] gField;
+        private byte[] _gField;
 
-        private byte[] yField;
+        private byte[] _yField;
 
-        private byte[] jField;
+        private byte[] _jField;
 
-        private byte[] seedField;
+        private byte[] _seedField;
 
-        private byte[] pgenCounterField;
+        private byte[] _pgenCounterField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return pField;
+                return _pField;
             }
             set
             {
-                pField = value;
+                _pField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return qField;
+                return _qField;
             }
             set
             {
-                qField = value;
+                _qField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return gField;
+                return _gField;
             }
             set
             {
-                gField = value;
+                _gField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return yField;
+                return _yField;
             }
             set
             {
-                yField = value;
+                _yField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return jField;
+                return _jField;
             }
             set
             {
-                jField = value;
+                _jField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return seedField;
+                return _seedField;
             }
             set
             {
-                seedField = value;
+                _seedField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return pgenCounterField;
+                return _pgenCounterField;
             }
             set
             {
-                pgenCounterField = value;
+                _pgenCounterField = value;
             }
         }
     }

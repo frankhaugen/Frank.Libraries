@@ -78,37 +78,37 @@
     public partial class AmountType
     {
 
-        private string currencyIDField;
+        private string _currencyIdField;
 
-        private string currencyCodeListVersionIDField;
+        private string _currencyCodeListVersionIdField;
 
-        private decimal valueField;
+        private decimal _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string currencyID
+        public string CurrencyId
         {
             get
             {
-                return currencyIDField;
+                return _currencyIdField;
             }
             set
             {
-                currencyIDField = value;
+                _currencyIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string currencyCodeListVersionID
+        public string CurrencyCodeListVersionId
         {
             get
             {
-                return currencyCodeListVersionIDField;
+                return _currencyCodeListVersionIdField;
             }
             set
             {
-                currencyCodeListVersionIDField = value;
+                _currencyCodeListVersionIdField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

@@ -10,109 +10,109 @@
     public partial class LineItemType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private SalesOrderIDType salesOrderIDField;
+        private SalesOrderIdType _salesOrderIdField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private LineStatusCodeType lineStatusCodeField;
+        private LineStatusCodeType _lineStatusCodeField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private LineExtensionAmountType lineExtensionAmountField;
+        private LineExtensionAmountType _lineExtensionAmountField;
 
-        private TotalTaxAmountType totalTaxAmountField;
+        private TotalTaxAmountType _totalTaxAmountField;
 
-        private MinimumQuantityType minimumQuantityField;
+        private MinimumQuantityType _minimumQuantityField;
 
-        private MaximumQuantityType maximumQuantityField;
+        private MaximumQuantityType _maximumQuantityField;
 
-        private MinimumBackorderQuantityType minimumBackorderQuantityField;
+        private MinimumBackorderQuantityType _minimumBackorderQuantityField;
 
-        private MaximumBackorderQuantityType maximumBackorderQuantityField;
+        private MaximumBackorderQuantityType _maximumBackorderQuantityField;
 
-        private InspectionMethodCodeType inspectionMethodCodeField;
+        private InspectionMethodCodeType _inspectionMethodCodeField;
 
-        private PartialDeliveryIndicatorType partialDeliveryIndicatorField;
+        private PartialDeliveryIndicatorType _partialDeliveryIndicatorField;
 
-        private BackOrderAllowedIndicatorType backOrderAllowedIndicatorField;
+        private BackOrderAllowedIndicatorType _backOrderAllowedIndicatorField;
 
-        private AccountingCostCodeType accountingCostCodeField;
+        private AccountingCostCodeType _accountingCostCodeField;
 
-        private AccountingCostType accountingCostField;
+        private AccountingCostType _accountingCostField;
 
-        private WarrantyInformationType[] warrantyInformationField;
+        private WarrantyInformationType[] _warrantyInformationField;
 
-        private DeliveryType[] deliveryField;
+        private DeliveryType[] _deliveryField;
 
-        private DeliveryTermsType deliveryTermsField;
+        private DeliveryTermsType _deliveryTermsField;
 
-        private PartyType originatorPartyField;
+        private PartyType _originatorPartyField;
 
-        private OrderedShipmentType[] orderedShipmentField;
+        private OrderedShipmentType[] _orderedShipmentField;
 
-        private PricingReferenceType pricingReferenceField;
+        private PricingReferenceType _pricingReferenceField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private PriceType priceField;
+        private PriceType _priceField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
-        private LineItemType[] subLineItemField;
+        private LineItemType[] _subLineItemField;
 
-        private PeriodType warrantyValidityPeriodField;
+        private PeriodType _warrantyValidityPeriodField;
 
-        private PartyType warrantyPartyField;
+        private PartyType _warrantyPartyField;
 
-        private TaxTotalType[] taxTotalField;
+        private TaxTotalType[] _taxTotalField;
 
-        private PriceExtensionType itemPriceExtensionField;
+        private PriceExtensionType _itemPriceExtensionField;
 
-        private LineReferenceType[] lineReferenceField;
+        private LineReferenceType[] _lineReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SalesOrderIDType SalesOrderID
+        public SalesOrderIdType SalesOrderId
         {
             get
             {
-                return salesOrderIDField;
+                return _salesOrderIdField;
             }
             set
             {
-                salesOrderIDField = value;
+                _salesOrderIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return lineStatusCodeField;
+                return _lineStatusCodeField;
             }
             set
             {
-                lineStatusCodeField = value;
+                _lineStatusCodeField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return lineExtensionAmountField;
+                return _lineExtensionAmountField;
             }
             set
             {
-                lineExtensionAmountField = value;
+                _lineExtensionAmountField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return totalTaxAmountField;
+                return _totalTaxAmountField;
             }
             set
             {
-                totalTaxAmountField = value;
+                _totalTaxAmountField = value;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                return minimumQuantityField;
+                return _minimumQuantityField;
             }
             set
             {
-                minimumQuantityField = value;
+                _minimumQuantityField = value;
             }
         }
 
@@ -206,11 +206,11 @@
         {
             get
             {
-                return maximumQuantityField;
+                return _maximumQuantityField;
             }
             set
             {
-                maximumQuantityField = value;
+                _maximumQuantityField = value;
             }
         }
 
@@ -220,11 +220,11 @@
         {
             get
             {
-                return minimumBackorderQuantityField;
+                return _minimumBackorderQuantityField;
             }
             set
             {
-                minimumBackorderQuantityField = value;
+                _minimumBackorderQuantityField = value;
             }
         }
 
@@ -234,11 +234,11 @@
         {
             get
             {
-                return maximumBackorderQuantityField;
+                return _maximumBackorderQuantityField;
             }
             set
             {
-                maximumBackorderQuantityField = value;
+                _maximumBackorderQuantityField = value;
             }
         }
 
@@ -248,11 +248,11 @@
         {
             get
             {
-                return inspectionMethodCodeField;
+                return _inspectionMethodCodeField;
             }
             set
             {
-                inspectionMethodCodeField = value;
+                _inspectionMethodCodeField = value;
             }
         }
 
@@ -262,11 +262,11 @@
         {
             get
             {
-                return partialDeliveryIndicatorField;
+                return _partialDeliveryIndicatorField;
             }
             set
             {
-                partialDeliveryIndicatorField = value;
+                _partialDeliveryIndicatorField = value;
             }
         }
 
@@ -276,11 +276,11 @@
         {
             get
             {
-                return backOrderAllowedIndicatorField;
+                return _backOrderAllowedIndicatorField;
             }
             set
             {
-                backOrderAllowedIndicatorField = value;
+                _backOrderAllowedIndicatorField = value;
             }
         }
 
@@ -290,11 +290,11 @@
         {
             get
             {
-                return accountingCostCodeField;
+                return _accountingCostCodeField;
             }
             set
             {
-                accountingCostCodeField = value;
+                _accountingCostCodeField = value;
             }
         }
 
@@ -304,11 +304,11 @@
         {
             get
             {
-                return accountingCostField;
+                return _accountingCostField;
             }
             set
             {
-                accountingCostField = value;
+                _accountingCostField = value;
             }
         }
 
@@ -318,11 +318,11 @@
         {
             get
             {
-                return warrantyInformationField;
+                return _warrantyInformationField;
             }
             set
             {
-                warrantyInformationField = value;
+                _warrantyInformationField = value;
             }
         }
 
@@ -332,11 +332,11 @@
         {
             get
             {
-                return deliveryField;
+                return _deliveryField;
             }
             set
             {
-                deliveryField = value;
+                _deliveryField = value;
             }
         }
 
@@ -345,11 +345,11 @@
         {
             get
             {
-                return deliveryTermsField;
+                return _deliveryTermsField;
             }
             set
             {
-                deliveryTermsField = value;
+                _deliveryTermsField = value;
             }
         }
 
@@ -358,11 +358,11 @@
         {
             get
             {
-                return originatorPartyField;
+                return _originatorPartyField;
             }
             set
             {
-                originatorPartyField = value;
+                _originatorPartyField = value;
             }
         }
 
@@ -372,11 +372,11 @@
         {
             get
             {
-                return orderedShipmentField;
+                return _orderedShipmentField;
             }
             set
             {
-                orderedShipmentField = value;
+                _orderedShipmentField = value;
             }
         }
 
@@ -385,11 +385,11 @@
         {
             get
             {
-                return pricingReferenceField;
+                return _pricingReferenceField;
             }
             set
             {
-                pricingReferenceField = value;
+                _pricingReferenceField = value;
             }
         }
 
@@ -399,11 +399,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -412,11 +412,11 @@
         {
             get
             {
-                return priceField;
+                return _priceField;
             }
             set
             {
-                priceField = value;
+                _priceField = value;
             }
         }
 
@@ -425,11 +425,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -439,11 +439,11 @@
         {
             get
             {
-                return subLineItemField;
+                return _subLineItemField;
             }
             set
             {
-                subLineItemField = value;
+                _subLineItemField = value;
             }
         }
 
@@ -452,11 +452,11 @@
         {
             get
             {
-                return warrantyValidityPeriodField;
+                return _warrantyValidityPeriodField;
             }
             set
             {
-                warrantyValidityPeriodField = value;
+                _warrantyValidityPeriodField = value;
             }
         }
 
@@ -465,11 +465,11 @@
         {
             get
             {
-                return warrantyPartyField;
+                return _warrantyPartyField;
             }
             set
             {
-                warrantyPartyField = value;
+                _warrantyPartyField = value;
             }
         }
 
@@ -479,11 +479,11 @@
         {
             get
             {
-                return taxTotalField;
+                return _taxTotalField;
             }
             set
             {
-                taxTotalField = value;
+                _taxTotalField = value;
             }
         }
 
@@ -492,11 +492,11 @@
         {
             get
             {
-                return itemPriceExtensionField;
+                return _itemPriceExtensionField;
             }
             set
             {
-                itemPriceExtensionField = value;
+                _itemPriceExtensionField = value;
             }
         }
 
@@ -506,11 +506,11 @@
         {
             get
             {
-                return lineReferenceField;
+                return _lineReferenceField;
             }
             set
             {
-                lineReferenceField = value;
+                _lineReferenceField = value;
             }
         }
     }

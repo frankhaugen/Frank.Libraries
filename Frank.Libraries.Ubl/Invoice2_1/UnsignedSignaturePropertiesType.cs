@@ -10,15 +10,15 @@
     public partial class UnsignedSignaturePropertiesType
     {
 
-        private object[] itemsField;
+        private object[] _itemsField;
 
-        private ItemsChoiceType3[] itemsElementNameField;
+        private ItemsChoiceType3[] _itemsElementNameField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
-        [System.Xml.Serialization.XmlElementAttribute("ArchiveTimeStamp", typeof(XAdESTimeStampType))]
+        [System.Xml.Serialization.XmlElementAttribute("ArchiveTimeStamp", typeof(XAdEsTimeStampType))]
         [System.Xml.Serialization.XmlElementAttribute("AttrAuthoritiesCertValues", typeof(CertificateValuesType))]
         [System.Xml.Serialization.XmlElementAttribute("AttributeCertificateRefs", typeof(CompleteCertificateRefsType))]
         [System.Xml.Serialization.XmlElementAttribute("AttributeRevocationRefs", typeof(CompleteRevocationRefsType))]
@@ -27,20 +27,20 @@
         [System.Xml.Serialization.XmlElementAttribute("CompleteCertificateRefs", typeof(CompleteCertificateRefsType))]
         [System.Xml.Serialization.XmlElementAttribute("CompleteRevocationRefs", typeof(CompleteRevocationRefsType))]
         [System.Xml.Serialization.XmlElementAttribute("CounterSignature", typeof(CounterSignatureType))]
-        [System.Xml.Serialization.XmlElementAttribute("RefsOnlyTimeStamp", typeof(XAdESTimeStampType))]
+        [System.Xml.Serialization.XmlElementAttribute("RefsOnlyTimeStamp", typeof(XAdEsTimeStampType))]
         [System.Xml.Serialization.XmlElementAttribute("RevocationValues", typeof(RevocationValuesType))]
-        [System.Xml.Serialization.XmlElementAttribute("SigAndRefsTimeStamp", typeof(XAdESTimeStampType))]
-        [System.Xml.Serialization.XmlElementAttribute("SignatureTimeStamp", typeof(XAdESTimeStampType))]
+        [System.Xml.Serialization.XmlElementAttribute("SigAndRefsTimeStamp", typeof(XAdEsTimeStampType))]
+        [System.Xml.Serialization.XmlElementAttribute("SignatureTimeStamp", typeof(XAdEsTimeStampType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return itemsElementNameField;
+                return _itemsElementNameField;
             }
             set
             {
-                itemsElementNameField = value;
+                _itemsElementNameField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

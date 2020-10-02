@@ -10,29 +10,29 @@
     public partial class PerformanceDataLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private PerformanceValueQuantityType performanceValueQuantityField;
+        private PerformanceValueQuantityType _performanceValueQuantityField;
 
-        private PerformanceMetricTypeCodeType performanceMetricTypeCodeField;
+        private PerformanceMetricTypeCodeType _performanceMetricTypeCodeField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return performanceValueQuantityField;
+                return _performanceValueQuantityField;
             }
             set
             {
-                performanceValueQuantityField = value;
+                _performanceValueQuantityField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return performanceMetricTypeCodeField;
+                return _performanceMetricTypeCodeField;
             }
             set
             {
-                performanceMetricTypeCodeField = value;
+                _performanceMetricTypeCodeField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
     }

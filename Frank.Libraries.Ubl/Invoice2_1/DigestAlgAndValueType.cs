@@ -9,9 +9,9 @@
     public partial class DigestAlgAndValueType
     {
 
-        private DigestMethodType digestMethodField;
+        private DigestMethodType _digestMethodField;
 
-        private byte[] digestValueField;
+        private byte[] _digestValueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
@@ -19,11 +19,11 @@
         {
             get
             {
-                return digestMethodField;
+                return _digestMethodField;
             }
             set
             {
-                digestMethodField = value;
+                _digestMethodField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return digestValueField;
+                return _digestValueField;
             }
             set
             {
-                digestValueField = value;
+                _digestValueField = value;
             }
         }
     }

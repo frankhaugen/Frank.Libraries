@@ -2,119 +2,119 @@
 {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentifierType1))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReferencedSignatureIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtensionVersionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtensionURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtensionAgencyURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtensionAgencyIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WebsiteURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VesselIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VersionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VariantIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ValidatorIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpperOrangeHazardPlacardIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UUIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(URIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UBLVersionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransportationServiceDetailsURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransportExecutionPlanReferenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrainIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrackingIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TraceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TenderEnvelopeIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SupplierAssignedAccountIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SuccessiveSequenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubscriberIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificationIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SignatureIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShippingOrderIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SerialIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SequenceNumberIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SequenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SellerEventIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SecurityIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SchemeURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesOrderLineIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesOrderIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RevisedForecastLineIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RequiredCustomsIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RequestForQuotationLineIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReleaseIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RegistrationNationalityIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RegistrationIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReferencedConsignmentIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReferenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RailCarIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RadioCallSignIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProfileIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProfileExecutionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductTraceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimaryAccountNumberIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PreviousVersionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PreviousJobIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrepaidPaymentReferenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerformingCarrierAssignedIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentTermsDetailsURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentMeansIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParentDocumentVersionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParentDocumentLineReferenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParentDocumentIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OriginalJobIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OriginalContractingSystemIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpenTenderIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OntologyURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NetworkIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NationalityIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MarkingIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LowerOrangeHazardPlacardIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LotNumberIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LogoReferenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocationIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LoadingSequenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LineIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LicensePlateIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LanguageIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(JourneyIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IssuerIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IssueNumberIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InstructionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InformationURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ImmobilizationCertificateIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentificationIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(HazardClassIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FreightForwarderAssignedIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtendedIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExchangeMarketIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EndpointIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EconomicOperatorRegistryURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DocumentIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomizationIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerAssignedAccountIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractedCarrierAssignedIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractFolderIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConsumptionReportIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConsumptionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConsignorAssignedIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConsigneeAssignedIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompanyIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChipApplicationIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CarrierAssignedIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CV2IDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BuyerProfileURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BuyerEventIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessIdentityEvidenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessClassificationEvidenceIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BrokerAssignedIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BarcodeSymbologyIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AwardingCriterionIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AuctionURIType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AircraftIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AgencyIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AdditionalAccountIDType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccountIDType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReferencedSignatureIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtensionVersionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtensionUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtensionAgencyUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtensionAgencyIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(WebsiteUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VesselIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VersionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(VariantIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ValidatorIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UpperOrangeHazardPlacardIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UuidType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UblVersionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransportationServiceDetailsUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransportExecutionPlanReferenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrainIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TrackingIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TraceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TenderEnvelopeIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SupplierAssignedAccountIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SuccessiveSequenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SubscriberIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SpecificationIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SignatureIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ShippingOrderIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SerialIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SequenceNumberIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SequenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SellerEventIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SecurityIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SchemeUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesOrderLineIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SalesOrderIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RevisedForecastLineIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RequiredCustomsIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RequestForQuotationLineIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReleaseIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RegistrationNationalityIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RegistrationIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReferencedConsignmentIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ReferenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RailCarIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RadioCallSignIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProfileIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProfileExecutionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ProductTraceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrimaryAccountNumberIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PreviousVersionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PreviousJobIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PrepaidPaymentReferenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PerformingCarrierAssignedIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentTermsDetailsUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentMeansIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParentDocumentVersionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParentDocumentLineReferenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ParentDocumentIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OriginalJobIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OriginalContractingSystemIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OpenTenderIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OntologyUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NetworkIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(NationalityIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MarkingIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LowerOrangeHazardPlacardIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LotNumberIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LogoReferenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LocationIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LoadingSequenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LineIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LicensePlateIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(LanguageIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(JourneyIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IssuerIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IssueNumberIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InstructionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(InformationUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ImmobilizationCertificateIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdentificationIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(HazardClassIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(FreightForwarderAssignedIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExtendedIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExchangeMarketIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EndpointIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EconomicOperatorRegistryUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DocumentIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomizationIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerAssignedAccountIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractedCarrierAssignedIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ContractFolderIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConsumptionReportIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConsumptionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConsignorAssignedIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ConsigneeAssignedIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CompanyIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ChipApplicationIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CarrierAssignedIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Cv2IdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BuyerProfileUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BuyerEventIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessIdentityEvidenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BusinessClassificationEvidenceIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BrokerAssignedIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BarcodeSymbologyIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AwardingCriterionIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AuctionUriType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AttributeIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AircraftIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AgencyIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AdditionalAccountIdType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AccountIdType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -123,117 +123,117 @@
     public partial class IdentifierType
     {
 
-        private string schemeIDField;
+        private string _schemeIdField;
 
-        private string schemeNameField;
+        private string _schemeNameField;
 
-        private string schemeAgencyIDField;
+        private string _schemeAgencyIdField;
 
-        private string schemeAgencyNameField;
+        private string _schemeAgencyNameField;
 
-        private string schemeVersionIDField;
+        private string _schemeVersionIdField;
 
-        private string schemeDataURIField;
+        private string _schemeDataUriField;
 
-        private string schemeURIField;
+        private string _schemeUriField;
 
-        private string valueField;
+        private string _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string schemeID
+        public string SchemeId
         {
             get
             {
-                return schemeIDField;
+                return _schemeIdField;
             }
             set
             {
-                schemeIDField = value;
+                _schemeIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string schemeName
+        public string SchemeName
         {
             get
             {
-                return schemeNameField;
+                return _schemeNameField;
             }
             set
             {
-                schemeNameField = value;
+                _schemeNameField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string schemeAgencyID
+        public string SchemeAgencyId
         {
             get
             {
-                return schemeAgencyIDField;
+                return _schemeAgencyIdField;
             }
             set
             {
-                schemeAgencyIDField = value;
+                _schemeAgencyIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string schemeAgencyName
+        public string SchemeAgencyName
         {
             get
             {
-                return schemeAgencyNameField;
+                return _schemeAgencyNameField;
             }
             set
             {
-                schemeAgencyNameField = value;
+                _schemeAgencyNameField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string schemeVersionID
+        public string SchemeVersionId
         {
             get
             {
-                return schemeVersionIDField;
+                return _schemeVersionIdField;
             }
             set
             {
-                schemeVersionIDField = value;
+                _schemeVersionIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string schemeDataURI
+        public string SchemeDataUri
         {
             get
             {
-                return schemeDataURIField;
+                return _schemeDataUriField;
             }
             set
             {
-                schemeDataURIField = value;
+                _schemeDataUriField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string schemeURI
+        public string SchemeUri
         {
             get
             {
-                return schemeURIField;
+                return _schemeUriField;
             }
             set
             {
-                schemeURIField = value;
+                _schemeUriField = value;
             }
         }
 
@@ -243,11 +243,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

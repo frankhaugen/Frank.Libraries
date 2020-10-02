@@ -10,15 +10,15 @@
     public partial class EconomicOperatorShortListType
     {
 
-        private LimitationDescriptionType[] limitationDescriptionField;
+        private LimitationDescriptionType[] _limitationDescriptionField;
 
-        private ExpectedQuantityType expectedQuantityField;
+        private ExpectedQuantityType _expectedQuantityField;
 
-        private MaximumQuantityType maximumQuantityField;
+        private MaximumQuantityType _maximumQuantityField;
 
-        private MinimumQuantityType minimumQuantityField;
+        private MinimumQuantityType _minimumQuantityField;
 
-        private PartyType[] preSelectedPartyField;
+        private PartyType[] _preSelectedPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("LimitationDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return limitationDescriptionField;
+                return _limitationDescriptionField;
             }
             set
             {
-                limitationDescriptionField = value;
+                _limitationDescriptionField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return expectedQuantityField;
+                return _expectedQuantityField;
             }
             set
             {
-                expectedQuantityField = value;
+                _expectedQuantityField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return maximumQuantityField;
+                return _maximumQuantityField;
             }
             set
             {
-                maximumQuantityField = value;
+                _maximumQuantityField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return minimumQuantityField;
+                return _minimumQuantityField;
             }
             set
             {
-                minimumQuantityField = value;
+                _minimumQuantityField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return preSelectedPartyField;
+                return _preSelectedPartyField;
             }
             set
             {
-                preSelectedPartyField = value;
+                _preSelectedPartyField = value;
             }
         }
     }

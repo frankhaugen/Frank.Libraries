@@ -10,19 +10,19 @@
     public partial class CompletedTaskType
     {
 
-        private AnnualAverageAmountType annualAverageAmountField;
+        private AnnualAverageAmountType _annualAverageAmountField;
 
-        private TotalTaskAmountType totalTaskAmountField;
+        private TotalTaskAmountType _totalTaskAmountField;
 
-        private PartyCapacityAmountType partyCapacityAmountField;
+        private PartyCapacityAmountType _partyCapacityAmountField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private EvidenceSuppliedType[] evidenceSuppliedField;
+        private EvidenceSuppliedType[] _evidenceSuppliedField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
-        private CustomerPartyType recipientCustomerPartyField;
+        private CustomerPartyType _recipientCustomerPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return annualAverageAmountField;
+                return _annualAverageAmountField;
             }
             set
             {
-                annualAverageAmountField = value;
+                _annualAverageAmountField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return totalTaskAmountField;
+                return _totalTaskAmountField;
             }
             set
             {
-                totalTaskAmountField = value;
+                _totalTaskAmountField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return partyCapacityAmountField;
+                return _partyCapacityAmountField;
             }
             set
             {
-                partyCapacityAmountField = value;
+                _partyCapacityAmountField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return evidenceSuppliedField;
+                return _evidenceSuppliedField;
             }
             set
             {
-                evidenceSuppliedField = value;
+                _evidenceSuppliedField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return recipientCustomerPartyField;
+                return _recipientCustomerPartyField;
             }
             set
             {
-                recipientCustomerPartyField = value;
+                _recipientCustomerPartyField = value;
             }
         }
     }

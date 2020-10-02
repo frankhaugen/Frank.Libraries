@@ -10,11 +10,11 @@
     public partial class TransformType
     {
 
-        private object[] itemsField;
+        private object[] _itemsField;
 
-        private string[] textField;
+        private string[] _textField;
 
-        private string algorithmField;
+        private string _algorithmField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
@@ -23,11 +23,11 @@
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return textField;
+                return _textField;
             }
             set
             {
-                textField = value;
+                _textField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return algorithmField;
+                return _algorithmField;
             }
             set
             {
-                algorithmField = value;
+                _algorithmField = value;
             }
         }
     }

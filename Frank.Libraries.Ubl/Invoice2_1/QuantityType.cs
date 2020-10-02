@@ -75,69 +75,69 @@
     public partial class QuantityType
     {
 
-        private string unitCodeField;
+        private string _unitCodeField;
 
-        private string unitCodeListIDField;
+        private string _unitCodeListIdField;
 
-        private string unitCodeListAgencyIDField;
+        private string _unitCodeListAgencyIdField;
 
-        private string unitCodeListAgencyNameField;
+        private string _unitCodeListAgencyNameField;
 
-        private decimal valueField;
+        private decimal _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string unitCode
+        public string UnitCode
         {
             get
             {
-                return unitCodeField;
+                return _unitCodeField;
             }
             set
             {
-                unitCodeField = value;
+                _unitCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string unitCodeListID
+        public string UnitCodeListId
         {
             get
             {
-                return unitCodeListIDField;
+                return _unitCodeListIdField;
             }
             set
             {
-                unitCodeListIDField = value;
+                _unitCodeListIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string unitCodeListAgencyID
+        public string UnitCodeListAgencyId
         {
             get
             {
-                return unitCodeListAgencyIDField;
+                return _unitCodeListAgencyIdField;
             }
             set
             {
-                unitCodeListAgencyIDField = value;
+                _unitCodeListAgencyIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string unitCodeListAgencyName
+        public string UnitCodeListAgencyName
         {
             get
             {
-                return unitCodeListAgencyNameField;
+                return _unitCodeListAgencyNameField;
             }
             set
             {
-                unitCodeListAgencyNameField = value;
+                _unitCodeListAgencyNameField = value;
             }
         }
 
@@ -147,11 +147,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

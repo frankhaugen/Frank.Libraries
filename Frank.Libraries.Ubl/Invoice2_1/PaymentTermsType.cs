@@ -10,83 +10,83 @@
     public partial class PaymentTermsType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private PaymentMeansIDType[] paymentMeansIDField;
+        private PaymentMeansIdType[] _paymentMeansIdField;
 
-        private PrepaidPaymentReferenceIDType prepaidPaymentReferenceIDField;
+        private PrepaidPaymentReferenceIdType _prepaidPaymentReferenceIdField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private ReferenceEventCodeType referenceEventCodeField;
+        private ReferenceEventCodeType _referenceEventCodeField;
 
-        private SettlementDiscountPercentType settlementDiscountPercentField;
+        private SettlementDiscountPercentType _settlementDiscountPercentField;
 
-        private PenaltySurchargePercentType penaltySurchargePercentField;
+        private PenaltySurchargePercentType _penaltySurchargePercentField;
 
-        private PaymentPercentType paymentPercentField;
+        private PaymentPercentType _paymentPercentField;
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private SettlementDiscountAmountType settlementDiscountAmountField;
+        private SettlementDiscountAmountType _settlementDiscountAmountField;
 
-        private PenaltyAmountType penaltyAmountField;
+        private PenaltyAmountType _penaltyAmountField;
 
-        private PaymentTermsDetailsURIType paymentTermsDetailsURIField;
+        private PaymentTermsDetailsUriType _paymentTermsDetailsUriField;
 
-        private PaymentDueDateType paymentDueDateField;
+        private PaymentDueDateType _paymentDueDateField;
 
-        private InstallmentDueDateType installmentDueDateField;
+        private InstallmentDueDateType _installmentDueDateField;
 
-        private InvoicingPartyReferenceType invoicingPartyReferenceField;
+        private InvoicingPartyReferenceType _invoicingPartyReferenceField;
 
-        private PeriodType settlementPeriodField;
+        private PeriodType _settlementPeriodField;
 
-        private PeriodType penaltyPeriodField;
+        private PeriodType _penaltyPeriodField;
 
-        private ExchangeRateType exchangeRateField;
+        private ExchangeRateType _exchangeRateField;
 
-        private PeriodType validityPeriodField;
+        private PeriodType _validityPeriodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("PaymentMeansID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public PaymentMeansIDType[] PaymentMeansID
+        public PaymentMeansIdType[] PaymentMeansId
         {
             get
             {
-                return paymentMeansIDField;
+                return _paymentMeansIdField;
             }
             set
             {
-                paymentMeansIDField = value;
+                _paymentMeansIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public PrepaidPaymentReferenceIDType PrepaidPaymentReferenceID
+        public PrepaidPaymentReferenceIdType PrepaidPaymentReferenceId
         {
             get
             {
-                return prepaidPaymentReferenceIDField;
+                return _prepaidPaymentReferenceIdField;
             }
             set
             {
-                prepaidPaymentReferenceIDField = value;
+                _prepaidPaymentReferenceIdField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return referenceEventCodeField;
+                return _referenceEventCodeField;
             }
             set
             {
-                referenceEventCodeField = value;
+                _referenceEventCodeField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return settlementDiscountPercentField;
+                return _settlementDiscountPercentField;
             }
             set
             {
-                settlementDiscountPercentField = value;
+                _settlementDiscountPercentField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return penaltySurchargePercentField;
+                return _penaltySurchargePercentField;
             }
             set
             {
-                penaltySurchargePercentField = value;
+                _penaltySurchargePercentField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return paymentPercentField;
+                return _paymentPercentField;
             }
             set
             {
-                paymentPercentField = value;
+                _paymentPercentField = value;
             }
         }
 
@@ -166,11 +166,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                return settlementDiscountAmountField;
+                return _settlementDiscountAmountField;
             }
             set
             {
-                settlementDiscountAmountField = value;
+                _settlementDiscountAmountField = value;
             }
         }
 
@@ -194,25 +194,25 @@
         {
             get
             {
-                return penaltyAmountField;
+                return _penaltyAmountField;
             }
             set
             {
-                penaltyAmountField = value;
+                _penaltyAmountField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public PaymentTermsDetailsURIType PaymentTermsDetailsURI
+        public PaymentTermsDetailsUriType PaymentTermsDetailsUri
         {
             get
             {
-                return paymentTermsDetailsURIField;
+                return _paymentTermsDetailsUriField;
             }
             set
             {
-                paymentTermsDetailsURIField = value;
+                _paymentTermsDetailsUriField = value;
             }
         }
 
@@ -222,11 +222,11 @@
         {
             get
             {
-                return paymentDueDateField;
+                return _paymentDueDateField;
             }
             set
             {
-                paymentDueDateField = value;
+                _paymentDueDateField = value;
             }
         }
 
@@ -236,11 +236,11 @@
         {
             get
             {
-                return installmentDueDateField;
+                return _installmentDueDateField;
             }
             set
             {
-                installmentDueDateField = value;
+                _installmentDueDateField = value;
             }
         }
 
@@ -250,11 +250,11 @@
         {
             get
             {
-                return invoicingPartyReferenceField;
+                return _invoicingPartyReferenceField;
             }
             set
             {
-                invoicingPartyReferenceField = value;
+                _invoicingPartyReferenceField = value;
             }
         }
 
@@ -263,11 +263,11 @@
         {
             get
             {
-                return settlementPeriodField;
+                return _settlementPeriodField;
             }
             set
             {
-                settlementPeriodField = value;
+                _settlementPeriodField = value;
             }
         }
 
@@ -276,11 +276,11 @@
         {
             get
             {
-                return penaltyPeriodField;
+                return _penaltyPeriodField;
             }
             set
             {
-                penaltyPeriodField = value;
+                _penaltyPeriodField = value;
             }
         }
 
@@ -289,11 +289,11 @@
         {
             get
             {
-                return exchangeRateField;
+                return _exchangeRateField;
             }
             set
             {
-                exchangeRateField = value;
+                _exchangeRateField = value;
             }
         }
 
@@ -302,11 +302,11 @@
         {
             get
             {
-                return validityPeriodField;
+                return _validityPeriodField;
             }
             set
             {
-                validityPeriodField = value;
+                _validityPeriodField = value;
             }
         }
     }

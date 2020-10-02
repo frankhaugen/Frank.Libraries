@@ -10,9 +10,9 @@
     public partial class PromotionalEventLineItemType
     {
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private EventLineItemType eventLineItemField;
+        private EventLineItemType _eventLineItemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return eventLineItemField;
+                return _eventLineItemField;
             }
             set
             {
-                eventLineItemField = value;
+                _eventLineItemField = value;
             }
         }
     }

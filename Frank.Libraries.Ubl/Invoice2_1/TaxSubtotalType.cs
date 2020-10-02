@@ -10,25 +10,25 @@
     public partial class TaxSubtotalType
     {
 
-        private TaxableAmountType taxableAmountField;
+        private TaxableAmountType _taxableAmountField;
 
-        private TaxAmountType taxAmountField;
+        private TaxAmountType _taxAmountField;
 
-        private CalculationSequenceNumericType calculationSequenceNumericField;
+        private CalculationSequenceNumericType _calculationSequenceNumericField;
 
-        private TransactionCurrencyTaxAmountType transactionCurrencyTaxAmountField;
+        private TransactionCurrencyTaxAmountType _transactionCurrencyTaxAmountField;
 
-        private PercentType1 percentField;
+        private PercentType1 _percentField;
 
-        private BaseUnitMeasureType baseUnitMeasureField;
+        private BaseUnitMeasureType _baseUnitMeasureField;
 
-        private PerUnitAmountType perUnitAmountField;
+        private PerUnitAmountType _perUnitAmountField;
 
-        private TierRangeType tierRangeField;
+        private TierRangeType _tierRangeField;
 
-        private TierRatePercentType tierRatePercentField;
+        private TierRatePercentType _tierRatePercentField;
 
-        private TaxCategoryType taxCategoryField;
+        private TaxCategoryType _taxCategoryField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -36,11 +36,11 @@
         {
             get
             {
-                return taxableAmountField;
+                return _taxableAmountField;
             }
             set
             {
-                taxableAmountField = value;
+                _taxableAmountField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return taxAmountField;
+                return _taxAmountField;
             }
             set
             {
-                taxAmountField = value;
+                _taxAmountField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return calculationSequenceNumericField;
+                return _calculationSequenceNumericField;
             }
             set
             {
-                calculationSequenceNumericField = value;
+                _calculationSequenceNumericField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return transactionCurrencyTaxAmountField;
+                return _transactionCurrencyTaxAmountField;
             }
             set
             {
-                transactionCurrencyTaxAmountField = value;
+                _transactionCurrencyTaxAmountField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return percentField;
+                return _percentField;
             }
             set
             {
-                percentField = value;
+                _percentField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return baseUnitMeasureField;
+                return _baseUnitMeasureField;
             }
             set
             {
-                baseUnitMeasureField = value;
+                _baseUnitMeasureField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return perUnitAmountField;
+                return _perUnitAmountField;
             }
             set
             {
-                perUnitAmountField = value;
+                _perUnitAmountField = value;
             }
         }
 
@@ -134,11 +134,11 @@
         {
             get
             {
-                return tierRangeField;
+                return _tierRangeField;
             }
             set
             {
-                tierRangeField = value;
+                _tierRangeField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return tierRatePercentField;
+                return _tierRatePercentField;
             }
             set
             {
-                tierRatePercentField = value;
+                _tierRatePercentField = value;
             }
         }
 
@@ -161,11 +161,11 @@
         {
             get
             {
-                return taxCategoryField;
+                return _taxCategoryField;
             }
             set
             {
-                taxCategoryField = value;
+                _taxCategoryField = value;
             }
         }
     }

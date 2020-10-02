@@ -10,27 +10,27 @@
     public partial class TransportEquipmentSealType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private SealIssuerTypeCodeType sealIssuerTypeCodeField;
+        private SealIssuerTypeCodeType _sealIssuerTypeCodeField;
 
-        private ConditionType conditionField;
+        private ConditionType _conditionField;
 
-        private SealStatusCodeType sealStatusCodeField;
+        private SealStatusCodeType _sealStatusCodeField;
 
-        private SealingPartyTypeType sealingPartyTypeField;
+        private SealingPartyTypeType _sealingPartyTypeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return sealIssuerTypeCodeField;
+                return _sealIssuerTypeCodeField;
             }
             set
             {
-                sealIssuerTypeCodeField = value;
+                _sealIssuerTypeCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return conditionField;
+                return _conditionField;
             }
             set
             {
-                conditionField = value;
+                _conditionField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return sealStatusCodeField;
+                return _sealStatusCodeField;
             }
             set
             {
-                sealStatusCodeField = value;
+                _sealStatusCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return sealingPartyTypeField;
+                return _sealingPartyTypeField;
             }
             set
             {
-                sealingPartyTypeField = value;
+                _sealingPartyTypeField = value;
             }
         }
     }

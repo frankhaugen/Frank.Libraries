@@ -10,37 +10,37 @@
     public partial class TenderResultType
     {
 
-        private TenderResultCodeType tenderResultCodeField;
+        private TenderResultCodeType _tenderResultCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private AdvertisementAmountType advertisementAmountField;
+        private AdvertisementAmountType _advertisementAmountField;
 
-        private AwardDateType awardDateField;
+        private AwardDateType _awardDateField;
 
-        private AwardTimeType awardTimeField;
+        private AwardTimeType _awardTimeField;
 
-        private ReceivedTenderQuantityType receivedTenderQuantityField;
+        private ReceivedTenderQuantityType _receivedTenderQuantityField;
 
-        private LowerTenderAmountType lowerTenderAmountField;
+        private LowerTenderAmountType _lowerTenderAmountField;
 
-        private HigherTenderAmountType higherTenderAmountField;
+        private HigherTenderAmountType _higherTenderAmountField;
 
-        private StartDateType startDateField;
+        private StartDateType _startDateField;
 
-        private ReceivedElectronicTenderQuantityType receivedElectronicTenderQuantityField;
+        private ReceivedElectronicTenderQuantityType _receivedElectronicTenderQuantityField;
 
-        private ReceivedForeignTenderQuantityType receivedForeignTenderQuantityField;
+        private ReceivedForeignTenderQuantityType _receivedForeignTenderQuantityField;
 
-        private ContractType contractField;
+        private ContractType _contractField;
 
-        private TenderedProjectType awardedTenderedProjectField;
+        private TenderedProjectType _awardedTenderedProjectField;
 
-        private PeriodType contractFormalizationPeriodField;
+        private PeriodType _contractFormalizationPeriodField;
 
-        private SubcontractTermsType[] subcontractTermsField;
+        private SubcontractTermsType[] _subcontractTermsField;
 
-        private WinningPartyType[] winningPartyField;
+        private WinningPartyType[] _winningPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -48,11 +48,11 @@
         {
             get
             {
-                return tenderResultCodeField;
+                return _tenderResultCodeField;
             }
             set
             {
-                tenderResultCodeField = value;
+                _tenderResultCodeField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return advertisementAmountField;
+                return _advertisementAmountField;
             }
             set
             {
-                advertisementAmountField = value;
+                _advertisementAmountField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return awardDateField;
+                return _awardDateField;
             }
             set
             {
-                awardDateField = value;
+                _awardDateField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return awardTimeField;
+                return _awardTimeField;
             }
             set
             {
-                awardTimeField = value;
+                _awardTimeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return receivedTenderQuantityField;
+                return _receivedTenderQuantityField;
             }
             set
             {
-                receivedTenderQuantityField = value;
+                _receivedTenderQuantityField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return lowerTenderAmountField;
+                return _lowerTenderAmountField;
             }
             set
             {
-                lowerTenderAmountField = value;
+                _lowerTenderAmountField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return higherTenderAmountField;
+                return _higherTenderAmountField;
             }
             set
             {
-                higherTenderAmountField = value;
+                _higherTenderAmountField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return startDateField;
+                return _startDateField;
             }
             set
             {
-                startDateField = value;
+                _startDateField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return receivedElectronicTenderQuantityField;
+                return _receivedElectronicTenderQuantityField;
             }
             set
             {
-                receivedElectronicTenderQuantityField = value;
+                _receivedElectronicTenderQuantityField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return receivedForeignTenderQuantityField;
+                return _receivedForeignTenderQuantityField;
             }
             set
             {
-                receivedForeignTenderQuantityField = value;
+                _receivedForeignTenderQuantityField = value;
             }
         }
 
@@ -201,11 +201,11 @@
         {
             get
             {
-                return contractField;
+                return _contractField;
             }
             set
             {
-                contractField = value;
+                _contractField = value;
             }
         }
 
@@ -214,11 +214,11 @@
         {
             get
             {
-                return awardedTenderedProjectField;
+                return _awardedTenderedProjectField;
             }
             set
             {
-                awardedTenderedProjectField = value;
+                _awardedTenderedProjectField = value;
             }
         }
 
@@ -227,11 +227,11 @@
         {
             get
             {
-                return contractFormalizationPeriodField;
+                return _contractFormalizationPeriodField;
             }
             set
             {
-                contractFormalizationPeriodField = value;
+                _contractFormalizationPeriodField = value;
             }
         }
 
@@ -241,11 +241,11 @@
         {
             get
             {
-                return subcontractTermsField;
+                return _subcontractTermsField;
             }
             set
             {
-                subcontractTermsField = value;
+                _subcontractTermsField = value;
             }
         }
 
@@ -255,11 +255,11 @@
         {
             get
             {
-                return winningPartyField;
+                return _winningPartyField;
             }
             set
             {
-                winningPartyField = value;
+                _winningPartyField = value;
             }
         }
     }

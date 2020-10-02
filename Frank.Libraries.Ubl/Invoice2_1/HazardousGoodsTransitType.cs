@@ -10,19 +10,19 @@
     public partial class HazardousGoodsTransitType
     {
 
-        private TransportEmergencyCardCodeType transportEmergencyCardCodeField;
+        private TransportEmergencyCardCodeType _transportEmergencyCardCodeField;
 
-        private PackingCriteriaCodeType packingCriteriaCodeField;
+        private PackingCriteriaCodeType _packingCriteriaCodeField;
 
-        private HazardousRegulationCodeType hazardousRegulationCodeField;
+        private HazardousRegulationCodeType _hazardousRegulationCodeField;
 
-        private InhalationToxicityZoneCodeType inhalationToxicityZoneCodeField;
+        private InhalationToxicityZoneCodeType _inhalationToxicityZoneCodeField;
 
-        private TransportAuthorizationCodeType transportAuthorizationCodeField;
+        private TransportAuthorizationCodeType _transportAuthorizationCodeField;
 
-        private TemperatureType maximumTemperatureField;
+        private TemperatureType _maximumTemperatureField;
 
-        private TemperatureType minimumTemperatureField;
+        private TemperatureType _minimumTemperatureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return transportEmergencyCardCodeField;
+                return _transportEmergencyCardCodeField;
             }
             set
             {
-                transportEmergencyCardCodeField = value;
+                _transportEmergencyCardCodeField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return packingCriteriaCodeField;
+                return _packingCriteriaCodeField;
             }
             set
             {
-                packingCriteriaCodeField = value;
+                _packingCriteriaCodeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return hazardousRegulationCodeField;
+                return _hazardousRegulationCodeField;
             }
             set
             {
-                hazardousRegulationCodeField = value;
+                _hazardousRegulationCodeField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return inhalationToxicityZoneCodeField;
+                return _inhalationToxicityZoneCodeField;
             }
             set
             {
-                inhalationToxicityZoneCodeField = value;
+                _inhalationToxicityZoneCodeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return transportAuthorizationCodeField;
+                return _transportAuthorizationCodeField;
             }
             set
             {
-                transportAuthorizationCodeField = value;
+                _transportAuthorizationCodeField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return maximumTemperatureField;
+                return _maximumTemperatureField;
             }
             set
             {
-                maximumTemperatureField = value;
+                _maximumTemperatureField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return minimumTemperatureField;
+                return _minimumTemperatureField;
             }
             set
             {
-                minimumTemperatureField = value;
+                _minimumTemperatureField = value;
             }
         }
     }

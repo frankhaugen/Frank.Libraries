@@ -10,29 +10,29 @@
     public partial class ConsumptionCorrectionType
     {
 
-        private CorrectionTypeType correctionTypeField;
+        private CorrectionTypeType _correctionTypeField;
 
-        private CorrectionTypeCodeType correctionTypeCodeField;
+        private CorrectionTypeCodeType _correctionTypeCodeField;
 
-        private MeterNumberType meterNumberField;
+        private MeterNumberType _meterNumberField;
 
-        private GasPressureQuantityType gasPressureQuantityField;
+        private GasPressureQuantityType _gasPressureQuantityField;
 
-        private ActualTemperatureReductionQuantityType actualTemperatureReductionQuantityField;
+        private ActualTemperatureReductionQuantityType _actualTemperatureReductionQuantityField;
 
-        private NormalTemperatureReductionQuantityType normalTemperatureReductionQuantityField;
+        private NormalTemperatureReductionQuantityType _normalTemperatureReductionQuantityField;
 
-        private DifferenceTemperatureReductionQuantityType differenceTemperatureReductionQuantityField;
+        private DifferenceTemperatureReductionQuantityType _differenceTemperatureReductionQuantityField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private CorrectionUnitAmountType correctionUnitAmountField;
+        private CorrectionUnitAmountType _correctionUnitAmountField;
 
-        private ConsumptionEnergyQuantityType consumptionEnergyQuantityField;
+        private ConsumptionEnergyQuantityType _consumptionEnergyQuantityField;
 
-        private ConsumptionWaterQuantityType consumptionWaterQuantityField;
+        private ConsumptionWaterQuantityType _consumptionWaterQuantityField;
 
-        private CorrectionAmountType correctionAmountField;
+        private CorrectionAmountType _correctionAmountField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -40,11 +40,11 @@
         {
             get
             {
-                return correctionTypeField;
+                return _correctionTypeField;
             }
             set
             {
-                correctionTypeField = value;
+                _correctionTypeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return correctionTypeCodeField;
+                return _correctionTypeCodeField;
             }
             set
             {
-                correctionTypeCodeField = value;
+                _correctionTypeCodeField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return meterNumberField;
+                return _meterNumberField;
             }
             set
             {
-                meterNumberField = value;
+                _meterNumberField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return gasPressureQuantityField;
+                return _gasPressureQuantityField;
             }
             set
             {
-                gasPressureQuantityField = value;
+                _gasPressureQuantityField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return actualTemperatureReductionQuantityField;
+                return _actualTemperatureReductionQuantityField;
             }
             set
             {
-                actualTemperatureReductionQuantityField = value;
+                _actualTemperatureReductionQuantityField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return normalTemperatureReductionQuantityField;
+                return _normalTemperatureReductionQuantityField;
             }
             set
             {
-                normalTemperatureReductionQuantityField = value;
+                _normalTemperatureReductionQuantityField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return differenceTemperatureReductionQuantityField;
+                return _differenceTemperatureReductionQuantityField;
             }
             set
             {
-                differenceTemperatureReductionQuantityField = value;
+                _differenceTemperatureReductionQuantityField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return correctionUnitAmountField;
+                return _correctionUnitAmountField;
             }
             set
             {
-                correctionUnitAmountField = value;
+                _correctionUnitAmountField = value;
             }
         }
 
@@ -166,11 +166,11 @@
         {
             get
             {
-                return consumptionEnergyQuantityField;
+                return _consumptionEnergyQuantityField;
             }
             set
             {
-                consumptionEnergyQuantityField = value;
+                _consumptionEnergyQuantityField = value;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                return consumptionWaterQuantityField;
+                return _consumptionWaterQuantityField;
             }
             set
             {
-                consumptionWaterQuantityField = value;
+                _consumptionWaterQuantityField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return correctionAmountField;
+                return _correctionAmountField;
             }
             set
             {
-                correctionAmountField = value;
+                _correctionAmountField = value;
             }
         }
     }

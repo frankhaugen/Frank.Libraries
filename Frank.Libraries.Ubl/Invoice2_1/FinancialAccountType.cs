@@ -10,35 +10,35 @@
     public partial class FinancialAccountType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private AliasNameType aliasNameField;
+        private AliasNameType _aliasNameField;
 
-        private AccountTypeCodeType accountTypeCodeField;
+        private AccountTypeCodeType _accountTypeCodeField;
 
-        private AccountFormatCodeType accountFormatCodeField;
+        private AccountFormatCodeType _accountFormatCodeField;
 
-        private CurrencyCodeType currencyCodeField;
+        private CurrencyCodeType _currencyCodeField;
 
-        private PaymentNoteType[] paymentNoteField;
+        private PaymentNoteType[] _paymentNoteField;
 
-        private BranchType financialInstitutionBranchField;
+        private BranchType _financialInstitutionBranchField;
 
-        private CountryType countryField;
+        private CountryType _countryField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return aliasNameField;
+                return _aliasNameField;
             }
             set
             {
-                aliasNameField = value;
+                _aliasNameField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return accountTypeCodeField;
+                return _accountTypeCodeField;
             }
             set
             {
-                accountTypeCodeField = value;
+                _accountTypeCodeField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return accountFormatCodeField;
+                return _accountFormatCodeField;
             }
             set
             {
-                accountFormatCodeField = value;
+                _accountFormatCodeField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return currencyCodeField;
+                return _currencyCodeField;
             }
             set
             {
-                currencyCodeField = value;
+                _currencyCodeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return paymentNoteField;
+                return _paymentNoteField;
             }
             set
             {
-                paymentNoteField = value;
+                _paymentNoteField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return financialInstitutionBranchField;
+                return _financialInstitutionBranchField;
             }
             set
             {
-                financialInstitutionBranchField = value;
+                _financialInstitutionBranchField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return countryField;
+                return _countryField;
             }
             set
             {
-                countryField = value;
+                _countryField = value;
             }
         }
     }

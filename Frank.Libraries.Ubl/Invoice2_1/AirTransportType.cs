@@ -10,19 +10,19 @@
     public partial class AirTransportType
     {
 
-        private AircraftIDType aircraftIDField;
+        private AircraftIdType _aircraftIdField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public AircraftIDType AircraftID
+        public AircraftIdType AircraftId
         {
             get
             {
-                return aircraftIDField;
+                return _aircraftIdField;
             }
             set
             {
-                aircraftIDField = value;
+                _aircraftIdField = value;
             }
         }
     }

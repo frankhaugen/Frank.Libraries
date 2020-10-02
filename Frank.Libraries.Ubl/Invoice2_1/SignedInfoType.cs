@@ -10,24 +10,24 @@
     public partial class SignedInfoType
     {
 
-        private CanonicalizationMethodType1 canonicalizationMethodField;
+        private CanonicalizationMethodType1 _canonicalizationMethodField;
 
-        private SignatureMethodType1 signatureMethodField;
+        private SignatureMethodType1 _signatureMethodField;
 
-        private ReferenceType1[] referenceField;
+        private ReferenceType1[] _referenceField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         public CanonicalizationMethodType1 CanonicalizationMethod
         {
             get
             {
-                return canonicalizationMethodField;
+                return _canonicalizationMethodField;
             }
             set
             {
-                canonicalizationMethodField = value;
+                _canonicalizationMethodField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return signatureMethodField;
+                return _signatureMethodField;
             }
             set
             {
-                signatureMethodField = value;
+                _signatureMethodField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return referenceField;
+                return _referenceField;
             }
             set
             {
-                referenceField = value;
+                _referenceField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

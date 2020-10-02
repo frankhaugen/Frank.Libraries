@@ -10,33 +10,33 @@
     public partial class InventoryReportLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private InventoryValueAmountType inventoryValueAmountField;
+        private InventoryValueAmountType _inventoryValueAmountField;
 
-        private AvailabilityDateType availabilityDateField;
+        private AvailabilityDateType _availabilityDateField;
 
-        private AvailabilityStatusCodeType availabilityStatusCodeField;
+        private AvailabilityStatusCodeType _availabilityStatusCodeField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
-        private LocationType1 inventoryLocationField;
+        private LocationType1 _inventoryLocationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return inventoryValueAmountField;
+                return _inventoryValueAmountField;
             }
             set
             {
-                inventoryValueAmountField = value;
+                _inventoryValueAmountField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return availabilityDateField;
+                return _availabilityDateField;
             }
             set
             {
-                availabilityDateField = value;
+                _availabilityDateField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return availabilityStatusCodeField;
+                return _availabilityStatusCodeField;
             }
             set
             {
-                availabilityStatusCodeField = value;
+                _availabilityStatusCodeField = value;
             }
         }
 
@@ -115,11 +115,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return inventoryLocationField;
+                return _inventoryLocationField;
             }
             set
             {
-                inventoryLocationField = value;
+                _inventoryLocationField = value;
             }
         }
     }

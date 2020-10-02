@@ -7,14 +7,14 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [System.Xml.Serialization.XmlRootAttribute("EncapsulatedPKIData", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-    public partial class EncapsulatedPKIDataType
+    public partial class EncapsulatedPkiDataType
     {
 
-        private string idField;
+        private string _idField;
 
-        private string encodingField;
+        private string _encodingField;
 
-        private byte[] valueField;
+        private byte[] _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return encodingField;
+                return _encodingField;
             }
             set
             {
-                encodingField = value;
+                _encodingField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

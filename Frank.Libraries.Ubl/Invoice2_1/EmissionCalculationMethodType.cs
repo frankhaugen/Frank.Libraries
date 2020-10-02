@@ -10,13 +10,13 @@
     public partial class EmissionCalculationMethodType
     {
 
-        private CalculationMethodCodeType calculationMethodCodeField;
+        private CalculationMethodCodeType _calculationMethodCodeField;
 
-        private FullnessIndicationCodeType fullnessIndicationCodeField;
+        private FullnessIndicationCodeType _fullnessIndicationCodeField;
 
-        private LocationType1 measurementFromLocationField;
+        private LocationType1 _measurementFromLocationField;
 
-        private LocationType1 measurementToLocationField;
+        private LocationType1 _measurementToLocationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return calculationMethodCodeField;
+                return _calculationMethodCodeField;
             }
             set
             {
-                calculationMethodCodeField = value;
+                _calculationMethodCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return fullnessIndicationCodeField;
+                return _fullnessIndicationCodeField;
             }
             set
             {
-                fullnessIndicationCodeField = value;
+                _fullnessIndicationCodeField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return measurementFromLocationField;
+                return _measurementFromLocationField;
             }
             set
             {
-                measurementFromLocationField = value;
+                _measurementFromLocationField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return measurementToLocationField;
+                return _measurementToLocationField;
             }
             set
             {
-                measurementToLocationField = value;
+                _measurementToLocationField = value;
             }
         }
     }

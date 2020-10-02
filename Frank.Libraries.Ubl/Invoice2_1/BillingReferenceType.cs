@@ -10,32 +10,32 @@
     public partial class BillingReferenceType
     {
 
-        private DocumentReferenceType invoiceDocumentReferenceField;
+        private DocumentReferenceType _invoiceDocumentReferenceField;
 
-        private DocumentReferenceType selfBilledInvoiceDocumentReferenceField;
+        private DocumentReferenceType _selfBilledInvoiceDocumentReferenceField;
 
-        private DocumentReferenceType creditNoteDocumentReferenceField;
+        private DocumentReferenceType _creditNoteDocumentReferenceField;
 
-        private DocumentReferenceType selfBilledCreditNoteDocumentReferenceField;
+        private DocumentReferenceType _selfBilledCreditNoteDocumentReferenceField;
 
-        private DocumentReferenceType debitNoteDocumentReferenceField;
+        private DocumentReferenceType _debitNoteDocumentReferenceField;
 
-        private DocumentReferenceType reminderDocumentReferenceField;
+        private DocumentReferenceType _reminderDocumentReferenceField;
 
-        private DocumentReferenceType additionalDocumentReferenceField;
+        private DocumentReferenceType _additionalDocumentReferenceField;
 
-        private BillingReferenceLineType[] billingReferenceLineField;
+        private BillingReferenceLineType[] _billingReferenceLineField;
 
         /// <remarks/>
         public DocumentReferenceType InvoiceDocumentReference
         {
             get
             {
-                return invoiceDocumentReferenceField;
+                return _invoiceDocumentReferenceField;
             }
             set
             {
-                invoiceDocumentReferenceField = value;
+                _invoiceDocumentReferenceField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return selfBilledInvoiceDocumentReferenceField;
+                return _selfBilledInvoiceDocumentReferenceField;
             }
             set
             {
-                selfBilledInvoiceDocumentReferenceField = value;
+                _selfBilledInvoiceDocumentReferenceField = value;
             }
         }
 
@@ -57,11 +57,11 @@
         {
             get
             {
-                return creditNoteDocumentReferenceField;
+                return _creditNoteDocumentReferenceField;
             }
             set
             {
-                creditNoteDocumentReferenceField = value;
+                _creditNoteDocumentReferenceField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return selfBilledCreditNoteDocumentReferenceField;
+                return _selfBilledCreditNoteDocumentReferenceField;
             }
             set
             {
-                selfBilledCreditNoteDocumentReferenceField = value;
+                _selfBilledCreditNoteDocumentReferenceField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return debitNoteDocumentReferenceField;
+                return _debitNoteDocumentReferenceField;
             }
             set
             {
-                debitNoteDocumentReferenceField = value;
+                _debitNoteDocumentReferenceField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return reminderDocumentReferenceField;
+                return _reminderDocumentReferenceField;
             }
             set
             {
-                reminderDocumentReferenceField = value;
+                _reminderDocumentReferenceField = value;
             }
         }
 
@@ -109,11 +109,11 @@
         {
             get
             {
-                return additionalDocumentReferenceField;
+                return _additionalDocumentReferenceField;
             }
             set
             {
-                additionalDocumentReferenceField = value;
+                _additionalDocumentReferenceField = value;
             }
         }
 
@@ -123,11 +123,11 @@
         {
             get
             {
-                return billingReferenceLineField;
+                return _billingReferenceLineField;
             }
             set
             {
-                billingReferenceLineField = value;
+                _billingReferenceLineField = value;
             }
         }
     }

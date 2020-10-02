@@ -10,47 +10,47 @@
     public partial class RequestForQuotationLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private OptionalLineItemIndicatorType optionalLineItemIndicatorField;
+        private OptionalLineItemIndicatorType _optionalLineItemIndicatorField;
 
-        private PrivacyCodeType privacyCodeField;
+        private PrivacyCodeType _privacyCodeField;
 
-        private SecurityClassificationCodeType securityClassificationCodeField;
+        private SecurityClassificationCodeType _securityClassificationCodeField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private LineItemType lineItemField;
+        private LineItemType _lineItemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return optionalLineItemIndicatorField;
+                return _optionalLineItemIndicatorField;
             }
             set
             {
-                optionalLineItemIndicatorField = value;
+                _optionalLineItemIndicatorField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return privacyCodeField;
+                return _privacyCodeField;
             }
             set
             {
-                privacyCodeField = value;
+                _privacyCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return securityClassificationCodeField;
+                return _securityClassificationCodeField;
             }
             set
             {
-                securityClassificationCodeField = value;
+                _securityClassificationCodeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return lineItemField;
+                return _lineItemField;
             }
             set
             {
-                lineItemField = value;
+                _lineItemField = value;
             }
         }
     }

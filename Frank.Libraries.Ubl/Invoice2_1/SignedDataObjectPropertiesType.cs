@@ -10,15 +10,15 @@
     public partial class SignedDataObjectPropertiesType
     {
 
-        private DataObjectFormatType[] dataObjectFormatField;
+        private DataObjectFormatType[] _dataObjectFormatField;
 
-        private CommitmentTypeIndicationType[] commitmentTypeIndicationField;
+        private CommitmentTypeIndicationType[] _commitmentTypeIndicationField;
 
-        private XAdESTimeStampType[] allDataObjectsTimeStampField;
+        private XAdEsTimeStampType[] _allDataObjectsTimeStampField;
 
-        private XAdESTimeStampType[] individualDataObjectsTimeStampField;
+        private XAdEsTimeStampType[] _individualDataObjectsTimeStampField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DataObjectFormat")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return dataObjectFormatField;
+                return _dataObjectFormatField;
             }
             set
             {
-                dataObjectFormatField = value;
+                _dataObjectFormatField = value;
             }
         }
 
@@ -40,39 +40,39 @@
         {
             get
             {
-                return commitmentTypeIndicationField;
+                return _commitmentTypeIndicationField;
             }
             set
             {
-                commitmentTypeIndicationField = value;
+                _commitmentTypeIndicationField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AllDataObjectsTimeStamp")]
-        public XAdESTimeStampType[] AllDataObjectsTimeStamp
+        public XAdEsTimeStampType[] AllDataObjectsTimeStamp
         {
             get
             {
-                return allDataObjectsTimeStampField;
+                return _allDataObjectsTimeStampField;
             }
             set
             {
-                allDataObjectsTimeStampField = value;
+                _allDataObjectsTimeStampField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("IndividualDataObjectsTimeStamp")]
-        public XAdESTimeStampType[] IndividualDataObjectsTimeStamp
+        public XAdEsTimeStampType[] IndividualDataObjectsTimeStamp
         {
             get
             {
-                return individualDataObjectsTimeStampField;
+                return _individualDataObjectsTimeStampField;
             }
             set
             {
-                individualDataObjectsTimeStampField = value;
+                _individualDataObjectsTimeStampField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

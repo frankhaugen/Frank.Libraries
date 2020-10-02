@@ -10,47 +10,47 @@
     public partial class AllowanceChargeType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ChargeIndicatorType chargeIndicatorField;
+        private ChargeIndicatorType _chargeIndicatorField;
 
-        private AllowanceChargeReasonCodeType allowanceChargeReasonCodeField;
+        private AllowanceChargeReasonCodeType _allowanceChargeReasonCodeField;
 
-        private AllowanceChargeReasonType[] allowanceChargeReasonField;
+        private AllowanceChargeReasonType[] _allowanceChargeReasonField;
 
-        private MultiplierFactorNumericType multiplierFactorNumericField;
+        private MultiplierFactorNumericType _multiplierFactorNumericField;
 
-        private PrepaidIndicatorType prepaidIndicatorField;
+        private PrepaidIndicatorType _prepaidIndicatorField;
 
-        private SequenceNumericType sequenceNumericField;
+        private SequenceNumericType _sequenceNumericField;
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private BaseAmountType baseAmountField;
+        private BaseAmountType _baseAmountField;
 
-        private AccountingCostCodeType accountingCostCodeField;
+        private AccountingCostCodeType _accountingCostCodeField;
 
-        private AccountingCostType accountingCostField;
+        private AccountingCostType _accountingCostField;
 
-        private PerUnitAmountType perUnitAmountField;
+        private PerUnitAmountType _perUnitAmountField;
 
-        private TaxCategoryType[] taxCategoryField;
+        private TaxCategoryType[] _taxCategoryField;
 
-        private TaxTotalType taxTotalField;
+        private TaxTotalType _taxTotalField;
 
-        private PaymentMeansType[] paymentMeansField;
+        private PaymentMeansType[] _paymentMeansField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return chargeIndicatorField;
+                return _chargeIndicatorField;
             }
             set
             {
-                chargeIndicatorField = value;
+                _chargeIndicatorField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return allowanceChargeReasonCodeField;
+                return _allowanceChargeReasonCodeField;
             }
             set
             {
-                allowanceChargeReasonCodeField = value;
+                _allowanceChargeReasonCodeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return allowanceChargeReasonField;
+                return _allowanceChargeReasonField;
             }
             set
             {
-                allowanceChargeReasonField = value;
+                _allowanceChargeReasonField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return multiplierFactorNumericField;
+                return _multiplierFactorNumericField;
             }
             set
             {
-                multiplierFactorNumericField = value;
+                _multiplierFactorNumericField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return prepaidIndicatorField;
+                return _prepaidIndicatorField;
             }
             set
             {
-                prepaidIndicatorField = value;
+                _prepaidIndicatorField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return sequenceNumericField;
+                return _sequenceNumericField;
             }
             set
             {
-                sequenceNumericField = value;
+                _sequenceNumericField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return baseAmountField;
+                return _baseAmountField;
             }
             set
             {
-                baseAmountField = value;
+                _baseAmountField = value;
             }
         }
 
@@ -172,11 +172,11 @@
         {
             get
             {
-                return accountingCostCodeField;
+                return _accountingCostCodeField;
             }
             set
             {
-                accountingCostCodeField = value;
+                _accountingCostCodeField = value;
             }
         }
 
@@ -186,11 +186,11 @@
         {
             get
             {
-                return accountingCostField;
+                return _accountingCostField;
             }
             set
             {
-                accountingCostField = value;
+                _accountingCostField = value;
             }
         }
 
@@ -200,11 +200,11 @@
         {
             get
             {
-                return perUnitAmountField;
+                return _perUnitAmountField;
             }
             set
             {
-                perUnitAmountField = value;
+                _perUnitAmountField = value;
             }
         }
 
@@ -214,11 +214,11 @@
         {
             get
             {
-                return taxCategoryField;
+                return _taxCategoryField;
             }
             set
             {
-                taxCategoryField = value;
+                _taxCategoryField = value;
             }
         }
 
@@ -227,11 +227,11 @@
         {
             get
             {
-                return taxTotalField;
+                return _taxTotalField;
             }
             set
             {
-                taxTotalField = value;
+                _taxTotalField = value;
             }
         }
 
@@ -241,11 +241,11 @@
         {
             get
             {
-                return paymentMeansField;
+                return _paymentMeansField;
             }
             set
             {
-                paymentMeansField = value;
+                _paymentMeansField = value;
             }
         }
     }

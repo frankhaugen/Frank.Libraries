@@ -10,13 +10,13 @@
     public partial class RetailPlannedImpactType
     {
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private ForecastPurposeCodeType forecastPurposeCodeField;
+        private ForecastPurposeCodeType _forecastPurposeCodeField;
 
-        private ForecastTypeCodeType forecastTypeCodeField;
+        private ForecastTypeCodeType _forecastTypeCodeField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return forecastPurposeCodeField;
+                return _forecastPurposeCodeField;
             }
             set
             {
-                forecastPurposeCodeField = value;
+                _forecastPurposeCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return forecastTypeCodeField;
+                return _forecastTypeCodeField;
             }
             set
             {
-                forecastTypeCodeField = value;
+                _forecastTypeCodeField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
     }

@@ -10,11 +10,11 @@
     public partial class TendererPartyQualificationType
     {
 
-        private ProcurementProjectLotType[] interestedProcurementProjectLotField;
+        private ProcurementProjectLotType[] _interestedProcurementProjectLotField;
 
-        private QualifyingPartyType mainQualifyingPartyField;
+        private QualifyingPartyType _mainQualifyingPartyField;
 
-        private QualifyingPartyType[] additionalQualifyingPartyField;
+        private QualifyingPartyType[] _additionalQualifyingPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("InterestedProcurementProjectLot")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return interestedProcurementProjectLotField;
+                return _interestedProcurementProjectLotField;
             }
             set
             {
-                interestedProcurementProjectLotField = value;
+                _interestedProcurementProjectLotField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return mainQualifyingPartyField;
+                return _mainQualifyingPartyField;
             }
             set
             {
-                mainQualifyingPartyField = value;
+                _mainQualifyingPartyField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return additionalQualifyingPartyField;
+                return _additionalQualifyingPartyField;
             }
             set
             {
-                additionalQualifyingPartyField = value;
+                _additionalQualifyingPartyField = value;
             }
         }
     }

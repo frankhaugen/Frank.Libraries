@@ -10,59 +10,59 @@
     public partial class ClassificationSchemeType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private LastRevisionDateType lastRevisionDateField;
+        private LastRevisionDateType _lastRevisionDateField;
 
-        private LastRevisionTimeType lastRevisionTimeField;
+        private LastRevisionTimeType _lastRevisionTimeField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private AgencyIDType agencyIDField;
+        private AgencyIdType _agencyIdField;
 
-        private AgencyNameType agencyNameField;
+        private AgencyNameType _agencyNameField;
 
-        private VersionIDType versionIDField;
+        private VersionIdType _versionIdField;
 
-        private URIType uRIField;
+        private UriType _uRiField;
 
-        private SchemeURIType schemeURIField;
+        private SchemeUriType _schemeUriField;
 
-        private LanguageIDType languageIDField;
+        private LanguageIdType _languageIdField;
 
-        private ClassificationCategoryType[] classificationCategoryField;
+        private ClassificationCategoryType[] _classificationCategoryField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return lastRevisionDateField;
+                return _lastRevisionDateField;
             }
             set
             {
-                lastRevisionDateField = value;
+                _lastRevisionDateField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return lastRevisionTimeField;
+                return _lastRevisionTimeField;
             }
             set
             {
-                lastRevisionTimeField = value;
+                _lastRevisionTimeField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -128,25 +128,25 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public AgencyIDType AgencyID
+        public AgencyIdType AgencyId
         {
             get
             {
-                return agencyIDField;
+                return _agencyIdField;
             }
             set
             {
-                agencyIDField = value;
+                _agencyIdField = value;
             }
         }
 
@@ -156,67 +156,67 @@
         {
             get
             {
-                return agencyNameField;
+                return _agencyNameField;
             }
             set
             {
-                agencyNameField = value;
+                _agencyNameField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public VersionIDType VersionID
+        public VersionIdType VersionId
         {
             get
             {
-                return versionIDField;
+                return _versionIdField;
             }
             set
             {
-                versionIDField = value;
+                _versionIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public URIType URI
+        public UriType Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SchemeURIType SchemeURI
+        public SchemeUriType SchemeUri
         {
             get
             {
-                return schemeURIField;
+                return _schemeUriField;
             }
             set
             {
-                schemeURIField = value;
+                _schemeUriField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LanguageIDType LanguageID
+        public LanguageIdType LanguageId
         {
             get
             {
-                return languageIDField;
+                return _languageIdField;
             }
             set
             {
-                languageIDField = value;
+                _languageIdField = value;
             }
         }
 
@@ -226,11 +226,11 @@
         {
             get
             {
-                return classificationCategoryField;
+                return _classificationCategoryField;
             }
             set
             {
-                classificationCategoryField = value;
+                _classificationCategoryField = value;
             }
         }
     }

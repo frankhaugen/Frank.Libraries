@@ -10,51 +10,51 @@
     public partial class CatalogueReferenceType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private IssueTimeType issueTimeField;
+        private IssueTimeType _issueTimeField;
 
-        private RevisionDateType revisionDateField;
+        private RevisionDateType _revisionDateField;
 
-        private RevisionTimeType revisionTimeField;
+        private RevisionTimeType _revisionTimeField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private VersionIDType versionIDField;
+        private VersionIdType _versionIdField;
 
-        private PreviousVersionIDType previousVersionIDField;
+        private PreviousVersionIdType _previousVersionIdField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return issueTimeField;
+                return _issueTimeField;
             }
             set
             {
-                issueTimeField = value;
+                _issueTimeField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return revisionDateField;
+                return _revisionDateField;
             }
             set
             {
-                revisionDateField = value;
+                _revisionDateField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return revisionTimeField;
+                return _revisionTimeField;
             }
             set
             {
-                revisionTimeField = value;
+                _revisionTimeField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -134,39 +134,39 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public VersionIDType VersionID
+        public VersionIdType VersionId
         {
             get
             {
-                return versionIDField;
+                return _versionIdField;
             }
             set
             {
-                versionIDField = value;
+                _versionIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public PreviousVersionIDType PreviousVersionID
+        public PreviousVersionIdType PreviousVersionId
         {
             get
             {
-                return previousVersionIDField;
+                return _previousVersionIdField;
             }
             set
             {
-                previousVersionIDField = value;
+                _previousVersionIdField = value;
             }
         }
     }

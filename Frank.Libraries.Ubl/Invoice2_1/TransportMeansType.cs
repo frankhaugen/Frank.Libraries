@@ -10,57 +10,57 @@
     public partial class TransportMeansType
     {
 
-        private JourneyIDType journeyIDField;
+        private JourneyIdType _journeyIdField;
 
-        private RegistrationNationalityIDType registrationNationalityIDField;
+        private RegistrationNationalityIdType _registrationNationalityIdField;
 
-        private RegistrationNationalityType[] registrationNationalityField;
+        private RegistrationNationalityType[] _registrationNationalityField;
 
-        private DirectionCodeType directionCodeField;
+        private DirectionCodeType _directionCodeField;
 
-        private TransportMeansTypeCodeType transportMeansTypeCodeField;
+        private TransportMeansTypeCodeType _transportMeansTypeCodeField;
 
-        private TradeServiceCodeType tradeServiceCodeField;
+        private TradeServiceCodeType _tradeServiceCodeField;
 
-        private StowageType stowageField;
+        private StowageType _stowageField;
 
-        private AirTransportType airTransportField;
+        private AirTransportType _airTransportField;
 
-        private RoadTransportType roadTransportField;
+        private RoadTransportType _roadTransportField;
 
-        private RailTransportType railTransportField;
+        private RailTransportType _railTransportField;
 
-        private MaritimeTransportType maritimeTransportField;
+        private MaritimeTransportType _maritimeTransportField;
 
-        private PartyType ownerPartyField;
+        private PartyType _ownerPartyField;
 
-        private DimensionType[] measurementDimensionField;
+        private DimensionType[] _measurementDimensionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public JourneyIDType JourneyID
+        public JourneyIdType JourneyId
         {
             get
             {
-                return journeyIDField;
+                return _journeyIdField;
             }
             set
             {
-                journeyIDField = value;
+                _journeyIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public RegistrationNationalityIDType RegistrationNationalityID
+        public RegistrationNationalityIdType RegistrationNationalityId
         {
             get
             {
-                return registrationNationalityIDField;
+                return _registrationNationalityIdField;
             }
             set
             {
-                registrationNationalityIDField = value;
+                _registrationNationalityIdField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return registrationNationalityField;
+                return _registrationNationalityField;
             }
             set
             {
-                registrationNationalityField = value;
+                _registrationNationalityField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return directionCodeField;
+                return _directionCodeField;
             }
             set
             {
-                directionCodeField = value;
+                _directionCodeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return transportMeansTypeCodeField;
+                return _transportMeansTypeCodeField;
             }
             set
             {
-                transportMeansTypeCodeField = value;
+                _transportMeansTypeCodeField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return tradeServiceCodeField;
+                return _tradeServiceCodeField;
             }
             set
             {
-                tradeServiceCodeField = value;
+                _tradeServiceCodeField = value;
             }
         }
 
@@ -125,11 +125,11 @@
         {
             get
             {
-                return stowageField;
+                return _stowageField;
             }
             set
             {
-                stowageField = value;
+                _stowageField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return airTransportField;
+                return _airTransportField;
             }
             set
             {
-                airTransportField = value;
+                _airTransportField = value;
             }
         }
 
@@ -151,11 +151,11 @@
         {
             get
             {
-                return roadTransportField;
+                return _roadTransportField;
             }
             set
             {
-                roadTransportField = value;
+                _roadTransportField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return railTransportField;
+                return _railTransportField;
             }
             set
             {
-                railTransportField = value;
+                _railTransportField = value;
             }
         }
 
@@ -177,11 +177,11 @@
         {
             get
             {
-                return maritimeTransportField;
+                return _maritimeTransportField;
             }
             set
             {
-                maritimeTransportField = value;
+                _maritimeTransportField = value;
             }
         }
 
@@ -190,11 +190,11 @@
         {
             get
             {
-                return ownerPartyField;
+                return _ownerPartyField;
             }
             set
             {
-                ownerPartyField = value;
+                _ownerPartyField = value;
             }
         }
 
@@ -204,11 +204,11 @@
         {
             get
             {
-                return measurementDimensionField;
+                return _measurementDimensionField;
             }
             set
             {
-                measurementDimensionField = value;
+                _measurementDimensionField = value;
             }
         }
     }

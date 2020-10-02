@@ -10,31 +10,31 @@
     public partial class WorkPhaseReferenceType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private WorkPhaseCodeType workPhaseCodeField;
+        private WorkPhaseCodeType _workPhaseCodeField;
 
-        private WorkPhaseType[] workPhaseField;
+        private WorkPhaseType[] _workPhaseField;
 
-        private ProgressPercentType progressPercentField;
+        private ProgressPercentType _progressPercentField;
 
-        private StartDateType startDateField;
+        private StartDateType _startDateField;
 
-        private EndDateType endDateField;
+        private EndDateType _endDateField;
 
-        private DocumentReferenceType[] workOrderDocumentReferenceField;
+        private DocumentReferenceType[] _workOrderDocumentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return workPhaseCodeField;
+                return _workPhaseCodeField;
             }
             set
             {
-                workPhaseCodeField = value;
+                _workPhaseCodeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return workPhaseField;
+                return _workPhaseField;
             }
             set
             {
-                workPhaseField = value;
+                _workPhaseField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return progressPercentField;
+                return _progressPercentField;
             }
             set
             {
-                progressPercentField = value;
+                _progressPercentField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return startDateField;
+                return _startDateField;
             }
             set
             {
-                startDateField = value;
+                _startDateField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return endDateField;
+                return _endDateField;
             }
             set
             {
-                endDateField = value;
+                _endDateField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return workOrderDocumentReferenceField;
+                return _workOrderDocumentReferenceField;
             }
             set
             {
-                workOrderDocumentReferenceField = value;
+                _workOrderDocumentReferenceField = value;
             }
         }
     }

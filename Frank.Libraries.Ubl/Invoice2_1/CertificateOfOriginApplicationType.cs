@@ -10,49 +10,49 @@
     public partial class CertificateOfOriginApplicationType
     {
 
-        private ReferenceIDType referenceIDField;
+        private ReferenceIdType _referenceIdField;
 
-        private CertificateTypeType certificateTypeField;
+        private CertificateTypeType _certificateTypeField;
 
-        private ApplicationStatusCodeType applicationStatusCodeField;
+        private ApplicationStatusCodeType _applicationStatusCodeField;
 
-        private OriginalJobIDType originalJobIDField;
+        private OriginalJobIdType _originalJobIdField;
 
-        private PreviousJobIDType previousJobIDField;
+        private PreviousJobIdType _previousJobIdField;
 
-        private RemarksType[] remarksField;
+        private RemarksType[] _remarksField;
 
-        private ShipmentType shipmentField;
+        private ShipmentType _shipmentField;
 
-        private EndorserPartyType[] endorserPartyField;
+        private EndorserPartyType[] _endorserPartyField;
 
-        private PartyType preparationPartyField;
+        private PartyType _preparationPartyField;
 
-        private PartyType issuerPartyField;
+        private PartyType _issuerPartyField;
 
-        private PartyType exporterPartyField;
+        private PartyType _exporterPartyField;
 
-        private PartyType importerPartyField;
+        private PartyType _importerPartyField;
 
-        private CountryType issuingCountryField;
+        private CountryType _issuingCountryField;
 
-        private DocumentDistributionType[] documentDistributionField;
+        private DocumentDistributionType[] _documentDistributionField;
 
-        private DocumentReferenceType[] supportingDocumentReferenceField;
+        private DocumentReferenceType[] _supportingDocumentReferenceField;
 
-        private SignatureType[] signatureField;
+        private SignatureType[] _signatureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ReferenceIDType ReferenceID
+        public ReferenceIdType ReferenceId
         {
             get
             {
-                return referenceIDField;
+                return _referenceIdField;
             }
             set
             {
-                referenceIDField = value;
+                _referenceIdField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return certificateTypeField;
+                return _certificateTypeField;
             }
             set
             {
-                certificateTypeField = value;
+                _certificateTypeField = value;
             }
         }
 
@@ -76,39 +76,39 @@
         {
             get
             {
-                return applicationStatusCodeField;
+                return _applicationStatusCodeField;
             }
             set
             {
-                applicationStatusCodeField = value;
+                _applicationStatusCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public OriginalJobIDType OriginalJobID
+        public OriginalJobIdType OriginalJobId
         {
             get
             {
-                return originalJobIDField;
+                return _originalJobIdField;
             }
             set
             {
-                originalJobIDField = value;
+                _originalJobIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public PreviousJobIDType PreviousJobID
+        public PreviousJobIdType PreviousJobId
         {
             get
             {
-                return previousJobIDField;
+                return _previousJobIdField;
             }
             set
             {
-                previousJobIDField = value;
+                _previousJobIdField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return remarksField;
+                return _remarksField;
             }
             set
             {
-                remarksField = value;
+                _remarksField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return shipmentField;
+                return _shipmentField;
             }
             set
             {
-                shipmentField = value;
+                _shipmentField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return endorserPartyField;
+                return _endorserPartyField;
             }
             set
             {
-                endorserPartyField = value;
+                _endorserPartyField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return preparationPartyField;
+                return _preparationPartyField;
             }
             set
             {
-                preparationPartyField = value;
+                _preparationPartyField = value;
             }
         }
 
@@ -171,11 +171,11 @@
         {
             get
             {
-                return issuerPartyField;
+                return _issuerPartyField;
             }
             set
             {
-                issuerPartyField = value;
+                _issuerPartyField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return exporterPartyField;
+                return _exporterPartyField;
             }
             set
             {
-                exporterPartyField = value;
+                _exporterPartyField = value;
             }
         }
 
@@ -197,11 +197,11 @@
         {
             get
             {
-                return importerPartyField;
+                return _importerPartyField;
             }
             set
             {
-                importerPartyField = value;
+                _importerPartyField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return issuingCountryField;
+                return _issuingCountryField;
             }
             set
             {
-                issuingCountryField = value;
+                _issuingCountryField = value;
             }
         }
 
@@ -224,11 +224,11 @@
         {
             get
             {
-                return documentDistributionField;
+                return _documentDistributionField;
             }
             set
             {
-                documentDistributionField = value;
+                _documentDistributionField = value;
             }
         }
 
@@ -238,11 +238,11 @@
         {
             get
             {
-                return supportingDocumentReferenceField;
+                return _supportingDocumentReferenceField;
             }
             set
             {
-                supportingDocumentReferenceField = value;
+                _supportingDocumentReferenceField = value;
             }
         }
 
@@ -252,11 +252,11 @@
         {
             get
             {
-                return signatureField;
+                return _signatureField;
             }
             set
             {
-                signatureField = value;
+                _signatureField = value;
             }
         }
     }

@@ -10,33 +10,33 @@
     public partial class ResultOfVerificationType
     {
 
-        private ValidatorIDType validatorIDField;
+        private ValidatorIdType _validatorIdField;
 
-        private ValidationResultCodeType validationResultCodeField;
+        private ValidationResultCodeType _validationResultCodeField;
 
-        private ValidationDateType validationDateField;
+        private ValidationDateType _validationDateField;
 
-        private ValidationTimeType validationTimeField;
+        private ValidationTimeType _validationTimeField;
 
-        private ValidateProcessType validateProcessField;
+        private ValidateProcessType _validateProcessField;
 
-        private ValidateToolType validateToolField;
+        private ValidateToolType _validateToolField;
 
-        private ValidateToolVersionType validateToolVersionField;
+        private ValidateToolVersionType _validateToolVersionField;
 
-        private PartyType signatoryPartyField;
+        private PartyType _signatoryPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ValidatorIDType ValidatorID
+        public ValidatorIdType ValidatorId
         {
             get
             {
-                return validatorIDField;
+                return _validatorIdField;
             }
             set
             {
-                validatorIDField = value;
+                _validatorIdField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return validationResultCodeField;
+                return _validationResultCodeField;
             }
             set
             {
-                validationResultCodeField = value;
+                _validationResultCodeField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return validationDateField;
+                return _validationDateField;
             }
             set
             {
-                validationDateField = value;
+                _validationDateField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return validationTimeField;
+                return _validationTimeField;
             }
             set
             {
-                validationTimeField = value;
+                _validationTimeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return validateProcessField;
+                return _validateProcessField;
             }
             set
             {
-                validateProcessField = value;
+                _validateProcessField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return validateToolField;
+                return _validateToolField;
             }
             set
             {
-                validateToolField = value;
+                _validateToolField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return validateToolVersionField;
+                return _validateToolVersionField;
             }
             set
             {
-                validateToolVersionField = value;
+                _validateToolVersionField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return signatoryPartyField;
+                return _signatoryPartyField;
             }
             set
             {
-                signatoryPartyField = value;
+                _signatoryPartyField = value;
             }
         }
     }

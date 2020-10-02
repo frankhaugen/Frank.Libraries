@@ -10,23 +10,23 @@
     public partial class StowageType
     {
 
-        private LocationIDType locationIDField;
+        private LocationIdType _locationIdField;
 
-        private LocationType[] locationField;
+        private LocationType[] _locationField;
 
-        private DimensionType[] measurementDimensionField;
+        private DimensionType[] _measurementDimensionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LocationIDType LocationID
+        public LocationIdType LocationId
         {
             get
             {
-                return locationIDField;
+                return _locationIdField;
             }
             set
             {
-                locationIDField = value;
+                _locationIdField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return locationField;
+                return _locationField;
             }
             set
             {
-                locationField = value;
+                _locationField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return measurementDimensionField;
+                return _measurementDimensionField;
             }
             set
             {
-                measurementDimensionField = value;
+                _measurementDimensionField = value;
             }
         }
     }

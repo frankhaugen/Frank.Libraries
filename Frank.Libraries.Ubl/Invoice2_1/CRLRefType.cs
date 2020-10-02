@@ -6,36 +6,36 @@
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class CRLRefType
+    public partial class CrlRefType
     {
 
-        private DigestAlgAndValueType digestAlgAndValueField;
+        private DigestAlgAndValueType _digestAlgAndValueField;
 
-        private CRLIdentifierType cRLIdentifierField;
+        private CrlIdentifierType _cRlIdentifierField;
 
         /// <remarks/>
         public DigestAlgAndValueType DigestAlgAndValue
         {
             get
             {
-                return digestAlgAndValueField;
+                return _digestAlgAndValueField;
             }
             set
             {
-                digestAlgAndValueField = value;
+                _digestAlgAndValueField = value;
             }
         }
 
         /// <remarks/>
-        public CRLIdentifierType CRLIdentifier
+        public CrlIdentifierType CrlIdentifier
         {
             get
             {
-                return cRLIdentifierField;
+                return _cRlIdentifierField;
             }
             set
             {
-                cRLIdentifierField = value;
+                _cRlIdentifierField = value;
             }
         }
     }

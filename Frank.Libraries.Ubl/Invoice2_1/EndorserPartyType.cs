@@ -10,13 +10,13 @@
     public partial class EndorserPartyType
     {
 
-        private RoleCodeType roleCodeField;
+        private RoleCodeType _roleCodeField;
 
-        private SequenceNumericType sequenceNumericField;
+        private SequenceNumericType _sequenceNumericField;
 
-        private PartyType partyField;
+        private PartyType _partyField;
 
-        private ContactType signatoryContactField;
+        private ContactType _signatoryContactField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return roleCodeField;
+                return _roleCodeField;
             }
             set
             {
-                roleCodeField = value;
+                _roleCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return sequenceNumericField;
+                return _sequenceNumericField;
             }
             set
             {
-                sequenceNumericField = value;
+                _sequenceNumericField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return partyField;
+                return _partyField;
             }
             set
             {
-                partyField = value;
+                _partyField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return signatoryContactField;
+                return _signatoryContactField;
             }
             set
             {
-                signatoryContactField = value;
+                _signatoryContactField = value;
             }
         }
     }

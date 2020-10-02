@@ -10,17 +10,17 @@
     public partial class NotificationRequirementType
     {
 
-        private NotificationTypeCodeType notificationTypeCodeField;
+        private NotificationTypeCodeType _notificationTypeCodeField;
 
-        private PostEventNotificationDurationMeasureType postEventNotificationDurationMeasureField;
+        private PostEventNotificationDurationMeasureType _postEventNotificationDurationMeasureField;
 
-        private PreEventNotificationDurationMeasureType preEventNotificationDurationMeasureField;
+        private PreEventNotificationDurationMeasureType _preEventNotificationDurationMeasureField;
 
-        private PartyType[] notifyPartyField;
+        private PartyType[] _notifyPartyField;
 
-        private PeriodType[] notificationPeriodField;
+        private PeriodType[] _notificationPeriodField;
 
-        private LocationType1[] notificationLocationField;
+        private LocationType1[] _notificationLocationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -28,11 +28,11 @@
         {
             get
             {
-                return notificationTypeCodeField;
+                return _notificationTypeCodeField;
             }
             set
             {
-                notificationTypeCodeField = value;
+                _notificationTypeCodeField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return postEventNotificationDurationMeasureField;
+                return _postEventNotificationDurationMeasureField;
             }
             set
             {
-                postEventNotificationDurationMeasureField = value;
+                _postEventNotificationDurationMeasureField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return preEventNotificationDurationMeasureField;
+                return _preEventNotificationDurationMeasureField;
             }
             set
             {
-                preEventNotificationDurationMeasureField = value;
+                _preEventNotificationDurationMeasureField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return notifyPartyField;
+                return _notifyPartyField;
             }
             set
             {
-                notifyPartyField = value;
+                _notifyPartyField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return notificationPeriodField;
+                return _notificationPeriodField;
             }
             set
             {
-                notificationPeriodField = value;
+                _notificationPeriodField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return notificationLocationField;
+                return _notificationLocationField;
             }
             set
             {
-                notificationLocationField = value;
+                _notificationLocationField = value;
             }
         }
     }

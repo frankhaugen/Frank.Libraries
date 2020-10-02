@@ -10,13 +10,13 @@
     public partial class ClassificationCategoryType
     {
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private CodeValueType codeValueField;
+        private CodeValueType _codeValueField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private ClassificationCategoryType[] categorizesClassificationCategoryField;
+        private ClassificationCategoryType[] _categorizesClassificationCategoryField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return codeValueField;
+                return _codeValueField;
             }
             set
             {
-                codeValueField = value;
+                _codeValueField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return categorizesClassificationCategoryField;
+                return _categorizesClassificationCategoryField;
             }
             set
             {
-                categorizesClassificationCategoryField = value;
+                _categorizesClassificationCategoryField = value;
             }
         }
     }

@@ -10,13 +10,13 @@
     public partial class DeclarationType
     {
 
-        private NameType1[] nameField;
+        private NameType1[] _nameField;
 
-        private DeclarationTypeCodeType declarationTypeCodeField;
+        private DeclarationTypeCodeType _declarationTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private EvidenceSuppliedType[] evidenceSuppliedField;
+        private EvidenceSuppliedType[] _evidenceSuppliedField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return declarationTypeCodeField;
+                return _declarationTypeCodeField;
             }
             set
             {
-                declarationTypeCodeField = value;
+                _declarationTypeCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return evidenceSuppliedField;
+                return _evidenceSuppliedField;
             }
             set
             {
-                evidenceSuppliedField = value;
+                _evidenceSuppliedField = value;
             }
         }
     }

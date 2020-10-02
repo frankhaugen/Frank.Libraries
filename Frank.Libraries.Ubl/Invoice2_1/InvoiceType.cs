@@ -24,21 +24,21 @@ namespace Frank.Libraries.Ubl.Invoice2_1
     public partial class InvoiceType
     {
 
-        private UBLExtensionType[] uBLExtensionsField;
+        private UblExtensionType[] uBLExtensionsField;
 
-        private UBLVersionIDType uBLVersionIDField;
+        private UblVersionIdType uBLVersionIDField;
 
-        private CustomizationIDType customizationIDField;
+        private CustomizationIdType customizationIDField;
 
-        private ProfileIDType profileIDField;
+        private ProfileIdType profileIDField;
 
-        private ProfileExecutionIDType profileExecutionIDField;
+        private ProfileExecutionIdType profileExecutionIDField;
 
-        private IDType idField;
+        private IdType idField;
 
         private CopyIndicatorType copyIndicatorField;
 
-        private UUIDType uUIDField;
+        private UuidType uUIDField;
 
         private IssueDateType issueDateField;
 
@@ -135,7 +135,7 @@ namespace Frank.Libraries.Ubl.Invoice2_1
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
         [System.Xml.Serialization.XmlArrayItemAttribute("UBLExtension", IsNullable = false)]
-        public UBLExtensionType[] UBLExtensions
+        public UblExtensionType[] UBLExtensions
         {
             get
             {
@@ -149,7 +149,7 @@ namespace Frank.Libraries.Ubl.Invoice2_1
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UBLVersionIDType UBLVersionID
+        public UblVersionIdType UBLVersionID
         {
             get
             {
@@ -163,7 +163,7 @@ namespace Frank.Libraries.Ubl.Invoice2_1
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public CustomizationIDType CustomizationID
+        public CustomizationIdType CustomizationID
         {
             get
             {
@@ -177,7 +177,7 @@ namespace Frank.Libraries.Ubl.Invoice2_1
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ProfileIDType ProfileID
+        public ProfileIdType ProfileID
         {
             get
             {
@@ -191,7 +191,7 @@ namespace Frank.Libraries.Ubl.Invoice2_1
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ProfileExecutionIDType ProfileExecutionID
+        public ProfileExecutionIdType ProfileExecutionID
         {
             get
             {
@@ -205,7 +205,7 @@ namespace Frank.Libraries.Ubl.Invoice2_1
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType ID
         {
             get
             {
@@ -233,7 +233,7 @@ namespace Frank.Libraries.Ubl.Invoice2_1
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType UUID
         {
             get
             {

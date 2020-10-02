@@ -10,19 +10,19 @@
     public partial class AuctionTermsType
     {
 
-        private AuctionConstraintIndicatorType auctionConstraintIndicatorField;
+        private AuctionConstraintIndicatorType _auctionConstraintIndicatorField;
 
-        private JustificationDescriptionType[] justificationDescriptionField;
+        private JustificationDescriptionType[] _justificationDescriptionField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private ProcessDescriptionType[] processDescriptionField;
+        private ProcessDescriptionType[] _processDescriptionField;
 
-        private ConditionsDescriptionType[] conditionsDescriptionField;
+        private ConditionsDescriptionType[] _conditionsDescriptionField;
 
-        private ElectronicDeviceDescriptionType[] electronicDeviceDescriptionField;
+        private ElectronicDeviceDescriptionType[] _electronicDeviceDescriptionField;
 
-        private AuctionURIType auctionURIField;
+        private AuctionUriType _auctionUriField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return auctionConstraintIndicatorField;
+                return _auctionConstraintIndicatorField;
             }
             set
             {
-                auctionConstraintIndicatorField = value;
+                _auctionConstraintIndicatorField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return justificationDescriptionField;
+                return _justificationDescriptionField;
             }
             set
             {
-                justificationDescriptionField = value;
+                _justificationDescriptionField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return processDescriptionField;
+                return _processDescriptionField;
             }
             set
             {
-                processDescriptionField = value;
+                _processDescriptionField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return conditionsDescriptionField;
+                return _conditionsDescriptionField;
             }
             set
             {
-                conditionsDescriptionField = value;
+                _conditionsDescriptionField = value;
             }
         }
 
@@ -100,25 +100,25 @@
         {
             get
             {
-                return electronicDeviceDescriptionField;
+                return _electronicDeviceDescriptionField;
             }
             set
             {
-                electronicDeviceDescriptionField = value;
+                _electronicDeviceDescriptionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public AuctionURIType AuctionURI
+        public AuctionUriType AuctionUri
         {
             get
             {
-                return auctionURIField;
+                return _auctionUriField;
             }
             set
             {
-                auctionURIField = value;
+                _auctionUriField = value;
             }
         }
     }

@@ -10,49 +10,49 @@
     public partial class OrderReferenceType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private SalesOrderIDType salesOrderIDField;
+        private SalesOrderIdType _salesOrderIdField;
 
-        private CopyIndicatorType copyIndicatorField;
+        private CopyIndicatorType _copyIndicatorField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private IssueTimeType issueTimeField;
+        private IssueTimeType _issueTimeField;
 
-        private CustomerReferenceType customerReferenceField;
+        private CustomerReferenceType _customerReferenceField;
 
-        private OrderTypeCodeType orderTypeCodeField;
+        private OrderTypeCodeType _orderTypeCodeField;
 
-        private DocumentReferenceType documentReferenceField;
+        private DocumentReferenceType _documentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SalesOrderIDType SalesOrderID
+        public SalesOrderIdType SalesOrderId
         {
             get
             {
-                return salesOrderIDField;
+                return _salesOrderIdField;
             }
             set
             {
-                salesOrderIDField = value;
+                _salesOrderIdField = value;
             }
         }
 
@@ -62,25 +62,25 @@
         {
             get
             {
-                return copyIndicatorField;
+                return _copyIndicatorField;
             }
             set
             {
-                copyIndicatorField = value;
+                _copyIndicatorField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return issueTimeField;
+                return _issueTimeField;
             }
             set
             {
-                issueTimeField = value;
+                _issueTimeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return customerReferenceField;
+                return _customerReferenceField;
             }
             set
             {
-                customerReferenceField = value;
+                _customerReferenceField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return orderTypeCodeField;
+                return _orderTypeCodeField;
             }
             set
             {
-                orderTypeCodeField = value;
+                _orderTypeCodeField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
     }

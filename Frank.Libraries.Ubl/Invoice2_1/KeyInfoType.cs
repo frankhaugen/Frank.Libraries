@@ -10,33 +10,33 @@
     public partial class KeyInfoType
     {
 
-        private object[] itemsField;
+        private object[] _itemsField;
 
-        private ItemsChoiceType2[] itemsElementNameField;
+        private ItemsChoiceType2[] _itemsElementNameField;
 
-        private string[] textField;
+        private string[] _textField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
         [System.Xml.Serialization.XmlElementAttribute("KeyName", typeof(string))]
         [System.Xml.Serialization.XmlElementAttribute("KeyValue", typeof(KeyValueType))]
         [System.Xml.Serialization.XmlElementAttribute("MgmtData", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("PGPData", typeof(PGPDataType))]
+        [System.Xml.Serialization.XmlElementAttribute("PGPData", typeof(PgpDataType))]
         [System.Xml.Serialization.XmlElementAttribute("RetrievalMethod", typeof(RetrievalMethodType))]
-        [System.Xml.Serialization.XmlElementAttribute("SPKIData", typeof(SPKIDataType))]
+        [System.Xml.Serialization.XmlElementAttribute("SPKIData", typeof(SpkiDataType))]
         [System.Xml.Serialization.XmlElementAttribute("X509Data", typeof(X509DataType))]
         [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
         public object[] Items
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -47,11 +47,11 @@
         {
             get
             {
-                return itemsElementNameField;
+                return _itemsElementNameField;
             }
             set
             {
-                itemsElementNameField = value;
+                _itemsElementNameField = value;
             }
         }
 
@@ -61,11 +61,11 @@
         {
             get
             {
-                return textField;
+                return _textField;
             }
             set
             {
-                textField = value;
+                _textField = value;
             }
         }
 
@@ -75,11 +75,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

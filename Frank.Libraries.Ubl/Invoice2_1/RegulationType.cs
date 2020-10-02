@@ -10,11 +10,11 @@
     public partial class RegulationType
     {
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private LegalReferenceType legalReferenceField;
+        private LegalReferenceType _legalReferenceField;
 
-        private OntologyURIType ontologyURIField;
+        private OntologyUriType _ontologyUriField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -36,25 +36,25 @@
         {
             get
             {
-                return legalReferenceField;
+                return _legalReferenceField;
             }
             set
             {
-                legalReferenceField = value;
+                _legalReferenceField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public OntologyURIType OntologyURI
+        public OntologyUriType OntologyUri
         {
             get
             {
-                return ontologyURIField;
+                return _ontologyUriField;
             }
             set
             {
-                ontologyURIField = value;
+                _ontologyUriField = value;
             }
         }
     }

@@ -10,9 +10,9 @@
     public partial class AttachmentType
     {
 
-        private EmbeddedDocumentBinaryObjectType embeddedDocumentBinaryObjectField;
+        private EmbeddedDocumentBinaryObjectType _embeddedDocumentBinaryObjectField;
 
-        private ExternalReferenceType externalReferenceField;
+        private ExternalReferenceType _externalReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return embeddedDocumentBinaryObjectField;
+                return _embeddedDocumentBinaryObjectField;
             }
             set
             {
-                embeddedDocumentBinaryObjectField = value;
+                _embeddedDocumentBinaryObjectField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return externalReferenceField;
+                return _externalReferenceField;
             }
             set
             {
-                externalReferenceField = value;
+                _externalReferenceField = value;
             }
         }
     }

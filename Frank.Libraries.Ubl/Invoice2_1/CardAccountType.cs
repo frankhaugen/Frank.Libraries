@@ -10,53 +10,53 @@
     public partial class CardAccountType
     {
 
-        private PrimaryAccountNumberIDType primaryAccountNumberIDField;
+        private PrimaryAccountNumberIdType _primaryAccountNumberIdField;
 
-        private NetworkIDType networkIDField;
+        private NetworkIdType _networkIdField;
 
-        private CardTypeCodeType cardTypeCodeField;
+        private CardTypeCodeType _cardTypeCodeField;
 
-        private ValidityStartDateType validityStartDateField;
+        private ValidityStartDateType _validityStartDateField;
 
-        private ExpiryDateType expiryDateField;
+        private ExpiryDateType _expiryDateField;
 
-        private IssuerIDType issuerIDField;
+        private IssuerIdType _issuerIdField;
 
-        private IssueNumberIDType issueNumberIDField;
+        private IssueNumberIdType _issueNumberIdField;
 
-        private CV2IDType cV2IDField;
+        private Cv2IdType _cV2IdField;
 
-        private CardChipCodeType cardChipCodeField;
+        private CardChipCodeType _cardChipCodeField;
 
-        private ChipApplicationIDType chipApplicationIDField;
+        private ChipApplicationIdType _chipApplicationIdField;
 
-        private HolderNameType holderNameField;
+        private HolderNameType _holderNameField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public PrimaryAccountNumberIDType PrimaryAccountNumberID
+        public PrimaryAccountNumberIdType PrimaryAccountNumberId
         {
             get
             {
-                return primaryAccountNumberIDField;
+                return _primaryAccountNumberIdField;
             }
             set
             {
-                primaryAccountNumberIDField = value;
+                _primaryAccountNumberIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public NetworkIDType NetworkID
+        public NetworkIdType NetworkId
         {
             get
             {
-                return networkIDField;
+                return _networkIdField;
             }
             set
             {
-                networkIDField = value;
+                _networkIdField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return cardTypeCodeField;
+                return _cardTypeCodeField;
             }
             set
             {
-                cardTypeCodeField = value;
+                _cardTypeCodeField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return validityStartDateField;
+                return _validityStartDateField;
             }
             set
             {
-                validityStartDateField = value;
+                _validityStartDateField = value;
             }
         }
 
@@ -94,53 +94,53 @@
         {
             get
             {
-                return expiryDateField;
+                return _expiryDateField;
             }
             set
             {
-                expiryDateField = value;
+                _expiryDateField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IssuerIDType IssuerID
+        public IssuerIdType IssuerId
         {
             get
             {
-                return issuerIDField;
+                return _issuerIdField;
             }
             set
             {
-                issuerIDField = value;
+                _issuerIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IssueNumberIDType IssueNumberID
+        public IssueNumberIdType IssueNumberId
         {
             get
             {
-                return issueNumberIDField;
+                return _issueNumberIdField;
             }
             set
             {
-                issueNumberIDField = value;
+                _issueNumberIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public CV2IDType CV2ID
+        public Cv2IdType Cv2Id
         {
             get
             {
-                return cV2IDField;
+                return _cV2IdField;
             }
             set
             {
-                cV2IDField = value;
+                _cV2IdField = value;
             }
         }
 
@@ -150,25 +150,25 @@
         {
             get
             {
-                return cardChipCodeField;
+                return _cardChipCodeField;
             }
             set
             {
-                cardChipCodeField = value;
+                _cardChipCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ChipApplicationIDType ChipApplicationID
+        public ChipApplicationIdType ChipApplicationId
         {
             get
             {
-                return chipApplicationIDField;
+                return _chipApplicationIdField;
             }
             set
             {
-                chipApplicationIDField = value;
+                _chipApplicationIdField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return holderNameField;
+                return _holderNameField;
             }
             set
             {
-                holderNameField = value;
+                _holderNameField = value;
             }
         }
     }

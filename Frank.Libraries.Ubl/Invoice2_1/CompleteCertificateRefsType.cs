@@ -10,21 +10,21 @@
     public partial class CompleteCertificateRefsType
     {
 
-        private CertIDType[] certRefsField;
+        private CertIdType[] _certRefsField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("Cert", IsNullable = false)]
-        public CertIDType[] CertRefs
+        public CertIdType[] CertRefs
         {
             get
             {
-                return certRefsField;
+                return _certRefsField;
             }
             set
             {
-                certRefsField = value;
+                _certRefsField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

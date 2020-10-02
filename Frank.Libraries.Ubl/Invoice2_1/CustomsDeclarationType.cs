@@ -10,21 +10,21 @@
     public partial class CustomsDeclarationType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private PartyType issuerPartyField;
+        private PartyType _issuerPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return issuerPartyField;
+                return _issuerPartyField;
             }
             set
             {
-                issuerPartyField = value;
+                _issuerPartyField = value;
             }
         }
     }

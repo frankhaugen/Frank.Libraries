@@ -8,7 +8,7 @@
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ValidationResultCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UtilityStatementTypeCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UrgencyCodeType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UNDGCodeType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UndgCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TypeCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransportationStatusTypeCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransportServiceCodeType))]

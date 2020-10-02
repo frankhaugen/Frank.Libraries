@@ -10,29 +10,29 @@
     public partial class TransportScheduleType
     {
 
-        private SequenceNumericType sequenceNumericField;
+        private SequenceNumericType _sequenceNumericField;
 
-        private ReferenceDateType referenceDateField;
+        private ReferenceDateType _referenceDateField;
 
-        private ReferenceTimeType referenceTimeField;
+        private ReferenceTimeType _referenceTimeField;
 
-        private ReliabilityPercentType reliabilityPercentField;
+        private ReliabilityPercentType _reliabilityPercentField;
 
-        private RemarksType[] remarksField;
+        private RemarksType[] _remarksField;
 
-        private LocationType1 statusLocationField;
+        private LocationType1 _statusLocationField;
 
-        private TransportEventType actualArrivalTransportEventField;
+        private TransportEventType _actualArrivalTransportEventField;
 
-        private TransportEventType actualDepartureTransportEventField;
+        private TransportEventType _actualDepartureTransportEventField;
 
-        private TransportEventType estimatedDepartureTransportEventField;
+        private TransportEventType _estimatedDepartureTransportEventField;
 
-        private TransportEventType estimatedArrivalTransportEventField;
+        private TransportEventType _estimatedArrivalTransportEventField;
 
-        private TransportEventType plannedDepartureTransportEventField;
+        private TransportEventType _plannedDepartureTransportEventField;
 
-        private TransportEventType plannedArrivalTransportEventField;
+        private TransportEventType _plannedArrivalTransportEventField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -40,11 +40,11 @@
         {
             get
             {
-                return sequenceNumericField;
+                return _sequenceNumericField;
             }
             set
             {
-                sequenceNumericField = value;
+                _sequenceNumericField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return referenceDateField;
+                return _referenceDateField;
             }
             set
             {
-                referenceDateField = value;
+                _referenceDateField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return referenceTimeField;
+                return _referenceTimeField;
             }
             set
             {
-                referenceTimeField = value;
+                _referenceTimeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return reliabilityPercentField;
+                return _reliabilityPercentField;
             }
             set
             {
-                reliabilityPercentField = value;
+                _reliabilityPercentField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return remarksField;
+                return _remarksField;
             }
             set
             {
-                remarksField = value;
+                _remarksField = value;
             }
         }
 
@@ -109,11 +109,11 @@
         {
             get
             {
-                return statusLocationField;
+                return _statusLocationField;
             }
             set
             {
-                statusLocationField = value;
+                _statusLocationField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return actualArrivalTransportEventField;
+                return _actualArrivalTransportEventField;
             }
             set
             {
-                actualArrivalTransportEventField = value;
+                _actualArrivalTransportEventField = value;
             }
         }
 
@@ -135,11 +135,11 @@
         {
             get
             {
-                return actualDepartureTransportEventField;
+                return _actualDepartureTransportEventField;
             }
             set
             {
-                actualDepartureTransportEventField = value;
+                _actualDepartureTransportEventField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return estimatedDepartureTransportEventField;
+                return _estimatedDepartureTransportEventField;
             }
             set
             {
-                estimatedDepartureTransportEventField = value;
+                _estimatedDepartureTransportEventField = value;
             }
         }
 
@@ -161,11 +161,11 @@
         {
             get
             {
-                return estimatedArrivalTransportEventField;
+                return _estimatedArrivalTransportEventField;
             }
             set
             {
-                estimatedArrivalTransportEventField = value;
+                _estimatedArrivalTransportEventField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return plannedDepartureTransportEventField;
+                return _plannedDepartureTransportEventField;
             }
             set
             {
-                plannedDepartureTransportEventField = value;
+                _plannedDepartureTransportEventField = value;
             }
         }
 
@@ -187,11 +187,11 @@
         {
             get
             {
-                return plannedArrivalTransportEventField;
+                return _plannedArrivalTransportEventField;
             }
             set
             {
-                plannedArrivalTransportEventField = value;
+                _plannedArrivalTransportEventField = value;
             }
         }
     }

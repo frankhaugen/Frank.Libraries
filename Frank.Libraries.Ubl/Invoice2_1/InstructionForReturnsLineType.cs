@@ -10,27 +10,27 @@
     public partial class InstructionForReturnsLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private PartyType manufacturerPartyField;
+        private PartyType _manufacturerPartyField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return manufacturerPartyField;
+                return _manufacturerPartyField;
             }
             set
             {
-                manufacturerPartyField = value;
+                _manufacturerPartyField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
     }

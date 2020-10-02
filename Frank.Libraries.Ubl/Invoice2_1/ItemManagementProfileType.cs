@@ -10,25 +10,25 @@
     public partial class ItemManagementProfileType
     {
 
-        private FrozenPeriodDaysNumericType frozenPeriodDaysNumericField;
+        private FrozenPeriodDaysNumericType _frozenPeriodDaysNumericField;
 
-        private MinimumInventoryQuantityType minimumInventoryQuantityField;
+        private MinimumInventoryQuantityType _minimumInventoryQuantityField;
 
-        private MultipleOrderQuantityType multipleOrderQuantityField;
+        private MultipleOrderQuantityType _multipleOrderQuantityField;
 
-        private OrderIntervalDaysNumericType orderIntervalDaysNumericField;
+        private OrderIntervalDaysNumericType _orderIntervalDaysNumericField;
 
-        private ReplenishmentOwnerDescriptionType[] replenishmentOwnerDescriptionField;
+        private ReplenishmentOwnerDescriptionType[] _replenishmentOwnerDescriptionField;
 
-        private TargetServicePercentType targetServicePercentField;
+        private TargetServicePercentType _targetServicePercentField;
 
-        private TargetInventoryQuantityType targetInventoryQuantityField;
+        private TargetInventoryQuantityType _targetInventoryQuantityField;
 
-        private PeriodType effectivePeriodField;
+        private PeriodType _effectivePeriodField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
-        private ItemLocationQuantityType itemLocationQuantityField;
+        private ItemLocationQuantityType _itemLocationQuantityField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -36,11 +36,11 @@
         {
             get
             {
-                return frozenPeriodDaysNumericField;
+                return _frozenPeriodDaysNumericField;
             }
             set
             {
-                frozenPeriodDaysNumericField = value;
+                _frozenPeriodDaysNumericField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return minimumInventoryQuantityField;
+                return _minimumInventoryQuantityField;
             }
             set
             {
-                minimumInventoryQuantityField = value;
+                _minimumInventoryQuantityField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return multipleOrderQuantityField;
+                return _multipleOrderQuantityField;
             }
             set
             {
-                multipleOrderQuantityField = value;
+                _multipleOrderQuantityField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return orderIntervalDaysNumericField;
+                return _orderIntervalDaysNumericField;
             }
             set
             {
-                orderIntervalDaysNumericField = value;
+                _orderIntervalDaysNumericField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return replenishmentOwnerDescriptionField;
+                return _replenishmentOwnerDescriptionField;
             }
             set
             {
-                replenishmentOwnerDescriptionField = value;
+                _replenishmentOwnerDescriptionField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return targetServicePercentField;
+                return _targetServicePercentField;
             }
             set
             {
-                targetServicePercentField = value;
+                _targetServicePercentField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return targetInventoryQuantityField;
+                return _targetInventoryQuantityField;
             }
             set
             {
-                targetInventoryQuantityField = value;
+                _targetInventoryQuantityField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return effectivePeriodField;
+                return _effectivePeriodField;
             }
             set
             {
-                effectivePeriodField = value;
+                _effectivePeriodField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
 
@@ -159,11 +159,11 @@
         {
             get
             {
-                return itemLocationQuantityField;
+                return _itemLocationQuantityField;
             }
             set
             {
-                itemLocationQuantityField = value;
+                _itemLocationQuantityField = value;
             }
         }
     }

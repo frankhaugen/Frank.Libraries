@@ -10,53 +10,53 @@
     public partial class ProcurementProjectType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NameType1[] nameField;
+        private NameType1[] _nameField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private ProcurementTypeCodeType procurementTypeCodeField;
+        private ProcurementTypeCodeType _procurementTypeCodeField;
 
-        private ProcurementSubTypeCodeType procurementSubTypeCodeField;
+        private ProcurementSubTypeCodeType _procurementSubTypeCodeField;
 
-        private QualityControlCodeType qualityControlCodeField;
+        private QualityControlCodeType _qualityControlCodeField;
 
-        private RequiredFeeAmountType requiredFeeAmountField;
+        private RequiredFeeAmountType _requiredFeeAmountField;
 
-        private FeeDescriptionType[] feeDescriptionField;
+        private FeeDescriptionType[] _feeDescriptionField;
 
-        private RequestedDeliveryDateType requestedDeliveryDateField;
+        private RequestedDeliveryDateType _requestedDeliveryDateField;
 
-        private EstimatedOverallContractQuantityType estimatedOverallContractQuantityField;
+        private EstimatedOverallContractQuantityType _estimatedOverallContractQuantityField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private RequestedTenderTotalType requestedTenderTotalField;
+        private RequestedTenderTotalType _requestedTenderTotalField;
 
-        private CommodityClassificationType mainCommodityClassificationField;
+        private CommodityClassificationType _mainCommodityClassificationField;
 
-        private CommodityClassificationType[] additionalCommodityClassificationField;
+        private CommodityClassificationType[] _additionalCommodityClassificationField;
 
-        private LocationType1[] realizedLocationField;
+        private LocationType1[] _realizedLocationField;
 
-        private PeriodType plannedPeriodField;
+        private PeriodType _plannedPeriodField;
 
-        private ContractExtensionType contractExtensionField;
+        private ContractExtensionType _contractExtensionField;
 
-        private RequestForTenderLineType[] requestForTenderLineField;
+        private RequestForTenderLineType[] _requestForTenderLineField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return procurementTypeCodeField;
+                return _procurementTypeCodeField;
             }
             set
             {
-                procurementTypeCodeField = value;
+                _procurementTypeCodeField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return procurementSubTypeCodeField;
+                return _procurementSubTypeCodeField;
             }
             set
             {
-                procurementSubTypeCodeField = value;
+                _procurementSubTypeCodeField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return qualityControlCodeField;
+                return _qualityControlCodeField;
             }
             set
             {
-                qualityControlCodeField = value;
+                _qualityControlCodeField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return requiredFeeAmountField;
+                return _requiredFeeAmountField;
             }
             set
             {
-                requiredFeeAmountField = value;
+                _requiredFeeAmountField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return feeDescriptionField;
+                return _feeDescriptionField;
             }
             set
             {
-                feeDescriptionField = value;
+                _feeDescriptionField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return requestedDeliveryDateField;
+                return _requestedDeliveryDateField;
             }
             set
             {
-                requestedDeliveryDateField = value;
+                _requestedDeliveryDateField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return estimatedOverallContractQuantityField;
+                return _estimatedOverallContractQuantityField;
             }
             set
             {
-                estimatedOverallContractQuantityField = value;
+                _estimatedOverallContractQuantityField = value;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -205,11 +205,11 @@
         {
             get
             {
-                return requestedTenderTotalField;
+                return _requestedTenderTotalField;
             }
             set
             {
-                requestedTenderTotalField = value;
+                _requestedTenderTotalField = value;
             }
         }
 
@@ -218,11 +218,11 @@
         {
             get
             {
-                return mainCommodityClassificationField;
+                return _mainCommodityClassificationField;
             }
             set
             {
-                mainCommodityClassificationField = value;
+                _mainCommodityClassificationField = value;
             }
         }
 
@@ -232,11 +232,11 @@
         {
             get
             {
-                return additionalCommodityClassificationField;
+                return _additionalCommodityClassificationField;
             }
             set
             {
-                additionalCommodityClassificationField = value;
+                _additionalCommodityClassificationField = value;
             }
         }
 
@@ -246,11 +246,11 @@
         {
             get
             {
-                return realizedLocationField;
+                return _realizedLocationField;
             }
             set
             {
-                realizedLocationField = value;
+                _realizedLocationField = value;
             }
         }
 
@@ -259,11 +259,11 @@
         {
             get
             {
-                return plannedPeriodField;
+                return _plannedPeriodField;
             }
             set
             {
-                plannedPeriodField = value;
+                _plannedPeriodField = value;
             }
         }
 
@@ -272,11 +272,11 @@
         {
             get
             {
-                return contractExtensionField;
+                return _contractExtensionField;
             }
             set
             {
-                contractExtensionField = value;
+                _contractExtensionField = value;
             }
         }
 
@@ -286,11 +286,11 @@
         {
             get
             {
-                return requestForTenderLineField;
+                return _requestForTenderLineField;
             }
             set
             {
-                requestForTenderLineField = value;
+                _requestForTenderLineField = value;
             }
         }
     }

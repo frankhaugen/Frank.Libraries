@@ -10,13 +10,13 @@
     public partial class EventTacticEnumerationType
     {
 
-        private ConsumerIncentiveTacticTypeCodeType consumerIncentiveTacticTypeCodeField;
+        private ConsumerIncentiveTacticTypeCodeType _consumerIncentiveTacticTypeCodeField;
 
-        private DisplayTacticTypeCodeType displayTacticTypeCodeField;
+        private DisplayTacticTypeCodeType _displayTacticTypeCodeField;
 
-        private FeatureTacticTypeCodeType featureTacticTypeCodeField;
+        private FeatureTacticTypeCodeType _featureTacticTypeCodeField;
 
-        private TradeItemPackingLabelingTypeCodeType tradeItemPackingLabelingTypeCodeField;
+        private TradeItemPackingLabelingTypeCodeType _tradeItemPackingLabelingTypeCodeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return consumerIncentiveTacticTypeCodeField;
+                return _consumerIncentiveTacticTypeCodeField;
             }
             set
             {
-                consumerIncentiveTacticTypeCodeField = value;
+                _consumerIncentiveTacticTypeCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return displayTacticTypeCodeField;
+                return _displayTacticTypeCodeField;
             }
             set
             {
-                displayTacticTypeCodeField = value;
+                _displayTacticTypeCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return featureTacticTypeCodeField;
+                return _featureTacticTypeCodeField;
             }
             set
             {
-                featureTacticTypeCodeField = value;
+                _featureTacticTypeCodeField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return tradeItemPackingLabelingTypeCodeField;
+                return _tradeItemPackingLabelingTypeCodeField;
             }
             set
             {
-                tradeItemPackingLabelingTypeCodeField = value;
+                _tradeItemPackingLabelingTypeCodeField = value;
             }
         }
     }

@@ -10,9 +10,9 @@
     public partial class ItemPropertyRangeType
     {
 
-        private MinimumValueType minimumValueField;
+        private MinimumValueType _minimumValueField;
 
-        private MaximumValueType maximumValueField;
+        private MaximumValueType _maximumValueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return minimumValueField;
+                return _minimumValueField;
             }
             set
             {
-                minimumValueField = value;
+                _minimumValueField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return maximumValueField;
+                return _maximumValueField;
             }
             set
             {
-                maximumValueField = value;
+                _maximumValueField = value;
             }
         }
     }

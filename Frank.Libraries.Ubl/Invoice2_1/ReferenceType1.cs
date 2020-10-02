@@ -10,17 +10,17 @@
     public partial class ReferenceType1
     {
 
-        private TransformType[] transformsField;
+        private TransformType[] _transformsField;
 
-        private DigestMethodType digestMethodField;
+        private DigestMethodType _digestMethodField;
 
-        private byte[] digestValueField;
+        private byte[] _digestValueField;
 
-        private string idField;
+        private string _idField;
 
-        private string uRIField;
+        private string _uRiField;
 
-        private string typeField;
+        private string _typeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("Transform", IsNullable = false)]
@@ -28,11 +28,11 @@
         {
             get
             {
-                return transformsField;
+                return _transformsField;
             }
             set
             {
-                transformsField = value;
+                _transformsField = value;
             }
         }
 
@@ -41,11 +41,11 @@
         {
             get
             {
-                return digestMethodField;
+                return _digestMethodField;
             }
             set
             {
-                digestMethodField = value;
+                _digestMethodField = value;
             }
         }
 
@@ -55,11 +55,11 @@
         {
             get
             {
-                return digestValueField;
+                return _digestValueField;
             }
             set
             {
-                digestValueField = value;
+                _digestValueField = value;
             }
         }
 
@@ -69,25 +69,25 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string URI
+        public string Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return typeField;
+                return _typeField;
             }
             set
             {
-                typeField = value;
+                _typeField = value;
             }
         }
     }

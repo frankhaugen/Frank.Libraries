@@ -10,53 +10,53 @@
     public partial class ConsumptionLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ParentDocumentLineReferenceIDType parentDocumentLineReferenceIDField;
+        private ParentDocumentLineReferenceIdType _parentDocumentLineReferenceIdField;
 
-        private InvoicedQuantityType invoicedQuantityField;
+        private InvoicedQuantityType _invoicedQuantityField;
 
-        private LineExtensionAmountType lineExtensionAmountField;
+        private LineExtensionAmountType _lineExtensionAmountField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
-        private DeliveryType[] deliveryField;
+        private DeliveryType[] _deliveryField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private TaxTotalType[] taxTotalField;
+        private TaxTotalType[] _taxTotalField;
 
-        private UtilityItemType utilityItemField;
+        private UtilityItemType _utilityItemField;
 
-        private PriceType priceField;
+        private PriceType _priceField;
 
-        private UnstructuredPriceType unstructuredPriceField;
+        private UnstructuredPriceType _unstructuredPriceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ParentDocumentLineReferenceIDType ParentDocumentLineReferenceID
+        public ParentDocumentLineReferenceIdType ParentDocumentLineReferenceId
         {
             get
             {
-                return parentDocumentLineReferenceIDField;
+                return _parentDocumentLineReferenceIdField;
             }
             set
             {
-                parentDocumentLineReferenceIDField = value;
+                _parentDocumentLineReferenceIdField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return invoicedQuantityField;
+                return _invoicedQuantityField;
             }
             set
             {
-                invoicedQuantityField = value;
+                _invoicedQuantityField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return lineExtensionAmountField;
+                return _lineExtensionAmountField;
             }
             set
             {
-                lineExtensionAmountField = value;
+                _lineExtensionAmountField = value;
             }
         }
 
@@ -93,11 +93,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
 
@@ -107,11 +107,11 @@
         {
             get
             {
-                return deliveryField;
+                return _deliveryField;
             }
             set
             {
-                deliveryField = value;
+                _deliveryField = value;
             }
         }
 
@@ -121,11 +121,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -135,11 +135,11 @@
         {
             get
             {
-                return taxTotalField;
+                return _taxTotalField;
             }
             set
             {
-                taxTotalField = value;
+                _taxTotalField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return utilityItemField;
+                return _utilityItemField;
             }
             set
             {
-                utilityItemField = value;
+                _utilityItemField = value;
             }
         }
 
@@ -161,11 +161,11 @@
         {
             get
             {
-                return priceField;
+                return _priceField;
             }
             set
             {
-                priceField = value;
+                _priceField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return unstructuredPriceField;
+                return _unstructuredPriceField;
             }
             set
             {
-                unstructuredPriceField = value;
+                _unstructuredPriceField = value;
             }
         }
     }

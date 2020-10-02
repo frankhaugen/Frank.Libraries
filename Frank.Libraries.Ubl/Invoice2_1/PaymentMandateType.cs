@@ -10,37 +10,37 @@
     public partial class PaymentMandateType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private MandateTypeCodeType mandateTypeCodeField;
+        private MandateTypeCodeType _mandateTypeCodeField;
 
-        private MaximumPaymentInstructionsNumericType maximumPaymentInstructionsNumericField;
+        private MaximumPaymentInstructionsNumericType _maximumPaymentInstructionsNumericField;
 
-        private MaximumPaidAmountType maximumPaidAmountField;
+        private MaximumPaidAmountType _maximumPaidAmountField;
 
-        private SignatureIDType signatureIDField;
+        private SignatureIdType _signatureIdField;
 
-        private PartyType payerPartyField;
+        private PartyType _payerPartyField;
 
-        private FinancialAccountType payerFinancialAccountField;
+        private FinancialAccountType _payerFinancialAccountField;
 
-        private PeriodType validityPeriodField;
+        private PeriodType _validityPeriodField;
 
-        private PeriodType paymentReversalPeriodField;
+        private PeriodType _paymentReversalPeriodField;
 
-        private ClauseType[] clauseField;
+        private ClauseType[] _clauseField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return mandateTypeCodeField;
+                return _mandateTypeCodeField;
             }
             set
             {
-                mandateTypeCodeField = value;
+                _mandateTypeCodeField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return maximumPaymentInstructionsNumericField;
+                return _maximumPaymentInstructionsNumericField;
             }
             set
             {
-                maximumPaymentInstructionsNumericField = value;
+                _maximumPaymentInstructionsNumericField = value;
             }
         }
 
@@ -78,25 +78,25 @@
         {
             get
             {
-                return maximumPaidAmountField;
+                return _maximumPaidAmountField;
             }
             set
             {
-                maximumPaidAmountField = value;
+                _maximumPaidAmountField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SignatureIDType SignatureID
+        public SignatureIdType SignatureId
         {
             get
             {
-                return signatureIDField;
+                return _signatureIdField;
             }
             set
             {
-                signatureIDField = value;
+                _signatureIdField = value;
             }
         }
 
@@ -105,11 +105,11 @@
         {
             get
             {
-                return payerPartyField;
+                return _payerPartyField;
             }
             set
             {
-                payerPartyField = value;
+                _payerPartyField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return payerFinancialAccountField;
+                return _payerFinancialAccountField;
             }
             set
             {
-                payerFinancialAccountField = value;
+                _payerFinancialAccountField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return validityPeriodField;
+                return _validityPeriodField;
             }
             set
             {
-                validityPeriodField = value;
+                _validityPeriodField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return paymentReversalPeriodField;
+                return _paymentReversalPeriodField;
             }
             set
             {
-                paymentReversalPeriodField = value;
+                _paymentReversalPeriodField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return clauseField;
+                return _clauseField;
             }
             set
             {
-                clauseField = value;
+                _clauseField = value;
             }
         }
     }

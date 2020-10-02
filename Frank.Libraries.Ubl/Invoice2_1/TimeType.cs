@@ -40,7 +40,7 @@
     public partial class TimeType
     {
 
-        private System.DateTime valueField;
+        private System.DateTime _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute(DataType = "time")]
@@ -48,11 +48,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

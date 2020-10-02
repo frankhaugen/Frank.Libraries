@@ -10,41 +10,41 @@
     public partial class LocationType1
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private ConditionsType[] conditionsField;
+        private ConditionsType[] _conditionsField;
 
-        private CountrySubentityType countrySubentityField;
+        private CountrySubentityType _countrySubentityField;
 
-        private CountrySubentityCodeType countrySubentityCodeField;
+        private CountrySubentityCodeType _countrySubentityCodeField;
 
-        private LocationTypeCodeType locationTypeCodeField;
+        private LocationTypeCodeType _locationTypeCodeField;
 
-        private InformationURIType informationURIField;
+        private InformationUriType _informationUriField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private PeriodType[] validityPeriodField;
+        private PeriodType[] _validityPeriodField;
 
-        private AddressType addressField;
+        private AddressType _addressField;
 
-        private LocationType1[] subsidiaryLocationField;
+        private LocationType1[] _subsidiaryLocationField;
 
-        private LocationCoordinateType[] locationCoordinateField;
+        private LocationCoordinateType[] _locationCoordinateField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return conditionsField;
+                return _conditionsField;
             }
             set
             {
-                conditionsField = value;
+                _conditionsField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return countrySubentityField;
+                return _countrySubentityField;
             }
             set
             {
-                countrySubentityField = value;
+                _countrySubentityField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return countrySubentityCodeField;
+                return _countrySubentityCodeField;
             }
             set
             {
-                countrySubentityCodeField = value;
+                _countrySubentityCodeField = value;
             }
         }
 
@@ -110,25 +110,25 @@
         {
             get
             {
-                return locationTypeCodeField;
+                return _locationTypeCodeField;
             }
             set
             {
-                locationTypeCodeField = value;
+                _locationTypeCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public InformationURIType InformationURI
+        public InformationUriType InformationUri
         {
             get
             {
-                return informationURIField;
+                return _informationUriField;
             }
             set
             {
-                informationURIField = value;
+                _informationUriField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return validityPeriodField;
+                return _validityPeriodField;
             }
             set
             {
-                validityPeriodField = value;
+                _validityPeriodField = value;
             }
         }
 
@@ -165,11 +165,11 @@
         {
             get
             {
-                return addressField;
+                return _addressField;
             }
             set
             {
-                addressField = value;
+                _addressField = value;
             }
         }
 
@@ -179,11 +179,11 @@
         {
             get
             {
-                return subsidiaryLocationField;
+                return _subsidiaryLocationField;
             }
             set
             {
-                subsidiaryLocationField = value;
+                _subsidiaryLocationField = value;
             }
         }
 
@@ -193,11 +193,11 @@
         {
             get
             {
-                return locationCoordinateField;
+                return _locationCoordinateField;
             }
             set
             {
-                locationCoordinateField = value;
+                _locationCoordinateField = value;
             }
         }
     }

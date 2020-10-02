@@ -12,7 +12,7 @@
         Item,
 
         /// <remarks/>
-        X509CRL,
+        X509Crl,
 
         /// <remarks/>
         X509Certificate,
@@ -21,7 +21,7 @@
         X509IssuerSerial,
 
         /// <remarks/>
-        X509SKI,
+        X509Ski,
 
         /// <remarks/>
         X509SubjectName,

@@ -10,71 +10,71 @@
     public partial class TransportHandlingUnitType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private TransportHandlingUnitTypeCodeType transportHandlingUnitTypeCodeField;
+        private TransportHandlingUnitTypeCodeType _transportHandlingUnitTypeCodeField;
 
-        private HandlingCodeType handlingCodeField;
+        private HandlingCodeType _handlingCodeField;
 
-        private HandlingInstructionsType[] handlingInstructionsField;
+        private HandlingInstructionsType[] _handlingInstructionsField;
 
-        private HazardousRiskIndicatorType hazardousRiskIndicatorField;
+        private HazardousRiskIndicatorType _hazardousRiskIndicatorField;
 
-        private TotalGoodsItemQuantityType totalGoodsItemQuantityField;
+        private TotalGoodsItemQuantityType _totalGoodsItemQuantityField;
 
-        private TotalPackageQuantityType totalPackageQuantityField;
+        private TotalPackageQuantityType _totalPackageQuantityField;
 
-        private DamageRemarksType[] damageRemarksField;
+        private DamageRemarksType[] _damageRemarksField;
 
-        private ShippingMarksType[] shippingMarksField;
+        private ShippingMarksType[] _shippingMarksField;
 
-        private TraceIDType traceIDField;
+        private TraceIdType _traceIdField;
 
-        private DespatchLineType[] handlingUnitDespatchLineField;
+        private DespatchLineType[] _handlingUnitDespatchLineField;
 
-        private PackageType[] actualPackageField;
+        private PackageType[] _actualPackageField;
 
-        private ReceiptLineType[] receivedHandlingUnitReceiptLineField;
+        private ReceiptLineType[] _receivedHandlingUnitReceiptLineField;
 
-        private TransportEquipmentType[] transportEquipmentField;
+        private TransportEquipmentType[] _transportEquipmentField;
 
-        private TransportMeansType[] transportMeansField;
+        private TransportMeansType[] _transportMeansField;
 
-        private HazardousGoodsTransitType[] hazardousGoodsTransitField;
+        private HazardousGoodsTransitType[] _hazardousGoodsTransitField;
 
-        private DimensionType[] measurementDimensionField;
+        private DimensionType[] _measurementDimensionField;
 
-        private TemperatureType minimumTemperatureField;
+        private TemperatureType _minimumTemperatureField;
 
-        private TemperatureType maximumTemperatureField;
+        private TemperatureType _maximumTemperatureField;
 
-        private GoodsItemType[] goodsItemField;
+        private GoodsItemType[] _goodsItemField;
 
-        private DimensionType floorSpaceMeasurementDimensionField;
+        private DimensionType _floorSpaceMeasurementDimensionField;
 
-        private DimensionType palletSpaceMeasurementDimensionField;
+        private DimensionType _palletSpaceMeasurementDimensionField;
 
-        private DocumentReferenceType[] shipmentDocumentReferenceField;
+        private DocumentReferenceType[] _shipmentDocumentReferenceField;
 
-        private StatusType[] statusField;
+        private StatusType[] _statusField;
 
-        private CustomsDeclarationType[] customsDeclarationField;
+        private CustomsDeclarationType[] _customsDeclarationField;
 
-        private ShipmentType[] referencedShipmentField;
+        private ShipmentType[] _referencedShipmentField;
 
-        private PackageType[] packageField;
+        private PackageType[] _packageField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return transportHandlingUnitTypeCodeField;
+                return _transportHandlingUnitTypeCodeField;
             }
             set
             {
-                transportHandlingUnitTypeCodeField = value;
+                _transportHandlingUnitTypeCodeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return handlingCodeField;
+                return _handlingCodeField;
             }
             set
             {
-                handlingCodeField = value;
+                _handlingCodeField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return handlingInstructionsField;
+                return _handlingInstructionsField;
             }
             set
             {
-                handlingInstructionsField = value;
+                _handlingInstructionsField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return hazardousRiskIndicatorField;
+                return _hazardousRiskIndicatorField;
             }
             set
             {
-                hazardousRiskIndicatorField = value;
+                _hazardousRiskIndicatorField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return totalGoodsItemQuantityField;
+                return _totalGoodsItemQuantityField;
             }
             set
             {
-                totalGoodsItemQuantityField = value;
+                _totalGoodsItemQuantityField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return totalPackageQuantityField;
+                return _totalPackageQuantityField;
             }
             set
             {
-                totalPackageQuantityField = value;
+                _totalPackageQuantityField = value;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                return damageRemarksField;
+                return _damageRemarksField;
             }
             set
             {
-                damageRemarksField = value;
+                _damageRemarksField = value;
             }
         }
 
@@ -182,25 +182,25 @@
         {
             get
             {
-                return shippingMarksField;
+                return _shippingMarksField;
             }
             set
             {
-                shippingMarksField = value;
+                _shippingMarksField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public TraceIDType TraceID
+        public TraceIdType TraceId
         {
             get
             {
-                return traceIDField;
+                return _traceIdField;
             }
             set
             {
-                traceIDField = value;
+                _traceIdField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return handlingUnitDespatchLineField;
+                return _handlingUnitDespatchLineField;
             }
             set
             {
-                handlingUnitDespatchLineField = value;
+                _handlingUnitDespatchLineField = value;
             }
         }
 
@@ -224,11 +224,11 @@
         {
             get
             {
-                return actualPackageField;
+                return _actualPackageField;
             }
             set
             {
-                actualPackageField = value;
+                _actualPackageField = value;
             }
         }
 
@@ -238,11 +238,11 @@
         {
             get
             {
-                return receivedHandlingUnitReceiptLineField;
+                return _receivedHandlingUnitReceiptLineField;
             }
             set
             {
-                receivedHandlingUnitReceiptLineField = value;
+                _receivedHandlingUnitReceiptLineField = value;
             }
         }
 
@@ -252,11 +252,11 @@
         {
             get
             {
-                return transportEquipmentField;
+                return _transportEquipmentField;
             }
             set
             {
-                transportEquipmentField = value;
+                _transportEquipmentField = value;
             }
         }
 
@@ -266,11 +266,11 @@
         {
             get
             {
-                return transportMeansField;
+                return _transportMeansField;
             }
             set
             {
-                transportMeansField = value;
+                _transportMeansField = value;
             }
         }
 
@@ -280,11 +280,11 @@
         {
             get
             {
-                return hazardousGoodsTransitField;
+                return _hazardousGoodsTransitField;
             }
             set
             {
-                hazardousGoodsTransitField = value;
+                _hazardousGoodsTransitField = value;
             }
         }
 
@@ -294,11 +294,11 @@
         {
             get
             {
-                return measurementDimensionField;
+                return _measurementDimensionField;
             }
             set
             {
-                measurementDimensionField = value;
+                _measurementDimensionField = value;
             }
         }
 
@@ -307,11 +307,11 @@
         {
             get
             {
-                return minimumTemperatureField;
+                return _minimumTemperatureField;
             }
             set
             {
-                minimumTemperatureField = value;
+                _minimumTemperatureField = value;
             }
         }
 
@@ -320,11 +320,11 @@
         {
             get
             {
-                return maximumTemperatureField;
+                return _maximumTemperatureField;
             }
             set
             {
-                maximumTemperatureField = value;
+                _maximumTemperatureField = value;
             }
         }
 
@@ -334,11 +334,11 @@
         {
             get
             {
-                return goodsItemField;
+                return _goodsItemField;
             }
             set
             {
-                goodsItemField = value;
+                _goodsItemField = value;
             }
         }
 
@@ -347,11 +347,11 @@
         {
             get
             {
-                return floorSpaceMeasurementDimensionField;
+                return _floorSpaceMeasurementDimensionField;
             }
             set
             {
-                floorSpaceMeasurementDimensionField = value;
+                _floorSpaceMeasurementDimensionField = value;
             }
         }
 
@@ -360,11 +360,11 @@
         {
             get
             {
-                return palletSpaceMeasurementDimensionField;
+                return _palletSpaceMeasurementDimensionField;
             }
             set
             {
-                palletSpaceMeasurementDimensionField = value;
+                _palletSpaceMeasurementDimensionField = value;
             }
         }
 
@@ -374,11 +374,11 @@
         {
             get
             {
-                return shipmentDocumentReferenceField;
+                return _shipmentDocumentReferenceField;
             }
             set
             {
-                shipmentDocumentReferenceField = value;
+                _shipmentDocumentReferenceField = value;
             }
         }
 
@@ -388,11 +388,11 @@
         {
             get
             {
-                return statusField;
+                return _statusField;
             }
             set
             {
-                statusField = value;
+                _statusField = value;
             }
         }
 
@@ -402,11 +402,11 @@
         {
             get
             {
-                return customsDeclarationField;
+                return _customsDeclarationField;
             }
             set
             {
-                customsDeclarationField = value;
+                _customsDeclarationField = value;
             }
         }
 
@@ -416,11 +416,11 @@
         {
             get
             {
-                return referencedShipmentField;
+                return _referencedShipmentField;
             }
             set
             {
-                referencedShipmentField = value;
+                _referencedShipmentField = value;
             }
         }
 
@@ -430,11 +430,11 @@
         {
             get
             {
-                return packageField;
+                return _packageField;
             }
             set
             {
-                packageField = value;
+                _packageField = value;
             }
         }
     }

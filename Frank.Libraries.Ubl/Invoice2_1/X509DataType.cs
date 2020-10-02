@@ -10,9 +10,9 @@
     public partial class X509DataType
     {
 
-        private object[] itemsField;
+        private object[] _itemsField;
 
-        private ItemsChoiceType[] itemsElementNameField;
+        private ItemsChoiceType[] _itemsElementNameField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAnyElementAttribute()]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -41,11 +41,11 @@
         {
             get
             {
-                return itemsElementNameField;
+                return _itemsElementNameField;
             }
             set
             {
-                itemsElementNameField = value;
+                _itemsElementNameField = value;
             }
         }
     }

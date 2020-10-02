@@ -7,40 +7,40 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [System.Xml.Serialization.XmlRootAttribute("UBLExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2", IsNullable = false)]
-    public partial class UBLExtensionType
+    public partial class UblExtensionType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private ExtensionAgencyIDType extensionAgencyIDField;
+        private ExtensionAgencyIdType _extensionAgencyIdField;
 
-        private ExtensionAgencyNameType extensionAgencyNameField;
+        private ExtensionAgencyNameType _extensionAgencyNameField;
 
-        private ExtensionVersionIDType extensionVersionIDField;
+        private ExtensionVersionIdType _extensionVersionIdField;
 
-        private ExtensionAgencyURIType extensionAgencyURIField;
+        private ExtensionAgencyUriType _extensionAgencyUriField;
 
-        private ExtensionURIType extensionURIField;
+        private ExtensionUriType _extensionUriField;
 
-        private ExtensionReasonCodeType extensionReasonCodeField;
+        private ExtensionReasonCodeType _extensionReasonCodeField;
 
-        private ExtensionReasonType extensionReasonField;
+        private ExtensionReasonType _extensionReasonField;
 
-        private System.Xml.XmlElement extensionContentField;
+        private System.Xml.XmlElement _extensionContentField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -50,24 +50,24 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
         /// <remarks/>
-        public ExtensionAgencyIDType ExtensionAgencyID
+        public ExtensionAgencyIdType ExtensionAgencyId
         {
             get
             {
-                return extensionAgencyIDField;
+                return _extensionAgencyIdField;
             }
             set
             {
-                extensionAgencyIDField = value;
+                _extensionAgencyIdField = value;
             }
         }
 
@@ -76,50 +76,50 @@
         {
             get
             {
-                return extensionAgencyNameField;
+                return _extensionAgencyNameField;
             }
             set
             {
-                extensionAgencyNameField = value;
+                _extensionAgencyNameField = value;
             }
         }
 
         /// <remarks/>
-        public ExtensionVersionIDType ExtensionVersionID
+        public ExtensionVersionIdType ExtensionVersionId
         {
             get
             {
-                return extensionVersionIDField;
+                return _extensionVersionIdField;
             }
             set
             {
-                extensionVersionIDField = value;
+                _extensionVersionIdField = value;
             }
         }
 
         /// <remarks/>
-        public ExtensionAgencyURIType ExtensionAgencyURI
+        public ExtensionAgencyUriType ExtensionAgencyUri
         {
             get
             {
-                return extensionAgencyURIField;
+                return _extensionAgencyUriField;
             }
             set
             {
-                extensionAgencyURIField = value;
+                _extensionAgencyUriField = value;
             }
         }
 
         /// <remarks/>
-        public ExtensionURIType ExtensionURI
+        public ExtensionUriType ExtensionUri
         {
             get
             {
-                return extensionURIField;
+                return _extensionUriField;
             }
             set
             {
-                extensionURIField = value;
+                _extensionUriField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return extensionReasonCodeField;
+                return _extensionReasonCodeField;
             }
             set
             {
-                extensionReasonCodeField = value;
+                _extensionReasonCodeField = value;
             }
         }
 
@@ -141,11 +141,11 @@
         {
             get
             {
-                return extensionReasonField;
+                return _extensionReasonField;
             }
             set
             {
-                extensionReasonField = value;
+                _extensionReasonField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return extensionContentField;
+                return _extensionContentField;
             }
             set
             {
-                extensionContentField = value;
+                _extensionContentField = value;
             }
         }
     }

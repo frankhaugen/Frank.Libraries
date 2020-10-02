@@ -10,139 +10,139 @@
     public partial class ShipmentStageType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private TransportModeCodeType transportModeCodeField;
+        private TransportModeCodeType _transportModeCodeField;
 
-        private TransportMeansTypeCodeType transportMeansTypeCodeField;
+        private TransportMeansTypeCodeType _transportMeansTypeCodeField;
 
-        private TransitDirectionCodeType transitDirectionCodeField;
+        private TransitDirectionCodeType _transitDirectionCodeField;
 
-        private PreCarriageIndicatorType preCarriageIndicatorField;
+        private PreCarriageIndicatorType _preCarriageIndicatorField;
 
-        private OnCarriageIndicatorType onCarriageIndicatorField;
+        private OnCarriageIndicatorType _onCarriageIndicatorField;
 
-        private EstimatedDeliveryDateType estimatedDeliveryDateField;
+        private EstimatedDeliveryDateType _estimatedDeliveryDateField;
 
-        private EstimatedDeliveryTimeType estimatedDeliveryTimeField;
+        private EstimatedDeliveryTimeType _estimatedDeliveryTimeField;
 
-        private RequiredDeliveryDateType requiredDeliveryDateField;
+        private RequiredDeliveryDateType _requiredDeliveryDateField;
 
-        private RequiredDeliveryTimeType requiredDeliveryTimeField;
+        private RequiredDeliveryTimeType _requiredDeliveryTimeField;
 
-        private LoadingSequenceIDType loadingSequenceIDField;
+        private LoadingSequenceIdType _loadingSequenceIdField;
 
-        private SuccessiveSequenceIDType successiveSequenceIDField;
+        private SuccessiveSequenceIdType _successiveSequenceIdField;
 
-        private InstructionsType[] instructionsField;
+        private InstructionsType[] _instructionsField;
 
-        private DemurrageInstructionsType[] demurrageInstructionsField;
+        private DemurrageInstructionsType[] _demurrageInstructionsField;
 
-        private CrewQuantityType crewQuantityField;
+        private CrewQuantityType _crewQuantityField;
 
-        private PassengerQuantityType passengerQuantityField;
+        private PassengerQuantityType _passengerQuantityField;
 
-        private PeriodType transitPeriodField;
+        private PeriodType _transitPeriodField;
 
-        private PartyType[] carrierPartyField;
+        private PartyType[] _carrierPartyField;
 
-        private TransportMeansType transportMeansField;
+        private TransportMeansType _transportMeansField;
 
-        private LocationType1 loadingPortLocationField;
+        private LocationType1 _loadingPortLocationField;
 
-        private LocationType1 unloadingPortLocationField;
+        private LocationType1 _unloadingPortLocationField;
 
-        private LocationType1 transshipPortLocationField;
+        private LocationType1 _transshipPortLocationField;
 
-        private TransportEventType loadingTransportEventField;
+        private TransportEventType _loadingTransportEventField;
 
-        private TransportEventType examinationTransportEventField;
+        private TransportEventType _examinationTransportEventField;
 
-        private TransportEventType availabilityTransportEventField;
+        private TransportEventType _availabilityTransportEventField;
 
-        private TransportEventType exportationTransportEventField;
+        private TransportEventType _exportationTransportEventField;
 
-        private TransportEventType dischargeTransportEventField;
+        private TransportEventType _dischargeTransportEventField;
 
-        private TransportEventType warehousingTransportEventField;
+        private TransportEventType _warehousingTransportEventField;
 
-        private TransportEventType takeoverTransportEventField;
+        private TransportEventType _takeoverTransportEventField;
 
-        private TransportEventType optionalTakeoverTransportEventField;
+        private TransportEventType _optionalTakeoverTransportEventField;
 
-        private TransportEventType dropoffTransportEventField;
+        private TransportEventType _dropoffTransportEventField;
 
-        private TransportEventType actualPickupTransportEventField;
+        private TransportEventType _actualPickupTransportEventField;
 
-        private TransportEventType deliveryTransportEventField;
+        private TransportEventType _deliveryTransportEventField;
 
-        private TransportEventType receiptTransportEventField;
+        private TransportEventType _receiptTransportEventField;
 
-        private TransportEventType storageTransportEventField;
+        private TransportEventType _storageTransportEventField;
 
-        private TransportEventType acceptanceTransportEventField;
+        private TransportEventType _acceptanceTransportEventField;
 
-        private PartyType terminalOperatorPartyField;
+        private PartyType _terminalOperatorPartyField;
 
-        private PartyType customsAgentPartyField;
+        private PartyType _customsAgentPartyField;
 
-        private PeriodType estimatedTransitPeriodField;
+        private PeriodType _estimatedTransitPeriodField;
 
-        private AllowanceChargeType[] freightAllowanceChargeField;
+        private AllowanceChargeType[] _freightAllowanceChargeField;
 
-        private LocationType1 freightChargeLocationField;
+        private LocationType1 _freightChargeLocationField;
 
-        private TransportEventType[] detentionTransportEventField;
+        private TransportEventType[] _detentionTransportEventField;
 
-        private TransportEventType requestedDepartureTransportEventField;
+        private TransportEventType _requestedDepartureTransportEventField;
 
-        private TransportEventType requestedArrivalTransportEventField;
+        private TransportEventType _requestedArrivalTransportEventField;
 
-        private TransportEventType[] requestedWaypointTransportEventField;
+        private TransportEventType[] _requestedWaypointTransportEventField;
 
-        private TransportEventType plannedDepartureTransportEventField;
+        private TransportEventType _plannedDepartureTransportEventField;
 
-        private TransportEventType plannedArrivalTransportEventField;
+        private TransportEventType _plannedArrivalTransportEventField;
 
-        private TransportEventType[] plannedWaypointTransportEventField;
+        private TransportEventType[] _plannedWaypointTransportEventField;
 
-        private TransportEventType actualDepartureTransportEventField;
+        private TransportEventType _actualDepartureTransportEventField;
 
-        private TransportEventType actualWaypointTransportEventField;
+        private TransportEventType _actualWaypointTransportEventField;
 
-        private TransportEventType actualArrivalTransportEventField;
+        private TransportEventType _actualArrivalTransportEventField;
 
-        private TransportEventType[] transportEventField;
+        private TransportEventType[] _transportEventField;
 
-        private TransportEventType estimatedDepartureTransportEventField;
+        private TransportEventType _estimatedDepartureTransportEventField;
 
-        private TransportEventType estimatedArrivalTransportEventField;
+        private TransportEventType _estimatedArrivalTransportEventField;
 
-        private PersonType[] passengerPersonField;
+        private PersonType[] _passengerPersonField;
 
-        private PersonType[] driverPersonField;
+        private PersonType[] _driverPersonField;
 
-        private PersonType reportingPersonField;
+        private PersonType _reportingPersonField;
 
-        private PersonType[] crewMemberPersonField;
+        private PersonType[] _crewMemberPersonField;
 
-        private PersonType securityOfficerPersonField;
+        private PersonType _securityOfficerPersonField;
 
-        private PersonType masterPersonField;
+        private PersonType _masterPersonField;
 
-        private PersonType shipsSurgeonPersonField;
+        private PersonType _shipsSurgeonPersonField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return transportModeCodeField;
+                return _transportModeCodeField;
             }
             set
             {
-                transportModeCodeField = value;
+                _transportModeCodeField = value;
             }
         }
 
@@ -166,11 +166,11 @@
         {
             get
             {
-                return transportMeansTypeCodeField;
+                return _transportMeansTypeCodeField;
             }
             set
             {
-                transportMeansTypeCodeField = value;
+                _transportMeansTypeCodeField = value;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                return transitDirectionCodeField;
+                return _transitDirectionCodeField;
             }
             set
             {
-                transitDirectionCodeField = value;
+                _transitDirectionCodeField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return preCarriageIndicatorField;
+                return _preCarriageIndicatorField;
             }
             set
             {
-                preCarriageIndicatorField = value;
+                _preCarriageIndicatorField = value;
             }
         }
 
@@ -208,11 +208,11 @@
         {
             get
             {
-                return onCarriageIndicatorField;
+                return _onCarriageIndicatorField;
             }
             set
             {
-                onCarriageIndicatorField = value;
+                _onCarriageIndicatorField = value;
             }
         }
 
@@ -222,11 +222,11 @@
         {
             get
             {
-                return estimatedDeliveryDateField;
+                return _estimatedDeliveryDateField;
             }
             set
             {
-                estimatedDeliveryDateField = value;
+                _estimatedDeliveryDateField = value;
             }
         }
 
@@ -236,11 +236,11 @@
         {
             get
             {
-                return estimatedDeliveryTimeField;
+                return _estimatedDeliveryTimeField;
             }
             set
             {
-                estimatedDeliveryTimeField = value;
+                _estimatedDeliveryTimeField = value;
             }
         }
 
@@ -250,11 +250,11 @@
         {
             get
             {
-                return requiredDeliveryDateField;
+                return _requiredDeliveryDateField;
             }
             set
             {
-                requiredDeliveryDateField = value;
+                _requiredDeliveryDateField = value;
             }
         }
 
@@ -264,39 +264,39 @@
         {
             get
             {
-                return requiredDeliveryTimeField;
+                return _requiredDeliveryTimeField;
             }
             set
             {
-                requiredDeliveryTimeField = value;
+                _requiredDeliveryTimeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LoadingSequenceIDType LoadingSequenceID
+        public LoadingSequenceIdType LoadingSequenceId
         {
             get
             {
-                return loadingSequenceIDField;
+                return _loadingSequenceIdField;
             }
             set
             {
-                loadingSequenceIDField = value;
+                _loadingSequenceIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SuccessiveSequenceIDType SuccessiveSequenceID
+        public SuccessiveSequenceIdType SuccessiveSequenceId
         {
             get
             {
-                return successiveSequenceIDField;
+                return _successiveSequenceIdField;
             }
             set
             {
-                successiveSequenceIDField = value;
+                _successiveSequenceIdField = value;
             }
         }
 
@@ -306,11 +306,11 @@
         {
             get
             {
-                return instructionsField;
+                return _instructionsField;
             }
             set
             {
-                instructionsField = value;
+                _instructionsField = value;
             }
         }
 
@@ -320,11 +320,11 @@
         {
             get
             {
-                return demurrageInstructionsField;
+                return _demurrageInstructionsField;
             }
             set
             {
-                demurrageInstructionsField = value;
+                _demurrageInstructionsField = value;
             }
         }
 
@@ -334,11 +334,11 @@
         {
             get
             {
-                return crewQuantityField;
+                return _crewQuantityField;
             }
             set
             {
-                crewQuantityField = value;
+                _crewQuantityField = value;
             }
         }
 
@@ -348,11 +348,11 @@
         {
             get
             {
-                return passengerQuantityField;
+                return _passengerQuantityField;
             }
             set
             {
-                passengerQuantityField = value;
+                _passengerQuantityField = value;
             }
         }
 
@@ -361,11 +361,11 @@
         {
             get
             {
-                return transitPeriodField;
+                return _transitPeriodField;
             }
             set
             {
-                transitPeriodField = value;
+                _transitPeriodField = value;
             }
         }
 
@@ -375,11 +375,11 @@
         {
             get
             {
-                return carrierPartyField;
+                return _carrierPartyField;
             }
             set
             {
-                carrierPartyField = value;
+                _carrierPartyField = value;
             }
         }
 
@@ -388,11 +388,11 @@
         {
             get
             {
-                return transportMeansField;
+                return _transportMeansField;
             }
             set
             {
-                transportMeansField = value;
+                _transportMeansField = value;
             }
         }
 
@@ -401,11 +401,11 @@
         {
             get
             {
-                return loadingPortLocationField;
+                return _loadingPortLocationField;
             }
             set
             {
-                loadingPortLocationField = value;
+                _loadingPortLocationField = value;
             }
         }
 
@@ -414,11 +414,11 @@
         {
             get
             {
-                return unloadingPortLocationField;
+                return _unloadingPortLocationField;
             }
             set
             {
-                unloadingPortLocationField = value;
+                _unloadingPortLocationField = value;
             }
         }
 
@@ -427,11 +427,11 @@
         {
             get
             {
-                return transshipPortLocationField;
+                return _transshipPortLocationField;
             }
             set
             {
-                transshipPortLocationField = value;
+                _transshipPortLocationField = value;
             }
         }
 
@@ -440,11 +440,11 @@
         {
             get
             {
-                return loadingTransportEventField;
+                return _loadingTransportEventField;
             }
             set
             {
-                loadingTransportEventField = value;
+                _loadingTransportEventField = value;
             }
         }
 
@@ -453,11 +453,11 @@
         {
             get
             {
-                return examinationTransportEventField;
+                return _examinationTransportEventField;
             }
             set
             {
-                examinationTransportEventField = value;
+                _examinationTransportEventField = value;
             }
         }
 
@@ -466,11 +466,11 @@
         {
             get
             {
-                return availabilityTransportEventField;
+                return _availabilityTransportEventField;
             }
             set
             {
-                availabilityTransportEventField = value;
+                _availabilityTransportEventField = value;
             }
         }
 
@@ -479,11 +479,11 @@
         {
             get
             {
-                return exportationTransportEventField;
+                return _exportationTransportEventField;
             }
             set
             {
-                exportationTransportEventField = value;
+                _exportationTransportEventField = value;
             }
         }
 
@@ -492,11 +492,11 @@
         {
             get
             {
-                return dischargeTransportEventField;
+                return _dischargeTransportEventField;
             }
             set
             {
-                dischargeTransportEventField = value;
+                _dischargeTransportEventField = value;
             }
         }
 
@@ -505,11 +505,11 @@
         {
             get
             {
-                return warehousingTransportEventField;
+                return _warehousingTransportEventField;
             }
             set
             {
-                warehousingTransportEventField = value;
+                _warehousingTransportEventField = value;
             }
         }
 
@@ -518,11 +518,11 @@
         {
             get
             {
-                return takeoverTransportEventField;
+                return _takeoverTransportEventField;
             }
             set
             {
-                takeoverTransportEventField = value;
+                _takeoverTransportEventField = value;
             }
         }
 
@@ -531,11 +531,11 @@
         {
             get
             {
-                return optionalTakeoverTransportEventField;
+                return _optionalTakeoverTransportEventField;
             }
             set
             {
-                optionalTakeoverTransportEventField = value;
+                _optionalTakeoverTransportEventField = value;
             }
         }
 
@@ -544,11 +544,11 @@
         {
             get
             {
-                return dropoffTransportEventField;
+                return _dropoffTransportEventField;
             }
             set
             {
-                dropoffTransportEventField = value;
+                _dropoffTransportEventField = value;
             }
         }
 
@@ -557,11 +557,11 @@
         {
             get
             {
-                return actualPickupTransportEventField;
+                return _actualPickupTransportEventField;
             }
             set
             {
-                actualPickupTransportEventField = value;
+                _actualPickupTransportEventField = value;
             }
         }
 
@@ -570,11 +570,11 @@
         {
             get
             {
-                return deliveryTransportEventField;
+                return _deliveryTransportEventField;
             }
             set
             {
-                deliveryTransportEventField = value;
+                _deliveryTransportEventField = value;
             }
         }
 
@@ -583,11 +583,11 @@
         {
             get
             {
-                return receiptTransportEventField;
+                return _receiptTransportEventField;
             }
             set
             {
-                receiptTransportEventField = value;
+                _receiptTransportEventField = value;
             }
         }
 
@@ -596,11 +596,11 @@
         {
             get
             {
-                return storageTransportEventField;
+                return _storageTransportEventField;
             }
             set
             {
-                storageTransportEventField = value;
+                _storageTransportEventField = value;
             }
         }
 
@@ -609,11 +609,11 @@
         {
             get
             {
-                return acceptanceTransportEventField;
+                return _acceptanceTransportEventField;
             }
             set
             {
-                acceptanceTransportEventField = value;
+                _acceptanceTransportEventField = value;
             }
         }
 
@@ -622,11 +622,11 @@
         {
             get
             {
-                return terminalOperatorPartyField;
+                return _terminalOperatorPartyField;
             }
             set
             {
-                terminalOperatorPartyField = value;
+                _terminalOperatorPartyField = value;
             }
         }
 
@@ -635,11 +635,11 @@
         {
             get
             {
-                return customsAgentPartyField;
+                return _customsAgentPartyField;
             }
             set
             {
-                customsAgentPartyField = value;
+                _customsAgentPartyField = value;
             }
         }
 
@@ -648,11 +648,11 @@
         {
             get
             {
-                return estimatedTransitPeriodField;
+                return _estimatedTransitPeriodField;
             }
             set
             {
-                estimatedTransitPeriodField = value;
+                _estimatedTransitPeriodField = value;
             }
         }
 
@@ -662,11 +662,11 @@
         {
             get
             {
-                return freightAllowanceChargeField;
+                return _freightAllowanceChargeField;
             }
             set
             {
-                freightAllowanceChargeField = value;
+                _freightAllowanceChargeField = value;
             }
         }
 
@@ -675,11 +675,11 @@
         {
             get
             {
-                return freightChargeLocationField;
+                return _freightChargeLocationField;
             }
             set
             {
-                freightChargeLocationField = value;
+                _freightChargeLocationField = value;
             }
         }
 
@@ -689,11 +689,11 @@
         {
             get
             {
-                return detentionTransportEventField;
+                return _detentionTransportEventField;
             }
             set
             {
-                detentionTransportEventField = value;
+                _detentionTransportEventField = value;
             }
         }
 
@@ -702,11 +702,11 @@
         {
             get
             {
-                return requestedDepartureTransportEventField;
+                return _requestedDepartureTransportEventField;
             }
             set
             {
-                requestedDepartureTransportEventField = value;
+                _requestedDepartureTransportEventField = value;
             }
         }
 
@@ -715,11 +715,11 @@
         {
             get
             {
-                return requestedArrivalTransportEventField;
+                return _requestedArrivalTransportEventField;
             }
             set
             {
-                requestedArrivalTransportEventField = value;
+                _requestedArrivalTransportEventField = value;
             }
         }
 
@@ -729,11 +729,11 @@
         {
             get
             {
-                return requestedWaypointTransportEventField;
+                return _requestedWaypointTransportEventField;
             }
             set
             {
-                requestedWaypointTransportEventField = value;
+                _requestedWaypointTransportEventField = value;
             }
         }
 
@@ -742,11 +742,11 @@
         {
             get
             {
-                return plannedDepartureTransportEventField;
+                return _plannedDepartureTransportEventField;
             }
             set
             {
-                plannedDepartureTransportEventField = value;
+                _plannedDepartureTransportEventField = value;
             }
         }
 
@@ -755,11 +755,11 @@
         {
             get
             {
-                return plannedArrivalTransportEventField;
+                return _plannedArrivalTransportEventField;
             }
             set
             {
-                plannedArrivalTransportEventField = value;
+                _plannedArrivalTransportEventField = value;
             }
         }
 
@@ -769,11 +769,11 @@
         {
             get
             {
-                return plannedWaypointTransportEventField;
+                return _plannedWaypointTransportEventField;
             }
             set
             {
-                plannedWaypointTransportEventField = value;
+                _plannedWaypointTransportEventField = value;
             }
         }
 
@@ -782,11 +782,11 @@
         {
             get
             {
-                return actualDepartureTransportEventField;
+                return _actualDepartureTransportEventField;
             }
             set
             {
-                actualDepartureTransportEventField = value;
+                _actualDepartureTransportEventField = value;
             }
         }
 
@@ -795,11 +795,11 @@
         {
             get
             {
-                return actualWaypointTransportEventField;
+                return _actualWaypointTransportEventField;
             }
             set
             {
-                actualWaypointTransportEventField = value;
+                _actualWaypointTransportEventField = value;
             }
         }
 
@@ -808,11 +808,11 @@
         {
             get
             {
-                return actualArrivalTransportEventField;
+                return _actualArrivalTransportEventField;
             }
             set
             {
-                actualArrivalTransportEventField = value;
+                _actualArrivalTransportEventField = value;
             }
         }
 
@@ -822,11 +822,11 @@
         {
             get
             {
-                return transportEventField;
+                return _transportEventField;
             }
             set
             {
-                transportEventField = value;
+                _transportEventField = value;
             }
         }
 
@@ -835,11 +835,11 @@
         {
             get
             {
-                return estimatedDepartureTransportEventField;
+                return _estimatedDepartureTransportEventField;
             }
             set
             {
-                estimatedDepartureTransportEventField = value;
+                _estimatedDepartureTransportEventField = value;
             }
         }
 
@@ -848,11 +848,11 @@
         {
             get
             {
-                return estimatedArrivalTransportEventField;
+                return _estimatedArrivalTransportEventField;
             }
             set
             {
-                estimatedArrivalTransportEventField = value;
+                _estimatedArrivalTransportEventField = value;
             }
         }
 
@@ -862,11 +862,11 @@
         {
             get
             {
-                return passengerPersonField;
+                return _passengerPersonField;
             }
             set
             {
-                passengerPersonField = value;
+                _passengerPersonField = value;
             }
         }
 
@@ -876,11 +876,11 @@
         {
             get
             {
-                return driverPersonField;
+                return _driverPersonField;
             }
             set
             {
-                driverPersonField = value;
+                _driverPersonField = value;
             }
         }
 
@@ -889,11 +889,11 @@
         {
             get
             {
-                return reportingPersonField;
+                return _reportingPersonField;
             }
             set
             {
-                reportingPersonField = value;
+                _reportingPersonField = value;
             }
         }
 
@@ -903,11 +903,11 @@
         {
             get
             {
-                return crewMemberPersonField;
+                return _crewMemberPersonField;
             }
             set
             {
-                crewMemberPersonField = value;
+                _crewMemberPersonField = value;
             }
         }
 
@@ -916,11 +916,11 @@
         {
             get
             {
-                return securityOfficerPersonField;
+                return _securityOfficerPersonField;
             }
             set
             {
-                securityOfficerPersonField = value;
+                _securityOfficerPersonField = value;
             }
         }
 
@@ -929,11 +929,11 @@
         {
             get
             {
-                return masterPersonField;
+                return _masterPersonField;
             }
             set
             {
-                masterPersonField = value;
+                _masterPersonField = value;
             }
         }
 
@@ -942,11 +942,11 @@
         {
             get
             {
-                return shipsSurgeonPersonField;
+                return _shipsSurgeonPersonField;
             }
             set
             {
-                shipsSurgeonPersonField = value;
+                _shipsSurgeonPersonField = value;
             }
         }
     }

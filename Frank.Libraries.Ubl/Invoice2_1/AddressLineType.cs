@@ -10,7 +10,7 @@
     public partial class AddressLineType
     {
 
-        private LineType lineField;
+        private LineType _lineField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -18,11 +18,11 @@
         {
             get
             {
-                return lineField;
+                return _lineField;
             }
             set
             {
-                lineField = value;
+                _lineField = value;
             }
         }
     }

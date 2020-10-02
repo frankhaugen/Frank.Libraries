@@ -10,35 +10,35 @@
     public partial class ForecastRevisionLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private RevisedForecastLineIDType revisedForecastLineIDField;
+        private RevisedForecastLineIdType _revisedForecastLineIdField;
 
-        private SourceForecastIssueDateType sourceForecastIssueDateField;
+        private SourceForecastIssueDateType _sourceForecastIssueDateField;
 
-        private SourceForecastIssueTimeType sourceForecastIssueTimeField;
+        private SourceForecastIssueTimeType _sourceForecastIssueTimeField;
 
-        private AdjustmentReasonCodeType adjustmentReasonCodeField;
+        private AdjustmentReasonCodeType _adjustmentReasonCodeField;
 
-        private PeriodType forecastPeriodField;
+        private PeriodType _forecastPeriodField;
 
-        private SalesItemType salesItemField;
+        private SalesItemType _salesItemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -62,25 +62,25 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public RevisedForecastLineIDType RevisedForecastLineID
+        public RevisedForecastLineIdType RevisedForecastLineId
         {
             get
             {
-                return revisedForecastLineIDField;
+                return _revisedForecastLineIdField;
             }
             set
             {
-                revisedForecastLineIDField = value;
+                _revisedForecastLineIdField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return sourceForecastIssueDateField;
+                return _sourceForecastIssueDateField;
             }
             set
             {
-                sourceForecastIssueDateField = value;
+                _sourceForecastIssueDateField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return sourceForecastIssueTimeField;
+                return _sourceForecastIssueTimeField;
             }
             set
             {
-                sourceForecastIssueTimeField = value;
+                _sourceForecastIssueTimeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return adjustmentReasonCodeField;
+                return _adjustmentReasonCodeField;
             }
             set
             {
-                adjustmentReasonCodeField = value;
+                _adjustmentReasonCodeField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return forecastPeriodField;
+                return _forecastPeriodField;
             }
             set
             {
-                forecastPeriodField = value;
+                _forecastPeriodField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return salesItemField;
+                return _salesItemField;
             }
             set
             {
-                salesItemField = value;
+                _salesItemField = value;
             }
         }
     }

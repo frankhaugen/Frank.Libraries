@@ -10,13 +10,13 @@
     public partial class ValidationDataType
     {
 
-        private CertificateValuesType certificateValuesField;
+        private CertificateValuesType _certificateValuesField;
 
-        private RevocationValuesType revocationValuesField;
+        private RevocationValuesType _revocationValuesField;
 
-        private string idField;
+        private string _idField;
 
-        private string urField;
+        private string _urField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return certificateValuesField;
+                return _certificateValuesField;
             }
             set
             {
-                certificateValuesField = value;
+                _certificateValuesField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return revocationValuesField;
+                return _revocationValuesField;
             }
             set
             {
-                revocationValuesField = value;
+                _revocationValuesField = value;
             }
         }
 
@@ -52,25 +52,25 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string UR
+        public string Ur
         {
             get
             {
-                return urField;
+                return _urField;
             }
             set
             {
-                urField = value;
+                _urField = value;
             }
         }
     }

@@ -12,9 +12,9 @@
         Item,
 
         /// <remarks/>
-        PGPKeyID,
+        PgpKeyId,
 
         /// <remarks/>
-        PGPKeyPacket,
+        PgpKeyPacket,
     }
 }

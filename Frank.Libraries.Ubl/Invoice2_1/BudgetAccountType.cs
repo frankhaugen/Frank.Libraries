@@ -10,23 +10,23 @@
     public partial class BudgetAccountType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private BudgetYearNumericType budgetYearNumericField;
+        private BudgetYearNumericType _budgetYearNumericField;
 
-        private ClassificationSchemeType requiredClassificationSchemeField;
+        private ClassificationSchemeType _requiredClassificationSchemeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return budgetYearNumericField;
+                return _budgetYearNumericField;
             }
             set
             {
-                budgetYearNumericField = value;
+                _budgetYearNumericField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return requiredClassificationSchemeField;
+                return _requiredClassificationSchemeField;
             }
             set
             {
-                requiredClassificationSchemeField = value;
+                _requiredClassificationSchemeField = value;
             }
         }
     }

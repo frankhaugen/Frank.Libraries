@@ -36,37 +36,37 @@
     public partial class MeasureType
     {
 
-        private string unitCodeField;
+        private string _unitCodeField;
 
-        private string unitCodeListVersionIDField;
+        private string _unitCodeListVersionIdField;
 
-        private decimal valueField;
+        private decimal _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string unitCode
+        public string UnitCode
         {
             get
             {
-                return unitCodeField;
+                return _unitCodeField;
             }
             set
             {
-                unitCodeField = value;
+                _unitCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string unitCodeListVersionID
+        public string UnitCodeListVersionId
         {
             get
             {
-                return unitCodeListVersionIDField;
+                return _unitCodeListVersionIdField;
             }
             set
             {
-                unitCodeListVersionIDField = value;
+                _unitCodeListVersionIdField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

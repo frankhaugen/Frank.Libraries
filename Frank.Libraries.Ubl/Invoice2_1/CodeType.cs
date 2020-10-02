@@ -9,7 +9,7 @@
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ValidationResultCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UtilityStatementTypeCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(UrgencyCodeType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UNDGCodeType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UndgCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TypeCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransportationStatusTypeCodeType))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(TransportServiceCodeType))]
@@ -224,149 +224,149 @@
     public partial class CodeType
     {
 
-        private string listIDField;
+        private string _listIdField;
 
-        private string listAgencyIDField;
+        private string _listAgencyIdField;
 
-        private string listAgencyNameField;
+        private string _listAgencyNameField;
 
-        private string listNameField;
+        private string _listNameField;
 
-        private string listVersionIDField;
+        private string _listVersionIdField;
 
-        private string nameField;
+        private string _nameField;
 
-        private string languageIDField;
+        private string _languageIdField;
 
-        private string listURIField;
+        private string _listUriField;
 
-        private string listSchemeURIField;
+        private string _listSchemeUriField;
 
-        private string valueField;
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string listID
-        {
-            get
-            {
-                return listIDField;
-            }
-            set
-            {
-                listIDField = value;
-            }
-        }
+        private string _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string listAgencyID
+        public string ListId
         {
             get
             {
-                return listAgencyIDField;
+                return _listIdField;
             }
             set
             {
-                listAgencyIDField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string listAgencyName
-        {
-            get
-            {
-                return listAgencyNameField;
-            }
-            set
-            {
-                listAgencyNameField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string listName
-        {
-            get
-            {
-                return listNameField;
-            }
-            set
-            {
-                listNameField = value;
+                _listIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string listVersionID
+        public string ListAgencyId
         {
             get
             {
-                return listVersionIDField;
+                return _listAgencyIdField;
             }
             set
             {
-                listVersionIDField = value;
+                _listAgencyIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string name
+        public string ListAgencyName
         {
             get
             {
-                return nameField;
+                return _listAgencyNameField;
             }
             set
             {
-                nameField = value;
+                _listAgencyNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string ListName
+        {
+            get
+            {
+                return _listNameField;
+            }
+            set
+            {
+                _listNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
+        public string ListVersionId
+        {
+            get
+            {
+                return _listVersionIdField;
+            }
+            set
+            {
+                _listVersionIdField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Name
+        {
+            get
+            {
+                return _nameField;
+            }
+            set
+            {
+                _nameField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "language")]
-        public string languageID
+        public string LanguageId
         {
             get
             {
-                return languageIDField;
+                return _languageIdField;
             }
             set
             {
-                languageIDField = value;
+                _languageIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string listURI
+        public string ListUri
         {
             get
             {
-                return listURIField;
+                return _listUriField;
             }
             set
             {
-                listURIField = value;
+                _listUriField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string listSchemeURI
+        public string ListSchemeUri
         {
             get
             {
-                return listSchemeURIField;
+                return _listSchemeUriField;
             }
             set
             {
-                listSchemeURIField = value;
+                _listSchemeUriField = value;
             }
         }
 
@@ -376,11 +376,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

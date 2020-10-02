@@ -10,9 +10,9 @@
     public partial class ItemComparisonType
     {
 
-        private PriceAmountType priceAmountField;
+        private PriceAmountType _priceAmountField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return priceAmountField;
+                return _priceAmountField;
             }
             set
             {
-                priceAmountField = value;
+                _priceAmountField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
     }

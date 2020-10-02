@@ -10,43 +10,43 @@
     public partial class PartyType
     {
 
-        private MarkCareIndicatorType markCareIndicatorField;
+        private MarkCareIndicatorType _markCareIndicatorField;
 
-        private MarkAttentionIndicatorType markAttentionIndicatorField;
+        private MarkAttentionIndicatorType _markAttentionIndicatorField;
 
-        private WebsiteURIType websiteURIField;
+        private WebsiteUriType _websiteUriField;
 
-        private LogoReferenceIDType logoReferenceIDField;
+        private LogoReferenceIdType _logoReferenceIdField;
 
-        private EndpointIDType endpointIDField;
+        private EndpointIdType _endpointIdField;
 
-        private IndustryClassificationCodeType industryClassificationCodeField;
+        private IndustryClassificationCodeType _industryClassificationCodeField;
 
-        private PartyIdentificationType[] partyIdentificationField;
+        private PartyIdentificationType[] _partyIdentificationField;
 
-        private PartyNameType[] partyNameField;
+        private PartyNameType[] _partyNameField;
 
-        private LanguageType languageField;
+        private LanguageType _languageField;
 
-        private AddressType postalAddressField;
+        private AddressType _postalAddressField;
 
-        private LocationType1 physicalLocationField;
+        private LocationType1 _physicalLocationField;
 
-        private PartyTaxSchemeType[] partyTaxSchemeField;
+        private PartyTaxSchemeType[] _partyTaxSchemeField;
 
-        private PartyLegalEntityType[] partyLegalEntityField;
+        private PartyLegalEntityType[] _partyLegalEntityField;
 
-        private ContactType contactField;
+        private ContactType _contactField;
 
-        private PersonType[] personField;
+        private PersonType[] _personField;
 
-        private PartyType agentPartyField;
+        private PartyType _agentPartyField;
 
-        private ServiceProviderPartyType[] serviceProviderPartyField;
+        private ServiceProviderPartyType[] _serviceProviderPartyField;
 
-        private PowerOfAttorneyType[] powerOfAttorneyField;
+        private PowerOfAttorneyType[] _powerOfAttorneyField;
 
-        private FinancialAccountType financialAccountField;
+        private FinancialAccountType _financialAccountField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -54,11 +54,11 @@
         {
             get
             {
-                return markCareIndicatorField;
+                return _markCareIndicatorField;
             }
             set
             {
-                markCareIndicatorField = value;
+                _markCareIndicatorField = value;
             }
         }
 
@@ -68,53 +68,53 @@
         {
             get
             {
-                return markAttentionIndicatorField;
+                return _markAttentionIndicatorField;
             }
             set
             {
-                markAttentionIndicatorField = value;
+                _markAttentionIndicatorField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public WebsiteURIType WebsiteURI
+        public WebsiteUriType WebsiteUri
         {
             get
             {
-                return websiteURIField;
+                return _websiteUriField;
             }
             set
             {
-                websiteURIField = value;
+                _websiteUriField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LogoReferenceIDType LogoReferenceID
+        public LogoReferenceIdType LogoReferenceId
         {
             get
             {
-                return logoReferenceIDField;
+                return _logoReferenceIdField;
             }
             set
             {
-                logoReferenceIDField = value;
+                _logoReferenceIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public EndpointIDType EndpointID
+        public EndpointIdType EndpointId
         {
             get
             {
-                return endpointIDField;
+                return _endpointIdField;
             }
             set
             {
-                endpointIDField = value;
+                _endpointIdField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return industryClassificationCodeField;
+                return _industryClassificationCodeField;
             }
             set
             {
-                industryClassificationCodeField = value;
+                _industryClassificationCodeField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return partyIdentificationField;
+                return _partyIdentificationField;
             }
             set
             {
-                partyIdentificationField = value;
+                _partyIdentificationField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return partyNameField;
+                return _partyNameField;
             }
             set
             {
-                partyNameField = value;
+                _partyNameField = value;
             }
         }
 
@@ -165,11 +165,11 @@
         {
             get
             {
-                return languageField;
+                return _languageField;
             }
             set
             {
-                languageField = value;
+                _languageField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return postalAddressField;
+                return _postalAddressField;
             }
             set
             {
-                postalAddressField = value;
+                _postalAddressField = value;
             }
         }
 
@@ -191,11 +191,11 @@
         {
             get
             {
-                return physicalLocationField;
+                return _physicalLocationField;
             }
             set
             {
-                physicalLocationField = value;
+                _physicalLocationField = value;
             }
         }
 
@@ -205,11 +205,11 @@
         {
             get
             {
-                return partyTaxSchemeField;
+                return _partyTaxSchemeField;
             }
             set
             {
-                partyTaxSchemeField = value;
+                _partyTaxSchemeField = value;
             }
         }
 
@@ -219,11 +219,11 @@
         {
             get
             {
-                return partyLegalEntityField;
+                return _partyLegalEntityField;
             }
             set
             {
-                partyLegalEntityField = value;
+                _partyLegalEntityField = value;
             }
         }
 
@@ -232,11 +232,11 @@
         {
             get
             {
-                return contactField;
+                return _contactField;
             }
             set
             {
-                contactField = value;
+                _contactField = value;
             }
         }
 
@@ -246,11 +246,11 @@
         {
             get
             {
-                return personField;
+                return _personField;
             }
             set
             {
-                personField = value;
+                _personField = value;
             }
         }
 
@@ -259,11 +259,11 @@
         {
             get
             {
-                return agentPartyField;
+                return _agentPartyField;
             }
             set
             {
-                agentPartyField = value;
+                _agentPartyField = value;
             }
         }
 
@@ -273,11 +273,11 @@
         {
             get
             {
-                return serviceProviderPartyField;
+                return _serviceProviderPartyField;
             }
             set
             {
-                serviceProviderPartyField = value;
+                _serviceProviderPartyField = value;
             }
         }
 
@@ -287,11 +287,11 @@
         {
             get
             {
-                return powerOfAttorneyField;
+                return _powerOfAttorneyField;
             }
             set
             {
-                powerOfAttorneyField = value;
+                _powerOfAttorneyField = value;
             }
         }
 
@@ -300,11 +300,11 @@
         {
             get
             {
-                return financialAccountField;
+                return _financialAccountField;
             }
             set
             {
-                financialAccountField = value;
+                _financialAccountField = value;
             }
         }
     }

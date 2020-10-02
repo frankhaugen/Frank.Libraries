@@ -10,13 +10,13 @@
     public partial class EnergyWaterSupplyType
     {
 
-        private ConsumptionReportType[] consumptionReportField;
+        private ConsumptionReportType[] _consumptionReportField;
 
-        private EnergyTaxReportType[] energyTaxReportField;
+        private EnergyTaxReportType[] _energyTaxReportField;
 
-        private ConsumptionAverageType[] consumptionAverageField;
+        private ConsumptionAverageType[] _consumptionAverageField;
 
-        private ConsumptionCorrectionType[] energyWaterConsumptionCorrectionField;
+        private ConsumptionCorrectionType[] _energyWaterConsumptionCorrectionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("ConsumptionReport")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return consumptionReportField;
+                return _consumptionReportField;
             }
             set
             {
-                consumptionReportField = value;
+                _consumptionReportField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return energyTaxReportField;
+                return _energyTaxReportField;
             }
             set
             {
-                energyTaxReportField = value;
+                _energyTaxReportField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return consumptionAverageField;
+                return _consumptionAverageField;
             }
             set
             {
-                consumptionAverageField = value;
+                _consumptionAverageField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return energyWaterConsumptionCorrectionField;
+                return _energyWaterConsumptionCorrectionField;
             }
             set
             {
-                energyWaterConsumptionCorrectionField = value;
+                _energyWaterConsumptionCorrectionField = value;
             }
         }
     }

@@ -10,7 +10,7 @@
     public partial class CounterSignatureType
     {
 
-        private SignatureType1 signatureField;
+        private SignatureType1 _signatureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
@@ -18,11 +18,11 @@
         {
             get
             {
-                return signatureField;
+                return _signatureField;
             }
             set
             {
-                signatureField = value;
+                _signatureField = value;
             }
         }
     }

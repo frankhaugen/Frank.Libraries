@@ -10,51 +10,51 @@
     public partial class PersonType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private FirstNameType firstNameField;
+        private FirstNameType _firstNameField;
 
-        private FamilyNameType familyNameField;
+        private FamilyNameType _familyNameField;
 
-        private TitleType titleField;
+        private TitleType _titleField;
 
-        private MiddleNameType middleNameField;
+        private MiddleNameType _middleNameField;
 
-        private OtherNameType otherNameField;
+        private OtherNameType _otherNameField;
 
-        private NameSuffixType nameSuffixField;
+        private NameSuffixType _nameSuffixField;
 
-        private JobTitleType jobTitleField;
+        private JobTitleType _jobTitleField;
 
-        private NationalityIDType nationalityIDField;
+        private NationalityIdType _nationalityIdField;
 
-        private GenderCodeType genderCodeField;
+        private GenderCodeType _genderCodeField;
 
-        private BirthDateType birthDateField;
+        private BirthDateType _birthDateField;
 
-        private BirthplaceNameType birthplaceNameField;
+        private BirthplaceNameType _birthplaceNameField;
 
-        private OrganizationDepartmentType organizationDepartmentField;
+        private OrganizationDepartmentType _organizationDepartmentField;
 
-        private ContactType contactField;
+        private ContactType _contactField;
 
-        private FinancialAccountType financialAccountField;
+        private FinancialAccountType _financialAccountField;
 
-        private DocumentReferenceType[] identityDocumentReferenceField;
+        private DocumentReferenceType[] _identityDocumentReferenceField;
 
-        private AddressType residenceAddressField;
+        private AddressType _residenceAddressField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return firstNameField;
+                return _firstNameField;
             }
             set
             {
-                firstNameField = value;
+                _firstNameField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return familyNameField;
+                return _familyNameField;
             }
             set
             {
-                familyNameField = value;
+                _familyNameField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return titleField;
+                return _titleField;
             }
             set
             {
-                titleField = value;
+                _titleField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return middleNameField;
+                return _middleNameField;
             }
             set
             {
-                middleNameField = value;
+                _middleNameField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return otherNameField;
+                return _otherNameField;
             }
             set
             {
-                otherNameField = value;
+                _otherNameField = value;
             }
         }
 
@@ -134,11 +134,11 @@
         {
             get
             {
-                return nameSuffixField;
+                return _nameSuffixField;
             }
             set
             {
-                nameSuffixField = value;
+                _nameSuffixField = value;
             }
         }
 
@@ -148,25 +148,25 @@
         {
             get
             {
-                return jobTitleField;
+                return _jobTitleField;
             }
             set
             {
-                jobTitleField = value;
+                _jobTitleField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public NationalityIDType NationalityID
+        public NationalityIdType NationalityId
         {
             get
             {
-                return nationalityIDField;
+                return _nationalityIdField;
             }
             set
             {
-                nationalityIDField = value;
+                _nationalityIdField = value;
             }
         }
 
@@ -176,11 +176,11 @@
         {
             get
             {
-                return genderCodeField;
+                return _genderCodeField;
             }
             set
             {
-                genderCodeField = value;
+                _genderCodeField = value;
             }
         }
 
@@ -190,11 +190,11 @@
         {
             get
             {
-                return birthDateField;
+                return _birthDateField;
             }
             set
             {
-                birthDateField = value;
+                _birthDateField = value;
             }
         }
 
@@ -204,11 +204,11 @@
         {
             get
             {
-                return birthplaceNameField;
+                return _birthplaceNameField;
             }
             set
             {
-                birthplaceNameField = value;
+                _birthplaceNameField = value;
             }
         }
 
@@ -218,11 +218,11 @@
         {
             get
             {
-                return organizationDepartmentField;
+                return _organizationDepartmentField;
             }
             set
             {
-                organizationDepartmentField = value;
+                _organizationDepartmentField = value;
             }
         }
 
@@ -231,11 +231,11 @@
         {
             get
             {
-                return contactField;
+                return _contactField;
             }
             set
             {
-                contactField = value;
+                _contactField = value;
             }
         }
 
@@ -244,11 +244,11 @@
         {
             get
             {
-                return financialAccountField;
+                return _financialAccountField;
             }
             set
             {
-                financialAccountField = value;
+                _financialAccountField = value;
             }
         }
 
@@ -258,11 +258,11 @@
         {
             get
             {
-                return identityDocumentReferenceField;
+                return _identityDocumentReferenceField;
             }
             set
             {
-                identityDocumentReferenceField = value;
+                _identityDocumentReferenceField = value;
             }
         }
 
@@ -271,11 +271,11 @@
         {
             get
             {
-                return residenceAddressField;
+                return _residenceAddressField;
             }
             set
             {
-                residenceAddressField = value;
+                _residenceAddressField = value;
             }
         }
     }

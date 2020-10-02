@@ -10,31 +10,31 @@
     public partial class TradeFinancingType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private FinancingInstrumentCodeType financingInstrumentCodeField;
+        private FinancingInstrumentCodeType _financingInstrumentCodeField;
 
-        private DocumentReferenceType contractDocumentReferenceField;
+        private DocumentReferenceType _contractDocumentReferenceField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private PartyType financingPartyField;
+        private PartyType _financingPartyField;
 
-        private FinancialAccountType financingFinancialAccountField;
+        private FinancialAccountType _financingFinancialAccountField;
 
-        private ClauseType[] clauseField;
+        private ClauseType[] _clauseField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return financingInstrumentCodeField;
+                return _financingInstrumentCodeField;
             }
             set
             {
-                financingInstrumentCodeField = value;
+                _financingInstrumentCodeField = value;
             }
         }
 
@@ -57,11 +57,11 @@
         {
             get
             {
-                return contractDocumentReferenceField;
+                return _contractDocumentReferenceField;
             }
             set
             {
-                contractDocumentReferenceField = value;
+                _contractDocumentReferenceField = value;
             }
         }
 
@@ -71,11 +71,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return financingPartyField;
+                return _financingPartyField;
             }
             set
             {
-                financingPartyField = value;
+                _financingPartyField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return financingFinancialAccountField;
+                return _financingFinancialAccountField;
             }
             set
             {
-                financingFinancialAccountField = value;
+                _financingFinancialAccountField = value;
             }
         }
 
@@ -111,11 +111,11 @@
         {
             get
             {
-                return clauseField;
+                return _clauseField;
             }
             set
             {
-                clauseField = value;
+                _clauseField = value;
             }
         }
     }

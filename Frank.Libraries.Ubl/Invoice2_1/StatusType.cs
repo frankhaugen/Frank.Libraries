@@ -10,29 +10,29 @@
     public partial class StatusType
     {
 
-        private ConditionCodeType conditionCodeField;
+        private ConditionCodeType _conditionCodeField;
 
-        private ReferenceDateType referenceDateField;
+        private ReferenceDateType _referenceDateField;
 
-        private ReferenceTimeType referenceTimeField;
+        private ReferenceTimeType _referenceTimeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private StatusReasonCodeType statusReasonCodeField;
+        private StatusReasonCodeType _statusReasonCodeField;
 
-        private StatusReasonType[] statusReasonField;
+        private StatusReasonType[] _statusReasonField;
 
-        private SequenceIDType sequenceIDField;
+        private SequenceIdType _sequenceIdField;
 
-        private TextType2[] textField;
+        private TextType2[] _textField;
 
-        private IndicationIndicatorType indicationIndicatorField;
+        private IndicationIndicatorType _indicationIndicatorField;
 
-        private PercentType1 percentField;
+        private PercentType1 _percentField;
 
-        private ReliabilityPercentType reliabilityPercentField;
+        private ReliabilityPercentType _reliabilityPercentField;
 
-        private ConditionType1[] conditionField;
+        private ConditionType1[] _conditionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -40,11 +40,11 @@
         {
             get
             {
-                return conditionCodeField;
+                return _conditionCodeField;
             }
             set
             {
-                conditionCodeField = value;
+                _conditionCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return referenceDateField;
+                return _referenceDateField;
             }
             set
             {
-                referenceDateField = value;
+                _referenceDateField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return referenceTimeField;
+                return _referenceTimeField;
             }
             set
             {
-                referenceTimeField = value;
+                _referenceTimeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return statusReasonCodeField;
+                return _statusReasonCodeField;
             }
             set
             {
-                statusReasonCodeField = value;
+                _statusReasonCodeField = value;
             }
         }
 
@@ -110,25 +110,25 @@
         {
             get
             {
-                return statusReasonField;
+                return _statusReasonField;
             }
             set
             {
-                statusReasonField = value;
+                _statusReasonField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SequenceIDType SequenceID
+        public SequenceIdType SequenceId
         {
             get
             {
-                return sequenceIDField;
+                return _sequenceIdField;
             }
             set
             {
-                sequenceIDField = value;
+                _sequenceIdField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return textField;
+                return _textField;
             }
             set
             {
-                textField = value;
+                _textField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return indicationIndicatorField;
+                return _indicationIndicatorField;
             }
             set
             {
-                indicationIndicatorField = value;
+                _indicationIndicatorField = value;
             }
         }
 
@@ -166,11 +166,11 @@
         {
             get
             {
-                return percentField;
+                return _percentField;
             }
             set
             {
-                percentField = value;
+                _percentField = value;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                return reliabilityPercentField;
+                return _reliabilityPercentField;
             }
             set
             {
-                reliabilityPercentField = value;
+                _reliabilityPercentField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return conditionField;
+                return _conditionField;
             }
             set
             {
-                conditionField = value;
+                _conditionField = value;
             }
         }
     }

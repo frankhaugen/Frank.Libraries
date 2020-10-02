@@ -10,61 +10,61 @@
     public partial class StatementLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private BalanceBroughtForwardIndicatorType balanceBroughtForwardIndicatorField;
+        private BalanceBroughtForwardIndicatorType _balanceBroughtForwardIndicatorField;
 
-        private DebitLineAmountType debitLineAmountField;
+        private DebitLineAmountType _debitLineAmountField;
 
-        private CreditLineAmountType creditLineAmountField;
+        private CreditLineAmountType _creditLineAmountField;
 
-        private BalanceAmountType balanceAmountField;
+        private BalanceAmountType _balanceAmountField;
 
-        private PaymentPurposeCodeType paymentPurposeCodeField;
+        private PaymentPurposeCodeType _paymentPurposeCodeField;
 
-        private PaymentMeansType paymentMeansField;
+        private PaymentMeansType _paymentMeansField;
 
-        private PaymentTermsType[] paymentTermsField;
+        private PaymentTermsType[] _paymentTermsField;
 
-        private CustomerPartyType buyerCustomerPartyField;
+        private CustomerPartyType _buyerCustomerPartyField;
 
-        private SupplierPartyType sellerSupplierPartyField;
+        private SupplierPartyType _sellerSupplierPartyField;
 
-        private CustomerPartyType originatorCustomerPartyField;
+        private CustomerPartyType _originatorCustomerPartyField;
 
-        private CustomerPartyType accountingCustomerPartyField;
+        private CustomerPartyType _accountingCustomerPartyField;
 
-        private SupplierPartyType accountingSupplierPartyField;
+        private SupplierPartyType _accountingSupplierPartyField;
 
-        private PartyType payeePartyField;
+        private PartyType _payeePartyField;
 
-        private PeriodType[] invoicePeriodField;
+        private PeriodType[] _invoicePeriodField;
 
-        private BillingReferenceType[] billingReferenceField;
+        private BillingReferenceType[] _billingReferenceField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private ExchangeRateType exchangeRateField;
+        private ExchangeRateType _exchangeRateField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private PaymentType[] collectedPaymentField;
+        private PaymentType[] _collectedPaymentField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -74,25 +74,25 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return balanceBroughtForwardIndicatorField;
+                return _balanceBroughtForwardIndicatorField;
             }
             set
             {
-                balanceBroughtForwardIndicatorField = value;
+                _balanceBroughtForwardIndicatorField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return debitLineAmountField;
+                return _debitLineAmountField;
             }
             set
             {
-                debitLineAmountField = value;
+                _debitLineAmountField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return creditLineAmountField;
+                return _creditLineAmountField;
             }
             set
             {
-                creditLineAmountField = value;
+                _creditLineAmountField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return balanceAmountField;
+                return _balanceAmountField;
             }
             set
             {
-                balanceAmountField = value;
+                _balanceAmountField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return paymentPurposeCodeField;
+                return _paymentPurposeCodeField;
             }
             set
             {
-                paymentPurposeCodeField = value;
+                _paymentPurposeCodeField = value;
             }
         }
 
@@ -171,11 +171,11 @@
         {
             get
             {
-                return paymentMeansField;
+                return _paymentMeansField;
             }
             set
             {
-                paymentMeansField = value;
+                _paymentMeansField = value;
             }
         }
 
@@ -185,11 +185,11 @@
         {
             get
             {
-                return paymentTermsField;
+                return _paymentTermsField;
             }
             set
             {
-                paymentTermsField = value;
+                _paymentTermsField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return buyerCustomerPartyField;
+                return _buyerCustomerPartyField;
             }
             set
             {
-                buyerCustomerPartyField = value;
+                _buyerCustomerPartyField = value;
             }
         }
 
@@ -211,11 +211,11 @@
         {
             get
             {
-                return sellerSupplierPartyField;
+                return _sellerSupplierPartyField;
             }
             set
             {
-                sellerSupplierPartyField = value;
+                _sellerSupplierPartyField = value;
             }
         }
 
@@ -224,11 +224,11 @@
         {
             get
             {
-                return originatorCustomerPartyField;
+                return _originatorCustomerPartyField;
             }
             set
             {
-                originatorCustomerPartyField = value;
+                _originatorCustomerPartyField = value;
             }
         }
 
@@ -237,11 +237,11 @@
         {
             get
             {
-                return accountingCustomerPartyField;
+                return _accountingCustomerPartyField;
             }
             set
             {
-                accountingCustomerPartyField = value;
+                _accountingCustomerPartyField = value;
             }
         }
 
@@ -250,11 +250,11 @@
         {
             get
             {
-                return accountingSupplierPartyField;
+                return _accountingSupplierPartyField;
             }
             set
             {
-                accountingSupplierPartyField = value;
+                _accountingSupplierPartyField = value;
             }
         }
 
@@ -263,11 +263,11 @@
         {
             get
             {
-                return payeePartyField;
+                return _payeePartyField;
             }
             set
             {
-                payeePartyField = value;
+                _payeePartyField = value;
             }
         }
 
@@ -277,11 +277,11 @@
         {
             get
             {
-                return invoicePeriodField;
+                return _invoicePeriodField;
             }
             set
             {
-                invoicePeriodField = value;
+                _invoicePeriodField = value;
             }
         }
 
@@ -291,11 +291,11 @@
         {
             get
             {
-                return billingReferenceField;
+                return _billingReferenceField;
             }
             set
             {
-                billingReferenceField = value;
+                _billingReferenceField = value;
             }
         }
 
@@ -305,11 +305,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -318,11 +318,11 @@
         {
             get
             {
-                return exchangeRateField;
+                return _exchangeRateField;
             }
             set
             {
-                exchangeRateField = value;
+                _exchangeRateField = value;
             }
         }
 
@@ -332,11 +332,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -346,11 +346,11 @@
         {
             get
             {
-                return collectedPaymentField;
+                return _collectedPaymentField;
             }
             set
             {
-                collectedPaymentField = value;
+                _collectedPaymentField = value;
             }
         }
     }

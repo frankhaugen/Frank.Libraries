@@ -10,9 +10,9 @@
     public partial class ContractingActivityType
     {
 
-        private ActivityTypeCodeType activityTypeCodeField;
+        private ActivityTypeCodeType _activityTypeCodeField;
 
-        private ActivityTypeType activityTypeField;
+        private ActivityTypeType _activityTypeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return activityTypeCodeField;
+                return _activityTypeCodeField;
             }
             set
             {
-                activityTypeCodeField = value;
+                _activityTypeCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return activityTypeField;
+                return _activityTypeField;
             }
             set
             {
-                activityTypeField = value;
+                _activityTypeField = value;
             }
         }
     }

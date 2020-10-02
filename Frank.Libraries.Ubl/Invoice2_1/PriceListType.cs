@@ -10,25 +10,25 @@
     public partial class PriceListType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private StatusCodeType statusCodeField;
+        private StatusCodeType _statusCodeField;
 
-        private PeriodType[] validityPeriodField;
+        private PeriodType[] _validityPeriodField;
 
-        private PriceListType previousPriceListField;
+        private PriceListType _previousPriceListField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return statusCodeField;
+                return _statusCodeField;
             }
             set
             {
-                statusCodeField = value;
+                _statusCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return validityPeriodField;
+                return _validityPeriodField;
             }
             set
             {
-                validityPeriodField = value;
+                _validityPeriodField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return previousPriceListField;
+                return _previousPriceListField;
             }
             set
             {
-                previousPriceListField = value;
+                _previousPriceListField = value;
             }
         }
     }

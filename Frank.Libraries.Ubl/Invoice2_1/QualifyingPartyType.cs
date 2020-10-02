@@ -10,33 +10,33 @@
     public partial class QualifyingPartyType
     {
 
-        private ParticipationPercentType participationPercentField;
+        private ParticipationPercentType _participationPercentField;
 
-        private PersonalSituationType[] personalSituationField;
+        private PersonalSituationType[] _personalSituationField;
 
-        private OperatingYearsQuantityType operatingYearsQuantityField;
+        private OperatingYearsQuantityType _operatingYearsQuantityField;
 
-        private EmployeeQuantityType employeeQuantityField;
+        private EmployeeQuantityType _employeeQuantityField;
 
-        private BusinessClassificationEvidenceIDType businessClassificationEvidenceIDField;
+        private BusinessClassificationEvidenceIdType _businessClassificationEvidenceIdField;
 
-        private BusinessIdentityEvidenceIDType businessIdentityEvidenceIDField;
+        private BusinessIdentityEvidenceIdType _businessIdentityEvidenceIdField;
 
-        private TendererRoleCodeType tendererRoleCodeField;
+        private TendererRoleCodeType _tendererRoleCodeField;
 
-        private ClassificationSchemeType businessClassificationSchemeField;
+        private ClassificationSchemeType _businessClassificationSchemeField;
 
-        private CapabilityType[] technicalCapabilityField;
+        private CapabilityType[] _technicalCapabilityField;
 
-        private CapabilityType[] financialCapabilityField;
+        private CapabilityType[] _financialCapabilityField;
 
-        private CompletedTaskType[] completedTaskField;
+        private CompletedTaskType[] _completedTaskField;
 
-        private DeclarationType[] declarationField;
+        private DeclarationType[] _declarationField;
 
-        private PartyType partyField;
+        private PartyType _partyField;
 
-        private EconomicOperatorRoleType economicOperatorRoleField;
+        private EconomicOperatorRoleType _economicOperatorRoleField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -44,11 +44,11 @@
         {
             get
             {
-                return participationPercentField;
+                return _participationPercentField;
             }
             set
             {
-                participationPercentField = value;
+                _participationPercentField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return personalSituationField;
+                return _personalSituationField;
             }
             set
             {
-                personalSituationField = value;
+                _personalSituationField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return operatingYearsQuantityField;
+                return _operatingYearsQuantityField;
             }
             set
             {
-                operatingYearsQuantityField = value;
+                _operatingYearsQuantityField = value;
             }
         }
 
@@ -86,39 +86,39 @@
         {
             get
             {
-                return employeeQuantityField;
+                return _employeeQuantityField;
             }
             set
             {
-                employeeQuantityField = value;
+                _employeeQuantityField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public BusinessClassificationEvidenceIDType BusinessClassificationEvidenceID
+        public BusinessClassificationEvidenceIdType BusinessClassificationEvidenceId
         {
             get
             {
-                return businessClassificationEvidenceIDField;
+                return _businessClassificationEvidenceIdField;
             }
             set
             {
-                businessClassificationEvidenceIDField = value;
+                _businessClassificationEvidenceIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public BusinessIdentityEvidenceIDType BusinessIdentityEvidenceID
+        public BusinessIdentityEvidenceIdType BusinessIdentityEvidenceId
         {
             get
             {
-                return businessIdentityEvidenceIDField;
+                return _businessIdentityEvidenceIdField;
             }
             set
             {
-                businessIdentityEvidenceIDField = value;
+                _businessIdentityEvidenceIdField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return tendererRoleCodeField;
+                return _tendererRoleCodeField;
             }
             set
             {
-                tendererRoleCodeField = value;
+                _tendererRoleCodeField = value;
             }
         }
 
@@ -141,11 +141,11 @@
         {
             get
             {
-                return businessClassificationSchemeField;
+                return _businessClassificationSchemeField;
             }
             set
             {
-                businessClassificationSchemeField = value;
+                _businessClassificationSchemeField = value;
             }
         }
 
@@ -155,11 +155,11 @@
         {
             get
             {
-                return technicalCapabilityField;
+                return _technicalCapabilityField;
             }
             set
             {
-                technicalCapabilityField = value;
+                _technicalCapabilityField = value;
             }
         }
 
@@ -169,11 +169,11 @@
         {
             get
             {
-                return financialCapabilityField;
+                return _financialCapabilityField;
             }
             set
             {
-                financialCapabilityField = value;
+                _financialCapabilityField = value;
             }
         }
 
@@ -183,11 +183,11 @@
         {
             get
             {
-                return completedTaskField;
+                return _completedTaskField;
             }
             set
             {
-                completedTaskField = value;
+                _completedTaskField = value;
             }
         }
 
@@ -197,11 +197,11 @@
         {
             get
             {
-                return declarationField;
+                return _declarationField;
             }
             set
             {
-                declarationField = value;
+                _declarationField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return partyField;
+                return _partyField;
             }
             set
             {
-                partyField = value;
+                _partyField = value;
             }
         }
 
@@ -223,11 +223,11 @@
         {
             get
             {
-                return economicOperatorRoleField;
+                return _economicOperatorRoleField;
             }
             set
             {
-                economicOperatorRoleField = value;
+                _economicOperatorRoleField = value;
             }
         }
     }

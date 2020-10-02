@@ -10,19 +10,19 @@
     public partial class SubcontractTermsType
     {
 
-        private RateType1 rateField;
+        private RateType1 _rateField;
 
-        private UnknownPriceIndicatorType unknownPriceIndicatorField;
+        private UnknownPriceIndicatorType _unknownPriceIndicatorField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private SubcontractingConditionsCodeType subcontractingConditionsCodeField;
+        private SubcontractingConditionsCodeType _subcontractingConditionsCodeField;
 
-        private MaximumPercentType maximumPercentField;
+        private MaximumPercentType _maximumPercentField;
 
-        private MinimumPercentType minimumPercentField;
+        private MinimumPercentType _minimumPercentField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return rateField;
+                return _rateField;
             }
             set
             {
-                rateField = value;
+                _rateField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return unknownPriceIndicatorField;
+                return _unknownPriceIndicatorField;
             }
             set
             {
-                unknownPriceIndicatorField = value;
+                _unknownPriceIndicatorField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return subcontractingConditionsCodeField;
+                return _subcontractingConditionsCodeField;
             }
             set
             {
-                subcontractingConditionsCodeField = value;
+                _subcontractingConditionsCodeField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return maximumPercentField;
+                return _maximumPercentField;
             }
             set
             {
-                maximumPercentField = value;
+                _maximumPercentField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return minimumPercentField;
+                return _minimumPercentField;
             }
             set
             {
-                minimumPercentField = value;
+                _minimumPercentField = value;
             }
         }
     }

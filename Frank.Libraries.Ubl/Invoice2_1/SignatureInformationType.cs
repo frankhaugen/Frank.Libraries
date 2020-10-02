@@ -10,37 +10,37 @@
     public partial class SignatureInformationType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ReferencedSignatureIDType referencedSignatureIDField;
+        private ReferencedSignatureIdType _referencedSignatureIdField;
 
-        private SignatureType1 signatureField;
+        private SignatureType1 _signatureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2")]
-        public ReferencedSignatureIDType ReferencedSignatureID
+        public ReferencedSignatureIdType ReferencedSignatureId
         {
             get
             {
-                return referencedSignatureIDField;
+                return _referencedSignatureIdField;
             }
             set
             {
-                referencedSignatureIDField = value;
+                _referencedSignatureIdField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return signatureField;
+                return _signatureField;
             }
             set
             {
-                signatureField = value;
+                _signatureField = value;
             }
         }
     }

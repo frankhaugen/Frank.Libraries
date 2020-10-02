@@ -6,27 +6,27 @@
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class CRLIdentifierType
+    public partial class CrlIdentifierType
     {
 
-        private string issuerField;
+        private string _issuerField;
 
-        private System.DateTime issueTimeField;
+        private System.DateTime _issueTimeField;
 
-        private string numberField;
+        private string _numberField;
 
-        private string uRIField;
+        private string _uRiField;
 
         /// <remarks/>
         public string Issuer
         {
             get
             {
-                return issuerField;
+                return _issuerField;
             }
             set
             {
-                issuerField = value;
+                _issuerField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return issueTimeField;
+                return _issueTimeField;
             }
             set
             {
-                issueTimeField = value;
+                _issueTimeField = value;
             }
         }
 
@@ -49,25 +49,25 @@
         {
             get
             {
-                return numberField;
+                return _numberField;
             }
             set
             {
-                numberField = value;
+                _numberField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string URI
+        public string Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
     }

@@ -6,10 +6,10 @@
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class ResponderIDType
+    public partial class ResponderIdType
     {
 
-        private object itemField;
+        private object _itemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("ByKey", typeof(byte[]), DataType = "base64Binary")]
@@ -18,11 +18,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
     }

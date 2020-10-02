@@ -8,9 +8,9 @@
     {
 
         /// <remarks/>
-        OIDAsURI,
+        OidAsUri,
 
         /// <remarks/>
-        OIDAsURN,
+        OidAsUrn,
     }
 }

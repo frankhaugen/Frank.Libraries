@@ -10,30 +10,30 @@
     public partial class SignedSignaturePropertiesType
     {
 
-        private System.DateTime signingTimeField;
+        private System.DateTime _signingTimeField;
 
-        private bool signingTimeFieldSpecified;
+        private bool _signingTimeFieldSpecified;
 
-        private CertIDType[] signingCertificateField;
+        private CertIdType[] _signingCertificateField;
 
-        private SignaturePolicyIdentifierType signaturePolicyIdentifierField;
+        private SignaturePolicyIdentifierType _signaturePolicyIdentifierField;
 
-        private SignatureProductionPlaceType signatureProductionPlaceField;
+        private SignatureProductionPlaceType _signatureProductionPlaceField;
 
-        private SignerRoleType signerRoleField;
+        private SignerRoleType _signerRoleField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         public System.DateTime SigningTime
         {
             get
             {
-                return signingTimeField;
+                return _signingTimeField;
             }
             set
             {
-                signingTimeField = value;
+                _signingTimeField = value;
             }
         }
 
@@ -43,25 +43,25 @@
         {
             get
             {
-                return signingTimeFieldSpecified;
+                return _signingTimeFieldSpecified;
             }
             set
             {
-                signingTimeFieldSpecified = value;
+                _signingTimeFieldSpecified = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("Cert", IsNullable = false)]
-        public CertIDType[] SigningCertificate
+        public CertIdType[] SigningCertificate
         {
             get
             {
-                return signingCertificateField;
+                return _signingCertificateField;
             }
             set
             {
-                signingCertificateField = value;
+                _signingCertificateField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return signaturePolicyIdentifierField;
+                return _signaturePolicyIdentifierField;
             }
             set
             {
-                signaturePolicyIdentifierField = value;
+                _signaturePolicyIdentifierField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return signatureProductionPlaceField;
+                return _signatureProductionPlaceField;
             }
             set
             {
-                signatureProductionPlaceField = value;
+                _signatureProductionPlaceField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return signerRoleField;
+                return _signerRoleField;
             }
             set
             {
-                signerRoleField = value;
+                _signerRoleField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

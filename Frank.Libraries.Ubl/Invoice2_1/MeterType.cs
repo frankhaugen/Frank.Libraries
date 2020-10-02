@@ -10,19 +10,19 @@
     public partial class MeterType
     {
 
-        private MeterNumberType meterNumberField;
+        private MeterNumberType _meterNumberField;
 
-        private MeterNameType meterNameField;
+        private MeterNameType _meterNameField;
 
-        private MeterConstantType meterConstantField;
+        private MeterConstantType _meterConstantField;
 
-        private MeterConstantCodeType meterConstantCodeField;
+        private MeterConstantCodeType _meterConstantCodeField;
 
-        private TotalDeliveredQuantityType totalDeliveredQuantityField;
+        private TotalDeliveredQuantityType _totalDeliveredQuantityField;
 
-        private MeterReadingType[] meterReadingField;
+        private MeterReadingType[] _meterReadingField;
 
-        private MeterPropertyType[] meterPropertyField;
+        private MeterPropertyType[] _meterPropertyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return meterNumberField;
+                return _meterNumberField;
             }
             set
             {
-                meterNumberField = value;
+                _meterNumberField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return meterNameField;
+                return _meterNameField;
             }
             set
             {
-                meterNameField = value;
+                _meterNameField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return meterConstantField;
+                return _meterConstantField;
             }
             set
             {
-                meterConstantField = value;
+                _meterConstantField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return meterConstantCodeField;
+                return _meterConstantCodeField;
             }
             set
             {
-                meterConstantCodeField = value;
+                _meterConstantCodeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return totalDeliveredQuantityField;
+                return _totalDeliveredQuantityField;
             }
             set
             {
-                totalDeliveredQuantityField = value;
+                _totalDeliveredQuantityField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return meterReadingField;
+                return _meterReadingField;
             }
             set
             {
-                meterReadingField = value;
+                _meterReadingField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return meterPropertyField;
+                return _meterPropertyField;
             }
             set
             {
-                meterPropertyField = value;
+                _meterPropertyField = value;
             }
         }
     }

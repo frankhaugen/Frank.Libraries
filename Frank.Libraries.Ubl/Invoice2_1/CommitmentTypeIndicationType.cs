@@ -10,22 +10,22 @@
     public partial class CommitmentTypeIndicationType
     {
 
-        private ObjectIdentifierType commitmentTypeIdField;
+        private ObjectIdentifierType _commitmentTypeIdField;
 
-        private object[] itemsField;
+        private object[] _itemsField;
 
-        private AnyType[] commitmentTypeQualifiersField;
+        private AnyType[] _commitmentTypeQualifiersField;
 
         /// <remarks/>
         public ObjectIdentifierType CommitmentTypeId
         {
             get
             {
-                return commitmentTypeIdField;
+                return _commitmentTypeIdField;
             }
             set
             {
-                commitmentTypeIdField = value;
+                _commitmentTypeIdField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return commitmentTypeQualifiersField;
+                return _commitmentTypeQualifiersField;
             }
             set
             {
-                commitmentTypeQualifiersField = value;
+                _commitmentTypeQualifiersField = value;
             }
         }
     }

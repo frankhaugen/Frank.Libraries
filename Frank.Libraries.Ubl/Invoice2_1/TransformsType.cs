@@ -10,7 +10,7 @@
     public partial class TransformsType
     {
 
-        private TransformType[] transformField;
+        private TransformType[] _transformField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Transform")]
@@ -18,11 +18,11 @@
         {
             get
             {
-                return transformField;
+                return _transformField;
             }
             set
             {
-                transformField = value;
+                _transformField = value;
             }
         }
     }

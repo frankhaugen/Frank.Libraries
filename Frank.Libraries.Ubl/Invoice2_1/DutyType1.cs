@@ -10,13 +10,13 @@
     public partial class DutyType1
     {
 
-        private AmountType2 amountField;
+        private AmountType2 _amountField;
 
-        private DutyType dutyField;
+        private DutyType _dutyField;
 
-        private DutyCodeType dutyCodeField;
+        private DutyCodeType _dutyCodeField;
 
-        private TaxCategoryType taxCategoryField;
+        private TaxCategoryType _taxCategoryField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return amountField;
+                return _amountField;
             }
             set
             {
-                amountField = value;
+                _amountField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return dutyField;
+                return _dutyField;
             }
             set
             {
-                dutyField = value;
+                _dutyField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return dutyCodeField;
+                return _dutyCodeField;
             }
             set
             {
-                dutyCodeField = value;
+                _dutyCodeField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return taxCategoryField;
+                return _taxCategoryField;
             }
             set
             {
-                taxCategoryField = value;
+                _taxCategoryField = value;
             }
         }
     }

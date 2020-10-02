@@ -10,26 +10,26 @@
     public partial class SignatureType1
     {
 
-        private SignedInfoType signedInfoField;
+        private SignedInfoType _signedInfoField;
 
-        private SignatureValueType signatureValueField;
+        private SignatureValueType _signatureValueField;
 
-        private KeyInfoType keyInfoField;
+        private KeyInfoType _keyInfoField;
 
-        private ObjectType[] objectField;
+        private ObjectType[] _objectField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         public SignedInfoType SignedInfo
         {
             get
             {
-                return signedInfoField;
+                return _signedInfoField;
             }
             set
             {
-                signedInfoField = value;
+                _signedInfoField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return signatureValueField;
+                return _signatureValueField;
             }
             set
             {
-                signatureValueField = value;
+                _signatureValueField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return keyInfoField;
+                return _keyInfoField;
             }
             set
             {
-                keyInfoField = value;
+                _keyInfoField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return objectField;
+                return _objectField;
             }
             set
             {
-                objectField = value;
+                _objectField = value;
             }
         }
 
@@ -79,11 +79,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

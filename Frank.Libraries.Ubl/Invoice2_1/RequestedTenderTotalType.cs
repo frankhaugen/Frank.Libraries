@@ -10,21 +10,21 @@
     public partial class RequestedTenderTotalType
     {
 
-        private EstimatedOverallContractAmountType estimatedOverallContractAmountField;
+        private EstimatedOverallContractAmountType _estimatedOverallContractAmountField;
 
-        private TotalAmountType totalAmountField;
+        private TotalAmountType _totalAmountField;
 
-        private TaxIncludedIndicatorType taxIncludedIndicatorField;
+        private TaxIncludedIndicatorType _taxIncludedIndicatorField;
 
-        private MinimumAmountType minimumAmountField;
+        private MinimumAmountType _minimumAmountField;
 
-        private MaximumAmountType maximumAmountField;
+        private MaximumAmountType _maximumAmountField;
 
-        private MonetaryScopeType[] monetaryScopeField;
+        private MonetaryScopeType[] _monetaryScopeField;
 
-        private AverageSubsequentContractAmountType averageSubsequentContractAmountField;
+        private AverageSubsequentContractAmountType _averageSubsequentContractAmountField;
 
-        private TaxCategoryType[] applicableTaxCategoryField;
+        private TaxCategoryType[] _applicableTaxCategoryField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -32,11 +32,11 @@
         {
             get
             {
-                return estimatedOverallContractAmountField;
+                return _estimatedOverallContractAmountField;
             }
             set
             {
-                estimatedOverallContractAmountField = value;
+                _estimatedOverallContractAmountField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return totalAmountField;
+                return _totalAmountField;
             }
             set
             {
-                totalAmountField = value;
+                _totalAmountField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return taxIncludedIndicatorField;
+                return _taxIncludedIndicatorField;
             }
             set
             {
-                taxIncludedIndicatorField = value;
+                _taxIncludedIndicatorField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return minimumAmountField;
+                return _minimumAmountField;
             }
             set
             {
-                minimumAmountField = value;
+                _minimumAmountField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return maximumAmountField;
+                return _maximumAmountField;
             }
             set
             {
-                maximumAmountField = value;
+                _maximumAmountField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return monetaryScopeField;
+                return _monetaryScopeField;
             }
             set
             {
-                monetaryScopeField = value;
+                _monetaryScopeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return averageSubsequentContractAmountField;
+                return _averageSubsequentContractAmountField;
             }
             set
             {
-                averageSubsequentContractAmountField = value;
+                _averageSubsequentContractAmountField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return applicableTaxCategoryField;
+                return _applicableTaxCategoryField;
             }
             set
             {
-                applicableTaxCategoryField = value;
+                _applicableTaxCategoryField = value;
             }
         }
     }

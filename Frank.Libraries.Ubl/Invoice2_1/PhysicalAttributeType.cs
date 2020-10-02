@@ -10,25 +10,25 @@
     public partial class PhysicalAttributeType
     {
 
-        private AttributeIDType attributeIDField;
+        private AttributeIdType _attributeIdField;
 
-        private PositionCodeType positionCodeField;
+        private PositionCodeType _positionCodeField;
 
-        private DescriptionCodeType descriptionCodeField;
+        private DescriptionCodeType _descriptionCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public AttributeIDType AttributeID
+        public AttributeIdType AttributeId
         {
             get
             {
-                return attributeIDField;
+                return _attributeIdField;
             }
             set
             {
-                attributeIDField = value;
+                _attributeIdField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return positionCodeField;
+                return _positionCodeField;
             }
             set
             {
-                positionCodeField = value;
+                _positionCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return descriptionCodeField;
+                return _descriptionCodeField;
             }
             set
             {
-                descriptionCodeField = value;
+                _descriptionCodeField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
     }

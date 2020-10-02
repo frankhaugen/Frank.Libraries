@@ -10,13 +10,13 @@
     public partial class EnergyTaxReportType
     {
 
-        private TaxEnergyAmountType taxEnergyAmountField;
+        private TaxEnergyAmountType _taxEnergyAmountField;
 
-        private TaxEnergyOnAccountAmountType taxEnergyOnAccountAmountField;
+        private TaxEnergyOnAccountAmountType _taxEnergyOnAccountAmountField;
 
-        private TaxEnergyBalanceAmountType taxEnergyBalanceAmountField;
+        private TaxEnergyBalanceAmountType _taxEnergyBalanceAmountField;
 
-        private TaxSchemeType taxSchemeField;
+        private TaxSchemeType _taxSchemeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return taxEnergyAmountField;
+                return _taxEnergyAmountField;
             }
             set
             {
-                taxEnergyAmountField = value;
+                _taxEnergyAmountField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return taxEnergyOnAccountAmountField;
+                return _taxEnergyOnAccountAmountField;
             }
             set
             {
-                taxEnergyOnAccountAmountField = value;
+                _taxEnergyOnAccountAmountField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return taxEnergyBalanceAmountField;
+                return _taxEnergyBalanceAmountField;
             }
             set
             {
-                taxEnergyBalanceAmountField = value;
+                _taxEnergyBalanceAmountField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return taxSchemeField;
+                return _taxSchemeField;
             }
             set
             {
-                taxSchemeField = value;
+                _taxSchemeField = value;
             }
         }
     }

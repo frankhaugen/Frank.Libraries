@@ -10,15 +10,15 @@
     public partial class SalesItemType
     {
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private ActivityPropertyType[] activityPropertyField;
+        private ActivityPropertyType[] _activityPropertyField;
 
-        private PriceType[] taxExclusivePriceField;
+        private PriceType[] _taxExclusivePriceField;
 
-        private PriceType[] taxInclusivePriceField;
+        private PriceType[] _taxInclusivePriceField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return activityPropertyField;
+                return _activityPropertyField;
             }
             set
             {
-                activityPropertyField = value;
+                _activityPropertyField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return taxExclusivePriceField;
+                return _taxExclusivePriceField;
             }
             set
             {
-                taxExclusivePriceField = value;
+                _taxExclusivePriceField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return taxInclusivePriceField;
+                return _taxInclusivePriceField;
             }
             set
             {
-                taxInclusivePriceField = value;
+                _taxInclusivePriceField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
     }

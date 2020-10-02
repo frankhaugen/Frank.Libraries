@@ -10,9 +10,9 @@
     public partial class ContractingPartyTypeType
     {
 
-        private PartyTypeCodeType partyTypeCodeField;
+        private PartyTypeCodeType _partyTypeCodeField;
 
-        private PartyTypeType partyTypeField;
+        private PartyTypeType _partyTypeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return partyTypeCodeField;
+                return _partyTypeCodeField;
             }
             set
             {
-                partyTypeCodeField = value;
+                _partyTypeCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return partyTypeField;
+                return _partyTypeField;
             }
             set
             {
-                partyTypeField = value;
+                _partyTypeField = value;
             }
         }
     }

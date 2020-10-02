@@ -10,11 +10,11 @@
     public partial class OnAccountPaymentType
     {
 
-        private EstimatedConsumedQuantityType estimatedConsumedQuantityField;
+        private EstimatedConsumedQuantityType _estimatedConsumedQuantityField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private PaymentTermsType[] paymentTermsField;
+        private PaymentTermsType[] _paymentTermsField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return estimatedConsumedQuantityField;
+                return _estimatedConsumedQuantityField;
             }
             set
             {
-                estimatedConsumedQuantityField = value;
+                _estimatedConsumedQuantityField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return paymentTermsField;
+                return _paymentTermsField;
             }
             set
             {
-                paymentTermsField = value;
+                _paymentTermsField = value;
             }
         }
     }

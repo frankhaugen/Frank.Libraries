@@ -10,27 +10,27 @@
     public partial class ConditionType1
     {
 
-        private AttributeIDType attributeIDField;
+        private AttributeIdType _attributeIdField;
 
-        private MeasureType2 measureField;
+        private MeasureType2 _measureField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private MinimumMeasureType minimumMeasureField;
+        private MinimumMeasureType _minimumMeasureField;
 
-        private MaximumMeasureType maximumMeasureField;
+        private MaximumMeasureType _maximumMeasureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public AttributeIDType AttributeID
+        public AttributeIdType AttributeId
         {
             get
             {
-                return attributeIDField;
+                return _attributeIdField;
             }
             set
             {
-                attributeIDField = value;
+                _attributeIdField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return measureField;
+                return _measureField;
             }
             set
             {
-                measureField = value;
+                _measureField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return minimumMeasureField;
+                return _minimumMeasureField;
             }
             set
             {
-                minimumMeasureField = value;
+                _minimumMeasureField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return maximumMeasureField;
+                return _maximumMeasureField;
             }
             set
             {
-                maximumMeasureField = value;
+                _maximumMeasureField = value;
             }
         }
     }

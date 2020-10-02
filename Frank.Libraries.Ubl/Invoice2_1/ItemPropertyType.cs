@@ -10,43 +10,43 @@
     public partial class ItemPropertyType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private NameCodeType nameCodeField;
+        private NameCodeType _nameCodeField;
 
-        private TestMethodType testMethodField;
+        private TestMethodType _testMethodField;
 
-        private ValueType valueField;
+        private ValueType _valueField;
 
-        private ValueQuantityType valueQuantityField;
+        private ValueQuantityType _valueQuantityField;
 
-        private ValueQualifierType[] valueQualifierField;
+        private ValueQualifierType[] _valueQualifierField;
 
-        private ImportanceCodeType importanceCodeField;
+        private ImportanceCodeType _importanceCodeField;
 
-        private ListValueType[] listValueField;
+        private ListValueType[] _listValueField;
 
-        private PeriodType usabilityPeriodField;
+        private PeriodType _usabilityPeriodField;
 
-        private ItemPropertyGroupType[] itemPropertyGroupField;
+        private ItemPropertyGroupType[] _itemPropertyGroupField;
 
-        private DimensionType rangeDimensionField;
+        private DimensionType _rangeDimensionField;
 
-        private ItemPropertyRangeType itemPropertyRangeField;
+        private ItemPropertyRangeType _itemPropertyRangeField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return nameCodeField;
+                return _nameCodeField;
             }
             set
             {
-                nameCodeField = value;
+                _nameCodeField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return testMethodField;
+                return _testMethodField;
             }
             set
             {
-                testMethodField = value;
+                _testMethodField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return valueQuantityField;
+                return _valueQuantityField;
             }
             set
             {
-                valueQuantityField = value;
+                _valueQuantityField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return valueQualifierField;
+                return _valueQualifierField;
             }
             set
             {
-                valueQualifierField = value;
+                _valueQualifierField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return importanceCodeField;
+                return _importanceCodeField;
             }
             set
             {
-                importanceCodeField = value;
+                _importanceCodeField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return listValueField;
+                return _listValueField;
             }
             set
             {
-                listValueField = value;
+                _listValueField = value;
             }
         }
 
@@ -167,11 +167,11 @@
         {
             get
             {
-                return usabilityPeriodField;
+                return _usabilityPeriodField;
             }
             set
             {
-                usabilityPeriodField = value;
+                _usabilityPeriodField = value;
             }
         }
 
@@ -181,11 +181,11 @@
         {
             get
             {
-                return itemPropertyGroupField;
+                return _itemPropertyGroupField;
             }
             set
             {
-                itemPropertyGroupField = value;
+                _itemPropertyGroupField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return rangeDimensionField;
+                return _rangeDimensionField;
             }
             set
             {
-                rangeDimensionField = value;
+                _rangeDimensionField = value;
             }
         }
 
@@ -207,11 +207,11 @@
         {
             get
             {
-                return itemPropertyRangeField;
+                return _itemPropertyRangeField;
             }
             set
             {
-                itemPropertyRangeField = value;
+                _itemPropertyRangeField = value;
             }
         }
     }

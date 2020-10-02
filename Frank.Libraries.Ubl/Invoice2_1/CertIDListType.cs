@@ -7,22 +7,22 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [System.Xml.Serialization.XmlRootAttribute("SigningCertificate", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-    public partial class CertIDListType
+    public partial class CertIdListType
     {
 
-        private CertIDType[] certField;
+        private CertIdType[] _certField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Cert")]
-        public CertIDType[] Cert
+        public CertIdType[] Cert
         {
             get
             {
-                return certField;
+                return _certField;
             }
             set
             {
-                certField = value;
+                _certField = value;
             }
         }
     }

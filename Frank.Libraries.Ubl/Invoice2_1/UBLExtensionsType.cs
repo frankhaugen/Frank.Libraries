@@ -7,22 +7,22 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
     [System.Xml.Serialization.XmlRootAttribute("UBLExtensions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2", IsNullable = false)]
-    public partial class UBLExtensionsType
+    public partial class UblExtensionsType
     {
 
-        private UBLExtensionType[] uBLExtensionField;
+        private UblExtensionType[] _uBlExtensionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("UBLExtension")]
-        public UBLExtensionType[] UBLExtension
+        public UblExtensionType[] UblExtension
         {
             get
             {
-                return uBLExtensionField;
+                return _uBlExtensionField;
             }
             set
             {
-                uBLExtensionField = value;
+                _uBlExtensionField = value;
             }
         }
     }

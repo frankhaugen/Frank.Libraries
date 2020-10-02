@@ -10,22 +10,22 @@
     public partial class SignedPropertiesType
     {
 
-        private SignedSignaturePropertiesType signedSignaturePropertiesField;
+        private SignedSignaturePropertiesType _signedSignaturePropertiesField;
 
-        private SignedDataObjectPropertiesType signedDataObjectPropertiesField;
+        private SignedDataObjectPropertiesType _signedDataObjectPropertiesField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         public SignedSignaturePropertiesType SignedSignatureProperties
         {
             get
             {
-                return signedSignaturePropertiesField;
+                return _signedSignaturePropertiesField;
             }
             set
             {
-                signedSignaturePropertiesField = value;
+                _signedSignaturePropertiesField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return signedDataObjectPropertiesField;
+                return _signedDataObjectPropertiesField;
             }
             set
             {
-                signedDataObjectPropertiesField = value;
+                _signedDataObjectPropertiesField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

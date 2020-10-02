@@ -10,43 +10,43 @@
     public partial class PaymentMeansType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private PaymentMeansCodeType paymentMeansCodeField;
+        private PaymentMeansCodeType _paymentMeansCodeField;
 
-        private PaymentDueDateType paymentDueDateField;
+        private PaymentDueDateType _paymentDueDateField;
 
-        private PaymentChannelCodeType paymentChannelCodeField;
+        private PaymentChannelCodeType _paymentChannelCodeField;
 
-        private InstructionIDType instructionIDField;
+        private InstructionIdType _instructionIdField;
 
-        private InstructionNoteType[] instructionNoteField;
+        private InstructionNoteType[] _instructionNoteField;
 
-        private PaymentIDType[] paymentIDField;
+        private PaymentIdType[] _paymentIdField;
 
-        private CardAccountType cardAccountField;
+        private CardAccountType _cardAccountField;
 
-        private FinancialAccountType payerFinancialAccountField;
+        private FinancialAccountType _payerFinancialAccountField;
 
-        private FinancialAccountType payeeFinancialAccountField;
+        private FinancialAccountType _payeeFinancialAccountField;
 
-        private CreditAccountType creditAccountField;
+        private CreditAccountType _creditAccountField;
 
-        private PaymentMandateType paymentMandateField;
+        private PaymentMandateType _paymentMandateField;
 
-        private TradeFinancingType tradeFinancingField;
+        private TradeFinancingType _tradeFinancingField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return paymentMeansCodeField;
+                return _paymentMeansCodeField;
             }
             set
             {
-                paymentMeansCodeField = value;
+                _paymentMeansCodeField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return paymentDueDateField;
+                return _paymentDueDateField;
             }
             set
             {
-                paymentDueDateField = value;
+                _paymentDueDateField = value;
             }
         }
 
@@ -84,25 +84,25 @@
         {
             get
             {
-                return paymentChannelCodeField;
+                return _paymentChannelCodeField;
             }
             set
             {
-                paymentChannelCodeField = value;
+                _paymentChannelCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public InstructionIDType InstructionID
+        public InstructionIdType InstructionId
         {
             get
             {
-                return instructionIDField;
+                return _instructionIdField;
             }
             set
             {
-                instructionIDField = value;
+                _instructionIdField = value;
             }
         }
 
@@ -112,25 +112,25 @@
         {
             get
             {
-                return instructionNoteField;
+                return _instructionNoteField;
             }
             set
             {
-                instructionNoteField = value;
+                _instructionNoteField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("PaymentID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public PaymentIDType[] PaymentID
+        public PaymentIdType[] PaymentId
         {
             get
             {
-                return paymentIDField;
+                return _paymentIdField;
             }
             set
             {
-                paymentIDField = value;
+                _paymentIdField = value;
             }
         }
 
@@ -139,11 +139,11 @@
         {
             get
             {
-                return cardAccountField;
+                return _cardAccountField;
             }
             set
             {
-                cardAccountField = value;
+                _cardAccountField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return payerFinancialAccountField;
+                return _payerFinancialAccountField;
             }
             set
             {
-                payerFinancialAccountField = value;
+                _payerFinancialAccountField = value;
             }
         }
 
@@ -165,11 +165,11 @@
         {
             get
             {
-                return payeeFinancialAccountField;
+                return _payeeFinancialAccountField;
             }
             set
             {
-                payeeFinancialAccountField = value;
+                _payeeFinancialAccountField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return creditAccountField;
+                return _creditAccountField;
             }
             set
             {
-                creditAccountField = value;
+                _creditAccountField = value;
             }
         }
 
@@ -191,11 +191,11 @@
         {
             get
             {
-                return paymentMandateField;
+                return _paymentMandateField;
             }
             set
             {
-                paymentMandateField = value;
+                _paymentMandateField = value;
             }
         }
 
@@ -204,11 +204,11 @@
         {
             get
             {
-                return tradeFinancingField;
+                return _tradeFinancingField;
             }
             set
             {
-                tradeFinancingField = value;
+                _tradeFinancingField = value;
             }
         }
     }

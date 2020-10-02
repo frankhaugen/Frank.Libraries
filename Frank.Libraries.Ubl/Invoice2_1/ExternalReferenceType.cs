@@ -10,39 +10,39 @@
     public partial class ExternalReferenceType
     {
 
-        private URIType uRIField;
+        private UriType _uRiField;
 
-        private DocumentHashType documentHashField;
+        private DocumentHashType _documentHashField;
 
-        private HashAlgorithmMethodType hashAlgorithmMethodField;
+        private HashAlgorithmMethodType _hashAlgorithmMethodField;
 
-        private ExpiryDateType expiryDateField;
+        private ExpiryDateType _expiryDateField;
 
-        private ExpiryTimeType expiryTimeField;
+        private ExpiryTimeType _expiryTimeField;
 
-        private MimeCodeType mimeCodeField;
+        private MimeCodeType _mimeCodeField;
 
-        private FormatCodeType formatCodeField;
+        private FormatCodeType _formatCodeField;
 
-        private EncodingCodeType encodingCodeField;
+        private EncodingCodeType _encodingCodeField;
 
-        private CharacterSetCodeType characterSetCodeField;
+        private CharacterSetCodeType _characterSetCodeField;
 
-        private FileNameType fileNameField;
+        private FileNameType _fileNameField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public URIType URI
+        public UriType Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return documentHashField;
+                return _documentHashField;
             }
             set
             {
-                documentHashField = value;
+                _documentHashField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return hashAlgorithmMethodField;
+                return _hashAlgorithmMethodField;
             }
             set
             {
-                hashAlgorithmMethodField = value;
+                _hashAlgorithmMethodField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return expiryDateField;
+                return _expiryDateField;
             }
             set
             {
-                expiryDateField = value;
+                _expiryDateField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return expiryTimeField;
+                return _expiryTimeField;
             }
             set
             {
-                expiryTimeField = value;
+                _expiryTimeField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return mimeCodeField;
+                return _mimeCodeField;
             }
             set
             {
-                mimeCodeField = value;
+                _mimeCodeField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return formatCodeField;
+                return _formatCodeField;
             }
             set
             {
-                formatCodeField = value;
+                _formatCodeField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return encodingCodeField;
+                return _encodingCodeField;
             }
             set
             {
-                encodingCodeField = value;
+                _encodingCodeField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return characterSetCodeField;
+                return _characterSetCodeField;
             }
             set
             {
-                characterSetCodeField = value;
+                _characterSetCodeField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return fileNameField;
+                return _fileNameField;
             }
             set
             {
-                fileNameField = value;
+                _fileNameField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
     }

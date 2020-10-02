@@ -223,37 +223,37 @@
     public partial class TextType
     {
 
-        private string languageIDField;
+        private string _languageIdField;
 
-        private string languageLocaleIDField;
+        private string _languageLocaleIdField;
 
-        private string valueField;
+        private string _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "language")]
-        public string languageID
+        public string LanguageId
         {
             get
             {
-                return languageIDField;
+                return _languageIdField;
             }
             set
             {
-                languageIDField = value;
+                _languageIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
-        public string languageLocaleID
+        public string LanguageLocaleId
         {
             get
             {
-                return languageLocaleIDField;
+                return _languageLocaleIdField;
             }
             set
             {
-                languageLocaleIDField = value;
+                _languageLocaleIdField = value;
             }
         }
 
@@ -263,11 +263,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

@@ -10,39 +10,39 @@
     public partial class TenderedProjectType
     {
 
-        private VariantIDType variantIDField;
+        private VariantIdType _variantIdField;
 
-        private FeeAmountType feeAmountField;
+        private FeeAmountType _feeAmountField;
 
-        private FeeDescriptionType[] feeDescriptionField;
+        private FeeDescriptionType[] _feeDescriptionField;
 
-        private TenderEnvelopeIDType tenderEnvelopeIDField;
+        private TenderEnvelopeIdType _tenderEnvelopeIdField;
 
-        private TenderEnvelopeTypeCodeType tenderEnvelopeTypeCodeField;
+        private TenderEnvelopeTypeCodeType _tenderEnvelopeTypeCodeField;
 
-        private ProcurementProjectLotType procurementProjectLotField;
+        private ProcurementProjectLotType _procurementProjectLotField;
 
-        private DocumentReferenceType[] evidenceDocumentReferenceField;
+        private DocumentReferenceType[] _evidenceDocumentReferenceField;
 
-        private TaxTotalType[] taxTotalField;
+        private TaxTotalType[] _taxTotalField;
 
-        private MonetaryTotalType legalMonetaryTotalField;
+        private MonetaryTotalType _legalMonetaryTotalField;
 
-        private TenderLineType[] tenderLineField;
+        private TenderLineType[] _tenderLineField;
 
-        private AwardingCriterionResponseType[] awardingCriterionResponseField;
+        private AwardingCriterionResponseType[] _awardingCriterionResponseField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public VariantIDType VariantID
+        public VariantIdType VariantId
         {
             get
             {
-                return variantIDField;
+                return _variantIdField;
             }
             set
             {
-                variantIDField = value;
+                _variantIdField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return feeAmountField;
+                return _feeAmountField;
             }
             set
             {
-                feeAmountField = value;
+                _feeAmountField = value;
             }
         }
 
@@ -66,25 +66,25 @@
         {
             get
             {
-                return feeDescriptionField;
+                return _feeDescriptionField;
             }
             set
             {
-                feeDescriptionField = value;
+                _feeDescriptionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public TenderEnvelopeIDType TenderEnvelopeID
+        public TenderEnvelopeIdType TenderEnvelopeId
         {
             get
             {
-                return tenderEnvelopeIDField;
+                return _tenderEnvelopeIdField;
             }
             set
             {
-                tenderEnvelopeIDField = value;
+                _tenderEnvelopeIdField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return tenderEnvelopeTypeCodeField;
+                return _tenderEnvelopeTypeCodeField;
             }
             set
             {
-                tenderEnvelopeTypeCodeField = value;
+                _tenderEnvelopeTypeCodeField = value;
             }
         }
 
@@ -107,11 +107,11 @@
         {
             get
             {
-                return procurementProjectLotField;
+                return _procurementProjectLotField;
             }
             set
             {
-                procurementProjectLotField = value;
+                _procurementProjectLotField = value;
             }
         }
 
@@ -121,11 +121,11 @@
         {
             get
             {
-                return evidenceDocumentReferenceField;
+                return _evidenceDocumentReferenceField;
             }
             set
             {
-                evidenceDocumentReferenceField = value;
+                _evidenceDocumentReferenceField = value;
             }
         }
 
@@ -135,11 +135,11 @@
         {
             get
             {
-                return taxTotalField;
+                return _taxTotalField;
             }
             set
             {
-                taxTotalField = value;
+                _taxTotalField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return legalMonetaryTotalField;
+                return _legalMonetaryTotalField;
             }
             set
             {
-                legalMonetaryTotalField = value;
+                _legalMonetaryTotalField = value;
             }
         }
 
@@ -162,11 +162,11 @@
         {
             get
             {
-                return tenderLineField;
+                return _tenderLineField;
             }
             set
             {
-                tenderLineField = value;
+                _tenderLineField = value;
             }
         }
 
@@ -176,11 +176,11 @@
         {
             get
             {
-                return awardingCriterionResponseField;
+                return _awardingCriterionResponseField;
             }
             set
             {
-                awardingCriterionResponseField = value;
+                _awardingCriterionResponseField = value;
             }
         }
     }

@@ -10,27 +10,27 @@
     public partial class EndorsementType
     {
 
-        private DocumentIDType documentIDField;
+        private DocumentIdType _documentIdField;
 
-        private ApprovalStatusType approvalStatusField;
+        private ApprovalStatusType _approvalStatusField;
 
-        private RemarksType[] remarksField;
+        private RemarksType[] _remarksField;
 
-        private EndorserPartyType endorserPartyField;
+        private EndorserPartyType _endorserPartyField;
 
-        private SignatureType[] signatureField;
+        private SignatureType[] _signatureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public DocumentIDType DocumentID
+        public DocumentIdType DocumentId
         {
             get
             {
-                return documentIDField;
+                return _documentIdField;
             }
             set
             {
-                documentIDField = value;
+                _documentIdField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return approvalStatusField;
+                return _approvalStatusField;
             }
             set
             {
-                approvalStatusField = value;
+                _approvalStatusField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return remarksField;
+                return _remarksField;
             }
             set
             {
-                remarksField = value;
+                _remarksField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return endorserPartyField;
+                return _endorserPartyField;
             }
             set
             {
-                endorserPartyField = value;
+                _endorserPartyField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return signatureField;
+                return _signatureField;
             }
             set
             {
-                signatureField = value;
+                _signatureField = value;
             }
         }
     }

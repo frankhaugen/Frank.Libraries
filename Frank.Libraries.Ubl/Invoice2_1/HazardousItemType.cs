@@ -10,63 +10,63 @@
     public partial class HazardousItemType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private PlacardNotationType placardNotationField;
+        private PlacardNotationType _placardNotationField;
 
-        private PlacardEndorsementType placardEndorsementField;
+        private PlacardEndorsementType _placardEndorsementField;
 
-        private AdditionalInformationType[] additionalInformationField;
+        private AdditionalInformationType[] _additionalInformationField;
 
-        private UNDGCodeType uNDGCodeField;
+        private UndgCodeType _uNdgCodeField;
 
-        private EmergencyProceduresCodeType emergencyProceduresCodeField;
+        private EmergencyProceduresCodeType _emergencyProceduresCodeField;
 
-        private MedicalFirstAidGuideCodeType medicalFirstAidGuideCodeField;
+        private MedicalFirstAidGuideCodeType _medicalFirstAidGuideCodeField;
 
-        private TechnicalNameType technicalNameField;
+        private TechnicalNameType _technicalNameField;
 
-        private CategoryNameType categoryNameField;
+        private CategoryNameType _categoryNameField;
 
-        private HazardousCategoryCodeType hazardousCategoryCodeField;
+        private HazardousCategoryCodeType _hazardousCategoryCodeField;
 
-        private UpperOrangeHazardPlacardIDType upperOrangeHazardPlacardIDField;
+        private UpperOrangeHazardPlacardIdType _upperOrangeHazardPlacardIdField;
 
-        private LowerOrangeHazardPlacardIDType lowerOrangeHazardPlacardIDField;
+        private LowerOrangeHazardPlacardIdType _lowerOrangeHazardPlacardIdField;
 
-        private MarkingIDType markingIDField;
+        private MarkingIdType _markingIdField;
 
-        private HazardClassIDType hazardClassIDField;
+        private HazardClassIdType _hazardClassIdField;
 
-        private NetWeightMeasureType netWeightMeasureField;
+        private NetWeightMeasureType _netWeightMeasureField;
 
-        private NetVolumeMeasureType netVolumeMeasureField;
+        private NetVolumeMeasureType _netVolumeMeasureField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private PartyType contactPartyField;
+        private PartyType _contactPartyField;
 
-        private SecondaryHazardType[] secondaryHazardField;
+        private SecondaryHazardType[] _secondaryHazardField;
 
-        private HazardousGoodsTransitType[] hazardousGoodsTransitField;
+        private HazardousGoodsTransitType[] _hazardousGoodsTransitField;
 
-        private TemperatureType emergencyTemperatureField;
+        private TemperatureType _emergencyTemperatureField;
 
-        private TemperatureType flashpointTemperatureField;
+        private TemperatureType _flashpointTemperatureField;
 
-        private TemperatureType[] additionalTemperatureField;
+        private TemperatureType[] _additionalTemperatureField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return placardNotationField;
+                return _placardNotationField;
             }
             set
             {
-                placardNotationField = value;
+                _placardNotationField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return placardEndorsementField;
+                return _placardEndorsementField;
             }
             set
             {
-                placardEndorsementField = value;
+                _placardEndorsementField = value;
             }
         }
 
@@ -104,25 +104,25 @@
         {
             get
             {
-                return additionalInformationField;
+                return _additionalInformationField;
             }
             set
             {
-                additionalInformationField = value;
+                _additionalInformationField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UNDGCodeType UNDGCode
+        public UndgCodeType UndgCode
         {
             get
             {
-                return uNDGCodeField;
+                return _uNdgCodeField;
             }
             set
             {
-                uNDGCodeField = value;
+                _uNdgCodeField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return emergencyProceduresCodeField;
+                return _emergencyProceduresCodeField;
             }
             set
             {
-                emergencyProceduresCodeField = value;
+                _emergencyProceduresCodeField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return medicalFirstAidGuideCodeField;
+                return _medicalFirstAidGuideCodeField;
             }
             set
             {
-                medicalFirstAidGuideCodeField = value;
+                _medicalFirstAidGuideCodeField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return technicalNameField;
+                return _technicalNameField;
             }
             set
             {
-                technicalNameField = value;
+                _technicalNameField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return categoryNameField;
+                return _categoryNameField;
             }
             set
             {
-                categoryNameField = value;
+                _categoryNameField = value;
             }
         }
 
@@ -188,67 +188,67 @@
         {
             get
             {
-                return hazardousCategoryCodeField;
+                return _hazardousCategoryCodeField;
             }
             set
             {
-                hazardousCategoryCodeField = value;
+                _hazardousCategoryCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UpperOrangeHazardPlacardIDType UpperOrangeHazardPlacardID
+        public UpperOrangeHazardPlacardIdType UpperOrangeHazardPlacardId
         {
             get
             {
-                return upperOrangeHazardPlacardIDField;
+                return _upperOrangeHazardPlacardIdField;
             }
             set
             {
-                upperOrangeHazardPlacardIDField = value;
+                _upperOrangeHazardPlacardIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LowerOrangeHazardPlacardIDType LowerOrangeHazardPlacardID
+        public LowerOrangeHazardPlacardIdType LowerOrangeHazardPlacardId
         {
             get
             {
-                return lowerOrangeHazardPlacardIDField;
+                return _lowerOrangeHazardPlacardIdField;
             }
             set
             {
-                lowerOrangeHazardPlacardIDField = value;
+                _lowerOrangeHazardPlacardIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public MarkingIDType MarkingID
+        public MarkingIdType MarkingId
         {
             get
             {
-                return markingIDField;
+                return _markingIdField;
             }
             set
             {
-                markingIDField = value;
+                _markingIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public HazardClassIDType HazardClassID
+        public HazardClassIdType HazardClassId
         {
             get
             {
-                return hazardClassIDField;
+                return _hazardClassIdField;
             }
             set
             {
-                hazardClassIDField = value;
+                _hazardClassIdField = value;
             }
         }
 
@@ -258,11 +258,11 @@
         {
             get
             {
-                return netWeightMeasureField;
+                return _netWeightMeasureField;
             }
             set
             {
-                netWeightMeasureField = value;
+                _netWeightMeasureField = value;
             }
         }
 
@@ -272,11 +272,11 @@
         {
             get
             {
-                return netVolumeMeasureField;
+                return _netVolumeMeasureField;
             }
             set
             {
-                netVolumeMeasureField = value;
+                _netVolumeMeasureField = value;
             }
         }
 
@@ -286,11 +286,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -299,11 +299,11 @@
         {
             get
             {
-                return contactPartyField;
+                return _contactPartyField;
             }
             set
             {
-                contactPartyField = value;
+                _contactPartyField = value;
             }
         }
 
@@ -313,11 +313,11 @@
         {
             get
             {
-                return secondaryHazardField;
+                return _secondaryHazardField;
             }
             set
             {
-                secondaryHazardField = value;
+                _secondaryHazardField = value;
             }
         }
 
@@ -327,11 +327,11 @@
         {
             get
             {
-                return hazardousGoodsTransitField;
+                return _hazardousGoodsTransitField;
             }
             set
             {
-                hazardousGoodsTransitField = value;
+                _hazardousGoodsTransitField = value;
             }
         }
 
@@ -340,11 +340,11 @@
         {
             get
             {
-                return emergencyTemperatureField;
+                return _emergencyTemperatureField;
             }
             set
             {
-                emergencyTemperatureField = value;
+                _emergencyTemperatureField = value;
             }
         }
 
@@ -353,11 +353,11 @@
         {
             get
             {
-                return flashpointTemperatureField;
+                return _flashpointTemperatureField;
             }
             set
             {
-                flashpointTemperatureField = value;
+                _flashpointTemperatureField = value;
             }
         }
 
@@ -367,11 +367,11 @@
         {
             get
             {
-                return additionalTemperatureField;
+                return _additionalTemperatureField;
             }
             set
             {
-                additionalTemperatureField = value;
+                _additionalTemperatureField = value;
             }
         }
     }

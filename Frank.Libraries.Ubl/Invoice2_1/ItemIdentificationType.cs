@@ -10,57 +10,57 @@
     public partial class ItemIdentificationType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ExtendedIDType extendedIDField;
+        private ExtendedIdType _extendedIdField;
 
-        private BarcodeSymbologyIDType barcodeSymbologyIDField;
+        private BarcodeSymbologyIdType _barcodeSymbologyIdField;
 
-        private PhysicalAttributeType[] physicalAttributeField;
+        private PhysicalAttributeType[] _physicalAttributeField;
 
-        private DimensionType[] measurementDimensionField;
+        private DimensionType[] _measurementDimensionField;
 
-        private PartyType issuerPartyField;
+        private PartyType _issuerPartyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ExtendedIDType ExtendedID
+        public ExtendedIdType ExtendedId
         {
             get
             {
-                return extendedIDField;
+                return _extendedIdField;
             }
             set
             {
-                extendedIDField = value;
+                _extendedIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public BarcodeSymbologyIDType BarcodeSymbologyID
+        public BarcodeSymbologyIdType BarcodeSymbologyId
         {
             get
             {
-                return barcodeSymbologyIDField;
+                return _barcodeSymbologyIdField;
             }
             set
             {
-                barcodeSymbologyIDField = value;
+                _barcodeSymbologyIdField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return physicalAttributeField;
+                return _physicalAttributeField;
             }
             set
             {
-                physicalAttributeField = value;
+                _physicalAttributeField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return measurementDimensionField;
+                return _measurementDimensionField;
             }
             set
             {
-                measurementDimensionField = value;
+                _measurementDimensionField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return issuerPartyField;
+                return _issuerPartyField;
             }
             set
             {
-                issuerPartyField = value;
+                _issuerPartyField = value;
             }
         }
     }

@@ -10,23 +10,23 @@
     public partial class LotIdentificationType
     {
 
-        private LotNumberIDType lotNumberIDField;
+        private LotNumberIdType _lotNumberIdField;
 
-        private ExpiryDateType expiryDateField;
+        private ExpiryDateType _expiryDateField;
 
-        private ItemPropertyType[] additionalItemPropertyField;
+        private ItemPropertyType[] _additionalItemPropertyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LotNumberIDType LotNumberID
+        public LotNumberIdType LotNumberId
         {
             get
             {
-                return lotNumberIDField;
+                return _lotNumberIdField;
             }
             set
             {
-                lotNumberIDField = value;
+                _lotNumberIdField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return expiryDateField;
+                return _expiryDateField;
             }
             set
             {
-                expiryDateField = value;
+                _expiryDateField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return additionalItemPropertyField;
+                return _additionalItemPropertyField;
             }
             set
             {
-                additionalItemPropertyField = value;
+                _additionalItemPropertyField = value;
             }
         }
     }

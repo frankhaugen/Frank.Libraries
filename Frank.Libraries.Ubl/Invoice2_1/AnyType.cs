@@ -10,9 +10,9 @@
     public partial class AnyType
     {
 
-        private System.Xml.XmlNode[] anyField;
+        private System.Xml.XmlNode[] _anyField;
 
-        private System.Xml.XmlAttribute[] anyAttrField;
+        private System.Xml.XmlAttribute[] _anyAttrField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
@@ -21,11 +21,11 @@
         {
             get
             {
-                return anyField;
+                return _anyField;
             }
             set
             {
-                anyField = value;
+                _anyField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return anyAttrField;
+                return _anyAttrField;
             }
             set
             {
-                anyAttrField = value;
+                _anyAttrField = value;
             }
         }
     }

@@ -10,9 +10,9 @@
     public partial class MiscellaneousEventType
     {
 
-        private MiscellaneousEventTypeCodeType miscellaneousEventTypeCodeField;
+        private MiscellaneousEventTypeCodeType _miscellaneousEventTypeCodeField;
 
-        private EventLineItemType[] eventLineItemField;
+        private EventLineItemType[] _eventLineItemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return miscellaneousEventTypeCodeField;
+                return _miscellaneousEventTypeCodeField;
             }
             set
             {
-                miscellaneousEventTypeCodeField = value;
+                _miscellaneousEventTypeCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return eventLineItemField;
+                return _eventLineItemField;
             }
             set
             {
-                eventLineItemField = value;
+                _eventLineItemField = value;
             }
         }
     }

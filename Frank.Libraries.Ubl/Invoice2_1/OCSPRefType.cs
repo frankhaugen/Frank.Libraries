@@ -6,23 +6,23 @@
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class OCSPRefType
+    public partial class OcspRefType
     {
 
-        private OCSPIdentifierType oCSPIdentifierField;
+        private OcspIdentifierType _oCspIdentifierField;
 
-        private DigestAlgAndValueType digestAlgAndValueField;
+        private DigestAlgAndValueType _digestAlgAndValueField;
 
         /// <remarks/>
-        public OCSPIdentifierType OCSPIdentifier
+        public OcspIdentifierType OcspIdentifier
         {
             get
             {
-                return oCSPIdentifierField;
+                return _oCspIdentifierField;
             }
             set
             {
-                oCSPIdentifierField = value;
+                _oCspIdentifierField = value;
             }
         }
 
@@ -31,11 +31,11 @@
         {
             get
             {
-                return digestAlgAndValueField;
+                return _digestAlgAndValueField;
             }
             set
             {
-                digestAlgAndValueField = value;
+                _digestAlgAndValueField = value;
             }
         }
     }

@@ -10,61 +10,61 @@
     public partial class UtilityItemType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private SubscriberIDType subscriberIDField;
+        private SubscriberIdType _subscriberIdField;
 
-        private SubscriberTypeType subscriberTypeField;
+        private SubscriberTypeType _subscriberTypeField;
 
-        private SubscriberTypeCodeType subscriberTypeCodeField;
+        private SubscriberTypeCodeType _subscriberTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private PackQuantityType packQuantityField;
+        private PackQuantityType _packQuantityField;
 
-        private PackSizeNumericType packSizeNumericField;
+        private PackSizeNumericType _packSizeNumericField;
 
-        private ConsumptionTypeType consumptionTypeField;
+        private ConsumptionTypeType _consumptionTypeField;
 
-        private ConsumptionTypeCodeType consumptionTypeCodeField;
+        private ConsumptionTypeCodeType _consumptionTypeCodeField;
 
-        private CurrentChargeTypeType currentChargeTypeField;
+        private CurrentChargeTypeType _currentChargeTypeField;
 
-        private CurrentChargeTypeCodeType currentChargeTypeCodeField;
+        private CurrentChargeTypeCodeType _currentChargeTypeCodeField;
 
-        private OneTimeChargeTypeType oneTimeChargeTypeField;
+        private OneTimeChargeTypeType _oneTimeChargeTypeField;
 
-        private OneTimeChargeTypeCodeType oneTimeChargeTypeCodeField;
+        private OneTimeChargeTypeCodeType _oneTimeChargeTypeCodeField;
 
-        private TaxCategoryType taxCategoryField;
+        private TaxCategoryType _taxCategoryField;
 
-        private ContractType contractField;
+        private ContractType _contractField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SubscriberIDType SubscriberID
+        public SubscriberIdType SubscriberId
         {
             get
             {
-                return subscriberIDField;
+                return _subscriberIdField;
             }
             set
             {
-                subscriberIDField = value;
+                _subscriberIdField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return subscriberTypeField;
+                return _subscriberTypeField;
             }
             set
             {
-                subscriberTypeField = value;
+                _subscriberTypeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return subscriberTypeCodeField;
+                return _subscriberTypeCodeField;
             }
             set
             {
-                subscriberTypeCodeField = value;
+                _subscriberTypeCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return packQuantityField;
+                return _packQuantityField;
             }
             set
             {
-                packQuantityField = value;
+                _packQuantityField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return packSizeNumericField;
+                return _packSizeNumericField;
             }
             set
             {
-                packSizeNumericField = value;
+                _packSizeNumericField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return consumptionTypeField;
+                return _consumptionTypeField;
             }
             set
             {
-                consumptionTypeField = value;
+                _consumptionTypeField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return consumptionTypeCodeField;
+                return _consumptionTypeCodeField;
             }
             set
             {
-                consumptionTypeCodeField = value;
+                _consumptionTypeCodeField = value;
             }
         }
 
@@ -172,11 +172,11 @@
         {
             get
             {
-                return currentChargeTypeField;
+                return _currentChargeTypeField;
             }
             set
             {
-                currentChargeTypeField = value;
+                _currentChargeTypeField = value;
             }
         }
 
@@ -186,11 +186,11 @@
         {
             get
             {
-                return currentChargeTypeCodeField;
+                return _currentChargeTypeCodeField;
             }
             set
             {
-                currentChargeTypeCodeField = value;
+                _currentChargeTypeCodeField = value;
             }
         }
 
@@ -200,11 +200,11 @@
         {
             get
             {
-                return oneTimeChargeTypeField;
+                return _oneTimeChargeTypeField;
             }
             set
             {
-                oneTimeChargeTypeField = value;
+                _oneTimeChargeTypeField = value;
             }
         }
 
@@ -214,11 +214,11 @@
         {
             get
             {
-                return oneTimeChargeTypeCodeField;
+                return _oneTimeChargeTypeCodeField;
             }
             set
             {
-                oneTimeChargeTypeCodeField = value;
+                _oneTimeChargeTypeCodeField = value;
             }
         }
 
@@ -227,11 +227,11 @@
         {
             get
             {
-                return taxCategoryField;
+                return _taxCategoryField;
             }
             set
             {
-                taxCategoryField = value;
+                _taxCategoryField = value;
             }
         }
 
@@ -240,11 +240,11 @@
         {
             get
             {
-                return contractField;
+                return _contractField;
             }
             set
             {
-                contractField = value;
+                _contractField = value;
             }
         }
     }

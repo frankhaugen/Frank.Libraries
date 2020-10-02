@@ -10,27 +10,27 @@
     public partial class TendererQualificationRequestType
     {
 
-        private CompanyLegalFormCodeType companyLegalFormCodeField;
+        private CompanyLegalFormCodeType _companyLegalFormCodeField;
 
-        private CompanyLegalFormType companyLegalFormField;
+        private CompanyLegalFormType _companyLegalFormField;
 
-        private PersonalSituationType[] personalSituationField;
+        private PersonalSituationType[] _personalSituationField;
 
-        private OperatingYearsQuantityType operatingYearsQuantityField;
+        private OperatingYearsQuantityType _operatingYearsQuantityField;
 
-        private EmployeeQuantityType employeeQuantityField;
+        private EmployeeQuantityType _employeeQuantityField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private ClassificationSchemeType[] requiredBusinessClassificationSchemeField;
+        private ClassificationSchemeType[] _requiredBusinessClassificationSchemeField;
 
-        private EvaluationCriterionType[] technicalEvaluationCriterionField;
+        private EvaluationCriterionType[] _technicalEvaluationCriterionField;
 
-        private EvaluationCriterionType[] financialEvaluationCriterionField;
+        private EvaluationCriterionType[] _financialEvaluationCriterionField;
 
-        private TendererRequirementType[] specificTendererRequirementField;
+        private TendererRequirementType[] _specificTendererRequirementField;
 
-        private EconomicOperatorRoleType[] economicOperatorRoleField;
+        private EconomicOperatorRoleType[] _economicOperatorRoleField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -38,11 +38,11 @@
         {
             get
             {
-                return companyLegalFormCodeField;
+                return _companyLegalFormCodeField;
             }
             set
             {
-                companyLegalFormCodeField = value;
+                _companyLegalFormCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return companyLegalFormField;
+                return _companyLegalFormField;
             }
             set
             {
-                companyLegalFormField = value;
+                _companyLegalFormField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return personalSituationField;
+                return _personalSituationField;
             }
             set
             {
-                personalSituationField = value;
+                _personalSituationField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return operatingYearsQuantityField;
+                return _operatingYearsQuantityField;
             }
             set
             {
-                operatingYearsQuantityField = value;
+                _operatingYearsQuantityField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return employeeQuantityField;
+                return _employeeQuantityField;
             }
             set
             {
-                employeeQuantityField = value;
+                _employeeQuantityField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return requiredBusinessClassificationSchemeField;
+                return _requiredBusinessClassificationSchemeField;
             }
             set
             {
-                requiredBusinessClassificationSchemeField = value;
+                _requiredBusinessClassificationSchemeField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return technicalEvaluationCriterionField;
+                return _technicalEvaluationCriterionField;
             }
             set
             {
-                technicalEvaluationCriterionField = value;
+                _technicalEvaluationCriterionField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return financialEvaluationCriterionField;
+                return _financialEvaluationCriterionField;
             }
             set
             {
-                financialEvaluationCriterionField = value;
+                _financialEvaluationCriterionField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return specificTendererRequirementField;
+                return _specificTendererRequirementField;
             }
             set
             {
-                specificTendererRequirementField = value;
+                _specificTendererRequirementField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return economicOperatorRoleField;
+                return _economicOperatorRoleField;
             }
             set
             {
-                economicOperatorRoleField = value;
+                _economicOperatorRoleField = value;
             }
         }
     }

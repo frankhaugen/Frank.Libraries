@@ -10,33 +10,33 @@
     public partial class MaritimeTransportType
     {
 
-        private VesselIDType vesselIDField;
+        private VesselIdType _vesselIdField;
 
-        private VesselNameType vesselNameField;
+        private VesselNameType _vesselNameField;
 
-        private RadioCallSignIDType radioCallSignIDField;
+        private RadioCallSignIdType _radioCallSignIdField;
 
-        private ShipsRequirementsType[] shipsRequirementsField;
+        private ShipsRequirementsType[] _shipsRequirementsField;
 
-        private GrossTonnageMeasureType grossTonnageMeasureField;
+        private GrossTonnageMeasureType _grossTonnageMeasureField;
 
-        private NetTonnageMeasureType netTonnageMeasureField;
+        private NetTonnageMeasureType _netTonnageMeasureField;
 
-        private DocumentReferenceType registryCertificateDocumentReferenceField;
+        private DocumentReferenceType _registryCertificateDocumentReferenceField;
 
-        private LocationType1 registryPortLocationField;
+        private LocationType1 _registryPortLocationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public VesselIDType VesselID
+        public VesselIdType VesselId
         {
             get
             {
-                return vesselIDField;
+                return _vesselIdField;
             }
             set
             {
-                vesselIDField = value;
+                _vesselIdField = value;
             }
         }
 
@@ -46,25 +46,25 @@
         {
             get
             {
-                return vesselNameField;
+                return _vesselNameField;
             }
             set
             {
-                vesselNameField = value;
+                _vesselNameField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public RadioCallSignIDType RadioCallSignID
+        public RadioCallSignIdType RadioCallSignId
         {
             get
             {
-                return radioCallSignIDField;
+                return _radioCallSignIdField;
             }
             set
             {
-                radioCallSignIDField = value;
+                _radioCallSignIdField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return shipsRequirementsField;
+                return _shipsRequirementsField;
             }
             set
             {
-                shipsRequirementsField = value;
+                _shipsRequirementsField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return grossTonnageMeasureField;
+                return _grossTonnageMeasureField;
             }
             set
             {
-                grossTonnageMeasureField = value;
+                _grossTonnageMeasureField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return netTonnageMeasureField;
+                return _netTonnageMeasureField;
             }
             set
             {
-                netTonnageMeasureField = value;
+                _netTonnageMeasureField = value;
             }
         }
 
@@ -115,11 +115,11 @@
         {
             get
             {
-                return registryCertificateDocumentReferenceField;
+                return _registryCertificateDocumentReferenceField;
             }
             set
             {
-                registryCertificateDocumentReferenceField = value;
+                _registryCertificateDocumentReferenceField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return registryPortLocationField;
+                return _registryPortLocationField;
             }
             set
             {
-                registryPortLocationField = value;
+                _registryPortLocationField = value;
             }
         }
     }

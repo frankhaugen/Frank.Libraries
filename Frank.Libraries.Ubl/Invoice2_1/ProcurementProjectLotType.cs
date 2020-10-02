@@ -10,23 +10,23 @@
     public partial class ProcurementProjectLotType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private TenderingTermsType tenderingTermsField;
+        private TenderingTermsType _tenderingTermsField;
 
-        private ProcurementProjectType procurementProjectField;
+        private ProcurementProjectType _procurementProjectField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return tenderingTermsField;
+                return _tenderingTermsField;
             }
             set
             {
-                tenderingTermsField = value;
+                _tenderingTermsField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return procurementProjectField;
+                return _procurementProjectField;
             }
             set
             {
-                procurementProjectField = value;
+                _procurementProjectField = value;
             }
         }
     }

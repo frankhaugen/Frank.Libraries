@@ -10,77 +10,77 @@
     public partial class TenderingProcessType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private OriginalContractingSystemIDType originalContractingSystemIDField;
+        private OriginalContractingSystemIdType _originalContractingSystemIdField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private NegotiationDescriptionType[] negotiationDescriptionField;
+        private NegotiationDescriptionType[] _negotiationDescriptionField;
 
-        private ProcedureCodeType procedureCodeField;
+        private ProcedureCodeType _procedureCodeField;
 
-        private UrgencyCodeType urgencyCodeField;
+        private UrgencyCodeType _urgencyCodeField;
 
-        private ExpenseCodeType expenseCodeField;
+        private ExpenseCodeType _expenseCodeField;
 
-        private PartPresentationCodeType partPresentationCodeField;
+        private PartPresentationCodeType _partPresentationCodeField;
 
-        private ContractingSystemCodeType contractingSystemCodeField;
+        private ContractingSystemCodeType _contractingSystemCodeField;
 
-        private SubmissionMethodCodeType submissionMethodCodeField;
+        private SubmissionMethodCodeType _submissionMethodCodeField;
 
-        private CandidateReductionConstraintIndicatorType candidateReductionConstraintIndicatorField;
+        private CandidateReductionConstraintIndicatorType _candidateReductionConstraintIndicatorField;
 
-        private GovernmentAgreementConstraintIndicatorType governmentAgreementConstraintIndicatorField;
+        private GovernmentAgreementConstraintIndicatorType _governmentAgreementConstraintIndicatorField;
 
-        private PeriodType documentAvailabilityPeriodField;
+        private PeriodType _documentAvailabilityPeriodField;
 
-        private PeriodType tenderSubmissionDeadlinePeriodField;
+        private PeriodType _tenderSubmissionDeadlinePeriodField;
 
-        private PeriodType invitationSubmissionPeriodField;
+        private PeriodType _invitationSubmissionPeriodField;
 
-        private PeriodType participationRequestReceptionPeriodField;
+        private PeriodType _participationRequestReceptionPeriodField;
 
-        private DocumentReferenceType[] noticeDocumentReferenceField;
+        private DocumentReferenceType[] _noticeDocumentReferenceField;
 
-        private DocumentReferenceType[] additionalDocumentReferenceField;
+        private DocumentReferenceType[] _additionalDocumentReferenceField;
 
-        private ProcessJustificationType[] processJustificationField;
+        private ProcessJustificationType[] _processJustificationField;
 
-        private EconomicOperatorShortListType economicOperatorShortListField;
+        private EconomicOperatorShortListType _economicOperatorShortListField;
 
-        private EventType[] openTenderEventField;
+        private EventType[] _openTenderEventField;
 
-        private AuctionTermsType auctionTermsField;
+        private AuctionTermsType _auctionTermsField;
 
-        private FrameworkAgreementType frameworkAgreementField;
+        private FrameworkAgreementType _frameworkAgreementField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public OriginalContractingSystemIDType OriginalContractingSystemID
+        public OriginalContractingSystemIdType OriginalContractingSystemId
         {
             get
             {
-                return originalContractingSystemIDField;
+                return _originalContractingSystemIdField;
             }
             set
             {
-                originalContractingSystemIDField = value;
+                _originalContractingSystemIdField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return negotiationDescriptionField;
+                return _negotiationDescriptionField;
             }
             set
             {
-                negotiationDescriptionField = value;
+                _negotiationDescriptionField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return procedureCodeField;
+                return _procedureCodeField;
             }
             set
             {
-                procedureCodeField = value;
+                _procedureCodeField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return urgencyCodeField;
+                return _urgencyCodeField;
             }
             set
             {
-                urgencyCodeField = value;
+                _urgencyCodeField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return expenseCodeField;
+                return _expenseCodeField;
             }
             set
             {
-                expenseCodeField = value;
+                _expenseCodeField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return partPresentationCodeField;
+                return _partPresentationCodeField;
             }
             set
             {
-                partPresentationCodeField = value;
+                _partPresentationCodeField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return contractingSystemCodeField;
+                return _contractingSystemCodeField;
             }
             set
             {
-                contractingSystemCodeField = value;
+                _contractingSystemCodeField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return submissionMethodCodeField;
+                return _submissionMethodCodeField;
             }
             set
             {
-                submissionMethodCodeField = value;
+                _submissionMethodCodeField = value;
             }
         }
 
@@ -202,11 +202,11 @@
         {
             get
             {
-                return candidateReductionConstraintIndicatorField;
+                return _candidateReductionConstraintIndicatorField;
             }
             set
             {
-                candidateReductionConstraintIndicatorField = value;
+                _candidateReductionConstraintIndicatorField = value;
             }
         }
 
@@ -216,11 +216,11 @@
         {
             get
             {
-                return governmentAgreementConstraintIndicatorField;
+                return _governmentAgreementConstraintIndicatorField;
             }
             set
             {
-                governmentAgreementConstraintIndicatorField = value;
+                _governmentAgreementConstraintIndicatorField = value;
             }
         }
 
@@ -229,11 +229,11 @@
         {
             get
             {
-                return documentAvailabilityPeriodField;
+                return _documentAvailabilityPeriodField;
             }
             set
             {
-                documentAvailabilityPeriodField = value;
+                _documentAvailabilityPeriodField = value;
             }
         }
 
@@ -242,11 +242,11 @@
         {
             get
             {
-                return tenderSubmissionDeadlinePeriodField;
+                return _tenderSubmissionDeadlinePeriodField;
             }
             set
             {
-                tenderSubmissionDeadlinePeriodField = value;
+                _tenderSubmissionDeadlinePeriodField = value;
             }
         }
 
@@ -255,11 +255,11 @@
         {
             get
             {
-                return invitationSubmissionPeriodField;
+                return _invitationSubmissionPeriodField;
             }
             set
             {
-                invitationSubmissionPeriodField = value;
+                _invitationSubmissionPeriodField = value;
             }
         }
 
@@ -268,11 +268,11 @@
         {
             get
             {
-                return participationRequestReceptionPeriodField;
+                return _participationRequestReceptionPeriodField;
             }
             set
             {
-                participationRequestReceptionPeriodField = value;
+                _participationRequestReceptionPeriodField = value;
             }
         }
 
@@ -282,11 +282,11 @@
         {
             get
             {
-                return noticeDocumentReferenceField;
+                return _noticeDocumentReferenceField;
             }
             set
             {
-                noticeDocumentReferenceField = value;
+                _noticeDocumentReferenceField = value;
             }
         }
 
@@ -296,11 +296,11 @@
         {
             get
             {
-                return additionalDocumentReferenceField;
+                return _additionalDocumentReferenceField;
             }
             set
             {
-                additionalDocumentReferenceField = value;
+                _additionalDocumentReferenceField = value;
             }
         }
 
@@ -310,11 +310,11 @@
         {
             get
             {
-                return processJustificationField;
+                return _processJustificationField;
             }
             set
             {
-                processJustificationField = value;
+                _processJustificationField = value;
             }
         }
 
@@ -323,11 +323,11 @@
         {
             get
             {
-                return economicOperatorShortListField;
+                return _economicOperatorShortListField;
             }
             set
             {
-                economicOperatorShortListField = value;
+                _economicOperatorShortListField = value;
             }
         }
 
@@ -337,11 +337,11 @@
         {
             get
             {
-                return openTenderEventField;
+                return _openTenderEventField;
             }
             set
             {
-                openTenderEventField = value;
+                _openTenderEventField = value;
             }
         }
 
@@ -350,11 +350,11 @@
         {
             get
             {
-                return auctionTermsField;
+                return _auctionTermsField;
             }
             set
             {
-                auctionTermsField = value;
+                _auctionTermsField = value;
             }
         }
 
@@ -363,11 +363,11 @@
         {
             get
             {
-                return frameworkAgreementField;
+                return _frameworkAgreementField;
             }
             set
             {
-                frameworkAgreementField = value;
+                _frameworkAgreementField = value;
             }
         }
     }

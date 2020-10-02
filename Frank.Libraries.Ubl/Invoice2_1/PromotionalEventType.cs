@@ -10,15 +10,15 @@
     public partial class PromotionalEventType
     {
 
-        private PromotionalEventTypeCodeType promotionalEventTypeCodeField;
+        private PromotionalEventTypeCodeType _promotionalEventTypeCodeField;
 
-        private SubmissionDateType submissionDateField;
+        private SubmissionDateType _submissionDateField;
 
-        private FirstShipmentAvailibilityDateType firstShipmentAvailibilityDateField;
+        private FirstShipmentAvailibilityDateType _firstShipmentAvailibilityDateField;
 
-        private LatestProposalAcceptanceDateType latestProposalAcceptanceDateField;
+        private LatestProposalAcceptanceDateType _latestProposalAcceptanceDateField;
 
-        private PromotionalSpecificationType[] promotionalSpecificationField;
+        private PromotionalSpecificationType[] _promotionalSpecificationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return promotionalEventTypeCodeField;
+                return _promotionalEventTypeCodeField;
             }
             set
             {
-                promotionalEventTypeCodeField = value;
+                _promotionalEventTypeCodeField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return submissionDateField;
+                return _submissionDateField;
             }
             set
             {
-                submissionDateField = value;
+                _submissionDateField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return firstShipmentAvailibilityDateField;
+                return _firstShipmentAvailibilityDateField;
             }
             set
             {
-                firstShipmentAvailibilityDateField = value;
+                _firstShipmentAvailibilityDateField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return latestProposalAcceptanceDateField;
+                return _latestProposalAcceptanceDateField;
             }
             set
             {
-                latestProposalAcceptanceDateField = value;
+                _latestProposalAcceptanceDateField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return promotionalSpecificationField;
+                return _promotionalSpecificationField;
             }
             set
             {
-                promotionalSpecificationField = value;
+                _promotionalSpecificationField = value;
             }
         }
     }

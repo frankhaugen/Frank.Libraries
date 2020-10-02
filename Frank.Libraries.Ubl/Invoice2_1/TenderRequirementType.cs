@@ -10,11 +10,11 @@
     public partial class TenderRequirementType
     {
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private DocumentReferenceType templateDocumentReferenceField;
+        private DocumentReferenceType _templateDocumentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return templateDocumentReferenceField;
+                return _templateDocumentReferenceField;
             }
             set
             {
-                templateDocumentReferenceField = value;
+                _templateDocumentReferenceField = value;
             }
         }
     }

@@ -10,51 +10,51 @@
     public partial class IncludeType
     {
 
-        private string uRIField;
+        private string _uRiField;
 
-        private bool referencedDataField;
+        private bool _referencedDataField;
 
-        private bool referencedDataFieldSpecified;
+        private bool _referencedDataFieldSpecified;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string URI
+        public string Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public bool referencedData
+        public bool ReferencedData
         {
             get
             {
-                return referencedDataField;
+                return _referencedDataField;
             }
             set
             {
-                referencedDataField = value;
+                _referencedDataField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool referencedDataSpecified
+        public bool ReferencedDataSpecified
         {
             get
             {
-                return referencedDataFieldSpecified;
+                return _referencedDataFieldSpecified;
             }
             set
             {
-                referencedDataFieldSpecified = value;
+                _referencedDataFieldSpecified = value;
             }
         }
     }

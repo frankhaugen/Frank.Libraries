@@ -10,25 +10,25 @@
     public partial class TransactionConditionsType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ActionCodeType actionCodeField;
+        private ActionCodeType _actionCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return actionCodeField;
+                return _actionCodeField;
             }
             set
             {
-                actionCodeField = value;
+                _actionCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
     }

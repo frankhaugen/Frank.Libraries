@@ -10,33 +10,33 @@
     public partial class TelecommunicationsSupplyLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private PhoneNumberType phoneNumberField;
+        private PhoneNumberType _phoneNumberField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private LineExtensionAmountType lineExtensionAmountField;
+        private LineExtensionAmountType _lineExtensionAmountField;
 
-        private ExchangeRateType[] exchangeRateField;
+        private ExchangeRateType[] _exchangeRateField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private TaxTotalType[] taxTotalField;
+        private TaxTotalType[] _taxTotalField;
 
-        private TelecommunicationsServiceType[] telecommunicationsServiceField;
+        private TelecommunicationsServiceType[] _telecommunicationsServiceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return phoneNumberField;
+                return _phoneNumberField;
             }
             set
             {
-                phoneNumberField = value;
+                _phoneNumberField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return lineExtensionAmountField;
+                return _lineExtensionAmountField;
             }
             set
             {
-                lineExtensionAmountField = value;
+                _lineExtensionAmountField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return exchangeRateField;
+                return _exchangeRateField;
             }
             set
             {
-                exchangeRateField = value;
+                _exchangeRateField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return taxTotalField;
+                return _taxTotalField;
             }
             set
             {
-                taxTotalField = value;
+                _taxTotalField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return telecommunicationsServiceField;
+                return _telecommunicationsServiceField;
             }
             set
             {
-                telecommunicationsServiceField = value;
+                _telecommunicationsServiceField = value;
             }
         }
     }

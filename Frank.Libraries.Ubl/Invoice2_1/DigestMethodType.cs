@@ -10,9 +10,9 @@
     public partial class DigestMethodType
     {
 
-        private System.Xml.XmlNode[] anyField;
+        private System.Xml.XmlNode[] _anyField;
 
-        private string algorithmField;
+        private string _algorithmField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
@@ -21,11 +21,11 @@
         {
             get
             {
-                return anyField;
+                return _anyField;
             }
             set
             {
-                anyField = value;
+                _anyField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return algorithmField;
+                return _algorithmField;
             }
             set
             {
-                algorithmField = value;
+                _algorithmField = value;
             }
         }
     }

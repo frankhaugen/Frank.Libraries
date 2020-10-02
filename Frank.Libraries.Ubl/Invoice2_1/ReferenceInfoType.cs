@@ -10,13 +10,13 @@
     public partial class ReferenceInfoType
     {
 
-        private DigestMethodType digestMethodField;
+        private DigestMethodType _digestMethodField;
 
-        private byte[] digestValueField;
+        private byte[] _digestValueField;
 
-        private string idField;
+        private string _idField;
 
-        private string uRIField;
+        private string _uRiField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return digestMethodField;
+                return _digestMethodField;
             }
             set
             {
-                digestMethodField = value;
+                _digestMethodField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return digestValueField;
+                return _digestValueField;
             }
             set
             {
-                digestValueField = value;
+                _digestValueField = value;
             }
         }
 
@@ -52,25 +52,25 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string URI
+        public string Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
     }

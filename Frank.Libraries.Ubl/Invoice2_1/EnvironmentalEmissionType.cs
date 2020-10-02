@@ -10,13 +10,13 @@
     public partial class EnvironmentalEmissionType
     {
 
-        private EnvironmentalEmissionTypeCodeType environmentalEmissionTypeCodeField;
+        private EnvironmentalEmissionTypeCodeType _environmentalEmissionTypeCodeField;
 
-        private ValueMeasureType valueMeasureField;
+        private ValueMeasureType _valueMeasureField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private EmissionCalculationMethodType[] emissionCalculationMethodField;
+        private EmissionCalculationMethodType[] _emissionCalculationMethodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return environmentalEmissionTypeCodeField;
+                return _environmentalEmissionTypeCodeField;
             }
             set
             {
-                environmentalEmissionTypeCodeField = value;
+                _environmentalEmissionTypeCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return valueMeasureField;
+                return _valueMeasureField;
             }
             set
             {
-                valueMeasureField = value;
+                _valueMeasureField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return emissionCalculationMethodField;
+                return _emissionCalculationMethodField;
             }
             set
             {
-                emissionCalculationMethodField = value;
+                _emissionCalculationMethodField = value;
             }
         }
     }

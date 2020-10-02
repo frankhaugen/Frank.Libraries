@@ -10,17 +10,17 @@
     public partial class ItemInformationRequestLineType
     {
 
-        private TimeFrequencyCodeType timeFrequencyCodeField;
+        private TimeFrequencyCodeType _timeFrequencyCodeField;
 
-        private SupplyChainActivityTypeCodeType supplyChainActivityTypeCodeField;
+        private SupplyChainActivityTypeCodeType _supplyChainActivityTypeCodeField;
 
-        private ForecastTypeCodeType forecastTypeCodeField;
+        private ForecastTypeCodeType _forecastTypeCodeField;
 
-        private PerformanceMetricTypeCodeType performanceMetricTypeCodeField;
+        private PerformanceMetricTypeCodeType _performanceMetricTypeCodeField;
 
-        private PeriodType[] periodField;
+        private PeriodType[] _periodField;
 
-        private SalesItemType[] salesItemField;
+        private SalesItemType[] _salesItemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -28,11 +28,11 @@
         {
             get
             {
-                return timeFrequencyCodeField;
+                return _timeFrequencyCodeField;
             }
             set
             {
-                timeFrequencyCodeField = value;
+                _timeFrequencyCodeField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return supplyChainActivityTypeCodeField;
+                return _supplyChainActivityTypeCodeField;
             }
             set
             {
-                supplyChainActivityTypeCodeField = value;
+                _supplyChainActivityTypeCodeField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return forecastTypeCodeField;
+                return _forecastTypeCodeField;
             }
             set
             {
-                forecastTypeCodeField = value;
+                _forecastTypeCodeField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return performanceMetricTypeCodeField;
+                return _performanceMetricTypeCodeField;
             }
             set
             {
-                performanceMetricTypeCodeField = value;
+                _performanceMetricTypeCodeField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return salesItemField;
+                return _salesItemField;
             }
             set
             {
-                salesItemField = value;
+                _salesItemField = value;
             }
         }
     }

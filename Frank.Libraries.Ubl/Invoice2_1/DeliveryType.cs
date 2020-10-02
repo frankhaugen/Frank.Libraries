@@ -10,65 +10,65 @@
     public partial class DeliveryType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private MinimumQuantityType minimumQuantityField;
+        private MinimumQuantityType _minimumQuantityField;
 
-        private MaximumQuantityType maximumQuantityField;
+        private MaximumQuantityType _maximumQuantityField;
 
-        private ActualDeliveryDateType actualDeliveryDateField;
+        private ActualDeliveryDateType _actualDeliveryDateField;
 
-        private ActualDeliveryTimeType actualDeliveryTimeField;
+        private ActualDeliveryTimeType _actualDeliveryTimeField;
 
-        private LatestDeliveryDateType latestDeliveryDateField;
+        private LatestDeliveryDateType _latestDeliveryDateField;
 
-        private LatestDeliveryTimeType latestDeliveryTimeField;
+        private LatestDeliveryTimeType _latestDeliveryTimeField;
 
-        private ReleaseIDType releaseIDField;
+        private ReleaseIdType _releaseIdField;
 
-        private TrackingIDType trackingIDField;
+        private TrackingIdType _trackingIdField;
 
-        private AddressType deliveryAddressField;
+        private AddressType _deliveryAddressField;
 
-        private LocationType1 deliveryLocationField;
+        private LocationType1 _deliveryLocationField;
 
-        private LocationType1 alternativeDeliveryLocationField;
+        private LocationType1 _alternativeDeliveryLocationField;
 
-        private PeriodType requestedDeliveryPeriodField;
+        private PeriodType _requestedDeliveryPeriodField;
 
-        private PeriodType promisedDeliveryPeriodField;
+        private PeriodType _promisedDeliveryPeriodField;
 
-        private PeriodType estimatedDeliveryPeriodField;
+        private PeriodType _estimatedDeliveryPeriodField;
 
-        private PartyType carrierPartyField;
+        private PartyType _carrierPartyField;
 
-        private PartyType deliveryPartyField;
+        private PartyType _deliveryPartyField;
 
-        private PartyType[] notifyPartyField;
+        private PartyType[] _notifyPartyField;
 
-        private DespatchType despatchField;
+        private DespatchType _despatchField;
 
-        private DeliveryTermsType[] deliveryTermsField;
+        private DeliveryTermsType[] _deliveryTermsField;
 
-        private DeliveryUnitType minimumDeliveryUnitField;
+        private DeliveryUnitType _minimumDeliveryUnitField;
 
-        private DeliveryUnitType maximumDeliveryUnitField;
+        private DeliveryUnitType _maximumDeliveryUnitField;
 
-        private ShipmentType shipmentField;
+        private ShipmentType _shipmentField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return minimumQuantityField;
+                return _minimumQuantityField;
             }
             set
             {
-                minimumQuantityField = value;
+                _minimumQuantityField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return maximumQuantityField;
+                return _maximumQuantityField;
             }
             set
             {
-                maximumQuantityField = value;
+                _maximumQuantityField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return actualDeliveryDateField;
+                return _actualDeliveryDateField;
             }
             set
             {
-                actualDeliveryDateField = value;
+                _actualDeliveryDateField = value;
             }
         }
 
@@ -134,11 +134,11 @@
         {
             get
             {
-                return actualDeliveryTimeField;
+                return _actualDeliveryTimeField;
             }
             set
             {
-                actualDeliveryTimeField = value;
+                _actualDeliveryTimeField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return latestDeliveryDateField;
+                return _latestDeliveryDateField;
             }
             set
             {
-                latestDeliveryDateField = value;
+                _latestDeliveryDateField = value;
             }
         }
 
@@ -162,39 +162,39 @@
         {
             get
             {
-                return latestDeliveryTimeField;
+                return _latestDeliveryTimeField;
             }
             set
             {
-                latestDeliveryTimeField = value;
+                _latestDeliveryTimeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ReleaseIDType ReleaseID
+        public ReleaseIdType ReleaseId
         {
             get
             {
-                return releaseIDField;
+                return _releaseIdField;
             }
             set
             {
-                releaseIDField = value;
+                _releaseIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public TrackingIDType TrackingID
+        public TrackingIdType TrackingId
         {
             get
             {
-                return trackingIDField;
+                return _trackingIdField;
             }
             set
             {
-                trackingIDField = value;
+                _trackingIdField = value;
             }
         }
 
@@ -203,11 +203,11 @@
         {
             get
             {
-                return deliveryAddressField;
+                return _deliveryAddressField;
             }
             set
             {
-                deliveryAddressField = value;
+                _deliveryAddressField = value;
             }
         }
 
@@ -216,11 +216,11 @@
         {
             get
             {
-                return deliveryLocationField;
+                return _deliveryLocationField;
             }
             set
             {
-                deliveryLocationField = value;
+                _deliveryLocationField = value;
             }
         }
 
@@ -229,11 +229,11 @@
         {
             get
             {
-                return alternativeDeliveryLocationField;
+                return _alternativeDeliveryLocationField;
             }
             set
             {
-                alternativeDeliveryLocationField = value;
+                _alternativeDeliveryLocationField = value;
             }
         }
 
@@ -242,11 +242,11 @@
         {
             get
             {
-                return requestedDeliveryPeriodField;
+                return _requestedDeliveryPeriodField;
             }
             set
             {
-                requestedDeliveryPeriodField = value;
+                _requestedDeliveryPeriodField = value;
             }
         }
 
@@ -255,11 +255,11 @@
         {
             get
             {
-                return promisedDeliveryPeriodField;
+                return _promisedDeliveryPeriodField;
             }
             set
             {
-                promisedDeliveryPeriodField = value;
+                _promisedDeliveryPeriodField = value;
             }
         }
 
@@ -268,11 +268,11 @@
         {
             get
             {
-                return estimatedDeliveryPeriodField;
+                return _estimatedDeliveryPeriodField;
             }
             set
             {
-                estimatedDeliveryPeriodField = value;
+                _estimatedDeliveryPeriodField = value;
             }
         }
 
@@ -281,11 +281,11 @@
         {
             get
             {
-                return carrierPartyField;
+                return _carrierPartyField;
             }
             set
             {
-                carrierPartyField = value;
+                _carrierPartyField = value;
             }
         }
 
@@ -294,11 +294,11 @@
         {
             get
             {
-                return deliveryPartyField;
+                return _deliveryPartyField;
             }
             set
             {
-                deliveryPartyField = value;
+                _deliveryPartyField = value;
             }
         }
 
@@ -308,11 +308,11 @@
         {
             get
             {
-                return notifyPartyField;
+                return _notifyPartyField;
             }
             set
             {
-                notifyPartyField = value;
+                _notifyPartyField = value;
             }
         }
 
@@ -321,11 +321,11 @@
         {
             get
             {
-                return despatchField;
+                return _despatchField;
             }
             set
             {
-                despatchField = value;
+                _despatchField = value;
             }
         }
 
@@ -335,11 +335,11 @@
         {
             get
             {
-                return deliveryTermsField;
+                return _deliveryTermsField;
             }
             set
             {
-                deliveryTermsField = value;
+                _deliveryTermsField = value;
             }
         }
 
@@ -348,11 +348,11 @@
         {
             get
             {
-                return minimumDeliveryUnitField;
+                return _minimumDeliveryUnitField;
             }
             set
             {
-                minimumDeliveryUnitField = value;
+                _minimumDeliveryUnitField = value;
             }
         }
 
@@ -361,11 +361,11 @@
         {
             get
             {
-                return maximumDeliveryUnitField;
+                return _maximumDeliveryUnitField;
             }
             set
             {
-                maximumDeliveryUnitField = value;
+                _maximumDeliveryUnitField = value;
             }
         }
 
@@ -374,11 +374,11 @@
         {
             get
             {
-                return shipmentField;
+                return _shipmentField;
             }
             set
             {
-                shipmentField = value;
+                _shipmentField = value;
             }
         }
     }

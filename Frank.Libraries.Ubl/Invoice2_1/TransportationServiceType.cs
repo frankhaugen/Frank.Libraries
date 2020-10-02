@@ -10,51 +10,51 @@
     public partial class TransportationServiceType
     {
 
-        private TransportServiceCodeType transportServiceCodeField;
+        private TransportServiceCodeType _transportServiceCodeField;
 
-        private TariffClassCodeType tariffClassCodeField;
+        private TariffClassCodeType _tariffClassCodeField;
 
-        private PriorityType priorityField;
+        private PriorityType _priorityField;
 
-        private FreightRateClassCodeType freightRateClassCodeField;
+        private FreightRateClassCodeType _freightRateClassCodeField;
 
-        private TransportationServiceDescriptionType[] transportationServiceDescriptionField;
+        private TransportationServiceDescriptionType[] _transportationServiceDescriptionField;
 
-        private TransportationServiceDetailsURIType transportationServiceDetailsURIField;
+        private TransportationServiceDetailsUriType _transportationServiceDetailsUriField;
 
-        private NominationDateType nominationDateField;
+        private NominationDateType _nominationDateField;
 
-        private NominationTimeType nominationTimeField;
+        private NominationTimeType _nominationTimeField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private SequenceNumericType sequenceNumericField;
+        private SequenceNumericType _sequenceNumericField;
 
-        private TransportEquipmentType[] transportEquipmentField;
+        private TransportEquipmentType[] _transportEquipmentField;
 
-        private TransportEquipmentType[] supportedTransportEquipmentField;
+        private TransportEquipmentType[] _supportedTransportEquipmentField;
 
-        private TransportEquipmentType[] unsupportedTransportEquipmentField;
+        private TransportEquipmentType[] _unsupportedTransportEquipmentField;
 
-        private CommodityClassificationType[] commodityClassificationField;
+        private CommodityClassificationType[] _commodityClassificationField;
 
-        private CommodityClassificationType[] supportedCommodityClassificationField;
+        private CommodityClassificationType[] _supportedCommodityClassificationField;
 
-        private CommodityClassificationType[] unsupportedCommodityClassificationField;
+        private CommodityClassificationType[] _unsupportedCommodityClassificationField;
 
-        private DimensionType totalCapacityDimensionField;
+        private DimensionType _totalCapacityDimensionField;
 
-        private ShipmentStageType[] shipmentStageField;
+        private ShipmentStageType[] _shipmentStageField;
 
-        private TransportEventType[] transportEventField;
+        private TransportEventType[] _transportEventField;
 
-        private PartyType responsibleTransportServiceProviderPartyField;
+        private PartyType _responsibleTransportServiceProviderPartyField;
 
-        private EnvironmentalEmissionType[] environmentalEmissionField;
+        private EnvironmentalEmissionType[] _environmentalEmissionField;
 
-        private PeriodType estimatedDurationPeriodField;
+        private PeriodType _estimatedDurationPeriodField;
 
-        private ServiceFrequencyType[] scheduledServiceFrequencyField;
+        private ServiceFrequencyType[] _scheduledServiceFrequencyField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -62,11 +62,11 @@
         {
             get
             {
-                return transportServiceCodeField;
+                return _transportServiceCodeField;
             }
             set
             {
-                transportServiceCodeField = value;
+                _transportServiceCodeField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return tariffClassCodeField;
+                return _tariffClassCodeField;
             }
             set
             {
-                tariffClassCodeField = value;
+                _tariffClassCodeField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return priorityField;
+                return _priorityField;
             }
             set
             {
-                priorityField = value;
+                _priorityField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return freightRateClassCodeField;
+                return _freightRateClassCodeField;
             }
             set
             {
-                freightRateClassCodeField = value;
+                _freightRateClassCodeField = value;
             }
         }
 
@@ -118,25 +118,25 @@
         {
             get
             {
-                return transportationServiceDescriptionField;
+                return _transportationServiceDescriptionField;
             }
             set
             {
-                transportationServiceDescriptionField = value;
+                _transportationServiceDescriptionField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public TransportationServiceDetailsURIType TransportationServiceDetailsURI
+        public TransportationServiceDetailsUriType TransportationServiceDetailsUri
         {
             get
             {
-                return transportationServiceDetailsURIField;
+                return _transportationServiceDetailsUriField;
             }
             set
             {
-                transportationServiceDetailsURIField = value;
+                _transportationServiceDetailsUriField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return nominationDateField;
+                return _nominationDateField;
             }
             set
             {
-                nominationDateField = value;
+                _nominationDateField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return nominationTimeField;
+                return _nominationTimeField;
             }
             set
             {
-                nominationTimeField = value;
+                _nominationTimeField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return sequenceNumericField;
+                return _sequenceNumericField;
             }
             set
             {
-                sequenceNumericField = value;
+                _sequenceNumericField = value;
             }
         }
 
@@ -202,11 +202,11 @@
         {
             get
             {
-                return transportEquipmentField;
+                return _transportEquipmentField;
             }
             set
             {
-                transportEquipmentField = value;
+                _transportEquipmentField = value;
             }
         }
 
@@ -216,11 +216,11 @@
         {
             get
             {
-                return supportedTransportEquipmentField;
+                return _supportedTransportEquipmentField;
             }
             set
             {
-                supportedTransportEquipmentField = value;
+                _supportedTransportEquipmentField = value;
             }
         }
 
@@ -230,11 +230,11 @@
         {
             get
             {
-                return unsupportedTransportEquipmentField;
+                return _unsupportedTransportEquipmentField;
             }
             set
             {
-                unsupportedTransportEquipmentField = value;
+                _unsupportedTransportEquipmentField = value;
             }
         }
 
@@ -244,11 +244,11 @@
         {
             get
             {
-                return commodityClassificationField;
+                return _commodityClassificationField;
             }
             set
             {
-                commodityClassificationField = value;
+                _commodityClassificationField = value;
             }
         }
 
@@ -258,11 +258,11 @@
         {
             get
             {
-                return supportedCommodityClassificationField;
+                return _supportedCommodityClassificationField;
             }
             set
             {
-                supportedCommodityClassificationField = value;
+                _supportedCommodityClassificationField = value;
             }
         }
 
@@ -272,11 +272,11 @@
         {
             get
             {
-                return unsupportedCommodityClassificationField;
+                return _unsupportedCommodityClassificationField;
             }
             set
             {
-                unsupportedCommodityClassificationField = value;
+                _unsupportedCommodityClassificationField = value;
             }
         }
 
@@ -285,11 +285,11 @@
         {
             get
             {
-                return totalCapacityDimensionField;
+                return _totalCapacityDimensionField;
             }
             set
             {
-                totalCapacityDimensionField = value;
+                _totalCapacityDimensionField = value;
             }
         }
 
@@ -299,11 +299,11 @@
         {
             get
             {
-                return shipmentStageField;
+                return _shipmentStageField;
             }
             set
             {
-                shipmentStageField = value;
+                _shipmentStageField = value;
             }
         }
 
@@ -313,11 +313,11 @@
         {
             get
             {
-                return transportEventField;
+                return _transportEventField;
             }
             set
             {
-                transportEventField = value;
+                _transportEventField = value;
             }
         }
 
@@ -326,11 +326,11 @@
         {
             get
             {
-                return responsibleTransportServiceProviderPartyField;
+                return _responsibleTransportServiceProviderPartyField;
             }
             set
             {
-                responsibleTransportServiceProviderPartyField = value;
+                _responsibleTransportServiceProviderPartyField = value;
             }
         }
 
@@ -340,11 +340,11 @@
         {
             get
             {
-                return environmentalEmissionField;
+                return _environmentalEmissionField;
             }
             set
             {
-                environmentalEmissionField = value;
+                _environmentalEmissionField = value;
             }
         }
 
@@ -353,11 +353,11 @@
         {
             get
             {
-                return estimatedDurationPeriodField;
+                return _estimatedDurationPeriodField;
             }
             set
             {
-                estimatedDurationPeriodField = value;
+                _estimatedDurationPeriodField = value;
             }
         }
 
@@ -367,11 +367,11 @@
         {
             get
             {
-                return scheduledServiceFrequencyField;
+                return _scheduledServiceFrequencyField;
             }
             set
             {
-                scheduledServiceFrequencyField = value;
+                _scheduledServiceFrequencyField = value;
             }
         }
     }

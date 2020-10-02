@@ -10,13 +10,13 @@
     public partial class EventTacticType
     {
 
-        private CommentType commentField;
+        private CommentType _commentField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private EventTacticEnumerationType eventTacticEnumerationField;
+        private EventTacticEnumerationType _eventTacticEnumerationField;
 
-        private PeriodType periodField;
+        private PeriodType _periodField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -24,11 +24,11 @@
         {
             get
             {
-                return commentField;
+                return _commentField;
             }
             set
             {
-                commentField = value;
+                _commentField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return eventTacticEnumerationField;
+                return _eventTacticEnumerationField;
             }
             set
             {
-                eventTacticEnumerationField = value;
+                _eventTacticEnumerationField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return periodField;
+                return _periodField;
             }
             set
             {
-                periodField = value;
+                _periodField = value;
             }
         }
     }

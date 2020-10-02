@@ -10,22 +10,22 @@
     public partial class UnsignedPropertiesType
     {
 
-        private UnsignedSignaturePropertiesType unsignedSignaturePropertiesField;
+        private UnsignedSignaturePropertiesType _unsignedSignaturePropertiesField;
 
-        private UnsignedDataObjectPropertiesType unsignedDataObjectPropertiesField;
+        private UnsignedDataObjectPropertiesType _unsignedDataObjectPropertiesField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         public UnsignedSignaturePropertiesType UnsignedSignatureProperties
         {
             get
             {
-                return unsignedSignaturePropertiesField;
+                return _unsignedSignaturePropertiesField;
             }
             set
             {
-                unsignedSignaturePropertiesField = value;
+                _unsignedSignaturePropertiesField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return unsignedDataObjectPropertiesField;
+                return _unsignedDataObjectPropertiesField;
             }
             set
             {
-                unsignedDataObjectPropertiesField = value;
+                _unsignedDataObjectPropertiesField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

@@ -10,51 +10,51 @@
     public partial class DocumentReferenceType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private CopyIndicatorType copyIndicatorField;
+        private CopyIndicatorType _copyIndicatorField;
 
-        private UUIDType uUIDField;
+        private UuidType _uUidField;
 
-        private IssueDateType issueDateField;
+        private IssueDateType _issueDateField;
 
-        private IssueTimeType issueTimeField;
+        private IssueTimeType _issueTimeField;
 
-        private DocumentTypeCodeType documentTypeCodeField;
+        private DocumentTypeCodeType _documentTypeCodeField;
 
-        private DocumentTypeType documentTypeField;
+        private DocumentTypeType _documentTypeField;
 
-        private XPathType[] xPathField;
+        private XPathType[] _xPathField;
 
-        private LanguageIDType languageIDField;
+        private LanguageIdType _languageIdField;
 
-        private LocaleCodeType localeCodeField;
+        private LocaleCodeType _localeCodeField;
 
-        private VersionIDType versionIDField;
+        private VersionIdType _versionIdField;
 
-        private DocumentStatusCodeType documentStatusCodeField;
+        private DocumentStatusCodeType _documentStatusCodeField;
 
-        private DocumentDescriptionType[] documentDescriptionField;
+        private DocumentDescriptionType[] _documentDescriptionField;
 
-        private AttachmentType attachmentField;
+        private AttachmentType _attachmentField;
 
-        private PeriodType validityPeriodField;
+        private PeriodType _validityPeriodField;
 
-        private PartyType issuerPartyField;
+        private PartyType _issuerPartyField;
 
-        private ResultOfVerificationType resultOfVerificationField;
+        private ResultOfVerificationType _resultOfVerificationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -64,25 +64,25 @@
         {
             get
             {
-                return copyIndicatorField;
+                return _copyIndicatorField;
             }
             set
             {
-                copyIndicatorField = value;
+                _copyIndicatorField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public UUIDType UUID
+        public UuidType Uuid
         {
             get
             {
-                return uUIDField;
+                return _uUidField;
             }
             set
             {
-                uUIDField = value;
+                _uUidField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return issueDateField;
+                return _issueDateField;
             }
             set
             {
-                issueDateField = value;
+                _issueDateField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return issueTimeField;
+                return _issueTimeField;
             }
             set
             {
-                issueTimeField = value;
+                _issueTimeField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return documentTypeCodeField;
+                return _documentTypeCodeField;
             }
             set
             {
-                documentTypeCodeField = value;
+                _documentTypeCodeField = value;
             }
         }
 
@@ -134,11 +134,11 @@
         {
             get
             {
-                return documentTypeField;
+                return _documentTypeField;
             }
             set
             {
-                documentTypeField = value;
+                _documentTypeField = value;
             }
         }
 
@@ -148,25 +148,25 @@
         {
             get
             {
-                return xPathField;
+                return _xPathField;
             }
             set
             {
-                xPathField = value;
+                _xPathField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public LanguageIDType LanguageID
+        public LanguageIdType LanguageId
         {
             get
             {
-                return languageIDField;
+                return _languageIdField;
             }
             set
             {
-                languageIDField = value;
+                _languageIdField = value;
             }
         }
 
@@ -176,25 +176,25 @@
         {
             get
             {
-                return localeCodeField;
+                return _localeCodeField;
             }
             set
             {
-                localeCodeField = value;
+                _localeCodeField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public VersionIDType VersionID
+        public VersionIdType VersionId
         {
             get
             {
-                return versionIDField;
+                return _versionIdField;
             }
             set
             {
-                versionIDField = value;
+                _versionIdField = value;
             }
         }
 
@@ -204,11 +204,11 @@
         {
             get
             {
-                return documentStatusCodeField;
+                return _documentStatusCodeField;
             }
             set
             {
-                documentStatusCodeField = value;
+                _documentStatusCodeField = value;
             }
         }
 
@@ -218,11 +218,11 @@
         {
             get
             {
-                return documentDescriptionField;
+                return _documentDescriptionField;
             }
             set
             {
-                documentDescriptionField = value;
+                _documentDescriptionField = value;
             }
         }
 
@@ -231,11 +231,11 @@
         {
             get
             {
-                return attachmentField;
+                return _attachmentField;
             }
             set
             {
-                attachmentField = value;
+                _attachmentField = value;
             }
         }
 
@@ -244,11 +244,11 @@
         {
             get
             {
-                return validityPeriodField;
+                return _validityPeriodField;
             }
             set
             {
-                validityPeriodField = value;
+                _validityPeriodField = value;
             }
         }
 
@@ -257,11 +257,11 @@
         {
             get
             {
-                return issuerPartyField;
+                return _issuerPartyField;
             }
             set
             {
-                issuerPartyField = value;
+                _issuerPartyField = value;
             }
         }
 
@@ -270,11 +270,11 @@
         {
             get
             {
-                return resultOfVerificationField;
+                return _resultOfVerificationField;
             }
             set
             {
-                resultOfVerificationField = value;
+                _resultOfVerificationField = value;
             }
         }
     }

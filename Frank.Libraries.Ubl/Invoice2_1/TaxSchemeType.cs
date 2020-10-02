@@ -10,27 +10,27 @@
     public partial class TaxSchemeType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NameType1 nameField;
+        private NameType1 _nameField;
 
-        private TaxTypeCodeType taxTypeCodeField;
+        private TaxTypeCodeType _taxTypeCodeField;
 
-        private CurrencyCodeType currencyCodeField;
+        private CurrencyCodeType _currencyCodeField;
 
-        private AddressType[] jurisdictionRegionAddressField;
+        private AddressType[] _jurisdictionRegionAddressField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return nameField;
+                return _nameField;
             }
             set
             {
-                nameField = value;
+                _nameField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return taxTypeCodeField;
+                return _taxTypeCodeField;
             }
             set
             {
-                taxTypeCodeField = value;
+                _taxTypeCodeField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return currencyCodeField;
+                return _currencyCodeField;
             }
             set
             {
-                currencyCodeField = value;
+                _currencyCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return jurisdictionRegionAddressField;
+                return _jurisdictionRegionAddressField;
             }
             set
             {
-                jurisdictionRegionAddressField = value;
+                _jurisdictionRegionAddressField = value;
             }
         }
     }

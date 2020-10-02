@@ -9,24 +9,24 @@
     public partial class SignaturePolicyIdType
     {
 
-        private ObjectIdentifierType sigPolicyIdField;
+        private ObjectIdentifierType _sigPolicyIdField;
 
-        private TransformType[] transformsField;
+        private TransformType[] _transformsField;
 
-        private DigestAlgAndValueType sigPolicyHashField;
+        private DigestAlgAndValueType _sigPolicyHashField;
 
-        private AnyType[] sigPolicyQualifiersField;
+        private AnyType[] _sigPolicyQualifiersField;
 
         /// <remarks/>
         public ObjectIdentifierType SigPolicyId
         {
             get
             {
-                return sigPolicyIdField;
+                return _sigPolicyIdField;
             }
             set
             {
-                sigPolicyIdField = value;
+                _sigPolicyIdField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return transformsField;
+                return _transformsField;
             }
             set
             {
-                transformsField = value;
+                _transformsField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return sigPolicyHashField;
+                return _sigPolicyHashField;
             }
             set
             {
-                sigPolicyHashField = value;
+                _sigPolicyHashField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return sigPolicyQualifiersField;
+                return _sigPolicyQualifiersField;
             }
             set
             {
-                sigPolicyQualifiersField = value;
+                _sigPolicyQualifiersField = value;
             }
         }
     }

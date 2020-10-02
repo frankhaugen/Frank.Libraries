@@ -10,27 +10,27 @@
     public partial class ServiceProviderPartyType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ServiceTypeCodeType serviceTypeCodeField;
+        private ServiceTypeCodeType _serviceTypeCodeField;
 
-        private ServiceTypeType[] serviceTypeField;
+        private ServiceTypeType[] _serviceTypeField;
 
-        private PartyType partyField;
+        private PartyType _partyField;
 
-        private ContactType sellerContactField;
+        private ContactType _sellerContactField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return serviceTypeCodeField;
+                return _serviceTypeCodeField;
             }
             set
             {
-                serviceTypeCodeField = value;
+                _serviceTypeCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return serviceTypeField;
+                return _serviceTypeField;
             }
             set
             {
-                serviceTypeField = value;
+                _serviceTypeField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return partyField;
+                return _partyField;
             }
             set
             {
-                partyField = value;
+                _partyField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return sellerContactField;
+                return _sellerContactField;
             }
             set
             {
-                sellerContactField = value;
+                _sellerContactField = value;
             }
         }
     }

@@ -9,7 +9,7 @@
     public partial class DocumentationReferencesType
     {
 
-        private string[] documentationReferenceField;
+        private string[] _documentationReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("DocumentationReference", DataType = "anyURI")]
@@ -17,11 +17,11 @@
         {
             get
             {
-                return documentationReferenceField;
+                return _documentationReferenceField;
             }
             set
             {
-                documentationReferenceField = value;
+                _documentationReferenceField = value;
             }
         }
     }

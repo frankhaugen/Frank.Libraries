@@ -10,21 +10,21 @@
     public partial class ClauseType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ContentType[] contentField;
+        private ContentType[] _contentField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return contentField;
+                return _contentField;
             }
             set
             {
-                contentField = value;
+                _contentField = value;
             }
         }
     }

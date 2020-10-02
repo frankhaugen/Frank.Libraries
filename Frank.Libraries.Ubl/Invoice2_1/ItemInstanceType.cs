@@ -10,33 +10,33 @@
     public partial class ItemInstanceType
     {
 
-        private ProductTraceIDType productTraceIDField;
+        private ProductTraceIdType _productTraceIdField;
 
-        private ManufactureDateType manufactureDateField;
+        private ManufactureDateType _manufactureDateField;
 
-        private ManufactureTimeType manufactureTimeField;
+        private ManufactureTimeType _manufactureTimeField;
 
-        private BestBeforeDateType bestBeforeDateField;
+        private BestBeforeDateType _bestBeforeDateField;
 
-        private RegistrationIDType registrationIDField;
+        private RegistrationIdType _registrationIdField;
 
-        private SerialIDType serialIDField;
+        private SerialIdType _serialIdField;
 
-        private ItemPropertyType[] additionalItemPropertyField;
+        private ItemPropertyType[] _additionalItemPropertyField;
 
-        private LotIdentificationType lotIdentificationField;
+        private LotIdentificationType _lotIdentificationField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ProductTraceIDType ProductTraceID
+        public ProductTraceIdType ProductTraceId
         {
             get
             {
-                return productTraceIDField;
+                return _productTraceIdField;
             }
             set
             {
-                productTraceIDField = value;
+                _productTraceIdField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return manufactureDateField;
+                return _manufactureDateField;
             }
             set
             {
-                manufactureDateField = value;
+                _manufactureDateField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return manufactureTimeField;
+                return _manufactureTimeField;
             }
             set
             {
-                manufactureTimeField = value;
+                _manufactureTimeField = value;
             }
         }
 
@@ -74,39 +74,39 @@
         {
             get
             {
-                return bestBeforeDateField;
+                return _bestBeforeDateField;
             }
             set
             {
-                bestBeforeDateField = value;
+                _bestBeforeDateField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public RegistrationIDType RegistrationID
+        public RegistrationIdType RegistrationId
         {
             get
             {
-                return registrationIDField;
+                return _registrationIdField;
             }
             set
             {
-                registrationIDField = value;
+                _registrationIdField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public SerialIDType SerialID
+        public SerialIdType SerialId
         {
             get
             {
-                return serialIDField;
+                return _serialIdField;
             }
             set
             {
-                serialIDField = value;
+                _serialIdField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return additionalItemPropertyField;
+                return _additionalItemPropertyField;
             }
             set
             {
-                additionalItemPropertyField = value;
+                _additionalItemPropertyField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return lotIdentificationField;
+                return _lotIdentificationField;
             }
             set
             {
-                lotIdentificationField = value;
+                _lotIdentificationField = value;
             }
         }
     }

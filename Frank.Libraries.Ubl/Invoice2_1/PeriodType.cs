@@ -10,19 +10,19 @@
     public partial class PeriodType
     {
 
-        private StartDateType startDateField;
+        private StartDateType _startDateField;
 
-        private StartTimeType startTimeField;
+        private StartTimeType _startTimeField;
 
-        private EndDateType endDateField;
+        private EndDateType _endDateField;
 
-        private EndTimeType endTimeField;
+        private EndTimeType _endTimeField;
 
-        private DurationMeasureType durationMeasureField;
+        private DurationMeasureType _durationMeasureField;
 
-        private DescriptionCodeType[] descriptionCodeField;
+        private DescriptionCodeType[] _descriptionCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return startDateField;
+                return _startDateField;
             }
             set
             {
-                startDateField = value;
+                _startDateField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return startTimeField;
+                return _startTimeField;
             }
             set
             {
-                startTimeField = value;
+                _startTimeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return endDateField;
+                return _endDateField;
             }
             set
             {
-                endDateField = value;
+                _endDateField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return endTimeField;
+                return _endTimeField;
             }
             set
             {
-                endTimeField = value;
+                _endTimeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return durationMeasureField;
+                return _durationMeasureField;
             }
             set
             {
-                durationMeasureField = value;
+                _durationMeasureField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return descriptionCodeField;
+                return _descriptionCodeField;
             }
             set
             {
-                descriptionCodeField = value;
+                _descriptionCodeField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
     }

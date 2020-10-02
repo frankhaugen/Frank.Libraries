@@ -10,47 +10,47 @@
     public partial class PackageType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private ReturnableMaterialIndicatorType returnableMaterialIndicatorField;
+        private ReturnableMaterialIndicatorType _returnableMaterialIndicatorField;
 
-        private PackageLevelCodeType packageLevelCodeField;
+        private PackageLevelCodeType _packageLevelCodeField;
 
-        private PackagingTypeCodeType packagingTypeCodeField;
+        private PackagingTypeCodeType _packagingTypeCodeField;
 
-        private PackingMaterialType[] packingMaterialField;
+        private PackingMaterialType[] _packingMaterialField;
 
-        private TraceIDType traceIDField;
+        private TraceIdType _traceIdField;
 
-        private PackageType[] containedPackageField;
+        private PackageType[] _containedPackageField;
 
-        private TransportEquipmentType containingTransportEquipmentField;
+        private TransportEquipmentType _containingTransportEquipmentField;
 
-        private GoodsItemType[] goodsItemField;
+        private GoodsItemType[] _goodsItemField;
 
-        private DimensionType[] measurementDimensionField;
+        private DimensionType[] _measurementDimensionField;
 
-        private DeliveryUnitType[] deliveryUnitField;
+        private DeliveryUnitType[] _deliveryUnitField;
 
-        private DeliveryType deliveryField;
+        private DeliveryType _deliveryField;
 
-        private PickupType pickupField;
+        private PickupType _pickupField;
 
-        private DespatchType despatchField;
+        private DespatchType _despatchField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return returnableMaterialIndicatorField;
+                return _returnableMaterialIndicatorField;
             }
             set
             {
-                returnableMaterialIndicatorField = value;
+                _returnableMaterialIndicatorField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return packageLevelCodeField;
+                return _packageLevelCodeField;
             }
             set
             {
-                packageLevelCodeField = value;
+                _packageLevelCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return packagingTypeCodeField;
+                return _packagingTypeCodeField;
             }
             set
             {
-                packagingTypeCodeField = value;
+                _packagingTypeCodeField = value;
             }
         }
 
@@ -116,25 +116,25 @@
         {
             get
             {
-                return packingMaterialField;
+                return _packingMaterialField;
             }
             set
             {
-                packingMaterialField = value;
+                _packingMaterialField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public TraceIDType TraceID
+        public TraceIdType TraceId
         {
             get
             {
-                return traceIDField;
+                return _traceIdField;
             }
             set
             {
-                traceIDField = value;
+                _traceIdField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return containedPackageField;
+                return _containedPackageField;
             }
             set
             {
-                containedPackageField = value;
+                _containedPackageField = value;
             }
         }
 
@@ -157,11 +157,11 @@
         {
             get
             {
-                return containingTransportEquipmentField;
+                return _containingTransportEquipmentField;
             }
             set
             {
-                containingTransportEquipmentField = value;
+                _containingTransportEquipmentField = value;
             }
         }
 
@@ -171,11 +171,11 @@
         {
             get
             {
-                return goodsItemField;
+                return _goodsItemField;
             }
             set
             {
-                goodsItemField = value;
+                _goodsItemField = value;
             }
         }
 
@@ -185,11 +185,11 @@
         {
             get
             {
-                return measurementDimensionField;
+                return _measurementDimensionField;
             }
             set
             {
-                measurementDimensionField = value;
+                _measurementDimensionField = value;
             }
         }
 
@@ -199,11 +199,11 @@
         {
             get
             {
-                return deliveryUnitField;
+                return _deliveryUnitField;
             }
             set
             {
-                deliveryUnitField = value;
+                _deliveryUnitField = value;
             }
         }
 
@@ -212,11 +212,11 @@
         {
             get
             {
-                return deliveryField;
+                return _deliveryField;
             }
             set
             {
-                deliveryField = value;
+                _deliveryField = value;
             }
         }
 
@@ -225,11 +225,11 @@
         {
             get
             {
-                return pickupField;
+                return _pickupField;
             }
             set
             {
-                pickupField = value;
+                _pickupField = value;
             }
         }
 
@@ -238,11 +238,11 @@
         {
             get
             {
-                return despatchField;
+                return _despatchField;
             }
             set
             {
-                despatchField = value;
+                _despatchField = value;
             }
         }
     }

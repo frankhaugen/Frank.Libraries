@@ -10,39 +10,39 @@
     public partial class QuotationLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private QuantityType2 quantityField;
+        private QuantityType2 _quantityField;
 
-        private LineExtensionAmountType lineExtensionAmountField;
+        private LineExtensionAmountType _lineExtensionAmountField;
 
-        private TotalTaxAmountType totalTaxAmountField;
+        private TotalTaxAmountType _totalTaxAmountField;
 
-        private RequestForQuotationLineIDType requestForQuotationLineIDField;
+        private RequestForQuotationLineIdType _requestForQuotationLineIdField;
 
-        private DocumentReferenceType[] documentReferenceField;
+        private DocumentReferenceType[] _documentReferenceField;
 
-        private LineItemType lineItemField;
+        private LineItemType _lineItemField;
 
-        private LineItemType[] sellerProposedSubstituteLineItemField;
+        private LineItemType[] _sellerProposedSubstituteLineItemField;
 
-        private LineItemType[] alternativeLineItemField;
+        private LineItemType[] _alternativeLineItemField;
 
-        private LineReferenceType requestLineReferenceField;
+        private LineReferenceType _requestLineReferenceField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return quantityField;
+                return _quantityField;
             }
             set
             {
-                quantityField = value;
+                _quantityField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return lineExtensionAmountField;
+                return _lineExtensionAmountField;
             }
             set
             {
-                lineExtensionAmountField = value;
+                _lineExtensionAmountField = value;
             }
         }
 
@@ -94,25 +94,25 @@
         {
             get
             {
-                return totalTaxAmountField;
+                return _totalTaxAmountField;
             }
             set
             {
-                totalTaxAmountField = value;
+                _totalTaxAmountField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public RequestForQuotationLineIDType RequestForQuotationLineID
+        public RequestForQuotationLineIdType RequestForQuotationLineId
         {
             get
             {
-                return requestForQuotationLineIDField;
+                return _requestForQuotationLineIdField;
             }
             set
             {
-                requestForQuotationLineIDField = value;
+                _requestForQuotationLineIdField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -135,11 +135,11 @@
         {
             get
             {
-                return lineItemField;
+                return _lineItemField;
             }
             set
             {
-                lineItemField = value;
+                _lineItemField = value;
             }
         }
 
@@ -149,11 +149,11 @@
         {
             get
             {
-                return sellerProposedSubstituteLineItemField;
+                return _sellerProposedSubstituteLineItemField;
             }
             set
             {
-                sellerProposedSubstituteLineItemField = value;
+                _sellerProposedSubstituteLineItemField = value;
             }
         }
 
@@ -163,11 +163,11 @@
         {
             get
             {
-                return alternativeLineItemField;
+                return _alternativeLineItemField;
             }
             set
             {
-                alternativeLineItemField = value;
+                _alternativeLineItemField = value;
             }
         }
 
@@ -176,11 +176,11 @@
         {
             get
             {
-                return requestLineReferenceField;
+                return _requestLineReferenceField;
             }
             set
             {
-                requestLineReferenceField = value;
+                _requestLineReferenceField = value;
             }
         }
     }

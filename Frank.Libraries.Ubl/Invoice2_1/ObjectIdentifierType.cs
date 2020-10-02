@@ -10,22 +10,22 @@
     public partial class ObjectIdentifierType
     {
 
-        private IdentifierType2 identifierField;
+        private IdentifierType2 _identifierField;
 
-        private string descriptionField;
+        private string _descriptionField;
 
-        private DocumentationReferencesType documentationReferencesField;
+        private DocumentationReferencesType _documentationReferencesField;
 
         /// <remarks/>
         public IdentifierType2 Identifier
         {
             get
             {
-                return identifierField;
+                return _identifierField;
             }
             set
             {
-                identifierField = value;
+                _identifierField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -47,11 +47,11 @@
         {
             get
             {
-                return documentationReferencesField;
+                return _documentationReferencesField;
             }
             set
             {
-                documentationReferencesField = value;
+                _documentationReferencesField = value;
             }
         }
     }

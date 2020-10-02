@@ -10,17 +10,17 @@
     public partial class QualificationResolutionType
     {
 
-        private AdmissionCodeType admissionCodeField;
+        private AdmissionCodeType _admissionCodeField;
 
-        private ExclusionReasonType[] exclusionReasonField;
+        private ExclusionReasonType[] _exclusionReasonField;
 
-        private ResolutionType[] resolutionField;
+        private ResolutionType[] _resolutionField;
 
-        private ResolutionDateType resolutionDateField;
+        private ResolutionDateType _resolutionDateField;
 
-        private ResolutionTimeType resolutionTimeField;
+        private ResolutionTimeType _resolutionTimeField;
 
-        private ProcurementProjectLotType procurementProjectLotField;
+        private ProcurementProjectLotType _procurementProjectLotField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -28,11 +28,11 @@
         {
             get
             {
-                return admissionCodeField;
+                return _admissionCodeField;
             }
             set
             {
-                admissionCodeField = value;
+                _admissionCodeField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return exclusionReasonField;
+                return _exclusionReasonField;
             }
             set
             {
-                exclusionReasonField = value;
+                _exclusionReasonField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return resolutionField;
+                return _resolutionField;
             }
             set
             {
-                resolutionField = value;
+                _resolutionField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return resolutionDateField;
+                return _resolutionDateField;
             }
             set
             {
-                resolutionDateField = value;
+                _resolutionDateField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return resolutionTimeField;
+                return _resolutionTimeField;
             }
             set
             {
-                resolutionTimeField = value;
+                _resolutionTimeField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return procurementProjectLotField;
+                return _procurementProjectLotField;
             }
             set
             {
-                procurementProjectLotField = value;
+                _procurementProjectLotField = value;
             }
         }
     }

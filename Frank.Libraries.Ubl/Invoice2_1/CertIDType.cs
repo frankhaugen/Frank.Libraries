@@ -6,25 +6,25 @@
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-    public partial class CertIDType
+    public partial class CertIdType
     {
 
-        private DigestAlgAndValueType certDigestField;
+        private DigestAlgAndValueType _certDigestField;
 
-        private X509IssuerSerialType issuerSerialField;
+        private X509IssuerSerialType _issuerSerialField;
 
-        private string uRIField;
+        private string _uRiField;
 
         /// <remarks/>
         public DigestAlgAndValueType CertDigest
         {
             get
             {
-                return certDigestField;
+                return _certDigestField;
             }
             set
             {
-                certDigestField = value;
+                _certDigestField = value;
             }
         }
 
@@ -33,25 +33,25 @@
         {
             get
             {
-                return issuerSerialField;
+                return _issuerSerialField;
             }
             set
             {
-                issuerSerialField = value;
+                _issuerSerialField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
-        public string URI
+        public string Uri
         {
             get
             {
-                return uRIField;
+                return _uRiField;
             }
             set
             {
-                uRIField = value;
+                _uRiField = value;
             }
         }
     }

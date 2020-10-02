@@ -7,23 +7,23 @@
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
     [System.Xml.Serialization.XmlRootAttribute("SPUserNotice", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-    public partial class SPUserNoticeType
+    public partial class SpUserNoticeType
     {
 
-        private NoticeReferenceType noticeRefField;
+        private NoticeReferenceType _noticeRefField;
 
-        private string explicitTextField;
+        private string _explicitTextField;
 
         /// <remarks/>
         public NoticeReferenceType NoticeRef
         {
             get
             {
-                return noticeRefField;
+                return _noticeRefField;
             }
             set
             {
-                noticeRefField = value;
+                _noticeRefField = value;
             }
         }
 
@@ -32,11 +32,11 @@
         {
             get
             {
-                return explicitTextField;
+                return _explicitTextField;
             }
             set
             {
-                explicitTextField = value;
+                _explicitTextField = value;
             }
         }
     }

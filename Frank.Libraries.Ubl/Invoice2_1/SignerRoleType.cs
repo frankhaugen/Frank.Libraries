@@ -10,9 +10,9 @@
     public partial class SignerRoleType
     {
 
-        private AnyType[] claimedRolesField;
+        private AnyType[] _claimedRolesField;
 
-        private EncapsulatedPKIDataType[] certifiedRolesField;
+        private EncapsulatedPkiDataType[] _certifiedRolesField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("ClaimedRole", IsNullable = false)]
@@ -20,25 +20,25 @@
         {
             get
             {
-                return claimedRolesField;
+                return _claimedRolesField;
             }
             set
             {
-                claimedRolesField = value;
+                _claimedRolesField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("CertifiedRole", IsNullable = false)]
-        public EncapsulatedPKIDataType[] CertifiedRoles
+        public EncapsulatedPkiDataType[] CertifiedRoles
         {
             get
             {
-                return certifiedRolesField;
+                return _certifiedRolesField;
             }
             set
             {
-                certifiedRolesField = value;
+                _certifiedRolesField = value;
             }
         }
     }

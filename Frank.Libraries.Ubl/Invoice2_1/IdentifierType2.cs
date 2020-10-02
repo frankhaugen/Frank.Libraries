@@ -9,11 +9,11 @@
     public partial class IdentifierType2
     {
 
-        private QualifierType qualifierField;
+        private QualifierType _qualifierField;
 
-        private bool qualifierFieldSpecified;
+        private bool _qualifierFieldSpecified;
 
-        private string valueField;
+        private string _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -21,11 +21,11 @@
         {
             get
             {
-                return qualifierField;
+                return _qualifierField;
             }
             set
             {
-                qualifierField = value;
+                _qualifierField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return qualifierFieldSpecified;
+                return _qualifierFieldSpecified;
             }
             set
             {
-                qualifierFieldSpecified = value;
+                _qualifierFieldSpecified = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

@@ -10,9 +10,9 @@
     public partial class SignaturePropertiesType
     {
 
-        private SignaturePropertyType[] signaturePropertyField;
+        private SignaturePropertyType[] _signaturePropertyField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("SignatureProperty")]
@@ -20,11 +20,11 @@
         {
             get
             {
-                return signaturePropertyField;
+                return _signaturePropertyField;
             }
             set
             {
-                signaturePropertyField = value;
+                _signaturePropertyField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

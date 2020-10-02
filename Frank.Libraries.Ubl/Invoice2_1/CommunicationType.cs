@@ -10,11 +10,11 @@
     public partial class CommunicationType
     {
 
-        private ChannelCodeType channelCodeField;
+        private ChannelCodeType _channelCodeField;
 
-        private ChannelType channelField;
+        private ChannelType _channelField;
 
-        private ValueType valueField;
+        private ValueType _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -22,11 +22,11 @@
         {
             get
             {
-                return channelCodeField;
+                return _channelCodeField;
             }
             set
             {
-                channelCodeField = value;
+                _channelCodeField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return channelField;
+                return _channelField;
             }
             set
             {
-                channelField = value;
+                _channelField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

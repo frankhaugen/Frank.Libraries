@@ -10,23 +10,23 @@
     public partial class ExchangeRateType
     {
 
-        private SourceCurrencyCodeType sourceCurrencyCodeField;
+        private SourceCurrencyCodeType _sourceCurrencyCodeField;
 
-        private SourceCurrencyBaseRateType sourceCurrencyBaseRateField;
+        private SourceCurrencyBaseRateType _sourceCurrencyBaseRateField;
 
-        private TargetCurrencyCodeType targetCurrencyCodeField;
+        private TargetCurrencyCodeType _targetCurrencyCodeField;
 
-        private TargetCurrencyBaseRateType targetCurrencyBaseRateField;
+        private TargetCurrencyBaseRateType _targetCurrencyBaseRateField;
 
-        private ExchangeMarketIDType exchangeMarketIDField;
+        private ExchangeMarketIdType _exchangeMarketIdField;
 
-        private CalculationRateType calculationRateField;
+        private CalculationRateType _calculationRateField;
 
-        private MathematicOperatorCodeType mathematicOperatorCodeField;
+        private MathematicOperatorCodeType _mathematicOperatorCodeField;
 
-        private DateType1 dateField;
+        private DateType1 _dateField;
 
-        private ContractType foreignExchangeContractField;
+        private ContractType _foreignExchangeContractField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -34,11 +34,11 @@
         {
             get
             {
-                return sourceCurrencyCodeField;
+                return _sourceCurrencyCodeField;
             }
             set
             {
-                sourceCurrencyCodeField = value;
+                _sourceCurrencyCodeField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return sourceCurrencyBaseRateField;
+                return _sourceCurrencyBaseRateField;
             }
             set
             {
-                sourceCurrencyBaseRateField = value;
+                _sourceCurrencyBaseRateField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return targetCurrencyCodeField;
+                return _targetCurrencyCodeField;
             }
             set
             {
-                targetCurrencyCodeField = value;
+                _targetCurrencyCodeField = value;
             }
         }
 
@@ -76,25 +76,25 @@
         {
             get
             {
-                return targetCurrencyBaseRateField;
+                return _targetCurrencyBaseRateField;
             }
             set
             {
-                targetCurrencyBaseRateField = value;
+                _targetCurrencyBaseRateField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public ExchangeMarketIDType ExchangeMarketID
+        public ExchangeMarketIdType ExchangeMarketId
         {
             get
             {
-                return exchangeMarketIDField;
+                return _exchangeMarketIdField;
             }
             set
             {
-                exchangeMarketIDField = value;
+                _exchangeMarketIdField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return calculationRateField;
+                return _calculationRateField;
             }
             set
             {
-                calculationRateField = value;
+                _calculationRateField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return mathematicOperatorCodeField;
+                return _mathematicOperatorCodeField;
             }
             set
             {
-                mathematicOperatorCodeField = value;
+                _mathematicOperatorCodeField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return dateField;
+                return _dateField;
             }
             set
             {
-                dateField = value;
+                _dateField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return foreignExchangeContractField;
+                return _foreignExchangeContractField;
             }
             set
             {
-                foreignExchangeContractField = value;
+                _foreignExchangeContractField = value;
             }
         }
     }

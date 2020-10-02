@@ -2,7 +2,7 @@
 {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(OtherTimeStampType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(XAdESTimeStampType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(XAdEsTimeStampType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.6.1055.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -11,13 +11,13 @@
     public abstract partial class GenericTimeStampType
     {
 
-        private object[] itemsField;
+        private object[] _itemsField;
 
-        private CanonicalizationMethodType1 canonicalizationMethodField;
+        private CanonicalizationMethodType1 _canonicalizationMethodField;
 
-        private object[] items1Field;
+        private object[] _items1Field;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("Include", typeof(IncludeType))]
@@ -26,11 +26,11 @@
         {
             get
             {
-                return itemsField;
+                return _itemsField;
             }
             set
             {
-                itemsField = value;
+                _itemsField = value;
             }
         }
 
@@ -40,26 +40,26 @@
         {
             get
             {
-                return canonicalizationMethodField;
+                return _canonicalizationMethodField;
             }
             set
             {
-                canonicalizationMethodField = value;
+                _canonicalizationMethodField = value;
             }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("EncapsulatedTimeStamp", typeof(EncapsulatedPKIDataType))]
+        [System.Xml.Serialization.XmlElementAttribute("EncapsulatedTimeStamp", typeof(EncapsulatedPkiDataType))]
         [System.Xml.Serialization.XmlElementAttribute("XMLTimeStamp", typeof(AnyType))]
         public object[] Items1
         {
             get
             {
-                return items1Field;
+                return _items1Field;
             }
             set
             {
-                items1Field = value;
+                _items1Field = value;
             }
         }
 
@@ -69,11 +69,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

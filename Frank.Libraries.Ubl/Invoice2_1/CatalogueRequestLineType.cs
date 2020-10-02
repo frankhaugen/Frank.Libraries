@@ -10,29 +10,29 @@
     public partial class CatalogueRequestLineType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private ContractSubdivisionType contractSubdivisionField;
+        private ContractSubdivisionType _contractSubdivisionField;
 
-        private NoteType[] noteField;
+        private NoteType[] _noteField;
 
-        private PeriodType lineValidityPeriodField;
+        private PeriodType _lineValidityPeriodField;
 
-        private ItemLocationQuantityType[] requiredItemLocationQuantityField;
+        private ItemLocationQuantityType[] _requiredItemLocationQuantityField;
 
-        private ItemType itemField;
+        private ItemType _itemField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return contractSubdivisionField;
+                return _contractSubdivisionField;
             }
             set
             {
-                contractSubdivisionField = value;
+                _contractSubdivisionField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return noteField;
+                return _noteField;
             }
             set
             {
-                noteField = value;
+                _noteField = value;
             }
         }
 
@@ -69,11 +69,11 @@
         {
             get
             {
-                return lineValidityPeriodField;
+                return _lineValidityPeriodField;
             }
             set
             {
-                lineValidityPeriodField = value;
+                _lineValidityPeriodField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return requiredItemLocationQuantityField;
+                return _requiredItemLocationQuantityField;
             }
             set
             {
-                requiredItemLocationQuantityField = value;
+                _requiredItemLocationQuantityField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return itemField;
+                return _itemField;
             }
             set
             {
-                itemField = value;
+                _itemField = value;
             }
         }
     }

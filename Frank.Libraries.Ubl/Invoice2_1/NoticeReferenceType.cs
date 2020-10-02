@@ -9,20 +9,20 @@
     public partial class NoticeReferenceType
     {
 
-        private string organizationField;
+        private string _organizationField;
 
-        private string[] noticeNumbersField;
+        private string[] _noticeNumbersField;
 
         /// <remarks/>
         public string Organization
         {
             get
             {
-                return organizationField;
+                return _organizationField;
             }
             set
             {
-                organizationField = value;
+                _organizationField = value;
             }
         }
 
@@ -32,11 +32,11 @@
         {
             get
             {
-                return noticeNumbersField;
+                return _noticeNumbersField;
             }
             set
             {
-                noticeNumbersField = value;
+                _noticeNumbersField = value;
             }
         }
     }

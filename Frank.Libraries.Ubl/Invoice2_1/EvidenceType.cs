@@ -10,31 +10,31 @@
     public partial class EvidenceType
     {
 
-        private IDType idField;
+        private IdType _idField;
 
-        private EvidenceTypeCodeType evidenceTypeCodeField;
+        private EvidenceTypeCodeType _evidenceTypeCodeField;
 
-        private DescriptionType[] descriptionField;
+        private DescriptionType[] _descriptionField;
 
-        private CandidateStatementType[] candidateStatementField;
+        private CandidateStatementType[] _candidateStatementField;
 
-        private PartyType evidenceIssuingPartyField;
+        private PartyType _evidenceIssuingPartyField;
 
-        private DocumentReferenceType documentReferenceField;
+        private DocumentReferenceType _documentReferenceField;
 
-        private LanguageType languageField;
+        private LanguageType _languageField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
-        public IDType ID
+        public IdType Id
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return evidenceTypeCodeField;
+                return _evidenceTypeCodeField;
             }
             set
             {
-                evidenceTypeCodeField = value;
+                _evidenceTypeCodeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return descriptionField;
+                return _descriptionField;
             }
             set
             {
-                descriptionField = value;
+                _descriptionField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return candidateStatementField;
+                return _candidateStatementField;
             }
             set
             {
-                candidateStatementField = value;
+                _candidateStatementField = value;
             }
         }
 
@@ -85,11 +85,11 @@
         {
             get
             {
-                return evidenceIssuingPartyField;
+                return _evidenceIssuingPartyField;
             }
             set
             {
-                evidenceIssuingPartyField = value;
+                _evidenceIssuingPartyField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return documentReferenceField;
+                return _documentReferenceField;
             }
             set
             {
-                documentReferenceField = value;
+                _documentReferenceField = value;
             }
         }
 
@@ -111,11 +111,11 @@
         {
             get
             {
-                return languageField;
+                return _languageField;
             }
             set
             {
-                languageField = value;
+                _languageField = value;
             }
         }
     }

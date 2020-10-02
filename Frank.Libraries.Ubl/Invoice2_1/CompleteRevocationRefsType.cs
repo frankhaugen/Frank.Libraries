@@ -10,39 +10,39 @@
     public partial class CompleteRevocationRefsType
     {
 
-        private CRLRefType[] cRLRefsField;
+        private CrlRefType[] _cRlRefsField;
 
-        private OCSPRefType[] oCSPRefsField;
+        private OcspRefType[] _oCspRefsField;
 
-        private AnyType[] otherRefsField;
+        private AnyType[] _otherRefsField;
 
-        private string idField;
+        private string _idField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("CRLRef", IsNullable = false)]
-        public CRLRefType[] CRLRefs
+        public CrlRefType[] CrlRefs
         {
             get
             {
-                return cRLRefsField;
+                return _cRlRefsField;
             }
             set
             {
-                cRLRefsField = value;
+                _cRlRefsField = value;
             }
         }
 
         /// <remarks/>
         [System.Xml.Serialization.XmlArrayItemAttribute("OCSPRef", IsNullable = false)]
-        public OCSPRefType[] OCSPRefs
+        public OcspRefType[] OcspRefs
         {
             get
             {
-                return oCSPRefsField;
+                return _oCspRefsField;
             }
             set
             {
-                oCSPRefsField = value;
+                _oCspRefsField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return otherRefsField;
+                return _otherRefsField;
             }
             set
             {
-                otherRefsField = value;
+                _otherRefsField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return idField;
+                return _idField;
             }
             set
             {
-                idField = value;
+                _idField = value;
             }
         }
     }

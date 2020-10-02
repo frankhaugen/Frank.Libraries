@@ -69,7 +69,7 @@
     public partial class IndicatorType
     {
 
-        private bool valueField;
+        private bool _valueField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
@@ -77,11 +77,11 @@
         {
             get
             {
-                return valueField;
+                return _valueField;
             }
             set
             {
-                valueField = value;
+                _valueField = value;
             }
         }
     }

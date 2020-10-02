@@ -10,19 +10,19 @@
     public partial class ConsumptionType
     {
 
-        private UtilityStatementTypeCodeType utilityStatementTypeCodeField;
+        private UtilityStatementTypeCodeType _utilityStatementTypeCodeField;
 
-        private PeriodType mainPeriodField;
+        private PeriodType _mainPeriodField;
 
-        private AllowanceChargeType[] allowanceChargeField;
+        private AllowanceChargeType[] _allowanceChargeField;
 
-        private TaxTotalType[] taxTotalField;
+        private TaxTotalType[] _taxTotalField;
 
-        private EnergyWaterSupplyType energyWaterSupplyField;
+        private EnergyWaterSupplyType _energyWaterSupplyField;
 
-        private TelecommunicationsSupplyType telecommunicationsSupplyField;
+        private TelecommunicationsSupplyType _telecommunicationsSupplyField;
 
-        private MonetaryTotalType legalMonetaryTotalField;
+        private MonetaryTotalType _legalMonetaryTotalField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
@@ -30,11 +30,11 @@
         {
             get
             {
-                return utilityStatementTypeCodeField;
+                return _utilityStatementTypeCodeField;
             }
             set
             {
-                utilityStatementTypeCodeField = value;
+                _utilityStatementTypeCodeField = value;
             }
         }
 
@@ -43,11 +43,11 @@
         {
             get
             {
-                return mainPeriodField;
+                return _mainPeriodField;
             }
             set
             {
-                mainPeriodField = value;
+                _mainPeriodField = value;
             }
         }
 
@@ -57,11 +57,11 @@
         {
             get
             {
-                return allowanceChargeField;
+                return _allowanceChargeField;
             }
             set
             {
-                allowanceChargeField = value;
+                _allowanceChargeField = value;
             }
         }
 
@@ -71,11 +71,11 @@
         {
             get
             {
-                return taxTotalField;
+                return _taxTotalField;
             }
             set
             {
-                taxTotalField = value;
+                _taxTotalField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return energyWaterSupplyField;
+                return _energyWaterSupplyField;
             }
             set
             {
-                energyWaterSupplyField = value;
+                _energyWaterSupplyField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return telecommunicationsSupplyField;
+                return _telecommunicationsSupplyField;
             }
             set
             {
-                telecommunicationsSupplyField = value;
+                _telecommunicationsSupplyField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return legalMonetaryTotalField;
+                return _legalMonetaryTotalField;
             }
             set
             {
-                legalMonetaryTotalField = value;
+                _legalMonetaryTotalField = value;
             }
         }
     }
