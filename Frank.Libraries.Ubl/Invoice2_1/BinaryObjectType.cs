@@ -35,11 +35,11 @@
         {
             get
             {
-                return this.formatField;
+                return formatField;
             }
             set
             {
-                this.formatField = value;
+                formatField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.mimeCodeField;
+                return mimeCodeField;
             }
             set
             {
-                this.mimeCodeField = value;
+                mimeCodeField = value;
             }
         }
 
@@ -63,11 +63,11 @@
         {
             get
             {
-                return this.encodingCodeField;
+                return encodingCodeField;
             }
             set
             {
-                this.encodingCodeField = value;
+                encodingCodeField = value;
             }
         }
 
@@ -77,11 +77,11 @@
         {
             get
             {
-                return this.characterSetCodeField;
+                return characterSetCodeField;
             }
             set
             {
-                this.characterSetCodeField = value;
+                characterSetCodeField = value;
             }
         }
 
@@ -91,11 +91,11 @@
         {
             get
             {
-                return this.uriField;
+                return uriField;
             }
             set
             {
-                this.uriField = value;
+                uriField = value;
             }
         }
 
@@ -105,11 +105,11 @@
         {
             get
             {
-                return this.filenameField;
+                return filenameField;
             }
             set
             {
-                this.filenameField = value;
+                filenameField = value;
             }
         }
 
@@ -119,11 +119,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

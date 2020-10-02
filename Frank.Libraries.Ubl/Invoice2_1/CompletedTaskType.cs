@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.annualAverageAmountField;
+                return annualAverageAmountField;
             }
             set
             {
-                this.annualAverageAmountField = value;
+                annualAverageAmountField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.totalTaskAmountField;
+                return totalTaskAmountField;
             }
             set
             {
-                this.totalTaskAmountField = value;
+                totalTaskAmountField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.partyCapacityAmountField;
+                return partyCapacityAmountField;
             }
             set
             {
-                this.partyCapacityAmountField = value;
+                partyCapacityAmountField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.evidenceSuppliedField;
+                return evidenceSuppliedField;
             }
             set
             {
-                this.evidenceSuppliedField = value;
+                evidenceSuppliedField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return this.periodField;
+                return periodField;
             }
             set
             {
-                this.periodField = value;
+                periodField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.recipientCustomerPartyField;
+                return recipientCustomerPartyField;
             }
             set
             {
-                this.recipientCustomerPartyField = value;
+                recipientCustomerPartyField = value;
             }
         }
     }

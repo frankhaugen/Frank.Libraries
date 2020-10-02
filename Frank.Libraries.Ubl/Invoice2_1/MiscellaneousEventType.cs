@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.miscellaneousEventTypeCodeField;
+                return miscellaneousEventTypeCodeField;
             }
             set
             {
-                this.miscellaneousEventTypeCodeField = value;
+                miscellaneousEventTypeCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.eventLineItemField;
+                return eventLineItemField;
             }
             set
             {
-                this.eventLineItemField = value;
+                eventLineItemField = value;
             }
         }
     }

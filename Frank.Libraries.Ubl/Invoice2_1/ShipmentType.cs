@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.shippingPriorityLevelCodeField;
+                return shippingPriorityLevelCodeField;
             }
             set
             {
-                this.shippingPriorityLevelCodeField = value;
+                shippingPriorityLevelCodeField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return this.handlingCodeField;
+                return handlingCodeField;
             }
             set
             {
-                this.handlingCodeField = value;
+                handlingCodeField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return this.handlingInstructionsField;
+                return handlingInstructionsField;
             }
             set
             {
-                this.handlingInstructionsField = value;
+                handlingInstructionsField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return this.informationField;
+                return informationField;
             }
             set
             {
-                this.informationField = value;
+                informationField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return this.grossWeightMeasureField;
+                return grossWeightMeasureField;
             }
             set
             {
-                this.grossWeightMeasureField = value;
+                grossWeightMeasureField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return this.netWeightMeasureField;
+                return netWeightMeasureField;
             }
             set
             {
-                this.netWeightMeasureField = value;
+                netWeightMeasureField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.netNetWeightMeasureField;
+                return netNetWeightMeasureField;
             }
             set
             {
-                this.netNetWeightMeasureField = value;
+                netNetWeightMeasureField = value;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                return this.grossVolumeMeasureField;
+                return grossVolumeMeasureField;
             }
             set
             {
-                this.grossVolumeMeasureField = value;
+                grossVolumeMeasureField = value;
             }
         }
 
@@ -206,11 +206,11 @@
         {
             get
             {
-                return this.netVolumeMeasureField;
+                return netVolumeMeasureField;
             }
             set
             {
-                this.netVolumeMeasureField = value;
+                netVolumeMeasureField = value;
             }
         }
 
@@ -220,11 +220,11 @@
         {
             get
             {
-                return this.totalGoodsItemQuantityField;
+                return totalGoodsItemQuantityField;
             }
             set
             {
-                this.totalGoodsItemQuantityField = value;
+                totalGoodsItemQuantityField = value;
             }
         }
 
@@ -234,11 +234,11 @@
         {
             get
             {
-                return this.totalTransportHandlingUnitQuantityField;
+                return totalTransportHandlingUnitQuantityField;
             }
             set
             {
-                this.totalTransportHandlingUnitQuantityField = value;
+                totalTransportHandlingUnitQuantityField = value;
             }
         }
 
@@ -248,11 +248,11 @@
         {
             get
             {
-                return this.insuranceValueAmountField;
+                return insuranceValueAmountField;
             }
             set
             {
-                this.insuranceValueAmountField = value;
+                insuranceValueAmountField = value;
             }
         }
 
@@ -262,11 +262,11 @@
         {
             get
             {
-                return this.declaredCustomsValueAmountField;
+                return declaredCustomsValueAmountField;
             }
             set
             {
-                this.declaredCustomsValueAmountField = value;
+                declaredCustomsValueAmountField = value;
             }
         }
 
@@ -276,11 +276,11 @@
         {
             get
             {
-                return this.declaredForCarriageValueAmountField;
+                return declaredForCarriageValueAmountField;
             }
             set
             {
-                this.declaredForCarriageValueAmountField = value;
+                declaredForCarriageValueAmountField = value;
             }
         }
 
@@ -290,11 +290,11 @@
         {
             get
             {
-                return this.declaredStatisticsValueAmountField;
+                return declaredStatisticsValueAmountField;
             }
             set
             {
-                this.declaredStatisticsValueAmountField = value;
+                declaredStatisticsValueAmountField = value;
             }
         }
 
@@ -304,11 +304,11 @@
         {
             get
             {
-                return this.freeOnBoardValueAmountField;
+                return freeOnBoardValueAmountField;
             }
             set
             {
-                this.freeOnBoardValueAmountField = value;
+                freeOnBoardValueAmountField = value;
             }
         }
 
@@ -318,11 +318,11 @@
         {
             get
             {
-                return this.specialInstructionsField;
+                return specialInstructionsField;
             }
             set
             {
-                this.specialInstructionsField = value;
+                specialInstructionsField = value;
             }
         }
 
@@ -332,11 +332,11 @@
         {
             get
             {
-                return this.deliveryInstructionsField;
+                return deliveryInstructionsField;
             }
             set
             {
-                this.deliveryInstructionsField = value;
+                deliveryInstructionsField = value;
             }
         }
 
@@ -346,11 +346,11 @@
         {
             get
             {
-                return this.splitConsignmentIndicatorField;
+                return splitConsignmentIndicatorField;
             }
             set
             {
-                this.splitConsignmentIndicatorField = value;
+                splitConsignmentIndicatorField = value;
             }
         }
 
@@ -360,11 +360,11 @@
         {
             get
             {
-                return this.consignmentQuantityField;
+                return consignmentQuantityField;
             }
             set
             {
-                this.consignmentQuantityField = value;
+                consignmentQuantityField = value;
             }
         }
 
@@ -374,11 +374,11 @@
         {
             get
             {
-                return this.consignmentField;
+                return consignmentField;
             }
             set
             {
-                this.consignmentField = value;
+                consignmentField = value;
             }
         }
 
@@ -388,11 +388,11 @@
         {
             get
             {
-                return this.goodsItemField;
+                return goodsItemField;
             }
             set
             {
-                this.goodsItemField = value;
+                goodsItemField = value;
             }
         }
 
@@ -402,11 +402,11 @@
         {
             get
             {
-                return this.shipmentStageField;
+                return shipmentStageField;
             }
             set
             {
-                this.shipmentStageField = value;
+                shipmentStageField = value;
             }
         }
 
@@ -415,11 +415,11 @@
         {
             get
             {
-                return this.deliveryField;
+                return deliveryField;
             }
             set
             {
-                this.deliveryField = value;
+                deliveryField = value;
             }
         }
 
@@ -429,11 +429,11 @@
         {
             get
             {
-                return this.transportHandlingUnitField;
+                return transportHandlingUnitField;
             }
             set
             {
-                this.transportHandlingUnitField = value;
+                transportHandlingUnitField = value;
             }
         }
 
@@ -442,11 +442,11 @@
         {
             get
             {
-                return this.returnAddressField;
+                return returnAddressField;
             }
             set
             {
-                this.returnAddressField = value;
+                returnAddressField = value;
             }
         }
 
@@ -455,11 +455,11 @@
         {
             get
             {
-                return this.originAddressField;
+                return originAddressField;
             }
             set
             {
-                this.originAddressField = value;
+                originAddressField = value;
             }
         }
 
@@ -468,11 +468,11 @@
         {
             get
             {
-                return this.firstArrivalPortLocationField;
+                return firstArrivalPortLocationField;
             }
             set
             {
-                this.firstArrivalPortLocationField = value;
+                firstArrivalPortLocationField = value;
             }
         }
 
@@ -481,11 +481,11 @@
         {
             get
             {
-                return this.lastExitPortLocationField;
+                return lastExitPortLocationField;
             }
             set
             {
-                this.lastExitPortLocationField = value;
+                lastExitPortLocationField = value;
             }
         }
 
@@ -494,11 +494,11 @@
         {
             get
             {
-                return this.exportCountryField;
+                return exportCountryField;
             }
             set
             {
-                this.exportCountryField = value;
+                exportCountryField = value;
             }
         }
 
@@ -508,11 +508,11 @@
         {
             get
             {
-                return this.freightAllowanceChargeField;
+                return freightAllowanceChargeField;
             }
             set
             {
-                this.freightAllowanceChargeField = value;
+                freightAllowanceChargeField = value;
             }
         }
     }

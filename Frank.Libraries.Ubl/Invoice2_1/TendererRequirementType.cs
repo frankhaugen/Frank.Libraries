@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.tendererRequirementTypeCodeField;
+                return tendererRequirementTypeCodeField;
             }
             set
             {
-                this.tendererRequirementTypeCodeField = value;
+                tendererRequirementTypeCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.legalReferenceField;
+                return legalReferenceField;
             }
             set
             {
-                this.legalReferenceField = value;
+                legalReferenceField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.suggestedEvidenceField;
+                return suggestedEvidenceField;
             }
             set
             {
-                this.suggestedEvidenceField = value;
+                suggestedEvidenceField = value;
             }
         }
     }

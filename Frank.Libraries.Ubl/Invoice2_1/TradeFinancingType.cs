@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.financingInstrumentCodeField;
+                return financingInstrumentCodeField;
             }
             set
             {
-                this.financingInstrumentCodeField = value;
+                financingInstrumentCodeField = value;
             }
         }
 
@@ -57,11 +57,11 @@
         {
             get
             {
-                return this.contractDocumentReferenceField;
+                return contractDocumentReferenceField;
             }
             set
             {
-                this.contractDocumentReferenceField = value;
+                contractDocumentReferenceField = value;
             }
         }
 
@@ -71,11 +71,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.financingPartyField;
+                return financingPartyField;
             }
             set
             {
-                this.financingPartyField = value;
+                financingPartyField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return this.financingFinancialAccountField;
+                return financingFinancialAccountField;
             }
             set
             {
-                this.financingFinancialAccountField = value;
+                financingFinancialAccountField = value;
             }
         }
 
@@ -111,11 +111,11 @@
         {
             get
             {
-                return this.clauseField;
+                return clauseField;
             }
             set
             {
-                this.clauseField = value;
+                clauseField = value;
             }
         }
     }

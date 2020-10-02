@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.serviceTypeCodeField;
+                return serviceTypeCodeField;
             }
             set
             {
-                this.serviceTypeCodeField = value;
+                serviceTypeCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.serviceTypeField;
+                return serviceTypeField;
             }
             set
             {
-                this.serviceTypeField = value;
+                serviceTypeField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return this.partyField;
+                return partyField;
             }
             set
             {
-                this.partyField = value;
+                partyField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.sellerContactField;
+                return sellerContactField;
             }
             set
             {
-                this.sellerContactField = value;
+                sellerContactField = value;
             }
         }
     }

@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.natureCodeField;
+                return natureCodeField;
             }
             set
             {
-                this.natureCodeField = value;
+                natureCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.cargoTypeCodeField;
+                return cargoTypeCodeField;
             }
             set
             {
-                this.cargoTypeCodeField = value;
+                cargoTypeCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.commodityCodeField;
+                return commodityCodeField;
             }
             set
             {
-                this.commodityCodeField = value;
+                commodityCodeField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.itemClassificationCodeField;
+                return itemClassificationCodeField;
             }
             set
             {
-                this.itemClassificationCodeField = value;
+                itemClassificationCodeField = value;
             }
         }
     }

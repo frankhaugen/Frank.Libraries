@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.substitutionStatusCodeField;
+                return substitutionStatusCodeField;
             }
             set
             {
-                this.substitutionStatusCodeField = value;
+                substitutionStatusCodeField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -63,11 +63,11 @@
         {
             get
             {
-                return this.lineItemField;
+                return lineItemField;
             }
             set
             {
-                this.lineItemField = value;
+                lineItemField = value;
             }
         }
 
@@ -77,11 +77,11 @@
         {
             get
             {
-                return this.sellerProposedSubstituteLineItemField;
+                return sellerProposedSubstituteLineItemField;
             }
             set
             {
-                this.sellerProposedSubstituteLineItemField = value;
+                sellerProposedSubstituteLineItemField = value;
             }
         }
 
@@ -91,11 +91,11 @@
         {
             get
             {
-                return this.sellerSubstitutedLineItemField;
+                return sellerSubstitutedLineItemField;
             }
             set
             {
-                this.sellerSubstitutedLineItemField = value;
+                sellerSubstitutedLineItemField = value;
             }
         }
 
@@ -105,11 +105,11 @@
         {
             get
             {
-                return this.buyerProposedSubstituteLineItemField;
+                return buyerProposedSubstituteLineItemField;
             }
             set
             {
-                this.buyerProposedSubstituteLineItemField = value;
+                buyerProposedSubstituteLineItemField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.catalogueLineReferenceField;
+                return catalogueLineReferenceField;
             }
             set
             {
-                this.catalogueLineReferenceField = value;
+                catalogueLineReferenceField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return this.quotationLineReferenceField;
+                return quotationLineReferenceField;
             }
             set
             {
-                this.quotationLineReferenceField = value;
+                quotationLineReferenceField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return this.orderLineReferenceField;
+                return orderLineReferenceField;
             }
             set
             {
-                this.orderLineReferenceField = value;
+                orderLineReferenceField = value;
             }
         }
 
@@ -159,11 +159,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
     }

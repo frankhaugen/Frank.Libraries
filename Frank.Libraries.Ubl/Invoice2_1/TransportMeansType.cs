@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.journeyIDField;
+                return journeyIDField;
             }
             set
             {
-                this.journeyIDField = value;
+                journeyIDField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.registrationNationalityIDField;
+                return registrationNationalityIDField;
             }
             set
             {
-                this.registrationNationalityIDField = value;
+                registrationNationalityIDField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.registrationNationalityField;
+                return registrationNationalityField;
             }
             set
             {
-                this.registrationNationalityField = value;
+                registrationNationalityField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.directionCodeField;
+                return directionCodeField;
             }
             set
             {
-                this.directionCodeField = value;
+                directionCodeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.transportMeansTypeCodeField;
+                return transportMeansTypeCodeField;
             }
             set
             {
-                this.transportMeansTypeCodeField = value;
+                transportMeansTypeCodeField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.tradeServiceCodeField;
+                return tradeServiceCodeField;
             }
             set
             {
-                this.tradeServiceCodeField = value;
+                tradeServiceCodeField = value;
             }
         }
 
@@ -125,11 +125,11 @@
         {
             get
             {
-                return this.stowageField;
+                return stowageField;
             }
             set
             {
-                this.stowageField = value;
+                stowageField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return this.airTransportField;
+                return airTransportField;
             }
             set
             {
-                this.airTransportField = value;
+                airTransportField = value;
             }
         }
 
@@ -151,11 +151,11 @@
         {
             get
             {
-                return this.roadTransportField;
+                return roadTransportField;
             }
             set
             {
-                this.roadTransportField = value;
+                roadTransportField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return this.railTransportField;
+                return railTransportField;
             }
             set
             {
-                this.railTransportField = value;
+                railTransportField = value;
             }
         }
 
@@ -177,11 +177,11 @@
         {
             get
             {
-                return this.maritimeTransportField;
+                return maritimeTransportField;
             }
             set
             {
-                this.maritimeTransportField = value;
+                maritimeTransportField = value;
             }
         }
 
@@ -190,11 +190,11 @@
         {
             get
             {
-                return this.ownerPartyField;
+                return ownerPartyField;
             }
             set
             {
-                this.ownerPartyField = value;
+                ownerPartyField = value;
             }
         }
 
@@ -204,11 +204,11 @@
         {
             get
             {
-                return this.measurementDimensionField;
+                return measurementDimensionField;
             }
             set
             {
-                this.measurementDimensionField = value;
+                measurementDimensionField = value;
             }
         }
     }

@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.transportUserSpecialTermsField;
+                return transportUserSpecialTermsField;
             }
             set
             {
-                this.transportUserSpecialTermsField = value;
+                transportUserSpecialTermsField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.transportServiceProviderSpecialTermsField;
+                return transportServiceProviderSpecialTermsField;
             }
             set
             {
-                this.transportServiceProviderSpecialTermsField = value;
+                transportServiceProviderSpecialTermsField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.changeConditionsField;
+                return changeConditionsField;
             }
             set
             {
-                this.changeConditionsField = value;
+                changeConditionsField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.paymentTermsField;
+                return paymentTermsField;
             }
             set
             {
-                this.paymentTermsField = value;
+                paymentTermsField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.deliveryTermsField;
+                return deliveryTermsField;
             }
             set
             {
-                this.deliveryTermsField = value;
+                deliveryTermsField = value;
             }
         }
 
@@ -107,11 +107,11 @@
         {
             get
             {
-                return this.bonusPaymentTermsField;
+                return bonusPaymentTermsField;
             }
             set
             {
-                this.bonusPaymentTermsField = value;
+                bonusPaymentTermsField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return this.commissionPaymentTermsField;
+                return commissionPaymentTermsField;
             }
             set
             {
-                this.commissionPaymentTermsField = value;
+                commissionPaymentTermsField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return this.penaltyPaymentTermsField;
+                return penaltyPaymentTermsField;
             }
             set
             {
-                this.penaltyPaymentTermsField = value;
+                penaltyPaymentTermsField = value;
             }
         }
 
@@ -147,11 +147,11 @@
         {
             get
             {
-                return this.environmentalEmissionField;
+                return environmentalEmissionField;
             }
             set
             {
-                this.environmentalEmissionField = value;
+                environmentalEmissionField = value;
             }
         }
 
@@ -161,11 +161,11 @@
         {
             get
             {
-                return this.notificationRequirementField;
+                return notificationRequirementField;
             }
             set
             {
-                this.notificationRequirementField = value;
+                notificationRequirementField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return this.serviceChargePaymentTermsField;
+                return serviceChargePaymentTermsField;
             }
             set
             {
-                this.serviceChargePaymentTermsField = value;
+                serviceChargePaymentTermsField = value;
             }
         }
     }

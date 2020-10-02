@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return this.contractorCustomerPartyField;
+                return contractorCustomerPartyField;
             }
             set
             {
-                this.contractorCustomerPartyField = value;
+                contractorCustomerPartyField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.sellerSupplierPartyField;
+                return sellerSupplierPartyField;
             }
             set
             {
-                this.sellerSupplierPartyField = value;
+                sellerSupplierPartyField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.requiredItemLocationQuantityField;
+                return requiredItemLocationQuantityField;
             }
             set
             {
-                this.requiredItemLocationQuantityField = value;
+                requiredItemLocationQuantityField = value;
             }
         }
     }

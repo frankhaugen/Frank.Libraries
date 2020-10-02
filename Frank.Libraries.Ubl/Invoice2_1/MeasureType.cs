@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.unitCodeField;
+                return unitCodeField;
             }
             set
             {
-                this.unitCodeField = value;
+                unitCodeField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.unitCodeListVersionIDField;
+                return unitCodeListVersionIDField;
             }
             set
             {
-                this.unitCodeListVersionIDField = value;
+                unitCodeListVersionIDField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

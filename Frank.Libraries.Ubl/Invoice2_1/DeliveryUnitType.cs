@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.batchQuantityField;
+                return batchQuantityField;
             }
             set
             {
-                this.batchQuantityField = value;
+                batchQuantityField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.consumerUnitQuantityField;
+                return consumerUnitQuantityField;
             }
             set
             {
-                this.consumerUnitQuantityField = value;
+                consumerUnitQuantityField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.hazardousRiskIndicatorField;
+                return hazardousRiskIndicatorField;
             }
             set
             {
-                this.hazardousRiskIndicatorField = value;
+                hazardousRiskIndicatorField = value;
             }
         }
     }

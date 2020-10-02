@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.modulusField;
+                return modulusField;
             }
             set
             {
-                this.modulusField = value;
+                modulusField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.exponentField;
+                return exponentField;
             }
             set
             {
-                this.exponentField = value;
+                exponentField = value;
             }
         }
     }

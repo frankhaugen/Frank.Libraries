@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.textField;
+                return textField;
             }
             set
             {
-                this.textField = value;
+                textField = value;
             }
         }
     }

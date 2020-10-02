@@ -21,11 +21,11 @@
         {
             get
             {
-                return this.identifierField;
+                return identifierField;
             }
             set
             {
-                this.identifierField = value;
+                identifierField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -47,11 +47,11 @@
         {
             get
             {
-                return this.documentationReferencesField;
+                return documentationReferencesField;
             }
             set
             {
-                this.documentationReferencesField = value;
+                documentationReferencesField = value;
             }
         }
     }

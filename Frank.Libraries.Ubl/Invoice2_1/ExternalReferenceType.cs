@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.documentHashField;
+                return documentHashField;
             }
             set
             {
-                this.documentHashField = value;
+                documentHashField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.hashAlgorithmMethodField;
+                return hashAlgorithmMethodField;
             }
             set
             {
-                this.hashAlgorithmMethodField = value;
+                hashAlgorithmMethodField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.expiryDateField;
+                return expiryDateField;
             }
             set
             {
-                this.expiryDateField = value;
+                expiryDateField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.expiryTimeField;
+                return expiryTimeField;
             }
             set
             {
-                this.expiryTimeField = value;
+                expiryTimeField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return this.mimeCodeField;
+                return mimeCodeField;
             }
             set
             {
-                this.mimeCodeField = value;
+                mimeCodeField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return this.formatCodeField;
+                return formatCodeField;
             }
             set
             {
-                this.formatCodeField = value;
+                formatCodeField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return this.encodingCodeField;
+                return encodingCodeField;
             }
             set
             {
-                this.encodingCodeField = value;
+                encodingCodeField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return this.characterSetCodeField;
+                return characterSetCodeField;
             }
             set
             {
-                this.characterSetCodeField = value;
+                characterSetCodeField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return this.fileNameField;
+                return fileNameField;
             }
             set
             {
-                this.fileNameField = value;
+                fileNameField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
     }

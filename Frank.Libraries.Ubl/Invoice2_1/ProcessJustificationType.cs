@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.previousCancellationReasonCodeField;
+                return previousCancellationReasonCodeField;
             }
             set
             {
-                this.previousCancellationReasonCodeField = value;
+                previousCancellationReasonCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.processReasonCodeField;
+                return processReasonCodeField;
             }
             set
             {
-                this.processReasonCodeField = value;
+                processReasonCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.processReasonField;
+                return processReasonField;
             }
             set
             {
-                this.processReasonField = value;
+                processReasonField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
     }

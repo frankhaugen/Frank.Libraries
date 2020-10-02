@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.leadTimeMeasureField;
+                return leadTimeMeasureField;
             }
             set
             {
-                this.leadTimeMeasureField = value;
+                leadTimeMeasureField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.minimumQuantityField;
+                return minimumQuantityField;
             }
             set
             {
-                this.minimumQuantityField = value;
+                minimumQuantityField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.maximumQuantityField;
+                return maximumQuantityField;
             }
             set
             {
-                this.maximumQuantityField = value;
+                maximumQuantityField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.hazardousRiskIndicatorField;
+                return hazardousRiskIndicatorField;
             }
             set
             {
-                this.hazardousRiskIndicatorField = value;
+                hazardousRiskIndicatorField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.tradingRestrictionsField;
+                return tradingRestrictionsField;
             }
             set
             {
-                this.tradingRestrictionsField = value;
+                tradingRestrictionsField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.applicableTerritoryAddressField;
+                return applicableTerritoryAddressField;
             }
             set
             {
-                this.applicableTerritoryAddressField = value;
+                applicableTerritoryAddressField = value;
             }
         }
 
@@ -123,11 +123,11 @@
         {
             get
             {
-                return this.priceField;
+                return priceField;
             }
             set
             {
-                this.priceField = value;
+                priceField = value;
             }
         }
 
@@ -137,11 +137,11 @@
         {
             get
             {
-                return this.deliveryUnitField;
+                return deliveryUnitField;
             }
             set
             {
-                this.deliveryUnitField = value;
+                deliveryUnitField = value;
             }
         }
 
@@ -151,11 +151,11 @@
         {
             get
             {
-                return this.applicableTaxCategoryField;
+                return applicableTaxCategoryField;
             }
             set
             {
-                this.applicableTaxCategoryField = value;
+                applicableTaxCategoryField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return this.packageField;
+                return packageField;
             }
             set
             {
-                this.packageField = value;
+                packageField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.allowanceChargeField;
+                return allowanceChargeField;
             }
             set
             {
-                this.allowanceChargeField = value;
+                allowanceChargeField = value;
             }
         }
 
@@ -191,11 +191,11 @@
         {
             get
             {
-                return this.dependentPriceReferenceField;
+                return dependentPriceReferenceField;
             }
             set
             {
-                this.dependentPriceReferenceField = value;
+                dependentPriceReferenceField = value;
             }
         }
     }

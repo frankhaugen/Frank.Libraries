@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.auctionConstraintIndicatorField;
+                return auctionConstraintIndicatorField;
             }
             set
             {
-                this.auctionConstraintIndicatorField = value;
+                auctionConstraintIndicatorField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.justificationDescriptionField;
+                return justificationDescriptionField;
             }
             set
             {
-                this.justificationDescriptionField = value;
+                justificationDescriptionField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.processDescriptionField;
+                return processDescriptionField;
             }
             set
             {
-                this.processDescriptionField = value;
+                processDescriptionField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.conditionsDescriptionField;
+                return conditionsDescriptionField;
             }
             set
             {
-                this.conditionsDescriptionField = value;
+                conditionsDescriptionField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.electronicDeviceDescriptionField;
+                return electronicDeviceDescriptionField;
             }
             set
             {
-                this.electronicDeviceDescriptionField = value;
+                electronicDeviceDescriptionField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.auctionURIField;
+                return auctionURIField;
             }
             set
             {
-                this.auctionURIField = value;
+                auctionURIField = value;
             }
         }
     }

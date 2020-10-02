@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.statusCodeField;
+                return statusCodeField;
             }
             set
             {
-                this.statusCodeField = value;
+                statusCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.validityPeriodField;
+                return validityPeriodField;
             }
             set
             {
-                this.validityPeriodField = value;
+                validityPeriodField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.previousPriceListField;
+                return previousPriceListField;
             }
             set
             {
-                this.previousPriceListField = value;
+                previousPriceListField = value;
             }
         }
     }

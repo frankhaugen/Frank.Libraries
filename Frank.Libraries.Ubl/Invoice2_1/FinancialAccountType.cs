@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.aliasNameField;
+                return aliasNameField;
             }
             set
             {
-                this.aliasNameField = value;
+                aliasNameField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.accountTypeCodeField;
+                return accountTypeCodeField;
             }
             set
             {
-                this.accountTypeCodeField = value;
+                accountTypeCodeField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.accountFormatCodeField;
+                return accountFormatCodeField;
             }
             set
             {
-                this.accountFormatCodeField = value;
+                accountFormatCodeField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.currencyCodeField;
+                return currencyCodeField;
             }
             set
             {
-                this.currencyCodeField = value;
+                currencyCodeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.paymentNoteField;
+                return paymentNoteField;
             }
             set
             {
-                this.paymentNoteField = value;
+                paymentNoteField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return this.financialInstitutionBranchField;
+                return financialInstitutionBranchField;
             }
             set
             {
-                this.financialInstitutionBranchField = value;
+                financialInstitutionBranchField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return this.countryField;
+                return countryField;
             }
             set
             {
-                this.countryField = value;
+                countryField = value;
             }
         }
     }

@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.digestMethodField;
+                return digestMethodField;
             }
             set
             {
-                this.digestMethodField = value;
+                digestMethodField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.digestValueField;
+                return digestValueField;
             }
             set
             {
-                this.digestValueField = value;
+                digestValueField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
     }

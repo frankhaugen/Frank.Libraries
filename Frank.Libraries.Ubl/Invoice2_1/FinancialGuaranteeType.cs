@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.guaranteeTypeCodeField;
+                return guaranteeTypeCodeField;
             }
             set
             {
-                this.guaranteeTypeCodeField = value;
+                guaranteeTypeCodeField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.liabilityAmountField;
+                return liabilityAmountField;
             }
             set
             {
-                this.liabilityAmountField = value;
+                liabilityAmountField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.amountRateField;
+                return amountRateField;
             }
             set
             {
-                this.amountRateField = value;
+                amountRateField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return this.constitutionPeriodField;
+                return constitutionPeriodField;
             }
             set
             {
-                this.constitutionPeriodField = value;
+                constitutionPeriodField = value;
             }
         }
     }

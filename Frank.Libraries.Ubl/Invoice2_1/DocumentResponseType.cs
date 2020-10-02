@@ -25,11 +25,11 @@
         {
             get
             {
-                return this.responseField;
+                return responseField;
             }
             set
             {
-                this.responseField = value;
+                responseField = value;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.issuerPartyField;
+                return issuerPartyField;
             }
             set
             {
-                this.issuerPartyField = value;
+                issuerPartyField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.recipientPartyField;
+                return recipientPartyField;
             }
             set
             {
-                this.recipientPartyField = value;
+                recipientPartyField = value;
             }
         }
 
@@ -79,11 +79,11 @@
         {
             get
             {
-                return this.lineResponseField;
+                return lineResponseField;
             }
             set
             {
-                this.lineResponseField = value;
+                lineResponseField = value;
             }
         }
     }

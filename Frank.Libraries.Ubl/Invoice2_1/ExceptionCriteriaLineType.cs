@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.thresholdValueComparisonCodeField;
+                return thresholdValueComparisonCodeField;
             }
             set
             {
-                this.thresholdValueComparisonCodeField = value;
+                thresholdValueComparisonCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.thresholdQuantityField;
+                return thresholdQuantityField;
             }
             set
             {
-                this.thresholdQuantityField = value;
+                thresholdQuantityField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.exceptionStatusCodeField;
+                return exceptionStatusCodeField;
             }
             set
             {
-                this.exceptionStatusCodeField = value;
+                exceptionStatusCodeField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.collaborationPriorityCodeField;
+                return collaborationPriorityCodeField;
             }
             set
             {
-                this.collaborationPriorityCodeField = value;
+                collaborationPriorityCodeField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return this.exceptionResolutionCodeField;
+                return exceptionResolutionCodeField;
             }
             set
             {
-                this.exceptionResolutionCodeField = value;
+                exceptionResolutionCodeField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return this.supplyChainActivityTypeCodeField;
+                return supplyChainActivityTypeCodeField;
             }
             set
             {
-                this.supplyChainActivityTypeCodeField = value;
+                supplyChainActivityTypeCodeField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return this.performanceMetricTypeCodeField;
+                return performanceMetricTypeCodeField;
             }
             set
             {
-                this.performanceMetricTypeCodeField = value;
+                performanceMetricTypeCodeField = value;
             }
         }
 
@@ -165,11 +165,11 @@
         {
             get
             {
-                return this.effectivePeriodField;
+                return effectivePeriodField;
             }
             set
             {
-                this.effectivePeriodField = value;
+                effectivePeriodField = value;
             }
         }
 
@@ -179,11 +179,11 @@
         {
             get
             {
-                return this.supplyItemField;
+                return supplyItemField;
             }
             set
             {
-                this.supplyItemField = value;
+                supplyItemField = value;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                return this.forecastExceptionCriterionLineField;
+                return forecastExceptionCriterionLineField;
             }
             set
             {
-                this.forecastExceptionCriterionLineField = value;
+                forecastExceptionCriterionLineField = value;
             }
         }
     }

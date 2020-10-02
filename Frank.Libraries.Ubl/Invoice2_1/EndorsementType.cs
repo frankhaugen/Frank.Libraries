@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.documentIDField;
+                return documentIDField;
             }
             set
             {
-                this.documentIDField = value;
+                documentIDField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.approvalStatusField;
+                return approvalStatusField;
             }
             set
             {
-                this.approvalStatusField = value;
+                approvalStatusField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.remarksField;
+                return remarksField;
             }
             set
             {
-                this.remarksField = value;
+                remarksField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return this.endorserPartyField;
+                return endorserPartyField;
             }
             set
             {
-                this.endorserPartyField = value;
+                endorserPartyField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return this.signatureField;
+                return signatureField;
             }
             set
             {
-                this.signatureField = value;
+                signatureField = value;
             }
         }
     }

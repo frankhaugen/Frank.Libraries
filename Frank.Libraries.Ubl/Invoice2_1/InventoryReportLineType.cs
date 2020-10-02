@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.inventoryValueAmountField;
+                return inventoryValueAmountField;
             }
             set
             {
-                this.inventoryValueAmountField = value;
+                inventoryValueAmountField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.availabilityDateField;
+                return availabilityDateField;
             }
             set
             {
-                this.availabilityDateField = value;
+                availabilityDateField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.availabilityStatusCodeField;
+                return availabilityStatusCodeField;
             }
             set
             {
-                this.availabilityStatusCodeField = value;
+                availabilityStatusCodeField = value;
             }
         }
 
@@ -115,11 +115,11 @@
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.inventoryLocationField;
+                return inventoryLocationField;
             }
             set
             {
-                this.inventoryLocationField = value;
+                inventoryLocationField = value;
             }
         }
     }

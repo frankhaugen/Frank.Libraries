@@ -29,11 +29,11 @@
         {
             get
             {
-                return this.signingTimeField;
+                return signingTimeField;
             }
             set
             {
-                this.signingTimeField = value;
+                signingTimeField = value;
             }
         }
 
@@ -43,11 +43,11 @@
         {
             get
             {
-                return this.signingTimeFieldSpecified;
+                return signingTimeFieldSpecified;
             }
             set
             {
-                this.signingTimeFieldSpecified = value;
+                signingTimeFieldSpecified = value;
             }
         }
 
@@ -57,11 +57,11 @@
         {
             get
             {
-                return this.signingCertificateField;
+                return signingCertificateField;
             }
             set
             {
-                this.signingCertificateField = value;
+                signingCertificateField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.signaturePolicyIdentifierField;
+                return signaturePolicyIdentifierField;
             }
             set
             {
-                this.signaturePolicyIdentifierField = value;
+                signaturePolicyIdentifierField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return this.signatureProductionPlaceField;
+                return signatureProductionPlaceField;
             }
             set
             {
-                this.signatureProductionPlaceField = value;
+                signatureProductionPlaceField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.signerRoleField;
+                return signerRoleField;
             }
             set
             {
-                this.signerRoleField = value;
+                signerRoleField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

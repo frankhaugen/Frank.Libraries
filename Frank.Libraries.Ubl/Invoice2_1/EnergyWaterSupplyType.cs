@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.consumptionReportField;
+                return consumptionReportField;
             }
             set
             {
-                this.consumptionReportField = value;
+                consumptionReportField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.energyTaxReportField;
+                return energyTaxReportField;
             }
             set
             {
-                this.energyTaxReportField = value;
+                energyTaxReportField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.consumptionAverageField;
+                return consumptionAverageField;
             }
             set
             {
-                this.consumptionAverageField = value;
+                consumptionAverageField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.energyWaterConsumptionCorrectionField;
+                return energyWaterConsumptionCorrectionField;
             }
             set
             {
-                this.energyWaterConsumptionCorrectionField = value;
+                energyWaterConsumptionCorrectionField = value;
             }
         }
     }

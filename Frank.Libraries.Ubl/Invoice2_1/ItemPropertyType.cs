@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.nameCodeField;
+                return nameCodeField;
             }
             set
             {
-                this.nameCodeField = value;
+                nameCodeField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.testMethodField;
+                return testMethodField;
             }
             set
             {
-                this.testMethodField = value;
+                testMethodField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.valueQuantityField;
+                return valueQuantityField;
             }
             set
             {
-                this.valueQuantityField = value;
+                valueQuantityField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return this.valueQualifierField;
+                return valueQualifierField;
             }
             set
             {
-                this.valueQualifierField = value;
+                valueQualifierField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return this.importanceCodeField;
+                return importanceCodeField;
             }
             set
             {
-                this.importanceCodeField = value;
+                importanceCodeField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return this.listValueField;
+                return listValueField;
             }
             set
             {
-                this.listValueField = value;
+                listValueField = value;
             }
         }
 
@@ -167,11 +167,11 @@
         {
             get
             {
-                return this.usabilityPeriodField;
+                return usabilityPeriodField;
             }
             set
             {
-                this.usabilityPeriodField = value;
+                usabilityPeriodField = value;
             }
         }
 
@@ -181,11 +181,11 @@
         {
             get
             {
-                return this.itemPropertyGroupField;
+                return itemPropertyGroupField;
             }
             set
             {
-                this.itemPropertyGroupField = value;
+                itemPropertyGroupField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return this.rangeDimensionField;
+                return rangeDimensionField;
             }
             set
             {
-                this.rangeDimensionField = value;
+                rangeDimensionField = value;
             }
         }
 
@@ -207,11 +207,11 @@
         {
             get
             {
-                return this.itemPropertyRangeField;
+                return itemPropertyRangeField;
             }
             set
             {
-                this.itemPropertyRangeField = value;
+                itemPropertyRangeField = value;
             }
         }
     }

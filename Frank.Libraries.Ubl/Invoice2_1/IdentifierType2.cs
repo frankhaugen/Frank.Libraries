@@ -21,11 +21,11 @@
         {
             get
             {
-                return this.qualifierField;
+                return qualifierField;
             }
             set
             {
-                this.qualifierField = value;
+                qualifierField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return this.qualifierFieldSpecified;
+                return qualifierFieldSpecified;
             }
             set
             {
-                this.qualifierFieldSpecified = value;
+                qualifierFieldSpecified = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

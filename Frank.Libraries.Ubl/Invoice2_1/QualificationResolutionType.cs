@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.admissionCodeField;
+                return admissionCodeField;
             }
             set
             {
-                this.admissionCodeField = value;
+                admissionCodeField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.exclusionReasonField;
+                return exclusionReasonField;
             }
             set
             {
-                this.exclusionReasonField = value;
+                exclusionReasonField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.resolutionField;
+                return resolutionField;
             }
             set
             {
-                this.resolutionField = value;
+                resolutionField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.resolutionDateField;
+                return resolutionDateField;
             }
             set
             {
-                this.resolutionDateField = value;
+                resolutionDateField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.resolutionTimeField;
+                return resolutionTimeField;
             }
             set
             {
-                this.resolutionTimeField = value;
+                resolutionTimeField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return this.procurementProjectLotField;
+                return procurementProjectLotField;
             }
             set
             {
-                this.procurementProjectLotField = value;
+                procurementProjectLotField = value;
             }
         }
     }

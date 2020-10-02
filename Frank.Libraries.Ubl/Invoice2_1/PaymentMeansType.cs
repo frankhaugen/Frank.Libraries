@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.paymentMeansCodeField;
+                return paymentMeansCodeField;
             }
             set
             {
-                this.paymentMeansCodeField = value;
+                paymentMeansCodeField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.paymentDueDateField;
+                return paymentDueDateField;
             }
             set
             {
-                this.paymentDueDateField = value;
+                paymentDueDateField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.paymentChannelCodeField;
+                return paymentChannelCodeField;
             }
             set
             {
-                this.paymentChannelCodeField = value;
+                paymentChannelCodeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.instructionIDField;
+                return instructionIDField;
             }
             set
             {
-                this.instructionIDField = value;
+                instructionIDField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.instructionNoteField;
+                return instructionNoteField;
             }
             set
             {
-                this.instructionNoteField = value;
+                instructionNoteField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return this.paymentIDField;
+                return paymentIDField;
             }
             set
             {
-                this.paymentIDField = value;
+                paymentIDField = value;
             }
         }
 
@@ -139,11 +139,11 @@
         {
             get
             {
-                return this.cardAccountField;
+                return cardAccountField;
             }
             set
             {
-                this.cardAccountField = value;
+                cardAccountField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return this.payerFinancialAccountField;
+                return payerFinancialAccountField;
             }
             set
             {
-                this.payerFinancialAccountField = value;
+                payerFinancialAccountField = value;
             }
         }
 
@@ -165,11 +165,11 @@
         {
             get
             {
-                return this.payeeFinancialAccountField;
+                return payeeFinancialAccountField;
             }
             set
             {
-                this.payeeFinancialAccountField = value;
+                payeeFinancialAccountField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.creditAccountField;
+                return creditAccountField;
             }
             set
             {
-                this.creditAccountField = value;
+                creditAccountField = value;
             }
         }
 
@@ -191,11 +191,11 @@
         {
             get
             {
-                return this.paymentMandateField;
+                return paymentMandateField;
             }
             set
             {
-                this.paymentMandateField = value;
+                paymentMandateField = value;
             }
         }
 
@@ -204,11 +204,11 @@
         {
             get
             {
-                return this.tradeFinancingField;
+                return tradeFinancingField;
             }
             set
             {
-                this.tradeFinancingField = value;
+                tradeFinancingField = value;
             }
         }
     }

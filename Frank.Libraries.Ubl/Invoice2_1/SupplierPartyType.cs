@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.customerAssignedAccountIDField;
+                return customerAssignedAccountIDField;
             }
             set
             {
-                this.customerAssignedAccountIDField = value;
+                customerAssignedAccountIDField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.additionalAccountIDField;
+                return additionalAccountIDField;
             }
             set
             {
-                this.additionalAccountIDField = value;
+                additionalAccountIDField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.dataSendingCapabilityField;
+                return dataSendingCapabilityField;
             }
             set
             {
-                this.dataSendingCapabilityField = value;
+                dataSendingCapabilityField = value;
             }
         }
 
@@ -71,11 +71,11 @@
         {
             get
             {
-                return this.partyField;
+                return partyField;
             }
             set
             {
-                this.partyField = value;
+                partyField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.despatchContactField;
+                return despatchContactField;
             }
             set
             {
-                this.despatchContactField = value;
+                despatchContactField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return this.accountingContactField;
+                return accountingContactField;
             }
             set
             {
-                this.accountingContactField = value;
+                accountingContactField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.sellerContactField;
+                return sellerContactField;
             }
             set
             {
-                this.sellerContactField = value;
+                sellerContactField = value;
             }
         }
     }

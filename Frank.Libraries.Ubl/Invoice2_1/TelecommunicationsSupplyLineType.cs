@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.phoneNumberField;
+                return phoneNumberField;
             }
             set
             {
-                this.phoneNumberField = value;
+                phoneNumberField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.lineExtensionAmountField;
+                return lineExtensionAmountField;
             }
             set
             {
-                this.lineExtensionAmountField = value;
+                lineExtensionAmountField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.exchangeRateField;
+                return exchangeRateField;
             }
             set
             {
-                this.exchangeRateField = value;
+                exchangeRateField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.allowanceChargeField;
+                return allowanceChargeField;
             }
             set
             {
-                this.allowanceChargeField = value;
+                allowanceChargeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.taxTotalField;
+                return taxTotalField;
             }
             set
             {
-                this.taxTotalField = value;
+                taxTotalField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return this.telecommunicationsServiceField;
+                return telecommunicationsServiceField;
             }
             set
             {
-                this.telecommunicationsServiceField = value;
+                telecommunicationsServiceField = value;
             }
         }
     }

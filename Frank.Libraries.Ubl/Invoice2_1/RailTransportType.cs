@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.trainIDField;
+                return trainIDField;
             }
             set
             {
-                this.trainIDField = value;
+                trainIDField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.railCarIDField;
+                return railCarIDField;
             }
             set
             {
-                this.railCarIDField = value;
+                railCarIDField = value;
             }
         }
     }

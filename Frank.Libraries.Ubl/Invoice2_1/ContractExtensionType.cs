@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.optionsDescriptionField;
+                return optionsDescriptionField;
             }
             set
             {
-                this.optionsDescriptionField = value;
+                optionsDescriptionField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.minimumNumberNumericField;
+                return minimumNumberNumericField;
             }
             set
             {
-                this.minimumNumberNumericField = value;
+                minimumNumberNumericField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.maximumNumberNumericField;
+                return maximumNumberNumericField;
             }
             set
             {
-                this.maximumNumberNumericField = value;
+                maximumNumberNumericField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return this.optionValidityPeriodField;
+                return optionValidityPeriodField;
             }
             set
             {
-                this.optionValidityPeriodField = value;
+                optionValidityPeriodField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return this.renewalField;
+                return renewalField;
             }
             set
             {
-                this.renewalField = value;
+                renewalField = value;
             }
         }
     }

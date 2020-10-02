@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.lineIDField;
+                return lineIDField;
             }
             set
             {
-                this.lineIDField = value;
+                lineIDField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.lineStatusCodeField;
+                return lineStatusCodeField;
             }
             set
             {
-                this.lineStatusCodeField = value;
+                lineStatusCodeField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
     }

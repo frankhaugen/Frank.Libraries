@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.percentField;
+                return percentField;
             }
             set
             {
-                this.percentField = value;
+                percentField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return this.locationAddressField;
+                return locationAddressField;
             }
             set
             {
-                this.locationAddressField = value;
+                locationAddressField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.dependentLineReferenceField;
+                return dependentLineReferenceField;
             }
             set
             {
-                this.dependentLineReferenceField = value;
+                dependentLineReferenceField = value;
             }
         }
     }

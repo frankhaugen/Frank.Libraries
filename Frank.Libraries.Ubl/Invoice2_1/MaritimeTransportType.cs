@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.vesselIDField;
+                return vesselIDField;
             }
             set
             {
-                this.vesselIDField = value;
+                vesselIDField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.vesselNameField;
+                return vesselNameField;
             }
             set
             {
-                this.vesselNameField = value;
+                vesselNameField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.radioCallSignIDField;
+                return radioCallSignIDField;
             }
             set
             {
-                this.radioCallSignIDField = value;
+                radioCallSignIDField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.shipsRequirementsField;
+                return shipsRequirementsField;
             }
             set
             {
-                this.shipsRequirementsField = value;
+                shipsRequirementsField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.grossTonnageMeasureField;
+                return grossTonnageMeasureField;
             }
             set
             {
-                this.grossTonnageMeasureField = value;
+                grossTonnageMeasureField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.netTonnageMeasureField;
+                return netTonnageMeasureField;
             }
             set
             {
-                this.netTonnageMeasureField = value;
+                netTonnageMeasureField = value;
             }
         }
 
@@ -115,11 +115,11 @@
         {
             get
             {
-                return this.registryCertificateDocumentReferenceField;
+                return registryCertificateDocumentReferenceField;
             }
             set
             {
-                this.registryCertificateDocumentReferenceField = value;
+                registryCertificateDocumentReferenceField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.registryPortLocationField;
+                return registryPortLocationField;
             }
             set
             {
-                this.registryPortLocationField = value;
+                registryPortLocationField = value;
             }
         }
     }

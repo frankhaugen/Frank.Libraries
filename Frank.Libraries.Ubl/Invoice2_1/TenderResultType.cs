@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.tenderResultCodeField;
+                return tenderResultCodeField;
             }
             set
             {
-                this.tenderResultCodeField = value;
+                tenderResultCodeField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.advertisementAmountField;
+                return advertisementAmountField;
             }
             set
             {
-                this.advertisementAmountField = value;
+                advertisementAmountField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.awardDateField;
+                return awardDateField;
             }
             set
             {
-                this.awardDateField = value;
+                awardDateField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.awardTimeField;
+                return awardTimeField;
             }
             set
             {
-                this.awardTimeField = value;
+                awardTimeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.receivedTenderQuantityField;
+                return receivedTenderQuantityField;
             }
             set
             {
-                this.receivedTenderQuantityField = value;
+                receivedTenderQuantityField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.lowerTenderAmountField;
+                return lowerTenderAmountField;
             }
             set
             {
-                this.lowerTenderAmountField = value;
+                lowerTenderAmountField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return this.higherTenderAmountField;
+                return higherTenderAmountField;
             }
             set
             {
-                this.higherTenderAmountField = value;
+                higherTenderAmountField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return this.startDateField;
+                return startDateField;
             }
             set
             {
-                this.startDateField = value;
+                startDateField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return this.receivedElectronicTenderQuantityField;
+                return receivedElectronicTenderQuantityField;
             }
             set
             {
-                this.receivedElectronicTenderQuantityField = value;
+                receivedElectronicTenderQuantityField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return this.receivedForeignTenderQuantityField;
+                return receivedForeignTenderQuantityField;
             }
             set
             {
-                this.receivedForeignTenderQuantityField = value;
+                receivedForeignTenderQuantityField = value;
             }
         }
 
@@ -201,11 +201,11 @@
         {
             get
             {
-                return this.contractField;
+                return contractField;
             }
             set
             {
-                this.contractField = value;
+                contractField = value;
             }
         }
 
@@ -214,11 +214,11 @@
         {
             get
             {
-                return this.awardedTenderedProjectField;
+                return awardedTenderedProjectField;
             }
             set
             {
-                this.awardedTenderedProjectField = value;
+                awardedTenderedProjectField = value;
             }
         }
 
@@ -227,11 +227,11 @@
         {
             get
             {
-                return this.contractFormalizationPeriodField;
+                return contractFormalizationPeriodField;
             }
             set
             {
-                this.contractFormalizationPeriodField = value;
+                contractFormalizationPeriodField = value;
             }
         }
 
@@ -241,11 +241,11 @@
         {
             get
             {
-                return this.subcontractTermsField;
+                return subcontractTermsField;
             }
             set
             {
-                this.subcontractTermsField = value;
+                subcontractTermsField = value;
             }
         }
 
@@ -255,11 +255,11 @@
         {
             get
             {
-                return this.winningPartyField;
+                return winningPartyField;
             }
             set
             {
-                this.winningPartyField = value;
+                winningPartyField = value;
             }
         }
     }

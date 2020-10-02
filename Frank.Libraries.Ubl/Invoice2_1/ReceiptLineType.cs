@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.receivedQuantityField;
+                return receivedQuantityField;
             }
             set
             {
-                this.receivedQuantityField = value;
+                receivedQuantityField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.shortQuantityField;
+                return shortQuantityField;
             }
             set
             {
-                this.shortQuantityField = value;
+                shortQuantityField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return this.shortageActionCodeField;
+                return shortageActionCodeField;
             }
             set
             {
-                this.shortageActionCodeField = value;
+                shortageActionCodeField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return this.rejectedQuantityField;
+                return rejectedQuantityField;
             }
             set
             {
-                this.rejectedQuantityField = value;
+                rejectedQuantityField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return this.rejectReasonCodeField;
+                return rejectReasonCodeField;
             }
             set
             {
-                this.rejectReasonCodeField = value;
+                rejectReasonCodeField = value;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                return this.rejectReasonField;
+                return rejectReasonField;
             }
             set
             {
-                this.rejectReasonField = value;
+                rejectReasonField = value;
             }
         }
 
@@ -182,11 +182,11 @@
         {
             get
             {
-                return this.rejectActionCodeField;
+                return rejectActionCodeField;
             }
             set
             {
-                this.rejectActionCodeField = value;
+                rejectActionCodeField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return this.quantityDiscrepancyCodeField;
+                return quantityDiscrepancyCodeField;
             }
             set
             {
-                this.quantityDiscrepancyCodeField = value;
+                quantityDiscrepancyCodeField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return this.oversupplyQuantityField;
+                return oversupplyQuantityField;
             }
             set
             {
-                this.oversupplyQuantityField = value;
+                oversupplyQuantityField = value;
             }
         }
 
@@ -224,11 +224,11 @@
         {
             get
             {
-                return this.receivedDateField;
+                return receivedDateField;
             }
             set
             {
-                this.receivedDateField = value;
+                receivedDateField = value;
             }
         }
 
@@ -238,11 +238,11 @@
         {
             get
             {
-                return this.timingComplaintCodeField;
+                return timingComplaintCodeField;
             }
             set
             {
-                this.timingComplaintCodeField = value;
+                timingComplaintCodeField = value;
             }
         }
 
@@ -252,11 +252,11 @@
         {
             get
             {
-                return this.timingComplaintField;
+                return timingComplaintField;
             }
             set
             {
-                this.timingComplaintField = value;
+                timingComplaintField = value;
             }
         }
 
@@ -265,11 +265,11 @@
         {
             get
             {
-                return this.orderLineReferenceField;
+                return orderLineReferenceField;
             }
             set
             {
-                this.orderLineReferenceField = value;
+                orderLineReferenceField = value;
             }
         }
 
@@ -279,11 +279,11 @@
         {
             get
             {
-                return this.despatchLineReferenceField;
+                return despatchLineReferenceField;
             }
             set
             {
-                this.despatchLineReferenceField = value;
+                despatchLineReferenceField = value;
             }
         }
 
@@ -293,11 +293,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -307,11 +307,11 @@
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
 
@@ -321,11 +321,11 @@
         {
             get
             {
-                return this.shipmentField;
+                return shipmentField;
             }
             set
             {
-                this.shipmentField = value;
+                shipmentField = value;
             }
         }
     }

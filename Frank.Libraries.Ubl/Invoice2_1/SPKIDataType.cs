@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.sPKISexpField;
+                return sPKISexpField;
             }
             set
             {
-                this.sPKISexpField = value;
+                sPKISexpField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.anyField;
+                return anyField;
             }
             set
             {
-                this.anyField = value;
+                anyField = value;
             }
         }
     }

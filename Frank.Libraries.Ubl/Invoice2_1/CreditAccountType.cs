@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.accountIDField;
+                return accountIDField;
             }
             set
             {
-                this.accountIDField = value;
+                accountIDField = value;
             }
         }
     }

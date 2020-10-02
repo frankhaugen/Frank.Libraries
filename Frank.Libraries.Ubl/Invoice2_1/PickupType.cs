@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.actualPickupDateField;
+                return actualPickupDateField;
             }
             set
             {
-                this.actualPickupDateField = value;
+                actualPickupDateField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.actualPickupTimeField;
+                return actualPickupTimeField;
             }
             set
             {
-                this.actualPickupTimeField = value;
+                actualPickupTimeField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.earliestPickupDateField;
+                return earliestPickupDateField;
             }
             set
             {
-                this.earliestPickupDateField = value;
+                earliestPickupDateField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.earliestPickupTimeField;
+                return earliestPickupTimeField;
             }
             set
             {
-                this.earliestPickupTimeField = value;
+                earliestPickupTimeField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.latestPickupDateField;
+                return latestPickupDateField;
             }
             set
             {
-                this.latestPickupDateField = value;
+                latestPickupDateField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.latestPickupTimeField;
+                return latestPickupTimeField;
             }
             set
             {
-                this.latestPickupTimeField = value;
+                latestPickupTimeField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return this.pickupLocationField;
+                return pickupLocationField;
             }
             set
             {
-                this.pickupLocationField = value;
+                pickupLocationField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return this.pickupPartyField;
+                return pickupPartyField;
             }
             set
             {
-                this.pickupPartyField = value;
+                pickupPartyField = value;
             }
         }
     }

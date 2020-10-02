@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.procurementTypeCodeField;
+                return procurementTypeCodeField;
             }
             set
             {
-                this.procurementTypeCodeField = value;
+                procurementTypeCodeField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return this.procurementSubTypeCodeField;
+                return procurementSubTypeCodeField;
             }
             set
             {
-                this.procurementSubTypeCodeField = value;
+                procurementSubTypeCodeField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return this.qualityControlCodeField;
+                return qualityControlCodeField;
             }
             set
             {
-                this.qualityControlCodeField = value;
+                qualityControlCodeField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return this.requiredFeeAmountField;
+                return requiredFeeAmountField;
             }
             set
             {
-                this.requiredFeeAmountField = value;
+                requiredFeeAmountField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return this.feeDescriptionField;
+                return feeDescriptionField;
             }
             set
             {
-                this.feeDescriptionField = value;
+                feeDescriptionField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return this.requestedDeliveryDateField;
+                return requestedDeliveryDateField;
             }
             set
             {
-                this.requestedDeliveryDateField = value;
+                requestedDeliveryDateField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.estimatedOverallContractQuantityField;
+                return estimatedOverallContractQuantityField;
             }
             set
             {
-                this.estimatedOverallContractQuantityField = value;
+                estimatedOverallContractQuantityField = value;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -205,11 +205,11 @@
         {
             get
             {
-                return this.requestedTenderTotalField;
+                return requestedTenderTotalField;
             }
             set
             {
-                this.requestedTenderTotalField = value;
+                requestedTenderTotalField = value;
             }
         }
 
@@ -218,11 +218,11 @@
         {
             get
             {
-                return this.mainCommodityClassificationField;
+                return mainCommodityClassificationField;
             }
             set
             {
-                this.mainCommodityClassificationField = value;
+                mainCommodityClassificationField = value;
             }
         }
 
@@ -232,11 +232,11 @@
         {
             get
             {
-                return this.additionalCommodityClassificationField;
+                return additionalCommodityClassificationField;
             }
             set
             {
-                this.additionalCommodityClassificationField = value;
+                additionalCommodityClassificationField = value;
             }
         }
 
@@ -246,11 +246,11 @@
         {
             get
             {
-                return this.realizedLocationField;
+                return realizedLocationField;
             }
             set
             {
-                this.realizedLocationField = value;
+                realizedLocationField = value;
             }
         }
 
@@ -259,11 +259,11 @@
         {
             get
             {
-                return this.plannedPeriodField;
+                return plannedPeriodField;
             }
             set
             {
-                this.plannedPeriodField = value;
+                plannedPeriodField = value;
             }
         }
 
@@ -272,11 +272,11 @@
         {
             get
             {
-                return this.contractExtensionField;
+                return contractExtensionField;
             }
             set
             {
-                this.contractExtensionField = value;
+                contractExtensionField = value;
             }
         }
 
@@ -286,11 +286,11 @@
         {
             get
             {
-                return this.requestForTenderLineField;
+                return requestForTenderLineField;
             }
             set
             {
-                this.requestForTenderLineField = value;
+                requestForTenderLineField = value;
             }
         }
     }

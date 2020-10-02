@@ -19,11 +19,11 @@
         {
             get
             {
-                return this.digestMethodField;
+                return digestMethodField;
             }
             set
             {
-                this.digestMethodField = value;
+                digestMethodField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.digestValueField;
+                return digestValueField;
             }
             set
             {
-                this.digestValueField = value;
+                digestValueField = value;
             }
         }
     }

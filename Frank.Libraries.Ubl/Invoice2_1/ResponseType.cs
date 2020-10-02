@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.referenceIDField;
+                return referenceIDField;
             }
             set
             {
-                this.referenceIDField = value;
+                referenceIDField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.responseCodeField;
+                return responseCodeField;
             }
             set
             {
-                this.responseCodeField = value;
+                responseCodeField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.effectiveDateField;
+                return effectiveDateField;
             }
             set
             {
-                this.effectiveDateField = value;
+                effectiveDateField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.effectiveTimeField;
+                return effectiveTimeField;
             }
             set
             {
-                this.effectiveTimeField = value;
+                effectiveTimeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.statusField;
+                return statusField;
             }
             set
             {
-                this.statusField = value;
+                statusField = value;
             }
         }
     }

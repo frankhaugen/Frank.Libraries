@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.capabilityTypeCodeField;
+                return capabilityTypeCodeField;
             }
             set
             {
-                this.capabilityTypeCodeField = value;
+                capabilityTypeCodeField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.valueAmountField;
+                return valueAmountField;
             }
             set
             {
-                this.valueAmountField = value;
+                valueAmountField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.valueQuantityField;
+                return valueQuantityField;
             }
             set
             {
-                this.valueQuantityField = value;
+                valueQuantityField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.evidenceSuppliedField;
+                return evidenceSuppliedField;
             }
             set
             {
-                this.evidenceSuppliedField = value;
+                evidenceSuppliedField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return this.validityPeriodField;
+                return validityPeriodField;
             }
             set
             {
-                this.validityPeriodField = value;
+                validityPeriodField = value;
             }
         }
     }

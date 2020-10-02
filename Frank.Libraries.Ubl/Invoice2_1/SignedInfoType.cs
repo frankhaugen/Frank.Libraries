@@ -23,11 +23,11 @@
         {
             get
             {
-                return this.canonicalizationMethodField;
+                return canonicalizationMethodField;
             }
             set
             {
-                this.canonicalizationMethodField = value;
+                canonicalizationMethodField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.signatureMethodField;
+                return signatureMethodField;
             }
             set
             {
-                this.signatureMethodField = value;
+                signatureMethodField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.referenceField;
+                return referenceField;
             }
             set
             {
-                this.referenceField = value;
+                referenceField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

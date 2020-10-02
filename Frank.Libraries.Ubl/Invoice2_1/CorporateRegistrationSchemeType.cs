@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.corporateRegistrationTypeCodeField;
+                return corporateRegistrationTypeCodeField;
             }
             set
             {
-                this.corporateRegistrationTypeCodeField = value;
+                corporateRegistrationTypeCodeField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.jurisdictionRegionAddressField;
+                return jurisdictionRegionAddressField;
             }
             set
             {
-                this.jurisdictionRegionAddressField = value;
+                jurisdictionRegionAddressField = value;
             }
         }
     }

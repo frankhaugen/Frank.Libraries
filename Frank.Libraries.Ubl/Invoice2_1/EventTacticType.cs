@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.commentField;
+                return commentField;
             }
             set
             {
-                this.commentField = value;
+                commentField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.eventTacticEnumerationField;
+                return eventTacticEnumerationField;
             }
             set
             {
-                this.eventTacticEnumerationField = value;
+                eventTacticEnumerationField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.periodField;
+                return periodField;
             }
             set
             {
-                this.periodField = value;
+                periodField = value;
             }
         }
     }

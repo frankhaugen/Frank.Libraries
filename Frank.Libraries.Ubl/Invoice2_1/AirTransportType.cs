@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.aircraftIDField;
+                return aircraftIDField;
             }
             set
             {
-                this.aircraftIDField = value;
+                aircraftIDField = value;
             }
         }
     }

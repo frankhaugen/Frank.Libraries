@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.partyTypeCodeField;
+                return partyTypeCodeField;
             }
             set
             {
-                this.partyTypeCodeField = value;
+                partyTypeCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.partyTypeField;
+                return partyTypeField;
             }
             set
             {
-                this.partyTypeField = value;
+                partyTypeField = value;
             }
         }
     }

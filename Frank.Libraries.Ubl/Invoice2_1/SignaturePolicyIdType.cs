@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.sigPolicyIdField;
+                return sigPolicyIdField;
             }
             set
             {
-                this.sigPolicyIdField = value;
+                sigPolicyIdField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return this.transformsField;
+                return transformsField;
             }
             set
             {
-                this.transformsField = value;
+                transformsField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.sigPolicyHashField;
+                return sigPolicyHashField;
             }
             set
             {
-                this.sigPolicyHashField = value;
+                sigPolicyHashField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.sigPolicyQualifiersField;
+                return sigPolicyQualifiersField;
             }
             set
             {
-                this.sigPolicyQualifiersField = value;
+                sigPolicyQualifiersField = value;
             }
         }
     }

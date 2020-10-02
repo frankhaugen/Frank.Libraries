@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.referencedDataField;
+                return referencedDataField;
             }
             set
             {
-                this.referencedDataField = value;
+                referencedDataField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.referencedDataFieldSpecified;
+                return referencedDataFieldSpecified;
             }
             set
             {
-                this.referencedDataFieldSpecified = value;
+                referencedDataFieldSpecified = value;
             }
         }
     }

@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.calculationMethodCodeField;
+                return calculationMethodCodeField;
             }
             set
             {
-                this.calculationMethodCodeField = value;
+                calculationMethodCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.fullnessIndicationCodeField;
+                return fullnessIndicationCodeField;
             }
             set
             {
-                this.fullnessIndicationCodeField = value;
+                fullnessIndicationCodeField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.measurementFromLocationField;
+                return measurementFromLocationField;
             }
             set
             {
-                this.measurementFromLocationField = value;
+                measurementFromLocationField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.measurementToLocationField;
+                return measurementToLocationField;
             }
             set
             {
-                this.measurementToLocationField = value;
+                measurementToLocationField = value;
             }
         }
     }

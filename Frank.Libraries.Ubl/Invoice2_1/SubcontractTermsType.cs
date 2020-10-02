@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.rateField;
+                return rateField;
             }
             set
             {
-                this.rateField = value;
+                rateField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.unknownPriceIndicatorField;
+                return unknownPriceIndicatorField;
             }
             set
             {
-                this.unknownPriceIndicatorField = value;
+                unknownPriceIndicatorField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.subcontractingConditionsCodeField;
+                return subcontractingConditionsCodeField;
             }
             set
             {
-                this.subcontractingConditionsCodeField = value;
+                subcontractingConditionsCodeField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.maximumPercentField;
+                return maximumPercentField;
             }
             set
             {
-                this.maximumPercentField = value;
+                maximumPercentField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.minimumPercentField;
+                return minimumPercentField;
             }
             set
             {
-                this.minimumPercentField = value;
+                minimumPercentField = value;
             }
         }
     }

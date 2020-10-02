@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.roleCodeField;
+                return roleCodeField;
             }
             set
             {
-                this.roleCodeField = value;
+                roleCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.sequenceNumericField;
+                return sequenceNumericField;
             }
             set
             {
-                this.sequenceNumericField = value;
+                sequenceNumericField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.partyField;
+                return partyField;
             }
             set
             {
-                this.partyField = value;
+                partyField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.signatoryContactField;
+                return signatoryContactField;
             }
             set
             {
-                this.signatoryContactField = value;
+                signatoryContactField = value;
             }
         }
     }

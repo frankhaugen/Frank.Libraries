@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.evaluationCriterionTypeCodeField;
+                return evaluationCriterionTypeCodeField;
             }
             set
             {
-                this.evaluationCriterionTypeCodeField = value;
+                evaluationCriterionTypeCodeField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.thresholdAmountField;
+                return thresholdAmountField;
             }
             set
             {
-                this.thresholdAmountField = value;
+                thresholdAmountField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.thresholdQuantityField;
+                return thresholdQuantityField;
             }
             set
             {
-                this.thresholdQuantityField = value;
+                thresholdQuantityField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.expressionCodeField;
+                return expressionCodeField;
             }
             set
             {
-                this.expressionCodeField = value;
+                expressionCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.expressionField;
+                return expressionField;
             }
             set
             {
-                this.expressionField = value;
+                expressionField = value;
             }
         }
 
@@ -115,11 +115,11 @@
         {
             get
             {
-                return this.durationPeriodField;
+                return durationPeriodField;
             }
             set
             {
-                this.durationPeriodField = value;
+                durationPeriodField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return this.suggestedEvidenceField;
+                return suggestedEvidenceField;
             }
             set
             {
-                this.suggestedEvidenceField = value;
+                suggestedEvidenceField = value;
             }
         }
     }

@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.immobilizationCertificateIDField;
+                return immobilizationCertificateIDField;
             }
             set
             {
-                this.immobilizationCertificateIDField = value;
+                immobilizationCertificateIDField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.securityIDField;
+                return securityIDField;
             }
             set
             {
-                this.securityIDField = value;
+                securityIDField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.faceValueAmountField;
+                return faceValueAmountField;
             }
             set
             {
-                this.faceValueAmountField = value;
+                faceValueAmountField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.marketValueAmountField;
+                return marketValueAmountField;
             }
             set
             {
-                this.marketValueAmountField = value;
+                marketValueAmountField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.sharesNumberQuantityField;
+                return sharesNumberQuantityField;
             }
             set
             {
-                this.sharesNumberQuantityField = value;
+                sharesNumberQuantityField = value;
             }
         }
 
@@ -113,11 +113,11 @@
         {
             get
             {
-                return this.issuerPartyField;
+                return issuerPartyField;
             }
             set
             {
-                this.issuerPartyField = value;
+                issuerPartyField = value;
             }
         }
     }

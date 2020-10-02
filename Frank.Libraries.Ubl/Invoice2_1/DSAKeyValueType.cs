@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.pField;
+                return pField;
             }
             set
             {
-                this.pField = value;
+                pField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.qField;
+                return qField;
             }
             set
             {
-                this.qField = value;
+                qField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.gField;
+                return gField;
             }
             set
             {
-                this.gField = value;
+                gField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.yField;
+                return yField;
             }
             set
             {
-                this.yField = value;
+                yField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.jField;
+                return jField;
             }
             set
             {
-                this.jField = value;
+                jField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.seedField;
+                return seedField;
             }
             set
             {
-                this.seedField = value;
+                seedField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.pgenCounterField;
+                return pgenCounterField;
             }
             set
             {
-                this.pgenCounterField = value;
+                pgenCounterField = value;
             }
         }
     }

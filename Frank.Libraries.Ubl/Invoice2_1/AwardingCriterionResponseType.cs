@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.awardingCriterionIDField;
+                return awardingCriterionIDField;
             }
             set
             {
-                this.awardingCriterionIDField = value;
+                awardingCriterionIDField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.awardingCriterionDescriptionField;
+                return awardingCriterionDescriptionField;
             }
             set
             {
-                this.awardingCriterionDescriptionField = value;
+                awardingCriterionDescriptionField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.subordinateAwardingCriterionResponseField;
+                return subordinateAwardingCriterionResponseField;
             }
             set
             {
-                this.subordinateAwardingCriterionResponseField = value;
+                subordinateAwardingCriterionResponseField = value;
             }
         }
     }

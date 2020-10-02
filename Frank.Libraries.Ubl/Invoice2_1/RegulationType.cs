@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.legalReferenceField;
+                return legalReferenceField;
             }
             set
             {
-                this.legalReferenceField = value;
+                legalReferenceField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.ontologyURIField;
+                return ontologyURIField;
             }
             set
             {
-                this.ontologyURIField = value;
+                ontologyURIField = value;
             }
         }
     }

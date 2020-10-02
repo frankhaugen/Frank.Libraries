@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.tenderEnvelopeIDField;
+                return tenderEnvelopeIDField;
             }
             set
             {
-                this.tenderEnvelopeIDField = value;
+                tenderEnvelopeIDField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.tenderEnvelopeTypeCodeField;
+                return tenderEnvelopeTypeCodeField;
             }
             set
             {
-                this.tenderEnvelopeTypeCodeField = value;
+                tenderEnvelopeTypeCodeField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.openTenderIDField;
+                return openTenderIDField;
             }
             set
             {
-                this.openTenderIDField = value;
+                openTenderIDField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.procurementProjectLotField;
+                return procurementProjectLotField;
             }
             set
             {
-                this.procurementProjectLotField = value;
+                procurementProjectLotField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.documentTenderRequirementField;
+                return documentTenderRequirementField;
             }
             set
             {
-                this.documentTenderRequirementField = value;
+                documentTenderRequirementField = value;
             }
         }
     }

@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.placardNotationField;
+                return placardNotationField;
             }
             set
             {
-                this.placardNotationField = value;
+                placardNotationField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.placardEndorsementField;
+                return placardEndorsementField;
             }
             set
             {
-                this.placardEndorsementField = value;
+                placardEndorsementField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.emergencyProceduresCodeField;
+                return emergencyProceduresCodeField;
             }
             set
             {
-                this.emergencyProceduresCodeField = value;
+                emergencyProceduresCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.extensionField;
+                return extensionField;
             }
             set
             {
-                this.extensionField = value;
+                extensionField = value;
             }
         }
     }

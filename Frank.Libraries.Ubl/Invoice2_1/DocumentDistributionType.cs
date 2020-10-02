@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.printQualifierField;
+                return printQualifierField;
             }
             set
             {
-                this.printQualifierField = value;
+                printQualifierField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.maximumCopiesNumericField;
+                return maximumCopiesNumericField;
             }
             set
             {
-                this.maximumCopiesNumericField = value;
+                maximumCopiesNumericField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.partyField;
+                return partyField;
             }
             set
             {
-                this.partyField = value;
+                partyField = value;
             }
         }
     }

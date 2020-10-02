@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.revisedForecastLineIDField;
+                return revisedForecastLineIDField;
             }
             set
             {
-                this.revisedForecastLineIDField = value;
+                revisedForecastLineIDField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.sourceForecastIssueDateField;
+                return sourceForecastIssueDateField;
             }
             set
             {
-                this.sourceForecastIssueDateField = value;
+                sourceForecastIssueDateField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.sourceForecastIssueTimeField;
+                return sourceForecastIssueTimeField;
             }
             set
             {
-                this.sourceForecastIssueTimeField = value;
+                sourceForecastIssueTimeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.adjustmentReasonCodeField;
+                return adjustmentReasonCodeField;
             }
             set
             {
-                this.adjustmentReasonCodeField = value;
+                adjustmentReasonCodeField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return this.forecastPeriodField;
+                return forecastPeriodField;
             }
             set
             {
-                this.forecastPeriodField = value;
+                forecastPeriodField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return this.salesItemField;
+                return salesItemField;
             }
             set
             {
-                this.salesItemField = value;
+                salesItemField = value;
             }
         }
     }

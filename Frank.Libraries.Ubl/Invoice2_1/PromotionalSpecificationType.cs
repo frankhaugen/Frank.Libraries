@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.specificationIDField;
+                return specificationIDField;
             }
             set
             {
-                this.specificationIDField = value;
+                specificationIDField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.promotionalEventLineItemField;
+                return promotionalEventLineItemField;
             }
             set
             {
-                this.promotionalEventLineItemField = value;
+                promotionalEventLineItemField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.eventTacticField;
+                return eventTacticField;
             }
             set
             {
-                this.eventTacticField = value;
+                eventTacticField = value;
             }
         }
     }

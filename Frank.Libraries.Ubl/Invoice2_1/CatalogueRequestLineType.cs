@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.contractSubdivisionField;
+                return contractSubdivisionField;
             }
             set
             {
-                this.contractSubdivisionField = value;
+                contractSubdivisionField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -69,11 +69,11 @@
         {
             get
             {
-                return this.lineValidityPeriodField;
+                return lineValidityPeriodField;
             }
             set
             {
-                this.lineValidityPeriodField = value;
+                lineValidityPeriodField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return this.requiredItemLocationQuantityField;
+                return requiredItemLocationQuantityField;
             }
             set
             {
-                this.requiredItemLocationQuantityField = value;
+                requiredItemLocationQuantityField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
     }

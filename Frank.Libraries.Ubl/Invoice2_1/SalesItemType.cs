@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.activityPropertyField;
+                return activityPropertyField;
             }
             set
             {
-                this.activityPropertyField = value;
+                activityPropertyField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.taxExclusivePriceField;
+                return taxExclusivePriceField;
             }
             set
             {
-                this.taxExclusivePriceField = value;
+                taxExclusivePriceField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.taxInclusivePriceField;
+                return taxInclusivePriceField;
             }
             set
             {
-                this.taxInclusivePriceField = value;
+                taxInclusivePriceField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
     }

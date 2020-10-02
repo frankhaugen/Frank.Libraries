@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.certRefsField;
+                return certRefsField;
             }
             set
             {
-                this.certRefsField = value;
+                certRefsField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

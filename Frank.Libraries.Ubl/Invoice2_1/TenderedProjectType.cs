@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.variantIDField;
+                return variantIDField;
             }
             set
             {
-                this.variantIDField = value;
+                variantIDField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.feeAmountField;
+                return feeAmountField;
             }
             set
             {
-                this.feeAmountField = value;
+                feeAmountField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.feeDescriptionField;
+                return feeDescriptionField;
             }
             set
             {
-                this.feeDescriptionField = value;
+                feeDescriptionField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.tenderEnvelopeIDField;
+                return tenderEnvelopeIDField;
             }
             set
             {
-                this.tenderEnvelopeIDField = value;
+                tenderEnvelopeIDField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.tenderEnvelopeTypeCodeField;
+                return tenderEnvelopeTypeCodeField;
             }
             set
             {
-                this.tenderEnvelopeTypeCodeField = value;
+                tenderEnvelopeTypeCodeField = value;
             }
         }
 
@@ -107,11 +107,11 @@
         {
             get
             {
-                return this.procurementProjectLotField;
+                return procurementProjectLotField;
             }
             set
             {
-                this.procurementProjectLotField = value;
+                procurementProjectLotField = value;
             }
         }
 
@@ -121,11 +121,11 @@
         {
             get
             {
-                return this.evidenceDocumentReferenceField;
+                return evidenceDocumentReferenceField;
             }
             set
             {
-                this.evidenceDocumentReferenceField = value;
+                evidenceDocumentReferenceField = value;
             }
         }
 
@@ -135,11 +135,11 @@
         {
             get
             {
-                return this.taxTotalField;
+                return taxTotalField;
             }
             set
             {
-                this.taxTotalField = value;
+                taxTotalField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return this.legalMonetaryTotalField;
+                return legalMonetaryTotalField;
             }
             set
             {
-                this.legalMonetaryTotalField = value;
+                legalMonetaryTotalField = value;
             }
         }
 
@@ -162,11 +162,11 @@
         {
             get
             {
-                return this.tenderLineField;
+                return tenderLineField;
             }
             set
             {
-                this.tenderLineField = value;
+                tenderLineField = value;
             }
         }
 
@@ -176,11 +176,11 @@
         {
             get
             {
-                return this.awardingCriterionResponseField;
+                return awardingCriterionResponseField;
             }
             set
             {
-                this.awardingCriterionResponseField = value;
+                awardingCriterionResponseField = value;
             }
         }
     }

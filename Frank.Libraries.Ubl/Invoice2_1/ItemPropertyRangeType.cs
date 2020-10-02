@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.minimumValueField;
+                return minimumValueField;
             }
             set
             {
-                this.minimumValueField = value;
+                minimumValueField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.maximumValueField;
+                return maximumValueField;
             }
             set
             {
-                this.maximumValueField = value;
+                maximumValueField = value;
             }
         }
     }

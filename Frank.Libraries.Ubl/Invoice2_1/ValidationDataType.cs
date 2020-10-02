@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.certificateValuesField;
+                return certificateValuesField;
             }
             set
             {
-                this.certificateValuesField = value;
+                certificateValuesField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.revocationValuesField;
+                return revocationValuesField;
             }
             set
             {
-                this.revocationValuesField = value;
+                revocationValuesField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.urField;
+                return urField;
             }
             set
             {
-                this.urField = value;
+                urField = value;
             }
         }
     }

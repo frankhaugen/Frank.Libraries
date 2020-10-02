@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.issuerField;
+                return issuerField;
             }
             set
             {
-                this.issuerField = value;
+                issuerField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return this.issueTimeField;
+                return issueTimeField;
             }
             set
             {
-                this.issueTimeField = value;
+                issueTimeField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.numberField;
+                return numberField;
             }
             set
             {
-                this.numberField = value;
+                numberField = value;
             }
         }
 
@@ -63,11 +63,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
     }

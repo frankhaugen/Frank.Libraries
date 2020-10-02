@@ -15,6 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Tests", "Fr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B59B3D8F-E264-43C5-AC5D-B2C9D016A6FA}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		LICENSE = LICENSE
 		.github\workflows\pipeline.yml = .github\workflows\pipeline.yml
@@ -45,7 +46,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Brreg", "Fr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Calculators", "Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj", "{9582CC18-65F5-4E7F-BF34-591616F33679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Csv", "Frank.Libraries.Csv\Frank.Libraries.Csv.csproj", "{5782C297-A30A-45BE-96D5-69A16E60F708}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Csv", "Frank.Libraries.Csv\Frank.Libraries.Csv.csproj", "{5782C297-A30A-45BE-96D5-69A16E60F708}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Ubl", "Frank.Libraries.Ubl\Frank.Libraries.Ubl.csproj", "{4C096A1A-28E3-4BCE-AE34-712CF133831C}"
 EndProject

@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.environmentalEmissionTypeCodeField;
+                return environmentalEmissionTypeCodeField;
             }
             set
             {
-                this.environmentalEmissionTypeCodeField = value;
+                environmentalEmissionTypeCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.valueMeasureField;
+                return valueMeasureField;
             }
             set
             {
-                this.valueMeasureField = value;
+                valueMeasureField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.emissionCalculationMethodField;
+                return emissionCalculationMethodField;
             }
             set
             {
-                this.emissionCalculationMethodField = value;
+                emissionCalculationMethodField = value;
             }
         }
     }

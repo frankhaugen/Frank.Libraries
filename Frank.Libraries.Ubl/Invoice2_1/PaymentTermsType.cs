@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.paymentMeansIDField;
+                return paymentMeansIDField;
             }
             set
             {
-                this.paymentMeansIDField = value;
+                paymentMeansIDField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.prepaidPaymentReferenceIDField;
+                return prepaidPaymentReferenceIDField;
             }
             set
             {
-                this.prepaidPaymentReferenceIDField = value;
+                prepaidPaymentReferenceIDField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.referenceEventCodeField;
+                return referenceEventCodeField;
             }
             set
             {
-                this.referenceEventCodeField = value;
+                referenceEventCodeField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return this.settlementDiscountPercentField;
+                return settlementDiscountPercentField;
             }
             set
             {
-                this.settlementDiscountPercentField = value;
+                settlementDiscountPercentField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return this.penaltySurchargePercentField;
+                return penaltySurchargePercentField;
             }
             set
             {
-                this.penaltySurchargePercentField = value;
+                penaltySurchargePercentField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return this.paymentPercentField;
+                return paymentPercentField;
             }
             set
             {
-                this.paymentPercentField = value;
+                paymentPercentField = value;
             }
         }
 
@@ -166,11 +166,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                return this.settlementDiscountAmountField;
+                return settlementDiscountAmountField;
             }
             set
             {
-                this.settlementDiscountAmountField = value;
+                settlementDiscountAmountField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return this.penaltyAmountField;
+                return penaltyAmountField;
             }
             set
             {
-                this.penaltyAmountField = value;
+                penaltyAmountField = value;
             }
         }
 
@@ -208,11 +208,11 @@
         {
             get
             {
-                return this.paymentTermsDetailsURIField;
+                return paymentTermsDetailsURIField;
             }
             set
             {
-                this.paymentTermsDetailsURIField = value;
+                paymentTermsDetailsURIField = value;
             }
         }
 
@@ -222,11 +222,11 @@
         {
             get
             {
-                return this.paymentDueDateField;
+                return paymentDueDateField;
             }
             set
             {
-                this.paymentDueDateField = value;
+                paymentDueDateField = value;
             }
         }
 
@@ -236,11 +236,11 @@
         {
             get
             {
-                return this.installmentDueDateField;
+                return installmentDueDateField;
             }
             set
             {
-                this.installmentDueDateField = value;
+                installmentDueDateField = value;
             }
         }
 
@@ -250,11 +250,11 @@
         {
             get
             {
-                return this.invoicingPartyReferenceField;
+                return invoicingPartyReferenceField;
             }
             set
             {
-                this.invoicingPartyReferenceField = value;
+                invoicingPartyReferenceField = value;
             }
         }
 
@@ -263,11 +263,11 @@
         {
             get
             {
-                return this.settlementPeriodField;
+                return settlementPeriodField;
             }
             set
             {
-                this.settlementPeriodField = value;
+                settlementPeriodField = value;
             }
         }
 
@@ -276,11 +276,11 @@
         {
             get
             {
-                return this.penaltyPeriodField;
+                return penaltyPeriodField;
             }
             set
             {
-                this.penaltyPeriodField = value;
+                penaltyPeriodField = value;
             }
         }
 
@@ -289,11 +289,11 @@
         {
             get
             {
-                return this.exchangeRateField;
+                return exchangeRateField;
             }
             set
             {
-                this.exchangeRateField = value;
+                exchangeRateField = value;
             }
         }
 
@@ -302,11 +302,11 @@
         {
             get
             {
-                return this.validityPeriodField;
+                return validityPeriodField;
             }
             set
             {
-                this.validityPeriodField = value;
+                validityPeriodField = value;
             }
         }
     }

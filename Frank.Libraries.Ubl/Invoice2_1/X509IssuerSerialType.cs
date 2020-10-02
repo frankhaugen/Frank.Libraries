@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.x509IssuerNameField;
+                return x509IssuerNameField;
             }
             set
             {
-                this.x509IssuerNameField = value;
+                x509IssuerNameField = value;
             }
         }
 
@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.x509SerialNumberField;
+                return x509SerialNumberField;
             }
             set
             {
-                this.x509SerialNumberField = value;
+                x509SerialNumberField = value;
             }
         }
     }

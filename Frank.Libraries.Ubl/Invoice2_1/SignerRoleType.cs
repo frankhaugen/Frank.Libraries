@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.claimedRolesField;
+                return claimedRolesField;
             }
             set
             {
-                this.claimedRolesField = value;
+                claimedRolesField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.certifiedRolesField;
+                return certifiedRolesField;
             }
             set
             {
-                this.certifiedRolesField = value;
+                certifiedRolesField = value;
             }
         }
     }

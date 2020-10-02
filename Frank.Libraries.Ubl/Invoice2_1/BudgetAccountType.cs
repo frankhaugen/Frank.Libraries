@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.budgetYearNumericField;
+                return budgetYearNumericField;
             }
             set
             {
-                this.budgetYearNumericField = value;
+                budgetYearNumericField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.requiredClassificationSchemeField;
+                return requiredClassificationSchemeField;
             }
             set
             {
-                this.requiredClassificationSchemeField = value;
+                requiredClassificationSchemeField = value;
             }
         }
     }

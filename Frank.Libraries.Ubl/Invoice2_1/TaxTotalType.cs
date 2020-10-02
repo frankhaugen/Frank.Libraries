@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.taxAmountField;
+                return taxAmountField;
             }
             set
             {
-                this.taxAmountField = value;
+                taxAmountField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.roundingAmountField;
+                return roundingAmountField;
             }
             set
             {
-                this.roundingAmountField = value;
+                roundingAmountField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.taxEvidenceIndicatorField;
+                return taxEvidenceIndicatorField;
             }
             set
             {
-                this.taxEvidenceIndicatorField = value;
+                taxEvidenceIndicatorField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.taxIncludedIndicatorField;
+                return taxIncludedIndicatorField;
             }
             set
             {
-                this.taxIncludedIndicatorField = value;
+                taxIncludedIndicatorField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.taxSubtotalField;
+                return taxSubtotalField;
             }
             set
             {
-                this.taxSubtotalField = value;
+                taxSubtotalField = value;
             }
         }
     }

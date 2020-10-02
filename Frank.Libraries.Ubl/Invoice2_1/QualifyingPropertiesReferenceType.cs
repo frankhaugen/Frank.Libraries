@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

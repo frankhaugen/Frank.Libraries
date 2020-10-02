@@ -21,11 +21,11 @@
         {
             get
             {
-                return this.anyField;
+                return anyField;
             }
             set
             {
-                this.anyField = value;
+                anyField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return this.anyAttrField;
+                return anyAttrField;
             }
             set
             {
-                this.anyAttrField = value;
+                anyAttrField = value;
             }
         }
     }

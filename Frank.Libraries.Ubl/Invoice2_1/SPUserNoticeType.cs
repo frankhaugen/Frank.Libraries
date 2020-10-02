@@ -19,11 +19,11 @@
         {
             get
             {
-                return this.noticeRefField;
+                return noticeRefField;
             }
             set
             {
-                this.noticeRefField = value;
+                noticeRefField = value;
             }
         }
 
@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.explicitTextField;
+                return explicitTextField;
             }
             set
             {
-                this.explicitTextField = value;
+                explicitTextField = value;
             }
         }
     }

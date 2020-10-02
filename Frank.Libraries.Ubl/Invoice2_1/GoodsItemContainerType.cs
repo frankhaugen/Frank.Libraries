@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.transportEquipmentField;
+                return transportEquipmentField;
             }
             set
             {
-                this.transportEquipmentField = value;
+                transportEquipmentField = value;
             }
         }
     }

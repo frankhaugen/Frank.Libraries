@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.performanceValueQuantityField;
+                return performanceValueQuantityField;
             }
             set
             {
-                this.performanceValueQuantityField = value;
+                performanceValueQuantityField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.performanceMetricTypeCodeField;
+                return performanceMetricTypeCodeField;
             }
             set
             {
-                this.performanceMetricTypeCodeField = value;
+                performanceMetricTypeCodeField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return this.periodField;
+                return periodField;
             }
             set
             {
-                this.periodField = value;
+                periodField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
     }

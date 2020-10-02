@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.informationField;
+                return informationField;
             }
             set
             {
-                this.informationField = value;
+                informationField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.referenceField;
+                return referenceField;
             }
             set
             {
-                this.referenceField = value;
+                referenceField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.applicableAddressField;
+                return applicableAddressField;
             }
             set
             {
-                this.applicableAddressField = value;
+                applicableAddressField = value;
             }
         }
     }

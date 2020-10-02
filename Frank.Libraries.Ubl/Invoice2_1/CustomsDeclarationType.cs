@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.issuerPartyField;
+                return issuerPartyField;
             }
             set
             {
-                this.issuerPartyField = value;
+                issuerPartyField = value;
             }
         }
     }

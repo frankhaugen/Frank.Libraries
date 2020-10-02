@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.lineField;
+                return lineField;
             }
             set
             {
-                this.lineField = value;
+                lineField = value;
             }
         }
     }

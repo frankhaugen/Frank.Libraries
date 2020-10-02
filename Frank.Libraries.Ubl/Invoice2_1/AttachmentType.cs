@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.embeddedDocumentBinaryObjectField;
+                return embeddedDocumentBinaryObjectField;
             }
             set
             {
-                this.embeddedDocumentBinaryObjectField = value;
+                embeddedDocumentBinaryObjectField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.externalReferenceField;
+                return externalReferenceField;
             }
             set
             {
-                this.externalReferenceField = value;
+                externalReferenceField = value;
             }
         }
     }

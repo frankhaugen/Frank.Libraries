@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.companyLegalFormCodeField;
+                return companyLegalFormCodeField;
             }
             set
             {
-                this.companyLegalFormCodeField = value;
+                companyLegalFormCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.companyLegalFormField;
+                return companyLegalFormField;
             }
             set
             {
-                this.companyLegalFormField = value;
+                companyLegalFormField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.personalSituationField;
+                return personalSituationField;
             }
             set
             {
-                this.personalSituationField = value;
+                personalSituationField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.operatingYearsQuantityField;
+                return operatingYearsQuantityField;
             }
             set
             {
-                this.operatingYearsQuantityField = value;
+                operatingYearsQuantityField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.employeeQuantityField;
+                return employeeQuantityField;
             }
             set
             {
-                this.employeeQuantityField = value;
+                employeeQuantityField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return this.requiredBusinessClassificationSchemeField;
+                return requiredBusinessClassificationSchemeField;
             }
             set
             {
-                this.requiredBusinessClassificationSchemeField = value;
+                requiredBusinessClassificationSchemeField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return this.technicalEvaluationCriterionField;
+                return technicalEvaluationCriterionField;
             }
             set
             {
-                this.technicalEvaluationCriterionField = value;
+                technicalEvaluationCriterionField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return this.financialEvaluationCriterionField;
+                return financialEvaluationCriterionField;
             }
             set
             {
-                this.financialEvaluationCriterionField = value;
+                financialEvaluationCriterionField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return this.specificTendererRequirementField;
+                return specificTendererRequirementField;
             }
             set
             {
-                this.specificTendererRequirementField = value;
+                specificTendererRequirementField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.economicOperatorRoleField;
+                return economicOperatorRoleField;
             }
             set
             {
-                this.economicOperatorRoleField = value;
+                economicOperatorRoleField = value;
             }
         }
     }

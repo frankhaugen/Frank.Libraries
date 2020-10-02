@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.conditionCodeField;
+                return conditionCodeField;
             }
             set
             {
-                this.conditionCodeField = value;
+                conditionCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.referenceDateField;
+                return referenceDateField;
             }
             set
             {
-                this.referenceDateField = value;
+                referenceDateField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.referenceTimeField;
+                return referenceTimeField;
             }
             set
             {
-                this.referenceTimeField = value;
+                referenceTimeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.statusReasonCodeField;
+                return statusReasonCodeField;
             }
             set
             {
-                this.statusReasonCodeField = value;
+                statusReasonCodeField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.statusReasonField;
+                return statusReasonField;
             }
             set
             {
-                this.statusReasonField = value;
+                statusReasonField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return this.sequenceIDField;
+                return sequenceIDField;
             }
             set
             {
-                this.sequenceIDField = value;
+                sequenceIDField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return this.textField;
+                return textField;
             }
             set
             {
-                this.textField = value;
+                textField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return this.indicationIndicatorField;
+                return indicationIndicatorField;
             }
             set
             {
-                this.indicationIndicatorField = value;
+                indicationIndicatorField = value;
             }
         }
 
@@ -166,11 +166,11 @@
         {
             get
             {
-                return this.percentField;
+                return percentField;
             }
             set
             {
-                this.percentField = value;
+                percentField = value;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                return this.reliabilityPercentField;
+                return reliabilityPercentField;
             }
             set
             {
-                this.reliabilityPercentField = value;
+                reliabilityPercentField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return this.conditionField;
+                return conditionField;
             }
             set
             {
-                this.conditionField = value;
+                conditionField = value;
             }
         }
     }

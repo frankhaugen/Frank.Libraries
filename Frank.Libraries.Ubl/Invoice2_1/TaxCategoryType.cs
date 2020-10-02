@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.percentField;
+                return percentField;
             }
             set
             {
-                this.percentField = value;
+                percentField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return this.baseUnitMeasureField;
+                return baseUnitMeasureField;
             }
             set
             {
-                this.baseUnitMeasureField = value;
+                baseUnitMeasureField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return this.perUnitAmountField;
+                return perUnitAmountField;
             }
             set
             {
-                this.perUnitAmountField = value;
+                perUnitAmountField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return this.taxExemptionReasonCodeField;
+                return taxExemptionReasonCodeField;
             }
             set
             {
-                this.taxExemptionReasonCodeField = value;
+                taxExemptionReasonCodeField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return this.taxExemptionReasonField;
+                return taxExemptionReasonField;
             }
             set
             {
-                this.taxExemptionReasonField = value;
+                taxExemptionReasonField = value;
             }
         }
 
@@ -134,11 +134,11 @@
         {
             get
             {
-                return this.tierRangeField;
+                return tierRangeField;
             }
             set
             {
-                this.tierRangeField = value;
+                tierRangeField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return this.tierRatePercentField;
+                return tierRatePercentField;
             }
             set
             {
-                this.tierRatePercentField = value;
+                tierRatePercentField = value;
             }
         }
 
@@ -161,11 +161,11 @@
         {
             get
             {
-                return this.taxSchemeField;
+                return taxSchemeField;
             }
             set
             {
-                this.taxSchemeField = value;
+                taxSchemeField = value;
             }
         }
     }

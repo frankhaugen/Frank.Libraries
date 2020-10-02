@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.attributeIDField;
+                return attributeIDField;
             }
             set
             {
-                this.attributeIDField = value;
+                attributeIDField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.positionCodeField;
+                return positionCodeField;
             }
             set
             {
-                this.positionCodeField = value;
+                positionCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.descriptionCodeField;
+                return descriptionCodeField;
             }
             set
             {
-                this.descriptionCodeField = value;
+                descriptionCodeField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
     }

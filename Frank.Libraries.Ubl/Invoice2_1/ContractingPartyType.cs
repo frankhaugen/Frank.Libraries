@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.buyerProfileURIField;
+                return buyerProfileURIField;
             }
             set
             {
-                this.buyerProfileURIField = value;
+                buyerProfileURIField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.contractingPartyType1Field;
+                return contractingPartyType1Field;
             }
             set
             {
-                this.contractingPartyType1Field = value;
+                contractingPartyType1Field = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.contractingActivityField;
+                return contractingActivityField;
             }
             set
             {
-                this.contractingActivityField = value;
+                contractingActivityField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.partyField;
+                return partyField;
             }
             set
             {
-                this.partyField = value;
+                partyField = value;
             }
         }
     }

@@ -25,11 +25,11 @@
         {
             get
             {
-                return this.signedInfoField;
+                return signedInfoField;
             }
             set
             {
-                this.signedInfoField = value;
+                signedInfoField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.signatureValueField;
+                return signatureValueField;
             }
             set
             {
-                this.signatureValueField = value;
+                signatureValueField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.keyInfoField;
+                return keyInfoField;
             }
             set
             {
-                this.keyInfoField = value;
+                keyInfoField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.objectField;
+                return objectField;
             }
             set
             {
-                this.objectField = value;
+                objectField = value;
             }
         }
 
@@ -79,11 +79,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

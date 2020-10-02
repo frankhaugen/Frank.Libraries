@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.channelCodeField;
+                return channelCodeField;
             }
             set
             {
-                this.channelCodeField = value;
+                channelCodeField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.channelField;
+                return channelField;
             }
             set
             {
-                this.channelField = value;
+                channelField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

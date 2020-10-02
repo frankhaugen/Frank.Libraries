@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.transportEmergencyCardCodeField;
+                return transportEmergencyCardCodeField;
             }
             set
             {
-                this.transportEmergencyCardCodeField = value;
+                transportEmergencyCardCodeField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.packingCriteriaCodeField;
+                return packingCriteriaCodeField;
             }
             set
             {
-                this.packingCriteriaCodeField = value;
+                packingCriteriaCodeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.hazardousRegulationCodeField;
+                return hazardousRegulationCodeField;
             }
             set
             {
-                this.hazardousRegulationCodeField = value;
+                hazardousRegulationCodeField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.inhalationToxicityZoneCodeField;
+                return inhalationToxicityZoneCodeField;
             }
             set
             {
-                this.inhalationToxicityZoneCodeField = value;
+                inhalationToxicityZoneCodeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.transportAuthorizationCodeField;
+                return transportAuthorizationCodeField;
             }
             set
             {
-                this.transportAuthorizationCodeField = value;
+                transportAuthorizationCodeField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return this.maximumTemperatureField;
+                return maximumTemperatureField;
             }
             set
             {
-                this.maximumTemperatureField = value;
+                maximumTemperatureField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.minimumTemperatureField;
+                return minimumTemperatureField;
             }
             set
             {
-                this.minimumTemperatureField = value;
+                minimumTemperatureField = value;
             }
         }
     }

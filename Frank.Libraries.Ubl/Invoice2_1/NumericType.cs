@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.formatField;
+                return formatField;
             }
             set
             {
-                this.formatField = value;
+                formatField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

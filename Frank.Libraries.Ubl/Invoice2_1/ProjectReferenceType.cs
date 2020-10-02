@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.workPhaseReferenceField;
+                return workPhaseReferenceField;
             }
             set
             {
-                this.workPhaseReferenceField = value;
+                workPhaseReferenceField = value;
             }
         }
     }

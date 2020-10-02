@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return this.issueTimeField;
+                return issueTimeField;
             }
             set
             {
-                this.issueTimeField = value;
+                issueTimeField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return this.revisionDateField;
+                return revisionDateField;
             }
             set
             {
-                this.revisionDateField = value;
+                revisionDateField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return this.revisionTimeField;
+                return revisionTimeField;
             }
             set
             {
-                this.revisionTimeField = value;
+                revisionTimeField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -134,11 +134,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return this.versionIDField;
+                return versionIDField;
             }
             set
             {
-                this.versionIDField = value;
+                versionIDField = value;
             }
         }
 
@@ -162,11 +162,11 @@
         {
             get
             {
-                return this.previousVersionIDField;
+                return previousVersionIDField;
             }
             set
             {
-                this.previousVersionIDField = value;
+                previousVersionIDField = value;
             }
         }
     }

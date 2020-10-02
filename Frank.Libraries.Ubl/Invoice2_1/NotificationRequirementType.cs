@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.notificationTypeCodeField;
+                return notificationTypeCodeField;
             }
             set
             {
-                this.notificationTypeCodeField = value;
+                notificationTypeCodeField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.postEventNotificationDurationMeasureField;
+                return postEventNotificationDurationMeasureField;
             }
             set
             {
-                this.postEventNotificationDurationMeasureField = value;
+                postEventNotificationDurationMeasureField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.preEventNotificationDurationMeasureField;
+                return preEventNotificationDurationMeasureField;
             }
             set
             {
-                this.preEventNotificationDurationMeasureField = value;
+                preEventNotificationDurationMeasureField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.notifyPartyField;
+                return notifyPartyField;
             }
             set
             {
-                this.notifyPartyField = value;
+                notifyPartyField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.notificationPeriodField;
+                return notificationPeriodField;
             }
             set
             {
-                this.notificationPeriodField = value;
+                notificationPeriodField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.notificationLocationField;
+                return notificationLocationField;
             }
             set
             {
-                this.notificationLocationField = value;
+                notificationLocationField = value;
             }
         }
     }

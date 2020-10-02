@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.averageAmountField;
+                return averageAmountField;
             }
             set
             {
-                this.averageAmountField = value;
+                averageAmountField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
     }

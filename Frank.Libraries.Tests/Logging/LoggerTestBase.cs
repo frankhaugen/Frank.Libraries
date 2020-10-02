@@ -1,6 +1,6 @@
 ﻿namespace Frank.Libraries.Tests.Logging
 {
-    public abstract class LoggerTestBase<T>
+    public abstract class LoggerTestBase
     {
         //public ILogger<T> Setup()
         //{

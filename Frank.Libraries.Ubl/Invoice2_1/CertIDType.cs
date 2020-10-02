@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.certDigestField;
+                return certDigestField;
             }
             set
             {
-                this.certDigestField = value;
+                certDigestField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.issuerSerialField;
+                return issuerSerialField;
             }
             set
             {
-                this.issuerSerialField = value;
+                issuerSerialField = value;
             }
         }
 
@@ -47,11 +47,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
     }

@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.lineIDField;
+                return lineIDField;
             }
             set
             {
-                this.lineIDField = value;
+                lineIDField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.salesOrderLineIDField;
+                return salesOrderLineIDField;
             }
             set
             {
-                this.salesOrderLineIDField = value;
+                salesOrderLineIDField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.lineStatusCodeField;
+                return lineStatusCodeField;
             }
             set
             {
-                this.lineStatusCodeField = value;
+                lineStatusCodeField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return this.orderReferenceField;
+                return orderReferenceField;
             }
             set
             {
-                this.orderReferenceField = value;
+                orderReferenceField = value;
             }
         }
     }

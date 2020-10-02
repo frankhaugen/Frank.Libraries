@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.taxTypeCodeField;
+                return taxTypeCodeField;
             }
             set
             {
-                this.taxTypeCodeField = value;
+                taxTypeCodeField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.currencyCodeField;
+                return currencyCodeField;
             }
             set
             {
-                this.currencyCodeField = value;
+                currencyCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.jurisdictionRegionAddressField;
+                return jurisdictionRegionAddressField;
             }
             set
             {
-                this.jurisdictionRegionAddressField = value;
+                jurisdictionRegionAddressField = value;
             }
         }
     }

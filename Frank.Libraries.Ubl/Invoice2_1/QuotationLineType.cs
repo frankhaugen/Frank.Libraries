@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.lineExtensionAmountField;
+                return lineExtensionAmountField;
             }
             set
             {
-                this.lineExtensionAmountField = value;
+                lineExtensionAmountField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.totalTaxAmountField;
+                return totalTaxAmountField;
             }
             set
             {
-                this.totalTaxAmountField = value;
+                totalTaxAmountField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return this.requestForQuotationLineIDField;
+                return requestForQuotationLineIDField;
             }
             set
             {
-                this.requestForQuotationLineIDField = value;
+                requestForQuotationLineIDField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -135,11 +135,11 @@
         {
             get
             {
-                return this.lineItemField;
+                return lineItemField;
             }
             set
             {
-                this.lineItemField = value;
+                lineItemField = value;
             }
         }
 
@@ -149,11 +149,11 @@
         {
             get
             {
-                return this.sellerProposedSubstituteLineItemField;
+                return sellerProposedSubstituteLineItemField;
             }
             set
             {
-                this.sellerProposedSubstituteLineItemField = value;
+                sellerProposedSubstituteLineItemField = value;
             }
         }
 
@@ -163,11 +163,11 @@
         {
             get
             {
-                return this.alternativeLineItemField;
+                return alternativeLineItemField;
             }
             set
             {
-                this.alternativeLineItemField = value;
+                alternativeLineItemField = value;
             }
         }
 
@@ -176,11 +176,11 @@
         {
             get
             {
-                return this.requestLineReferenceField;
+                return requestLineReferenceField;
             }
             set
             {
-                this.requestLineReferenceField = value;
+                requestLineReferenceField = value;
             }
         }
     }

@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.utilityStatementTypeCodeField;
+                return utilityStatementTypeCodeField;
             }
             set
             {
-                this.utilityStatementTypeCodeField = value;
+                utilityStatementTypeCodeField = value;
             }
         }
 
@@ -43,11 +43,11 @@
         {
             get
             {
-                return this.mainPeriodField;
+                return mainPeriodField;
             }
             set
             {
-                this.mainPeriodField = value;
+                mainPeriodField = value;
             }
         }
 
@@ -57,11 +57,11 @@
         {
             get
             {
-                return this.allowanceChargeField;
+                return allowanceChargeField;
             }
             set
             {
-                this.allowanceChargeField = value;
+                allowanceChargeField = value;
             }
         }
 
@@ -71,11 +71,11 @@
         {
             get
             {
-                return this.taxTotalField;
+                return taxTotalField;
             }
             set
             {
-                this.taxTotalField = value;
+                taxTotalField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.energyWaterSupplyField;
+                return energyWaterSupplyField;
             }
             set
             {
-                this.energyWaterSupplyField = value;
+                energyWaterSupplyField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return this.telecommunicationsSupplyField;
+                return telecommunicationsSupplyField;
             }
             set
             {
-                this.telecommunicationsSupplyField = value;
+                telecommunicationsSupplyField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.legalMonetaryTotalField;
+                return legalMonetaryTotalField;
             }
             set
             {
-                this.legalMonetaryTotalField = value;
+                legalMonetaryTotalField = value;
             }
         }
     }

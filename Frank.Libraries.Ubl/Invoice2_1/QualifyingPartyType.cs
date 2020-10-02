@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.participationPercentField;
+                return participationPercentField;
             }
             set
             {
-                this.participationPercentField = value;
+                participationPercentField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.personalSituationField;
+                return personalSituationField;
             }
             set
             {
-                this.personalSituationField = value;
+                personalSituationField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.operatingYearsQuantityField;
+                return operatingYearsQuantityField;
             }
             set
             {
-                this.operatingYearsQuantityField = value;
+                operatingYearsQuantityField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.employeeQuantityField;
+                return employeeQuantityField;
             }
             set
             {
-                this.employeeQuantityField = value;
+                employeeQuantityField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.businessClassificationEvidenceIDField;
+                return businessClassificationEvidenceIDField;
             }
             set
             {
-                this.businessClassificationEvidenceIDField = value;
+                businessClassificationEvidenceIDField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.businessIdentityEvidenceIDField;
+                return businessIdentityEvidenceIDField;
             }
             set
             {
-                this.businessIdentityEvidenceIDField = value;
+                businessIdentityEvidenceIDField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.tendererRoleCodeField;
+                return tendererRoleCodeField;
             }
             set
             {
-                this.tendererRoleCodeField = value;
+                tendererRoleCodeField = value;
             }
         }
 
@@ -141,11 +141,11 @@
         {
             get
             {
-                return this.businessClassificationSchemeField;
+                return businessClassificationSchemeField;
             }
             set
             {
-                this.businessClassificationSchemeField = value;
+                businessClassificationSchemeField = value;
             }
         }
 
@@ -155,11 +155,11 @@
         {
             get
             {
-                return this.technicalCapabilityField;
+                return technicalCapabilityField;
             }
             set
             {
-                this.technicalCapabilityField = value;
+                technicalCapabilityField = value;
             }
         }
 
@@ -169,11 +169,11 @@
         {
             get
             {
-                return this.financialCapabilityField;
+                return financialCapabilityField;
             }
             set
             {
-                this.financialCapabilityField = value;
+                financialCapabilityField = value;
             }
         }
 
@@ -183,11 +183,11 @@
         {
             get
             {
-                return this.completedTaskField;
+                return completedTaskField;
             }
             set
             {
-                this.completedTaskField = value;
+                completedTaskField = value;
             }
         }
 
@@ -197,11 +197,11 @@
         {
             get
             {
-                return this.declarationField;
+                return declarationField;
             }
             set
             {
-                this.declarationField = value;
+                declarationField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return this.partyField;
+                return partyField;
             }
             set
             {
-                this.partyField = value;
+                partyField = value;
             }
         }
 
@@ -223,11 +223,11 @@
         {
             get
             {
-                return this.economicOperatorRoleField;
+                return economicOperatorRoleField;
             }
             set
             {
-                this.economicOperatorRoleField = value;
+                economicOperatorRoleField = value;
             }
         }
     }

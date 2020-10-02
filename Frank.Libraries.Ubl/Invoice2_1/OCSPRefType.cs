@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.oCSPIdentifierField;
+                return oCSPIdentifierField;
             }
             set
             {
-                this.oCSPIdentifierField = value;
+                oCSPIdentifierField = value;
             }
         }
 
@@ -31,11 +31,11 @@
         {
             get
             {
-                return this.digestAlgAndValueField;
+                return digestAlgAndValueField;
             }
             set
             {
-                this.digestAlgAndValueField = value;
+                digestAlgAndValueField = value;
             }
         }
     }

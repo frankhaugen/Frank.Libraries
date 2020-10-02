@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.interestedProcurementProjectLotField;
+                return interestedProcurementProjectLotField;
             }
             set
             {
-                this.interestedProcurementProjectLotField = value;
+                interestedProcurementProjectLotField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return this.mainQualifyingPartyField;
+                return mainQualifyingPartyField;
             }
             set
             {
-                this.mainQualifyingPartyField = value;
+                mainQualifyingPartyField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.additionalQualifyingPartyField;
+                return additionalQualifyingPartyField;
             }
             set
             {
-                this.additionalQualifyingPartyField = value;
+                additionalQualifyingPartyField = value;
             }
         }
     }

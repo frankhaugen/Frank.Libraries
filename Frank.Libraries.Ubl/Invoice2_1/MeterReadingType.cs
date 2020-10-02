@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.meterReadingType1Field;
+                return meterReadingType1Field;
             }
             set
             {
-                this.meterReadingType1Field = value;
+                meterReadingType1Field = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.meterReadingTypeCodeField;
+                return meterReadingTypeCodeField;
             }
             set
             {
-                this.meterReadingTypeCodeField = value;
+                meterReadingTypeCodeField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.previousMeterReadingDateField;
+                return previousMeterReadingDateField;
             }
             set
             {
-                this.previousMeterReadingDateField = value;
+                previousMeterReadingDateField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.previousMeterQuantityField;
+                return previousMeterQuantityField;
             }
             set
             {
-                this.previousMeterQuantityField = value;
+                previousMeterQuantityField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.latestMeterReadingDateField;
+                return latestMeterReadingDateField;
             }
             set
             {
-                this.latestMeterReadingDateField = value;
+                latestMeterReadingDateField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return this.latestMeterQuantityField;
+                return latestMeterQuantityField;
             }
             set
             {
-                this.latestMeterQuantityField = value;
+                latestMeterQuantityField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return this.previousMeterReadingMethodField;
+                return previousMeterReadingMethodField;
             }
             set
             {
-                this.previousMeterReadingMethodField = value;
+                previousMeterReadingMethodField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return this.previousMeterReadingMethodCodeField;
+                return previousMeterReadingMethodCodeField;
             }
             set
             {
-                this.previousMeterReadingMethodCodeField = value;
+                previousMeterReadingMethodCodeField = value;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                return this.latestMeterReadingMethodField;
+                return latestMeterReadingMethodField;
             }
             set
             {
-                this.latestMeterReadingMethodField = value;
+                latestMeterReadingMethodField = value;
             }
         }
 
@@ -182,11 +182,11 @@
         {
             get
             {
-                return this.latestMeterReadingMethodCodeField;
+                return latestMeterReadingMethodCodeField;
             }
             set
             {
-                this.latestMeterReadingMethodCodeField = value;
+                latestMeterReadingMethodCodeField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return this.meterReadingCommentsField;
+                return meterReadingCommentsField;
             }
             set
             {
-                this.meterReadingCommentsField = value;
+                meterReadingCommentsField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return this.deliveredQuantityField;
+                return deliveredQuantityField;
             }
             set
             {
-                this.deliveredQuantityField = value;
+                deliveredQuantityField = value;
             }
         }
     }

@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.priceAmountField;
+                return priceAmountField;
             }
             set
             {
-                this.priceAmountField = value;
+                priceAmountField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.baseQuantityField;
+                return baseQuantityField;
             }
             set
             {
-                this.baseQuantityField = value;
+                baseQuantityField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.priceChangeReasonField;
+                return priceChangeReasonField;
             }
             set
             {
-                this.priceChangeReasonField = value;
+                priceChangeReasonField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return this.priceTypeCodeField;
+                return priceTypeCodeField;
             }
             set
             {
-                this.priceTypeCodeField = value;
+                priceTypeCodeField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return this.priceType1Field;
+                return priceType1Field;
             }
             set
             {
-                this.priceType1Field = value;
+                priceType1Field = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return this.orderableUnitFactorRateField;
+                return orderableUnitFactorRateField;
             }
             set
             {
-                this.orderableUnitFactorRateField = value;
+                orderableUnitFactorRateField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return this.validityPeriodField;
+                return validityPeriodField;
             }
             set
             {
-                this.validityPeriodField = value;
+                validityPeriodField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return this.priceListField;
+                return priceListField;
             }
             set
             {
-                this.priceListField = value;
+                priceListField = value;
             }
         }
 
@@ -147,11 +147,11 @@
         {
             get
             {
-                return this.allowanceChargeField;
+                return allowanceChargeField;
             }
             set
             {
-                this.allowanceChargeField = value;
+                allowanceChargeField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return this.pricingExchangeRateField;
+                return pricingExchangeRateField;
             }
             set
             {
-                this.pricingExchangeRateField = value;
+                pricingExchangeRateField = value;
             }
         }
     }

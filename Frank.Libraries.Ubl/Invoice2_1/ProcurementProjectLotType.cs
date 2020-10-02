@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -35,11 +35,11 @@
         {
             get
             {
-                return this.tenderingTermsField;
+                return tenderingTermsField;
             }
             set
             {
-                this.tenderingTermsField = value;
+                tenderingTermsField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.procurementProjectField;
+                return procurementProjectField;
             }
             set
             {
-                this.procurementProjectField = value;
+                procurementProjectField = value;
             }
         }
     }

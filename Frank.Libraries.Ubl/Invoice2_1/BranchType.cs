@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.financialInstitutionField;
+                return financialInstitutionField;
             }
             set
             {
-                this.financialInstitutionField = value;
+                financialInstitutionField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.addressField;
+                return addressField;
             }
             set
             {
-                this.addressField = value;
+                addressField = value;
             }
         }
     }

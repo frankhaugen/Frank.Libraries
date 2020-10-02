@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.lineExtensionAmountField;
+                return lineExtensionAmountField;
             }
             set
             {
-                this.lineExtensionAmountField = value;
+                lineExtensionAmountField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.taxExclusiveAmountField;
+                return taxExclusiveAmountField;
             }
             set
             {
-                this.taxExclusiveAmountField = value;
+                taxExclusiveAmountField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.taxInclusiveAmountField;
+                return taxInclusiveAmountField;
             }
             set
             {
-                this.taxInclusiveAmountField = value;
+                taxInclusiveAmountField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.allowanceTotalAmountField;
+                return allowanceTotalAmountField;
             }
             set
             {
-                this.allowanceTotalAmountField = value;
+                allowanceTotalAmountField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.chargeTotalAmountField;
+                return chargeTotalAmountField;
             }
             set
             {
-                this.chargeTotalAmountField = value;
+                chargeTotalAmountField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.prepaidAmountField;
+                return prepaidAmountField;
             }
             set
             {
-                this.prepaidAmountField = value;
+                prepaidAmountField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.payableRoundingAmountField;
+                return payableRoundingAmountField;
             }
             set
             {
-                this.payableRoundingAmountField = value;
+                payableRoundingAmountField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.payableAmountField;
+                return payableAmountField;
             }
             set
             {
-                this.payableAmountField = value;
+                payableAmountField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return this.payableAlternativeAmountField;
+                return payableAlternativeAmountField;
             }
             set
             {
-                this.payableAlternativeAmountField = value;
+                payableAlternativeAmountField = value;
             }
         }
     }

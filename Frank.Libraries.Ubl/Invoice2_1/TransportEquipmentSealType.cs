@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.sealIssuerTypeCodeField;
+                return sealIssuerTypeCodeField;
             }
             set
             {
-                this.sealIssuerTypeCodeField = value;
+                sealIssuerTypeCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.conditionField;
+                return conditionField;
             }
             set
             {
-                this.conditionField = value;
+                conditionField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.sealStatusCodeField;
+                return sealStatusCodeField;
             }
             set
             {
-                this.sealStatusCodeField = value;
+                sealStatusCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.sealingPartyTypeField;
+                return sealingPartyTypeField;
             }
             set
             {
-                this.sealingPartyTypeField = value;
+                sealingPartyTypeField = value;
             }
         }
     }

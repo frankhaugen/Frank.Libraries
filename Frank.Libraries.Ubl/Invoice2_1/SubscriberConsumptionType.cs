@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.consumptionIDField;
+                return consumptionIDField;
             }
             set
             {
-                this.consumptionIDField = value;
+                consumptionIDField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.specificationTypeCodeField;
+                return specificationTypeCodeField;
             }
             set
             {
-                this.specificationTypeCodeField = value;
+                specificationTypeCodeField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.totalMeteredQuantityField;
+                return totalMeteredQuantityField;
             }
             set
             {
-                this.totalMeteredQuantityField = value;
+                totalMeteredQuantityField = value;
             }
         }
 
@@ -89,11 +89,11 @@
         {
             get
             {
-                return this.subscriberPartyField;
+                return subscriberPartyField;
             }
             set
             {
-                this.subscriberPartyField = value;
+                subscriberPartyField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.utilityConsumptionPointField;
+                return utilityConsumptionPointField;
             }
             set
             {
-                this.utilityConsumptionPointField = value;
+                utilityConsumptionPointField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.onAccountPaymentField;
+                return onAccountPaymentField;
             }
             set
             {
-                this.onAccountPaymentField = value;
+                onAccountPaymentField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return this.consumptionField;
+                return consumptionField;
             }
             set
             {
-                this.consumptionField = value;
+                consumptionField = value;
             }
         }
 
@@ -143,11 +143,11 @@
         {
             get
             {
-                return this.supplierConsumptionField;
+                return supplierConsumptionField;
             }
             set
             {
-                this.supplierConsumptionField = value;
+                supplierConsumptionField = value;
             }
         }
     }

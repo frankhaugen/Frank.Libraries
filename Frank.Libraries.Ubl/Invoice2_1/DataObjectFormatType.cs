@@ -25,11 +25,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.objectIdentifierField;
+                return objectIdentifierField;
             }
             set
             {
-                this.objectIdentifierField = value;
+                objectIdentifierField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.mimeTypeField;
+                return mimeTypeField;
             }
             set
             {
-                this.mimeTypeField = value;
+                mimeTypeField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.encodingField;
+                return encodingField;
             }
             set
             {
-                this.encodingField = value;
+                encodingField = value;
             }
         }
 
@@ -79,11 +79,11 @@
         {
             get
             {
-                return this.objectReferenceField;
+                return objectReferenceField;
             }
             set
             {
-                this.objectReferenceField = value;
+                objectReferenceField = value;
             }
         }
     }

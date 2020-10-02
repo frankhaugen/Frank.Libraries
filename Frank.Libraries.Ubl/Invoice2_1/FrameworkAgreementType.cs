@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.expectedOperatorQuantityField;
+                return expectedOperatorQuantityField;
             }
             set
             {
-                this.expectedOperatorQuantityField = value;
+                expectedOperatorQuantityField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.maximumOperatorQuantityField;
+                return maximumOperatorQuantityField;
             }
             set
             {
-                this.maximumOperatorQuantityField = value;
+                maximumOperatorQuantityField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.justificationField;
+                return justificationField;
             }
             set
             {
-                this.justificationField = value;
+                justificationField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.frequencyField;
+                return frequencyField;
             }
             set
             {
-                this.frequencyField = value;
+                frequencyField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return this.durationPeriodField;
+                return durationPeriodField;
             }
             set
             {
-                this.durationPeriodField = value;
+                durationPeriodField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return this.subsequentProcessTenderRequirementField;
+                return subsequentProcessTenderRequirementField;
             }
             set
             {
-                this.subsequentProcessTenderRequirementField = value;
+                subsequentProcessTenderRequirementField = value;
             }
         }
     }

@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -63,11 +63,11 @@
         {
             get
             {
-                return this.extensionAgencyIDField;
+                return extensionAgencyIDField;
             }
             set
             {
-                this.extensionAgencyIDField = value;
+                extensionAgencyIDField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.extensionAgencyNameField;
+                return extensionAgencyNameField;
             }
             set
             {
-                this.extensionAgencyNameField = value;
+                extensionAgencyNameField = value;
             }
         }
 
@@ -89,11 +89,11 @@
         {
             get
             {
-                return this.extensionVersionIDField;
+                return extensionVersionIDField;
             }
             set
             {
-                this.extensionVersionIDField = value;
+                extensionVersionIDField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.extensionAgencyURIField;
+                return extensionAgencyURIField;
             }
             set
             {
-                this.extensionAgencyURIField = value;
+                extensionAgencyURIField = value;
             }
         }
 
@@ -115,11 +115,11 @@
         {
             get
             {
-                return this.extensionURIField;
+                return extensionURIField;
             }
             set
             {
-                this.extensionURIField = value;
+                extensionURIField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.extensionReasonCodeField;
+                return extensionReasonCodeField;
             }
             set
             {
-                this.extensionReasonCodeField = value;
+                extensionReasonCodeField = value;
             }
         }
 
@@ -141,11 +141,11 @@
         {
             get
             {
-                return this.extensionReasonField;
+                return extensionReasonField;
             }
             set
             {
-                this.extensionReasonField = value;
+                extensionReasonField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return this.extensionContentField;
+                return extensionContentField;
             }
             set
             {
-                this.extensionContentField = value;
+                extensionContentField = value;
             }
         }
     }

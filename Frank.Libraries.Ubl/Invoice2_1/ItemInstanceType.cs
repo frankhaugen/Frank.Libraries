@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.productTraceIDField;
+                return productTraceIDField;
             }
             set
             {
-                this.productTraceIDField = value;
+                productTraceIDField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.manufactureDateField;
+                return manufactureDateField;
             }
             set
             {
-                this.manufactureDateField = value;
+                manufactureDateField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.manufactureTimeField;
+                return manufactureTimeField;
             }
             set
             {
-                this.manufactureTimeField = value;
+                manufactureTimeField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.bestBeforeDateField;
+                return bestBeforeDateField;
             }
             set
             {
-                this.bestBeforeDateField = value;
+                bestBeforeDateField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.registrationIDField;
+                return registrationIDField;
             }
             set
             {
-                this.registrationIDField = value;
+                registrationIDField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.serialIDField;
+                return serialIDField;
             }
             set
             {
-                this.serialIDField = value;
+                serialIDField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.additionalItemPropertyField;
+                return additionalItemPropertyField;
             }
             set
             {
-                this.additionalItemPropertyField = value;
+                additionalItemPropertyField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return this.lotIdentificationField;
+                return lotIdentificationField;
             }
             set
             {
-                this.lotIdentificationField = value;
+                lotIdentificationField = value;
             }
         }
     }

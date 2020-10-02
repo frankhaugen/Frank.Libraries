@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.supplyChainActivityTypeCodeField;
+                return supplyChainActivityTypeCodeField;
             }
             set
             {
-                this.supplyChainActivityTypeCodeField = value;
+                supplyChainActivityTypeCodeField = value;
             }
         }
 
@@ -59,11 +59,11 @@
         {
             get
             {
-                return this.buyerCustomerPartyField;
+                return buyerCustomerPartyField;
             }
             set
             {
-                this.buyerCustomerPartyField = value;
+                buyerCustomerPartyField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.sellerSupplierPartyField;
+                return sellerSupplierPartyField;
             }
             set
             {
-                this.sellerSupplierPartyField = value;
+                sellerSupplierPartyField = value;
             }
         }
 
@@ -85,11 +85,11 @@
         {
             get
             {
-                return this.activityPeriodField;
+                return activityPeriodField;
             }
             set
             {
-                this.activityPeriodField = value;
+                activityPeriodField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.activityOriginLocationField;
+                return activityOriginLocationField;
             }
             set
             {
-                this.activityOriginLocationField = value;
+                activityOriginLocationField = value;
             }
         }
 
@@ -111,11 +111,11 @@
         {
             get
             {
-                return this.activityFinalLocationField;
+                return activityFinalLocationField;
             }
             set
             {
-                this.activityFinalLocationField = value;
+                activityFinalLocationField = value;
             }
         }
 
@@ -125,11 +125,11 @@
         {
             get
             {
-                return this.salesItemField;
+                return salesItemField;
             }
             set
             {
-                this.salesItemField = value;
+                salesItemField = value;
             }
         }
     }

@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.itemsField;
+                return itemsField;
             }
             set
             {
-                this.itemsField = value;
+                itemsField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.canonicalizationMethodField;
+                return canonicalizationMethodField;
             }
             set
             {
-                this.canonicalizationMethodField = value;
+                canonicalizationMethodField = value;
             }
         }
 
@@ -55,11 +55,11 @@
         {
             get
             {
-                return this.items1Field;
+                return items1Field;
             }
             set
             {
-                this.items1Field = value;
+                items1Field = value;
             }
         }
 
@@ -69,11 +69,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

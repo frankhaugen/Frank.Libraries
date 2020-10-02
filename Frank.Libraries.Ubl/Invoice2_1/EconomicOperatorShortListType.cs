@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.limitationDescriptionField;
+                return limitationDescriptionField;
             }
             set
             {
-                this.limitationDescriptionField = value;
+                limitationDescriptionField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.expectedQuantityField;
+                return expectedQuantityField;
             }
             set
             {
-                this.expectedQuantityField = value;
+                expectedQuantityField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.maximumQuantityField;
+                return maximumQuantityField;
             }
             set
             {
-                this.maximumQuantityField = value;
+                maximumQuantityField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.minimumQuantityField;
+                return minimumQuantityField;
             }
             set
             {
-                this.minimumQuantityField = value;
+                minimumQuantityField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.preSelectedPartyField;
+                return preSelectedPartyField;
             }
             set
             {
-                this.preSelectedPartyField = value;
+                preSelectedPartyField = value;
             }
         }
     }

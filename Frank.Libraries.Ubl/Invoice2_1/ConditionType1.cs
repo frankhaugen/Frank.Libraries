@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.attributeIDField;
+                return attributeIDField;
             }
             set
             {
-                this.attributeIDField = value;
+                attributeIDField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.measureField;
+                return measureField;
             }
             set
             {
-                this.measureField = value;
+                measureField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.minimumMeasureField;
+                return minimumMeasureField;
             }
             set
             {
-                this.minimumMeasureField = value;
+                minimumMeasureField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.maximumMeasureField;
+                return maximumMeasureField;
             }
             set
             {
-                this.maximumMeasureField = value;
+                maximumMeasureField = value;
             }
         }
     }

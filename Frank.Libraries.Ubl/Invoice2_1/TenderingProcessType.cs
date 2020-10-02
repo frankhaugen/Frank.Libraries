@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.originalContractingSystemIDField;
+                return originalContractingSystemIDField;
             }
             set
             {
-                this.originalContractingSystemIDField = value;
+                originalContractingSystemIDField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.negotiationDescriptionField;
+                return negotiationDescriptionField;
             }
             set
             {
-                this.negotiationDescriptionField = value;
+                negotiationDescriptionField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.procedureCodeField;
+                return procedureCodeField;
             }
             set
             {
-                this.procedureCodeField = value;
+                procedureCodeField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.urgencyCodeField;
+                return urgencyCodeField;
             }
             set
             {
-                this.urgencyCodeField = value;
+                urgencyCodeField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return this.expenseCodeField;
+                return expenseCodeField;
             }
             set
             {
-                this.expenseCodeField = value;
+                expenseCodeField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return this.partPresentationCodeField;
+                return partPresentationCodeField;
             }
             set
             {
-                this.partPresentationCodeField = value;
+                partPresentationCodeField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return this.contractingSystemCodeField;
+                return contractingSystemCodeField;
             }
             set
             {
-                this.contractingSystemCodeField = value;
+                contractingSystemCodeField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return this.submissionMethodCodeField;
+                return submissionMethodCodeField;
             }
             set
             {
-                this.submissionMethodCodeField = value;
+                submissionMethodCodeField = value;
             }
         }
 
@@ -202,11 +202,11 @@
         {
             get
             {
-                return this.candidateReductionConstraintIndicatorField;
+                return candidateReductionConstraintIndicatorField;
             }
             set
             {
-                this.candidateReductionConstraintIndicatorField = value;
+                candidateReductionConstraintIndicatorField = value;
             }
         }
 
@@ -216,11 +216,11 @@
         {
             get
             {
-                return this.governmentAgreementConstraintIndicatorField;
+                return governmentAgreementConstraintIndicatorField;
             }
             set
             {
-                this.governmentAgreementConstraintIndicatorField = value;
+                governmentAgreementConstraintIndicatorField = value;
             }
         }
 
@@ -229,11 +229,11 @@
         {
             get
             {
-                return this.documentAvailabilityPeriodField;
+                return documentAvailabilityPeriodField;
             }
             set
             {
-                this.documentAvailabilityPeriodField = value;
+                documentAvailabilityPeriodField = value;
             }
         }
 
@@ -242,11 +242,11 @@
         {
             get
             {
-                return this.tenderSubmissionDeadlinePeriodField;
+                return tenderSubmissionDeadlinePeriodField;
             }
             set
             {
-                this.tenderSubmissionDeadlinePeriodField = value;
+                tenderSubmissionDeadlinePeriodField = value;
             }
         }
 
@@ -255,11 +255,11 @@
         {
             get
             {
-                return this.invitationSubmissionPeriodField;
+                return invitationSubmissionPeriodField;
             }
             set
             {
-                this.invitationSubmissionPeriodField = value;
+                invitationSubmissionPeriodField = value;
             }
         }
 
@@ -268,11 +268,11 @@
         {
             get
             {
-                return this.participationRequestReceptionPeriodField;
+                return participationRequestReceptionPeriodField;
             }
             set
             {
-                this.participationRequestReceptionPeriodField = value;
+                participationRequestReceptionPeriodField = value;
             }
         }
 
@@ -282,11 +282,11 @@
         {
             get
             {
-                return this.noticeDocumentReferenceField;
+                return noticeDocumentReferenceField;
             }
             set
             {
-                this.noticeDocumentReferenceField = value;
+                noticeDocumentReferenceField = value;
             }
         }
 
@@ -296,11 +296,11 @@
         {
             get
             {
-                return this.additionalDocumentReferenceField;
+                return additionalDocumentReferenceField;
             }
             set
             {
-                this.additionalDocumentReferenceField = value;
+                additionalDocumentReferenceField = value;
             }
         }
 
@@ -310,11 +310,11 @@
         {
             get
             {
-                return this.processJustificationField;
+                return processJustificationField;
             }
             set
             {
-                this.processJustificationField = value;
+                processJustificationField = value;
             }
         }
 
@@ -323,11 +323,11 @@
         {
             get
             {
-                return this.economicOperatorShortListField;
+                return economicOperatorShortListField;
             }
             set
             {
-                this.economicOperatorShortListField = value;
+                economicOperatorShortListField = value;
             }
         }
 
@@ -337,11 +337,11 @@
         {
             get
             {
-                return this.openTenderEventField;
+                return openTenderEventField;
             }
             set
             {
-                this.openTenderEventField = value;
+                openTenderEventField = value;
             }
         }
 
@@ -350,11 +350,11 @@
         {
             get
             {
-                return this.auctionTermsField;
+                return auctionTermsField;
             }
             set
             {
-                this.auctionTermsField = value;
+                auctionTermsField = value;
             }
         }
 
@@ -363,11 +363,11 @@
         {
             get
             {
-                return this.frameworkAgreementField;
+                return frameworkAgreementField;
             }
             set
             {
-                this.frameworkAgreementField = value;
+                frameworkAgreementField = value;
             }
         }
     }

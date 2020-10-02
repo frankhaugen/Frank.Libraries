@@ -2,7 +2,7 @@
 
 namespace Frank.Libraries.Tests.Logging
 {
-    public class FileLoggingTests : LoggerTestBase<FileLoggingTests>
+    public class FileLoggingTests : LoggerTestBase
     {
         [Fact]
         public void LogToFile()

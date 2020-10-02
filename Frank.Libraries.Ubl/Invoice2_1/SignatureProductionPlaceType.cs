@@ -23,11 +23,11 @@
         {
             get
             {
-                return this.cityField;
+                return cityField;
             }
             set
             {
-                this.cityField = value;
+                cityField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.stateOrProvinceField;
+                return stateOrProvinceField;
             }
             set
             {
-                this.stateOrProvinceField = value;
+                stateOrProvinceField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.postalCodeField;
+                return postalCodeField;
             }
             set
             {
-                this.postalCodeField = value;
+                postalCodeField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.countryNameField;
+                return countryNameField;
             }
             set
             {
-                this.countryNameField = value;
+                countryNameField = value;
             }
         }
     }

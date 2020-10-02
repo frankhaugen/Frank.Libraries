@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.identificationCodeField;
+                return identificationCodeField;
             }
             set
             {
-                this.identificationCodeField = value;
+                identificationCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
     }

@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.consumptionReportIDField;
+                return consumptionReportIDField;
             }
             set
             {
-                this.consumptionReportIDField = value;
+                consumptionReportIDField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.consumptionTypeField;
+                return consumptionTypeField;
             }
             set
             {
-                this.consumptionTypeField = value;
+                consumptionTypeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.consumptionTypeCodeField;
+                return consumptionTypeCodeField;
             }
             set
             {
-                this.consumptionTypeCodeField = value;
+                consumptionTypeCodeField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.totalConsumedQuantityField;
+                return totalConsumedQuantityField;
             }
             set
             {
-                this.totalConsumedQuantityField = value;
+                totalConsumedQuantityField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return this.periodField;
+                return periodField;
             }
             set
             {
-                this.periodField = value;
+                periodField = value;
             }
         }
     }

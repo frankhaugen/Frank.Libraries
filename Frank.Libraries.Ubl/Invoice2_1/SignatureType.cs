@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.validationDateField;
+                return validationDateField;
             }
             set
             {
-                this.validationDateField = value;
+                validationDateField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return this.validationTimeField;
+                return validationTimeField;
             }
             set
             {
-                this.validationTimeField = value;
+                validationTimeField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return this.validatorIDField;
+                return validatorIDField;
             }
             set
             {
-                this.validatorIDField = value;
+                validatorIDField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return this.canonicalizationMethodField;
+                return canonicalizationMethodField;
             }
             set
             {
-                this.canonicalizationMethodField = value;
+                canonicalizationMethodField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return this.signatureMethodField;
+                return signatureMethodField;
             }
             set
             {
-                this.signatureMethodField = value;
+                signatureMethodField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return this.signatoryPartyField;
+                return signatoryPartyField;
             }
             set
             {
-                this.signatoryPartyField = value;
+                signatoryPartyField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return this.digitalSignatureAttachmentField;
+                return digitalSignatureAttachmentField;
             }
             set
             {
-                this.digitalSignatureAttachmentField = value;
+                digitalSignatureAttachmentField = value;
             }
         }
 
@@ -159,11 +159,11 @@
         {
             get
             {
-                return this.originalDocumentReferenceField;
+                return originalDocumentReferenceField;
             }
             set
             {
-                this.originalDocumentReferenceField = value;
+                originalDocumentReferenceField = value;
             }
         }
     }

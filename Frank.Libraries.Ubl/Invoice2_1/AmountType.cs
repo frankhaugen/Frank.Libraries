@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.currencyIDField;
+                return currencyIDField;
             }
             set
             {
-                this.currencyIDField = value;
+                currencyIDField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.currencyCodeListVersionIDField;
+                return currencyCodeListVersionIDField;
             }
             set
             {
-                this.currencyCodeListVersionIDField = value;
+                currencyCodeListVersionIDField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

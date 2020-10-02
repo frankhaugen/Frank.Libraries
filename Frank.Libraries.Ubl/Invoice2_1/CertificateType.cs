@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.certificateTypeCodeField;
+                return certificateTypeCodeField;
             }
             set
             {
-                this.certificateTypeCodeField = value;
+                certificateTypeCodeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.certificateType1Field;
+                return certificateType1Field;
             }
             set
             {
-                this.certificateType1Field = value;
+                certificateType1Field = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.remarksField;
+                return remarksField;
             }
             set
             {
-                this.remarksField = value;
+                remarksField = value;
             }
         }
 
@@ -85,11 +85,11 @@
         {
             get
             {
-                return this.issuerPartyField;
+                return issuerPartyField;
             }
             set
             {
-                this.issuerPartyField = value;
+                issuerPartyField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -113,11 +113,11 @@
         {
             get
             {
-                return this.signatureField;
+                return signatureField;
             }
             set
             {
-                this.signatureField = value;
+                signatureField = value;
             }
         }
     }

@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.subscriberIDField;
+                return subscriberIDField;
             }
             set
             {
-                this.subscriberIDField = value;
+                subscriberIDField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.subscriberTypeField;
+                return subscriberTypeField;
             }
             set
             {
-                this.subscriberTypeField = value;
+                subscriberTypeField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.subscriberTypeCodeField;
+                return subscriberTypeCodeField;
             }
             set
             {
-                this.subscriberTypeCodeField = value;
+                subscriberTypeCodeField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.totalDeliveredQuantityField;
+                return totalDeliveredQuantityField;
             }
             set
             {
-                this.totalDeliveredQuantityField = value;
+                totalDeliveredQuantityField = value;
             }
         }
 
@@ -117,11 +117,11 @@
         {
             get
             {
-                return this.addressField;
+                return addressField;
             }
             set
             {
-                this.addressField = value;
+                addressField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return this.webSiteAccessField;
+                return webSiteAccessField;
             }
             set
             {
-                this.webSiteAccessField = value;
+                webSiteAccessField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return this.utilityMeterField;
+                return utilityMeterField;
             }
             set
             {
-                this.utilityMeterField = value;
+                utilityMeterField = value;
             }
         }
     }

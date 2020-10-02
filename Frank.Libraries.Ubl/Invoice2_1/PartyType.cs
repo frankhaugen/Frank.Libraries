@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.markCareIndicatorField;
+                return markCareIndicatorField;
             }
             set
             {
-                this.markCareIndicatorField = value;
+                markCareIndicatorField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.markAttentionIndicatorField;
+                return markAttentionIndicatorField;
             }
             set
             {
-                this.markAttentionIndicatorField = value;
+                markAttentionIndicatorField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.websiteURIField;
+                return websiteURIField;
             }
             set
             {
-                this.websiteURIField = value;
+                websiteURIField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.logoReferenceIDField;
+                return logoReferenceIDField;
             }
             set
             {
-                this.logoReferenceIDField = value;
+                logoReferenceIDField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.endpointIDField;
+                return endpointIDField;
             }
             set
             {
-                this.endpointIDField = value;
+                endpointIDField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return this.industryClassificationCodeField;
+                return industryClassificationCodeField;
             }
             set
             {
-                this.industryClassificationCodeField = value;
+                industryClassificationCodeField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return this.partyIdentificationField;
+                return partyIdentificationField;
             }
             set
             {
-                this.partyIdentificationField = value;
+                partyIdentificationField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return this.partyNameField;
+                return partyNameField;
             }
             set
             {
-                this.partyNameField = value;
+                partyNameField = value;
             }
         }
 
@@ -165,11 +165,11 @@
         {
             get
             {
-                return this.languageField;
+                return languageField;
             }
             set
             {
-                this.languageField = value;
+                languageField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.postalAddressField;
+                return postalAddressField;
             }
             set
             {
-                this.postalAddressField = value;
+                postalAddressField = value;
             }
         }
 
@@ -191,11 +191,11 @@
         {
             get
             {
-                return this.physicalLocationField;
+                return physicalLocationField;
             }
             set
             {
-                this.physicalLocationField = value;
+                physicalLocationField = value;
             }
         }
 
@@ -205,11 +205,11 @@
         {
             get
             {
-                return this.partyTaxSchemeField;
+                return partyTaxSchemeField;
             }
             set
             {
-                this.partyTaxSchemeField = value;
+                partyTaxSchemeField = value;
             }
         }
 
@@ -219,11 +219,11 @@
         {
             get
             {
-                return this.partyLegalEntityField;
+                return partyLegalEntityField;
             }
             set
             {
-                this.partyLegalEntityField = value;
+                partyLegalEntityField = value;
             }
         }
 
@@ -232,11 +232,11 @@
         {
             get
             {
-                return this.contactField;
+                return contactField;
             }
             set
             {
-                this.contactField = value;
+                contactField = value;
             }
         }
 
@@ -246,11 +246,11 @@
         {
             get
             {
-                return this.personField;
+                return personField;
             }
             set
             {
-                this.personField = value;
+                personField = value;
             }
         }
 
@@ -259,11 +259,11 @@
         {
             get
             {
-                return this.agentPartyField;
+                return agentPartyField;
             }
             set
             {
-                this.agentPartyField = value;
+                agentPartyField = value;
             }
         }
 
@@ -273,11 +273,11 @@
         {
             get
             {
-                return this.serviceProviderPartyField;
+                return serviceProviderPartyField;
             }
             set
             {
-                this.serviceProviderPartyField = value;
+                serviceProviderPartyField = value;
             }
         }
 
@@ -287,11 +287,11 @@
         {
             get
             {
-                return this.powerOfAttorneyField;
+                return powerOfAttorneyField;
             }
             set
             {
-                this.powerOfAttorneyField = value;
+                powerOfAttorneyField = value;
             }
         }
 
@@ -300,11 +300,11 @@
         {
             get
             {
-                return this.financialAccountField;
+                return financialAccountField;
             }
             set
             {
-                this.financialAccountField = value;
+                financialAccountField = value;
             }
         }
     }

@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.localeCodeField;
+                return localeCodeField;
             }
             set
             {
-                this.localeCodeField = value;
+                localeCodeField = value;
             }
         }
     }

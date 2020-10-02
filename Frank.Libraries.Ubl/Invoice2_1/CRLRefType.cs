@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.digestAlgAndValueField;
+                return digestAlgAndValueField;
             }
             set
             {
-                this.digestAlgAndValueField = value;
+                digestAlgAndValueField = value;
             }
         }
 
@@ -31,11 +31,11 @@
         {
             get
             {
-                return this.cRLIdentifierField;
+                return cRLIdentifierField;
             }
             set
             {
-                this.cRLIdentifierField = value;
+                cRLIdentifierField = value;
             }
         }
     }

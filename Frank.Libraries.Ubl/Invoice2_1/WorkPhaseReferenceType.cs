@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.workPhaseCodeField;
+                return workPhaseCodeField;
             }
             set
             {
-                this.workPhaseCodeField = value;
+                workPhaseCodeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.workPhaseField;
+                return workPhaseField;
             }
             set
             {
-                this.workPhaseField = value;
+                workPhaseField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.progressPercentField;
+                return progressPercentField;
             }
             set
             {
-                this.progressPercentField = value;
+                progressPercentField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.startDateField;
+                return startDateField;
             }
             set
             {
-                this.startDateField = value;
+                startDateField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.endDateField;
+                return endDateField;
             }
             set
             {
-                this.endDateField = value;
+                endDateField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.workOrderDocumentReferenceField;
+                return workOrderDocumentReferenceField;
             }
             set
             {
-                this.workOrderDocumentReferenceField = value;
+                workOrderDocumentReferenceField = value;
             }
         }
     }

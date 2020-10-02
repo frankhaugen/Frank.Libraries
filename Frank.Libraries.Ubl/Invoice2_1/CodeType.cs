@@ -250,11 +250,11 @@
         {
             get
             {
-                return this.listIDField;
+                return listIDField;
             }
             set
             {
-                this.listIDField = value;
+                listIDField = value;
             }
         }
 
@@ -264,11 +264,11 @@
         {
             get
             {
-                return this.listAgencyIDField;
+                return listAgencyIDField;
             }
             set
             {
-                this.listAgencyIDField = value;
+                listAgencyIDField = value;
             }
         }
 
@@ -278,11 +278,11 @@
         {
             get
             {
-                return this.listAgencyNameField;
+                return listAgencyNameField;
             }
             set
             {
-                this.listAgencyNameField = value;
+                listAgencyNameField = value;
             }
         }
 
@@ -292,11 +292,11 @@
         {
             get
             {
-                return this.listNameField;
+                return listNameField;
             }
             set
             {
-                this.listNameField = value;
+                listNameField = value;
             }
         }
 
@@ -306,11 +306,11 @@
         {
             get
             {
-                return this.listVersionIDField;
+                return listVersionIDField;
             }
             set
             {
-                this.listVersionIDField = value;
+                listVersionIDField = value;
             }
         }
 
@@ -320,11 +320,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -334,11 +334,11 @@
         {
             get
             {
-                return this.languageIDField;
+                return languageIDField;
             }
             set
             {
-                this.languageIDField = value;
+                languageIDField = value;
             }
         }
 
@@ -348,11 +348,11 @@
         {
             get
             {
-                return this.listURIField;
+                return listURIField;
             }
             set
             {
-                this.listURIField = value;
+                listURIField = value;
             }
         }
 
@@ -362,11 +362,11 @@
         {
             get
             {
-                return this.listSchemeURIField;
+                return listSchemeURIField;
             }
             set
             {
-                this.listSchemeURIField = value;
+                listSchemeURIField = value;
             }
         }
 
@@ -376,11 +376,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

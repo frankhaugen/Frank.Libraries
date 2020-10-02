@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.consumptionTypeField;
+                return consumptionTypeField;
             }
             set
             {
-                this.consumptionTypeField = value;
+                consumptionTypeField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.consumptionTypeCodeField;
+                return consumptionTypeCodeField;
             }
             set
             {
-                this.consumptionTypeCodeField = value;
+                consumptionTypeCodeField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return this.totalConsumedQuantityField;
+                return totalConsumedQuantityField;
             }
             set
             {
-                this.totalConsumedQuantityField = value;
+                totalConsumedQuantityField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return this.basicConsumedQuantityField;
+                return basicConsumedQuantityField;
             }
             set
             {
-                this.basicConsumedQuantityField = value;
+                basicConsumedQuantityField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return this.residentOccupantsNumericField;
+                return residentOccupantsNumericField;
             }
             set
             {
-                this.residentOccupantsNumericField = value;
+                residentOccupantsNumericField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return this.consumersEnergyLevelCodeField;
+                return consumersEnergyLevelCodeField;
             }
             set
             {
-                this.consumersEnergyLevelCodeField = value;
+                consumersEnergyLevelCodeField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return this.consumersEnergyLevelField;
+                return consumersEnergyLevelField;
             }
             set
             {
-                this.consumersEnergyLevelField = value;
+                consumersEnergyLevelField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.residenceTypeField;
+                return residenceTypeField;
             }
             set
             {
-                this.residenceTypeField = value;
+                residenceTypeField = value;
             }
         }
 
@@ -192,11 +192,11 @@
         {
             get
             {
-                return this.residenceTypeCodeField;
+                return residenceTypeCodeField;
             }
             set
             {
-                this.residenceTypeCodeField = value;
+                residenceTypeCodeField = value;
             }
         }
 
@@ -206,11 +206,11 @@
         {
             get
             {
-                return this.heatingTypeField;
+                return heatingTypeField;
             }
             set
             {
-                this.heatingTypeField = value;
+                heatingTypeField = value;
             }
         }
 
@@ -220,11 +220,11 @@
         {
             get
             {
-                return this.heatingTypeCodeField;
+                return heatingTypeCodeField;
             }
             set
             {
-                this.heatingTypeCodeField = value;
+                heatingTypeCodeField = value;
             }
         }
 
@@ -233,11 +233,11 @@
         {
             get
             {
-                return this.periodField;
+                return periodField;
             }
             set
             {
-                this.periodField = value;
+                periodField = value;
             }
         }
 
@@ -246,11 +246,11 @@
         {
             get
             {
-                return this.guidanceDocumentReferenceField;
+                return guidanceDocumentReferenceField;
             }
             set
             {
-                this.guidanceDocumentReferenceField = value;
+                guidanceDocumentReferenceField = value;
             }
         }
 
@@ -259,11 +259,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -273,11 +273,11 @@
         {
             get
             {
-                return this.consumptionReportReferenceField;
+                return consumptionReportReferenceField;
             }
             set
             {
-                this.consumptionReportReferenceField = value;
+                consumptionReportReferenceField = value;
             }
         }
 
@@ -287,11 +287,11 @@
         {
             get
             {
-                return this.consumptionHistoryField;
+                return consumptionHistoryField;
             }
             set
             {
-                this.consumptionHistoryField = value;
+                consumptionHistoryField = value;
             }
         }
     }

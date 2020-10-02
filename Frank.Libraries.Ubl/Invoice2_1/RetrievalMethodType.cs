@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.transformsField;
+                return transformsField;
             }
             set
             {
-                this.transformsField = value;
+                transformsField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.typeField;
+                return typeField;
             }
             set
             {
-                this.typeField = value;
+                typeField = value;
             }
         }
     }

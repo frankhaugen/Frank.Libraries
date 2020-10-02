@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.transformField;
+                return transformField;
             }
             set
             {
-                this.transformField = value;
+                transformField = value;
             }
         }
     }

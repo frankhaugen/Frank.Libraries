@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.forecastPurposeCodeField;
+                return forecastPurposeCodeField;
             }
             set
             {
-                this.forecastPurposeCodeField = value;
+                forecastPurposeCodeField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.forecastTypeCodeField;
+                return forecastTypeCodeField;
             }
             set
             {
-                this.forecastTypeCodeField = value;
+                forecastTypeCodeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.comparisonDataSourceCodeField;
+                return comparisonDataSourceCodeField;
             }
             set
             {
-                this.comparisonDataSourceCodeField = value;
+                comparisonDataSourceCodeField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.dataSourceCodeField;
+                return dataSourceCodeField;
             }
             set
             {
-                this.dataSourceCodeField = value;
+                dataSourceCodeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.timeDeltaDaysQuantityField;
+                return timeDeltaDaysQuantityField;
             }
             set
             {
-                this.timeDeltaDaysQuantityField = value;
+                timeDeltaDaysQuantityField = value;
             }
         }
     }

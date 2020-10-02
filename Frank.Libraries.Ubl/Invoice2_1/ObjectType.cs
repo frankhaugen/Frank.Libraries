@@ -25,11 +25,11 @@
         {
             get
             {
-                return this.anyField;
+                return anyField;
             }
             set
             {
-                this.anyField = value;
+                anyField = value;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -53,11 +53,11 @@
         {
             get
             {
-                return this.mimeTypeField;
+                return mimeTypeField;
             }
             set
             {
-                this.mimeTypeField = value;
+                mimeTypeField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return this.encodingField;
+                return encodingField;
             }
             set
             {
-                this.encodingField = value;
+                encodingField = value;
             }
         }
     }

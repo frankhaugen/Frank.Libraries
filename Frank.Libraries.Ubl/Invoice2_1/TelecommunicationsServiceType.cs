@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.callDateField;
+                return callDateField;
             }
             set
             {
-                this.callDateField = value;
+                callDateField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.callTimeField;
+                return callTimeField;
             }
             set
             {
-                this.callTimeField = value;
+                callTimeField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.serviceNumberCalledField;
+                return serviceNumberCalledField;
             }
             set
             {
-                this.serviceNumberCalledField = value;
+                serviceNumberCalledField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.telecommunicationsServiceCategoryField;
+                return telecommunicationsServiceCategoryField;
             }
             set
             {
-                this.telecommunicationsServiceCategoryField = value;
+                telecommunicationsServiceCategoryField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.telecommunicationsServiceCategoryCodeField;
+                return telecommunicationsServiceCategoryCodeField;
             }
             set
             {
-                this.telecommunicationsServiceCategoryCodeField = value;
+                telecommunicationsServiceCategoryCodeField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return this.movieTitleField;
+                return movieTitleField;
             }
             set
             {
-                this.movieTitleField = value;
+                movieTitleField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return this.roamingPartnerNameField;
+                return roamingPartnerNameField;
             }
             set
             {
-                this.roamingPartnerNameField = value;
+                roamingPartnerNameField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return this.payPerViewField;
+                return payPerViewField;
             }
             set
             {
-                this.payPerViewField = value;
+                payPerViewField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return this.telecommunicationsServiceCallField;
+                return telecommunicationsServiceCallField;
             }
             set
             {
-                this.telecommunicationsServiceCallField = value;
+                telecommunicationsServiceCallField = value;
             }
         }
 
@@ -212,11 +212,11 @@
         {
             get
             {
-                return this.telecommunicationsServiceCallCodeField;
+                return telecommunicationsServiceCallCodeField;
             }
             set
             {
-                this.telecommunicationsServiceCallCodeField = value;
+                telecommunicationsServiceCallCodeField = value;
             }
         }
 
@@ -226,11 +226,11 @@
         {
             get
             {
-                return this.callBaseAmountField;
+                return callBaseAmountField;
             }
             set
             {
-                this.callBaseAmountField = value;
+                callBaseAmountField = value;
             }
         }
 
@@ -240,11 +240,11 @@
         {
             get
             {
-                return this.callExtensionAmountField;
+                return callExtensionAmountField;
             }
             set
             {
-                this.callExtensionAmountField = value;
+                callExtensionAmountField = value;
             }
         }
 
@@ -253,11 +253,11 @@
         {
             get
             {
-                return this.priceField;
+                return priceField;
             }
             set
             {
-                this.priceField = value;
+                priceField = value;
             }
         }
 
@@ -266,11 +266,11 @@
         {
             get
             {
-                return this.countryField;
+                return countryField;
             }
             set
             {
-                this.countryField = value;
+                countryField = value;
             }
         }
 
@@ -280,11 +280,11 @@
         {
             get
             {
-                return this.exchangeRateField;
+                return exchangeRateField;
             }
             set
             {
-                this.exchangeRateField = value;
+                exchangeRateField = value;
             }
         }
 
@@ -294,11 +294,11 @@
         {
             get
             {
-                return this.allowanceChargeField;
+                return allowanceChargeField;
             }
             set
             {
-                this.allowanceChargeField = value;
+                allowanceChargeField = value;
             }
         }
 
@@ -308,11 +308,11 @@
         {
             get
             {
-                return this.taxTotalField;
+                return taxTotalField;
             }
             set
             {
-                this.taxTotalField = value;
+                taxTotalField = value;
             }
         }
 
@@ -322,11 +322,11 @@
         {
             get
             {
-                return this.callDutyField;
+                return callDutyField;
             }
             set
             {
-                this.callDutyField = value;
+                callDutyField = value;
             }
         }
 
@@ -336,11 +336,11 @@
         {
             get
             {
-                return this.timeDutyField;
+                return timeDutyField;
             }
             set
             {
-                this.timeDutyField = value;
+                timeDutyField = value;
             }
         }
     }

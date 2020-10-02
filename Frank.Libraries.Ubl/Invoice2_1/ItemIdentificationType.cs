@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.extendedIDField;
+                return extendedIDField;
             }
             set
             {
-                this.extendedIDField = value;
+                extendedIDField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.barcodeSymbologyIDField;
+                return barcodeSymbologyIDField;
             }
             set
             {
-                this.barcodeSymbologyIDField = value;
+                barcodeSymbologyIDField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.physicalAttributeField;
+                return physicalAttributeField;
             }
             set
             {
-                this.physicalAttributeField = value;
+                physicalAttributeField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.measurementDimensionField;
+                return measurementDimensionField;
             }
             set
             {
-                this.measurementDimensionField = value;
+                measurementDimensionField = value;
             }
         }
 
@@ -97,11 +97,11 @@
         {
             get
             {
-                return this.issuerPartyField;
+                return issuerPartyField;
             }
             set
             {
-                this.issuerPartyField = value;
+                issuerPartyField = value;
             }
         }
     }

@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.primaryAccountNumberIDField;
+                return primaryAccountNumberIDField;
             }
             set
             {
-                this.primaryAccountNumberIDField = value;
+                primaryAccountNumberIDField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.networkIDField;
+                return networkIDField;
             }
             set
             {
-                this.networkIDField = value;
+                networkIDField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.cardTypeCodeField;
+                return cardTypeCodeField;
             }
             set
             {
-                this.cardTypeCodeField = value;
+                cardTypeCodeField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.validityStartDateField;
+                return validityStartDateField;
             }
             set
             {
-                this.validityStartDateField = value;
+                validityStartDateField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.expiryDateField;
+                return expiryDateField;
             }
             set
             {
-                this.expiryDateField = value;
+                expiryDateField = value;
             }
         }
 
@@ -108,11 +108,11 @@
         {
             get
             {
-                return this.issuerIDField;
+                return issuerIDField;
             }
             set
             {
-                this.issuerIDField = value;
+                issuerIDField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return this.issueNumberIDField;
+                return issueNumberIDField;
             }
             set
             {
-                this.issueNumberIDField = value;
+                issueNumberIDField = value;
             }
         }
 
@@ -136,11 +136,11 @@
         {
             get
             {
-                return this.cV2IDField;
+                return cV2IDField;
             }
             set
             {
-                this.cV2IDField = value;
+                cV2IDField = value;
             }
         }
 
@@ -150,11 +150,11 @@
         {
             get
             {
-                return this.cardChipCodeField;
+                return cardChipCodeField;
             }
             set
             {
-                this.cardChipCodeField = value;
+                cardChipCodeField = value;
             }
         }
 
@@ -164,11 +164,11 @@
         {
             get
             {
-                return this.chipApplicationIDField;
+                return chipApplicationIDField;
             }
             set
             {
-                this.chipApplicationIDField = value;
+                chipApplicationIDField = value;
             }
         }
 
@@ -178,11 +178,11 @@
         {
             get
             {
-                return this.holderNameField;
+                return holderNameField;
             }
             set
             {
-                this.holderNameField = value;
+                holderNameField = value;
             }
         }
     }

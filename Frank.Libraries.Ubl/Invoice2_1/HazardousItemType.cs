@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.placardNotationField;
+                return placardNotationField;
             }
             set
             {
-                this.placardNotationField = value;
+                placardNotationField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.placardEndorsementField;
+                return placardEndorsementField;
             }
             set
             {
-                this.placardEndorsementField = value;
+                placardEndorsementField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.additionalInformationField;
+                return additionalInformationField;
             }
             set
             {
-                this.additionalInformationField = value;
+                additionalInformationField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.uNDGCodeField;
+                return uNDGCodeField;
             }
             set
             {
-                this.uNDGCodeField = value;
+                uNDGCodeField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.emergencyProceduresCodeField;
+                return emergencyProceduresCodeField;
             }
             set
             {
-                this.emergencyProceduresCodeField = value;
+                emergencyProceduresCodeField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return this.medicalFirstAidGuideCodeField;
+                return medicalFirstAidGuideCodeField;
             }
             set
             {
-                this.medicalFirstAidGuideCodeField = value;
+                medicalFirstAidGuideCodeField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return this.technicalNameField;
+                return technicalNameField;
             }
             set
             {
-                this.technicalNameField = value;
+                technicalNameField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return this.categoryNameField;
+                return categoryNameField;
             }
             set
             {
-                this.categoryNameField = value;
+                categoryNameField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return this.hazardousCategoryCodeField;
+                return hazardousCategoryCodeField;
             }
             set
             {
-                this.hazardousCategoryCodeField = value;
+                hazardousCategoryCodeField = value;
             }
         }
 
@@ -202,11 +202,11 @@
         {
             get
             {
-                return this.upperOrangeHazardPlacardIDField;
+                return upperOrangeHazardPlacardIDField;
             }
             set
             {
-                this.upperOrangeHazardPlacardIDField = value;
+                upperOrangeHazardPlacardIDField = value;
             }
         }
 
@@ -216,11 +216,11 @@
         {
             get
             {
-                return this.lowerOrangeHazardPlacardIDField;
+                return lowerOrangeHazardPlacardIDField;
             }
             set
             {
-                this.lowerOrangeHazardPlacardIDField = value;
+                lowerOrangeHazardPlacardIDField = value;
             }
         }
 
@@ -230,11 +230,11 @@
         {
             get
             {
-                return this.markingIDField;
+                return markingIDField;
             }
             set
             {
-                this.markingIDField = value;
+                markingIDField = value;
             }
         }
 
@@ -244,11 +244,11 @@
         {
             get
             {
-                return this.hazardClassIDField;
+                return hazardClassIDField;
             }
             set
             {
-                this.hazardClassIDField = value;
+                hazardClassIDField = value;
             }
         }
 
@@ -258,11 +258,11 @@
         {
             get
             {
-                return this.netWeightMeasureField;
+                return netWeightMeasureField;
             }
             set
             {
-                this.netWeightMeasureField = value;
+                netWeightMeasureField = value;
             }
         }
 
@@ -272,11 +272,11 @@
         {
             get
             {
-                return this.netVolumeMeasureField;
+                return netVolumeMeasureField;
             }
             set
             {
-                this.netVolumeMeasureField = value;
+                netVolumeMeasureField = value;
             }
         }
 
@@ -286,11 +286,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -299,11 +299,11 @@
         {
             get
             {
-                return this.contactPartyField;
+                return contactPartyField;
             }
             set
             {
-                this.contactPartyField = value;
+                contactPartyField = value;
             }
         }
 
@@ -313,11 +313,11 @@
         {
             get
             {
-                return this.secondaryHazardField;
+                return secondaryHazardField;
             }
             set
             {
-                this.secondaryHazardField = value;
+                secondaryHazardField = value;
             }
         }
 
@@ -327,11 +327,11 @@
         {
             get
             {
-                return this.hazardousGoodsTransitField;
+                return hazardousGoodsTransitField;
             }
             set
             {
-                this.hazardousGoodsTransitField = value;
+                hazardousGoodsTransitField = value;
             }
         }
 
@@ -340,11 +340,11 @@
         {
             get
             {
-                return this.emergencyTemperatureField;
+                return emergencyTemperatureField;
             }
             set
             {
-                this.emergencyTemperatureField = value;
+                emergencyTemperatureField = value;
             }
         }
 
@@ -353,11 +353,11 @@
         {
             get
             {
-                return this.flashpointTemperatureField;
+                return flashpointTemperatureField;
             }
             set
             {
-                this.flashpointTemperatureField = value;
+                flashpointTemperatureField = value;
             }
         }
 
@@ -367,11 +367,11 @@
         {
             get
             {
-                return this.additionalTemperatureField;
+                return additionalTemperatureField;
             }
             set
             {
-                this.additionalTemperatureField = value;
+                additionalTemperatureField = value;
             }
         }
     }

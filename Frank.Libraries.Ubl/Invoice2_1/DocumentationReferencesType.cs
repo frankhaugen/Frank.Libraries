@@ -17,11 +17,11 @@
         {
             get
             {
-                return this.documentationReferenceField;
+                return documentationReferenceField;
             }
             set
             {
-                this.documentationReferenceField = value;
+                documentationReferenceField = value;
             }
         }
     }

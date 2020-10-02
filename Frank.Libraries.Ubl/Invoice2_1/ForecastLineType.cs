@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.frozenDocumentIndicatorField;
+                return frozenDocumentIndicatorField;
             }
             set
             {
-                this.frozenDocumentIndicatorField = value;
+                frozenDocumentIndicatorField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.forecastTypeCodeField;
+                return forecastTypeCodeField;
             }
             set
             {
-                this.forecastTypeCodeField = value;
+                forecastTypeCodeField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return this.forecastPeriodField;
+                return forecastPeriodField;
             }
             set
             {
-                this.forecastPeriodField = value;
+                forecastPeriodField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.salesItemField;
+                return salesItemField;
             }
             set
             {
-                this.salesItemField = value;
+                salesItemField = value;
             }
         }
     }

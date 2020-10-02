@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return this.manufacturerPartyField;
+                return manufacturerPartyField;
             }
             set
             {
-                this.manufacturerPartyField = value;
+                manufacturerPartyField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
     }

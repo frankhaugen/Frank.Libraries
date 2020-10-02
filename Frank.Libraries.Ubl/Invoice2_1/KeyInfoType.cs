@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.itemsField;
+                return itemsField;
             }
             set
             {
-                this.itemsField = value;
+                itemsField = value;
             }
         }
 
@@ -47,11 +47,11 @@
         {
             get
             {
-                return this.itemsElementNameField;
+                return itemsElementNameField;
             }
             set
             {
-                this.itemsElementNameField = value;
+                itemsElementNameField = value;
             }
         }
 
@@ -61,11 +61,11 @@
         {
             get
             {
-                return this.textField;
+                return textField;
             }
             set
             {
-                this.textField = value;
+                textField = value;
             }
         }
 
@@ -75,11 +75,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

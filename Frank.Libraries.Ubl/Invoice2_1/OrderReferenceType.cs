@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.salesOrderIDField;
+                return salesOrderIDField;
             }
             set
             {
-                this.salesOrderIDField = value;
+                salesOrderIDField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.copyIndicatorField;
+                return copyIndicatorField;
             }
             set
             {
-                this.copyIndicatorField = value;
+                copyIndicatorField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.issueTimeField;
+                return issueTimeField;
             }
             set
             {
-                this.issueTimeField = value;
+                issueTimeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.customerReferenceField;
+                return customerReferenceField;
             }
             set
             {
-                this.customerReferenceField = value;
+                customerReferenceField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.orderTypeCodeField;
+                return orderTypeCodeField;
             }
             set
             {
-                this.orderTypeCodeField = value;
+                orderTypeCodeField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
     }

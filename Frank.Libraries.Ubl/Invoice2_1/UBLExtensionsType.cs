@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.uBLExtensionField;
+                return uBLExtensionField;
             }
             set
             {
-                this.uBLExtensionField = value;
+                uBLExtensionField = value;
             }
         }
     }

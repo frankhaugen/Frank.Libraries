@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.frozenPeriodDaysNumericField;
+                return frozenPeriodDaysNumericField;
             }
             set
             {
-                this.frozenPeriodDaysNumericField = value;
+                frozenPeriodDaysNumericField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.minimumInventoryQuantityField;
+                return minimumInventoryQuantityField;
             }
             set
             {
-                this.minimumInventoryQuantityField = value;
+                minimumInventoryQuantityField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.multipleOrderQuantityField;
+                return multipleOrderQuantityField;
             }
             set
             {
-                this.multipleOrderQuantityField = value;
+                multipleOrderQuantityField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return this.orderIntervalDaysNumericField;
+                return orderIntervalDaysNumericField;
             }
             set
             {
-                this.orderIntervalDaysNumericField = value;
+                orderIntervalDaysNumericField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return this.replenishmentOwnerDescriptionField;
+                return replenishmentOwnerDescriptionField;
             }
             set
             {
-                this.replenishmentOwnerDescriptionField = value;
+                replenishmentOwnerDescriptionField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return this.targetServicePercentField;
+                return targetServicePercentField;
             }
             set
             {
-                this.targetServicePercentField = value;
+                targetServicePercentField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return this.targetInventoryQuantityField;
+                return targetInventoryQuantityField;
             }
             set
             {
-                this.targetInventoryQuantityField = value;
+                targetInventoryQuantityField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return this.effectivePeriodField;
+                return effectivePeriodField;
             }
             set
             {
-                this.effectivePeriodField = value;
+                effectivePeriodField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return this.itemField;
+                return itemField;
             }
             set
             {
-                this.itemField = value;
+                itemField = value;
             }
         }
 
@@ -159,11 +159,11 @@
         {
             get
             {
-                return this.itemLocationQuantityField;
+                return itemLocationQuantityField;
             }
             set
             {
-                this.itemLocationQuantityField = value;
+                itemLocationQuantityField = value;
             }
         }
     }

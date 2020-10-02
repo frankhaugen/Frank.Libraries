@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.rankField;
+                return rankField;
             }
             set
             {
-                this.rankField = value;
+                rankField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.partyField;
+                return partyField;
             }
             set
             {
-                this.partyField = value;
+                partyField = value;
             }
         }
     }

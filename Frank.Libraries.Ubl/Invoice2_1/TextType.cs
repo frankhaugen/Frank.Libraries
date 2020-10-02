@@ -235,11 +235,11 @@
         {
             get
             {
-                return this.languageIDField;
+                return languageIDField;
             }
             set
             {
-                this.languageIDField = value;
+                languageIDField = value;
             }
         }
 
@@ -249,11 +249,11 @@
         {
             get
             {
-                return this.languageLocaleIDField;
+                return languageLocaleIDField;
             }
             set
             {
-                this.languageLocaleIDField = value;
+                languageLocaleIDField = value;
             }
         }
 
@@ -263,11 +263,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.meterNumberField;
+                return meterNumberField;
             }
             set
             {
-                this.meterNumberField = value;
+                meterNumberField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.quantityField;
+                return quantityField;
             }
             set
             {
-                this.quantityField = value;
+                quantityField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.consumptionLevelCodeField;
+                return consumptionLevelCodeField;
             }
             set
             {
-                this.consumptionLevelCodeField = value;
+                consumptionLevelCodeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.consumptionLevelField;
+                return consumptionLevelField;
             }
             set
             {
-                this.consumptionLevelField = value;
+                consumptionLevelField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -113,11 +113,11 @@
         {
             get
             {
-                return this.periodField;
+                return periodField;
             }
             set
             {
-                this.periodField = value;
+                periodField = value;
             }
         }
     }

@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.locationIDField;
+                return locationIDField;
             }
             set
             {
-                this.locationIDField = value;
+                locationIDField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.locationField;
+                return locationField;
             }
             set
             {
-                this.locationField = value;
+                locationField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.measurementDimensionField;
+                return measurementDimensionField;
             }
             set
             {
-                this.measurementDimensionField = value;
+                measurementDimensionField = value;
             }
         }
     }

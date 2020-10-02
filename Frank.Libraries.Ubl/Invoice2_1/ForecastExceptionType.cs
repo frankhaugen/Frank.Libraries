@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.forecastPurposeCodeField;
+                return forecastPurposeCodeField;
             }
             set
             {
-                this.forecastPurposeCodeField = value;
+                forecastPurposeCodeField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.forecastTypeCodeField;
+                return forecastTypeCodeField;
             }
             set
             {
-                this.forecastTypeCodeField = value;
+                forecastTypeCodeField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.issueTimeField;
+                return issueTimeField;
             }
             set
             {
-                this.issueTimeField = value;
+                issueTimeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.dataSourceCodeField;
+                return dataSourceCodeField;
             }
             set
             {
-                this.dataSourceCodeField = value;
+                dataSourceCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.comparisonDataCodeField;
+                return comparisonDataCodeField;
             }
             set
             {
-                this.comparisonDataCodeField = value;
+                comparisonDataCodeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.comparisonForecastIssueTimeField;
+                return comparisonForecastIssueTimeField;
             }
             set
             {
-                this.comparisonForecastIssueTimeField = value;
+                comparisonForecastIssueTimeField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return this.comparisonForecastIssueDateField;
+                return comparisonForecastIssueDateField;
             }
             set
             {
-                this.comparisonForecastIssueDateField = value;
+                comparisonForecastIssueDateField = value;
             }
         }
     }

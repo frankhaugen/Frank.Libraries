@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.eventLineItemField;
+                return eventLineItemField;
             }
             set
             {
-                this.eventLineItemField = value;
+                eventLineItemField = value;
             }
         }
     }

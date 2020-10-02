@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.taxEnergyAmountField;
+                return taxEnergyAmountField;
             }
             set
             {
-                this.taxEnergyAmountField = value;
+                taxEnergyAmountField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.taxEnergyOnAccountAmountField;
+                return taxEnergyOnAccountAmountField;
             }
             set
             {
-                this.taxEnergyOnAccountAmountField = value;
+                taxEnergyOnAccountAmountField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.taxEnergyBalanceAmountField;
+                return taxEnergyBalanceAmountField;
             }
             set
             {
-                this.taxEnergyBalanceAmountField = value;
+                taxEnergyBalanceAmountField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.taxSchemeField;
+                return taxSchemeField;
             }
             set
             {
-                this.taxSchemeField = value;
+                taxSchemeField = value;
             }
         }
     }

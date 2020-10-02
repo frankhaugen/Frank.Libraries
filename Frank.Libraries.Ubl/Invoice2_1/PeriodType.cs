@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.startDateField;
+                return startDateField;
             }
             set
             {
-                this.startDateField = value;
+                startDateField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.startTimeField;
+                return startTimeField;
             }
             set
             {
-                this.startTimeField = value;
+                startTimeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.endDateField;
+                return endDateField;
             }
             set
             {
-                this.endDateField = value;
+                endDateField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.endTimeField;
+                return endTimeField;
             }
             set
             {
-                this.endTimeField = value;
+                endTimeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.durationMeasureField;
+                return durationMeasureField;
             }
             set
             {
-                this.durationMeasureField = value;
+                durationMeasureField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.descriptionCodeField;
+                return descriptionCodeField;
             }
             set
             {
-                this.descriptionCodeField = value;
+                descriptionCodeField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
     }

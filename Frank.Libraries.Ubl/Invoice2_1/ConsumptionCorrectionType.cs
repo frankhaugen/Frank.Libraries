@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.correctionTypeField;
+                return correctionTypeField;
             }
             set
             {
-                this.correctionTypeField = value;
+                correctionTypeField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.correctionTypeCodeField;
+                return correctionTypeCodeField;
             }
             set
             {
-                this.correctionTypeCodeField = value;
+                correctionTypeCodeField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.meterNumberField;
+                return meterNumberField;
             }
             set
             {
-                this.meterNumberField = value;
+                meterNumberField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.gasPressureQuantityField;
+                return gasPressureQuantityField;
             }
             set
             {
-                this.gasPressureQuantityField = value;
+                gasPressureQuantityField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.actualTemperatureReductionQuantityField;
+                return actualTemperatureReductionQuantityField;
             }
             set
             {
-                this.actualTemperatureReductionQuantityField = value;
+                actualTemperatureReductionQuantityField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.normalTemperatureReductionQuantityField;
+                return normalTemperatureReductionQuantityField;
             }
             set
             {
-                this.normalTemperatureReductionQuantityField = value;
+                normalTemperatureReductionQuantityField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return this.differenceTemperatureReductionQuantityField;
+                return differenceTemperatureReductionQuantityField;
             }
             set
             {
-                this.differenceTemperatureReductionQuantityField = value;
+                differenceTemperatureReductionQuantityField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return this.correctionUnitAmountField;
+                return correctionUnitAmountField;
             }
             set
             {
-                this.correctionUnitAmountField = value;
+                correctionUnitAmountField = value;
             }
         }
 
@@ -166,11 +166,11 @@
         {
             get
             {
-                return this.consumptionEnergyQuantityField;
+                return consumptionEnergyQuantityField;
             }
             set
             {
-                this.consumptionEnergyQuantityField = value;
+                consumptionEnergyQuantityField = value;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                return this.consumptionWaterQuantityField;
+                return consumptionWaterQuantityField;
             }
             set
             {
-                this.consumptionWaterQuantityField = value;
+                consumptionWaterQuantityField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return this.correctionAmountField;
+                return correctionAmountField;
             }
             set
             {
-                this.correctionAmountField = value;
+                correctionAmountField = value;
             }
         }
     }

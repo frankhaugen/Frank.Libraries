@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.licensePlateIDField;
+                return licensePlateIDField;
             }
             set
             {
-                this.licensePlateIDField = value;
+                licensePlateIDField = value;
             }
         }
     }

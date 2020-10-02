@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.estimatedConsumedQuantityField;
+                return estimatedConsumedQuantityField;
             }
             set
             {
-                this.estimatedConsumedQuantityField = value;
+                estimatedConsumedQuantityField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.paymentTermsField;
+                return paymentTermsField;
             }
             set
             {
-                this.paymentTermsField = value;
+                paymentTermsField = value;
             }
         }
     }

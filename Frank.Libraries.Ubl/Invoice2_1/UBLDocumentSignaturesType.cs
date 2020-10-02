@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.signatureInformationField;
+                return signatureInformationField;
             }
             set
             {
-                this.signatureInformationField = value;
+                signatureInformationField = value;
             }
         }
     }

@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.forecastPurposeCodeField;
+                return forecastPurposeCodeField;
             }
             set
             {
-                this.forecastPurposeCodeField = value;
+                forecastPurposeCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.forecastTypeCodeField;
+                return forecastTypeCodeField;
             }
             set
             {
-                this.forecastTypeCodeField = value;
+                forecastTypeCodeField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.periodField;
+                return periodField;
             }
             set
             {
-                this.periodField = value;
+                periodField = value;
             }
         }
     }

@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.registrationNameField;
+                return registrationNameField;
             }
             set
             {
-                this.registrationNameField = value;
+                registrationNameField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.companyIDField;
+                return companyIDField;
             }
             set
             {
-                this.companyIDField = value;
+                companyIDField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.taxLevelCodeField;
+                return taxLevelCodeField;
             }
             set
             {
-                this.taxLevelCodeField = value;
+                taxLevelCodeField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.exemptionReasonCodeField;
+                return exemptionReasonCodeField;
             }
             set
             {
-                this.exemptionReasonCodeField = value;
+                exemptionReasonCodeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.exemptionReasonField;
+                return exemptionReasonField;
             }
             set
             {
-                this.exemptionReasonField = value;
+                exemptionReasonField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return this.registrationAddressField;
+                return registrationAddressField;
             }
             set
             {
-                this.registrationAddressField = value;
+                registrationAddressField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.taxSchemeField;
+                return taxSchemeField;
             }
             set
             {
-                this.taxSchemeField = value;
+                taxSchemeField = value;
             }
         }
     }

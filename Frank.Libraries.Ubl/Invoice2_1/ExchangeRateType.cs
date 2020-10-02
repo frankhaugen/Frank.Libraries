@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.sourceCurrencyCodeField;
+                return sourceCurrencyCodeField;
             }
             set
             {
-                this.sourceCurrencyCodeField = value;
+                sourceCurrencyCodeField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.sourceCurrencyBaseRateField;
+                return sourceCurrencyBaseRateField;
             }
             set
             {
-                this.sourceCurrencyBaseRateField = value;
+                sourceCurrencyBaseRateField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.targetCurrencyCodeField;
+                return targetCurrencyCodeField;
             }
             set
             {
-                this.targetCurrencyCodeField = value;
+                targetCurrencyCodeField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.targetCurrencyBaseRateField;
+                return targetCurrencyBaseRateField;
             }
             set
             {
-                this.targetCurrencyBaseRateField = value;
+                targetCurrencyBaseRateField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.exchangeMarketIDField;
+                return exchangeMarketIDField;
             }
             set
             {
-                this.exchangeMarketIDField = value;
+                exchangeMarketIDField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.calculationRateField;
+                return calculationRateField;
             }
             set
             {
-                this.calculationRateField = value;
+                calculationRateField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.mathematicOperatorCodeField;
+                return mathematicOperatorCodeField;
             }
             set
             {
-                this.mathematicOperatorCodeField = value;
+                mathematicOperatorCodeField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.dateField;
+                return dateField;
             }
             set
             {
-                this.dateField = value;
+                dateField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return this.foreignExchangeContractField;
+                return foreignExchangeContractField;
             }
             set
             {
-                this.foreignExchangeContractField = value;
+                foreignExchangeContractField = value;
             }
         }
     }

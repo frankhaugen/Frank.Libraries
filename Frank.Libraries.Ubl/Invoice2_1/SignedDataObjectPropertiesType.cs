@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.dataObjectFormatField;
+                return dataObjectFormatField;
             }
             set
             {
-                this.dataObjectFormatField = value;
+                dataObjectFormatField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.commitmentTypeIndicationField;
+                return commitmentTypeIndicationField;
             }
             set
             {
-                this.commitmentTypeIndicationField = value;
+                commitmentTypeIndicationField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.allDataObjectsTimeStampField;
+                return allDataObjectsTimeStampField;
             }
             set
             {
-                this.allDataObjectsTimeStampField = value;
+                allDataObjectsTimeStampField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.individualDataObjectsTimeStampField;
+                return individualDataObjectsTimeStampField;
             }
             set
             {
-                this.individualDataObjectsTimeStampField = value;
+                individualDataObjectsTimeStampField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

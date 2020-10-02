@@ -91,11 +91,11 @@
         {
             get
             {
-                return this.unitCodeField;
+                return unitCodeField;
             }
             set
             {
-                this.unitCodeField = value;
+                unitCodeField = value;
             }
         }
 
@@ -105,11 +105,11 @@
         {
             get
             {
-                return this.unitCodeListIDField;
+                return unitCodeListIDField;
             }
             set
             {
-                this.unitCodeListIDField = value;
+                unitCodeListIDField = value;
             }
         }
 
@@ -119,11 +119,11 @@
         {
             get
             {
-                return this.unitCodeListAgencyIDField;
+                return unitCodeListAgencyIDField;
             }
             set
             {
-                this.unitCodeListAgencyIDField = value;
+                unitCodeListAgencyIDField = value;
             }
         }
 
@@ -133,11 +133,11 @@
         {
             get
             {
-                return this.unitCodeListAgencyNameField;
+                return unitCodeListAgencyNameField;
             }
             set
             {
-                this.unitCodeListAgencyNameField = value;
+                unitCodeListAgencyNameField = value;
             }
         }
 
@@ -147,11 +147,11 @@
         {
             get
             {
-                return this.valueField;
+                return valueField;
             }
             set
             {
-                this.valueField = value;
+                valueField = value;
             }
         }
     }

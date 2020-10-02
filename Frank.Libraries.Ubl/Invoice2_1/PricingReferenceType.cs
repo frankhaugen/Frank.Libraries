@@ -19,11 +19,11 @@
         {
             get
             {
-                return this.originalItemLocationQuantityField;
+                return originalItemLocationQuantityField;
             }
             set
             {
-                this.originalItemLocationQuantityField = value;
+                originalItemLocationQuantityField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.alternativeConditionPriceField;
+                return alternativeConditionPriceField;
             }
             set
             {
-                this.alternativeConditionPriceField = value;
+                alternativeConditionPriceField = value;
             }
         }
     }

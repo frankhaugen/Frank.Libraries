@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.estimatedOverallContractAmountField;
+                return estimatedOverallContractAmountField;
             }
             set
             {
-                this.estimatedOverallContractAmountField = value;
+                estimatedOverallContractAmountField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.totalAmountField;
+                return totalAmountField;
             }
             set
             {
-                this.totalAmountField = value;
+                totalAmountField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.taxIncludedIndicatorField;
+                return taxIncludedIndicatorField;
             }
             set
             {
-                this.taxIncludedIndicatorField = value;
+                taxIncludedIndicatorField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.minimumAmountField;
+                return minimumAmountField;
             }
             set
             {
-                this.minimumAmountField = value;
+                minimumAmountField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.maximumAmountField;
+                return maximumAmountField;
             }
             set
             {
-                this.maximumAmountField = value;
+                maximumAmountField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.monetaryScopeField;
+                return monetaryScopeField;
             }
             set
             {
-                this.monetaryScopeField = value;
+                monetaryScopeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.averageSubsequentContractAmountField;
+                return averageSubsequentContractAmountField;
             }
             set
             {
-                this.averageSubsequentContractAmountField = value;
+                averageSubsequentContractAmountField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return this.applicableTaxCategoryField;
+                return applicableTaxCategoryField;
             }
             set
             {
-                this.applicableTaxCategoryField = value;
+                applicableTaxCategoryField = value;
             }
         }
     }

@@ -31,11 +31,11 @@
         {
             get
             {
-                return this.invoiceDocumentReferenceField;
+                return invoiceDocumentReferenceField;
             }
             set
             {
-                this.invoiceDocumentReferenceField = value;
+                invoiceDocumentReferenceField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.selfBilledInvoiceDocumentReferenceField;
+                return selfBilledInvoiceDocumentReferenceField;
             }
             set
             {
-                this.selfBilledInvoiceDocumentReferenceField = value;
+                selfBilledInvoiceDocumentReferenceField = value;
             }
         }
 
@@ -57,11 +57,11 @@
         {
             get
             {
-                return this.creditNoteDocumentReferenceField;
+                return creditNoteDocumentReferenceField;
             }
             set
             {
-                this.creditNoteDocumentReferenceField = value;
+                creditNoteDocumentReferenceField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.selfBilledCreditNoteDocumentReferenceField;
+                return selfBilledCreditNoteDocumentReferenceField;
             }
             set
             {
-                this.selfBilledCreditNoteDocumentReferenceField = value;
+                selfBilledCreditNoteDocumentReferenceField = value;
             }
         }
 
@@ -83,11 +83,11 @@
         {
             get
             {
-                return this.debitNoteDocumentReferenceField;
+                return debitNoteDocumentReferenceField;
             }
             set
             {
-                this.debitNoteDocumentReferenceField = value;
+                debitNoteDocumentReferenceField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.reminderDocumentReferenceField;
+                return reminderDocumentReferenceField;
             }
             set
             {
-                this.reminderDocumentReferenceField = value;
+                reminderDocumentReferenceField = value;
             }
         }
 
@@ -109,11 +109,11 @@
         {
             get
             {
-                return this.additionalDocumentReferenceField;
+                return additionalDocumentReferenceField;
             }
             set
             {
-                this.additionalDocumentReferenceField = value;
+                additionalDocumentReferenceField = value;
             }
         }
 
@@ -123,11 +123,11 @@
         {
             get
             {
-                return this.billingReferenceLineField;
+                return billingReferenceLineField;
             }
             set
             {
-                this.billingReferenceLineField = value;
+                billingReferenceLineField = value;
             }
         }
     }

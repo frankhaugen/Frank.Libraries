@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.subscriberIDField;
+                return subscriberIDField;
             }
             set
             {
-                this.subscriberIDField = value;
+                subscriberIDField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.subscriberTypeField;
+                return subscriberTypeField;
             }
             set
             {
-                this.subscriberTypeField = value;
+                subscriberTypeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.subscriberTypeCodeField;
+                return subscriberTypeCodeField;
             }
             set
             {
-                this.subscriberTypeCodeField = value;
+                subscriberTypeCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.packQuantityField;
+                return packQuantityField;
             }
             set
             {
-                this.packQuantityField = value;
+                packQuantityField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return this.packSizeNumericField;
+                return packSizeNumericField;
             }
             set
             {
-                this.packSizeNumericField = value;
+                packSizeNumericField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return this.consumptionTypeField;
+                return consumptionTypeField;
             }
             set
             {
-                this.consumptionTypeField = value;
+                consumptionTypeField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return this.consumptionTypeCodeField;
+                return consumptionTypeCodeField;
             }
             set
             {
-                this.consumptionTypeCodeField = value;
+                consumptionTypeCodeField = value;
             }
         }
 
@@ -172,11 +172,11 @@
         {
             get
             {
-                return this.currentChargeTypeField;
+                return currentChargeTypeField;
             }
             set
             {
-                this.currentChargeTypeField = value;
+                currentChargeTypeField = value;
             }
         }
 
@@ -186,11 +186,11 @@
         {
             get
             {
-                return this.currentChargeTypeCodeField;
+                return currentChargeTypeCodeField;
             }
             set
             {
-                this.currentChargeTypeCodeField = value;
+                currentChargeTypeCodeField = value;
             }
         }
 
@@ -200,11 +200,11 @@
         {
             get
             {
-                return this.oneTimeChargeTypeField;
+                return oneTimeChargeTypeField;
             }
             set
             {
-                this.oneTimeChargeTypeField = value;
+                oneTimeChargeTypeField = value;
             }
         }
 
@@ -214,11 +214,11 @@
         {
             get
             {
-                return this.oneTimeChargeTypeCodeField;
+                return oneTimeChargeTypeCodeField;
             }
             set
             {
-                this.oneTimeChargeTypeCodeField = value;
+                oneTimeChargeTypeCodeField = value;
             }
         }
 
@@ -227,11 +227,11 @@
         {
             get
             {
-                return this.taxCategoryField;
+                return taxCategoryField;
             }
             set
             {
-                this.taxCategoryField = value;
+                taxCategoryField = value;
             }
         }
 
@@ -240,11 +240,11 @@
         {
             get
             {
-                return this.contractField;
+                return contractField;
             }
             set
             {
-                this.contractField = value;
+                contractField = value;
             }
         }
     }

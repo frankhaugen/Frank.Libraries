@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.transportServiceCodeField;
+                return transportServiceCodeField;
             }
             set
             {
-                this.transportServiceCodeField = value;
+                transportServiceCodeField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.tariffClassCodeField;
+                return tariffClassCodeField;
             }
             set
             {
-                this.tariffClassCodeField = value;
+                tariffClassCodeField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.priorityField;
+                return priorityField;
             }
             set
             {
-                this.priorityField = value;
+                priorityField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.freightRateClassCodeField;
+                return freightRateClassCodeField;
             }
             set
             {
-                this.freightRateClassCodeField = value;
+                freightRateClassCodeField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.transportationServiceDescriptionField;
+                return transportationServiceDescriptionField;
             }
             set
             {
-                this.transportationServiceDescriptionField = value;
+                transportationServiceDescriptionField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.transportationServiceDetailsURIField;
+                return transportationServiceDetailsURIField;
             }
             set
             {
-                this.transportationServiceDetailsURIField = value;
+                transportationServiceDetailsURIField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return this.nominationDateField;
+                return nominationDateField;
             }
             set
             {
-                this.nominationDateField = value;
+                nominationDateField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return this.nominationTimeField;
+                return nominationTimeField;
             }
             set
             {
-                this.nominationTimeField = value;
+                nominationTimeField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return this.sequenceNumericField;
+                return sequenceNumericField;
             }
             set
             {
-                this.sequenceNumericField = value;
+                sequenceNumericField = value;
             }
         }
 
@@ -202,11 +202,11 @@
         {
             get
             {
-                return this.transportEquipmentField;
+                return transportEquipmentField;
             }
             set
             {
-                this.transportEquipmentField = value;
+                transportEquipmentField = value;
             }
         }
 
@@ -216,11 +216,11 @@
         {
             get
             {
-                return this.supportedTransportEquipmentField;
+                return supportedTransportEquipmentField;
             }
             set
             {
-                this.supportedTransportEquipmentField = value;
+                supportedTransportEquipmentField = value;
             }
         }
 
@@ -230,11 +230,11 @@
         {
             get
             {
-                return this.unsupportedTransportEquipmentField;
+                return unsupportedTransportEquipmentField;
             }
             set
             {
-                this.unsupportedTransportEquipmentField = value;
+                unsupportedTransportEquipmentField = value;
             }
         }
 
@@ -244,11 +244,11 @@
         {
             get
             {
-                return this.commodityClassificationField;
+                return commodityClassificationField;
             }
             set
             {
-                this.commodityClassificationField = value;
+                commodityClassificationField = value;
             }
         }
 
@@ -258,11 +258,11 @@
         {
             get
             {
-                return this.supportedCommodityClassificationField;
+                return supportedCommodityClassificationField;
             }
             set
             {
-                this.supportedCommodityClassificationField = value;
+                supportedCommodityClassificationField = value;
             }
         }
 
@@ -272,11 +272,11 @@
         {
             get
             {
-                return this.unsupportedCommodityClassificationField;
+                return unsupportedCommodityClassificationField;
             }
             set
             {
-                this.unsupportedCommodityClassificationField = value;
+                unsupportedCommodityClassificationField = value;
             }
         }
 
@@ -285,11 +285,11 @@
         {
             get
             {
-                return this.totalCapacityDimensionField;
+                return totalCapacityDimensionField;
             }
             set
             {
-                this.totalCapacityDimensionField = value;
+                totalCapacityDimensionField = value;
             }
         }
 
@@ -299,11 +299,11 @@
         {
             get
             {
-                return this.shipmentStageField;
+                return shipmentStageField;
             }
             set
             {
-                this.shipmentStageField = value;
+                shipmentStageField = value;
             }
         }
 
@@ -313,11 +313,11 @@
         {
             get
             {
-                return this.transportEventField;
+                return transportEventField;
             }
             set
             {
-                this.transportEventField = value;
+                transportEventField = value;
             }
         }
 
@@ -326,11 +326,11 @@
         {
             get
             {
-                return this.responsibleTransportServiceProviderPartyField;
+                return responsibleTransportServiceProviderPartyField;
             }
             set
             {
-                this.responsibleTransportServiceProviderPartyField = value;
+                responsibleTransportServiceProviderPartyField = value;
             }
         }
 
@@ -340,11 +340,11 @@
         {
             get
             {
-                return this.environmentalEmissionField;
+                return environmentalEmissionField;
             }
             set
             {
-                this.environmentalEmissionField = value;
+                environmentalEmissionField = value;
             }
         }
 
@@ -353,11 +353,11 @@
         {
             get
             {
-                return this.estimatedDurationPeriodField;
+                return estimatedDurationPeriodField;
             }
             set
             {
-                this.estimatedDurationPeriodField = value;
+                estimatedDurationPeriodField = value;
             }
         }
 
@@ -367,11 +367,11 @@
         {
             get
             {
-                return this.scheduledServiceFrequencyField;
+                return scheduledServiceFrequencyField;
             }
             set
             {
-                this.scheduledServiceFrequencyField = value;
+                scheduledServiceFrequencyField = value;
             }
         }
     }

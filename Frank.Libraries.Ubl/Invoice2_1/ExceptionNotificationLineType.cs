@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.exceptionStatusCodeField;
+                return exceptionStatusCodeField;
             }
             set
             {
-                this.exceptionStatusCodeField = value;
+                exceptionStatusCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.collaborationPriorityCodeField;
+                return collaborationPriorityCodeField;
             }
             set
             {
-                this.collaborationPriorityCodeField = value;
+                collaborationPriorityCodeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.resolutionCodeField;
+                return resolutionCodeField;
             }
             set
             {
-                this.resolutionCodeField = value;
+                resolutionCodeField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return this.comparedValueMeasureField;
+                return comparedValueMeasureField;
             }
             set
             {
-                this.comparedValueMeasureField = value;
+                comparedValueMeasureField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return this.sourceValueMeasureField;
+                return sourceValueMeasureField;
             }
             set
             {
-                this.sourceValueMeasureField = value;
+                sourceValueMeasureField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return this.varianceQuantityField;
+                return varianceQuantityField;
             }
             set
             {
-                this.varianceQuantityField = value;
+                varianceQuantityField = value;
             }
         }
 
@@ -172,11 +172,11 @@
         {
             get
             {
-                return this.supplyChainActivityTypeCodeField;
+                return supplyChainActivityTypeCodeField;
             }
             set
             {
-                this.supplyChainActivityTypeCodeField = value;
+                supplyChainActivityTypeCodeField = value;
             }
         }
 
@@ -186,11 +186,11 @@
         {
             get
             {
-                return this.performanceMetricTypeCodeField;
+                return performanceMetricTypeCodeField;
             }
             set
             {
-                this.performanceMetricTypeCodeField = value;
+                performanceMetricTypeCodeField = value;
             }
         }
 
@@ -199,11 +199,11 @@
         {
             get
             {
-                return this.exceptionObservationPeriodField;
+                return exceptionObservationPeriodField;
             }
             set
             {
-                this.exceptionObservationPeriodField = value;
+                exceptionObservationPeriodField = value;
             }
         }
 
@@ -213,11 +213,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -226,11 +226,11 @@
         {
             get
             {
-                return this.forecastExceptionField;
+                return forecastExceptionField;
             }
             set
             {
-                this.forecastExceptionField = value;
+                forecastExceptionField = value;
             }
         }
 
@@ -239,11 +239,11 @@
         {
             get
             {
-                return this.supplyItemField;
+                return supplyItemField;
             }
             set
             {
-                this.supplyItemField = value;
+                supplyItemField = value;
             }
         }
     }

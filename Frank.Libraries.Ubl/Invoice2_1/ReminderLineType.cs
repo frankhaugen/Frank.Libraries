@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.balanceBroughtForwardIndicatorField;
+                return balanceBroughtForwardIndicatorField;
             }
             set
             {
-                this.balanceBroughtForwardIndicatorField = value;
+                balanceBroughtForwardIndicatorField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.debitLineAmountField;
+                return debitLineAmountField;
             }
             set
             {
-                this.debitLineAmountField = value;
+                debitLineAmountField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.creditLineAmountField;
+                return creditLineAmountField;
             }
             set
             {
-                this.creditLineAmountField = value;
+                creditLineAmountField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.accountingCostCodeField;
+                return accountingCostCodeField;
             }
             set
             {
-                this.accountingCostCodeField = value;
+                accountingCostCodeField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return this.accountingCostField;
+                return accountingCostField;
             }
             set
             {
-                this.accountingCostField = value;
+                accountingCostField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return this.penaltySurchargePercentField;
+                return penaltySurchargePercentField;
             }
             set
             {
-                this.penaltySurchargePercentField = value;
+                penaltySurchargePercentField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return this.paymentPurposeCodeField;
+                return paymentPurposeCodeField;
             }
             set
             {
-                this.paymentPurposeCodeField = value;
+                paymentPurposeCodeField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return this.reminderPeriodField;
+                return reminderPeriodField;
             }
             set
             {
-                this.reminderPeriodField = value;
+                reminderPeriodField = value;
             }
         }
 
@@ -212,11 +212,11 @@
         {
             get
             {
-                return this.billingReferenceField;
+                return billingReferenceField;
             }
             set
             {
-                this.billingReferenceField = value;
+                billingReferenceField = value;
             }
         }
 
@@ -225,11 +225,11 @@
         {
             get
             {
-                return this.exchangeRateField;
+                return exchangeRateField;
             }
             set
             {
-                this.exchangeRateField = value;
+                exchangeRateField = value;
             }
         }
     }

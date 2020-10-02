@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.priceAmountField;
+                return priceAmountField;
             }
             set
             {
-                this.priceAmountField = value;
+                priceAmountField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.timeAmountField;
+                return timeAmountField;
             }
             set
             {
-                this.timeAmountField = value;
+                timeAmountField = value;
             }
         }
     }

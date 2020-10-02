@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.responderIDField;
+                return responderIDField;
             }
             set
             {
-                this.responderIDField = value;
+                responderIDField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.producedAtField;
+                return producedAtField;
             }
             set
             {
-                this.producedAtField = value;
+                producedAtField = value;
             }
         }
 
@@ -47,11 +47,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
     }

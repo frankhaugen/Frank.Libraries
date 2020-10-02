@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.telephoneField;
+                return telephoneField;
             }
             set
             {
-                this.telephoneField = value;
+                telephoneField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.telefaxField;
+                return telefaxField;
             }
             set
             {
-                this.telefaxField = value;
+                telefaxField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.electronicMailField;
+                return electronicMailField;
             }
             set
             {
-                this.electronicMailField = value;
+                electronicMailField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.otherCommunicationField;
+                return otherCommunicationField;
             }
             set
             {
-                this.otherCommunicationField = value;
+                otherCommunicationField = value;
             }
         }
     }

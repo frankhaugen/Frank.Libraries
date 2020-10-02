@@ -19,11 +19,11 @@
         {
             get
             {
-                return this.shipmentField;
+                return shipmentField;
             }
             set
             {
-                this.shipmentField = value;
+                shipmentField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.packageField;
+                return packageField;
             }
             set
             {
-                this.packageField = value;
+                packageField = value;
             }
         }
     }

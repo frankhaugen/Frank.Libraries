@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.paidAmountField;
+                return paidAmountField;
             }
             set
             {
-                this.paidAmountField = value;
+                paidAmountField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.receivedDateField;
+                return receivedDateField;
             }
             set
             {
-                this.receivedDateField = value;
+                receivedDateField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.paidDateField;
+                return paidDateField;
             }
             set
             {
-                this.paidDateField = value;
+                paidDateField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.paidTimeField;
+                return paidTimeField;
             }
             set
             {
-                this.paidTimeField = value;
+                paidTimeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.instructionIDField;
+                return instructionIDField;
             }
             set
             {
-                this.instructionIDField = value;
+                instructionIDField = value;
             }
         }
     }

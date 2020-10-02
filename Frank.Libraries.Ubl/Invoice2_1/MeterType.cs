@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.meterNumberField;
+                return meterNumberField;
             }
             set
             {
-                this.meterNumberField = value;
+                meterNumberField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.meterNameField;
+                return meterNameField;
             }
             set
             {
-                this.meterNameField = value;
+                meterNameField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.meterConstantField;
+                return meterConstantField;
             }
             set
             {
-                this.meterConstantField = value;
+                meterConstantField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.meterConstantCodeField;
+                return meterConstantCodeField;
             }
             set
             {
-                this.meterConstantCodeField = value;
+                meterConstantCodeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.totalDeliveredQuantityField;
+                return totalDeliveredQuantityField;
             }
             set
             {
-                this.totalDeliveredQuantityField = value;
+                totalDeliveredQuantityField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.meterReadingField;
+                return meterReadingField;
             }
             set
             {
-                this.meterReadingField = value;
+                meterReadingField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.meterPropertyField;
+                return meterPropertyField;
             }
             set
             {
-                this.meterPropertyField = value;
+                meterPropertyField = value;
             }
         }
     }

@@ -19,11 +19,11 @@
         {
             get
             {
-                return this.lineReferenceField;
+                return lineReferenceField;
             }
             set
             {
-                this.lineReferenceField = value;
+                lineReferenceField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.responseField;
+                return responseField;
             }
             set
             {
-                this.responseField = value;
+                responseField = value;
             }
         }
     }

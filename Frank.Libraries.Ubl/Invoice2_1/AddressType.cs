@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.addressTypeCodeField;
+                return addressTypeCodeField;
             }
             set
             {
-                this.addressTypeCodeField = value;
+                addressTypeCodeField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.addressFormatCodeField;
+                return addressFormatCodeField;
             }
             set
             {
-                this.addressFormatCodeField = value;
+                addressFormatCodeField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.postboxField;
+                return postboxField;
             }
             set
             {
-                this.postboxField = value;
+                postboxField = value;
             }
         }
 
@@ -126,11 +126,11 @@
         {
             get
             {
-                return this.floorField;
+                return floorField;
             }
             set
             {
-                this.floorField = value;
+                floorField = value;
             }
         }
 
@@ -140,11 +140,11 @@
         {
             get
             {
-                return this.roomField;
+                return roomField;
             }
             set
             {
-                this.roomField = value;
+                roomField = value;
             }
         }
 
@@ -154,11 +154,11 @@
         {
             get
             {
-                return this.streetNameField;
+                return streetNameField;
             }
             set
             {
-                this.streetNameField = value;
+                streetNameField = value;
             }
         }
 
@@ -168,11 +168,11 @@
         {
             get
             {
-                return this.additionalStreetNameField;
+                return additionalStreetNameField;
             }
             set
             {
-                this.additionalStreetNameField = value;
+                additionalStreetNameField = value;
             }
         }
 
@@ -182,11 +182,11 @@
         {
             get
             {
-                return this.blockNameField;
+                return blockNameField;
             }
             set
             {
-                this.blockNameField = value;
+                blockNameField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return this.buildingNameField;
+                return buildingNameField;
             }
             set
             {
-                this.buildingNameField = value;
+                buildingNameField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return this.buildingNumberField;
+                return buildingNumberField;
             }
             set
             {
-                this.buildingNumberField = value;
+                buildingNumberField = value;
             }
         }
 
@@ -224,11 +224,11 @@
         {
             get
             {
-                return this.inhouseMailField;
+                return inhouseMailField;
             }
             set
             {
-                this.inhouseMailField = value;
+                inhouseMailField = value;
             }
         }
 
@@ -238,11 +238,11 @@
         {
             get
             {
-                return this.departmentField;
+                return departmentField;
             }
             set
             {
-                this.departmentField = value;
+                departmentField = value;
             }
         }
 
@@ -252,11 +252,11 @@
         {
             get
             {
-                return this.markAttentionField;
+                return markAttentionField;
             }
             set
             {
-                this.markAttentionField = value;
+                markAttentionField = value;
             }
         }
 
@@ -266,11 +266,11 @@
         {
             get
             {
-                return this.markCareField;
+                return markCareField;
             }
             set
             {
-                this.markCareField = value;
+                markCareField = value;
             }
         }
 
@@ -280,11 +280,11 @@
         {
             get
             {
-                return this.plotIdentificationField;
+                return plotIdentificationField;
             }
             set
             {
-                this.plotIdentificationField = value;
+                plotIdentificationField = value;
             }
         }
 
@@ -294,11 +294,11 @@
         {
             get
             {
-                return this.citySubdivisionNameField;
+                return citySubdivisionNameField;
             }
             set
             {
-                this.citySubdivisionNameField = value;
+                citySubdivisionNameField = value;
             }
         }
 
@@ -308,11 +308,11 @@
         {
             get
             {
-                return this.cityNameField;
+                return cityNameField;
             }
             set
             {
-                this.cityNameField = value;
+                cityNameField = value;
             }
         }
 
@@ -322,11 +322,11 @@
         {
             get
             {
-                return this.postalZoneField;
+                return postalZoneField;
             }
             set
             {
-                this.postalZoneField = value;
+                postalZoneField = value;
             }
         }
 
@@ -336,11 +336,11 @@
         {
             get
             {
-                return this.countrySubentityField;
+                return countrySubentityField;
             }
             set
             {
-                this.countrySubentityField = value;
+                countrySubentityField = value;
             }
         }
 
@@ -350,11 +350,11 @@
         {
             get
             {
-                return this.countrySubentityCodeField;
+                return countrySubentityCodeField;
             }
             set
             {
-                this.countrySubentityCodeField = value;
+                countrySubentityCodeField = value;
             }
         }
 
@@ -364,11 +364,11 @@
         {
             get
             {
-                return this.regionField;
+                return regionField;
             }
             set
             {
-                this.regionField = value;
+                regionField = value;
             }
         }
 
@@ -378,11 +378,11 @@
         {
             get
             {
-                return this.districtField;
+                return districtField;
             }
             set
             {
-                this.districtField = value;
+                districtField = value;
             }
         }
 
@@ -392,11 +392,11 @@
         {
             get
             {
-                return this.timezoneOffsetField;
+                return timezoneOffsetField;
             }
             set
             {
-                this.timezoneOffsetField = value;
+                timezoneOffsetField = value;
             }
         }
 
@@ -406,11 +406,11 @@
         {
             get
             {
-                return this.addressLineField;
+                return addressLineField;
             }
             set
             {
-                this.addressLineField = value;
+                addressLineField = value;
             }
         }
 
@@ -419,11 +419,11 @@
         {
             get
             {
-                return this.countryField;
+                return countryField;
             }
             set
             {
-                this.countryField = value;
+                countryField = value;
             }
         }
 
@@ -433,11 +433,11 @@
         {
             get
             {
-                return this.locationCoordinateField;
+                return locationCoordinateField;
             }
             set
             {
-                this.locationCoordinateField = value;
+                locationCoordinateField = value;
             }
         }
     }

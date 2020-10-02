@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.partecipationPercentField;
+                return partecipationPercentField;
             }
             set
             {
-                this.partecipationPercentField = value;
+                partecipationPercentField = value;
             }
         }
 
@@ -33,11 +33,11 @@
         {
             get
             {
-                return this.partyField;
+                return partyField;
             }
             set
             {
-                this.partyField = value;
+                partyField = value;
             }
         }
     }

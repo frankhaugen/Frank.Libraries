@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.consumerIncentiveTacticTypeCodeField;
+                return consumerIncentiveTacticTypeCodeField;
             }
             set
             {
-                this.consumerIncentiveTacticTypeCodeField = value;
+                consumerIncentiveTacticTypeCodeField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.displayTacticTypeCodeField;
+                return displayTacticTypeCodeField;
             }
             set
             {
-                this.displayTacticTypeCodeField = value;
+                displayTacticTypeCodeField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.featureTacticTypeCodeField;
+                return featureTacticTypeCodeField;
             }
             set
             {
-                this.featureTacticTypeCodeField = value;
+                featureTacticTypeCodeField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.tradeItemPackingLabelingTypeCodeField;
+                return tradeItemPackingLabelingTypeCodeField;
             }
             set
             {
-                this.tradeItemPackingLabelingTypeCodeField = value;
+                tradeItemPackingLabelingTypeCodeField = value;
             }
         }
     }

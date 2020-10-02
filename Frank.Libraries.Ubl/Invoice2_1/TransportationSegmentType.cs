@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.sequenceNumericField;
+                return sequenceNumericField;
             }
             set
             {
-                this.sequenceNumericField = value;
+                sequenceNumericField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.transportExecutionPlanReferenceIDField;
+                return transportExecutionPlanReferenceIDField;
             }
             set
             {
-                this.transportExecutionPlanReferenceIDField = value;
+                transportExecutionPlanReferenceIDField = value;
             }
         }
 
@@ -55,11 +55,11 @@
         {
             get
             {
-                return this.transportationServiceField;
+                return transportationServiceField;
             }
             set
             {
-                this.transportationServiceField = value;
+                transportationServiceField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.transportServiceProviderPartyField;
+                return transportServiceProviderPartyField;
             }
             set
             {
-                this.transportServiceProviderPartyField = value;
+                transportServiceProviderPartyField = value;
             }
         }
 
@@ -81,11 +81,11 @@
         {
             get
             {
-                return this.referencedConsignmentField;
+                return referencedConsignmentField;
             }
             set
             {
-                this.referencedConsignmentField = value;
+                referencedConsignmentField = value;
             }
         }
 
@@ -95,11 +95,11 @@
         {
             get
             {
-                return this.shipmentStageField;
+                return shipmentStageField;
             }
             set
             {
-                this.shipmentStageField = value;
+                shipmentStageField = value;
             }
         }
     }

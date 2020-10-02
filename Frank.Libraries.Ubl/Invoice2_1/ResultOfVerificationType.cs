@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.validatorIDField;
+                return validatorIDField;
             }
             set
             {
-                this.validatorIDField = value;
+                validatorIDField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.validationResultCodeField;
+                return validationResultCodeField;
             }
             set
             {
-                this.validationResultCodeField = value;
+                validationResultCodeField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.validationDateField;
+                return validationDateField;
             }
             set
             {
-                this.validationDateField = value;
+                validationDateField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.validationTimeField;
+                return validationTimeField;
             }
             set
             {
-                this.validationTimeField = value;
+                validationTimeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.validateProcessField;
+                return validateProcessField;
             }
             set
             {
-                this.validateProcessField = value;
+                validateProcessField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.validateToolField;
+                return validateToolField;
             }
             set
             {
-                this.validateToolField = value;
+                validateToolField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.validateToolVersionField;
+                return validateToolVersionField;
             }
             set
             {
-                this.validateToolVersionField = value;
+                validateToolVersionField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return this.signatoryPartyField;
+                return signatoryPartyField;
             }
             set
             {
-                this.signatoryPartyField = value;
+                signatoryPartyField = value;
             }
         }
     }

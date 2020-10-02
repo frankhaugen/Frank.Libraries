@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.organizationField;
+                return organizationField;
             }
             set
             {
-                this.organizationField = value;
+                organizationField = value;
             }
         }
 
@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.noticeNumbersField;
+                return noticeNumbersField;
             }
             set
             {
-                this.noticeNumbersField = value;
+                noticeNumbersField = value;
             }
         }
     }

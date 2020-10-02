@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.promotionalEventTypeCodeField;
+                return promotionalEventTypeCodeField;
             }
             set
             {
-                this.promotionalEventTypeCodeField = value;
+                promotionalEventTypeCodeField = value;
             }
         }
 
@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.submissionDateField;
+                return submissionDateField;
             }
             set
             {
-                this.submissionDateField = value;
+                submissionDateField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.firstShipmentAvailibilityDateField;
+                return firstShipmentAvailibilityDateField;
             }
             set
             {
-                this.firstShipmentAvailibilityDateField = value;
+                firstShipmentAvailibilityDateField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.latestProposalAcceptanceDateField;
+                return latestProposalAcceptanceDateField;
             }
             set
             {
-                this.latestProposalAcceptanceDateField = value;
+                latestProposalAcceptanceDateField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.promotionalSpecificationField;
+                return promotionalSpecificationField;
             }
             set
             {
-                this.promotionalSpecificationField = value;
+                promotionalSpecificationField = value;
             }
         }
     }

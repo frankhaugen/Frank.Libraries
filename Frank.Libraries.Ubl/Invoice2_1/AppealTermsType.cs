@@ -26,11 +26,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -39,11 +39,11 @@
         {
             get
             {
-                return this.presentationPeriodField;
+                return presentationPeriodField;
             }
             set
             {
-                this.presentationPeriodField = value;
+                presentationPeriodField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.appealInformationPartyField;
+                return appealInformationPartyField;
             }
             set
             {
-                this.appealInformationPartyField = value;
+                appealInformationPartyField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.appealReceiverPartyField;
+                return appealReceiverPartyField;
             }
             set
             {
-                this.appealReceiverPartyField = value;
+                appealReceiverPartyField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return this.mediationPartyField;
+                return mediationPartyField;
             }
             set
             {
-                this.mediationPartyField = value;
+                mediationPartyField = value;
             }
         }
     }

@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.passwordField;
+                return passwordField;
             }
             set
             {
-                this.passwordField = value;
+                passwordField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.loginField;
+                return loginField;
             }
             set
             {
-                this.loginField = value;
+                loginField = value;
             }
         }
     }

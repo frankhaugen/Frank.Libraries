@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.lotNumberIDField;
+                return lotNumberIDField;
             }
             set
             {
-                this.lotNumberIDField = value;
+                lotNumberIDField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.expiryDateField;
+                return expiryDateField;
             }
             set
             {
-                this.expiryDateField = value;
+                expiryDateField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.additionalItemPropertyField;
+                return additionalItemPropertyField;
             }
             set
             {
-                this.additionalItemPropertyField = value;
+                additionalItemPropertyField = value;
             }
         }
     }

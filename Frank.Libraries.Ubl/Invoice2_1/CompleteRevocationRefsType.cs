@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.cRLRefsField;
+                return cRLRefsField;
             }
             set
             {
-                this.cRLRefsField = value;
+                cRLRefsField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.oCSPRefsField;
+                return oCSPRefsField;
             }
             set
             {
-                this.oCSPRefsField = value;
+                oCSPRefsField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.otherRefsField;
+                return otherRefsField;
             }
             set
             {
-                this.otherRefsField = value;
+                otherRefsField = value;
             }
         }
 
@@ -66,11 +66,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

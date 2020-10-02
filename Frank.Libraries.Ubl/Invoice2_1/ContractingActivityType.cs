@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.activityTypeCodeField;
+                return activityTypeCodeField;
             }
             set
             {
-                this.activityTypeCodeField = value;
+                activityTypeCodeField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.activityTypeField;
+                return activityTypeField;
             }
             set
             {
-                this.activityTypeField = value;
+                activityTypeField = value;
             }
         }
     }

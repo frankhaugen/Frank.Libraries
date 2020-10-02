@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.weekDayCodeField;
+                return weekDayCodeField;
             }
             set
             {
-                this.weekDayCodeField = value;
+                weekDayCodeField = value;
             }
         }
     }

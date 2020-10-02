@@ -21,11 +21,11 @@
         {
             get
             {
-                return this.unsignedSignaturePropertiesField;
+                return unsignedSignaturePropertiesField;
             }
             set
             {
-                this.unsignedSignaturePropertiesField = value;
+                unsignedSignaturePropertiesField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.unsignedDataObjectPropertiesField;
+                return unsignedDataObjectPropertiesField;
             }
             set
             {
-                this.unsignedDataObjectPropertiesField = value;
+                unsignedDataObjectPropertiesField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

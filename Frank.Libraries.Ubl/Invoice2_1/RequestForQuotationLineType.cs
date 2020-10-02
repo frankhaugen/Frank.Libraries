@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.optionalLineItemIndicatorField;
+                return optionalLineItemIndicatorField;
             }
             set
             {
-                this.optionalLineItemIndicatorField = value;
+                optionalLineItemIndicatorField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.privacyCodeField;
+                return privacyCodeField;
             }
             set
             {
-                this.privacyCodeField = value;
+                privacyCodeField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.securityClassificationCodeField;
+                return securityClassificationCodeField;
             }
             set
             {
-                this.securityClassificationCodeField = value;
+                securityClassificationCodeField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -129,11 +129,11 @@
         {
             get
             {
-                return this.lineItemField;
+                return lineItemField;
             }
             set
             {
-                this.lineItemField = value;
+                lineItemField = value;
             }
         }
     }

@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.packQuantityField;
+                return packQuantityField;
             }
             set
             {
-                this.packQuantityField = value;
+                packQuantityField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.packSizeNumericField;
+                return packSizeNumericField;
             }
             set
             {
-                this.packSizeNumericField = value;
+                packSizeNumericField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.catalogueIndicatorField;
+                return catalogueIndicatorField;
             }
             set
             {
-                this.catalogueIndicatorField = value;
+                catalogueIndicatorField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -146,11 +146,11 @@
         {
             get
             {
-                return this.hazardousRiskIndicatorField;
+                return hazardousRiskIndicatorField;
             }
             set
             {
-                this.hazardousRiskIndicatorField = value;
+                hazardousRiskIndicatorField = value;
             }
         }
 
@@ -160,11 +160,11 @@
         {
             get
             {
-                return this.additionalInformationField;
+                return additionalInformationField;
             }
             set
             {
-                this.additionalInformationField = value;
+                additionalInformationField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return this.keywordField;
+                return keywordField;
             }
             set
             {
-                this.keywordField = value;
+                keywordField = value;
             }
         }
 
@@ -188,11 +188,11 @@
         {
             get
             {
-                return this.brandNameField;
+                return brandNameField;
             }
             set
             {
-                this.brandNameField = value;
+                brandNameField = value;
             }
         }
 
@@ -202,11 +202,11 @@
         {
             get
             {
-                return this.modelNameField;
+                return modelNameField;
             }
             set
             {
-                this.modelNameField = value;
+                modelNameField = value;
             }
         }
 
@@ -215,11 +215,11 @@
         {
             get
             {
-                return this.buyersItemIdentificationField;
+                return buyersItemIdentificationField;
             }
             set
             {
-                this.buyersItemIdentificationField = value;
+                buyersItemIdentificationField = value;
             }
         }
 
@@ -228,11 +228,11 @@
         {
             get
             {
-                return this.sellersItemIdentificationField;
+                return sellersItemIdentificationField;
             }
             set
             {
-                this.sellersItemIdentificationField = value;
+                sellersItemIdentificationField = value;
             }
         }
 
@@ -242,11 +242,11 @@
         {
             get
             {
-                return this.manufacturersItemIdentificationField;
+                return manufacturersItemIdentificationField;
             }
             set
             {
-                this.manufacturersItemIdentificationField = value;
+                manufacturersItemIdentificationField = value;
             }
         }
 
@@ -255,11 +255,11 @@
         {
             get
             {
-                return this.standardItemIdentificationField;
+                return standardItemIdentificationField;
             }
             set
             {
-                this.standardItemIdentificationField = value;
+                standardItemIdentificationField = value;
             }
         }
 
@@ -268,11 +268,11 @@
         {
             get
             {
-                return this.catalogueItemIdentificationField;
+                return catalogueItemIdentificationField;
             }
             set
             {
-                this.catalogueItemIdentificationField = value;
+                catalogueItemIdentificationField = value;
             }
         }
 
@@ -282,11 +282,11 @@
         {
             get
             {
-                return this.additionalItemIdentificationField;
+                return additionalItemIdentificationField;
             }
             set
             {
-                this.additionalItemIdentificationField = value;
+                additionalItemIdentificationField = value;
             }
         }
 
@@ -295,11 +295,11 @@
         {
             get
             {
-                return this.catalogueDocumentReferenceField;
+                return catalogueDocumentReferenceField;
             }
             set
             {
-                this.catalogueDocumentReferenceField = value;
+                catalogueDocumentReferenceField = value;
             }
         }
 
@@ -309,11 +309,11 @@
         {
             get
             {
-                return this.itemSpecificationDocumentReferenceField;
+                return itemSpecificationDocumentReferenceField;
             }
             set
             {
-                this.itemSpecificationDocumentReferenceField = value;
+                itemSpecificationDocumentReferenceField = value;
             }
         }
 
@@ -322,11 +322,11 @@
         {
             get
             {
-                return this.originCountryField;
+                return originCountryField;
             }
             set
             {
-                this.originCountryField = value;
+                originCountryField = value;
             }
         }
 
@@ -336,11 +336,11 @@
         {
             get
             {
-                return this.commodityClassificationField;
+                return commodityClassificationField;
             }
             set
             {
-                this.commodityClassificationField = value;
+                commodityClassificationField = value;
             }
         }
 
@@ -350,11 +350,11 @@
         {
             get
             {
-                return this.transactionConditionsField;
+                return transactionConditionsField;
             }
             set
             {
-                this.transactionConditionsField = value;
+                transactionConditionsField = value;
             }
         }
 
@@ -364,11 +364,11 @@
         {
             get
             {
-                return this.hazardousItemField;
+                return hazardousItemField;
             }
             set
             {
-                this.hazardousItemField = value;
+                hazardousItemField = value;
             }
         }
 
@@ -378,11 +378,11 @@
         {
             get
             {
-                return this.classifiedTaxCategoryField;
+                return classifiedTaxCategoryField;
             }
             set
             {
-                this.classifiedTaxCategoryField = value;
+                classifiedTaxCategoryField = value;
             }
         }
 
@@ -392,11 +392,11 @@
         {
             get
             {
-                return this.additionalItemPropertyField;
+                return additionalItemPropertyField;
             }
             set
             {
-                this.additionalItemPropertyField = value;
+                additionalItemPropertyField = value;
             }
         }
 
@@ -406,11 +406,11 @@
         {
             get
             {
-                return this.manufacturerPartyField;
+                return manufacturerPartyField;
             }
             set
             {
-                this.manufacturerPartyField = value;
+                manufacturerPartyField = value;
             }
         }
 
@@ -419,11 +419,11 @@
         {
             get
             {
-                return this.informationContentProviderPartyField;
+                return informationContentProviderPartyField;
             }
             set
             {
-                this.informationContentProviderPartyField = value;
+                informationContentProviderPartyField = value;
             }
         }
 
@@ -433,11 +433,11 @@
         {
             get
             {
-                return this.originAddressField;
+                return originAddressField;
             }
             set
             {
-                this.originAddressField = value;
+                originAddressField = value;
             }
         }
 
@@ -447,11 +447,11 @@
         {
             get
             {
-                return this.itemInstanceField;
+                return itemInstanceField;
             }
             set
             {
-                this.itemInstanceField = value;
+                itemInstanceField = value;
             }
         }
 
@@ -461,11 +461,11 @@
         {
             get
             {
-                return this.certificateField;
+                return certificateField;
             }
             set
             {
-                this.certificateField = value;
+                certificateField = value;
             }
         }
 
@@ -475,11 +475,11 @@
         {
             get
             {
-                return this.dimensionField;
+                return dimensionField;
             }
             set
             {
-                this.dimensionField = value;
+                dimensionField = value;
             }
         }
     }

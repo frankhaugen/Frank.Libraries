@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.coordinateSystemCodeField;
+                return coordinateSystemCodeField;
             }
             set
             {
-                this.coordinateSystemCodeField = value;
+                coordinateSystemCodeField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.latitudeDegreesMeasureField;
+                return latitudeDegreesMeasureField;
             }
             set
             {
-                this.latitudeDegreesMeasureField = value;
+                latitudeDegreesMeasureField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.latitudeMinutesMeasureField;
+                return latitudeMinutesMeasureField;
             }
             set
             {
-                this.latitudeMinutesMeasureField = value;
+                latitudeMinutesMeasureField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.latitudeDirectionCodeField;
+                return latitudeDirectionCodeField;
             }
             set
             {
-                this.latitudeDirectionCodeField = value;
+                latitudeDirectionCodeField = value;
             }
         }
 
@@ -88,11 +88,11 @@
         {
             get
             {
-                return this.longitudeDegreesMeasureField;
+                return longitudeDegreesMeasureField;
             }
             set
             {
-                this.longitudeDegreesMeasureField = value;
+                longitudeDegreesMeasureField = value;
             }
         }
 
@@ -102,11 +102,11 @@
         {
             get
             {
-                return this.longitudeMinutesMeasureField;
+                return longitudeMinutesMeasureField;
             }
             set
             {
-                this.longitudeMinutesMeasureField = value;
+                longitudeMinutesMeasureField = value;
             }
         }
 
@@ -116,11 +116,11 @@
         {
             get
             {
-                return this.longitudeDirectionCodeField;
+                return longitudeDirectionCodeField;
             }
             set
             {
-                this.longitudeDirectionCodeField = value;
+                longitudeDirectionCodeField = value;
             }
         }
 
@@ -130,11 +130,11 @@
         {
             get
             {
-                return this.altitudeMeasureField;
+                return altitudeMeasureField;
             }
             set
             {
-                this.altitudeMeasureField = value;
+                altitudeMeasureField = value;
             }
         }
     }

@@ -20,11 +20,11 @@
         {
             get
             {
-                return this.signaturePropertyField;
+                return signaturePropertyField;
             }
             set
             {
-                this.signaturePropertyField = value;
+                signaturePropertyField = value;
             }
         }
 
@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
     }

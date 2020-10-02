@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.hMACOutputLengthField;
+                return hMACOutputLengthField;
             }
             set
             {
-                this.hMACOutputLengthField = value;
+                hMACOutputLengthField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return this.anyField;
+                return anyField;
             }
             set
             {
-                this.anyField = value;
+                anyField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.algorithmField;
+                return algorithmField;
             }
             set
             {
-                this.algorithmField = value;
+                algorithmField = value;
             }
         }
     }

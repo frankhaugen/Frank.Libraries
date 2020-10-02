@@ -18,11 +18,11 @@
         {
             get
             {
-                return this.certField;
+                return certField;
             }
             set
             {
-                this.certField = value;
+                certField = value;
             }
         }
     }

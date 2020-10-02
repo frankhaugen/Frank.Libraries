@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.registrationNameField;
+                return registrationNameField;
             }
             set
             {
-                this.registrationNameField = value;
+                registrationNameField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.companyIDField;
+                return companyIDField;
             }
             set
             {
-                this.companyIDField = value;
+                companyIDField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.registrationDateField;
+                return registrationDateField;
             }
             set
             {
-                this.registrationDateField = value;
+                registrationDateField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.registrationExpirationDateField;
+                return registrationExpirationDateField;
             }
             set
             {
-                this.registrationExpirationDateField = value;
+                registrationExpirationDateField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.companyLegalFormCodeField;
+                return companyLegalFormCodeField;
             }
             set
             {
-                this.companyLegalFormCodeField = value;
+                companyLegalFormCodeField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.companyLegalFormField;
+                return companyLegalFormField;
             }
             set
             {
-                this.companyLegalFormField = value;
+                companyLegalFormField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.soleProprietorshipIndicatorField;
+                return soleProprietorshipIndicatorField;
             }
             set
             {
-                this.soleProprietorshipIndicatorField = value;
+                soleProprietorshipIndicatorField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return this.companyLiquidationStatusCodeField;
+                return companyLiquidationStatusCodeField;
             }
             set
             {
-                this.companyLiquidationStatusCodeField = value;
+                companyLiquidationStatusCodeField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return this.corporateStockAmountField;
+                return corporateStockAmountField;
             }
             set
             {
-                this.corporateStockAmountField = value;
+                corporateStockAmountField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return this.fullyPaidSharesIndicatorField;
+                return fullyPaidSharesIndicatorField;
             }
             set
             {
-                this.fullyPaidSharesIndicatorField = value;
+                fullyPaidSharesIndicatorField = value;
             }
         }
 
@@ -183,11 +183,11 @@
         {
             get
             {
-                return this.registrationAddressField;
+                return registrationAddressField;
             }
             set
             {
-                this.registrationAddressField = value;
+                registrationAddressField = value;
             }
         }
 
@@ -196,11 +196,11 @@
         {
             get
             {
-                return this.corporateRegistrationSchemeField;
+                return corporateRegistrationSchemeField;
             }
             set
             {
-                this.corporateRegistrationSchemeField = value;
+                corporateRegistrationSchemeField = value;
             }
         }
 
@@ -209,11 +209,11 @@
         {
             get
             {
-                return this.headOfficePartyField;
+                return headOfficePartyField;
             }
             set
             {
-                this.headOfficePartyField = value;
+                headOfficePartyField = value;
             }
         }
 
@@ -223,11 +223,11 @@
         {
             get
             {
-                return this.shareholderPartyField;
+                return shareholderPartyField;
             }
             set
             {
-                this.shareholderPartyField = value;
+                shareholderPartyField = value;
             }
         }
     }

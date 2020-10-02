@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.timeFrequencyCodeField;
+                return timeFrequencyCodeField;
             }
             set
             {
-                this.timeFrequencyCodeField = value;
+                timeFrequencyCodeField = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.supplyChainActivityTypeCodeField;
+                return supplyChainActivityTypeCodeField;
             }
             set
             {
-                this.supplyChainActivityTypeCodeField = value;
+                supplyChainActivityTypeCodeField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.forecastTypeCodeField;
+                return forecastTypeCodeField;
             }
             set
             {
-                this.forecastTypeCodeField = value;
+                forecastTypeCodeField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.performanceMetricTypeCodeField;
+                return performanceMetricTypeCodeField;
             }
             set
             {
-                this.performanceMetricTypeCodeField = value;
+                performanceMetricTypeCodeField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.periodField;
+                return periodField;
             }
             set
             {
-                this.periodField = value;
+                periodField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.salesItemField;
+                return salesItemField;
             }
             set
             {
-                this.salesItemField = value;
+                salesItemField = value;
             }
         }
     }

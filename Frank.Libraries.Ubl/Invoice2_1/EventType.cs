@@ -34,11 +34,11 @@
         {
             get
             {
-                return this.identificationIDField;
+                return identificationIDField;
             }
             set
             {
-                this.identificationIDField = value;
+                identificationIDField = value;
             }
         }
 
@@ -48,11 +48,11 @@
         {
             get
             {
-                return this.occurrenceDateField;
+                return occurrenceDateField;
             }
             set
             {
-                this.occurrenceDateField = value;
+                occurrenceDateField = value;
             }
         }
 
@@ -62,11 +62,11 @@
         {
             get
             {
-                return this.occurrenceTimeField;
+                return occurrenceTimeField;
             }
             set
             {
-                this.occurrenceTimeField = value;
+                occurrenceTimeField = value;
             }
         }
 
@@ -76,11 +76,11 @@
         {
             get
             {
-                return this.typeCodeField;
+                return typeCodeField;
             }
             set
             {
-                this.typeCodeField = value;
+                typeCodeField = value;
             }
         }
 
@@ -90,11 +90,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -104,11 +104,11 @@
         {
             get
             {
-                return this.completionIndicatorField;
+                return completionIndicatorField;
             }
             set
             {
-                this.completionIndicatorField = value;
+                completionIndicatorField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.currentStatusField;
+                return currentStatusField;
             }
             set
             {
-                this.currentStatusField = value;
+                currentStatusField = value;
             }
         }
 
@@ -132,11 +132,11 @@
         {
             get
             {
-                return this.contactField;
+                return contactField;
             }
             set
             {
-                this.contactField = value;
+                contactField = value;
             }
         }
 
@@ -145,11 +145,11 @@
         {
             get
             {
-                return this.occurenceLocationField;
+                return occurenceLocationField;
             }
             set
             {
-                this.occurenceLocationField = value;
+                occurenceLocationField = value;
             }
         }
     }

@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.lastRevisionDateField;
+                return lastRevisionDateField;
             }
             set
             {
-                this.lastRevisionDateField = value;
+                lastRevisionDateField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.lastRevisionTimeField;
+                return lastRevisionTimeField;
             }
             set
             {
-                this.lastRevisionTimeField = value;
+                lastRevisionTimeField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return this.agencyIDField;
+                return agencyIDField;
             }
             set
             {
-                this.agencyIDField = value;
+                agencyIDField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return this.agencyNameField;
+                return agencyNameField;
             }
             set
             {
-                this.agencyNameField = value;
+                agencyNameField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return this.versionIDField;
+                return versionIDField;
             }
             set
             {
-                this.versionIDField = value;
+                versionIDField = value;
             }
         }
 
@@ -184,11 +184,11 @@
         {
             get
             {
-                return this.uRIField;
+                return uRIField;
             }
             set
             {
-                this.uRIField = value;
+                uRIField = value;
             }
         }
 
@@ -198,11 +198,11 @@
         {
             get
             {
-                return this.schemeURIField;
+                return schemeURIField;
             }
             set
             {
-                this.schemeURIField = value;
+                schemeURIField = value;
             }
         }
 
@@ -212,11 +212,11 @@
         {
             get
             {
-                return this.languageIDField;
+                return languageIDField;
             }
             set
             {
-                this.languageIDField = value;
+                languageIDField = value;
             }
         }
 
@@ -226,11 +226,11 @@
         {
             get
             {
-                return this.classificationCategoryField;
+                return classificationCategoryField;
             }
             set
             {
-                this.classificationCategoryField = value;
+                classificationCategoryField = value;
             }
         }
     }

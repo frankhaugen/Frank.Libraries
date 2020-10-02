@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.mandateTypeCodeField;
+                return mandateTypeCodeField;
             }
             set
             {
-                this.mandateTypeCodeField = value;
+                mandateTypeCodeField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.maximumPaymentInstructionsNumericField;
+                return maximumPaymentInstructionsNumericField;
             }
             set
             {
-                this.maximumPaymentInstructionsNumericField = value;
+                maximumPaymentInstructionsNumericField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return this.maximumPaidAmountField;
+                return maximumPaidAmountField;
             }
             set
             {
-                this.maximumPaidAmountField = value;
+                maximumPaidAmountField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return this.signatureIDField;
+                return signatureIDField;
             }
             set
             {
-                this.signatureIDField = value;
+                signatureIDField = value;
             }
         }
 
@@ -105,11 +105,11 @@
         {
             get
             {
-                return this.payerPartyField;
+                return payerPartyField;
             }
             set
             {
-                this.payerPartyField = value;
+                payerPartyField = value;
             }
         }
 
@@ -118,11 +118,11 @@
         {
             get
             {
-                return this.payerFinancialAccountField;
+                return payerFinancialAccountField;
             }
             set
             {
-                this.payerFinancialAccountField = value;
+                payerFinancialAccountField = value;
             }
         }
 
@@ -131,11 +131,11 @@
         {
             get
             {
-                return this.validityPeriodField;
+                return validityPeriodField;
             }
             set
             {
-                this.validityPeriodField = value;
+                validityPeriodField = value;
             }
         }
 
@@ -144,11 +144,11 @@
         {
             get
             {
-                return this.paymentReversalPeriodField;
+                return paymentReversalPeriodField;
             }
             set
             {
-                this.paymentReversalPeriodField = value;
+                paymentReversalPeriodField = value;
             }
         }
 
@@ -158,11 +158,11 @@
         {
             get
             {
-                return this.clauseField;
+                return clauseField;
             }
             set
             {
-                this.clauseField = value;
+                clauseField = value;
             }
         }
     }

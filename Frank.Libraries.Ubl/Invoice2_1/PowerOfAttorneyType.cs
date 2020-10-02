@@ -32,11 +32,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -46,11 +46,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -60,11 +60,11 @@
         {
             get
             {
-                return this.issueTimeField;
+                return issueTimeField;
             }
             set
             {
-                this.issueTimeField = value;
+                issueTimeField = value;
             }
         }
 
@@ -74,11 +74,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -87,11 +87,11 @@
         {
             get
             {
-                return this.notaryPartyField;
+                return notaryPartyField;
             }
             set
             {
-                this.notaryPartyField = value;
+                notaryPartyField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.agentPartyField;
+                return agentPartyField;
             }
             set
             {
-                this.agentPartyField = value;
+                agentPartyField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.witnessPartyField;
+                return witnessPartyField;
             }
             set
             {
-                this.witnessPartyField = value;
+                witnessPartyField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.mandateDocumentReferenceField;
+                return mandateDocumentReferenceField;
             }
             set
             {
-                this.mandateDocumentReferenceField = value;
+                mandateDocumentReferenceField = value;
             }
         }
     }

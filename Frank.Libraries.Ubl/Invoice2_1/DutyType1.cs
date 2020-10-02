@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -38,11 +38,11 @@
         {
             get
             {
-                return this.dutyField;
+                return dutyField;
             }
             set
             {
-                this.dutyField = value;
+                dutyField = value;
             }
         }
 
@@ -52,11 +52,11 @@
         {
             get
             {
-                return this.dutyCodeField;
+                return dutyCodeField;
             }
             set
             {
-                this.dutyCodeField = value;
+                dutyCodeField = value;
             }
         }
 
@@ -65,11 +65,11 @@
         {
             get
             {
-                return this.taxCategoryField;
+                return taxCategoryField;
             }
             set
             {
-                this.taxCategoryField = value;
+                taxCategoryField = value;
             }
         }
     }

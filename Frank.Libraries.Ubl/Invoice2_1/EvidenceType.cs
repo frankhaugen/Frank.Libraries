@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.evidenceTypeCodeField;
+                return evidenceTypeCodeField;
             }
             set
             {
-                this.evidenceTypeCodeField = value;
+                evidenceTypeCodeField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.candidateStatementField;
+                return candidateStatementField;
             }
             set
             {
-                this.candidateStatementField = value;
+                candidateStatementField = value;
             }
         }
 
@@ -85,11 +85,11 @@
         {
             get
             {
-                return this.evidenceIssuingPartyField;
+                return evidenceIssuingPartyField;
             }
             set
             {
-                this.evidenceIssuingPartyField = value;
+                evidenceIssuingPartyField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.documentReferenceField;
+                return documentReferenceField;
             }
             set
             {
-                this.documentReferenceField = value;
+                documentReferenceField = value;
             }
         }
 
@@ -111,11 +111,11 @@
         {
             get
             {
-                return this.languageField;
+                return languageField;
             }
             set
             {
-                this.languageField = value;
+                languageField = value;
             }
         }
     }

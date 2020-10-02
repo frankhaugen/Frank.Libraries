@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.nameField;
+                return nameField;
             }
             set
             {
-                this.nameField = value;
+                nameField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -49,11 +49,11 @@
         {
             get
             {
-                return this.templateDocumentReferenceField;
+                return templateDocumentReferenceField;
             }
             set
             {
-                this.templateDocumentReferenceField = value;
+                templateDocumentReferenceField = value;
             }
         }
     }

@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -41,11 +41,11 @@
         {
             get
             {
-                return this.utilitySupplierPartyField;
+                return utilitySupplierPartyField;
             }
             set
             {
-                this.utilitySupplierPartyField = value;
+                utilitySupplierPartyField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.utilityCustomerPartyField;
+                return utilityCustomerPartyField;
             }
             set
             {
-                this.utilityCustomerPartyField = value;
+                utilityCustomerPartyField = value;
             }
         }
 
@@ -67,11 +67,11 @@
         {
             get
             {
-                return this.consumptionField;
+                return consumptionField;
             }
             set
             {
-                this.consumptionField = value;
+                consumptionField = value;
             }
         }
 
@@ -80,11 +80,11 @@
         {
             get
             {
-                return this.contractField;
+                return contractField;
             }
             set
             {
-                this.contractField = value;
+                contractField = value;
             }
         }
 
@@ -94,11 +94,11 @@
         {
             get
             {
-                return this.consumptionLineField;
+                return consumptionLineField;
             }
             set
             {
-                this.consumptionLineField = value;
+                consumptionLineField = value;
             }
         }
     }

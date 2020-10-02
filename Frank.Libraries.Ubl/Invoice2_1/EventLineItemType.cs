@@ -24,11 +24,11 @@
         {
             get
             {
-                return this.lineNumberNumericField;
+                return lineNumberNumericField;
             }
             set
             {
-                this.lineNumberNumericField = value;
+                lineNumberNumericField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return this.participatingLocationsLocationField;
+                return participatingLocationsLocationField;
             }
             set
             {
-                this.participatingLocationsLocationField = value;
+                participatingLocationsLocationField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.retailPlannedImpactField;
+                return retailPlannedImpactField;
             }
             set
             {
-                this.retailPlannedImpactField = value;
+                retailPlannedImpactField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.supplyItemField;
+                return supplyItemField;
             }
             set
             {
-                this.supplyItemField = value;
+                supplyItemField = value;
             }
         }
     }

@@ -23,11 +23,11 @@
         {
             get
             {
-                return this.itemsField;
+                return itemsField;
             }
             set
             {
-                this.itemsField = value;
+                itemsField = value;
             }
         }
 
@@ -37,11 +37,11 @@
         {
             get
             {
-                return this.textField;
+                return textField;
             }
             set
             {
-                this.textField = value;
+                textField = value;
             }
         }
 
@@ -51,11 +51,11 @@
         {
             get
             {
-                return this.algorithmField;
+                return algorithmField;
             }
             set
             {
-                this.algorithmField = value;
+                algorithmField = value;
             }
         }
     }

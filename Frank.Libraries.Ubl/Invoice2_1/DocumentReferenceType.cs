@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -64,11 +64,11 @@
         {
             get
             {
-                return this.copyIndicatorField;
+                return copyIndicatorField;
             }
             set
             {
-                this.copyIndicatorField = value;
+                copyIndicatorField = value;
             }
         }
 
@@ -78,11 +78,11 @@
         {
             get
             {
-                return this.uUIDField;
+                return uUIDField;
             }
             set
             {
-                this.uUIDField = value;
+                uUIDField = value;
             }
         }
 
@@ -92,11 +92,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -106,11 +106,11 @@
         {
             get
             {
-                return this.issueTimeField;
+                return issueTimeField;
             }
             set
             {
-                this.issueTimeField = value;
+                issueTimeField = value;
             }
         }
 
@@ -120,11 +120,11 @@
         {
             get
             {
-                return this.documentTypeCodeField;
+                return documentTypeCodeField;
             }
             set
             {
-                this.documentTypeCodeField = value;
+                documentTypeCodeField = value;
             }
         }
 
@@ -134,11 +134,11 @@
         {
             get
             {
-                return this.documentTypeField;
+                return documentTypeField;
             }
             set
             {
-                this.documentTypeField = value;
+                documentTypeField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return this.xPathField;
+                return xPathField;
             }
             set
             {
-                this.xPathField = value;
+                xPathField = value;
             }
         }
 
@@ -162,11 +162,11 @@
         {
             get
             {
-                return this.languageIDField;
+                return languageIDField;
             }
             set
             {
-                this.languageIDField = value;
+                languageIDField = value;
             }
         }
 
@@ -176,11 +176,11 @@
         {
             get
             {
-                return this.localeCodeField;
+                return localeCodeField;
             }
             set
             {
-                this.localeCodeField = value;
+                localeCodeField = value;
             }
         }
 
@@ -190,11 +190,11 @@
         {
             get
             {
-                return this.versionIDField;
+                return versionIDField;
             }
             set
             {
-                this.versionIDField = value;
+                versionIDField = value;
             }
         }
 
@@ -204,11 +204,11 @@
         {
             get
             {
-                return this.documentStatusCodeField;
+                return documentStatusCodeField;
             }
             set
             {
-                this.documentStatusCodeField = value;
+                documentStatusCodeField = value;
             }
         }
 
@@ -218,11 +218,11 @@
         {
             get
             {
-                return this.documentDescriptionField;
+                return documentDescriptionField;
             }
             set
             {
-                this.documentDescriptionField = value;
+                documentDescriptionField = value;
             }
         }
 
@@ -231,11 +231,11 @@
         {
             get
             {
-                return this.attachmentField;
+                return attachmentField;
             }
             set
             {
-                this.attachmentField = value;
+                attachmentField = value;
             }
         }
 
@@ -244,11 +244,11 @@
         {
             get
             {
-                return this.validityPeriodField;
+                return validityPeriodField;
             }
             set
             {
-                this.validityPeriodField = value;
+                validityPeriodField = value;
             }
         }
 
@@ -257,11 +257,11 @@
         {
             get
             {
-                return this.issuerPartyField;
+                return issuerPartyField;
             }
             set
             {
-                this.issuerPartyField = value;
+                issuerPartyField = value;
             }
         }
 
@@ -270,11 +270,11 @@
         {
             get
             {
-                return this.resultOfVerificationField;
+                return resultOfVerificationField;
             }
             set
             {
-                this.resultOfVerificationField = value;
+                resultOfVerificationField = value;
             }
         }
     }

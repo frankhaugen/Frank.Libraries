@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.requestedDespatchDateField;
+                return requestedDespatchDateField;
             }
             set
             {
-                this.requestedDespatchDateField = value;
+                requestedDespatchDateField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.requestedDespatchTimeField;
+                return requestedDespatchTimeField;
             }
             set
             {
-                this.requestedDespatchTimeField = value;
+                requestedDespatchTimeField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.estimatedDespatchDateField;
+                return estimatedDespatchDateField;
             }
             set
             {
-                this.estimatedDespatchDateField = value;
+                estimatedDespatchDateField = value;
             }
         }
 
@@ -110,11 +110,11 @@
         {
             get
             {
-                return this.estimatedDespatchTimeField;
+                return estimatedDespatchTimeField;
             }
             set
             {
-                this.estimatedDespatchTimeField = value;
+                estimatedDespatchTimeField = value;
             }
         }
 
@@ -124,11 +124,11 @@
         {
             get
             {
-                return this.actualDespatchDateField;
+                return actualDespatchDateField;
             }
             set
             {
-                this.actualDespatchDateField = value;
+                actualDespatchDateField = value;
             }
         }
 
@@ -138,11 +138,11 @@
         {
             get
             {
-                return this.actualDespatchTimeField;
+                return actualDespatchTimeField;
             }
             set
             {
-                this.actualDespatchTimeField = value;
+                actualDespatchTimeField = value;
             }
         }
 
@@ -152,11 +152,11 @@
         {
             get
             {
-                return this.guaranteedDespatchDateField;
+                return guaranteedDespatchDateField;
             }
             set
             {
-                this.guaranteedDespatchDateField = value;
+                guaranteedDespatchDateField = value;
             }
         }
 
@@ -166,11 +166,11 @@
         {
             get
             {
-                return this.guaranteedDespatchTimeField;
+                return guaranteedDespatchTimeField;
             }
             set
             {
-                this.guaranteedDespatchTimeField = value;
+                guaranteedDespatchTimeField = value;
             }
         }
 
@@ -180,11 +180,11 @@
         {
             get
             {
-                return this.releaseIDField;
+                return releaseIDField;
             }
             set
             {
-                this.releaseIDField = value;
+                releaseIDField = value;
             }
         }
 
@@ -194,11 +194,11 @@
         {
             get
             {
-                return this.instructionsField;
+                return instructionsField;
             }
             set
             {
-                this.instructionsField = value;
+                instructionsField = value;
             }
         }
 
@@ -207,11 +207,11 @@
         {
             get
             {
-                return this.despatchAddressField;
+                return despatchAddressField;
             }
             set
             {
-                this.despatchAddressField = value;
+                despatchAddressField = value;
             }
         }
 
@@ -220,11 +220,11 @@
         {
             get
             {
-                return this.despatchLocationField;
+                return despatchLocationField;
             }
             set
             {
-                this.despatchLocationField = value;
+                despatchLocationField = value;
             }
         }
 
@@ -233,11 +233,11 @@
         {
             get
             {
-                return this.despatchPartyField;
+                return despatchPartyField;
             }
             set
             {
-                this.despatchPartyField = value;
+                despatchPartyField = value;
             }
         }
 
@@ -246,11 +246,11 @@
         {
             get
             {
-                return this.carrierPartyField;
+                return carrierPartyField;
             }
             set
             {
-                this.carrierPartyField = value;
+                carrierPartyField = value;
             }
         }
 
@@ -260,11 +260,11 @@
         {
             get
             {
-                return this.notifyPartyField;
+                return notifyPartyField;
             }
             set
             {
-                this.notifyPartyField = value;
+                notifyPartyField = value;
             }
         }
 
@@ -273,11 +273,11 @@
         {
             get
             {
-                return this.contactField;
+                return contactField;
             }
             set
             {
-                this.contactField = value;
+                contactField = value;
             }
         }
 
@@ -286,11 +286,11 @@
         {
             get
             {
-                return this.estimatedDespatchPeriodField;
+                return estimatedDespatchPeriodField;
             }
             set
             {
-                this.estimatedDespatchPeriodField = value;
+                estimatedDespatchPeriodField = value;
             }
         }
 
@@ -299,11 +299,11 @@
         {
             get
             {
-                return this.requestedDespatchPeriodField;
+                return requestedDespatchPeriodField;
             }
             set
             {
-                this.requestedDespatchPeriodField = value;
+                requestedDespatchPeriodField = value;
             }
         }
     }

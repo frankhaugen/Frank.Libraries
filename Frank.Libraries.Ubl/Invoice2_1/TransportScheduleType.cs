@@ -40,11 +40,11 @@
         {
             get
             {
-                return this.sequenceNumericField;
+                return sequenceNumericField;
             }
             set
             {
-                this.sequenceNumericField = value;
+                sequenceNumericField = value;
             }
         }
 
@@ -54,11 +54,11 @@
         {
             get
             {
-                return this.referenceDateField;
+                return referenceDateField;
             }
             set
             {
-                this.referenceDateField = value;
+                referenceDateField = value;
             }
         }
 
@@ -68,11 +68,11 @@
         {
             get
             {
-                return this.referenceTimeField;
+                return referenceTimeField;
             }
             set
             {
-                this.referenceTimeField = value;
+                referenceTimeField = value;
             }
         }
 
@@ -82,11 +82,11 @@
         {
             get
             {
-                return this.reliabilityPercentField;
+                return reliabilityPercentField;
             }
             set
             {
-                this.reliabilityPercentField = value;
+                reliabilityPercentField = value;
             }
         }
 
@@ -96,11 +96,11 @@
         {
             get
             {
-                return this.remarksField;
+                return remarksField;
             }
             set
             {
-                this.remarksField = value;
+                remarksField = value;
             }
         }
 
@@ -109,11 +109,11 @@
         {
             get
             {
-                return this.statusLocationField;
+                return statusLocationField;
             }
             set
             {
-                this.statusLocationField = value;
+                statusLocationField = value;
             }
         }
 
@@ -122,11 +122,11 @@
         {
             get
             {
-                return this.actualArrivalTransportEventField;
+                return actualArrivalTransportEventField;
             }
             set
             {
-                this.actualArrivalTransportEventField = value;
+                actualArrivalTransportEventField = value;
             }
         }
 
@@ -135,11 +135,11 @@
         {
             get
             {
-                return this.actualDepartureTransportEventField;
+                return actualDepartureTransportEventField;
             }
             set
             {
-                this.actualDepartureTransportEventField = value;
+                actualDepartureTransportEventField = value;
             }
         }
 
@@ -148,11 +148,11 @@
         {
             get
             {
-                return this.estimatedDepartureTransportEventField;
+                return estimatedDepartureTransportEventField;
             }
             set
             {
-                this.estimatedDepartureTransportEventField = value;
+                estimatedDepartureTransportEventField = value;
             }
         }
 
@@ -161,11 +161,11 @@
         {
             get
             {
-                return this.estimatedArrivalTransportEventField;
+                return estimatedArrivalTransportEventField;
             }
             set
             {
-                this.estimatedArrivalTransportEventField = value;
+                estimatedArrivalTransportEventField = value;
             }
         }
 
@@ -174,11 +174,11 @@
         {
             get
             {
-                return this.plannedDepartureTransportEventField;
+                return plannedDepartureTransportEventField;
             }
             set
             {
-                this.plannedDepartureTransportEventField = value;
+                plannedDepartureTransportEventField = value;
             }
         }
 
@@ -187,11 +187,11 @@
         {
             get
             {
-                return this.plannedArrivalTransportEventField;
+                return plannedArrivalTransportEventField;
             }
             set
             {
-                this.plannedArrivalTransportEventField = value;
+                plannedArrivalTransportEventField = value;
             }
         }
     }

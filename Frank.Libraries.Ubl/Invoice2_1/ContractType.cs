@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.issueTimeField;
+                return issueTimeField;
             }
             set
             {
-                this.issueTimeField = value;
+                issueTimeField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.nominationDateField;
+                return nominationDateField;
             }
             set
             {
-                this.nominationDateField = value;
+                nominationDateField = value;
             }
         }
 
@@ -100,11 +100,11 @@
         {
             get
             {
-                return this.nominationTimeField;
+                return nominationTimeField;
             }
             set
             {
-                this.nominationTimeField = value;
+                nominationTimeField = value;
             }
         }
 
@@ -114,11 +114,11 @@
         {
             get
             {
-                return this.contractTypeCodeField;
+                return contractTypeCodeField;
             }
             set
             {
-                this.contractTypeCodeField = value;
+                contractTypeCodeField = value;
             }
         }
 
@@ -128,11 +128,11 @@
         {
             get
             {
-                return this.contractType1Field;
+                return contractType1Field;
             }
             set
             {
-                this.contractType1Field = value;
+                contractType1Field = value;
             }
         }
 
@@ -142,11 +142,11 @@
         {
             get
             {
-                return this.noteField;
+                return noteField;
             }
             set
             {
-                this.noteField = value;
+                noteField = value;
             }
         }
 
@@ -156,11 +156,11 @@
         {
             get
             {
-                return this.versionIDField;
+                return versionIDField;
             }
             set
             {
-                this.versionIDField = value;
+                versionIDField = value;
             }
         }
 
@@ -170,11 +170,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -183,11 +183,11 @@
         {
             get
             {
-                return this.validityPeriodField;
+                return validityPeriodField;
             }
             set
             {
-                this.validityPeriodField = value;
+                validityPeriodField = value;
             }
         }
 
@@ -197,11 +197,11 @@
         {
             get
             {
-                return this.contractDocumentReferenceField;
+                return contractDocumentReferenceField;
             }
             set
             {
-                this.contractDocumentReferenceField = value;
+                contractDocumentReferenceField = value;
             }
         }
 
@@ -210,11 +210,11 @@
         {
             get
             {
-                return this.nominationPeriodField;
+                return nominationPeriodField;
             }
             set
             {
-                this.nominationPeriodField = value;
+                nominationPeriodField = value;
             }
         }
 
@@ -223,11 +223,11 @@
         {
             get
             {
-                return this.contractualDeliveryField;
+                return contractualDeliveryField;
             }
             set
             {
-                this.contractualDeliveryField = value;
+                contractualDeliveryField = value;
             }
         }
     }

@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.totalAmountField;
+                return totalAmountField;
             }
             set
             {
-                this.totalAmountField = value;
+                totalAmountField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.budgetAccountField;
+                return budgetAccountField;
             }
             set
             {
-                this.budgetAccountField = value;
+                budgetAccountField = value;
             }
         }
     }

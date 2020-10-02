@@ -28,11 +28,11 @@
         {
             get
             {
-                return this.telecommunicationsSupplyType1Field;
+                return telecommunicationsSupplyType1Field;
             }
             set
             {
-                this.telecommunicationsSupplyType1Field = value;
+                telecommunicationsSupplyType1Field = value;
             }
         }
 
@@ -42,11 +42,11 @@
         {
             get
             {
-                return this.telecommunicationsSupplyTypeCodeField;
+                return telecommunicationsSupplyTypeCodeField;
             }
             set
             {
-                this.telecommunicationsSupplyTypeCodeField = value;
+                telecommunicationsSupplyTypeCodeField = value;
             }
         }
 
@@ -56,11 +56,11 @@
         {
             get
             {
-                return this.privacyCodeField;
+                return privacyCodeField;
             }
             set
             {
-                this.privacyCodeField = value;
+                privacyCodeField = value;
             }
         }
 
@@ -70,11 +70,11 @@
         {
             get
             {
-                return this.descriptionField;
+                return descriptionField;
             }
             set
             {
-                this.descriptionField = value;
+                descriptionField = value;
             }
         }
 
@@ -84,11 +84,11 @@
         {
             get
             {
-                return this.totalAmountField;
+                return totalAmountField;
             }
             set
             {
-                this.totalAmountField = value;
+                totalAmountField = value;
             }
         }
 
@@ -98,11 +98,11 @@
         {
             get
             {
-                return this.telecommunicationsSupplyLineField;
+                return telecommunicationsSupplyLineField;
             }
             set
             {
-                this.telecommunicationsSupplyLineField = value;
+                telecommunicationsSupplyLineField = value;
             }
         }
     }

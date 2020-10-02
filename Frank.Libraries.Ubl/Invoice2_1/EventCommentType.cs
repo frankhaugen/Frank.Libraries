@@ -22,11 +22,11 @@
         {
             get
             {
-                return this.commentField;
+                return commentField;
             }
             set
             {
-                this.commentField = value;
+                commentField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.issueDateField;
+                return issueDateField;
             }
             set
             {
-                this.issueDateField = value;
+                issueDateField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.issueTimeField;
+                return issueTimeField;
             }
             set
             {
-                this.issueTimeField = value;
+                issueTimeField = value;
             }
         }
     }

@@ -30,11 +30,11 @@
         {
             get
             {
-                return this.idField;
+                return idField;
             }
             set
             {
-                this.idField = value;
+                idField = value;
             }
         }
 
@@ -44,11 +44,11 @@
         {
             get
             {
-                return this.specialTermsField;
+                return specialTermsField;
             }
             set
             {
-                this.specialTermsField = value;
+                specialTermsField = value;
             }
         }
 
@@ -58,11 +58,11 @@
         {
             get
             {
-                return this.lossRiskResponsibilityCodeField;
+                return lossRiskResponsibilityCodeField;
             }
             set
             {
-                this.lossRiskResponsibilityCodeField = value;
+                lossRiskResponsibilityCodeField = value;
             }
         }
 
@@ -72,11 +72,11 @@
         {
             get
             {
-                return this.lossRiskField;
+                return lossRiskField;
             }
             set
             {
-                this.lossRiskField = value;
+                lossRiskField = value;
             }
         }
 
@@ -86,11 +86,11 @@
         {
             get
             {
-                return this.amountField;
+                return amountField;
             }
             set
             {
-                this.amountField = value;
+                amountField = value;
             }
         }
 
@@ -99,11 +99,11 @@
         {
             get
             {
-                return this.deliveryLocationField;
+                return deliveryLocationField;
             }
             set
             {
-                this.deliveryLocationField = value;
+                deliveryLocationField = value;
             }
         }
 
@@ -112,11 +112,11 @@
         {
             get
             {
-                return this.allowanceChargeField;
+                return allowanceChargeField;
             }
             set
             {
-                this.allowanceChargeField = value;
+                allowanceChargeField = value;
             }
         }
     }

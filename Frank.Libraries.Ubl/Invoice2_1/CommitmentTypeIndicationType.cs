@@ -21,11 +21,11 @@
         {
             get
             {
-                return this.commitmentTypeIdField;
+                return commitmentTypeIdField;
             }
             set
             {
-                this.commitmentTypeIdField = value;
+                commitmentTypeIdField = value;
             }
         }
 
@@ -36,11 +36,11 @@
         {
             get
             {
-                return this.itemsField;
+                return itemsField;
             }
             set
             {
-                this.itemsField = value;
+                itemsField = value;
             }
         }
 
@@ -50,11 +50,11 @@
         {
             get
             {
-                return this.commitmentTypeQualifiersField;
+                return commitmentTypeQualifiersField;
             }
             set
             {
-                this.commitmentTypeQualifiersField = value;
+                commitmentTypeQualifiersField = value;
             }
         }
     }
