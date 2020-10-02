@@ -1,8 +1,8 @@
-﻿using Frank.Libraries.Security.Shared;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using Frank.Libraries.Security.Shared;
 
 namespace Frank.Libraries.Security.PasswordGeneration
 {
@@ -24,7 +24,7 @@ namespace Frank.Libraries.Security.PasswordGeneration
         {
             var output = "";
 
-            for (int i = 0; i < characterCount; i++)
+            for (var i = 0; i < characterCount; i++)
             {
                 var characters = CombineCharactersToSingleString();
                 output += characters[GetRandom(CombineCharactersToSingleString().Length - 1)];

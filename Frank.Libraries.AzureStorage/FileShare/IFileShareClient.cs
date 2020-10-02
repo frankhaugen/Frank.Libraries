@@ -12,7 +12,7 @@ namespace Frank.Libraries.AzureStorage.FileShare
         IEnumerable<string>? DirectoryItems { get; }
         bool TryDownload(ShareFileMetadata shareFile, out byte[] fileData);
         Task<byte[]> DownloadAsync(ShareFileMetadata shareFile);
-        Task<bool> TryUpload(byte[] fileData, string filename, string directoryPath);
+        Task<bool> TryUploadAsync(byte[] fileData, string filename, string directoryPath);
         Task UploadAsync(byte[] fileData, string filename, string directoryPath);
     }
 }

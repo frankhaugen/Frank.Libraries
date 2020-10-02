@@ -1,12 +1,12 @@
-﻿using Azure.Storage.Files.Shares;
-using Frank.Libraries.AzureStorage.FileShare.Exceptions;
-using Microsoft.Extensions.Options;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using Azure.Storage.Files.Shares;
+using Frank.Libraries.AzureStorage.FileShare.Exceptions;
+using Microsoft.Extensions.Options;
 
 namespace Frank.Libraries.AzureStorage.FileShare
 {
@@ -47,26 +47,19 @@ namespace Frank.Libraries.AzureStorage.FileShare
         {
             _shareClient.CreateIfNotExists();
 
-            // Track the remaining directories to walk, starting from the root
             var remaining = new Queue<ShareDirectoryClient>();
             remaining.Enqueue(_shareClient.GetRootDirectoryClient());
             while (remaining.Count > 0)
             {
-                // Get all of the next directory's files and subdirectories
                 var dir = remaining.Dequeue();
 
                 _shareDirectories.Add(HttpUtility.UrlDecode(dir.Path));
                 foreach (var item in dir.GetFilesAndDirectories())
                 {
-                    // Keep walking down directories
                     if (item.IsDirectory)
-                    {
                         remaining.Enqueue(dir.GetSubdirectoryClient(item.Name));
-                    }
                     else
-                    {
-                        if (item.FileSize != null) _shareFiles.Add(new ShareFileMetadata(item.Name, HttpUtility.UrlDecode(dir.Path), item.FileSize.Value));
-                    }
+                        if (item.FileSize != null) _shareFiles.Add(new ShareFileMetadata(item.Name, HttpUtility.UrlDecode(dir.Path) ?? string.Empty, item.FileSize.Value));
                 }
             }
         }
@@ -81,27 +74,23 @@ namespace Frank.Libraries.AzureStorage.FileShare
             return _shareFiles.Where(x => x.Name.ToLowerInvariant().Contains(Path.GetFileNameWithoutExtension(filename)));
         }
 
-        public IEnumerable<ShareFileMetadata>? FileItems
+        public IEnumerable<ShareFileMetadata> FileItems
         {
             get
             {
-                if (_shareFiles == null || !_shareFiles.Any())
-                {
+                if (!_shareFiles.Any())
                     Initialize();
-                }
 
                 return _shareFiles;
             }
         }
 
-        public IEnumerable<string>? DirectoryItems
+        public IEnumerable<string> DirectoryItems
         {
             get
             {
-                if (_shareDirectories == null || !_shareDirectories.Any())
-                {
+                if (!_shareDirectories.Any())
                     Initialize();
-                }
 
                 return _shareDirectories;
             }
@@ -138,7 +127,7 @@ namespace Frank.Libraries.AzureStorage.FileShare
             }
         }
 
-        public async Task<bool> TryUpload(byte[] fileData, string filename, string directoryPath)
+        public async Task<bool> TryUploadAsync(byte[] fileData, string filename, string directoryPath)
         {
             try
             {

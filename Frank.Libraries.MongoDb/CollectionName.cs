@@ -3,7 +3,7 @@
 namespace Frank.Libraries.MongoDb
 {
     [AttributeUsage(AttributeTargets.Class)]
-    public class CollectionName : Attribute
+    public sealed class CollectionName : Attribute
     {
         public string? Name { get; set; }
 

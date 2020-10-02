@@ -1,4 +1,8 @@
-﻿using AutoBogus;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.MongoDb;
 using Frank.Libraries.Tests.TestingInfrastructure.Configuration;
@@ -7,10 +11,6 @@ using Microsoft.Extensions.Options;
 using Mongo2Go;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Frank.Libraries.Tests.MongoDb
@@ -99,7 +99,7 @@ namespace Frank.Libraries.Tests.MongoDb
         private List<MongoTestModel> CreateTestDocuments(int count = 10)
         {
             var documents = new List<MongoTestModel>();
-            for (int i = 0; i < count; i++)
+            for (var i = 0; i < count; i++)
             {
                 documents.Add(CreateTestDocument());
             }

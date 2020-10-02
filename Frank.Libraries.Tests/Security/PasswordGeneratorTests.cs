@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
+﻿using System;
+using System.Collections.Generic;
+using FluentAssertions;
 using Frank.Libraries.Security;
 using Frank.Libraries.Security.Shared;
-using System;
-using System.Collections.Generic;
 using Xunit;
 
 namespace Frank.Libraries.Tests.Security
@@ -14,11 +14,11 @@ namespace Frank.Libraries.Tests.Security
         {
             // Arrange
             var passwordGenerator = new PasswordGenerator();
-            int passwordCount = 1000;
+            var passwordCount = 1000;
 
             // Act
             var resultList = new List<string>();
-            for (int i = 0; i < passwordCount; i++)
+            for (var i = 0; i < passwordCount; i++)
             {
                 resultList.Add(passwordGenerator.GeneratePassword());
             }
@@ -44,7 +44,7 @@ namespace Frank.Libraries.Tests.Security
         {
             // Arrange
             var passwordGenerator = new PasswordGenerator();
-            int characterCount = 0;
+            var characterCount = 0;
             CharacterVariant[] characterVariants = new[] { CharacterVariant.Lowercase, CharacterVariant.Special };
 
             // Act and Assert
@@ -56,7 +56,7 @@ namespace Frank.Libraries.Tests.Security
         {
             // Arrange
             var passwordGenerator = new PasswordGenerator();
-            int characterCount = 10;
+            var characterCount = 10;
             CharacterVariant[] characterVariants = new[] { CharacterVariant.Lowercase, CharacterVariant.Special };
 
             // Act and Assert
@@ -81,7 +81,7 @@ namespace Frank.Libraries.Tests.Security
         {
             // Arrange
             var passwordGenerator = new PasswordGenerator();
-            int characterCount = 10;
+            var characterCount = 10;
 
             // Act
             var result = passwordGenerator.GeneratePassword(characterCount);

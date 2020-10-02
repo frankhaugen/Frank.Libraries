@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
+﻿using System;
+using System.Collections.Generic;
+using FluentAssertions;
 using Frank.Libraries.Security.PasswordGeneration;
 using Frank.Libraries.Security.Shared;
-using System;
-using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -29,7 +29,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
             };
 
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
-            int characterCount = 12;
+            var characterCount = 12;
 
             // Act
             var result = passwordGeneratorHelper.CreatePasswordString(characterCount);
@@ -76,7 +76,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>();
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
-            var characterVariants = new CharacterVariant[] { };
+            var characterVariants = Array.Empty<CharacterVariant>();
 
             // Assert
             Assert.Throws<ArgumentException>(() => passwordGeneratorHelper.EnsurePositiveCharacterVariantCount(characterVariants));
@@ -88,7 +88,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>();
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
-            int characterCount = 12;
+            var characterCount = 12;
 
             // Act and Assert
             passwordGeneratorHelper.EnsurePositiveCharacterCount(characterCount);
@@ -105,7 +105,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
                 {CharacterVariant.Uppercase, CharacterLists.Uppercase}
             };
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
-            int characterCount = 0;
+            var characterCount = 0;
 
             // Act and Assert
             Assert.Throws<ArgumentException>(() => passwordGeneratorHelper.EnsurePositiveCharacterCount(characterCount));
@@ -136,7 +136,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>();
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
-            int maxValue = 1000;
+            var maxValue = 1000;
 
             // Act
             var result1 = passwordGeneratorHelper.GetRandom(maxValue);
