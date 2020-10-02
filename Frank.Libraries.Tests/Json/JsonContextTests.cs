@@ -1,13 +1,13 @@
-﻿using AutoBogus;
+﻿using System;
+using System.IO;
+using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.Json;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Microsoft.Extensions.Options;
-using System;
-using System.IO;
 using Xunit;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests.Json
 {
     public class JsonContextTests
     {

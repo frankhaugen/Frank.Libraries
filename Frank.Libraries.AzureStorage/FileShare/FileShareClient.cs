@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Azure.Storage.Files.Shares;
+using Frank.Libraries.AzureStorage.FileShare.Exceptions;
+using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
-using Azure.Storage.Files.Shares;
-using Frank.Libraries.AzureStorage.FileShare.Exceptions;
-using Microsoft.Extensions.Options;
 
 namespace Frank.Libraries.AzureStorage.FileShare
 {

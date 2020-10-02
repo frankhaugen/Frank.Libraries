@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="RestSharp" Version="106.11.4" />
+        <PackageReference Include="RestSharp" Version="106.11.7" />
         <PackageReference Include="WikipediaNET" Version="2.0.0" />
     </ItemGroup>
 

@@ -1,5 +1,7 @@
 ﻿using Flurl;
 using Flurl.Http;
+using Frank.Libraries.Brreg.Models.Company;
+using Frank.Libraries.Brreg.Models.Responses.CompanyList;
 using System;
 using System.Threading.Tasks;
 
@@ -11,25 +13,23 @@ namespace Frank.Libraries.Brreg
 
         private string BrregUnitsUrl() => $"{_baseUrl}/enheter";
 
-        //private string BrregSearchUrl(string name, string town, int currentPage, int pageSize) => $"{_baseUrl}/enheter?navn={name}&postadresse.poststed={town}&page={currentPage}&size={pageSize}";
-
-        public async Task<Company> GetCompanyAsync(long organizationNumber)
+        public async Task<Company> GetCompanyAsync(long registrationNumber)
         {
             var url = new Url(BrregUnitsUrl());
 
-            url.AppendPathSegment(organizationNumber);
+            url.AppendPathSegment(registrationNumber);
 
-            if (organizationNumber <= 0 || !url.IsValid())
-            {
-                throw new ArgumentException("Invalid value: 'organizationNumber'");
-            }
+            if (registrationNumber <= 0)
+                throw new ArgumentException("Invalid value: 'organizationNumber'", nameof(registrationNumber));
+
+            if (!url.IsValid())
+                throw new ArgumentException($"Bad url: '{url}'", nameof(url));
 
             return await url.GetJsonAsync<Company>();
         }
 
-        public async Task<CompaniesList> SearchForLegalEntityAsync(string companyName, string town, int currentPage = 0, int pageSize = 20)
+        public async Task<CompaniesList> SearchForLegalEntityAsync(string? companyName = null, string? town = null, int currentPage = 0, int pageSize = 20)
         {
-
             var url = new Url(BrregUnitsUrl());
 
             if (!string.IsNullOrWhiteSpace(companyName))
@@ -41,9 +41,7 @@ namespace Frank.Libraries.Brreg
             url.QueryParams.Add("size", pageSize);
 
             if (!url.IsValid())
-            {
-                throw new ArgumentException("Bad url");
-            }
+                throw new ArgumentException($"Bad url: '{url}'", nameof(url));
 
             return await url.GetJsonAsync<CompaniesList>();
         }

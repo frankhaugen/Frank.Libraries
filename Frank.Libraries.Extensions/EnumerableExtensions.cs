@@ -16,6 +16,16 @@ namespace Frank.Libraries.Extensions
                 .Select(g => g.Select(x => x.item));
         }
 
+        public static Stack<T> ToStack<T>(this IEnumerable<T> enumerable)
+        {
+            return new Stack<T>(enumerable);
+        }
+
+        public static Queue<T> ToQueue<T>(this IEnumerable<T> enumerable)
+        {
+            return new Queue<T>(enumerable);
+        }
+
         public static T Random<T>(this IEnumerable<T> items)
         {
             items = items.ToList();

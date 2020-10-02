@@ -19,8 +19,9 @@ namespace Frank.Libraries.Tests.Brreg
             var result = await brregClient.GetCompanyAsync(organizationNumber);
 
             // Assert
-            result!.Navn.Should().NotBeNullOrWhiteSpace();
-            result!.Navn!.ToLowerInvariant().Should().Contain("semine");
+            result!.RegistrationNumber.Should().Be(organizationNumber);
+            result!.Name.Should().NotBeNullOrWhiteSpace();
+            result!.Name!.ToLowerInvariant().Should().Contain("semine");
         }
 
         [Fact]
