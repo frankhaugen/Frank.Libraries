@@ -4,7 +4,7 @@ on: [push]
 jobs:
   coverage:
     name: Code Coverage
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
@@ -21,7 +21,7 @@ jobs:
           # User defined upload name. Visible in Codecov UI
           #name: # optional
           # Repository upload token - get it from codecov.io. Required only for private repositories
-          token: secrets.CODECOV_TOKEN
+          #token: secrets.CODECOV_TOKEN
           # Path to coverage file to upload
           #file: # optional
           # Comma-separated list of files to upload
@@ -35,7 +35,7 @@ jobs:
           # Environment variables to tag the upload with (e.g. PYTHON | OS,PYTHON)
           #env_vars: # optional
           # Specify whether or not CI build should fail if Codecov runs into an error during upload
-          #fail_ci_if_error: # optional
+          fail_ci_if_error: true
   scan:
     needs: [coverage]
     name: Code Quality Scan
