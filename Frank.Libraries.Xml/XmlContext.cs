@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Options;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.Extensions.Options;
 
 namespace Frank.Libraries.Xml
 {

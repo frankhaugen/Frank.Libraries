@@ -13,7 +13,7 @@ namespace Frank.Libraries.Xml
         /// <typeparam name="T">An object to serialize to a XML data string.</typeparam>
         /// <param name="toSerialize">A helper method for any type of object to be serialized to a XML data string.</param>
         /// <returns>A string containing XML data of the object.</returns>
-        public static string SerializeObjectToXml<T>(this T toSerialize)
+        public static string SerializeObjectToXml<T>(this T toSerialize) where T : class, new()
         {
             // create an instance of a XmlSerializer class with the typeof(T)..
             var xmlSerializer = new XmlSerializer(toSerialize!.GetType());

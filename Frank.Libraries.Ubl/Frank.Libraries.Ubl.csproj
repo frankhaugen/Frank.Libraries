@@ -1,31 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <LangVersion>8.0</LangVersion>
-    <!--<Nullable>enable</Nullable>-->
-    <IsPackable>false</IsPackable>
-    <RepositoryType>Git</RepositoryType>
-    <RepositoryUrl>https://github.com/frankhaugen/Frank.Library</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/frankhaugen/Frank.Library</PackageProjectUrl>
-    <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageIcon>icon.png</PackageIcon>
-    <Authors>Frank R. Haugen</Authors>
-    <PackageTags>Frank, Libraries, UBL, Universal Business Ledger, Invoice, CreditNote, InvoiceType, 2.1, Invoice 2.1</PackageTags>
-    <Description>Models and tools for UBLs</Description>
-    <!--<NoWarn>CS8618</NoWarn>-->
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>8.0</LangVersion>
+        <!--<Nullable>enable</Nullable>-->
+        <IsPackable>false</IsPackable>
+        <RepositoryType>Git</RepositoryType>
+        <RepositoryUrl>https://github.com/frankhaugen/Frank.Library</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Library</PackageProjectUrl>
+        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageIcon>icon.png</PackageIcon>
+        <Authors>Frank R. Haugen</Authors>
+        <PackageTags>Frank, Libraries, UBL, Universal Business Ledger, Invoice, CreditNote, InvoiceType, 2.1, Invoice 2.1</PackageTags>
+        <Description>Models and tools for UBLs</Description>
+        <!--<NoWarn>CS8618</NoWarn>-->
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\icon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="Ubl.Library\**" />
+        <EmbeddedResource Remove="Ubl.Library\**" />
+        <None Remove="Ubl.Library\**" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <!--<PackageReference Include="AutoBogus" Version="2.11.0" />-->
-  </ItemGroup>
+    <ItemGroup>
+        <None Include="..\icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
 </Project>
