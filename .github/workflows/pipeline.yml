@@ -7,7 +7,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Test and collect coverage
-        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --results-directory
+        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
       - name: Codecov
         # You may pin to the exact commit or the version.
         # uses: codecov/codecov-action@6004246f47ab62d32be025ce173b241cd84ac58e
