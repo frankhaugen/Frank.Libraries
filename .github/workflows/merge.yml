@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NUGET: https://api.nuget.org/v3/index.json
-      VERSION: "1.$GITHUB_RUN_NUMBER.0-preview"
+      VERSION: 1.$GITHUB_RUN_NUMBER.0-preview
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -21,9 +21,9 @@ jobs:
 #     - name: Build
 #       run: dotnet build --configuration Release --no-restore -v m
     - name: Pack NuGet
-      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=VERSION
+      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=$VERSION
     - name: Push NuGets
-      run: dotnet nuget push "**/Frank.Libraries.*.VERSION.nupkg" -k ${{ secrets.NugetKey }} -s NUGET
+      run: dotnet nuget push "**/Frank.Libraries.*.$VERSION.nupkg" -k ${{ secrets.NugetKey }} -s $NUGET
 #     - name: Push AutoFixture NuGet
 #       run: dotnet nuget push **/Frank.Libraries.AutoFixture.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
 #     - name: Push Extensions NuGet
