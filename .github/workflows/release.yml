@@ -26,6 +26,9 @@ jobs:
         repository: ${{ github.repository }}
         # If true, consider only tags that have an associated release
         releases-only: true
+    
+    - name: Echo Version
+      run: echo ${{ steps.find.outputs.id }}
     - name: Pack NuGet
       run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.id }}
     - name: Upload Release Assets
