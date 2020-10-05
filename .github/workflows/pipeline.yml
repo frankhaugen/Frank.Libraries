@@ -3,7 +3,6 @@ on: [push]
 
 jobs:
   build:
-    name: Build, test, analyze and release
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -11,17 +10,17 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-    - name: Restore with dotnet
-      run: dotnet restore
-    - name: Build with dotnet
-      run: dotnet build --configuration Release --no-restore
-    - name: Test and collect coverage
-      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-    - name: Codecov
+    - name: Restore
+      run: dotnet restore -v m
+    - name: Build
+      run: dotnet build --configuration Release --no-restore -v m
+    - name: Test
+      run: dotnet test -v m --no-restore --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+    - name: Codecoverage
       uses: codecov/codecov-action@v1.0.13
       with:
         fail_ci_if_error: true
-    - name: dotnet-sonarscanner
+    - name: Sonarcloud
       uses: spoland/dotnet-sonarcloud-analysis@v1.0
       with:
         project-key: frankhaugen_Frank.Libraries
@@ -32,7 +31,7 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Pack NuGet
-      run: dotnet pack --no-build --output nupkgs -p:PackageVersion=1.$GITHUB_RUN_NUMBER
+      run: dotnet pack --no-build --no-restore -v m --output nupkgs -p:PackageVersion=1.$GITHUB_RUN_NUMBER
     - name: Push Primary NuGet
       run: dotnet nuget push **/Frank.Libraries.All.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
     - name: Push AutoFixture NuGet
