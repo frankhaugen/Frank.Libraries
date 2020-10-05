@@ -15,7 +15,7 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore -v m
     - name: Test
-      run: dotnet test -v m --no-restore --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      run: dotnet test -v m --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     - name: Codecoverage
       uses: codecov/codecov-action@v1.0.13
       with:
