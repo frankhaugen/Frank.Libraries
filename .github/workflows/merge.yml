@@ -32,7 +32,15 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Find Latest Tag
+      id: find
+      uses: oprypin/find-latest-tag@v1.0.4
+      with:
+        repository: ${{ github.repository }}
+        releases-only: true
+        
     - name: Pack NuGet
-      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=1.99.$GITHUB_RUN_NUMBER-preview
+      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}-preview$GITHUB_RUN_NUMBER
     - name: Push NuGets
-      run: dotnet nuget push "**/Frank.Libraries.*.1.99.$GITHUB_RUN_NUMBER-preview.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}-preview$GITHUB_RUN_NUMBER.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
