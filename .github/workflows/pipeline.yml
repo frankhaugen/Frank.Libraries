@@ -1,90 +1,9 @@
-name: Pipeline
+name: Release
 on: [push]
 
 jobs:
-  coverage:
-    name: Code Coverage
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 3.1.100
-      - name: Test and collect coverage
-        run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-      - name: Codecov
-        # You may pin to the exact commit or the version.
-        # uses: codecov/codecov-action@6004246f47ab62d32be025ce173b241cd84ac58e
-        uses: codecov/codecov-action@v1.0.13
-        with:
-          # User defined upload name. Visible in Codecov UI
-          #name: # optional
-          # Repository upload token - get it from codecov.io. Required only for private repositories
-          #token: secrets.CODECOV_TOKEN
-          # Path to coverage file to upload
-          #file: # optional
-          # Comma-separated list of files to upload
-          #files: # optional
-          # Directory to search for coverage reports.
-          #directory: System.DefaultWorkingDirectory
-          # Flag upload to group coverage metrics (e.g. unittests | integration | ui,chrome)
-          #flags: # optional
-          # Write upload file to path before uploading
-          #path_to_write_report: # optional
-          # Environment variables to tag the upload with (e.g. PYTHON | OS,PYTHON)
-          #env_vars: # optional
-          # Specify whether or not CI build should fail if Codecov runs into an error during upload
-          fail_ci_if_error: true
-      - name: dotnet-sonarscanner
-        uses: spoland/dotnet-sonarcloud-analysis@v1.0
-        with:
-          project-key: frankhaugen_Frank.Libraries
-          sonar-host-url: https://sonarcloud.io
-          sonar-organization: frankhaugen
-          opencover-reports-paths: "**/*.opencover.xml"
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#   scan:
-#     needs: [coverage]
-#     name: Code Quality Scan
-#     runs-on: windows-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#         with:
-#           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-#       - name: Cache SonarCloud packages
-#         uses: actions/cache@v1
-#         with:
-#           path: ~\sonar\cache
-#           key: ${{ runner.os }}-sonar
-#           restore-keys: ${{ runner.os }}-sonar
-#       - name: Cache SonarCloud scanner
-#         id: cache-sonar-scanner
-#         uses: actions/cache@v1
-#         with:
-#           path: .\.sonar\scanner
-#           key: ${{ runner.os }}-sonar-scanner
-#           restore-keys: ${{ runner.os }}-sonar-scanner
-#       - name: Install SonarCloud scanner
-#         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-#         shell: powershell
-#         run: |
-#           New-Item -Path .\.sonar\scanner -ItemType Directory
-#           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
-#       - name: Build and analyze
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-#           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-#         shell: powershell
-#         run: |
-#           .\.sonar\scanner\dotnet-sonarscanner begin /k:"frankhaugen_Frank.Libraries" /o:"frankhaugen" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-#           dotnet build
-#           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}":
   build:
-    name: Build and release
-    needs: [coverage]
+    name: Build, test, analyze and release
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -96,8 +15,22 @@ jobs:
       run: dotnet restore
     - name: Build with dotnet
       run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test
+    - name: Test and collect coverage
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+    - name: Codecov
+      uses: codecov/codecov-action@v1.0.13
+      with:
+        fail_ci_if_error: true
+    - name: dotnet-sonarscanner
+      uses: spoland/dotnet-sonarcloud-analysis@v1.0
+      with:
+        project-key: frankhaugen_Frank.Libraries
+        sonar-host-url: https://sonarcloud.io
+        sonar-organization: frankhaugen
+        opencover-reports-paths: "**/*.opencover.xml"
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Pack NuGet
       run: dotnet pack --no-build --output nupkgs -p:PackageVersion=1.$GITHUB_RUN_NUMBER
     - name: Push Primary NuGet
@@ -122,4 +55,3 @@ jobs:
       run: dotnet nuget push **/Frank.Libraries.Xml.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
     - name: Push Security NuGet
       run: dotnet nuget push **/Frank.Libraries.Security.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-  
