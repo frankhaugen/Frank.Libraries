@@ -30,4 +30,12 @@
             <PackagePath></PackagePath>
         </None>
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Invoice2_1\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj" />
+    </ItemGroup>
 </Project>

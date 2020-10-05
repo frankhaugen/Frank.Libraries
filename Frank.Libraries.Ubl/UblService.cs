@@ -2,7 +2,6 @@
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
-using Frank.Libraries.Ubl.Invoice2_1;
 
 namespace Frank.Libraries.Ubl
 {
