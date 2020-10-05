@@ -1,4 +1,4 @@
-![Pipeline](https://github.com/frankhaugen/Frank.Libraries/workflows/Pipeline/badge.svg?branch=master)
+![Release](https://github.com/frankhaugen/Frank.Libraries/workflows/Release/badge.svg?branch=master)
 ![codecov](https://codecov.io/gh/frankhaugen/Frank.Libraries/branch/master/graph/badge.svg?token=EJ3RPH6IIG)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=frankhaugen_Frank.Libraries&metric=alert_status)](https://sonarcloud.io/dashboard?id=frankhaugen_Frank.Libraries)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=frankhaugen_Frank.Libraries&metric=security_rating)](https://sonarcloud.io/dashboard?id=frankhaugen_Frank.Libraries)
