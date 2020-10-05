@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  release:
+    branches: 
+    - master
+    type:
+    - published
+    
+jobs:
+  nugets:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+    - name: Find Latest Tag
+      id: find
+      # You may pin to the exact commit or the version.
+      # uses: oprypin/find-latest-tag@cc85180adff5be91282940868529accfc5ab40a7
+      uses: oprypin/find-latest-tag@v1.0.4
+      with:
+        # Repository name with owner. E.g. actions/checkout
+        repository: ${{ github.repository }}
+        # If true, consider only tags that have an associated release
+        releases-only: true
+    - name: Pack NuGet
+      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.id }}
+    - name: Upload Release Assets
+      uses: dwenegar/upload-release-assets@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        release_id: ${{ steps.find.outputs.id }}
+        path: nupkgs
+    - name: Push NuGets
+      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.id }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+      
