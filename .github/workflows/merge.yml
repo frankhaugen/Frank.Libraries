@@ -6,39 +6,13 @@ on:
 jobs:
   nugets:
     runs-on: ubuntu-latest
-    env:
-      NUGET: https://api.nuget.org/v3/index.json
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
-#     - name: Restore
-#       run: dotnet restore -v m
-#     - name: Build
-#       run: dotnet build --configuration Release --no-restore -v m
     - name: Pack NuGet
-      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=1.$GITHUB_RUN_NUMBER.0-preview
+      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=1.99.$GITHUB_RUN_NUMBER-preview
     - name: Push NuGets
-      run: dotnet nuget push "**/Frank.Libraries.*.1.$GITHUB_RUN_NUMBER.0-preview.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-#     - name: Push AutoFixture NuGet
-#       run: dotnet nuget push **/Frank.Libraries.AutoFixture.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push Extensions NuGet
-#       run: dotnet nuget push **/Frank.Libraries.Extensions.VERSIONR.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push Enum NuGet
-#       run: dotnet nuget push **/Frank.Libraries.Enums.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push Json NuGet
-#       run: dotnet nuget push **/Frank.Libraries.Json.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push MongoDb NuGet
-#       run: dotnet nuget push **/Frank.Libraries.MongoDb.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push Logging NuGet
-#       run: dotnet nuget push **/Frank.Libraries.Logging.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push Constants NuGet
-#       run: dotnet nuget push **/Frank.Libraries.Constants.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push Brreg NuGet
-#       run: dotnet nuget push **/Frank.Libraries.Brreg.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push XML NuGet
-#       run: dotnet nuget push **/Frank.Libraries.Xml.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
-#     - name: Push Security NuGet
-#       run: dotnet nuget push **/Frank.Libraries.Security.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+      run: dotnet nuget push "**/Frank.Libraries.*.1.99.$GITHUB_RUN_NUMBER-preview.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
