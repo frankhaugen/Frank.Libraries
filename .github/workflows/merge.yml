@@ -3,13 +3,13 @@ on:
   push:
     branches: master
 
-env:
-  NUGET: https://api.nuget.org/v3/index.json
-  VERSION: "1.$GITHUB_RUN_NUMBER.0-preview"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NUGET: https://api.nuget.org/v3/index.json
+      VERSION: "1.$GITHUB_RUN_NUMBER.0-preview"
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
