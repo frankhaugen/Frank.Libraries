@@ -12,6 +12,26 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
+    - name: Restore
+      run: dotnet restore -v m
+    - name: Build
+      run: dotnet build --configuration Release --no-restore -v m
+    - name: Test
+      run: dotnet test --configuration Release --no-build --no-restore -v m /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+    - name: Codecoverage
+      uses: codecov/codecov-action@v1.0.13
+      with:
+        fail_ci_if_error: true
+    - name: Sonarcloud
+      uses: spoland/dotnet-sonarcloud-analysis@v1.0
+      with:
+        project-key: frankhaugen_Frank.Libraries
+        sonar-host-url: https://sonarcloud.io
+        sonar-organization: frankhaugen
+        opencover-reports-paths: "**/*.opencover.xml"
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Pack NuGet
       run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=1.99.$GITHUB_RUN_NUMBER-preview
     - name: Push NuGets
