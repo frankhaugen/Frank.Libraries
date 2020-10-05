@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography;
 using Frank.Libraries.Security.Shared;
 
 namespace Frank.Libraries.Security.PasswordGeneration
@@ -88,8 +89,8 @@ namespace Frank.Libraries.Security.PasswordGeneration
 
         public int GetRandom(int maxValue)
         {
-            var random = new Random();
-            return random.Next(maxValue);
+            var random = RandomNumberGenerator.GetInt32(maxValue);
+            return random;
         }
     }
 }

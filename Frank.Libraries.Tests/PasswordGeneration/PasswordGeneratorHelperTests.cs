@@ -136,7 +136,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>();
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
-            var maxValue = 1000;
+            var maxValue = 100;
 
             // Act
             var result1 = passwordGeneratorHelper.GetRandom(maxValue);
@@ -144,6 +144,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
 
             // Assert
             result1.Should().NotBe(result2);
+            result1.Should().BeInRange(0, maxValue);
         }
     }
 }
