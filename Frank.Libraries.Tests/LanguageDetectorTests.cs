@@ -15,7 +15,17 @@ namespace Frank.Libraries.Tests
                 "Ukrainas prezidenta pienākumu izpildītājs Oleksandrs Turčinovs trešdienas vakarā devis Krimas separātistu "
             };
 
-            Test("lv", texts, new[] { new[] { "en", "fr", }, new[] { "lt", "pt" } });
+            Test("lav", texts, new[] { new[] { "eng", "fra", }, new[] { "lt", "pt" } });
+        }
+
+        [Fact]
+        public void Norwegian()
+        {
+            string[] texts = new[] {
+                "Mitt navn er Frank"
+            };
+
+            Test("nor", texts, new[] { new[] { "eng", "fra", } });
         }
 
         [Fact]
@@ -28,7 +38,7 @@ namespace Frank.Libraries.Tests
                 "il neige et le soleil brille et nous regardons la radio et la télé. le cinéma est très français"
             };
 
-            Test("fr", texts, new[] { new[] { "en", "it", "es", "pt" } });
+            Test("fra", texts, new[] { new[] { "eng", "ita" } });
         }
 
         [Fact]

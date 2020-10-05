@@ -15,12 +15,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Text.Json;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace Frank.Libraries.AI.LanguageDetection
 {
@@ -35,9 +36,9 @@ namespace Frank.Libraries.AI.LanguageDetection
 
         private static readonly Regex UrlRegex = new Regex("https?://[-_.?&~;+=/#0-9A-Za-z]{1,2076}", RegexOptions.Compiled);
         private static readonly Regex EmailRegex = new Regex("[-_.0-9A-Za-z]{1,64}@[-_0-9A-Za-z]{1,255}[-_.0-9A-Za-z]{1,255}", RegexOptions.Compiled);
-        private const string ResourceNamePrefix = "LanguageDetection.Profiles.";
+        private const string ResourceNamePrefix = "Frank.Libraries.AI.LanguageDetection.Profiles.";
 
-        private List<LanguageProfile> languages;
+        private readonly List<LanguageProfile> _languages;
         private Dictionary<string, Dictionary<LanguageProfile, double>> wordLanguageProbabilities;
 
         public LanguageDetector()
@@ -54,7 +55,7 @@ namespace Frank.Libraries.AI.LanguageDetection
             NGramLength = 3;
             MaxTextLength = 10000;
 
-            languages = new List<LanguageProfile>();
+            _languages = new List<LanguageProfile>();
             wordLanguageProbabilities = new Dictionary<string, Dictionary<LanguageProfile, double>>();
         }
 
@@ -71,10 +72,12 @@ namespace Frank.Libraries.AI.LanguageDetection
 
         public void AddAllLanguages()
         {
-            var languageDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Profiles");
-            var languageFiles = Directory.EnumerateFiles(languageDirectory);
+            var resources = GetType().Assembly.GetManifestResourceNames()
+                .Where(name => name.StartsWith(ResourceNamePrefix))
+                .Select(name => name.Substring(ResourceNamePrefix.Length))
+                .ToArray();
 
-            AddLanguages(languageFiles.ToArray());
+            AddLanguages(resources);
         }
 
         public void AddLanguages(params string[] languages)
@@ -89,7 +92,10 @@ namespace Frank.Libraries.AI.LanguageDetection
                     LanguageProfile profile = new LanguageProfile();
 
                     string json = sw.ReadToEnd();
-                    JsonLanguageProfile jsonProfile = JsonSerializer.Deserialize<JsonLanguageProfile>(json);
+
+                    Debug.WriteLine(json);
+
+                    JsonLanguageProfile jsonProfile = JsonConvert.DeserializeObject<JsonLanguageProfile>(json);
 
                     profile.Code = jsonProfile.name;
                     profile.Frequencies = jsonProfile.freq;
@@ -103,7 +109,13 @@ namespace Frank.Libraries.AI.LanguageDetection
 
         private void AddLanguageProfile(LanguageProfile profile)
         {
-            languages.Add(profile);
+
+            if (profile == null)
+            {
+                throw new DivideByZeroException();
+            }
+
+            _languages.Add(profile);
 
             foreach (string word in profile.Frequencies.Keys)
             {
@@ -130,7 +142,7 @@ namespace Frank.Libraries.AI.LanguageDetection
             if (ngrams.Count == 0)
                 return new DetectedLanguage[0];
 
-            double[] languageProbabilities = new double[languages.Count];
+            double[] languageProbabilities = new double[_languages.Count];
 
             Random random = RandomSeed != null ? new Random(RandomSeed.Value) : new Random();
 
@@ -261,9 +273,9 @@ namespace Frank.Libraries.AI.LanguageDetection
         #region Probabilities
         private double[] InitializeProbabilities()
         {
-            double[] prob = new double[languages.Count];
+            double[] prob = new double[_languages.Count];
             for (int i = 0; i < prob.Length; i++)
-                prob[i] = 1.0 / languages.Count;
+                prob[i] = 1.0 / _languages.Count;
             return prob;
         }
 
@@ -277,7 +289,7 @@ namespace Frank.Libraries.AI.LanguageDetection
 
             for (int i = 0; i < prob.Length; i++)
             {
-                LanguageProfile profile = languages[i];
+                LanguageProfile profile = _languages[i];
                 prob[i] *= weight + (languageProbabilities.ContainsKey(profile) ? languageProbabilities[profile] : 0);
             }
         }
@@ -313,7 +325,7 @@ namespace Frank.Libraries.AI.LanguageDetection
                     {
                         if (i == list.Count || list[i].Probability < p)
                         {
-                            list.Insert(i, new DetectedLanguage { Language = languages[j].Code, Probability = p });
+                            list.Insert(i, new DetectedLanguage { Language = _languages[j].Code, Probability = p });
                             break;
                         }
                     }
