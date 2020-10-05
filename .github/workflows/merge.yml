@@ -5,7 +5,7 @@ on:
 
 env:
   NUGET: https://api.nuget.org/v3/index.json
-  VERSION: 1.$GITHUB_RUN_NUMBER.0-preview
+  VERSION: "1.$GITHUB_RUN_NUMBER.0-preview"
 
 jobs:
   build:
