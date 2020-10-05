@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.Ubl;
 using Xunit;
@@ -29,7 +28,7 @@ namespace Frank.Libraries.Tests.Ubl
         [Fact]
         public void Serialize()
         {
-            var invoice = new AutoFaker<InvoiceType>().Generate();
+            //var invoice = new AutoFaker<InvoiceType>().Generate();
 
         }
     }
