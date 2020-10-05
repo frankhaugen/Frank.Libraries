@@ -28,16 +28,16 @@ jobs:
         releases-only: true
     
     - name: Echo Version
-      run: echo ${{ steps.find.outputs.id }}
+      run: echo ${{ steps.find.outputs.tag }}
     - name: Pack NuGet
-      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.id }}
+      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}
     - name: Upload Release Assets
       uses: dwenegar/upload-release-assets@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        release_id: ${{ steps.find.outputs.id }}
+        release_id: ${{ steps.find.outputs.tag }}
         path: nupkgs
     - name: Push NuGets
-      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.id }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
       
