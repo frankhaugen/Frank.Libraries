@@ -5,7 +5,7 @@ on:
 
 
 jobs:
-  build:
+  nugets:
     runs-on: ubuntu-latest
     env:
       NUGET: https://api.nuget.org/v3/index.json
@@ -16,12 +16,12 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.x
-    - name: Restore
-      run: dotnet restore -v m
-    - name: Build
-      run: dotnet build --configuration Release --no-restore -v m
+#     - name: Restore
+#       run: dotnet restore -v m
+#     - name: Build
+#       run: dotnet build --configuration Release --no-restore -v m
     - name: Pack NuGet
-      run: dotnet pack --configuration Release --no-build --no-restore -v m --output nupkgs -p:PackageVersion=VERSION
+      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=VERSION
     - name: Push NuGets
       run: dotnet nuget push "**/Frank.Libraries.*.VERSION.nupkg" -k ${{ secrets.NugetKey }} -s NUGET
 #     - name: Push AutoFixture NuGet
