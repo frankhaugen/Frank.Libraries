@@ -1,8 +1,12 @@
 name: Release
 on:
-  release:
-    types: # This configuration does not affect the page_build event above
+  push:
+    branches: master
+    types:
       - created
+env:
+  NUGET: https://api.nuget.org/v3/index.json
+  VERSION: 1.$GITHUB_RUN_NUMBER.0-preview
 
 jobs:
   build:
@@ -18,42 +22,26 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore -v m
     - name: Pack NuGet
-      run: dotnet pack --configuration Release --no-build --no-restore -v m --output nupkgs -p:PackageVersion=1.$GITHUB_RUN_NUMBER
-    - name: Test
-      run: dotnet test --configuration Release --no-build --no-restore -v m /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-    - name: Codecoverage
-      uses: codecov/codecov-action@v1.0.13
-      with:
-        fail_ci_if_error: true
-    - name: Sonarcloud
-      uses: spoland/dotnet-sonarcloud-analysis@v1.0
-      with:
-        project-key: frankhaugen_Frank.Libraries
-        sonar-host-url: https://sonarcloud.io
-        sonar-organization: frankhaugen
-        opencover-reports-paths: "**/*.opencover.xml"
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Push Primary NuGet
-      run: dotnet nuget push **/Frank.Libraries.All.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push AutoFixture NuGet
-      run: dotnet nuget push **/Frank.Libraries.AutoFixture.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Extensions NuGet
-      run: dotnet nuget push **/Frank.Libraries.Extensions.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Enum NuGet
-      run: dotnet nuget push **/Frank.Libraries.Enums.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Json NuGet
-      run: dotnet nuget push **/Frank.Libraries.Json.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push MongoDb NuGet
-      run: dotnet nuget push **/Frank.Libraries.MongoDb.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Logging NuGet
-      run: dotnet nuget push **/Frank.Libraries.Logging.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Constants NuGet
-      run: dotnet nuget push **/Frank.Libraries.Constants.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Brreg NuGet
-      run: dotnet nuget push **/Frank.Libraries.Brreg.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push XML NuGet
-      run: dotnet nuget push **/Frank.Libraries.Xml.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    - name: Push Security NuGet
-      run: dotnet nuget push **/Frank.Libraries.Security.1.$GITHUB_RUN_NUMBER.0.nupkg -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+      run: dotnet pack --configuration Release --no-build --no-restore -v m --output nupkgs -p:PackageVersion=VERSION
+    - name: Push NuGets
+      run: dotnet nuget push "**/Frank.Libraries.*.VERSION.nupkg" -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push AutoFixture NuGet
+#       run: dotnet nuget push **/Frank.Libraries.AutoFixture.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push Extensions NuGet
+#       run: dotnet nuget push **/Frank.Libraries.Extensions.VERSIONR.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push Enum NuGet
+#       run: dotnet nuget push **/Frank.Libraries.Enums.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push Json NuGet
+#       run: dotnet nuget push **/Frank.Libraries.Json.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push MongoDb NuGet
+#       run: dotnet nuget push **/Frank.Libraries.MongoDb.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push Logging NuGet
+#       run: dotnet nuget push **/Frank.Libraries.Logging.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push Constants NuGet
+#       run: dotnet nuget push **/Frank.Libraries.Constants.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push Brreg NuGet
+#       run: dotnet nuget push **/Frank.Libraries.Brreg.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push XML NuGet
+#       run: dotnet nuget push **/Frank.Libraries.Xml.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
+#     - name: Push Security NuGet
+#       run: dotnet nuget push **/Frank.Libraries.Security.VERSION.0.nupkg -k ${{ secrets.NugetKey }} -s NUGET
