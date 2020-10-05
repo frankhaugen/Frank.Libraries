@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
@@ -15,6 +15,7 @@
         <Authors>Frank R. Haugen</Authors>
         <PackageTags>Frank, Libraries, XML, Parsing, Serializing, Deserializing, Repository, Pattern, Flat, File, Storage, Data, Database</PackageTags>
         <Description>A set of XML tools including serializing and deserializing, and a repository pattern flat-file storage solution for you data as an alternative to using a database</Description>
+        <NoWarn>CS8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
