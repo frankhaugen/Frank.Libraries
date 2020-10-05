@@ -2,11 +2,8 @@ name: Release
 
 on:
   release:
-    branches: 
-    - master
-    type:
-    - published
-    
+    branches: master
+    type: published
 jobs:
   nugets:
     runs-on: ubuntu-latest
@@ -24,10 +21,7 @@ jobs:
       with:
         repository: ${{ github.repository }}
         releases-only: true
-    
-    - name: Echo Version
-      run: echo ${{ steps.find.outputs.tag }}
-      
+        
     - name: Pack NuGet
       run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}
     
@@ -38,4 +32,3 @@ jobs:
     
     - name: Push NuGets
       run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
-    
