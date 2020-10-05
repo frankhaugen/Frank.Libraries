@@ -36,45 +36,55 @@ jobs:
           #env_vars: # optional
           # Specify whether or not CI build should fail if Codecov runs into an error during upload
           fail_ci_if_error: true
-  scan:
-    needs: [coverage]
-    name: Code Quality Scan
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
+      - name: dotnet-sonarscanner
+        uses: spoland/dotnet-sonarcloud-analysis@v1.0
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Cache SonarCloud packages
-        uses: actions/cache@v1
-        with:
-          path: ~\sonar\cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
-      - name: Cache SonarCloud scanner
-        id: cache-sonar-scanner
-        uses: actions/cache@v1
-        with:
-          path: .\.sonar\scanner
-          key: ${{ runner.os }}-sonar-scanner
-          restore-keys: ${{ runner.os }}-sonar-scanner
-      - name: Install SonarCloud scanner
-        if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
-        shell: powershell
-        run: |
-          New-Item -Path .\.sonar\scanner -ItemType Directory
-          dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
-      - name: Build and analyze
+          project-key: frankhaugen_Frank.Libraries
+          sonar-host-url: https://sonarcloud.io
+          sonar-organization: frankhaugen
+          opencover-reports-paths: "**/*.opencover.xml"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        shell: powershell
-        run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"frankhaugen_Frank.Libraries" /o:"frankhaugen" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build
-          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}":
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#   scan:
+#     needs: [coverage]
+#     name: Code Quality Scan
+#     runs-on: windows-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#         with:
+#           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+#       - name: Cache SonarCloud packages
+#         uses: actions/cache@v1
+#         with:
+#           path: ~\sonar\cache
+#           key: ${{ runner.os }}-sonar
+#           restore-keys: ${{ runner.os }}-sonar
+#       - name: Cache SonarCloud scanner
+#         id: cache-sonar-scanner
+#         uses: actions/cache@v1
+#         with:
+#           path: .\.sonar\scanner
+#           key: ${{ runner.os }}-sonar-scanner
+#           restore-keys: ${{ runner.os }}-sonar-scanner
+#       - name: Install SonarCloud scanner
+#         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
+#         shell: powershell
+#         run: |
+#           New-Item -Path .\.sonar\scanner -ItemType Directory
+#           dotnet tool update dotnet-sonarscanner --tool-path .\.sonar\scanner
+#       - name: Build and analyze
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+#           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#         shell: powershell
+#         run: |
+#           .\.sonar\scanner\dotnet-sonarscanner begin /k:"frankhaugen_Frank.Libraries" /o:"frankhaugen" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+#           dotnet build
+#           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}":
   build:
     name: Build and release
-    needs: [scan, coverage]
+    needs: [coverage]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
