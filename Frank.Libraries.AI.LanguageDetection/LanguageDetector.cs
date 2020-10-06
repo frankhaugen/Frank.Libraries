@@ -29,9 +29,16 @@ namespace Frank.Libraries.AI.LanguageDetection
     {
         private class JsonLanguageProfile
         {
-            public string name = null;
-            public Dictionary<string, int> freq = null;
-            public int[] n_words = null;
+            public string name;
+            public Dictionary<string, int> freq;
+            public int[] n_words;
+
+            public JsonLanguageProfile(string name, Dictionary<string, int> freq, int[] nWords)
+            {
+                this.name = name;
+                this.freq = freq;
+                n_words = nWords;
+            }
         }
 
         private static readonly Regex UrlRegex = new Regex("https?://[-_.?&~;+=/#0-9A-Za-z]{1,2076}", RegexOptions.Compiled);
@@ -124,36 +131,37 @@ namespace Frank.Libraries.AI.LanguageDetection
 
                 if (word.Length >= 1 && word.Length <= NGramLength)
                 {
-                    double prob = (double)profile.Frequencies[word] / profile.WordCount[word.Length - 1];
+                    var prob = (double)profile.Frequencies[word] / profile.WordCount[word.Length - 1];
                     wordLanguageProbabilities[word][profile] = prob;
                 }
             }
         }
 
-        public string Detect(string text)
+        public string? Detect(string text)
         {
-            DetectedLanguage language = DetectAll(text).FirstOrDefault();
-            return language != null ? language.Language : null;
+            var detectedLanguages = DetectAll(text);
+            var detectedLanguage = detectedLanguages.FirstOrDefault();
+            return detectedLanguage?.Language;
         }
 
         public IEnumerable<DetectedLanguage> DetectAll(string text)
         {
             List<string> ngrams = ExtractNGrams(NormalizeText(text));
             if (ngrams.Count == 0)
-                return new DetectedLanguage[0];
+                return Array.Empty<DetectedLanguage>();
 
             double[] languageProbabilities = new double[_languages.Count];
 
             Random random = RandomSeed != null ? new Random(RandomSeed.Value) : new Random();
 
-            for (int t = 0; t < Trials; t++)
+            for (var t = 0; t < Trials; t++)
             {
                 double[] probs = InitializeProbabilities();
-                double alpha = Alpha + random.NextDouble() * AlphaWidth;
+                var alpha = Alpha + random.NextDouble() * AlphaWidth;
 
-                for (int i = 0; ; i++)
+                for (var i = 0; ; i++)
                 {
-                    int r = random.Next(ngrams.Count);
+                    var r = random.Next(ngrams.Count);
                     UpdateProbabilities(probs, ngrams[r], alpha);
 
                     if (i % 5 == 0)
@@ -163,7 +171,7 @@ namespace Frank.Libraries.AI.LanguageDetection
                     }
                 }
 
-                for (int j = 0; j < languageProbabilities.Length; j++)
+                for (var j = 0; j < languageProbabilities.Length; j++)
                     languageProbabilities[j] += probs[j] / Trials;
             }
 
@@ -176,13 +184,13 @@ namespace Frank.Libraries.AI.LanguageDetection
 
             NGram ngram = new NGram();
 
-            foreach (char c in text)
+            foreach (var c in text)
             {
                 ngram.Add(c);
 
-                for (int n = 1; n <= NGram.N_GRAM; n++)
+                for (var n = 1; n <= NGram.N_GRAM; n++)
                 {
-                    string w = ngram.Get(n);
+                    string? w = ngram.Get(n);
 
                     if (w != null && wordLanguageProbabilities.ContainsKey(w))
                         list.Add(w);
@@ -192,7 +200,6 @@ namespace Frank.Libraries.AI.LanguageDetection
             return list;
         }
 
-        #region Normalize text
         protected virtual string NormalizeText(string text)
         {
             if (text.Length > MaxTextLength)
@@ -208,12 +215,12 @@ namespace Frank.Libraries.AI.LanguageDetection
 
         private static string NormalizeAlphabet(string text)
         {
-            int latinCount = 0;
-            int nonLatinCount = 0;
+            var latinCount = 0;
+            var nonLatinCount = 0;
 
-            for (int i = 0; i < text.Length; ++i)
+            for (var i = 0; i < text.Length; ++i)
             {
-                char c = text[i];
+                var c = text[i];
 
                 if (c <= 'z' && c >= 'A')
                 {
@@ -228,9 +235,9 @@ namespace Frank.Libraries.AI.LanguageDetection
             if (latinCount * 2 < nonLatinCount)
             {
                 StringBuilder textWithoutLatin = new StringBuilder();
-                for (int i = 0; i < text.Length; ++i)
+                for (var i = 0; i < text.Length; ++i)
                 {
-                    char c = text[i];
+                    var c = text[i];
                     if (c > 'z' || c < 'A')
                         textWithoutLatin.Append(c);
                 }
@@ -252,7 +259,7 @@ namespace Frank.Libraries.AI.LanguageDetection
 
             char? prev = null;
 
-            foreach (char c in text)
+            foreach (var c in text)
             {
                 if (c != ' ' || prev != ' ')
                     sb.Append(c);
@@ -268,13 +275,11 @@ namespace Frank.Libraries.AI.LanguageDetection
             text = EmailRegex.Replace(text, " ");
             return text;
         }
-        #endregion
 
-        #region Probabilities
         private double[] InitializeProbabilities()
         {
             double[] prob = new double[_languages.Count];
-            for (int i = 0; i < prob.Length; i++)
+            for (var i = 0; i < prob.Length; i++)
                 prob[i] = 1.0 / _languages.Count;
             return prob;
         }
@@ -285,9 +290,9 @@ namespace Frank.Libraries.AI.LanguageDetection
                 return;
 
             var languageProbabilities = wordLanguageProbabilities[word];
-            double weight = alpha / BaseFrequency;
+            var weight = alpha / BaseFrequency;
 
-            for (int i = 0; i < prob.Length; i++)
+            for (var i = 0; i < prob.Length; i++)
             {
                 LanguageProfile profile = _languages[i];
                 prob[i] *= weight + (languageProbabilities.ContainsKey(profile) ? languageProbabilities[profile] : 0);
@@ -298,12 +303,12 @@ namespace Frank.Libraries.AI.LanguageDetection
         {
             double maxp = 0, sump = 0;
 
-            for (int i = 0; i < probs.Length; ++i)
+            for (var i = 0; i < probs.Length; ++i)
                 sump += probs[i];
 
-            for (int i = 0; i < probs.Length; ++i)
+            for (var i = 0; i < probs.Length; ++i)
             {
-                double p = probs[i] / sump;
+                var p = probs[i] / sump;
                 if (maxp < p) maxp = p;
                 probs[i] = p;
             }
@@ -315,13 +320,13 @@ namespace Frank.Libraries.AI.LanguageDetection
         {
             List<DetectedLanguage> list = new List<DetectedLanguage>();
 
-            for (int j = 0; j < probs.Length; j++)
+            for (var j = 0; j < probs.Length; j++)
             {
-                double p = probs[j];
+                var p = probs[j];
 
                 if (p > ProbabilityThreshold)
                 {
-                    for (int i = 0; i <= list.Count; i++)
+                    for (var i = 0; i <= list.Count; i++)
                     {
                         if (i == list.Count || list[i].Probability < p)
                         {
@@ -334,7 +339,6 @@ namespace Frank.Libraries.AI.LanguageDetection
 
             return list;
         }
-        #endregion
 
         public class DetectedLanguage
         {
@@ -342,7 +346,7 @@ namespace Frank.Libraries.AI.LanguageDetection
             public double Probability { get; set; }
         }
 
-        private class NGram
+        public class NGram
         {
             public const int N_GRAM = 3;
 
@@ -351,7 +355,7 @@ namespace Frank.Libraries.AI.LanguageDetection
 
             public void Add(char c)
             {
-                char lastChar = buffer[buffer.Length - 1];
+                var lastChar = buffer[buffer.Length - 1];
 
                 if (lastChar == ' ')
                 {
@@ -377,7 +381,7 @@ namespace Frank.Libraries.AI.LanguageDetection
                 }
             }
 
-            public string Get(int n)
+            public string? Get(int n)
             {
                 if (capital)
                     return null;
@@ -387,7 +391,7 @@ namespace Frank.Libraries.AI.LanguageDetection
 
                 if (n == 1)
                 {
-                    char c = buffer[buffer.Length - 1];
+                    var c = buffer[buffer.Length - 1];
                     if (c == ' ') return null;
                     return c.ToString();
                 }

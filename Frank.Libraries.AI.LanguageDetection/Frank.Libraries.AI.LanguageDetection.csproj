@@ -1,119 +1,140 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>8.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <IsPackable>true</IsPackable>
+        <RepositoryType>Git</RepositoryType>
+        <RepositoryUrl>https://github.com/frankhaugen/Frank.Library</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Library</PackageProjectUrl>
+        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageIcon>icon.png</PackageIcon>
+        <Authors>Frank R. Haugen</Authors>
+        <PackageTags>Frank, Libraries, XML, Parsing, Serializing, Deserializing, Repository, Pattern, Flat, File, Storage, Data, Database</PackageTags>
+        <Description>A set of XML tools including serializing and deserializing, and a repository pattern flat-file storage solution for you data as an alternative to using a database</Description>
+        <NoWarn>CS8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
-      <None Remove="Profiles\afr" />
-      <None Remove="Profiles\ara" />
-      <None Remove="Profiles\ben" />
-      <None Remove="Profiles\bul" />
-      <None Remove="Profiles\ces" />
-      <None Remove="Profiles\dan" />
-      <None Remove="Profiles\deu" />
-      <None Remove="Profiles\ell" />
-      <None Remove="Profiles\eng" />
-      <None Remove="Profiles\est" />
-      <None Remove="Profiles\fas" />
-      <None Remove="Profiles\fin" />
-      <None Remove="Profiles\fra" />
-      <None Remove="Profiles\guj" />
-      <None Remove="Profiles\heb" />
-      <None Remove="Profiles\hin" />
-      <None Remove="Profiles\hrv" />
-      <None Remove="Profiles\hun" />
-      <None Remove="Profiles\ind" />
-      <None Remove="Profiles\ita" />
-      <None Remove="Profiles\jpn" />
-      <None Remove="Profiles\kan" />
-      <None Remove="Profiles\kor" />
-      <None Remove="Profiles\lav" />
-      <None Remove="Profiles\lit" />
-      <None Remove="Profiles\mal" />
-      <None Remove="Profiles\mar" />
-      <None Remove="Profiles\mkd" />
-      <None Remove="Profiles\nep" />
-      <None Remove="Profiles\nld" />
-      <None Remove="Profiles\nor" />
-      <None Remove="Profiles\pan" />
-      <None Remove="Profiles\pol" />
-      <None Remove="Profiles\por" />
-      <None Remove="Profiles\ron" />
-      <None Remove="Profiles\rus" />
-      <None Remove="Profiles\slk" />
-      <None Remove="Profiles\slv" />
-      <None Remove="Profiles\som" />
-      <None Remove="Profiles\spa" />
-      <None Remove="Profiles\sqi" />
-      <None Remove="Profiles\swa" />
-      <None Remove="Profiles\swe" />
-      <None Remove="Profiles\tam" />
-      <None Remove="Profiles\tel" />
-      <None Remove="Profiles\tgl" />
-      <None Remove="Profiles\tha" />
-      <None Remove="Profiles\tur" />
-      <None Remove="Profiles\twi" />
-      <None Remove="Profiles\ukr" />
-      <None Remove="Profiles\urd" />
-      <None Remove="Profiles\vie" />
-      <None Remove="Profiles\zho" />
+        <None Include="..\icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Include="Profiles\afr" />
-      <EmbeddedResource Include="Profiles\ara" />
-      <EmbeddedResource Include="Profiles\ben" />
-      <EmbeddedResource Include="Profiles\bul" />
-      <EmbeddedResource Include="Profiles\ces" />
-      <EmbeddedResource Include="Profiles\dan" />
-      <EmbeddedResource Include="Profiles\deu" />
-      <EmbeddedResource Include="Profiles\ell" />
-      <EmbeddedResource Include="Profiles\eng" />
-      <EmbeddedResource Include="Profiles\est" />
-      <EmbeddedResource Include="Profiles\fas" />
-      <EmbeddedResource Include="Profiles\fin" />
-      <EmbeddedResource Include="Profiles\fra" />
-      <EmbeddedResource Include="Profiles\guj" />
-      <EmbeddedResource Include="Profiles\heb" />
-      <EmbeddedResource Include="Profiles\hin" />
-      <EmbeddedResource Include="Profiles\hrv" />
-      <EmbeddedResource Include="Profiles\hun" />
-      <EmbeddedResource Include="Profiles\ind" />
-      <EmbeddedResource Include="Profiles\ita" />
-      <EmbeddedResource Include="Profiles\jpn" />
-      <EmbeddedResource Include="Profiles\kan" />
-      <EmbeddedResource Include="Profiles\kor" />
-      <EmbeddedResource Include="Profiles\lav" />
-      <EmbeddedResource Include="Profiles\lit" />
-      <EmbeddedResource Include="Profiles\mal" />
-      <EmbeddedResource Include="Profiles\mar" />
-      <EmbeddedResource Include="Profiles\mkd" />
-      <EmbeddedResource Include="Profiles\nep" />
-      <EmbeddedResource Include="Profiles\nld" />
-      <EmbeddedResource Include="Profiles\nor" />
-      <EmbeddedResource Include="Profiles\pan" />
-      <EmbeddedResource Include="Profiles\pol" />
-      <EmbeddedResource Include="Profiles\por" />
-      <EmbeddedResource Include="Profiles\ron" />
-      <EmbeddedResource Include="Profiles\rus" />
-      <EmbeddedResource Include="Profiles\slk" />
-      <EmbeddedResource Include="Profiles\slv" />
-      <EmbeddedResource Include="Profiles\som" />
-      <EmbeddedResource Include="Profiles\spa" />
-      <EmbeddedResource Include="Profiles\sqi" />
-      <EmbeddedResource Include="Profiles\swa" />
-      <EmbeddedResource Include="Profiles\swe" />
-      <EmbeddedResource Include="Profiles\tam" />
-      <EmbeddedResource Include="Profiles\tel" />
-      <EmbeddedResource Include="Profiles\tgl" />
-      <EmbeddedResource Include="Profiles\tha" />
-      <EmbeddedResource Include="Profiles\tur" />
-      <EmbeddedResource Include="Profiles\twi" />
-      <EmbeddedResource Include="Profiles\ukr" />
-      <EmbeddedResource Include="Profiles\urd" />
-      <EmbeddedResource Include="Profiles\vie" />
-      <EmbeddedResource Include="Profiles\zho" />
+        <None Remove="Profiles\afr" />
+        <None Remove="Profiles\ara" />
+        <None Remove="Profiles\ben" />
+        <None Remove="Profiles\bul" />
+        <None Remove="Profiles\ces" />
+        <None Remove="Profiles\dan" />
+        <None Remove="Profiles\deu" />
+        <None Remove="Profiles\ell" />
+        <None Remove="Profiles\eng" />
+        <None Remove="Profiles\est" />
+        <None Remove="Profiles\fas" />
+        <None Remove="Profiles\fin" />
+        <None Remove="Profiles\fra" />
+        <None Remove="Profiles\guj" />
+        <None Remove="Profiles\heb" />
+        <None Remove="Profiles\hin" />
+        <None Remove="Profiles\hrv" />
+        <None Remove="Profiles\hun" />
+        <None Remove="Profiles\ind" />
+        <None Remove="Profiles\ita" />
+        <None Remove="Profiles\jpn" />
+        <None Remove="Profiles\kan" />
+        <None Remove="Profiles\kor" />
+        <None Remove="Profiles\lav" />
+        <None Remove="Profiles\lit" />
+        <None Remove="Profiles\mal" />
+        <None Remove="Profiles\mar" />
+        <None Remove="Profiles\mkd" />
+        <None Remove="Profiles\nep" />
+        <None Remove="Profiles\nld" />
+        <None Remove="Profiles\nor" />
+        <None Remove="Profiles\pan" />
+        <None Remove="Profiles\pol" />
+        <None Remove="Profiles\por" />
+        <None Remove="Profiles\ron" />
+        <None Remove="Profiles\rus" />
+        <None Remove="Profiles\slk" />
+        <None Remove="Profiles\slv" />
+        <None Remove="Profiles\som" />
+        <None Remove="Profiles\spa" />
+        <None Remove="Profiles\sqi" />
+        <None Remove="Profiles\swa" />
+        <None Remove="Profiles\swe" />
+        <None Remove="Profiles\tam" />
+        <None Remove="Profiles\tel" />
+        <None Remove="Profiles\tgl" />
+        <None Remove="Profiles\tha" />
+        <None Remove="Profiles\tur" />
+        <None Remove="Profiles\twi" />
+        <None Remove="Profiles\ukr" />
+        <None Remove="Profiles\urd" />
+        <None Remove="Profiles\vie" />
+        <None Remove="Profiles\zho" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Profiles\afr" />
+        <EmbeddedResource Include="Profiles\ara" />
+        <EmbeddedResource Include="Profiles\ben" />
+        <EmbeddedResource Include="Profiles\bul" />
+        <EmbeddedResource Include="Profiles\ces" />
+        <EmbeddedResource Include="Profiles\dan" />
+        <EmbeddedResource Include="Profiles\deu" />
+        <EmbeddedResource Include="Profiles\ell" />
+        <EmbeddedResource Include="Profiles\eng" />
+        <EmbeddedResource Include="Profiles\est" />
+        <EmbeddedResource Include="Profiles\fas" />
+        <EmbeddedResource Include="Profiles\fin" />
+        <EmbeddedResource Include="Profiles\fra" />
+        <EmbeddedResource Include="Profiles\guj" />
+        <EmbeddedResource Include="Profiles\heb" />
+        <EmbeddedResource Include="Profiles\hin" />
+        <EmbeddedResource Include="Profiles\hrv" />
+        <EmbeddedResource Include="Profiles\hun" />
+        <EmbeddedResource Include="Profiles\ind" />
+        <EmbeddedResource Include="Profiles\ita" />
+        <EmbeddedResource Include="Profiles\jpn" />
+        <EmbeddedResource Include="Profiles\kan" />
+        <EmbeddedResource Include="Profiles\kor" />
+        <EmbeddedResource Include="Profiles\lav" />
+        <EmbeddedResource Include="Profiles\lit" />
+        <EmbeddedResource Include="Profiles\mal" />
+        <EmbeddedResource Include="Profiles\mar" />
+        <EmbeddedResource Include="Profiles\mkd" />
+        <EmbeddedResource Include="Profiles\nep" />
+        <EmbeddedResource Include="Profiles\nld" />
+        <EmbeddedResource Include="Profiles\nor" />
+        <EmbeddedResource Include="Profiles\pan" />
+        <EmbeddedResource Include="Profiles\pol" />
+        <EmbeddedResource Include="Profiles\por" />
+        <EmbeddedResource Include="Profiles\ron" />
+        <EmbeddedResource Include="Profiles\rus" />
+        <EmbeddedResource Include="Profiles\slk" />
+        <EmbeddedResource Include="Profiles\slv" />
+        <EmbeddedResource Include="Profiles\som" />
+        <EmbeddedResource Include="Profiles\spa" />
+        <EmbeddedResource Include="Profiles\sqi" />
+        <EmbeddedResource Include="Profiles\swa" />
+        <EmbeddedResource Include="Profiles\swe" />
+        <EmbeddedResource Include="Profiles\tam" />
+        <EmbeddedResource Include="Profiles\tel" />
+        <EmbeddedResource Include="Profiles\tgl" />
+        <EmbeddedResource Include="Profiles\tha" />
+        <EmbeddedResource Include="Profiles\tur" />
+        <EmbeddedResource Include="Profiles\twi" />
+        <EmbeddedResource Include="Profiles\ukr" />
+        <EmbeddedResource Include="Profiles\urd" />
+        <EmbeddedResource Include="Profiles\vie" />
+        <EmbeddedResource Include="Profiles\zho" />
     </ItemGroup>
 
     <ItemGroup>

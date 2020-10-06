@@ -29,14 +29,14 @@ namespace Frank.Libraries.AI.LanguageDetection
             {
                 Code = reader.ReadString();
 
-                int frequenciesCount = reader.ReadInt32();
+                var frequenciesCount = reader.ReadInt32();
                 Frequencies = new Dictionary<string, int>(frequenciesCount);
-                for (int i = 0; i < frequenciesCount; i++)
+                for (var i = 0; i < frequenciesCount; i++)
                     Frequencies.Add(reader.ReadString(), reader.ReadInt32());
 
-                int wordCounts = reader.ReadInt32();
+                var wordCounts = reader.ReadInt32();
                 WordCount = new int[wordCounts];
-                for (int i = 0; i < wordCounts; i++)
+                for (var i = 0; i < wordCounts; i++)
                     WordCount[i] = reader.ReadInt32();
             }
         }
@@ -55,7 +55,7 @@ namespace Frank.Libraries.AI.LanguageDetection
                 }
 
                 writer.Write(WordCount.Length);
-                foreach (int count in WordCount)
+                foreach (var count in WordCount)
                     writer.Write(count);
             }
         }
