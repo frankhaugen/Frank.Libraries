@@ -30,4 +30,8 @@
             <PackagePath></PackagePath>
         </None>
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="FileLogging\" />
+    </ItemGroup>
 </Project>
