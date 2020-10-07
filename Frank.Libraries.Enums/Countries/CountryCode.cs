@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel;
-
-// ReSharper disable InconsistentNaming
-
 // ReSharper disable UnusedMember.Global
+// ReSharper disable InconsistentNaming
+// ReSharper disable MissingXmlDoc
+// ReSharper disable StringLiteralTypo
+// ReSharper disable StringLiteralsWordIsNotInDictionary
 
 namespace Frank.Libraries.Enums.Countries
 {
