@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System;
 
 namespace Frank.Libraries.Logging
 {
@@ -11,7 +11,7 @@ namespace Frank.Libraries.Logging
             var fileConfiguration = new FileLoggerConfiguration()
             {
                 LogLevel = Enum.Parse<LogLevel>(configuration["FileLoggerConfiguration:LogLevel"]),
-                Path = configuration["FileLoggerConfiguration:Path"]
+                Directory = configuration["FileLoggerConfiguration:Path"]
             };
 
             return AddLogger(loggerFactory, fileConfiguration);
@@ -22,7 +22,7 @@ namespace Frank.Libraries.Logging
             var fileConfiguration = new FileLoggerConfiguration()
             {
                 LogLevel = logLevel,
-                Path = path
+                Directory = path
             };
 
             return AddLogger(loggerFactory, fileConfiguration);
@@ -42,9 +42,9 @@ namespace Frank.Libraries.Logging
 
         private static ILoggerFactory AddLogger(ILoggerFactory loggerFactory, FileLoggerConfiguration fileConfiguration)
         {
-            if (string.IsNullOrWhiteSpace(fileConfiguration.Path))
+            if (string.IsNullOrWhiteSpace(fileConfiguration.Directory))
             {
-                throw new ArgumentNullException(nameof(fileConfiguration), $"'{nameof(FileLoggerConfiguration)}.{nameof(FileLoggerConfiguration.Path)}' cannot be null or empty");
+                throw new ArgumentNullException(nameof(fileConfiguration), $"'{nameof(FileLoggerConfiguration)}.{nameof(FileLoggerConfiguration.Directory)}' cannot be null or empty");
             }
 
             loggerFactory.AddProvider(new FileLoggerProvider(fileConfiguration));
