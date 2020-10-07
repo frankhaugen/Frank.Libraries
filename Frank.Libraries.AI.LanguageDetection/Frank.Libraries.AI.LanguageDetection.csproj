@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
@@ -26,6 +26,8 @@
     </ItemGroup>
 
     <ItemGroup>
+        <None Remove="languages.json" />
+        <None Remove="LICENSE" />
         <None Remove="Profiles\afr" />
         <None Remove="Profiles\ara" />
         <None Remove="Profiles\ben" />
@@ -82,6 +84,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <EmbeddedResource Include="languages.json" />
         <EmbeddedResource Include="Profiles\afr" />
         <EmbeddedResource Include="Profiles\ara" />
         <EmbeddedResource Include="Profiles\ben" />
@@ -138,8 +141,13 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Frank.Libraries.Enums" Version="1.99.3" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
         <PackageReference Include="System.Text.Json" Version="4.6.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="NewFolder\" />
     </ItemGroup>
 
 </Project>

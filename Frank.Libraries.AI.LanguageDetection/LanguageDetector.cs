@@ -27,13 +27,13 @@ namespace Frank.Libraries.AI.LanguageDetection
 {
     public class LanguageDetector
     {
-        private class JsonLanguageProfile
+        private class JsonLanguage
         {
             public string name;
             public Dictionary<string, int> freq;
             public int[] n_words;
 
-            public JsonLanguageProfile(string name, Dictionary<string, int> freq, int[] nWords)
+            public JsonLanguage(string name, Dictionary<string, int> freq, int[] nWords)
             {
                 this.name = name;
                 this.freq = freq;
@@ -45,8 +45,8 @@ namespace Frank.Libraries.AI.LanguageDetection
         private static readonly Regex EmailRegex = new Regex("[-_.0-9A-Za-z]{1,64}@[-_0-9A-Za-z]{1,255}[-_.0-9A-Za-z]{1,255}", RegexOptions.Compiled);
         private const string ResourceNamePrefix = "Frank.Libraries.AI.LanguageDetection.Profiles.";
 
-        private readonly List<LanguageProfile> _languages;
-        private Dictionary<string, Dictionary<LanguageProfile, double>> wordLanguageProbabilities;
+        private readonly List<Language> _languages;
+        private Dictionary<string, Dictionary<Language, double>> wordLanguageProbabilities;
 
         public LanguageDetector()
         {
@@ -62,8 +62,8 @@ namespace Frank.Libraries.AI.LanguageDetection
             NGramLength = 3;
             MaxTextLength = 10000;
 
-            _languages = new List<LanguageProfile>();
-            wordLanguageProbabilities = new Dictionary<string, Dictionary<LanguageProfile, double>>();
+            _languages = new List<Language>();
+            wordLanguageProbabilities = new Dictionary<string, Dictionary<Language, double>>();
         }
 
         public double Alpha { get; set; }
@@ -96,25 +96,25 @@ namespace Frank.Libraries.AI.LanguageDetection
                 using (Stream stream = assembly.GetManifestResourceStream(ResourceNamePrefix + language))
                 using (var sw = new StreamReader(stream))
                 {
-                    LanguageProfile profile = new LanguageProfile();
+                    Language profile = new Language();
 
                     string json = sw.ReadToEnd();
 
                     Debug.WriteLine(json);
 
-                    JsonLanguageProfile jsonProfile = JsonConvert.DeserializeObject<JsonLanguageProfile>(json);
+                    JsonLanguage jsonProfile = JsonConvert.DeserializeObject<JsonLanguage>(json);
 
                     profile.Code = jsonProfile.name;
                     profile.Frequencies = jsonProfile.freq;
                     profile.WordCount = jsonProfile.n_words;
 
                     //profile.Load(stream);
-                    AddLanguageProfile(profile);
+                    AddLanguage(profile);
                 }
             }
         }
 
-        private void AddLanguageProfile(LanguageProfile profile)
+        private void AddLanguage(Language profile)
         {
 
             if (profile == null)
@@ -127,7 +127,7 @@ namespace Frank.Libraries.AI.LanguageDetection
             foreach (string word in profile.Frequencies.Keys)
             {
                 if (!wordLanguageProbabilities.ContainsKey(word))
-                    wordLanguageProbabilities[word] = new Dictionary<LanguageProfile, double>();
+                    wordLanguageProbabilities[word] = new Dictionary<Language, double>();
 
                 if (word.Length >= 1 && word.Length <= NGramLength)
                 {
@@ -294,7 +294,7 @@ namespace Frank.Libraries.AI.LanguageDetection
 
             for (var i = 0; i < prob.Length; i++)
             {
-                LanguageProfile profile = _languages[i];
+                Language profile = _languages[i];
                 prob[i] *= weight + (languageProbabilities.ContainsKey(profile) ? languageProbabilities[profile] : 0);
             }
         }
