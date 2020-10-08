@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using FluentAssertions;
+using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Ubl;
 using Xunit;
 
@@ -19,7 +20,7 @@ namespace Frank.Libraries.Tests.Ubl
             var xml = File.ReadAllText(pathToFile);
 
             // Act
-            var result = service.DeserializeToInvoiceType(xml);
+            var result = service.DeserializeToInvoiceType<XmlTestModel>(xml);
 
             // Assert
             result.Should().NotBeNull();

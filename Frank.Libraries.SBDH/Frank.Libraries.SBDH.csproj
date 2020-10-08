@@ -24,4 +24,8 @@
             <PackagePath></PackagePath>
         </None>
     </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+    </ItemGroup>
 </Project>

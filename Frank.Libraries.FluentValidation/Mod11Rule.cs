@@ -85,15 +85,15 @@ namespace FluentValidation
             // Fjern whitespace og punktum fra kontonummer (enkelte liker å formatere kontonummer med 1234.56.78903)
             value = value.Replace(" ", "");
             value = value.Replace(".", "");
-                // Skal inneholde 11 siffer og kun tall
-                if (value.Length != 11 || !int.TryParse(value, out var _))
-                {
-                    return false;
-                }
+            // Skal inneholde 11 siffer og kun tall
+            if (value.Length != 11 || !int.TryParse(value, out var _))
+            {
+                return (false, 0);
+            }
 
-                int sisteSiffer = (int)char.GetNumericValue(value.Last());
+            int sisteSiffer = (int)char.GetNumericValue(value.Last());
 
-                return getCheckDigit(value) == sisteSiffer;
+            return (getCheckDigit(value) == sisteSiffer, sisteSiffer);
 
         }
 
@@ -104,7 +104,7 @@ namespace FluentValidation
 
             for (int i = 0; i < lastIndex; i++)
             {
-                sum += (int)char.GetNumericValue(number.ElementAt(i))* getWeightNumber(i);
+                sum += (int)char.GetNumericValue(number.ElementAt(i)) * getWeightNumber(i);
             }
 
             int remainder = sum % 11;
