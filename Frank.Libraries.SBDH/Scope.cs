@@ -18,7 +18,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.Xml.Serialization;
 
-namespace Cefact.Namespaces.StandardBusinessDocumentHeader
+namespace Frank.Libraries.SBDH
 {
     [GeneratedCode("XmlSchemaClassGenerator", "2.0.444.0")]
     [Serializable()]

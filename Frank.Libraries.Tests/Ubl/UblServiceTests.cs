@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using FluentAssertions;
-using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Ubl;
 using Xunit;
 
@@ -8,8 +7,8 @@ namespace Frank.Libraries.Tests.Ubl
 {
     public class UblServiceTests
     {
-        //[Theory]
-        //[InlineData("Invoice1.xml")]
+        [Theory]
+        [InlineData("Invoice1.xml")]
         public void DeserializeToInvoiceType_StateUnderTest_ExpectedBehavior(string filename)
         {
             // Arrange
@@ -20,7 +19,7 @@ namespace Frank.Libraries.Tests.Ubl
             var xml = File.ReadAllText(pathToFile);
 
             // Act
-            var result = service.DeserializeToInvoiceType<XmlTestModel>(xml);
+            var result = service.DeserializeToInvoiceType(xml);
 
             // Assert
             result.Should().NotBeNull();

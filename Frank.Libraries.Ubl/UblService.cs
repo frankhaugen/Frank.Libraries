@@ -15,15 +15,15 @@ namespace Frank.Libraries.Ubl
         /// </summary>
         /// <param name="xml"></param>
         /// <returns></returns>
-        public T DeserializeToInvoiceType<T>(string xml)
+        public InvoiceType DeserializeToInvoiceType(string xml)
         {
             _ = XElement.Parse(xml);
 
-            var serializer = new XmlSerializer(typeof(T));
+            var serializer = new XmlSerializer(typeof(InvoiceType));
 
             using var stringReader = new StringReader(xml);
             using var xmlReader = XmlReader.Create(stringReader);
-            var document = (T)serializer.Deserialize(xmlReader);
+            var document = (InvoiceType)serializer.Deserialize(xmlReader);
 
             return document;
         }
