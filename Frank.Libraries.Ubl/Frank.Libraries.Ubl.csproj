@@ -19,8 +19,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Remove="Invoice2_1\**" />
         <Compile Remove="Ubl.Library\**" />
+        <EmbeddedResource Remove="Invoice2_1\**" />
         <EmbeddedResource Remove="Ubl.Library\**" />
+        <None Remove="Invoice2_1\**" />
         <None Remove="Ubl.Library\**" />
     </ItemGroup>
 
@@ -32,10 +35,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Invoice2_1\" />
-    </ItemGroup>
 
-    <ItemGroup>
+
+
+
       <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj" />
     </ItemGroup>
 </Project>
