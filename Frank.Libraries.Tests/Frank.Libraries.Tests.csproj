@@ -45,6 +45,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="FluentValidation\" />
+        <Folder Include="FluentValidation\" />
     </ItemGroup>
 </Project>

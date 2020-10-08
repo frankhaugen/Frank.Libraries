@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using AutoBogus;
 using FluentAssertions;
+using Frank.Libraries.AI.LanguageDetection;
+using Frank.Libraries.Json;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -34,6 +38,18 @@ namespace Frank.Libraries.Tests
             }
 
             throw new ArgumentException(_csv);
+        }
+
+        [Fact]
+        public void TestLanguageObject()
+        {
+            var languages = new AutoFaker<LanguageModel>().Generate(4);
+
+            var json = languages.ToJson(true);
+
+            var result = json.FromJson<List<LanguageModel>>();
+
+            _outputHelper.WriteLine(result.ToJson());
         }
     }
 }

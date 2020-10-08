@@ -36,5 +36,17 @@ namespace Frank.Libraries.Tests.Extensions
             // Assert
             result.Should().Be(expected);
         }
+
+        //[Theory]
+        //public void GetLocalName(string expected)
+        //{
+        //    // Arrange
+
+        //    // Act
+        //    var result = enumValue.GetLocalName();
+
+        //    // Assert
+        //    result.Should().Be(expected);
+        //}
     }
 }

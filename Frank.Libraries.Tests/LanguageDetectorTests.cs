@@ -1,6 +1,7 @@
-﻿using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Frank.Libraries.AI.LanguageDetection;
+using Frank.Libraries.Enums.Countries;
+using Frank.Libraries.Enums.Extensions;
 using Xunit;
 
 namespace Frank.Libraries.Tests
@@ -8,97 +9,104 @@ namespace Frank.Libraries.Tests
     public class LanguageDetectorTests
     {
         [Fact]
-        public void Latvian()
-        {
-            string[] texts = new[] {
-                "čau, man iet labi, un kā iet tev?",
-                "Ukrainas prezidenta pienākumu izpildītājs Oleksandrs Turčinovs trešdienas vakarā devis Krimas separātistu "
-            };
-
-            //Test("lav", texts, new[] { new[] { "eng", "fra" }, new[] { "lat" } });
-        }
-
-        [Fact]
-        public void English()
+        public void Detect_TextIsEnglish_ReturnsEnglish()
         {
             var text = "My name is Frank, and I am a Norwegian";
 
-            LanguageDetector detector = new LanguageDetector();
-            detector.AddAllLanguages();
+            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
             var result = detector.Detect(text);
 
-            result.Should().NotBeNullOrWhiteSpace();
-            result.Should().Be("eng");
+            result.Should().NotBeNull();
+            result?.LanguageCode.Should().Be(LanguageCode.ENG);
+            result?.Name.Should().Be(LanguageCode.ENG.GetName());
         }
 
         [Fact]
-        public void Norwegian()
+        public void Detect_TextIsNorwegian_ReturnsNorwegian()
         {
-            string[] texts = new[] { "Mitt navn er Frank" };
+            var text = "Mitt navn er Frank";
 
-            Test("nor", texts, new[] { new[] { "eng", "fra", } });
+            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+
+            var result = detector.Detect(text);
+
+            result.Should().NotBeNull();
+            result?.LanguageCode.Should().Be(LanguageCode.NOR);
         }
 
         [Fact]
-        public void French()
+        public void Detect_TextIsChinese_ReturnsChinese()
         {
-            string[] texts = new[] {
-                "Le français est une langue indo-européenne de la famille des langues romanes. Le français s'est formé en France",
-                "La langue française commence à prendre de l'importance en 1250, lorsque Saint Louis commande une traduction de la Bible en français.",
-                "Nous voulons donc que dorénavant tous arrêts, et ensemble toutes autres procédures, soit de nos cours souveraines ou autres subalternes et inférieures, soit des registres, enquêtes,",
-                "il neige et le soleil brille et nous regardons la radio et la télé. le cinéma est très français"
-            };
+            var text = "汉堡包/漢堡包, 汉堡/漢堡";
 
-            Test("fra", texts, new[] { new[] { "eng", "ita" } });
+            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+
+            var result = detector.Detect(text);
+
+            result.Should().NotBeNull();
+            result?.LanguageCode.Should().Be(LanguageCode.CHI);
         }
 
         [Fact]
-        public void Issue_1()
+        public void Detect_TextIsEmptyString_ReturnsNull()
         {
-            string[] texts = new[] { "Výsledky kvalifikace slopestylu na ZOH v Soči" };
+            var text = "";
 
-            //Test("ces", texts);
-            Test("ces", texts, new[] { new[] { "ces", "slk" } });
-            //Test("ces", texts, new[] { new[] { "eng", "ces", "slk", "lv" } });
+            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+
+            var result = detector.Detect(text);
+
+            result.Should().BeNull();
         }
 
         [Fact]
-        public void Issue_2()
+        public void Is_TextIsNorwegian_ReturnsTrue()
         {
-            string text = "Výsledky kola švýcarské hokejové ligy";
+            var text = "Mitt navn er Frank";
 
-            LanguageDetector detector = new LanguageDetector();
-            detector.RandomSeed = 1;
-            detector.AddAllLanguages();
+            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
 
-            Assert.Equal("slk", detector.Detect(text));
-            detector.DetectAll(text).Should().HaveCount(1);
+            var result = detector.Is(LanguageCode.NOR, text);
 
-            detector = new LanguageDetector();
-            detector.RandomSeed = 1;
-            detector.ConvergenceThreshold = 0.9;
-            detector.MaxIterations = 50;
-            detector.AddAllLanguages();
-
-            Assert.Equal("slk", detector.Detect(text));
-            Assert.Equal(2, detector.DetectAll(text).Count());
+            result.Should().NotBeNull();
+            result?.Should().BeTrue();
         }
 
-        private void Test(string lang, string[] texts, string[][] pairs)
+        [Fact]
+        public void Is_TextIsInterlinguaThatDoesNotExist_ReturnsNull()
         {
-            LanguageDetector detector = new LanguageDetector { RandomSeed = 1 };
-            detector.AddAllLanguages();
+            var text = "Patre nostre, qui es in le celos, que tu nomine sia sanctificate; que tu regno veni; que tu voluntate sia facite como in le celo, etiam super le terra.";
 
-            foreach (var text in texts) Assert.Equal(lang, detector.Detect(text));
+            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
 
-            foreach (var pair in pairs!)
-            {
-                detector = new LanguageDetector { RandomSeed = 1 };
-                detector.AddLanguages(pair);
-                detector.AddLanguages(lang);
+            var result = detector.Is(LanguageCode.INA, text);
 
-                foreach (var text in texts) Assert.Equal(lang, detector.Detect(text));
-            }
+            result.Should().BeNull();
+        }
+
+        [Fact]
+        public void Detect_TextIsInterlinguaThatDoesNotExist_DoesNotReturnInterlingua()
+        {
+            var text = "Patre nostre, qui es in le celos, que tu nomine sia sanctificate; que tu regno veni; que tu voluntate sia facite como in le celo, etiam super le terra." +
+                "Da nos hodie nostre pan quotidian, e pardona a nos nostre debitas como etiam nos los pardona a nostre debitores. E non induce nos in tentation, sed libera nos del mal. Amen.";
+
+            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+
+            var result = detector.Detect(text);
+
+            result.LanguageCode.Should().NotBe(LanguageCode.INA);
+        }
+
+        [Fact]
+        public void Detect_TextIsKlingonThatDoesNotExist_ReturnsNull()
+        {
+            var text = "HeghluʼmeH QaQ jajvam. bortaS bIr jabluʼDIʼ reH QaQquʼ nayʼ. bIlughbeʼ. Dochvetlh vISoplaHbeʼ. jIyajbeʼ.";
+
+            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+
+            var result = detector.Detect(text);
+
+            result.Should().BeNull();
         }
     }
 }

@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using Frank.Libraries.Enums.Countries;
+using Frank.Libraries.Enums.Extensions;
 
 namespace Frank.Libraries.AI.LanguageDetection
 {
     public class Language
     {
-        public string Code { get; set; }
-        public Dictionary<string, int> Frequencies { get; set; }
-        public int[] WordCount { get; set; }
+        public LanguageCode LanguageCode { get; set; }
+        public double Probability { get; set; }
+        public string Name => LanguageCode.GetName();
     }
 }
