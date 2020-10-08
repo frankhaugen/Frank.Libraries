@@ -5,7 +5,7 @@ using Frank.Libraries.Enums.Extensions;
 using Frank.Libraries.Extensions;
 using Xunit;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests.LanguageDetection
 {
     public class LanguagesTests
     {

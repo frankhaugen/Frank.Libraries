@@ -52,7 +52,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Ubl", "Fran
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.AI.LanguageDetection", "Frank.Libraries.AI.LanguageDetection\Frank.Libraries.AI.LanguageDetection.csproj", "{865F4CF3-1048-4B4F-8FF6-ACAEE5ABDEBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.FluentValidation", "Frank.Libraries.FluentValidation\Frank.Libraries.FluentValidation.csproj", "{5B12BED2-D43B-46E3-8D41-34E50AADF5EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.FluentValidation", "Frank.Libraries.FluentValidation\Frank.Libraries.FluentValidation.csproj", "{5B12BED2-D43B-46E3-8D41-34E50AADF5EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

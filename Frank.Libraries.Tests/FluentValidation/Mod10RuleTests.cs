@@ -3,7 +3,7 @@ using FluentValidation;
 using Frank.Libraries.FluentValidation;
 using Xunit;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests.FluentValidation
 {
     public class Mod10RuleTests
     {

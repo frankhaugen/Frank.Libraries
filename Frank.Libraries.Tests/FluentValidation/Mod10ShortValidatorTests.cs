@@ -1,15 +1,15 @@
 ﻿using Frank.Libraries.FluentValidation;
 using Xunit;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests.FluentValidation
 {
-    public class Mod10IntValidatorTests
+    public class Mod10ShortValidatorTests
     {
         //[Fact]
         public void TestMethod1()
         {
             // Arrange
-            var mod10IntValidator = new Mod10IntValidator();
+            var mod10ShortValidator = new Mod10ShortValidator();
 
             // Act
 
