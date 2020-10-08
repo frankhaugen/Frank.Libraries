@@ -54,6 +54,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.AI.Language
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.FluentValidation", "Frank.Libraries.FluentValidation\Frank.Libraries.FluentValidation.csproj", "{5B12BED2-D43B-46E3-8D41-34E50AADF5EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.SBDH", "Frank.Libraries.SBDH\Frank.Libraries.SBDH.csproj", "{740B237B-2764-486E-8AD1-B2156FBD9020}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -316,6 +318,18 @@ Global
 		{5B12BED2-D43B-46E3-8D41-34E50AADF5EF}.Release|x64.Build.0 = Release|Any CPU
 		{5B12BED2-D43B-46E3-8D41-34E50AADF5EF}.Release|x86.ActiveCfg = Release|Any CPU
 		{5B12BED2-D43B-46E3-8D41-34E50AADF5EF}.Release|x86.Build.0 = Release|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Debug|x64.Build.0 = Debug|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Debug|x86.Build.0 = Debug|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Release|x64.ActiveCfg = Release|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Release|x64.Build.0 = Release|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Release|x86.ActiveCfg = Release|Any CPU
+		{740B237B-2764-486E-8AD1-B2156FBD9020}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

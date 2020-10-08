@@ -13,8 +13,8 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
-        <PackageTags>Frank, Libraries, UBL, Universal Business Ledger, Invoice, CreditNote, InvoiceType, 2.1, Invoice 2.1</PackageTags>
-        <Description>Models and tools for UBLs</Description>
+        <PackageTags>Frank, Libraries, SBDH, Standard Business Document Header, XML</PackageTags>
+        <Description>Models and tools for the SBDH or Standard Business Document Header</Description>
         <NoWarn>CS8618</NoWarn>
     </PropertyGroup>
 
