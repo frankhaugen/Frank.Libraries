@@ -8,8 +8,8 @@ namespace Frank.Libraries.Tests.Ubl
 {
     public class UblServiceTests
     {
-        [Theory]
-        [InlineData("Invoice1.xml")]
+        //[Theory]
+        //[InlineData("Invoice1.xml")]
         public void DeserializeToInvoiceType_StateUnderTest_ExpectedBehavior(string filename)
         {
             // Arrange
