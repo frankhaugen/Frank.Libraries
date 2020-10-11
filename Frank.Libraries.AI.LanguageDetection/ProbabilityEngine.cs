@@ -63,16 +63,16 @@ namespace Frank.Libraries.AI.LanguageDetection
             {
                 var p = probs[j];
 
-                if (p > _options.ProbabilityThreshold)
+                if (!(p > _options.ProbabilityThreshold))
+                    continue;
+
+                for (var i = 0; i <= list.Count; i++)
                 {
-                    for (var i = 0; i <= list.Count; i++)
-                    {
-                        if (i == list.Count || list[i].Probability < p)
-                        {
-                            list.Insert(i, new Language { LanguageCode = _languages.ElementAt(j).LanguageCode, Probability = p });
-                            break;
-                        }
-                    }
+                    if (i != list.Count && !(list[i].Probability < p))
+                        continue;
+
+                    list.Insert(i, new Language { LanguageCode = _languages.ElementAt(j).LanguageCode, Probability = p });
+                    break;
                 }
             }
 

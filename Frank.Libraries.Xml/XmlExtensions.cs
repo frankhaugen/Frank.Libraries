@@ -1,11 +1,29 @@
 ﻿using System;
 using System.IO;
+using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace Frank.Libraries.Xml
 {
     public static class XmlExtensions
     {
+        public static bool TryParse(this string xml, out XElement? xElement, out XmlException? exception)
+        {
+            try
+            {
+                xElement = XElement.Parse(xml);
+                exception = null;
+                return true;
+            }
+            catch (XmlException e)
+            {
+                exception = e;
+                xElement = null;
+                return false;
+            }
+        }
+
         // THIS: (C): https://stackoverflow.com/questions/2434534/serialize-an-object-to-string
         /// <summary>
         /// A helper to serialize an object to a string containing XML data of the object.

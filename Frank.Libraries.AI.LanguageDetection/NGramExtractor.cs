@@ -21,7 +21,7 @@ namespace Frank.Libraries.AI.LanguageDetection
             {
                 ngram.Add(c);
 
-                for (var n = 1; n <= NGram.N_GRAM; n++)
+                for (var n = 1; n <= NGram.NGramLength; n++)
                 {
                     var w = ngram.Get(n);
 

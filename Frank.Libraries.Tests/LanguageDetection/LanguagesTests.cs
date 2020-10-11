@@ -4,11 +4,34 @@ using Frank.Libraries.AI.LanguageDetection;
 using Frank.Libraries.Enums.Extensions;
 using Frank.Libraries.Extensions;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.LanguageDetection
 {
     public class LanguagesTests
     {
+        private readonly ITestOutputHelper _outputHelper;
+
+        public LanguagesTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+
+        [Fact]
+        public void ListLanguages()
+        {
+            // Arrange
+            var languages = new LanguageModels();
+
+            // Act
+            var result = languages.List;
+
+            // Assert
+            result.Should().NotBeNull();
+
+            foreach (var language in result)
+            {
+                _outputHelper.WriteLine($"{language.LanguageCode},{language.LanguageCode.GetName()}");
+            }
+        }
+
         [Fact]
         public void GetLanguages_HasLanguages_RandomLanguageExistWithValues()
         {

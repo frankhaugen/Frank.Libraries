@@ -63,7 +63,7 @@ namespace Frank.Libraries.Enums.Countries
         [Name("Galician")] [LocalName("Galego")] GLG = 50,
         [Name("Georgian")] [LocalName("ქართული")] GEO = 51,
         [Name("German")] [LocalName("Deutsch")] GER = 52,
-        [Name("Greek, Modern (1453–)")] [LocalName("ελληνικά")] GRE = 53,
+        [Name("Greek, Modern")] [LocalName("ελληνικά")] GRE = 53,
         [Name("Guarani")] [LocalName("Avañe'ẽ")] GRN = 54,
         [Name("Gujarati")] [LocalName("ગુજરાતી")] GUJ = 55,
         [Name("Haitian, Haitian Creole")] [LocalName("Kreyòl ayisyen")] HAT = 56,

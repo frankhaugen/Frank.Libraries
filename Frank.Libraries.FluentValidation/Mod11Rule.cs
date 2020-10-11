@@ -93,32 +93,32 @@ namespace FluentValidation
 
             int sisteSiffer = (int)char.GetNumericValue(value.Last());
 
-            return (getCheckDigit(value) == sisteSiffer, sisteSiffer);
+            return (GetCheckDigit(value) == sisteSiffer, sisteSiffer);
 
         }
 
-        private static int getCheckDigit(string number)
+        private static int GetCheckDigit(string number)
         {
             int lastIndex = number.Length - 1;
             int sum = 0;
 
             for (int i = 0; i < lastIndex; i++)
             {
-                sum += (int)char.GetNumericValue(number.ElementAt(i)) * getWeightNumber(i);
+                sum += (int)char.GetNumericValue(number.ElementAt(i)) * GetWeightNumber(i);
             }
 
             int remainder = sum % 11;
 
-            return getCheckDigitFromRemainder(remainder);
+            return GetCheckDigitFromRemainder(remainder);
         }
 
-        private static int getWeightNumber(int i)
+        private static int GetWeightNumber(int i)
         {
             return 7 - (i + 2) % 6;
         }
 
 
-        private static int getCheckDigitFromRemainder(int remainder)
+        private static int GetCheckDigitFromRemainder(int remainder)
         {
             switch (remainder)
             {

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using AutoBogus;
+using Bogus;
 using FluentAssertions;
 using Frank.Libraries.AI.LanguageDetection;
 using Frank.Libraries.Json;
+using Frank.Libraries.Ubl;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -50,6 +52,16 @@ namespace Frank.Libraries.Tests
             var result = json.FromJson<List<LanguageModel>>();
 
             _outputHelper.WriteLine(result.ToJson());
+        }
+
+        [Fact]
+        public void TestFakingInvoiceType()
+        {
+            var faker = new FakeItEasy.Fake<InvoiceType>().FakedObject;
+
+            var one = new Faker<InvoiceType>().Generate();
+
+            _outputHelper.WriteLine(faker.ToJson());
         }
     }
 }

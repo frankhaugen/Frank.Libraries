@@ -53,6 +53,7 @@ namespace Frank.Libraries.AI.LanguageDetection
                     }
                     catch
                     {
+                        // Suppress
                     }
                 }
             }
