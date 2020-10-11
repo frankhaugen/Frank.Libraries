@@ -33,7 +33,7 @@ namespace Frank.Libraries.Tests.LanguageDetection
         [InlineData("好的", LanguageCode.CHI)]
         [InlineData("Пожалуйста ", LanguageCode.RUS)]
         [InlineData("Wo ist es? ", LanguageCode.GER)]
-        public void Detect_TextIsEnglish_ReturnsEnglish(string text, LanguageCode expected)
+        public void Detect(string text, LanguageCode expected)
         {
             var detector = new LanguageDetectionService(new LanguageDetectionOptions());
             var result = detector.Detect(text);
@@ -52,19 +52,6 @@ namespace Frank.Libraries.Tests.LanguageDetection
             var result = detector.DetectAll(text);
 
             _outputHelper.WriteLine(result.ToJson());
-        }
-
-        [Fact]
-        public void Detect_TextIsChinese_ReturnsChinese()
-        {
-            var text = "汉堡包/漢堡包, 汉堡/漢堡";
-
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
-
-            var result = detector.Detect(text);
-
-            result.Should().NotBeNull();
-            result?.LanguageCode.Should().Be(LanguageCode.CHI);
         }
 
         [Fact]

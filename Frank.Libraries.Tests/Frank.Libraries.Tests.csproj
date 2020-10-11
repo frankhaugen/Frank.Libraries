@@ -39,6 +39,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Frank.Libraries.All\Frank.Libraries.All.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Benchmarks\Frank.Libraries.Benchmarks.csproj" />
     </ItemGroup>
 
     <ItemGroup>
