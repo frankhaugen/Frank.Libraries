@@ -5,6 +5,8 @@ using Bogus;
 using FluentAssertions;
 using Frank.Libraries.AI.LanguageDetection;
 using Frank.Libraries.Json;
+using Frank.Libraries.Testing.CodeRules;
+using Frank.Libraries.Testing.CodeRules.DefaultRules;
 using Frank.Libraries.Ubl;
 using Xunit;
 using Xunit.Abstractions;
@@ -21,6 +23,14 @@ namespace Frank.Libraries.Tests
         {
             _outputHelper = outputHelper;
         }
+
+        [Fact]
+        public void GetResultFromRules()
+        {
+            var code = AssertRule.AdheresToRule(new FrankCode(), typeof(Assert));
+            _outputHelper.WriteLine(code);
+        }
+
 
         [Fact]
         public void TestIdentify()
