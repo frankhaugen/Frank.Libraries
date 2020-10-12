@@ -101,7 +101,7 @@ namespace Frank.Libraries.Tests.LanguageDetection
 
             var result = detector.Detect(text);
 
-            result.LanguageCode.Should().NotBe(LanguageCode.INA);
+            result!.LanguageCode.Should().NotBe(LanguageCode.INA);
         }
 
         [Fact]

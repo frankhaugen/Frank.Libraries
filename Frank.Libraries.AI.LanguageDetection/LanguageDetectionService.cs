@@ -105,7 +105,7 @@ namespace Frank.Libraries.AI.LanguageDetection
                 for (var i = 0; ; i++)
                 {
                     var r = random.Next(ngrams.Count);
-                    _probabilityEngine.UpdateProbabilities(probs, ngrams[r], _options.Alpha.Value);
+                    _probabilityEngine.UpdateProbabilities(probs, ngrams[r], _options.Alpha!.Value);
 
                     if (i % 5 == 0)
                     {

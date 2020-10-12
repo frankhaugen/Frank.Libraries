@@ -13,15 +13,12 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="AutoFixture.AutoFakeItEasy" Version="4.14.0" />
-        <PackageReference Include="AutoFixture.Xunit" Version="4.14.0" />
         <PackageReference Include="ConsoleTableExt" Version="2.0.3" />
         <PackageReference Include="coverlet.msbuild" Version="2.9.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Divergic.Logging.Xunit" Version="3.5.1" />
-        <PackageReference Include="FakeItEasy" Version="6.2.1" />
         <PackageReference Include="FluentAssertions" Version="5.10.3" />
         <PackageReference Include="Microsoft.CodeCoverage" Version="16.7.1" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
