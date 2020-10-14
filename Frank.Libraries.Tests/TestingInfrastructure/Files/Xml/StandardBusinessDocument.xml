@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<StandardBusinessDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader">
+    <StandardBusinessDocumentHeader>
+        <HeaderVersion>deposit</HeaderVersion>
+        <DocumentIdentification>
+            <Standard>Agent</Standard>
+            <TypeVersion>convergence</TypeVersion>
+            <InstanceIdentifier>payment</InstanceIdentifier>
+            <Type>Unbranded Steel Towels</Type>
+            <MultipleType>false</MultipleType>
+            <CreationDateAndTime>2020-10-12T12:16:43.0582327+02:00</CreationDateAndTime>
+        </DocumentIdentification>
+        <Manifest>
+            <NumberOfItems>Greens</NumberOfItems>
+        </Manifest>
+    </StandardBusinessDocumentHeader>
+</StandardBusinessDocument>

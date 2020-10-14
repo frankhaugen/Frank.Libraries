@@ -34,6 +34,7 @@
         <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Logging\Frank.Libraries.Logging.csproj" />
         <ProjectReference Include="..\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.SBDH\Frank.Libraries.SBDH.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Security\Frank.Libraries.Security.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Ubl\Frank.Libraries.Ubl.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj" />
