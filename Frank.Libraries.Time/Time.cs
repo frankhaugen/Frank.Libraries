@@ -6,10 +6,10 @@ namespace Frank.Libraries
     /// <summary>
     /// A testable (injectable) implementation of time, using only UTC as a base, and operates in the concept of Y-W-D HHmmssfff
     /// </summary>
-    public class Time
+    public class Time : ITime
     {
-        private static Instant _testTime;
-        private Instant GetNow() => TestMode ? _testTime : Instant.Now;
+        private static WeekTime _testTime;
+        private WeekTime GetNow() => TestMode ? _testTime : WeekTime.Now;
 
         private void EnsureTestMode()
         {
@@ -62,7 +62,7 @@ namespace Frank.Libraries
         /// <summary>
         /// Is the time in test-mode
         /// </summary>
-        public Instant Now => GetNow();
+        public WeekTime Now => GetNow();
 
         /// <summary>
         /// Get the instant in a friendly string
@@ -84,14 +84,14 @@ namespace Frank.Libraries
         {
             EnsureTestMode();
             TestMode = false;
-            _testTime = Instant.Now;
+            _testTime = WeekTime.Now;
         }
 
         /// <summary>
         /// Sets the time to be used for testing purposes
         /// </summary>
         /// <exception cref="InvalidOperationException">Testmode is not activated</exception>
-        public void SetTestTime(Instant instant)
+        public void SetTestTime(WeekTime instant)
         {
             EnsureTestMode();
             _testTime = instant;

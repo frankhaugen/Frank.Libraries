@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Globalization;
 
+// ReSharper disable once CheckNamespace
 namespace Frank.Libraries
 {
     /// <summary>
     /// An instant of time to millisecond precision
     /// </summary>
-    public readonly struct Instant
+    public readonly struct WeekTime
     {
         /// <summary>
         /// The year
@@ -43,19 +44,21 @@ namespace Frank.Libraries
         /// </summary>
         public readonly int Millisecond;
 
-        /// <inheritdoc cref="Instant" />
-        public static readonly Instant Now = new Instant(DateTime.UtcNow);
+        /// <inheritdoc cref="WeekTime" />
+        public static readonly WeekTime Now = new WeekTime(DateTime.UtcNow);
 
-        /// <inheritdoc cref="Instant" />
-        public Instant(DateTime dateTime)
+        /// <inheritdoc cref="WeekTime" />
+        public WeekTime(DateTime dateTime)
         {
+            var calendar = new GregorianCalendar(GregorianCalendarTypes.TransliteratedEnglish);
+
             Year = dateTime.Year;
-            Week = new GregorianCalendar(GregorianCalendarTypes.TransliteratedEnglish).GetWeekOfYear(dateTime, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
-            Day = dateTime.Day;
+            Week = calendar.GetWeekOfYear(dateTime, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+            Day = dateTime.DayOfWeek.ToInt();
             Hour = dateTime.Hour + 1;
             Minute = dateTime.Minute + 1;
             Second = dateTime.Second + 1;
-            Millisecond = dateTime.TimeOfDay.Milliseconds;
+            Millisecond = dateTime.Millisecond;
         }
 
         /// <summary>
@@ -91,7 +94,7 @@ namespace Frank.Libraries
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        public static bool operator ==(Instant left, Instant right)
+        public static bool operator ==(WeekTime left, WeekTime right)
         {
             return left.Equals(right);
         }
@@ -102,7 +105,7 @@ namespace Frank.Libraries
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        public static bool operator !=(Instant left, Instant right)
+        public static bool operator !=(WeekTime left, WeekTime right)
         {
             return !(left == right);
         }

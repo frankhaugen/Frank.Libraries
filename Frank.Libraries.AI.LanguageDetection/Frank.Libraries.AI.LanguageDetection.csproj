@@ -35,9 +35,12 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Frank.Libraries.Enums" Version="1.99.3-preview27" />
-        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
         <PackageReference Include="System.Text.Json" Version="4.7.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
     </ItemGroup>
 
 </Project>
