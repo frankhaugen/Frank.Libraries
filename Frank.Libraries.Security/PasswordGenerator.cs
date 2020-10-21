@@ -1,6 +1,6 @@
-﻿using Frank.Libraries.Security.PasswordGeneration;
+﻿using System.Collections.Generic;
+using Frank.Libraries.Security.PasswordGeneration;
 using Frank.Libraries.Security.Shared;
-using System.Collections.Generic;
 
 namespace Frank.Libraries.Security
 {
@@ -32,7 +32,7 @@ namespace Frank.Libraries.Security
             _generatorHelper.AddCharacterVariantsToDictionary(characterVariants);
 
             var password = _generatorHelper.CreatePasswordString(DefaultPasswordLength);
-            Dispose();
+            ClearCharacters();
             return password;
         }
 
@@ -48,7 +48,7 @@ namespace Frank.Libraries.Security
             _generatorHelper.AddCharacterVariantsToDictionary(characterVariants);
 
             var password = _generatorHelper.CreatePasswordString(passwordLength);
-            Dispose();
+            ClearCharacters();
             return password;
         }
 
@@ -65,11 +65,11 @@ namespace Frank.Libraries.Security
             _characters.Add(CharacterVariant.Uppercase, CharacterLists.Uppercase);
 
             var password = _generatorHelper.CreatePasswordString(characterCount);
-            Dispose();
+            ClearCharacters();
             return password;
         }
 
-        private void Dispose()
+        private void ClearCharacters()
         {
             _characters.Clear();
         }

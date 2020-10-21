@@ -42,6 +42,6 @@ jobs:
         releases-only: true
         
     - name: Pack NuGet
-      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}-preview$GITHUB_RUN_NUMBER
-    - name: Push NuGets
-      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}-preview$GITHUB_RUN_NUMBER.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER
+    #- name: Push NuGets
+    #  run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json

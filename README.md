@@ -16,20 +16,15 @@
 # Frank.Libraries
 A set of libraries for .net standard 2.1
 
-### Under construction!
-This repository and it's nugets are rapidly changing with breaking changes all the time. Please report bugs!
-
 ## Important TODOs:
-- Create/improve GitHub Actions for:
-    - PRs
-    - Releases
-    - Manual actions
+- Increase test coverage
+- Create some docs
+- Add multitargeting for nugets, (.net5 compatibility)
 
 ## Background
 This started as a repo to collect my many "nice-to-haves" located in my many projects over the years, then I made some nugets for fun, then someone used the nugets... Now I have an "Open Source Project", and not just a repo of random code
 ___
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=frankhaugen_Frank.Libraries)
 
-
-## License
+## License scan result
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ffrankhaugen%2FFrank.Libraries.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ffrankhaugen%2FFrank.Libraries?ref=badge_large)

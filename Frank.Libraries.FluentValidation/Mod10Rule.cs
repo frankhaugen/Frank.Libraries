@@ -82,15 +82,11 @@ namespace FluentValidation
         /// <returns><see cref="ValueTuple">ValueTyple<bool, int>()</bool>)</see></returns>
         public static (bool IsValid, int ControlNumber) GetMod10(string? value)
         {
-
             if (string.IsNullOrWhiteSpace(value))
                 return (false, 0);
 
             var isValid = false;
             var controlNumber = 0;
-
-            if (string.IsNullOrWhiteSpace(value))
-                return (false, 0);
 
             foreach (var number in value.Reverse())
             {
