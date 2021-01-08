@@ -16,6 +16,9 @@
 # Frank.Libraries
 A set of libraries for .net standard 2.1
 
+# .net5 migration
+Very soon there will be a complete migration of this project to .net5 as it replaces .net standard anything above version 3.0.0 of this repo and it's nugets will be .net5
+
 ## Important TODOs:
 - Increase test coverage
 - Create some docs
