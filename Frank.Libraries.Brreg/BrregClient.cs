@@ -1,9 +1,9 @@
-﻿using Flurl;
+﻿using System;
+using System.Threading.Tasks;
+using Flurl;
 using Flurl.Http;
 using Frank.Libraries.Brreg.Models.Company;
 using Frank.Libraries.Brreg.Models.Responses.CompanyList;
-using System;
-using System.Threading.Tasks;
 
 namespace Frank.Libraries.Brreg
 {
@@ -22,7 +22,7 @@ namespace Frank.Libraries.Brreg
             if (registrationNumber <= 0)
                 throw new ArgumentException("Invalid value: 'organizationNumber'", nameof(registrationNumber));
 
-            if (!url.IsValid())
+            if (url is null)
                 throw new ArgumentException($"Bad url: '{url}'", nameof(url));
 
             return await url.GetJsonAsync<Company>();
@@ -40,7 +40,7 @@ namespace Frank.Libraries.Brreg
             url.QueryParams.Add("page", currentPage);
             url.QueryParams.Add("size", pageSize);
 
-            if (!url.IsValid())
+            if (url is null)
                 throw new ArgumentException($"Bad url: '{url}'", nameof(url));
 
             return await url.GetJsonAsync<CompaniesList>();
