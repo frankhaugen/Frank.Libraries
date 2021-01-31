@@ -53,7 +53,7 @@ namespace Frank.Libraries.Extensions
                 var values = new object[props.Length];
                 for (var i = 0; i < props.Length; i++)
                 {
-                    values[i] = props[i].GetValue(item, null);
+                    values[i] = props[i].GetValue(item, null)!;
                 }
 
                 tb.Rows.Add(values);

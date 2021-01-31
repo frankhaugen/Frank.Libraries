@@ -11,7 +11,7 @@ namespace Frank.Libraries.Json
 
         public static T FromJson<T>(this string source) where T : class
         {
-            return JsonSerializer.Deserialize<T>(source);
+            return JsonSerializer.Deserialize<T>(source)!;
         }
     }
 }

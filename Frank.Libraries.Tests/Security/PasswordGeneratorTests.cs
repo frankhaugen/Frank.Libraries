@@ -4,11 +4,16 @@ using FluentAssertions;
 using Frank.Libraries.Security;
 using Frank.Libraries.Security.Shared;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Security
 {
     public class PasswordGeneratorTests
     {
+        private readonly ITestOutputHelper _outputHelper;
+
+        public PasswordGeneratorTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+
         [Fact]
         public void GenerateManyPasswords_AllToBeUnique()
         {
@@ -88,6 +93,7 @@ namespace Frank.Libraries.Tests.Security
 
             // Assert
             result.Should().HaveLength(characterCount);
+            _outputHelper.WriteLine(result);
         }
     }
 }

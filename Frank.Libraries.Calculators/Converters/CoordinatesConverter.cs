@@ -5,7 +5,7 @@ namespace Frank.Libraries.Calculators.Converters
 {
     public class CoordinatesConverter
     {
-        public IPolarCoordinates CartesianToSpherical(ICartesianCoordinates coordinates)
+        public static IPolarCoordinates CartesianToSpherical(ICartesianCoordinates coordinates)
         {
             var result = new PolarCoordinates();
             if (coordinates.X == 0)

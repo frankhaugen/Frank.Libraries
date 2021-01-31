@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
+﻿using System;
+using FluentAssertions;
 using Frank.Libraries.Json;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Xml;
-using System;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -44,10 +44,10 @@ namespace Frank.Libraries.Tests.Xml
 
             // Act
             var result = xmlData.DeserializeObjectFromXml<XmlTestModel>();
-            _outputHelper.WriteLine(result.ToJson());
+            _outputHelper.WriteLine(result!.ToJson());
 
             // Assert
-            result.Salary.Should().Be(100000);
+            result?.Salary.Should().Be(100000);
         }
     }
 }

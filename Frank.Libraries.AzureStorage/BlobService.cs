@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Azure.Storage.Blobs;
 using Microsoft.Extensions.Options;
@@ -84,6 +87,36 @@ namespace Frank.Libraries.AzureStorage
             var blobClient = _blobContainerClient.GetBlobClient(blobName);
             var result = await blobClient.ExistsAsync();
             return result.GetRawResponse().Status < 400;
+        }
+
+        /// <summary>
+        /// Returns a list of blob-names matching the parameters
+        /// </summary>
+        /// <param name="searchParameters">What to search for, (wildcard not supported)</param>
+        /// <param name="ignoreCharacterSequence"></param>
+        /// <param name="stringComparison"></param>
+        /// <returns></returns>
+        public IEnumerable<string> Search(string? searchParameters = null, bool ignoreCharacterSequence = false, StringComparison stringComparison = StringComparison.InvariantCultureIgnoreCase)
+        {
+            var blobHierarchyItems = _blobContainerClient.GetBlobsByHierarchy();
+
+            if (blobHierarchyItems == null || !blobHierarchyItems.Any())
+                return new List<string>();
+
+            var blobNames = blobHierarchyItems.Select(blob => blob.Blob.Name).OrderBy(x => x);
+
+            if (!blobNames.Any())
+                return new List<string>();
+
+            if (string.IsNullOrWhiteSpace(searchParameters))
+                return blobNames;
+
+            var output = blobNames.Where(blobName => blobName.Contains(searchParameters, stringComparison)).ToList();
+
+            if (ignoreCharacterSequence)
+                output.AddRange(from blobName in blobNames let characters = blobName.ToLowerInvariant().ToCharArray() let searchCharacters = searchParameters.ToLowerInvariant().ToCharArray() let matchingCharacterCount = searchCharacters.Count(characters.Contains) where matchingCharacterCount == searchCharacters.Length select blobName);
+
+            return output;
         }
 
         /// <summary>

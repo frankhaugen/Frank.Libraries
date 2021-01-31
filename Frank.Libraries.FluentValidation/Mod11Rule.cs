@@ -83,15 +83,15 @@ namespace FluentValidation
         public static (bool IsValid, int ControlNumber) GetMod11(string? value)
         {
             // Fjern whitespace og punktum fra kontonummer (enkelte liker å formatere kontonummer med 1234.56.78903)
-            value = value.Replace(" ", "");
-            value = value.Replace(".", "");
+            value = value?.Replace(" ", "");
+            value = value?.Replace(".", "");
             // Skal inneholde 11 siffer og kun tall
-            if (value.Length != 11 || !int.TryParse(value, out var _))
+            if (value?.Length != 11 || !int.TryParse(value, out var _))
             {
                 return (false, 0);
             }
 
-            int sisteSiffer = (int)char.GetNumericValue(value.Last());
+            var sisteSiffer = (int)char.GetNumericValue(value.Last());
 
             return (GetCheckDigit(value) == sisteSiffer, sisteSiffer);
 

@@ -34,7 +34,7 @@ namespace Frank.Libraries.Tests.DependencyInjection
 
         private class Option : IOption
         {
-            public string Name { get; set; }
+            public string? Name { get; set; }
         }
 
         private class Service : IService
@@ -58,7 +58,7 @@ namespace Frank.Libraries.Tests.DependencyInjection
                 return _value;
             }
 
-            public string GetName() => _option.Name;
+            public string? GetName() => _option.Name;
         }
     }
 }

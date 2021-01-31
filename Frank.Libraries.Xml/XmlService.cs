@@ -24,7 +24,7 @@ namespace Frank.Libraries.Xml
             {
                 using TextReader xsdReader = new StringReader(xsd);
                 var schema = XmlSchema.Read(xsdReader, (sender, args) => { });
-                settings.Schemas.Add(schema);
+                settings.Schemas.Add(schema!);
             }
 
             settings.ValidationType = ValidationType.Schema;

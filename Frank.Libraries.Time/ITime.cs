@@ -1,4 +1,5 @@
-﻿namespace Frank.Libraries
+﻿// ReSharper disable once CheckNamespace
+namespace Frank.Libraries
 {
     public interface ITime
     {

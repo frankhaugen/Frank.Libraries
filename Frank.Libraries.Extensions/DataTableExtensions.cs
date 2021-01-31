@@ -56,7 +56,7 @@ namespace Frank.Libraries.Extensions
                         .ToArray());
                 // the aggregate used here is LATEST
                 // adjust the next line if you want (SUM, MAX, etc...)
-                aggRow[row[pivotColumn.ColumnName].ToString()] = row[pivotValue.ColumnName];
+                aggRow![row[pivotColumn.ColumnName].ToString() ?? string.Empty] = row[pivotValue.ColumnName];
             }
 
             return result;

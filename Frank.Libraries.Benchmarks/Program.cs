@@ -10,7 +10,7 @@ namespace Frank.Libraries.Benchmarks
     {
         public static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<Benchmark>(new DebugInProcessConfig().With(ConfigOptions.JoinSummary).With(ConfigOptions.DontOverwriteResults).WithArtifactsPath("Reports"));
+            var summary = BenchmarkRunner.Run<Benchmark>(new DebugInProcessConfig().WithOption(ConfigOptions.JoinSummary, true).WithOption(ConfigOptions.DontOverwriteResults, true).WithArtifactsPath("Reports"));
         }
     }
 

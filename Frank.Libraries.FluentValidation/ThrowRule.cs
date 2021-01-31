@@ -26,7 +26,7 @@ namespace Frank.Libraries.FluentValidation
             messageBuilder.AppendLine($"\tSource: {exception.Source}");
             messageBuilder.AppendLine($"\tMessage: {exception.Message}");
             messageBuilder.AppendLine($"\tStackTrace:");
-            foreach (var line in exception.StackTrace.Replace("\r", "").Split("\n"))
+            foreach (var line in exception.StackTrace?.Replace("\r", "").Split("\n")!)
             {
                 messageBuilder.AppendLine($"\t\t{line}");
             }

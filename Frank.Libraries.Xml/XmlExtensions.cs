@@ -51,19 +51,19 @@ namespace Frank.Libraries.Xml
         /// <typeparam name="T">An object to deserialize from a XML data string.</typeparam>
         /// <param name="xmlData">A string containing a serialized XML data do deserialize.</param>
         /// <returns>An object which is deserialized from the XML data string.</returns>
-        public static T DeserializeObjectFromXml<T>(this string xmlData) where T : class, new()
+        public static T? DeserializeObjectFromXml<T>(this string xmlData) where T : class, new()
         {
             // if a null instance of an object called this try to create a "default" instance for it with typeof(T),
             // this will throw an exception no useful constructor is found..
             var voidInstance = Activator.CreateInstance(typeof(T));
 
             // create an instance of a XmlSerializer class with the typeof(T)..
-            var xmlSerializer = new XmlSerializer(voidInstance.GetType());
+            var xmlSerializer = new XmlSerializer(voidInstance!.GetType());
 
             // construct a StringReader class instance of the given xmlData parameter to be deserialized by the XmlSerializer class instance..
             using var stringReader = new StringReader(xmlData);
             // return the "new" object deserialized via the XmlSerializer class instance..
-            return (T)xmlSerializer.Deserialize(stringReader);
+            return (T)xmlSerializer.Deserialize(stringReader)!;
         }
 
         // THIS: (C): VPKSoft, 2018, https://www.vpksoft.net
@@ -79,19 +79,10 @@ namespace Frank.Libraries.Xml
         {
             try
             {
-                // if a null instance of an object called this try to create a "default" instance for it with typeof(T),
-                // this will throw an exception no useful constructor is found..
                 var voidInstance = Activator.CreateInstance(typeof(T));
-
-                // create an instance of a XmlSerializer class with the typeof(T)..
-                var xmlSerializer = new XmlSerializer(voidInstance.GetType());
-
-                // construct a StringReader class instance of the given xmlData parameter to be deserialized by the XmlSerializer class instance..
-                using (var stringReader = new StringReader(xmlData))
-                {
-                    // return the "new" object deserialized via the XmlSerializer class instance..
-                    value = (T)xmlSerializer.Deserialize(stringReader);
-                }
+                var xmlSerializer = new XmlSerializer(voidInstance!.GetType());
+                using var stringReader = new StringReader(xmlData);
+                value = ((T)xmlSerializer.Deserialize(stringReader)!)!;
 
                 return true;
             }

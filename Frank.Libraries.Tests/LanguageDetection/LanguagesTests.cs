@@ -59,9 +59,9 @@ namespace Frank.Libraries.Tests.LanguageDetection
 
             // Assert
             result.Should().NotBeNull();
-            result.LanguageCode.Should().NotBeNull();
-            result.Frequency.Should().NotBeNull();
-            result.WordCount.Should().NotBeNull();
+            result?.LanguageCode.Should().NotBeNull();
+            result?.Frequency.Should().NotBeNull();
+            result?.WordCount.Should().NotBeNull();
         }
     }
 }

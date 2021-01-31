@@ -40,13 +40,13 @@ namespace Frank.Libraries.Xml
             {
                 File.WriteAllText(_filePath, new List<TEntity>().SerializeObjectToXml());
             }
-            _collection.AddRange(File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>());
+            _collection.AddRange(File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>()!);
         }
 
         public IEnumerable<TEntity> GetCollection()
         {
             if (!_collection.Any())
-                _collection.AddRange(File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>());
+                _collection.AddRange(File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>()!);
 
             return _collection;
         }

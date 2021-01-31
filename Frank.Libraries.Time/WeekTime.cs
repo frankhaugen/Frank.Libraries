@@ -73,10 +73,10 @@ namespace Frank.Libraries
         /// <param name="obj"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             // TODO: Create cases for types like datetime
-            return GetHashCode() == obj.GetHashCode();
+            return GetHashCode() == obj?.GetHashCode();
         }
 
         /// <summary>
