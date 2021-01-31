@@ -23,16 +23,16 @@ jobs:
       uses: codecov/codecov-action@v1.0.13
       with:
         fail_ci_if_error: true
-    - name: Sonarcloud
-      uses: spoland/dotnet-sonarcloud-analysis@v1.0
-      with:
-        project-key: frankhaugen_Frank.Libraries
-        sonar-host-url: https://sonarcloud.io
-        sonar-organization: frankhaugen
-        opencover-reports-paths: "**/*.opencover.xml"
-      env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Sonarcloud
+    #  uses: spoland/dotnet-sonarcloud-analysis@v1.0
+    #  with:
+    #    project-key: frankhaugen_Frank.Libraries
+    #    sonar-host-url: https://sonarcloud.io
+    #    sonar-organization: frankhaugen
+    #    opencover-reports-paths: "**/*.opencover.xml"
+    #  env:
+    #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Find Latest Tag
       id: find
