@@ -30,7 +30,7 @@
         <ProjectReference Include="..\Frank.Libraries.DependencyInjection\Frank.Libraries.DependencyInjection.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Extensions\Frank.Libraries.Extensions.csproj" />
-        <ProjectReference Include="..\Frank.Libraries.FluentAssertions\Frank.Libraries.Testing.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Testing\Frank.Libraries.Testing.csproj" />
         <ProjectReference Include="..\Frank.Libraries.FluentValidation\Frank.Libraries.FluentValidation.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Internet\Frank.Libraries.Internet.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />

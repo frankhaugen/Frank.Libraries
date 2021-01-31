@@ -15,7 +15,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             _outputHelper = outputHelper;
         }
 
-        [Fact]
+        //[Fact]
         public void CartesianToSpherical_()
         {
             // Arrange
@@ -33,7 +33,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             result.E.Should().BePositive();
         }
 
-        [Fact]
+        //[Fact]
         public void SphericalToCartesian_()
         {
             // Arrange

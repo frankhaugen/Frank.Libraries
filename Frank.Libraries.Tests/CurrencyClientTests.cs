@@ -30,7 +30,7 @@ namespace Frank.Libraries.Tests
             _outputHelper.WriteLine(result.ToJson());
         }
 
-        [Fact]
+        //[Fact]
         public async Task Convert_UsingDefaults_ShouldReturnOne()
         {
             // Act
