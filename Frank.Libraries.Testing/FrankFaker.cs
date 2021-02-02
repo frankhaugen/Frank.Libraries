@@ -4,7 +4,6 @@
     {
         public FrankFaker(int depth = 2)
         {
-
         }
 
         //public T Fake()
