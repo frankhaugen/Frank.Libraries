@@ -33,6 +33,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="FileLogging\" />
+        <Folder Include="FileLogging\" />
     </ItemGroup>
 </Project>

@@ -41,6 +41,7 @@
         <ProjectReference Include="..\Frank.Libraries.Time\Frank.Libraries.Time.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Ubl\Frank.Libraries.Ubl.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Mapper\Frank.Libraries.Mapper.csproj" />
     </ItemGroup>
 
     <ItemGroup>

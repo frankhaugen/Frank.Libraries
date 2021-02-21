@@ -64,6 +64,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Currency", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Converter", "Frank.Libraries.Converter\Frank.Libraries.Converter.csproj", "{867F3F06-E2CC-4FC4-AE06-41CC1B4EAFB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Mapper", "Frank.Libraries.Mapper\Frank.Libraries.Mapper.csproj", "{E60C5924-D566-48CB-A14B-3791D835F5CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -386,6 +388,18 @@ Global
 		{867F3F06-E2CC-4FC4-AE06-41CC1B4EAFB2}.Release|x64.Build.0 = Release|Any CPU
 		{867F3F06-E2CC-4FC4-AE06-41CC1B4EAFB2}.Release|x86.ActiveCfg = Release|Any CPU
 		{867F3F06-E2CC-4FC4-AE06-41CC1B4EAFB2}.Release|x86.Build.0 = Release|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Debug|x64.Build.0 = Debug|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Debug|x86.Build.0 = Debug|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Release|x64.ActiveCfg = Release|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Release|x64.Build.0 = Release|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Release|x86.ActiveCfg = Release|Any CPU
+		{E60C5924-D566-48CB-A14B-3791D835F5CC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
