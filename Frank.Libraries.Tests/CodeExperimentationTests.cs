@@ -29,7 +29,6 @@ namespace Frank.Libraries.Tests
             _outputHelper.WriteLine(code);
         }
 
-
         [Fact]
         public void TestIdentify()
         {

@@ -42,5 +42,4 @@
     <ItemGroup>
         <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
     </ItemGroup>
-
 </Project>

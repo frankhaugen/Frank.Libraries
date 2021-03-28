@@ -4,11 +4,13 @@
 namespace Frank.Libraries
 {
     /// <summary>
-    /// A testable (injectable) implementation of time, using only UTC as a base, and operates in the concept of Y-W-D HHmmssfff
+    /// A testable (injectable) implementation of time, using only UTC as a base, and operates in
+    /// the concept of Y-W-D HHmmssfff
     /// </summary>
     public class Time : ITime
     {
         private static WeekTime _testTime;
+
         private WeekTime GetNow() => TestMode ? _testTime : WeekTime.Now;
 
         private void EnsureTestMode()
@@ -35,7 +37,7 @@ namespace Frank.Libraries
         public int Day => GetNow().Day;
 
         /// <summary>
-        /// The hour of the 24-hour day 
+        /// The hour of the 24-hour day
         /// </summary>
         public int Hour => GetNow().Hour;
 
