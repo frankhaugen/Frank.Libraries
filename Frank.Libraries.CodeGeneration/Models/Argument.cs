@@ -10,10 +10,11 @@ namespace Frank.Libraries.CodeGeneration.Models
         public readonly bool IsNullable;
         public readonly string Name;
         public readonly bool IsParams;
+        public readonly bool IsExtension;
         public readonly bool HasDefaultValue;
         public readonly string DefaultValue;
 
-        public Argument(Type type, string? name = null, bool isNullable = false, bool isParams = false, string defaultValue = "")
+        public Argument(Type type, string? name = null, bool isNullable = false, bool isParams = false, bool isExtension = false, string defaultValue = "")
         {
             Type = type;
             Name = name.FallbackIfNull(nameof(Type).ToCamelcase());
@@ -21,12 +22,14 @@ namespace Frank.Libraries.CodeGeneration.Models
             HasDefaultValue = !string.IsNullOrWhiteSpace(defaultValue);
             DefaultValue = defaultValue;
             IsNullable = isNullable;
+            IsExtension = isExtension;
         }
 
         /// <inheritdoc/>
         public override string ToString()
         {
             return new StringBuilder()
+                .AppendIf("this ", IsExtension)
                 .AppendIf("params ", IsParams)
                 .Append(Type.FullName.FallbackIfNull(Type.Name))
                 .AppendIf("? ", IsNullable, " ")

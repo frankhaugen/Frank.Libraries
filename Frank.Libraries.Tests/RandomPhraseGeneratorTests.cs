@@ -1,0 +1,78 @@
+﻿using System.Diagnostics;
+using Frank.Libraries.Security;
+using Frank.Libraries.Security.Shared;
+using Xunit;
+using Xunit.Abstractions;
+
+namespace Frank.Libraries.Tests
+{
+    public class RandomPhraseGeneratorTests
+    {
+        private readonly ITestOutputHelper _outputHelper;
+
+        public RandomPhraseGeneratorTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+
+        [Fact]
+        public void GetRandomPhrase_StateUnderTest_ExpectedBehavior()
+        {
+            // Arrange
+            var randomPhraseGenerator = new RandomPhraseGenerator();
+            int length = 0;
+            bool capitalizeRandomWords = false;
+
+            // Act
+            var result = randomPhraseGenerator.GetRandomPhrase(
+                length,
+                capitalizeRandomWords);
+
+            // Assert
+            Assert.True(false);
+        }
+
+        [Fact]
+        public void GetAdjectiveNounPair_StateUnderTest_ExpectedBehavior()
+        {
+            // Arrange
+            var randomPhraseGenerator = new RandomPhraseGenerator();
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            for (int i = 0; i < 10; i++)
+            {
+                // Act
+                var result = randomPhraseGenerator.GetAdjectiveNounPair();
+
+                // Assert
+                _outputHelper.WriteLine(result);
+            }
+            stopwatch.Stop();
+            _outputHelper.WriteLine(stopwatch.Elapsed.TotalSeconds.ToString("R"));
+        }
+
+        [Fact]
+        public void GetStructuredRandomWordList_StateUnderTest_ExpectedBehavior()
+        {
+            // Arrange
+            var randomPhraseGenerator = new RandomPhraseGenerator();
+
+            // Act
+            var result = randomPhraseGenerator.GetStructuredRandomWordList(WordVariant.Adjective, WordVariant.Noun, WordVariant.Verb);
+
+            // Assert
+            _outputHelper.WriteLine(string.Join('\n', result));
+        }
+
+        [Fact]
+        public void GetRandomWordList_StateUnderTest_ExpectedBehavior()
+        {
+            // Arrange
+            var randomPhraseGenerator = new RandomPhraseGenerator();
+
+            // Act
+            var result = randomPhraseGenerator.GetRandomWordList(WordVariant.Adjective, WordVariant.Noun, WordVariant.Verb, WordVariant.Adjective, WordVariant.Noun);
+
+            // Assert
+            _outputHelper.WriteLine(string.Join('\n', result));
+        }
+    }
+}

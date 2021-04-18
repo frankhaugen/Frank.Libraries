@@ -2,8 +2,19 @@
 {
     public interface IPolarCoordinates
     {
-        public decimal R { get; set; }
-        public decimal P { get; set; }
-        public decimal E { get; set; }
+        /// <summary>
+        /// Distance
+        /// </summary>
+        public decimal Radius { get; set; }
+
+        /// <summary>
+        /// Inclination
+        /// </summary>
+        public decimal Inclination { get; set; }
+
+        /// <summary>
+        /// Azimuth
+        /// </summary>
+        public decimal Azimuth { get; set; }
     }
 }
