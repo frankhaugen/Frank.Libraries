@@ -14,7 +14,7 @@
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
         <PackageTags>Code, Generation, Generator, CSharp, Helper, Helpers</PackageTags>
-        <Description>Some helpful resources to </Description>
+        <Description>Some helpful resources to generate some very simple code-files. This uses a very simplistic approach</Description>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,7 +25,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.9.0" />
+      <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.10.0" />
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
     </ItemGroup>
 </Project>

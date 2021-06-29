@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
@@ -13,12 +13,12 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
-        <PackageTags>Extensions, MongoDb, DI, Dependency Injection, Json, Context, Repository, Random, Batch, dotnet, autofixture, enums</PackageTags>
-        <Description>The consolidation NuGet of multiple nugets, all aimed at making some QoL improvements, like .Batch() for IEnumerable Linq and an IOC json "dbcontext" and generic repository</Description>
+        <PackageTags>Extensions, List, Enumerable, Helpers</PackageTags>
+        <Description>Simply a bunch of extension methods that might help any developer</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="System.Text.Json" Version="5.0.0-rc.2.20475.5" />
+        <PackageReference Include="System.Text.Json" Version="5.0.2" />
     </ItemGroup>
 
     <ItemGroup>

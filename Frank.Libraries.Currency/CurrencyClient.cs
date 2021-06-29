@@ -28,10 +28,7 @@ namespace Frank.Libraries.Currency
             var baseRate = baseCurrency.Rates.GetRate(baseCurrency.Base);
             var targetRate = baseCurrency.Rates.GetRate(toCurrency);
 
-
-
             return default;
         }
-
     }
 }

@@ -13,7 +13,7 @@
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
         <PackageTags></PackageTags>
-        <Description></Description>
+        <Description>A fork of an existing repo that has been "dead" for ages. It's functionality is unclear at the moment</Description>
     </PropertyGroup>
 
     <ItemGroup>

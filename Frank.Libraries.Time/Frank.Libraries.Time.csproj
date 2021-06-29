@@ -14,13 +14,13 @@
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
         <PackageTags>Frank, Libraries, Time, Week, Date, Year, Calendar, Instant, Injectable</PackageTags>
-        <Description>A better injectable time</Description>
+        <Description>A better injectable time, and include "Frank Time" a week-based calendar concept (Beta)</Description>
         <NoWarn>CS8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Cronos" Version="0.7.0" />
-        <PackageReference Include="TimeZoneConverter.Posix" Version="2.2.0" />
+        <PackageReference Include="Cronos" Version="0.7.1" />
+        <PackageReference Include="TimeZoneConverter.Posix" Version="2.3.0" />
     </ItemGroup>
 
     <ItemGroup>

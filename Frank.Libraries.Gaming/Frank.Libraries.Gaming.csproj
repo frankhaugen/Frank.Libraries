@@ -1,8 +1,26 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>9.0</LangVersion>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+        <RepositoryType>Git</RepositoryType>
+        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
+        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageIcon>icon.png</PackageIcon>
+        <Authors>Frank R. Haugen</Authors>
+        <PackageTags></PackageTags>
+        <Description>Not very useful at the moment. The plan is to make a toolkit for gaming, and models also</Description>
+    </PropertyGroup>
 
+    <ItemGroup>
+        <None Include="..\icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
 </Project>

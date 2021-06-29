@@ -10,7 +10,6 @@ namespace Frank.Libraries.Gaming.Starfinder
     public class StarshipController
     {
         private readonly Models.Starship _ship;
-
         private Dictionary<Arc, int> _shields;
         private Dictionary<Arc, Dictionary<int, Mount>> _mounts;
         private int _hullPoints;
@@ -20,14 +19,7 @@ namespace Frank.Libraries.Gaming.Starfinder
             _ship = ship;
             _shields = new Dictionary<Arc, int> { { Arc.Forward, _ship.ShieldGenerator.ShieldPoints }, { Arc.Starboard, _ship.ShieldGenerator.ShieldPoints }, { Arc.Aft, _ship.ShieldGenerator.ShieldPoints }, { Arc.Port, _ship.ShieldGenerator.ShieldPoints } };
             _hullPoints = _ship.HitPoints;
-
             _mounts = new Dictionary<Arc, Dictionary<int, Mount>>();
-
-            foreach (var VARIABLE in _ship.)
-            {
-            }
-
-            _mounts.Add();
         }
 
         public int PilotingCheck()
@@ -38,14 +30,14 @@ namespace Frank.Libraries.Gaming.Starfinder
             return rollResult + piloting;
         }
 
-        public int Attack(CrewMember gunner, Arc arc, )
+        public int Attack(CrewMember gunner, Arc arc, RollResult rollResult)
         {
             if (!_mounts.ContainsKey(arc)) throw new ArgumentException("Attacks must be done with an arc that have mounts", nameof(arc));
             if (gunner.Role != Role.Gunner) throw new ArgumentException("Attacks can only be made by a gunner", nameof(gunner));
 
             var piloting = gunner.Character.Skills.SingleOrDefault(x => x.Name == SkillName.Piloting).Rank;
 
-            return rollResult + piloting;
+            return rollResult.Result + piloting;
         }
     }
 }

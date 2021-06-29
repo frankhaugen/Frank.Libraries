@@ -5,6 +5,16 @@
         <LangVersion>9.0</LangVersion>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
+        <RepositoryType>Git</RepositoryType>
+        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
+        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageIcon>icon.png</PackageIcon>
+        <Authors>Frank R. Haugen</Authors>
+        <PackageTags></PackageTags>
+        <Description>Not very useful at the moment. This is intended to become a collection of online resources that can come in handy</Description>
     </PropertyGroup>
 
     <ItemGroup>

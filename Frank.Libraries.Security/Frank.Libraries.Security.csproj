@@ -16,14 +16,14 @@
         <Description>Generate, hash passwords and check password against hashed password, in one very small library without any frills</Description>
     </PropertyGroup>
     <ItemGroup>
-      <None Remove="RandomPhraseGeneration\Resources\english-adjectives.txt" />
-      <None Remove="RandomPhraseGeneration\Resources\english-nouns.txt" />
-      <None Remove="RandomPhraseGeneration\Resources\english-verbs.txt" />
+        <None Remove="RandomPhraseGeneration\Resources\english-adjectives.txt" />
+        <None Remove="RandomPhraseGeneration\Resources\english-nouns.txt" />
+        <None Remove="RandomPhraseGeneration\Resources\english-verbs.txt" />
     </ItemGroup>
     <ItemGroup>
-      <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-adjectives.txt" />
-      <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-nouns.txt" />
-      <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-verbs.txt" />
+        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-adjectives.txt" />
+        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-nouns.txt" />
+        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-verbs.txt" />
     </ItemGroup>
 
     <ItemGroup>
@@ -34,7 +34,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0-rc.2.20475.5" />
+        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     </ItemGroup>
-
 </Project>

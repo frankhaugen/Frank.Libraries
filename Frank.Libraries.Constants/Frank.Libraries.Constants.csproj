@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -14,7 +14,7 @@
     <PackageIcon>icon.png</PackageIcon>
     <Authors>Frank R. Haugen</Authors>
     <PackageTags>Constants, Cards</PackageTags>
-    <Description>Constants that are very useful, like the special characters for playing cards so you can make an online multiplayer blackjack console game</Description>
+    <Description>Constants that are very useful, like the special characters for playing cards so you can make an online multiplayer blackjack game using just a terminal</Description>
   </PropertyGroup>
 
   <ItemGroup>

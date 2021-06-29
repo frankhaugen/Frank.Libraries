@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFramework>net5.0</TargetFramework>
+      <LangVersion>9.0</LangVersion>
+      <Nullable>enable</Nullable>
+      <IsPackable>true</IsPackable>
+      <RepositoryType>Git</RepositoryType>
+      <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
+      <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
+      <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+      <PackageIcon>icon.png</PackageIcon>
+      <Authors>Frank R. Haugen</Authors>
+      <PackageTags></PackageTags>
+      <Description>Not very useful at the moment, but is intended to become a helpful tool for accessing device information</Description>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DeviceDiscovery" Version="1.0.0" />
+    <PackageReference Include="DeviceId" Version="5.3.0" />
+    <PackageReference Include="DeviceIOControlLib" Version="0.1.6" />
+    <PackageReference Include="EasyNetwork" Version="1.0.6" />
+    <PackageReference Include="Exomia.Network.Linux" Version="1.7.2" />
+    <PackageReference Include="FrameworkAbstraction" Version="1.6.0" />
+    <PackageReference Include="H.Hooks" Version="1.4.6" />
+    <PackageReference Include="HardwareProviders.CPU" Version="2.0.0" />
+    <PackageReference Include="HardwareProviders.Standard" Version="2.0.1" />
+    <PackageReference Include="HIDDevices" Version="2.0.1" />
+    <PackageReference Include="hidlibrary" Version="3.3.40" />
+    <PackageReference Include="HidSharp" Version="2.1.0" />
+    <PackageReference Include="HumbleNetwork" Version="2014.11.12.1" />
+    <PackageReference Include="Iced" Version="1.12.0" />
+    <PackageReference Include="ILGPU" Version="0.10.1" />
+    <PackageReference Include="IPNetwork2" Version="2.5.327" />
+    <PackageReference Include="JoystickInput" Version="1.0.6" />
+    <PackageReference Include="LanExchange.Network" Version="1.0.0" />
+    <PackageReference Include="LibreHardwareMonitorLib" Version="0.8.7" />
+    <PackageReference Include="LowLevelControls" Version="1.2.0" />
+    <PackageReference Include="MGK.DeviceHelper" Version="1.2.2" />
+    <PackageReference Include="MiniDiagnostics" Version="1.0.0" />
+    <PackageReference Include="Network" Version="6.2.4.21" />
+    <PackageReference Include="Network.Bluetooth" Version="4.0.1803.22" />
+    <PackageReference Include="NetworkHelpers" Version="4.0.2" />
+    <PackageReference Include="OsInfo" Version="1.2.0" />
+    <PackageReference Include="OSVersionInfo" Version="1.0.0" />
+    <PackageReference Include="Platform.Hardware.Cpu" Version="0.1.0" />
+    <PackageReference Include="Process.NET" Version="1.0.8" />
+    <PackageReference Include="SecureBlackbox" Version="16.0.330" />
+    <PackageReference Include="WinUtilities" Version="0.7.11" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
+    <PackageReference Include="XInput.Wrapper" Version="0.3.1" />
+  </ItemGroup>
+
+</Project>

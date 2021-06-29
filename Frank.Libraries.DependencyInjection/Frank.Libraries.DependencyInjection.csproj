@@ -14,7 +14,7 @@
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
         <PackageTags>DI, Dependency, Injection, Dependency Injection</PackageTags>
-        <Description>A dependency injection solution based on some examples from YouTube and other places online</Description>
+        <Description>(Pre-Alpha) A dependency injection solution based on some examples from YouTube and other places online</Description>
     </PropertyGroup>
 
     <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30001.183
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31423.177
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Enums", "Frank.Libraries.Enums\Frank.Libraries.Enums.csproj", "{FBB47121-B19A-4545-A67E-186BF2FD438A}"
 EndProject
@@ -15,10 +15,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Tests", "Fr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B59B3D8F-E264-43C5-AC5D-B2C9D016A6FA}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		CodeMaid.config = CodeMaid.config
+		icon.png = icon.png
 		LICENSE = LICENSE
-		.github\workflows\pipeline.yml = .github\workflows\pipeline.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -35,8 +37,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Xml", "Frank.Libraries.Xml\Frank.Libraries.Xml.csproj", "{2E43031F-D5B0-4709-9F5C-CCA88B2CC8C7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Logging", "Frank.Libraries.Logging\Frank.Libraries.Logging.csproj", "{68FF5ED0-3399-4FAE-BDB4-132880B71C11}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.All", "Frank.Libraries.All\Frank.Libraries.All.csproj", "{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Testing", "Frank.Libraries.Testing\Frank.Libraries.Testing.csproj", "{1AAB8B6F-7345-4C25-BD6A-11570D705A3C}"
 EndProject
@@ -70,7 +70,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.IRC", "Fran
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.CodeGeneration", "Frank.Libraries.CodeGeneration\Frank.Libraries.CodeGeneration.csproj", "{EE54FEB7-A5E0-4A09-9E30-5C3B5BF966EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Gaming", "Frank.Libraries.Gaming\Frank.Libraries.Gaming.csproj", "{B248E23F-171A-4784-B572-C7A3735EC251}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Gaming", "Frank.Libraries.Gaming\Frank.Libraries.Gaming.csproj", "{B248E23F-171A-4784-B572-C7A3735EC251}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Machine", "Frank.Libraries.Machine\Frank.Libraries.Machine.csproj", "{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -226,18 +228,6 @@ Global
 		{68FF5ED0-3399-4FAE-BDB4-132880B71C11}.Release|x64.Build.0 = Release|Any CPU
 		{68FF5ED0-3399-4FAE-BDB4-132880B71C11}.Release|x86.ActiveCfg = Release|Any CPU
 		{68FF5ED0-3399-4FAE-BDB4-132880B71C11}.Release|x86.Build.0 = Release|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Debug|x64.Build.0 = Debug|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Debug|x86.Build.0 = Debug|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Release|x64.ActiveCfg = Release|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Release|x64.Build.0 = Release|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Release|x86.ActiveCfg = Release|Any CPU
-		{36CB8AD2-22F7-4E18-AC63-49B9F6A206AB}.Release|x86.Build.0 = Release|Any CPU
 		{1AAB8B6F-7345-4C25-BD6A-11570D705A3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1AAB8B6F-7345-4C25-BD6A-11570D705A3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAB8B6F-7345-4C25-BD6A-11570D705A3C}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -442,6 +432,18 @@ Global
 		{B248E23F-171A-4784-B572-C7A3735EC251}.Release|x64.Build.0 = Release|Any CPU
 		{B248E23F-171A-4784-B572-C7A3735EC251}.Release|x86.ActiveCfg = Release|Any CPU
 		{B248E23F-171A-4784-B572-C7A3735EC251}.Release|x86.Build.0 = Release|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Debug|x64.Build.0 = Debug|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Debug|x86.Build.0 = Debug|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Release|x64.ActiveCfg = Release|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Release|x64.Build.0 = Release|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Release|x86.ActiveCfg = Release|Any CPU
+		{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

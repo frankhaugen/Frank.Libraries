@@ -1,20 +1,20 @@
-﻿using CsvHelper;
-using CsvHelper.Configuration;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using CsvHelper;
+using CsvHelper.Configuration;
 
 namespace Frank.Libraries.Csv
 {
     public class CsvService<TEntity, TMap> where TEntity : class, new() where TMap : ClassMap<TEntity>
     {
-        private readonly CsvConfiguration _options;
+        public CsvOptions Options { get; }
 
         public string TemplateName() => $"{typeof(TEntity).Name} Template.csv";
 
-        public CsvService(CsvConfiguration options)
+        public CsvService(CsvOptions? options = null)
         {
-            _options = options;
+            Options = options ?? new CsvOptions();
         }
 
         public IEnumerable<TEntity> GetEnumerable(string csvString)
@@ -22,10 +22,7 @@ namespace Frank.Libraries.Csv
             var output = new List<TEntity>();
 
             using var reader = new StringReader(csvString);
-            using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
-            csv.Configuration.RegisterClassMap<TMap>();
-            csv.Configuration.Delimiter = _options.Delimiter;
-            csv.Configuration.HasHeaderRecord = _options.HasHeaders;
+            using var csv = new CsvReader(reader, GetCsvConfiguration());
 
             var records = csv.GetRecords<TEntity>();
             output.AddRange(records);
@@ -37,13 +34,15 @@ namespace Frank.Libraries.Csv
         {
             var fileStream = new MemoryStream();
             using (var writer = new StreamWriter(fileStream))
-            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            using (var csv = new CsvWriter(writer, GetCsvConfiguration()))
             {
-                csv.Configuration.Delimiter = delimiter;
                 csv.WriteRecords(new List<TEntity>());
             }
 
             return fileStream.ToArray();
         }
+
+        public CsvConfiguration GetCsvConfiguration() => new(CultureInfo.InvariantCulture)
+        { Delimiter = Options.Delimiter, HasHeaderRecord = Options.HasHeaders };
     }
 }

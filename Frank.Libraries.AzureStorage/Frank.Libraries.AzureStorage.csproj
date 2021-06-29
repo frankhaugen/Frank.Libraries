@@ -18,9 +18,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.Storage.Files.Shares" Version="12.5.0-preview.1" />
-        <PackageReference Include="Azure.Storage.Blobs" Version="12.7.0-preview.1" />
-        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0-rc.2.20475.5" />
+        <PackageReference Include="Azure.Storage.Files.Shares" Version="12.7.0" />
+        <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
     </ItemGroup>
 
     <ItemGroup>

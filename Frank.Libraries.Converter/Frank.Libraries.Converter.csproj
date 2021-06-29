@@ -13,8 +13,8 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
-        <PackageTags>Convert, Converter, Conversion, Type, Types, Data, DataType, Data Conversion</PackageTags>
-        <Description>Helpful tools for converting data</Description>
+        <PackageTags></PackageTags>
+        <Description>Useless at the moment</Description>
     </PropertyGroup>
 
     <ItemGroup>

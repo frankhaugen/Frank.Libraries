@@ -1,6 +1,6 @@
 ﻿namespace Frank.Libraries.Csv
 {
-    public class CsvConfiguration
+    public class CsvOptions
     {
         public string? Folder { get; set; } = "Data";
         public bool HasHeaders { get; set; }
