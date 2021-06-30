@@ -15,6 +15,7 @@
         <Authors>Frank R. Haugen</Authors>
         <PackageTags></PackageTags>
         <Description>Not very useful at the moment. The plan is to make a toolkit for gaming, and models also</Description>
+        <NoWarn>8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>

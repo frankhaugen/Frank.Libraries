@@ -4,6 +4,7 @@
         <LangVersion>9.0</LangVersion>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
+        <NoWarn>8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>

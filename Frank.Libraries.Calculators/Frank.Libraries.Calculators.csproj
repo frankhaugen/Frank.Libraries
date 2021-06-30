@@ -15,6 +15,7 @@
         <Authors>Frank R. Haugen</Authors>
         <PackageTags>Beer, Calculations, Gravity, Physics, Temperature, Units, Distance</PackageTags>
         <Description>A collections of different calculators and conversions like gravity of beer calculated based on temperature</Description>
+        <NoWarn>8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,7 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="DecimalMath.DecimalEx" Version="1.0.2" />
+        <PackageReference Include="DecimalMath.DecimalEx" Version="1.0.2" />
     </ItemGroup>
-
 </Project>

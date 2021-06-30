@@ -14,6 +14,7 @@
         <Authors>Frank R. Haugen</Authors>
         <PackageTags></PackageTags>
         <Description>A fork of an existing repo that has been "dead" for ages. It's functionality is unclear at the moment</Description>
+        <NoWarn>8618,8601,8600,8622</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>

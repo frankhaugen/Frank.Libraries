@@ -351,3 +351,4 @@ MigrationBackup/
 .ionide/
 
 # Rider
+/Frank.Libraries.Tests/coverage.opencover.xml
