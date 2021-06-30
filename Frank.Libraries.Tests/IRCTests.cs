@@ -3,29 +3,39 @@ using System.Net;
 using FluentAssertions;
 using Frank.Libraries.IRC;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests
 {
-    public class IRCTests
+    public class IRCTests : TestBase
     {
         private readonly IRC.IRC _irc;
 
-        public IRCTests() => _irc = new IRC.IRC(1024);
+        public IRCTests(ITestOutputHelper outputHelper) : base(outputHelper) => _irc = new IRC.IRC(1024);
 
-        //[Fact]
+        [Fact]
         public void Connect_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
-            IPAddress IP = IPAddress.Parse("127.0.0.1");
+            var ipAddress = IPAddress.Parse("127.0.0.1");
             var port = 6666;
 
-            // Act
-            var result = _irc.Connect(IP, port);
+            //var ipAddress = Dns.GetHostAddresses("irc.underworld.no").FirstOrDefault();
+            Output(ipAddress?.ToString() ?? "null");
 
-            _irc.Channels.FirstOrDefault();
-            _irc.Command.SendAway("Kessage");
+            // Act
+            var result = _irc.Connect(ipAddress, port);
+
+            //_irc.Login("webchat", new Nick() { Nickname = "testmike" });
+
+            var channels = _irc.Channels.ToArray();
+            Output(channels.FirstOrDefault());
+            //_irc.Message.ChannelMessageReceivedEvent += (sender, message) => Output(message.Message);
+
+            //_irc.Command.SendAway("testassage");
 
             // Assert
+
             result.Should().BeTrue();
         }
 
