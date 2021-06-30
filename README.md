@@ -14,18 +14,24 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=frankhaugen_Frank.Libraries&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=frankhaugen_Frank.Libraries)
 
 # Frank.Libraries
-A set of libraries for .net standard 2.1
+A set of libraries for .net
 
-# .net5 migration
-Very soon there will be a complete migration of this project to .net5 as it replaces .net standard anything above version 3.0.0 of this repo and it's nugets will be .net5
+# .net6 migration
+.net 6 will be suppoerted from day 1 when it's released to production in late 2021
 
 ## Important TODOs:
 - Increase test coverage
 - Create some docs
-- Add multitargeting for nugets, (.net5 compatibility)
+- Add actual functionality to newly added things
 
 ## Background
 This started as a repo to collect my many "nice-to-haves" located in my many projects over the years, then I made some nugets for fun, then someone used the nugets... Now I have an "Open Source Project", and not just a repo of random code
+___
+Big thanks to JetBrains for donating licenses to this project. ReSharper alone has improved so much in terms of productivity and code quality, but access to the whole plethora of tools is just next-level awesome
+
+![JetBrains Logo (Main) logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png)
+
+Have a look at their excellent portfolio of tools for developers here: [https://www.jetbrains.com/products/](https://www.jetbrains.com/products/)
 ___
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=frankhaugen_Frank.Libraries)
 
