@@ -31,4 +31,4 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Push NuGets
-      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
