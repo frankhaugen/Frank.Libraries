@@ -15,6 +15,7 @@
       <Authors>Frank R. Haugen</Authors>
       <PackageTags></PackageTags>
       <Description>Not very useful at the moment, but is intended to become a helpful tool for accessing device information</Description>
+      <NoWarn>1701</NoWarn>
   </PropertyGroup>
 
     <ItemGroup>
