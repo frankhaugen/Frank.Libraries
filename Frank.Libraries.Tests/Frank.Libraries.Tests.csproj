@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <LangVersion>9.0</LangVersion>
@@ -45,7 +45,6 @@
         <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Extensions\Frank.Libraries.Extensions.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Gaming\Frank.Libraries.Gaming.csproj" />
-        <ProjectReference Include="..\Frank.Libraries.Machine\Frank.Libraries.Machine.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Testing\Frank.Libraries.Testing.csproj" />
         <ProjectReference Include="..\Frank.Libraries.FluentValidation\Frank.Libraries.FluentValidation.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Internet\Frank.Libraries.Internet.csproj" />
@@ -68,6 +67,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Time\Generated\" />
+        <Folder Include="Time\Generated\" />
     </ItemGroup>
 </Project>
