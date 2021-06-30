@@ -136,7 +136,7 @@ namespace Frank.Libraries.Tests.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>();
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
-            var maxValue = 100;
+            var maxValue = 1000;
 
             // Act
             var result1 = passwordGeneratorHelper.GetRandom(maxValue);

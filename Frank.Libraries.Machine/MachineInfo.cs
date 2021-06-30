@@ -1,5 +1,4 @@
 ﻿using System;
-using H.Hooks;
 
 namespace Frank.Libraries.Machine
 {
@@ -20,24 +19,5 @@ namespace Frank.Libraries.Machine
         public bool Is64Bit() => Environment.Is64BitOperatingSystem;
 
         public TimeSpan Uptime() => TimeSpan.FromTicks(Environment.TickCount64);
-    }
-
-    public class Inputs
-    {
-        public void MonitorInput()
-        {
-            using var keyboardHook = new LowLevelKeyboardHook();
-            using var mouseHook = new LowLevelMouseHook();
-
-            keyboardHook.Start();
-            mouseHook.Start();
-
-            keyboardHook.Down += (sender, args) => Console.WriteLine(args.Keys);
-            mouseHook.Down += (sender, args) => Console.WriteLine(args.Keys);
-
-            do
-            {
-            } while (keyboardHook.IsStarted && mouseHook.IsStarted);
-        }
     }
 }

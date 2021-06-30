@@ -10,40 +10,22 @@ namespace Frank.Libraries.CodeGeneration.Generators
         {
             var w = new CodegenTextWriter();
 
-            var typesOverride = new List<string>();
-            typesOverride.Add("int");
-            typesOverride.Add("short");
-            typesOverride.Add("long");
-
-            var types = new List<string>();
-            types.Add("int");
-            //types.Add("uint");
-            types.Add("short");
-            //types.Add("ushort");
-            types.Add("long");
-            //types.Add("ulong");
-            types.Add("float");
-            types.Add("double");
-            types.Add("decimal");
-
-            var operators = new Dictionary<Operator, string>();
-            operators.Add(Operator.Add, "+");
-            operators.Add(Operator.Subtract, "-");
-            operators.Add(Operator.Multiply, "*");
-            operators.Add(Operator.Divide, "/");
-
+            var typesOverride = new List<string>
+            {
+                "int",
+                "short",
+                "long"
+            };
 
             w.WithCurlyBraces($"namespace {namespaceName}", () =>
             {
                 w.WithCurlyBraces($"public static class {className}", () =>
                 {
-                    foreach (var @operator in operators)
-                    //foreach (var type in types)
+                    foreach (var @operator in Operators)
                     {
                         w.WriteLine(w.NewLine);
                         w.WriteLine($"// {@operator.Key} ");
-                        //foreach (var @operator in operators)
-                        foreach (var type in types)
+                        foreach (var type in Types)
                         {
                             var returnType = type;
                             if (@operator.Key == Operator.Divide && typesOverride.Contains(type)) returnType = "decimal";
@@ -53,17 +35,38 @@ namespace Frank.Libraries.CodeGeneration.Generators
                 });
             });
 
-            if(saveToFile) w.SaveToFile(fileInfo!.FullName);
+            if (saveToFile) w.SaveToFile(fileInfo!.FullName);
 
             return w.GetContents();
         }
-    }
 
-    public enum Operator
-    {
-        Add,
-        Subtract,
-        Multiply,
-        Divide
+        private static List<string> Types => new()
+        {
+            "int",
+            //types.Add("uint");
+            "short",
+            //types.Add("ushort");
+            "long",
+            //types.Add("ulong");
+            "float",
+            "double",
+            "decimal"
+        };
+
+        private static Dictionary<Operator, string> Operators => new()
+        {
+            { Operator.Add, "+" },
+            { Operator.Subtract, "-" },
+            { Operator.Multiply, "*" },
+            { Operator.Divide, "/" }
+        };
+
+        private enum Operator
+        {
+            Add,
+            Subtract,
+            Multiply,
+            Divide
+        }
     }
 }
