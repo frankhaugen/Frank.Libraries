@@ -27,7 +27,7 @@ namespace Frank.Libraries.Tests.FluentValidation
         {
             // Arrange
             var validator = new Mod10LongValidator();
-            long number = 502114008060;
+            var number = 502114008060;
 
             // Act
             var result = validator.Validate(number);

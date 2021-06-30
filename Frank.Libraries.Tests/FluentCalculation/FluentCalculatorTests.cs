@@ -10,7 +10,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         public void Chain_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
-            int source = 0;
+            var source = 0;
 
             // Act
             var result = source.Add(10).Multiply(10).Divide(4).Add(25).Add(100).Subtract(50);
@@ -23,8 +23,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
         public void Add_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
-            int source = 1;
-            int value = 99;
+            var source = 1;
+            var value = 99;
 
             // Act
             var result = source.Add(value);
@@ -51,8 +51,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
         public void Add_StateUnderTest_ExpectedBehavior2()
         {
             // Arrange
-            double source = 49.5;
-            double value = 50.5;
+            var source = 49.5;
+            var value = 50.5;
 
             // Act
             var result = source.Add(value);

@@ -12,12 +12,12 @@ namespace Frank.Libraries.Tests
 
         public IRCTests() => _irc = new IRC.IRC(1024);
 
-        [Fact]
+        //[Fact]
         public void Connect_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
             IPAddress IP = IPAddress.Parse("127.0.0.1");
-            int port = 6666;
+            var port = 6666;
 
             // Act
             var result = _irc.Connect(IP, port);
@@ -34,7 +34,7 @@ namespace Frank.Libraries.Tests
         {
             // Arrange
             IPAddress IP = IPAddress.Parse("127.0.0.1");
-            int port = 6666;
+            var port = 6666;
             _irc.Connect(IP, port);
 
             // Act

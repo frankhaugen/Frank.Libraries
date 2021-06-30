@@ -30,7 +30,7 @@ namespace Frank.Libraries.Tests.Starfinder
                 }
             }},
             Maneuverability = Maneuverability.Good,
-            Pilot = new CrewMember() { Role = Role.Pilot },
+            Pilot = new CrewMember() { Role = Role.Pilot, Character = new Character() { Skills = new List<Skill>() { new Skill() { Name = SkillName.Piloting, Rank = 5 } } } },
             ShieldGenerator = new ShieldGenerator()
             {
                 Cost = 150,
@@ -56,9 +56,10 @@ namespace Frank.Libraries.Tests.Starfinder
         {
             // Arrange
             var starshipController = new StarshipController(_starship);
-            CrewMember gunner = null;
-            Arc arc = default(global::Frank.Libraries.Gaming.Starfinder.Models.Enums.Arc);
-            RollResult rollResult = null;
+            CrewMember gunner = new CrewMember() { Role = Role.Gunner, Character = new Character() { Skills = new List<Skill>() { new Skill() { Name = SkillName.Piloting, Rank = 5 } } } };
+            Arc arc = Arc.Turret;
+            //var rollResult = DiceRoller.RollDice((4, Dice.Cube));
+            var rollResult = new RollResult(Dice.Cube);
 
             // Act
             var result = starshipController.Attack(
@@ -67,7 +68,7 @@ namespace Frank.Libraries.Tests.Starfinder
                 rollResult);
 
             // Assert
-            Assert.True(false);
+            result.Should().BePositive();
         }
     }
 }

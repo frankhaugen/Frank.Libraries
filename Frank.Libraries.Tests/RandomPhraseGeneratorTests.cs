@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using FluentAssertions;
 using Frank.Libraries.Security;
 using Frank.Libraries.Security.Shared;
 using Xunit;
@@ -17,16 +18,14 @@ namespace Frank.Libraries.Tests
         {
             // Arrange
             var randomPhraseGenerator = new RandomPhraseGenerator();
-            int length = 0;
-            bool capitalizeRandomWords = false;
+            var length = 5;
+            var capitalizeRandomWords = false;
 
             // Act
-            var result = randomPhraseGenerator.GetRandomPhrase(
-                length,
-                capitalizeRandomWords);
+            var result = randomPhraseGenerator.GetRandomPhrase(length, capitalizeRandomWords);
 
             // Assert
-            Assert.True(false);
+            result.Should().NotBeNullOrWhiteSpace();
         }
 
         [Fact]
@@ -37,7 +36,7 @@ namespace Frank.Libraries.Tests
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
-            for (int i = 0; i < 10; i++)
+            for (var i = 0; i < 10; i++)
             {
                 // Act
                 var result = randomPhraseGenerator.GetAdjectiveNounPair();

@@ -73,7 +73,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var text = "HellØ Wårld!";
 
             stopwatch1.Start();
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 text.ToUpper();
             }
@@ -81,7 +81,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             _outputHelper.WriteLine(stopwatch1.Elapsed.TotalSeconds.ToString());
 
             stopwatch2.Start();
-            for (int i = 0; i < iterations; i++)
+            for (var i = 0; i < iterations; i++)
             {
                 text.ToLower();
             }
