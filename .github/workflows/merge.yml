@@ -22,7 +22,7 @@ jobs:
     - name: Codecoverage
       uses: codecov/codecov-action@v1.0.13
       with:
-        fail_ci_if_error: true
+        fail_ci_if_error: false
     #- name: Sonarcloud
     #  uses: spoland/dotnet-sonarcloud-analysis@v1.0
     #  with:
