@@ -2,7 +2,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Frank.Libraries.Calculators.Converters;
 using Frank.Libraries.CodeGeneration.Generators;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.CodeGeneration
@@ -25,10 +24,11 @@ namespace Frank.Libraries.Tests.CodeGeneration
             //sdkljøhn
         }
 
-        [Fact]
+        //[Fact]
         public async Task ReflectionTest()
         {
-            var methods = typeof(Frank.Libraries.Time).GetMethods().Where(x => x.IsPublic).Select(x => new {
+            var methods = typeof(Frank.Libraries.CodeGeneration.Generators.ConstantsGenerator).GetMethods().Where(x => x.IsPublic).Select(x => new
+            {
                 x.Name,
                 CallingConvention = x.CallingConvention.ToString(),
                 MethodImplementationFlags = x.GetMethodImplementationFlags().ToString(),
@@ -37,7 +37,8 @@ namespace Frank.Libraries.Tests.CodeGeneration
             });
             Output(methods.FirstOrDefault());
 
-            var defaultMembers = typeof(Frank.Libraries.Time).GetMembers().Select(x => new {
+            var defaultMembers = typeof(ConstantsGenerator).GetMembers().Select(x => new
+            {
                 x.Name,
                 MemberType = x.MemberType.ToString(),
             });

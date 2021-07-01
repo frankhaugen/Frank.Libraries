@@ -16,20 +16,28 @@ namespace Frank.Libraries.CodeGeneration.Extensions
             return source;
         }
 
-
         public static string Remove(this string source, string value) => source.Replace(value, "");
 
-        public static string FallbackIfEmpty(this string source, string value)
+        public static string Remove(this string source, params string[] values)
         {
-            if (string.IsNullOrWhiteSpace(source))
-            {
-                return value;
-            }
-
-            return source;
+            var temp = new string(source);
+            return values.Aggregate(temp, (current, value) => current.Remove(value));
         }
 
+        public static string FallbackIfEmpty(this string source, string value) =>
+            string.IsNullOrWhiteSpace(source)
+                ? value
+                : source;
+
         public static string ToSentenceCase(this string source) => Regex.Replace(source, "[a-z][A-Z]", m => $"{m.Value[0]} {char.ToLower(m.Value[1])}");
+
+        public static string ToNameCase(this string source) => source.ToPascalCase().Remove(" ", "\n", "\n\r", "\r", "\t");
+
+        public static string ToPascalCase(this string source) => source.ToTitleCase()
+                                                                       .Remove(" ")
+                                                                       .Remove("\t")
+                                                                       .Remove("\n");
+
         public static string ToTitleCase(this string source)
         {
             var sentenceCase = source.ToSentenceCase();

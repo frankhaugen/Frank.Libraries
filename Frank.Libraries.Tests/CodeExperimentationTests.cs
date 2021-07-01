@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.AI.LanguageDetection;
+using Frank.Libraries.IRC.Properties;
 using Frank.Libraries.Json;
 using Frank.Libraries.Testing.CodeRules;
 using Frank.Libraries.Testing.CodeRules.DefaultRules;
@@ -20,6 +23,15 @@ namespace Frank.Libraries.Tests
         public CodeExperimentationTests(ITestOutputHelper outputHelper)
         {
             _outputHelper = outputHelper;
+        }
+
+        [Fact]
+        public void GetResources()
+        {
+            var myResourceSet = Resources.ResourceManager.GetResourceSet(CultureInfo.CurrentCulture, true, true);
+            _outputHelper.WriteLine(myResourceSet.ToJson());
+
+            File.WriteAllText(Path.Combine("C:/", "temp", "resources.json"), myResourceSet.ToJson());
         }
 
         [Fact]
