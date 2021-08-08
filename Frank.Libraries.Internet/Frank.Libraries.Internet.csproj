@@ -4,7 +4,7 @@
         <TargetFramework>net5.0</TargetFramework>
         <LangVersion>9.0</LangVersion>
         <Nullable>enable</Nullable>
-        <IsPackable>false</IsPackable>
+        <IsPackable>true</IsPackable>
         <RepositoryType>Git</RepositoryType>
         <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
         <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
