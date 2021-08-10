@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
 using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.AI.LanguageDetection;
@@ -31,7 +30,7 @@ namespace Frank.Libraries.Tests
             var myResourceSet = Resources.ResourceManager.GetResourceSet(CultureInfo.CurrentCulture, true, true);
             _outputHelper.WriteLine(myResourceSet.ToJson());
 
-            File.WriteAllText(Path.Combine("C:/", "temp", "resources.json"), myResourceSet.ToJson());
+            //File.WriteAllText(, myResourceSet.ToJson());
         }
 
         [Fact]
