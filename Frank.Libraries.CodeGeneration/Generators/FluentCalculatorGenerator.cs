@@ -29,7 +29,15 @@ namespace Frank.Libraries.CodeGeneration.Generators
                         {
                             var returnType = type;
                             if (@operator.Key == Operator.Divide && typesOverride.Contains(type)) returnType = "decimal";
-                            w.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
+                            if (@operator.Key == Operator.PowerOf)
+                            {
+                                w.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
+                            }
+                            else
+                            {
+                                w.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
+
+                            }
                         }
                     }
                 });
@@ -58,7 +66,8 @@ namespace Frank.Libraries.CodeGeneration.Generators
             { Operator.Add, "+" },
             { Operator.Subtract, "-" },
             { Operator.Multiply, "*" },
-            { Operator.Divide, "/" }
+            { Operator.Divide, "/" },
+            {Operator.PowerOf, "*"}
         };
 
         private enum Operator
@@ -66,7 +75,9 @@ namespace Frank.Libraries.CodeGeneration.Generators
             Add,
             Subtract,
             Multiply,
-            Divide
+            Divide,
+            PowerOf,
+
         }
     }
 }

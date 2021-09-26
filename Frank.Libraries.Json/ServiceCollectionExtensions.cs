@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System.IO.Abstractions;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Frank.Libraries.Json
@@ -12,6 +13,7 @@ namespace Frank.Libraries.Json
         {
             services.Configure<JsonConfiguration>(configuration.GetSection(nameof(JsonConfiguration)));
             services.AddSingleton<IJsonContext<TEntity>, JsonContext<TEntity>>();
+            services.AddTransient<IFileSystem, FileSystem>();
         }
     }
 }

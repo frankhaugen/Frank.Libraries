@@ -30,17 +30,19 @@ namespace Frank.Libraries.Tests.LanguageDetection
         [Theory]
         [InlineData("My name is Frank, and I am a Norwegian", LanguageCode.ENG)]
         [InlineData("Mitt navn er Frank", LanguageCode.NOR)]
+        [InlineData("Midt navn er Frank", LanguageCode.DAN)]
         [InlineData("好的", LanguageCode.CHI)]
         [InlineData("Пожалуйста ", LanguageCode.RUS)]
         [InlineData("Wo ist es? ", LanguageCode.GER)]
         public void Detect(string text, LanguageCode expected)
         {
             var detector = new LanguageDetectionService(new LanguageDetectionOptions());
-            var result = detector.Detect(text);
+            var result = detector.Detect(text)!;
 
             result.Should().NotBeNull();
-            result?.LanguageCode.Should().Be(expected);
-            result?.Name.Should().Be(expected.GetName());
+            result.LanguageCode.Should().Be(expected);
+            result.Name.Should().Be(expected.GetName());
+            _outputHelper.WriteLine($"{result.LanguageCode}\t{result.Name}\t{result.Probability}");
         }
 
         [Fact]

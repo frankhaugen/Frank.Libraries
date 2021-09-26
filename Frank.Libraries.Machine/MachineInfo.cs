@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reactive.PlatformServices;
 using HidSharp;
+using NodaTime;
 
 namespace Frank.Libraries.Machine
 {
@@ -30,7 +30,7 @@ namespace Frank.Libraries.Machine
 
         public List<Device> GetDeviceList() => DeviceList.Local.GetAllDevices().ToList();
 
-        public DateTimeOffset GetSystemTime() => SystemClock.UtcNow;
+        public DateTimeOffset GetSystemTime() => SystemClock.Instance.GetCurrentInstant().ToDateTimeOffset();
     }
 
     public class DeviceInfo

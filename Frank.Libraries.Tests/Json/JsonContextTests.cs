@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.IO.Abstractions;
 using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.Json;
@@ -12,9 +13,13 @@ namespace Frank.Libraries.Tests.Json
     public class JsonContextTests
     {
         private const string TestFolder = "c:/tests";
+        //private readonly MockFileSystem _mockFileSystem;
+        private readonly IFileSystem _mockFileSystem;
 
         public JsonContextTests()
         {
+            _mockFileSystem = new FileSystem();
+
             if (!Directory.Exists(TestFolder))
             {
                 Directory.CreateDirectory(TestFolder);
@@ -23,7 +28,7 @@ namespace Frank.Libraries.Tests.Json
 
         private JsonContext<JsonTestModel> Setup(Guid sessionId)
         {
-            return new JsonContext<JsonTestModel>(Options.Create(new JsonConfiguration() { Folder = Path.Combine(TestFolder, sessionId.ToString()) }));
+            return new JsonContext<JsonTestModel>(Options.Create(new JsonConfiguration() { Folder = Path.Combine(TestFolder, sessionId.ToString()) }), _mockFileSystem);
         }
 
         void Teardown(Guid sessionId)
@@ -37,7 +42,10 @@ namespace Frank.Libraries.Tests.Json
                 fileInfo.Delete();
             }
 
-            directory.Delete();
+            if (directory.Exists)
+            {
+                directory.Delete();
+            }
         }
 
         [Fact]

@@ -1,13 +1,14 @@
-﻿using Microsoft.Extensions.Options;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.IO.Abstractions;
 using System.Linq;
+using Microsoft.Extensions.Options;
 
 namespace Frank.Libraries.Json
 {
     public class JsonContext<TEntity> : IJsonContext<TEntity> where TEntity : JsonEntity
     {
+        private readonly IFileSystem _fileSystem;
 
         private List<TEntity> _collection;
         private readonly List<TEntity> _tempCollection;
@@ -15,48 +16,60 @@ namespace Frank.Libraries.Json
         private readonly string _filePath;
         private bool _unsavedChanges;
 
-        public JsonContext(IOptions<JsonConfiguration> options)
+        public JsonContext(IOptions<JsonConfiguration> options, IFileSystem fileSystem)
         {
+            _fileSystem = fileSystem;
             _options = options!.Value;
             _collection = new List<TEntity>();
             _tempCollection = new List<TEntity>();
 
             if (string.IsNullOrWhiteSpace(_options.Folder))
             {
-                _options.Folder = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+                _options.Folder = _fileSystem.Path.Combine(_fileSystem.Directory.GetCurrentDirectory(), "Data");
             }
-            _filePath = Path.Combine(_options.Folder, typeof(TEntity).Name + ".json");
+            _filePath = _fileSystem.Path.Combine(_options.Folder, typeof(TEntity).Name + ".json");
             Setup();
         }
 
         private void Setup()
         {
-            if (!Directory.Exists(_options.Folder))
+            if (!_fileSystem.Directory.Exists(_options.Folder))
             {
-                Directory.CreateDirectory(_options.Folder!);
+                _fileSystem.Directory.CreateDirectory(_options.Folder!);
             }
 
-            if (!File.Exists(_filePath))
+            if (!_fileSystem.File.Exists(_filePath))
             {
-                File.WriteAllText(_filePath, new List<TEntity>().ToJson());
+                _fileSystem.File.WriteAllText(_filePath, new List<TEntity>().ToJson());
             }
-            _collection = File.ReadAllText(_filePath).FromJson<List<TEntity>>();
+            _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
+        }
+
+        public List<TEntity> GetList()
+        {
+            //if (!_collection.Any())
+            //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
+
+            //return _collection;
+            return _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
         }
 
         public IEnumerable<TEntity> GetCollection()
         {
-            if (!_collection.Any())
-                _collection = File.ReadAllText(_filePath).FromJson<List<TEntity>>();
+            //if (!_collection.Any())
+            //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
 
-            return _collection;
+            //return _collection;
+            return _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
         }
 
         public IQueryable<TEntity> GetQueryable()
         {
-            if (!_collection.Any())
-                _collection = File.ReadAllText(_filePath).FromJson<List<TEntity>>();
+            //if (!_collection.Any())
+            //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
 
-            return _collection.AsQueryable();
+            //return _collection.AsQueryable();
+            return _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>().AsQueryable();
         }
 
         public TEntity GetById(Guid id)
@@ -89,7 +102,7 @@ namespace Frank.Libraries.Json
 
             GetCollection();
             _collection.AddRange(_tempCollection);
-            File.WriteAllText(_filePath, _collection.ToJson());
+            _fileSystem.File.WriteAllText(_filePath, _collection.ToJson());
             _tempCollection.Clear();
 
             GetCollection();
