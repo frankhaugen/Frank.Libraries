@@ -20,6 +20,7 @@
 
     <ItemGroup>
         <PackageReference Include="Cronos" Version="0.7.1" />
+        <PackageReference Include="NodaTime" Version="3.0.6" />
         <PackageReference Include="TimeZoneConverter.Posix" Version="2.3.0" />
     </ItemGroup>
 

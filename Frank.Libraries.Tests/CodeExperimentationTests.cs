@@ -45,7 +45,7 @@ namespace Frank.Libraries.Tests
         {
             var decimalValue = "10,10";
             var decimalResult = Identify(decimalValue);
-            decimalResult.Should().BeOfType<TypeCode>();
+            // decimalResult.Should<TypeCode>().Be<TypeCode>()  .Should()..Should().BeOfType<TypeCode>();
 
             _outputHelper.WriteLine(AppDomain.CurrentDomain.FriendlyName);
         }
