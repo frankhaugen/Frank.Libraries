@@ -6,6 +6,7 @@ using Frank.Libraries.Extensions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Frank.Libraries.Calculators.Types;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -42,20 +43,18 @@ namespace Frank.Libraries.Tests.Extensions
         public void Pivot()
         {
             // Arrange
-            var items = CreateTestModels<JsonTestModel>();
+            var items = CreateTestModels<Currency.Currency>();
             var dataTable = items.ToDataTable();
 
             // Act
-            var result = dataTable.Pivot(dataTable.Columns[1], dataTable.Columns[2]);
+            var result = dataTable.Pivot(dataTable.Columns[1], dataTable.Columns[3]);
             var consoleTable = ConsoleTableBuilder.From(result);
             _outputHelper.WriteLine(consoleTable.Export().ToString());
 
             // Assert
             _faker.Name.Locale.Should().NotBeEmpty();
-            CreateTestModel();
         }
 
-        private TestDocument CreateTestModel() => new AutoFaker<TestDocument>().Generate();
         private List<T> CreateTestModels<T>(int count = 10) where T : class => new AutoFaker<T>().Generate(count);
     }
 }
