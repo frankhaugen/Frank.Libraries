@@ -1,18 +1,13 @@
-﻿namespace Frank.Libraries.Calculators.BeerCalculators
+﻿using Frank.Libraries.Calculators.Converters;
+
+namespace Frank.Libraries.Calculators.BeerCalculators
 {
     public class GravityCalculator
     {
-        private readonly UnitConverter _unitConverter;
-
-        public GravityCalculator()
-        {
-            _unitConverter = new UnitConverter();
-        }
-
         public decimal Calculate(decimal specificGravity, decimal temperature, decimal calibrationTemperature = 20.0m)
         {
-            var fahrenheitTemperature = _unitConverter.Temperature.CelsiusToFahrenheit(temperature);
-            var fahrenheitCalibrationTemperature = _unitConverter.Temperature.CelsiusToFahrenheit(calibrationTemperature);
+            var fahrenheitTemperature = TemperatureConverter.CelsiusToFahrenheit(temperature);
+            var fahrenheitCalibrationTemperature = TemperatureConverter.CelsiusToFahrenheit(calibrationTemperature);
 
             return CalculateFahrenheit(specificGravity, fahrenheitTemperature, fahrenheitCalibrationTemperature);
         }

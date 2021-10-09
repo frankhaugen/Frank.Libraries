@@ -3,7 +3,6 @@ using Bogus;
 using ConsoleTableExt;
 using FluentAssertions;
 using Frank.Libraries.Extensions;
-using Frank.Libraries.Testing.Models.Cars;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +42,7 @@ namespace Frank.Libraries.Tests.Extensions
         public void Pivot()
         {
             // Arrange
-            var items = CreateTestModels<Engine>();
+            var items = CreateTestModels<JsonTestModel>();
             var dataTable = items.ToDataTable();
 
             // Act

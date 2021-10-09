@@ -1,7 +1,4 @@
-﻿using FluentAssertions;
-using Frank.Libraries.Calculators.EuclideanCalculators;
-using Frank.Libraries.Calculators.Types;
-using Xunit;
+﻿using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Calculators.EuclideanCalculators

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 
-namespace Frank.Libraries.Mapper
+namespace Frank.Libraries.DependencyInjection
 {
     public class Mapper
     {

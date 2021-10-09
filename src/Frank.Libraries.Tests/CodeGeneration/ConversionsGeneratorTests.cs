@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
-using Frank.Libraries.Calculators.Converters;
-using Frank.Libraries.Calculators.FluentCalculation;
-using Frank.Libraries.CodeGeneration.Generators;
+﻿using System.IO;
 using Frank.Libraries.CodeGeneration.Generators.FuentCalculation;
 using Xunit;
 using Xunit.Abstractions;

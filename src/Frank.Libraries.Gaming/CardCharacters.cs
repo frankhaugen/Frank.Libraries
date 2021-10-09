@@ -1,4 +1,4 @@
-﻿namespace Frank.Libraries.Constants.Gaming.Cards
+﻿namespace Frank.Libraries.Gaming
 {
     public static class CardCharacters
     {

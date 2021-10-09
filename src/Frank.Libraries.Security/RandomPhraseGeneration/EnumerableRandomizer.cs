@@ -24,9 +24,7 @@ namespace Frank.Libraries.Security.RandomPhraseGeneration
             {
                 n--;
                 var k = RandomNumberGenerator.GetInt32(n + 1);
-                var value = shuffled[k];
-                shuffled[k] = shuffled[n];
-                shuffled[n] = value;
+                (shuffled[k], shuffled[n]) = (shuffled[n], shuffled[k]);
             }
             return shuffled;
         }

@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using Frank.Libraries.DependencyInjection;
 using Xunit;
 
 namespace Frank.Libraries.Tests
@@ -9,7 +10,7 @@ namespace Frank.Libraries.Tests
         public void Map_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
-            var mapper = new Mapper.Mapper();
+            var mapper = new Mapper();
             var source = new Person()
             {
                 Name = "Frank",

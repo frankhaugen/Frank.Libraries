@@ -1,6 +1,4 @@
-﻿using System;
-using System.Numerics;
-using DecimalMath;
+﻿using DecimalMath;
 using Frank.Libraries.Calculators.Types;
 
 namespace Frank.Libraries.Calculators.Converters

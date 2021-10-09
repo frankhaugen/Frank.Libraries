@@ -1,7 +1,5 @@
 ﻿using BenchmarkDotNet.Running;
 using Frank.Libraries.Tests.Benchmark.Calculators.FluentCalculators;
-using Frank.Libraries.Tests.Benchmark.Json;
-using Frank.Libraries.Tests.Benchmark.LanguageDetection;
 
 namespace Frank.Libraries.Tests.Benchmark
 {

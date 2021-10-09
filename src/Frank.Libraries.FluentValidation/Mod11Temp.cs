@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace Frank.Libraries.FluentValidation
+﻿namespace Frank.Libraries.FluentValidation
 {
     class Mod11Temp
     {

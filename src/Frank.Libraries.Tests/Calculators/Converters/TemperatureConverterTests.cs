@@ -16,7 +16,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var temperatureConverter = new TemperatureConverter();
 
             // Act
-            var result = temperatureConverter.FahrenheitToCelsius(temperature);
+            var result = TemperatureConverter.FahrenheitToCelsius(temperature);
 
             // Assert
             result.Should().Be(expected);
@@ -32,7 +32,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var temperatureConverter = new TemperatureConverter();
 
             // Act
-            var result = temperatureConverter.CelsiusToFahrenheit(temperature);
+            var result = TemperatureConverter.CelsiusToFahrenheit(temperature);
 
             // Assert
             result.Should().Be(expected);
@@ -48,7 +48,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var temperatureConverter = new TemperatureConverter();
 
             // Act
-            var result = temperatureConverter.CelsiusToKelvin(temperature);
+            var result = TemperatureConverter.CelsiusToKelvin(temperature);
 
             // Assert
             result.Should().Be(expected);
@@ -64,7 +64,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var temperatureConverter = new TemperatureConverter();
 
             // Act
-            var result = temperatureConverter.KelvinToCelsius(temperature);
+            var result = TemperatureConverter.KelvinToCelsius(temperature);
 
             // Assert
             result.Should().Be(expected);
@@ -80,7 +80,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var temperatureConverter = new TemperatureConverter();
 
             // Act
-            var result = temperatureConverter.FahrenheitToKelvin(temperature);
+            var result = TemperatureConverter.FahrenheitToKelvin(temperature);
 
             // Assert
             result.Should().Be(expected);
@@ -96,7 +96,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var temperatureConverter = new TemperatureConverter();
 
             // Act
-            var result = temperatureConverter.KelvinToFahrenheit(temperature);
+            var result = TemperatureConverter.KelvinToFahrenheit(temperature);
 
             // Assert
             result.Should().Be(expected);

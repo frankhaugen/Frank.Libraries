@@ -7,7 +7,6 @@ using System.Reflection;
 using AutoBogus;
 using AutoMapper;
 using FluentValidation;
-using Frank.Libraries.Calculators.Types;
 using Frank.Libraries.CodeGeneration.Extensions;
 using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.CodeGeneration.Models;

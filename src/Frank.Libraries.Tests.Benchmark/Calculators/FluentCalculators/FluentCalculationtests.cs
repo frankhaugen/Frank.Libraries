@@ -1,6 +1,5 @@
 using System;
 using BenchmarkDotNet.Attributes;
-using Frank.Libraries.Calculators.FluentCalculation;
 
 namespace Frank.Libraries.Tests.Benchmark.Calculators.FluentCalculators
 {

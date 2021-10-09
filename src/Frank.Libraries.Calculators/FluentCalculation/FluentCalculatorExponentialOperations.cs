@@ -1,4 +1,3 @@
-using Frank.Libraries.Calculators;
 using System;
  
 namespace Frank.Libraries.Calculators.FluentCalculation
