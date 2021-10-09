@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Globalization;
 using AutoBogus;
-using Frank.Libraries.AI.LanguageDetection;
 using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.IRC.Properties;
 using Frank.Libraries.Json;
+using Frank.Libraries.ML.LanguageDetection;
 using Xunit;
 using Xunit.Abstractions;
 

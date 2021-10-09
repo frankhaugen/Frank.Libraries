@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Frank.Libraries.AI.LanguageDetection
+namespace Frank.Libraries.ML.LanguageDetection
 {
     internal class ProbabilityEngine
     {

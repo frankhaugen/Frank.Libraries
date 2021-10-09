@@ -15,6 +15,7 @@
       <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
       <ProjectReference Include="..\Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj" />
     <ProjectReference Include="..\Frank.Libraries.AI.LanguageDetection\Frank.Libraries.AI.LanguageDetection.csproj" />
+    <ProjectReference Include="..\Frank.Libraries.ML.LanguageDetection\Frank.Libraries.ML.LanguageDetection.csproj" />
   </ItemGroup>
 
   <ItemGroup>

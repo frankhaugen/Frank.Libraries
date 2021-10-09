@@ -2,7 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Frank.Libraries.AI.LanguageDetection
+namespace Frank.Libraries.ML.LanguageDetection
 {
     internal class TextNormalizer
     {

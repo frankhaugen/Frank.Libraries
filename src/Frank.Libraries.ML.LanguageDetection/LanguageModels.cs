@@ -3,7 +3,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
-namespace Frank.Libraries.AI.LanguageDetection
+namespace Frank.Libraries.ML.LanguageDetection
 {
     public class LanguageModels
     {

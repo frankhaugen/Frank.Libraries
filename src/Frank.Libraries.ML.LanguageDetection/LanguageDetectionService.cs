@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Frank.Libraries.Enums.Countries;
 
-namespace Frank.Libraries.AI.LanguageDetection
+namespace Frank.Libraries.ML.LanguageDetection
 {
     public class LanguageDetectionService
     {

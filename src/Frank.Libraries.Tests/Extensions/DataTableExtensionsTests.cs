@@ -6,7 +6,6 @@ using Frank.Libraries.Extensions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using System.Collections.Generic;
 using System.Linq;
-using Frank.Libraries.Calculators.Types;
 using Xunit;
 using Xunit.Abstractions;
 

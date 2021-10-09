@@ -16,6 +16,8 @@
         <PackageTags>Language, Detection, Language Detection, ML, AI, Machine Learning, NLP, Ngram, Identification</PackageTags>
         <Description>This has it's roots, (not exactly a fork), in another non-maintained package, and has been conciderably re-factored for clean code and functionality</Description>
         <NoWarn>CS8618</NoWarn>
+        <AssemblyName>Frank.Libraries.ML.LanguageDetection</AssemblyName>
+        <RootNamespace>Frank.Libraries.ML.LanguageDetection</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

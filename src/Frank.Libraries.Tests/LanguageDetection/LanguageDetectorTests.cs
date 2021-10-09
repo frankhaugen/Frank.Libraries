@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
-using Frank.Libraries.AI.LanguageDetection;
 using Frank.Libraries.Enums.Countries;
 using Frank.Libraries.Enums.Extensions;
 using Frank.Libraries.Json;
+using Frank.Libraries.ML.LanguageDetection;
 using Xunit;
 using Xunit.Abstractions;
 

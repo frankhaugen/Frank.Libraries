@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using BenchmarkDotNet.Attributes;
-using Frank.Libraries.AI.LanguageDetection;
+using Frank.Libraries.ML.LanguageDetection;
 
 namespace Frank.Libraries.Tests.Benchmark.LanguageDetection
 {

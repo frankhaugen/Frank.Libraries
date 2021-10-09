@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Frank.Libraries.Enums.Countries;
 
-namespace Frank.Libraries.AI.LanguageDetection
+namespace Frank.Libraries.ML.LanguageDetection
 {
     public class LanguageModel
     {

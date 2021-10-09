@@ -1,7 +1,7 @@
 ﻿using Frank.Libraries.Enums.Countries;
 using Frank.Libraries.Enums.Extensions;
 
-namespace Frank.Libraries.AI.LanguageDetection
+namespace Frank.Libraries.ML.LanguageDetection
 {
     public class Language
     {
