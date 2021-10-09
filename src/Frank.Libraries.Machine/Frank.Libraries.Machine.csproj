@@ -36,7 +36,7 @@
         <PackageReference Include="IPNetwork2" Version="2.5.353" />
         <PackageReference Include="LibreHardwareMonitorLib" Version="0.8.8" />
         <PackageReference Include="Network" Version="6.2.5.23" />
-        <PackageReference Include="NodaTime" Version="3.0.6" />
+        <PackageReference Include="NodaTime" Version="3.0.7" />
         <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
         <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
     </ItemGroup>
