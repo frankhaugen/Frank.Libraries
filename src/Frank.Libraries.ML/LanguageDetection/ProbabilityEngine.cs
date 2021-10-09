@@ -5,11 +5,11 @@ namespace Frank.Libraries.ML.LanguageDetection
 {
     internal class ProbabilityEngine
     {
-        private readonly IReadOnlyList<LanguageModel> _languages;
+        private readonly IReadOnlyList<LanguageModel>? _languages;
         private readonly Dictionary<string, Dictionary<LanguageModel, double>> _wordLanguageProbabilities;
         private readonly LanguageDetectionOptions _options;
 
-        internal ProbabilityEngine(LanguageDetectionOptions options, IReadOnlyList<LanguageModel> languages, Dictionary<string, Dictionary<LanguageModel, double>> wordLanguageProbabilities)
+        internal ProbabilityEngine(LanguageDetectionOptions options, IReadOnlyList<LanguageModel>? languages, Dictionary<string, Dictionary<LanguageModel, double>> wordLanguageProbabilities)
         {
             _options = options;
             _languages = languages;

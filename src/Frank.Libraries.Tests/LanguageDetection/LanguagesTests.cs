@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using Frank.Libraries.Enums.Extensions;
 using Frank.Libraries.Extensions;

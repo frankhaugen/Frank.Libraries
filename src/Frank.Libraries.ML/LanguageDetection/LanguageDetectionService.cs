@@ -9,7 +9,7 @@ namespace Frank.Libraries.ML.LanguageDetection
     {
         private readonly LanguageDetectionOptions _options;
 
-        private readonly IReadOnlyList<LanguageModel> _languages;
+        private readonly IReadOnlyList<LanguageModel>? _languages;
         private readonly Dictionary<string, Dictionary<LanguageModel, double>> _wordLanguageProbabilities;
 
         private readonly NGramExtractor _nGramExtractor;

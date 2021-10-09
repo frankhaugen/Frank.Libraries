@@ -33,7 +33,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Libraries.AI.LanguageDetection\Frank.Libraries.AI.LanguageDetection.csproj" />
         <ProjectReference Include="..\Frank.Libraries.AutoFixture\Frank.Libraries.AutoFixture.csproj" />
         <ProjectReference Include="..\Frank.Libraries.AzureServiceBus\Frank.Libraries.AzureServiceBus.csproj" />
         <ProjectReference Include="..\Frank.Libraries.AzureStorage\Frank.Libraries.AzureStorage.csproj" />
@@ -50,7 +49,7 @@
         <ProjectReference Include="..\Frank.Libraries.Internet\Frank.Libraries.Internet.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Logging\Frank.Libraries.Logging.csproj" />
-        <ProjectReference Include="..\Frank.Libraries.ML.LanguageDetection\Frank.Libraries.ML.LanguageDetection.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.ML\Frank.Libraries.ML.csproj" />
         <ProjectReference Include="..\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb.csproj" />
         <ProjectReference Include="..\Frank.Libraries.SBDH\Frank.Libraries.SBDH.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Security\Frank.Libraries.Security.csproj" />
