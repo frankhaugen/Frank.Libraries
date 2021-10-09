@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using CodegenCS;
 
-namespace Frank.Libraries.CodeGeneration.Generators
+namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
 {
-    public class FluentCalculatorGenerator
+    public static class FluentCalculatorBasicOperationsGenerator
     {
-        public string Generate(string namespaceName, string className, FileInfo? fileInfo = null, bool saveToFile = true)
+        public static string Generate(string namespaceName = "Frank.Libraries.Calculators.FluentCalculation", string className = "FluentCalculatorBasicOperations")
         {
             var w = new CodegenTextWriter();
 
@@ -23,27 +22,21 @@ namespace Frank.Libraries.CodeGeneration.Generators
                 {
                     foreach (var @operator in Operators)
                     {
-                        w.WriteLine(w.NewLine);
                         w.WriteLine($"// {@operator.Key} ");
                         foreach (var type in Types)
                         {
                             var returnType = type;
                             if (@operator.Key == Operator.Divide && typesOverride.Contains(type)) returnType = "decimal";
-                            if (@operator.Key == Operator.PowerOf)
-                            {
-                                w.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
-                            }
                             else
                             {
-                                w.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
 
                             }
+                            w.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
                         }
+                        w.WriteLine(" ");
                     }
                 });
             });
-
-            if (saveToFile) w.SaveToFile(fileInfo!.FullName);
 
             return w.GetContents();
         }
@@ -66,8 +59,7 @@ namespace Frank.Libraries.CodeGeneration.Generators
             { Operator.Add, "+" },
             { Operator.Subtract, "-" },
             { Operator.Multiply, "*" },
-            { Operator.Divide, "/" },
-            {Operator.PowerOf, "*"}
+            { Operator.Divide, "/" }
         };
 
         private enum Operator

@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
+using System.Numerics;
 using FluentAssertions;
 using Frank.Libraries.Calculators.Converters;
+using Frank.Libraries.Calculators.FluentCalculation;
 using Frank.Libraries.Calculators.Types;
 using Xunit;
 using Xunit.Abstractions;
@@ -20,16 +22,16 @@ namespace Frank.Libraries.Tests.Calculators.Converters
         public void CartesianToSpherical_()
         {
             // Arrange
-            ICartesianCoordinates coordinates = new Vector3()
+            var coordinates = new CartesianCoordinates()
             {
-                X = 100.0m,
-                Y = 100.0m,
-                Z = 100.0m
+                X = (decimal)100.0,
+                Y = (decimal)100.0,
+                Z = (decimal)100.0
             };
 
             // Act
-            var result = CoordinatesConverter.CartesianToSpherical(coordinates);
-            var result2 = CoordinatesConverter.SphericalToCartesian(result);
+            var result = coordinates.ToPolar();
+            var result2 = result.ToCartesian();
 
             // Assert
             result2.X.Should().BeApproximately(coordinates.X, 0.05m);
@@ -44,7 +46,7 @@ namespace Frank.Libraries.Tests.Calculators.Converters
         public void SphericalToCartesian_()
         {
             // Arrange
-            IPolarCoordinates polarCoordinates = new PolarCoordinates()
+            var polarCoordinates = new PolarCoordinates()
             {
                 Azimuth = 0.7853981633974483096156608458m,
                 Inclination = 0.9553166181245092781638571022m,
@@ -62,31 +64,6 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             result2.Inclination.Should().BeApproximately(polarCoordinates.Inclination, 0.05m);
             result2.Azimuth.Should().BeApproximately(polarCoordinates.Azimuth, 0.05m);
             result2.Radius.Should().BeApproximately(polarCoordinates.Radius, 0.05m);
-        }
-
-        [Fact]
-        public void SpeedCheck()
-        {
-            var stopwatch1 = new Stopwatch();
-            var stopwatch2 = new Stopwatch();
-            var iterations = 1000 * 1000;
-            var text = "HellØ Wårld!";
-
-            stopwatch1.Start();
-            for (var i = 0; i < iterations; i++)
-            {
-                text.ToUpper();
-            }
-            stopwatch1.Stop();
-            _outputHelper.WriteLine(stopwatch1.Elapsed.TotalSeconds.ToString());
-
-            stopwatch2.Start();
-            for (var i = 0; i < iterations; i++)
-            {
-                text.ToLower();
-            }
-            stopwatch2.Stop();
-            _outputHelper.WriteLine(stopwatch2.Elapsed.TotalSeconds.ToString());
         }
     }
 }

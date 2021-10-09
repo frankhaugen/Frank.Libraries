@@ -7,7 +7,7 @@ namespace Frank.Libraries
     /// A testable (injectable) implementation of time, using only UTC as a base, and operates in
     /// the concept of Y-W-D HHmmssfff
     /// </summary>
-    public class Time : ITime
+    public class TimeStuff : ITime
     {
         private static WeekTime _testTime;
 

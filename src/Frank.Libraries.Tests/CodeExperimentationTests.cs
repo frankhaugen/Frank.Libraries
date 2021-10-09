@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
+using System.Text;
 using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.AI.LanguageDetection;
+using Frank.Libraries.Calculators;
+using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.IRC.Properties;
 using Frank.Libraries.Json;
+using Frank.Libraries.Extensions;
 using Frank.Libraries.Testing.CodeRules;
 using Frank.Libraries.Testing.CodeRules.DefaultRules;
+using MoreLinq.Extensions;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -22,6 +28,19 @@ namespace Frank.Libraries.Tests
         public CodeExperimentationTests(ITestOutputHelper outputHelper)
         {
             _outputHelper = outputHelper;
+        }
+
+        [Fact]
+        public void DecimalExtension()
+        {
+            decimal value = 33.3333333333333333333m;
+            _outputHelper.WriteLine(value.Pow(-1).ToString());
+        }
+
+        [Fact]
+        public void GetCultures()
+        {
+            _outputHelper.WriteLine(CultureEnumGenerator.Generate());
         }
 
         [Fact]

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using CodegenCS;
 using Frank.Libraries.CodeGeneration.Extensions;
 using Frank.Libraries.CodeGeneration.Models;

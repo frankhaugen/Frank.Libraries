@@ -1,29 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Frank.Libraries.Calculators.Converters;
 using Frank.Libraries.Calculators.FluentCalculation;
 using Frank.Libraries.CodeGeneration.Generators;
+using Frank.Libraries.CodeGeneration.Generators.FuentCalculation;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.CodeGeneration
 {
-    public class ConversionsGeneratorTests : TestBase
+    public class FluentCalculatorGeneratorTests : TestBase
     {
-        public ConversionsGeneratorTests(ITestOutputHelper outputHelper) : base(outputHelper)
+        public FluentCalculatorGeneratorTests(ITestOutputHelper outputHelper) : base(outputHelper)
         {
         }
 
-        [Fact]
-        public async Task GenerateTest()
-        {
-            var generator = new ConversionsGenerator();
-
-            var result = generator.Generate(typeof(CoordinatesConverter).Namespace, "PrimitiveConversions", null, false);
-
-            Output(result);
-        }
+        [Fact(Skip = "")] public void GenerateBasicOpertaionsFluentCalculator() => Output(new FileInfo(@"C:\repos\frankhaugen\Frank.Libraries\src\Frank.Libraries.Calculators\FluentCalculation\FluentCalculatorBasicOperations.cs"), FluentCalculatorBasicOperationsGenerator.Generate());
+        [Fact(Skip = "")] public void GenerateExponentialOpertaionsFluentCalculator() => Output(new FileInfo(@"C:\repos\frankhaugen\Frank.Libraries\src\Frank.Libraries.Calculators\FluentCalculation\FluentCalculatorExponentialOperations.cs"), FluentCalculatorExponentialOperationsGenerator.Generate());
+        [Fact(Skip = "")] public void GeneratePrimitiveConversions() => Output(new FileInfo(@"C:\repos\frankhaugen\Frank.Libraries\src\Frank.Libraries.Calculators\FluentCalculation\FluentCalculatorPrimitivesConversions.cs"),FluentCalculatorPrimitivesConversionsGenerator.Generate());
     }
 }

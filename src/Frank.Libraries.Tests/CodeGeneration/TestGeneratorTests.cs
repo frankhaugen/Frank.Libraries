@@ -17,7 +17,7 @@ namespace Frank.Libraries.Tests.CodeGeneration
         {
             var generator = new TestGenerator();
 
-            var result = generator.Generate(typeof(CoordinatesConverter).Namespace, typeof(Frank.Libraries.Time), new System.IO.DirectoryInfo("C:/repos/frankhaugen/Frank.Libraries/Frank.Libraries.Tests/Time/Generated"), true);
+            var result = generator.Generate(typeof(CoordinatesConverter).Namespace, typeof(Frank.Libraries.TimeStuff), new System.IO.DirectoryInfo("C:/repos/frankhaugen/Frank.Libraries/Frank.Libraries.Tests/Time/Generated"), true);
 
             Output(result);
 

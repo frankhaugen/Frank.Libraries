@@ -17,7 +17,7 @@ namespace Frank.Libraries.Extensions
         //        innerSelector,
         //        (e1, e2) => );
         //}
-
+        
         public static IEnumerable<IEnumerable<T>> Batch<T>(this IEnumerable<T> items, int maxItems = 256)
         {
             return items.Select((item, inx) => new { item, inx })

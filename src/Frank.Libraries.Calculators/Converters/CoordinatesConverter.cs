@@ -1,11 +1,13 @@
-﻿using DecimalMath;
+﻿using System;
+using System.Numerics;
+using DecimalMath;
 using Frank.Libraries.Calculators.Types;
 
 namespace Frank.Libraries.Calculators.Converters
 {
     public class CoordinatesConverter
     {
-        public static IPolarCoordinates CartesianToSpherical(ICartesianCoordinates coordinates)
+        public static PolarCoordinates CartesianToSpherical(CartesianCoordinates coordinates)
         {
             var result = new PolarCoordinates();
 
@@ -18,15 +20,17 @@ namespace Frank.Libraries.Calculators.Converters
             return result;
         }
 
-        public static ICartesianCoordinates SphericalToCartesian(IPolarCoordinates polarCoordinates)
+        public static CartesianCoordinates SphericalToCartesian(PolarCoordinates polarCoordinates)
         {
-            var result = new Vector3();
-
-            result.X = polarCoordinates.Radius * DecimalEx.Sin(polarCoordinates.Inclination) * DecimalEx.Cos(polarCoordinates.Azimuth);
-            result.Y = polarCoordinates.Radius * DecimalEx.Sin(polarCoordinates.Inclination) * DecimalEx.Sin(polarCoordinates.Azimuth);
-            result.Z = polarCoordinates.Radius * DecimalEx.Cos(polarCoordinates.Inclination);
+            var result = new CartesianCoordinates
+            {
+                X = polarCoordinates.Radius * DecimalEx.Sin(polarCoordinates.Inclination) * DecimalEx.Cos(polarCoordinates.Azimuth),
+                Y = polarCoordinates.Radius * DecimalEx.Sin(polarCoordinates.Inclination) * DecimalEx.Sin(polarCoordinates.Azimuth),
+                Z = polarCoordinates.Radius * DecimalEx.Cos(polarCoordinates.Inclination)
+            };
 
             return result;
         }
+
     }
 }

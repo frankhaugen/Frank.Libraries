@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.IO;
+using System.Text.Json;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests
@@ -8,6 +9,11 @@ namespace Frank.Libraries.Tests
         private readonly ITestOutputHelper _outputHelper;
 
         protected TestBase(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+
+        protected void Output(FileInfo fileInfo, string text)
+        {
+            File.WriteAllText(fileInfo.FullName, text);
+        }
 
         protected void Output(string text) => _outputHelper.WriteLine(text);
 
