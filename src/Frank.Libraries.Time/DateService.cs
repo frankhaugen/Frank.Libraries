@@ -1,16 +1,20 @@
-﻿using System;
-using NodaTime;
+﻿using NodaTime;
 
 namespace Frank.Libraries.Time
 {
-    public class DateService : TimeBaseService
+    public class DateService
     {
-        public DateService(IClock clock) : base(clock)
+        private readonly IClock _clock;
+
+        public DateService(IClock clock)
         {
+            _clock = clock;
         }
 
-        public DateTime GetDate() => Clock.GetCurrentInstant().ToDateTimeUtc().Date;
-        public int GetMonth() => Clock.GetCurrentInstant().ToDateTimeUtc().Month;
-        public int GetYear() => Clock.GetCurrentInstant().ToDateTimeUtc().Year;
+        public int Year => _clock.GetCurrentInstant().InUtc().Year;
+        public int Month => _clock.GetCurrentInstant().InUtc().Month;
+        public int Day => _clock.GetCurrentInstant().InUtc().Day;
+
+        public override string ToString() => $"{Year:0000}-{Month:00}-{Day:00}";
     }
 }

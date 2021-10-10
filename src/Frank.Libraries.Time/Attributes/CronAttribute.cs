@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Cronos;
 
 namespace Frank.Libraries.Time.Attributes
 {
@@ -7,14 +8,15 @@ namespace Frank.Libraries.Time.Attributes
     public class CronAttribute : ValidationAttribute
     {
         private const string DefaultErrorMessage = "The {0} field is not a valid cron -expression";
+        private readonly CronFormat _format;
 
-        public CronAttribute() : base(DefaultErrorMessage) { }
+        public CronAttribute(CronFormat format = CronFormat.IncludeSeconds) : base(DefaultErrorMessage) => _format = format;
 
+        /// <inheritdoc />
         public override bool IsValid(object value)
         {
-            var cron = value?.ToString();
-
-            return Utilities.CronUtilities.ExpressionIsValid(cron);
+            var cron = value.ToString();
+            return new CronService().IsValid(cron ?? "", _format);
         }
     }
 }

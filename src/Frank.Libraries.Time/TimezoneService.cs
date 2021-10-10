@@ -6,10 +6,13 @@ using NodaTime.Extensions;
 
 namespace Frank.Libraries.Time
 {
-    public class TimezoneService : TimeBaseService
+    public class TimezoneService
     {
-        public TimezoneService(IClock clock) : base(clock)
+        private readonly IClock _clock;
+
+        public TimezoneService(IClock clock)
         {
+            _clock = clock;
         }
 
         /// <summary>
@@ -22,7 +25,7 @@ namespace Frank.Libraries.Time
         /// Get a list of timezones that apply to a UTC offset
         /// </summary>
         /// <returns>A readomnly list of timezones</returns>
-        public IReadOnlyList<DateTimeZone> GetTimezones(Offset offset) => DateTimeZoneProviders.Tzdb.GetAllZones().Where(x => x.GetUtcOffset(Clock.GetCurrentInstant()).Minus(offset) == Offset.Zero).ToList();
+        public IReadOnlyList<DateTimeZone> GetTimezones(Offset offset) => DateTimeZoneProviders.Tzdb.GetAllZones().Where(x => x.GetUtcOffset(_clock.GetCurrentInstant()).Minus(offset) == Offset.Zero).ToList();
 
         /// <summary>
         /// Get a list of timezone names
@@ -41,7 +44,7 @@ namespace Frank.Libraries.Time
         /// </summary>
         /// <param name="ianaName"></param>
         /// <returns>Returnes a timezone or null</returns>
-        public DateTimeZone ParseTimeZone(string ianaName)
+        public DateTimeZone ParseTimezone(string ianaName)
         {
             if (DateTimeZoneProviders.Tzdb.GetZoneOrNull(ianaName) == null) throw new TimeZoneNotFoundException($"The timezone '{ianaName}' does not exist");
             var dateTimeZone = DateTimeZoneProviders.Tzdb.GetZoneOrNull(ianaName);
@@ -54,12 +57,16 @@ namespace Frank.Libraries.Time
         /// </summary>
         /// <param name="ianaName"></param>
         /// <returns>Returns a bool indicating timezone's exisitamce</returns>
-        public bool TimeZoneExist(string ianaName) => DateTimeZoneProviders.Tzdb.GetZoneOrNull(ianaName) != null;
+        public bool TimezoneExist(string ianaName) => DateTimeZoneProviders.Tzdb.GetZoneOrNull(ianaName) != null;
 
-        public ZonedDateTime NowZonedDateTime(DateTimeZone timeZone) => Clock.GetCurrentInstant().InZone(timeZone);
-        public ZonedDateTime NowZonedDateTime(string ianaTimezone) => Clock.GetCurrentInstant().InZone(DateTimeZoneProviders.Tzdb[ianaTimezone]);
-        public ZonedDateTime ToZonedDateTime(string ianaTimezone, DateTime dateTime) => Instant.FromDateTimeUtc(dateTime).InZone(DateTimeZoneProviders.Tzdb[ianaTimezone]);
-
+        /// <summary>
+        /// Gets the current system's timezone
+        /// </summary>
+        /// <returns></returns>
         public override string ToString() => GetSystemTimezone().ToString();
+
+
+
+
     }
 }

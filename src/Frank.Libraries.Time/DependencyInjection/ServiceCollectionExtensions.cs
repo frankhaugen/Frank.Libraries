@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NodaTime;
 
-namespace Frank.Libraries.Time.Extensions
+namespace Frank.Libraries.Time.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {

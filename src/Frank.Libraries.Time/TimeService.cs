@@ -1,21 +1,22 @@
-﻿using System;
-using NodaTime;
+﻿using NodaTime;
 
 namespace Frank.Libraries.Time
 {
-    public class TimeService : TimeBaseService
+    public class TimeService
     {
-        public TimeService(IClock clock) : base(clock)
+        private readonly IClock _clock;
+
+        public TimeService(IClock clock)
         {
+            _clock = clock;
         }
 
-        public Instant Instant() => Clock.GetCurrentInstant();
-        public DateTime DateTime() => Clock.GetCurrentInstant().ToDateTimeUtc();
-        public DateTimeOffset DateTimeOffset() => Clock.GetCurrentInstant().ToDateTimeOffset();
-        public TimeSpan TimeOfDay() => Clock.GetCurrentInstant().ToDateTimeUtc().TimeOfDay;
-        public ZonedDateTime ZonedDateTime() => Clock.GetCurrentInstant().InUtc();
-        public long UnixTime() => Clock.GetCurrentInstant().ToUnixTimeMilliseconds();
+        public int Hours => _clock.GetCurrentInstant().InUtc().Hour;
+        public int Minutes => _clock.GetCurrentInstant().InUtc().Minute;
+        public int Seconds => _clock.GetCurrentInstant().InUtc().Second;
+        public int Milliseconds => _clock.GetCurrentInstant().InUtc().Millisecond;
+        public long UnixTime => _clock.GetCurrentInstant().ToUnixTimeMilliseconds();
 
-        public override string ToString() => GetTimeString();
+        public override string ToString() => $"{Hours:00}:{Minutes:00}:{Seconds:00}.{Milliseconds:000}";
     }
 }

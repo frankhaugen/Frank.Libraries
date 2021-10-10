@@ -2,7 +2,7 @@
 
 // ReSharper disable InconsistentNaming
 
-namespace Frank.Libraries.Time.Utilities
+namespace Frank.Libraries.Time
 {
     public enum Culture
     {
