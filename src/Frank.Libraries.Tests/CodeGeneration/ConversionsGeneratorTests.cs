@@ -11,8 +11,8 @@ namespace Frank.Libraries.Tests.CodeGeneration
         {
         }
 
-        [Fact(Skip = "")] public void GenerateBasicOpertaionsFluentCalculator() => Output(new FileInfo(@"C:\repos\frankhaugen\Frank.Libraries\src\Frank.Libraries.Calculators\FluentCalculation\FluentCalculatorBasicOperations.cs"), FluentCalculatorBasicOperationsGenerator.Generate());
-        [Fact(Skip = "")] public void GenerateExponentialOpertaionsFluentCalculator() => Output(new FileInfo(@"C:\repos\frankhaugen\Frank.Libraries\src\Frank.Libraries.Calculators\FluentCalculation\FluentCalculatorExponentialOperations.cs"), FluentCalculatorExponentialOperationsGenerator.Generate());
-        [Fact(Skip = "")] public void GeneratePrimitiveConversions() => Output(new FileInfo(@"C:\repos\frankhaugen\Frank.Libraries\src\Frank.Libraries.Calculators\FluentCalculation\FluentCalculatorPrimitivesConversions.cs"),FluentCalculatorPrimitivesConversionsGenerator.Generate());
+        [Fact(Skip = "")] public void GenerateBasicOpertaionsFluentCalculator() => Output(new FileInfo(Path.Combine(SolutionDirectory().FullName, "Frank.Libraries.Calculators", "FluentCalculation", "FluentCalculatorBasicOperations.cs")), FluentCalculatorBasicOperationsGenerator.Generate());
+        [Fact(Skip = "")] public void GenerateExponentialOpertaionsFluentCalculator() => Output(new FileInfo(Path.Combine(SolutionDirectory().FullName, "Frank.Libraries.Calculators", "FluentCalculation", "FluentCalculatorExponentialOperations.cs")), FluentCalculatorExponentialOperationsGenerator.Generate());
+        [Fact(Skip = "")] public void GeneratePrimitiveConversions() => Output(new FileInfo(Path.Combine(SolutionDirectory().FullName, "Frank.Libraries.Calculators", "FluentCalculation", "FluentCalculatorPrimitivesConversions.cs")), FluentCalculatorPrimitivesConversionsGenerator.Generate());
     }
 }

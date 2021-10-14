@@ -12,15 +12,17 @@ namespace Frank.Libraries.CodeGeneration.Generators
             var writer = new CodegenTextWriter();
             var cultures = CultureInfo.GetCultures(CultureTypes.NeutralCultures).DistinctBy(x => x.TwoLetterISOLanguageName);
 
+            writer.WriteLine("using System.ComponentModel;");
+            writer.WriteLine(" // ReSharper disable InconsistentNaming");
+            writer.WriteLine(" ");
+
             writer.WithCurlyBraces($"namespace {namespaceName.ToNameCase()}", () =>
             {
                 writer.WithCurlyBraces($"public enum Culture", () =>
                 {
                     foreach (var culture in cultures)
                     {
-                        writer.WriteLine($"/// <summary>");
-                        writer.WriteLine($"/// {culture.EnglishName}");
-                        writer.WriteLine($"/// </summary>");
+                        writer.WriteLine($"/// <summary> {culture.EnglishName} </summary>");
                         writer.WriteLine($"[Description(\"{culture.EnglishName}\")]");
                         writer.WriteLine($"{culture.TwoLetterISOLanguageName.ToUpperInvariant()},");
                         writer.WriteLine();
