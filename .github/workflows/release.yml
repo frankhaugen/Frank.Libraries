@@ -23,6 +23,7 @@ jobs:
         releases-only: true
         
     - name: Pack NuGet
+      working-directory: src
       run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}
     
     - uses: AButler/upload-release-assets@v2.0
@@ -31,4 +32,6 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Push NuGets
+      working-directory: src
       run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+
