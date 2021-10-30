@@ -8,6 +8,19 @@ namespace Frank.Libraries.Time
 {
     public class CronService
     {
+        private readonly Culture _defaultCulture;
+        private readonly Options _options;
+
+        public CronService(Culture defaultCulture = Culture.IV) => _defaultCulture = defaultCulture;
+
+        private Options GetOptions() => new Options()
+        {
+            DayOfWeekStartIndexZero = true,
+            Use24HourTimeFormat = true,
+            Verbose = true,
+            Locale = _defaultCulture.ToString().ToLowerInvariant()
+        };
+
         /// <summary>
         /// Checks if the expression is valid Cron
         /// </summary>
@@ -81,12 +94,7 @@ namespace Frank.Libraries.Time
         public string GetDescription(CronExpression expression, Culture culture = Culture.IV) => GetCronExpressionDescription(expression.ToString(), culture);
 
         private static string GetCronExpressionDescription(string expression, Culture culture) =>
-            ExpressionDescriptor.GetDescription(expression, new Options()
-            {
-                DayOfWeekStartIndexZero = false,
-                Use24HourTimeFormat = true,
-                Locale = culture.ToString().ToLowerInvariant()
-            });
+            ExpressionDescriptor.GetDescription(expression, new Options());
 
         private static CronExpression ParseExpression(string expression, CronFormat format) => CronExpression.Parse(expression, format);
 

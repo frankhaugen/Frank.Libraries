@@ -5,935 +5,935 @@ namespace Frank.Libraries.Enums.Countries
 {
     public enum Culture
     {
-        /// <summary> Invariant Language (Invariant Country)) </summary>
+        /// <summary> Invariant Language (Invariant Country) </summary>
         [Description("Invariant Language (Invariant Country)")]
         IV,
 
-        /// <summary> Afar) </summary>
+        /// <summary> Afar </summary>
         [Description("Afar")]
         AA,
 
-        /// <summary> Afrikaans) </summary>
+        /// <summary> Afrikaans </summary>
         [Description("Afrikaans")]
         AF,
 
-        /// <summary> Aghem) </summary>
+        /// <summary> Aghem </summary>
         [Description("Aghem")]
         AGQ,
 
-        /// <summary> Akan) </summary>
+        /// <summary> Akan </summary>
         [Description("Akan")]
         AK,
 
-        /// <summary> Amharic) </summary>
+        /// <summary> Amharic </summary>
         [Description("Amharic")]
         AM,
 
-        /// <summary> Arabic) </summary>
+        /// <summary> Arabic </summary>
         [Description("Arabic")]
         AR,
 
-        /// <summary> Mapuche) </summary>
+        /// <summary> Mapuche </summary>
         [Description("Mapuche")]
         ARN,
 
-        /// <summary> Assamese) </summary>
+        /// <summary> Assamese </summary>
         [Description("Assamese")]
         AS,
 
-        /// <summary> Asu) </summary>
+        /// <summary> Asu </summary>
         [Description("Asu")]
         ASA,
 
-        /// <summary> Asturian) </summary>
+        /// <summary> Asturian </summary>
         [Description("Asturian")]
         AST,
 
-        /// <summary> Azerbaijani) </summary>
+        /// <summary> Azerbaijani </summary>
         [Description("Azerbaijani")]
         AZ,
 
-        /// <summary> Bashkir) </summary>
+        /// <summary> Bashkir </summary>
         [Description("Bashkir")]
         BA,
 
-        /// <summary> Basaa) </summary>
+        /// <summary> Basaa </summary>
         [Description("Basaa")]
         BAS,
 
-        /// <summary> Belarusian) </summary>
+        /// <summary> Belarusian </summary>
         [Description("Belarusian")]
         BE,
 
-        /// <summary> Bemba) </summary>
+        /// <summary> Bemba </summary>
         [Description("Bemba")]
         BEM,
 
-        /// <summary> Bena) </summary>
+        /// <summary> Bena </summary>
         [Description("Bena")]
         BEZ,
 
-        /// <summary> Bulgarian) </summary>
+        /// <summary> Bulgarian </summary>
         [Description("Bulgarian")]
         BG,
 
-        /// <summary> Bamanankan) </summary>
+        /// <summary> Bamanankan </summary>
         [Description("Bamanankan")]
         BM,
 
-        /// <summary> Bangla) </summary>
+        /// <summary> Bangla </summary>
         [Description("Bangla")]
         BN,
 
-        /// <summary> Tibetan) </summary>
+        /// <summary> Tibetan </summary>
         [Description("Tibetan")]
         BO,
 
-        /// <summary> Breton) </summary>
+        /// <summary> Breton </summary>
         [Description("Breton")]
         BR,
 
-        /// <summary> Bodo) </summary>
+        /// <summary> Bodo </summary>
         [Description("Bodo")]
         BRX,
 
-        /// <summary> Bosnian) </summary>
+        /// <summary> Bosnian </summary>
         [Description("Bosnian")]
         BS,
 
-        /// <summary> Blin) </summary>
+        /// <summary> Blin </summary>
         [Description("Blin")]
         BYN,
 
-        /// <summary> Catalan) </summary>
+        /// <summary> Catalan </summary>
         [Description("Catalan")]
         CA,
 
-        /// <summary> Chakma) </summary>
+        /// <summary> Chakma </summary>
         [Description("Chakma")]
         CCP,
 
-        /// <summary> Chechen) </summary>
+        /// <summary> Chechen </summary>
         [Description("Chechen")]
         CE,
 
-        /// <summary> Cebuano) </summary>
+        /// <summary> Cebuano </summary>
         [Description("Cebuano")]
         CEB,
 
-        /// <summary> Chiga) </summary>
+        /// <summary> Chiga </summary>
         [Description("Chiga")]
         CGG,
 
-        /// <summary> Cherokee) </summary>
+        /// <summary> Cherokee </summary>
         [Description("Cherokee")]
         CHR,
 
-        /// <summary> Kurdish) </summary>
+        /// <summary> Kurdish </summary>
         [Description("Kurdish")]
         KU,
 
-        /// <summary> Corsican) </summary>
+        /// <summary> Corsican </summary>
         [Description("Corsican")]
         CO,
 
-        /// <summary> Czech) </summary>
+        /// <summary> Czech </summary>
         [Description("Czech")]
         CS,
 
-        /// <summary> Church Slavic) </summary>
+        /// <summary> Church Slavic </summary>
         [Description("Church Slavic")]
         CU,
 
-        /// <summary> Welsh) </summary>
+        /// <summary> Welsh </summary>
         [Description("Welsh")]
         CY,
 
-        /// <summary> Danish) </summary>
+        /// <summary> Danish </summary>
         [Description("Danish")]
         DA,
 
-        /// <summary> Taita) </summary>
+        /// <summary> Taita </summary>
         [Description("Taita")]
         DAV,
 
-        /// <summary> German) </summary>
+        /// <summary> German </summary>
         [Description("German")]
         DE,
 
-        /// <summary> Zarma) </summary>
+        /// <summary> Zarma </summary>
         [Description("Zarma")]
         DJE,
 
-        /// <summary> Lower Sorbian) </summary>
+        /// <summary> Lower Sorbian </summary>
         [Description("Lower Sorbian")]
         DSB,
 
-        /// <summary> Duala) </summary>
+        /// <summary> Duala </summary>
         [Description("Duala")]
         DUA,
 
-        /// <summary> Divehi) </summary>
+        /// <summary> Divehi </summary>
         [Description("Divehi")]
         DV,
 
-        /// <summary> Jola-Fonyi) </summary>
+        /// <summary> Jola-Fonyi </summary>
         [Description("Jola-Fonyi")]
         DYO,
 
-        /// <summary> Dzongkha) </summary>
+        /// <summary> Dzongkha </summary>
         [Description("Dzongkha")]
         DZ,
 
-        /// <summary> Embu) </summary>
+        /// <summary> Embu </summary>
         [Description("Embu")]
         EBU,
 
-        /// <summary> Ewe) </summary>
+        /// <summary> Ewe </summary>
         [Description("Ewe")]
         EE,
 
-        /// <summary> Greek) </summary>
+        /// <summary> Greek </summary>
         [Description("Greek")]
         EL,
 
-        /// <summary> English) </summary>
+        /// <summary> English </summary>
         [Description("English")]
         EN,
 
-        /// <summary> Esperanto) </summary>
+        /// <summary> Esperanto </summary>
         [Description("Esperanto")]
         EO,
 
-        /// <summary> Spanish) </summary>
+        /// <summary> Spanish </summary>
         [Description("Spanish")]
         ES,
 
-        /// <summary> Estonian) </summary>
+        /// <summary> Estonian </summary>
         [Description("Estonian")]
         ET,
 
-        /// <summary> Basque) </summary>
+        /// <summary> Basque </summary>
         [Description("Basque")]
         EU,
 
-        /// <summary> Ewondo) </summary>
+        /// <summary> Ewondo </summary>
         [Description("Ewondo")]
         EWO,
 
-        /// <summary> Persian) </summary>
+        /// <summary> Persian </summary>
         [Description("Persian")]
         FA,
 
-        /// <summary> Fulah) </summary>
+        /// <summary> Fulah </summary>
         [Description("Fulah")]
         FF,
 
-        /// <summary> Finnish) </summary>
+        /// <summary> Finnish </summary>
         [Description("Finnish")]
         FI,
 
-        /// <summary> Filipino) </summary>
+        /// <summary> Filipino </summary>
         [Description("Filipino")]
         FIL,
 
-        /// <summary> Faroese) </summary>
+        /// <summary> Faroese </summary>
         [Description("Faroese")]
         FO,
 
-        /// <summary> French) </summary>
+        /// <summary> French </summary>
         [Description("French")]
         FR,
 
-        /// <summary> Friulian) </summary>
+        /// <summary> Friulian </summary>
         [Description("Friulian")]
         FUR,
 
-        /// <summary> Western Frisian) </summary>
+        /// <summary> Western Frisian </summary>
         [Description("Western Frisian")]
         FY,
 
-        /// <summary> Irish) </summary>
+        /// <summary> Irish </summary>
         [Description("Irish")]
         GA,
 
-        /// <summary> Scottish Gaelic) </summary>
+        /// <summary> Scottish Gaelic </summary>
         [Description("Scottish Gaelic")]
         GD,
 
-        /// <summary> Galician) </summary>
+        /// <summary> Galician </summary>
         [Description("Galician")]
         GL,
 
-        /// <summary> Guarani) </summary>
+        /// <summary> Guarani </summary>
         [Description("Guarani")]
         GN,
 
-        /// <summary> Swiss German) </summary>
+        /// <summary> Swiss German </summary>
         [Description("Swiss German")]
         GSW,
 
-        /// <summary> Gujarati) </summary>
+        /// <summary> Gujarati </summary>
         [Description("Gujarati")]
         GU,
 
-        /// <summary> Gusii) </summary>
+        /// <summary> Gusii </summary>
         [Description("Gusii")]
         GUZ,
 
-        /// <summary> Manx) </summary>
+        /// <summary> Manx </summary>
         [Description("Manx")]
         GV,
 
-        /// <summary> Hausa) </summary>
+        /// <summary> Hausa </summary>
         [Description("Hausa")]
         HA,
 
-        /// <summary> Hawaiian) </summary>
+        /// <summary> Hawaiian </summary>
         [Description("Hawaiian")]
         HAW,
 
-        /// <summary> Hebrew) </summary>
+        /// <summary> Hebrew </summary>
         [Description("Hebrew")]
         HE,
 
-        /// <summary> Hindi) </summary>
+        /// <summary> Hindi </summary>
         [Description("Hindi")]
         HI,
 
-        /// <summary> Croatian) </summary>
+        /// <summary> Croatian </summary>
         [Description("Croatian")]
         HR,
 
-        /// <summary> Upper Sorbian) </summary>
+        /// <summary> Upper Sorbian </summary>
         [Description("Upper Sorbian")]
         HSB,
 
-        /// <summary> Hungarian) </summary>
+        /// <summary> Hungarian </summary>
         [Description("Hungarian")]
         HU,
 
-        /// <summary> Armenian) </summary>
+        /// <summary> Armenian </summary>
         [Description("Armenian")]
         HY,
 
-        /// <summary> Interlingua) </summary>
+        /// <summary> Interlingua </summary>
         [Description("Interlingua")]
         IA,
 
-        /// <summary> Indonesian) </summary>
+        /// <summary> Indonesian </summary>
         [Description("Indonesian")]
         ID,
 
-        /// <summary> Igbo) </summary>
+        /// <summary> Igbo </summary>
         [Description("Igbo")]
         IG,
 
-        /// <summary> Yi) </summary>
+        /// <summary> Yi </summary>
         [Description("Yi")]
         II,
 
-        /// <summary> Icelandic) </summary>
+        /// <summary> Icelandic </summary>
         [Description("Icelandic")]
         IS,
 
-        /// <summary> Italian) </summary>
+        /// <summary> Italian </summary>
         [Description("Italian")]
         IT,
 
-        /// <summary> Inuktitut) </summary>
+        /// <summary> Inuktitut </summary>
         [Description("Inuktitut")]
         IU,
 
-        /// <summary> Japanese) </summary>
+        /// <summary> Japanese </summary>
         [Description("Japanese")]
         JA,
 
-        /// <summary> Ngomba) </summary>
+        /// <summary> Ngomba </summary>
         [Description("Ngomba")]
         JGO,
 
-        /// <summary> Machame) </summary>
+        /// <summary> Machame </summary>
         [Description("Machame")]
         JMC,
 
-        /// <summary> Javanese) </summary>
+        /// <summary> Javanese </summary>
         [Description("Javanese")]
         JV,
 
-        /// <summary> Georgian) </summary>
+        /// <summary> Georgian </summary>
         [Description("Georgian")]
         KA,
 
-        /// <summary> Kabyle) </summary>
+        /// <summary> Kabyle </summary>
         [Description("Kabyle")]
         KAB,
 
-        /// <summary> Kamba) </summary>
+        /// <summary> Kamba </summary>
         [Description("Kamba")]
         KAM,
 
-        /// <summary> Makonde) </summary>
+        /// <summary> Makonde </summary>
         [Description("Makonde")]
         KDE,
 
-        /// <summary> Kabuverdianu) </summary>
+        /// <summary> Kabuverdianu </summary>
         [Description("Kabuverdianu")]
         KEA,
 
-        /// <summary> Koyra Chiini) </summary>
+        /// <summary> Koyra Chiini </summary>
         [Description("Koyra Chiini")]
         KHQ,
 
-        /// <summary> Kikuyu) </summary>
+        /// <summary> Kikuyu </summary>
         [Description("Kikuyu")]
         KI,
 
-        /// <summary> Kazakh) </summary>
+        /// <summary> Kazakh </summary>
         [Description("Kazakh")]
         KK,
 
-        /// <summary> Kako) </summary>
+        /// <summary> Kako </summary>
         [Description("Kako")]
         KKJ,
 
-        /// <summary> Kalaallisut) </summary>
+        /// <summary> Kalaallisut </summary>
         [Description("Kalaallisut")]
         KL,
 
-        /// <summary> Kalenjin) </summary>
+        /// <summary> Kalenjin </summary>
         [Description("Kalenjin")]
         KLN,
 
-        /// <summary> Khmer) </summary>
+        /// <summary> Khmer </summary>
         [Description("Khmer")]
         KM,
 
-        /// <summary> Kannada) </summary>
+        /// <summary> Kannada </summary>
         [Description("Kannada")]
         KN,
 
-        /// <summary> Korean) </summary>
+        /// <summary> Korean </summary>
         [Description("Korean")]
         KO,
 
-        /// <summary> Konkani) </summary>
+        /// <summary> Konkani </summary>
         [Description("Konkani")]
         KOK,
 
-        /// <summary> Kashmiri) </summary>
+        /// <summary> Kashmiri </summary>
         [Description("Kashmiri")]
         KS,
 
-        /// <summary> Shambala) </summary>
+        /// <summary> Shambala </summary>
         [Description("Shambala")]
         KSB,
 
-        /// <summary> Bafia) </summary>
+        /// <summary> Bafia </summary>
         [Description("Bafia")]
         KSF,
 
-        /// <summary> Colognian) </summary>
+        /// <summary> Colognian </summary>
         [Description("Colognian")]
         KSH,
 
-        /// <summary> Cornish) </summary>
+        /// <summary> Cornish </summary>
         [Description("Cornish")]
         KW,
 
-        /// <summary> Kyrgyz) </summary>
+        /// <summary> Kyrgyz </summary>
         [Description("Kyrgyz")]
         KY,
 
-        /// <summary> Langi) </summary>
+        /// <summary> Langi </summary>
         [Description("Langi")]
         LAG,
 
-        /// <summary> Luxembourgish) </summary>
+        /// <summary> Luxembourgish </summary>
         [Description("Luxembourgish")]
         LB,
 
-        /// <summary> Ganda) </summary>
+        /// <summary> Ganda </summary>
         [Description("Ganda")]
         LG,
 
-        /// <summary> Lakota) </summary>
+        /// <summary> Lakota </summary>
         [Description("Lakota")]
         LKT,
 
-        /// <summary> Lingala) </summary>
+        /// <summary> Lingala </summary>
         [Description("Lingala")]
         LN,
 
-        /// <summary> Lao) </summary>
+        /// <summary> Lao </summary>
         [Description("Lao")]
         LO,
 
-        /// <summary> Northern Luri) </summary>
+        /// <summary> Northern Luri </summary>
         [Description("Northern Luri")]
         LRC,
 
-        /// <summary> Lithuanian) </summary>
+        /// <summary> Lithuanian </summary>
         [Description("Lithuanian")]
         LT,
 
-        /// <summary> Luba-Katanga) </summary>
+        /// <summary> Luba-Katanga </summary>
         [Description("Luba-Katanga")]
         LU,
 
-        /// <summary> Luo) </summary>
+        /// <summary> Luo </summary>
         [Description("Luo")]
         LUO,
 
-        /// <summary> Luyia) </summary>
+        /// <summary> Luyia </summary>
         [Description("Luyia")]
         LUY,
 
-        /// <summary> Latvian) </summary>
+        /// <summary> Latvian </summary>
         [Description("Latvian")]
         LV,
 
-        /// <summary> Masai) </summary>
+        /// <summary> Masai </summary>
         [Description("Masai")]
         MAS,
 
-        /// <summary> Meru) </summary>
+        /// <summary> Meru </summary>
         [Description("Meru")]
         MER,
 
-        /// <summary> Morisyen) </summary>
+        /// <summary> Morisyen </summary>
         [Description("Morisyen")]
         MFE,
 
-        /// <summary> Malagasy) </summary>
+        /// <summary> Malagasy </summary>
         [Description("Malagasy")]
         MG,
 
-        /// <summary> Makhuwa-Meetto) </summary>
+        /// <summary> Makhuwa-Meetto </summary>
         [Description("Makhuwa-Meetto")]
         MGH,
 
-        /// <summary> Metaʼ) </summary>
+        /// <summary> Metaʼ </summary>
         [Description("Metaʼ")]
         MGO,
 
-        /// <summary> Maori) </summary>
+        /// <summary> Maori </summary>
         [Description("Maori")]
         MI,
 
-        /// <summary> Macedonian) </summary>
+        /// <summary> Macedonian </summary>
         [Description("Macedonian")]
         MK,
 
-        /// <summary> Malayalam) </summary>
+        /// <summary> Malayalam </summary>
         [Description("Malayalam")]
         ML,
 
-        /// <summary> Mongolian) </summary>
+        /// <summary> Mongolian </summary>
         [Description("Mongolian")]
         MN,
 
-        /// <summary> Mohawk) </summary>
+        /// <summary> Mohawk </summary>
         [Description("Mohawk")]
         MOH,
 
-        /// <summary> Marathi) </summary>
+        /// <summary> Marathi </summary>
         [Description("Marathi")]
         MR,
 
-        /// <summary> Malay) </summary>
+        /// <summary> Malay </summary>
         [Description("Malay")]
         MS,
 
-        /// <summary> Maltese) </summary>
+        /// <summary> Maltese </summary>
         [Description("Maltese")]
         MT,
 
-        /// <summary> Mundang) </summary>
+        /// <summary> Mundang </summary>
         [Description("Mundang")]
         MUA,
 
-        /// <summary> Burmese) </summary>
+        /// <summary> Burmese </summary>
         [Description("Burmese")]
         MY,
 
-        /// <summary> Mazanderani) </summary>
+        /// <summary> Mazanderani </summary>
         [Description("Mazanderani")]
         MZN,
 
-        /// <summary> Nama) </summary>
+        /// <summary> Nama </summary>
         [Description("Nama")]
         NAQ,
 
-        /// <summary> Norwegian Bokmål) </summary>
+        /// <summary> Norwegian Bokmål </summary>
         [Description("Norwegian Bokmål")]
         NB,
 
-        /// <summary> North Ndebele) </summary>
+        /// <summary> North Ndebele </summary>
         [Description("North Ndebele")]
         ND,
 
-        /// <summary> Low German) </summary>
+        /// <summary> Low German </summary>
         [Description("Low German")]
         NDS,
 
-        /// <summary> Nepali) </summary>
+        /// <summary> Nepali </summary>
         [Description("Nepali")]
         NE,
 
-        /// <summary> Dutch) </summary>
+        /// <summary> Dutch </summary>
         [Description("Dutch")]
         NL,
 
-        /// <summary> Kwasio) </summary>
+        /// <summary> Kwasio </summary>
         [Description("Kwasio")]
         NMG,
 
-        /// <summary> Norwegian Nynorsk) </summary>
+        /// <summary> Norwegian Nynorsk </summary>
         [Description("Norwegian Nynorsk")]
         NN,
 
-        /// <summary> Ngiemboon) </summary>
+        /// <summary> Ngiemboon </summary>
         [Description("Ngiemboon")]
         NNH,
 
-        /// <summary> N’Ko) </summary>
+        /// <summary> N’Ko </summary>
         [Description("N’Ko")]
         NQO,
 
-        /// <summary> South Ndebele) </summary>
+        /// <summary> South Ndebele </summary>
         [Description("South Ndebele")]
         NR,
 
-        /// <summary> Sesotho sa Leboa) </summary>
+        /// <summary> Sesotho sa Leboa </summary>
         [Description("Sesotho sa Leboa")]
         NSO,
 
-        /// <summary> Nuer) </summary>
+        /// <summary> Nuer </summary>
         [Description("Nuer")]
         NUS,
 
-        /// <summary> Nyankole) </summary>
+        /// <summary> Nyankole </summary>
         [Description("Nyankole")]
         NYN,
 
-        /// <summary> Occitan) </summary>
+        /// <summary> Occitan </summary>
         [Description("Occitan")]
         OC,
 
-        /// <summary> Oromo) </summary>
+        /// <summary> Oromo </summary>
         [Description("Oromo")]
         OM,
 
-        /// <summary> Odia) </summary>
+        /// <summary> Odia </summary>
         [Description("Odia")]
         OR,
 
-        /// <summary> Ossetic) </summary>
+        /// <summary> Ossetic </summary>
         [Description("Ossetic")]
         OS,
 
-        /// <summary> Punjabi) </summary>
+        /// <summary> Punjabi </summary>
         [Description("Punjabi")]
         PA,
 
-        /// <summary> Polish) </summary>
+        /// <summary> Polish </summary>
         [Description("Polish")]
         PL,
 
-        /// <summary> Prussian) </summary>
+        /// <summary> Prussian </summary>
         [Description("Prussian")]
         PRG,
 
-        /// <summary> Pashto) </summary>
+        /// <summary> Pashto </summary>
         [Description("Pashto")]
         PS,
 
-        /// <summary> Portuguese) </summary>
+        /// <summary> Portuguese </summary>
         [Description("Portuguese")]
         PT,
 
-        /// <summary> quz) </summary>
+        /// <summary> quz </summary>
         [Description("quz")]
         QUZ,
 
-        /// <summary> Kʼicheʼ) </summary>
+        /// <summary> Kʼicheʼ </summary>
         [Description("Kʼicheʼ")]
         QUC,
 
-        /// <summary> Romansh) </summary>
+        /// <summary> Romansh </summary>
         [Description("Romansh")]
         RM,
 
-        /// <summary> Rundi) </summary>
+        /// <summary> Rundi </summary>
         [Description("Rundi")]
         RN,
 
-        /// <summary> Romanian) </summary>
+        /// <summary> Romanian </summary>
         [Description("Romanian")]
         RO,
 
-        /// <summary> Rombo) </summary>
+        /// <summary> Rombo </summary>
         [Description("Rombo")]
         ROF,
 
-        /// <summary> Russian) </summary>
+        /// <summary> Russian </summary>
         [Description("Russian")]
         RU,
 
-        /// <summary> Kinyarwanda) </summary>
+        /// <summary> Kinyarwanda </summary>
         [Description("Kinyarwanda")]
         RW,
 
-        /// <summary> Rwa) </summary>
+        /// <summary> Rwa </summary>
         [Description("Rwa")]
         RWK,
 
-        /// <summary> Sanskrit) </summary>
+        /// <summary> Sanskrit </summary>
         [Description("Sanskrit")]
         SA,
 
-        /// <summary> Sakha) </summary>
+        /// <summary> Sakha </summary>
         [Description("Sakha")]
         SAH,
 
-        /// <summary> Samburu) </summary>
+        /// <summary> Samburu </summary>
         [Description("Samburu")]
         SAQ,
 
-        /// <summary> Sangu) </summary>
+        /// <summary> Sangu </summary>
         [Description("Sangu")]
         SBP,
 
-        /// <summary> Sindhi) </summary>
+        /// <summary> Sindhi </summary>
         [Description("Sindhi")]
         SD,
 
-        /// <summary> Northern Sami) </summary>
+        /// <summary> Northern Sami </summary>
         [Description("Northern Sami")]
         SE,
 
-        /// <summary> Sena) </summary>
+        /// <summary> Sena </summary>
         [Description("Sena")]
         SEH,
 
-        /// <summary> Koyraboro Senni) </summary>
+        /// <summary> Koyraboro Senni </summary>
         [Description("Koyraboro Senni")]
         SES,
 
-        /// <summary> Sango) </summary>
+        /// <summary> Sango </summary>
         [Description("Sango")]
         SG,
 
-        /// <summary> Tachelhit) </summary>
+        /// <summary> Tachelhit </summary>
         [Description("Tachelhit")]
         SHI,
 
-        /// <summary> Sinhala) </summary>
+        /// <summary> Sinhala </summary>
         [Description("Sinhala")]
         SI,
 
-        /// <summary> Slovak) </summary>
+        /// <summary> Slovak </summary>
         [Description("Slovak")]
         SK,
 
-        /// <summary> Slovenian) </summary>
+        /// <summary> Slovenian </summary>
         [Description("Slovenian")]
         SL,
 
-        /// <summary> Southern Sami) </summary>
+        /// <summary> Southern Sami </summary>
         [Description("Southern Sami")]
         SMA,
 
-        /// <summary> Lule Sami) </summary>
+        /// <summary> Lule Sami </summary>
         [Description("Lule Sami")]
         SMJ,
 
-        /// <summary> Inari Sami) </summary>
+        /// <summary> Inari Sami </summary>
         [Description("Inari Sami")]
         SMN,
 
-        /// <summary> Skolt Sami) </summary>
+        /// <summary> Skolt Sami </summary>
         [Description("Skolt Sami")]
         SMS,
 
-        /// <summary> Shona) </summary>
+        /// <summary> Shona </summary>
         [Description("Shona")]
         SN,
 
-        /// <summary> Somali) </summary>
+        /// <summary> Somali </summary>
         [Description("Somali")]
         SO,
 
-        /// <summary> Albanian) </summary>
+        /// <summary> Albanian </summary>
         [Description("Albanian")]
         SQ,
 
-        /// <summary> Serbian) </summary>
+        /// <summary> Serbian </summary>
         [Description("Serbian")]
         SR,
 
-        /// <summary> siSwati) </summary>
+        /// <summary> siSwati </summary>
         [Description("siSwati")]
         SS,
 
-        /// <summary> Saho) </summary>
+        /// <summary> Saho </summary>
         [Description("Saho")]
         SSY,
 
-        /// <summary> Sesotho) </summary>
+        /// <summary> Sesotho </summary>
         [Description("Sesotho")]
         ST,
 
-        /// <summary> Swedish) </summary>
+        /// <summary> Swedish </summary>
         [Description("Swedish")]
         SV,
 
-        /// <summary> Kiswahili) </summary>
+        /// <summary> Kiswahili </summary>
         [Description("Kiswahili")]
         SW,
 
-        /// <summary> Syriac) </summary>
+        /// <summary> Syriac </summary>
         [Description("Syriac")]
         SYR,
 
-        /// <summary> Tamil) </summary>
+        /// <summary> Tamil </summary>
         [Description("Tamil")]
         TA,
 
-        /// <summary> Telugu) </summary>
+        /// <summary> Telugu </summary>
         [Description("Telugu")]
         TE,
 
-        /// <summary> Teso) </summary>
+        /// <summary> Teso </summary>
         [Description("Teso")]
         TEO,
 
-        /// <summary> Tajik) </summary>
+        /// <summary> Tajik </summary>
         [Description("Tajik")]
         TG,
 
-        /// <summary> Thai) </summary>
+        /// <summary> Thai </summary>
         [Description("Thai")]
         TH,
 
-        /// <summary> Tigrinya) </summary>
+        /// <summary> Tigrinya </summary>
         [Description("Tigrinya")]
         TI,
 
-        /// <summary> Tigre) </summary>
+        /// <summary> Tigre </summary>
         [Description("Tigre")]
         TIG,
 
-        /// <summary> Turkmen) </summary>
+        /// <summary> Turkmen </summary>
         [Description("Turkmen")]
         TK,
 
-        /// <summary> Setswana) </summary>
+        /// <summary> Setswana </summary>
         [Description("Setswana")]
         TN,
 
-        /// <summary> Tongan) </summary>
+        /// <summary> Tongan </summary>
         [Description("Tongan")]
         TO,
 
-        /// <summary> Turkish) </summary>
+        /// <summary> Turkish </summary>
         [Description("Turkish")]
         TR,
 
-        /// <summary> Xitsonga) </summary>
+        /// <summary> Xitsonga </summary>
         [Description("Xitsonga")]
         TS,
 
-        /// <summary> Tatar) </summary>
+        /// <summary> Tatar </summary>
         [Description("Tatar")]
         TT,
 
-        /// <summary> Tasawaq) </summary>
+        /// <summary> Tasawaq </summary>
         [Description("Tasawaq")]
         TWQ,
 
-        /// <summary> Central Atlas Tamazight) </summary>
+        /// <summary> Central Atlas Tamazight </summary>
         [Description("Central Atlas Tamazight")]
         TZM,
 
-        /// <summary> Uyghur) </summary>
+        /// <summary> Uyghur </summary>
         [Description("Uyghur")]
         UG,
 
-        /// <summary> Ukrainian) </summary>
+        /// <summary> Ukrainian </summary>
         [Description("Ukrainian")]
         UK,
 
-        /// <summary> Urdu) </summary>
+        /// <summary> Urdu </summary>
         [Description("Urdu")]
         UR,
 
-        /// <summary> Uzbek) </summary>
+        /// <summary> Uzbek </summary>
         [Description("Uzbek")]
         UZ,
 
-        /// <summary> Vai) </summary>
+        /// <summary> Vai </summary>
         [Description("Vai")]
         VAI,
 
-        /// <summary> Venda) </summary>
+        /// <summary> Venda </summary>
         [Description("Venda")]
         VE,
 
-        /// <summary> Vietnamese) </summary>
+        /// <summary> Vietnamese </summary>
         [Description("Vietnamese")]
         VI,
 
-        /// <summary> Volapük) </summary>
+        /// <summary> Volapük </summary>
         [Description("Volapük")]
         VO,
 
-        /// <summary> Vunjo) </summary>
+        /// <summary> Vunjo </summary>
         [Description("Vunjo")]
         VUN,
 
-        /// <summary> Walser) </summary>
+        /// <summary> Walser </summary>
         [Description("Walser")]
         WAE,
 
-        /// <summary> Wolaytta) </summary>
+        /// <summary> Wolaytta </summary>
         [Description("Wolaytta")]
         WAL,
 
-        /// <summary> Wolof) </summary>
+        /// <summary> Wolof </summary>
         [Description("Wolof")]
         WO,
 
-        /// <summary> isiXhosa) </summary>
+        /// <summary> isiXhosa </summary>
         [Description("isiXhosa")]
         XH,
 
-        /// <summary> Soga) </summary>
+        /// <summary> Soga </summary>
         [Description("Soga")]
         XOG,
 
-        /// <summary> Yangben) </summary>
+        /// <summary> Yangben </summary>
         [Description("Yangben")]
         YAV,
 
-        /// <summary> Yiddish) </summary>
+        /// <summary> Yiddish </summary>
         [Description("Yiddish")]
         YI,
 
-        /// <summary> Yoruba) </summary>
+        /// <summary> Yoruba </summary>
         [Description("Yoruba")]
         YO,
 
-        /// <summary> Standard Moroccan Tamazight) </summary>
+        /// <summary> Standard Moroccan Tamazight </summary>
         [Description("Standard Moroccan Tamazight")]
         ZGH,
 
-        /// <summary> Chinese) </summary>
+        /// <summary> Chinese </summary>
         [Description("Chinese")]
         ZH,
 
-        /// <summary> isiZulu) </summary>
+        /// <summary> isiZulu </summary>
         [Description("isiZulu")]
         ZU,
 

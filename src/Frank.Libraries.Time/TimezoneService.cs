@@ -64,9 +64,5 @@ namespace Frank.Libraries.Time
         /// </summary>
         /// <returns></returns>
         public override string ToString() => GetSystemTimezone().ToString();
-
-
-
-
     }
 }

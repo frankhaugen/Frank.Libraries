@@ -29,14 +29,14 @@
         <PackageReference Include="DeviceId" Version="6.0.0" />
         <PackageReference Include="DeviceIOControlLib" Version="0.1.6" />
         <PackageReference Include="EasyNetwork" Version="1.0.6" />
-        <PackageReference Include="H.Hooks" Version="1.4.9" />
+        <PackageReference Include="H.Hooks" Version="1.4.14" />
         <PackageReference Include="hidlibrary" Version="3.3.40" />
         <PackageReference Include="HidSharp" Version="2.1.0" />
         <PackageReference Include="ILGPU" Version="0.10.1" />
-        <PackageReference Include="IPNetwork2" Version="2.5.353" />
+        <PackageReference Include="IPNetwork2" Version="2.5.360" />
         <PackageReference Include="LibreHardwareMonitorLib" Version="0.8.8" />
         <PackageReference Include="Network" Version="6.2.5.23" />
-        <PackageReference Include="NodaTime" Version="3.0.7" />
+        <PackageReference Include="NodaTime" Version="3.0.9" />
         <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
         <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
     </ItemGroup>
