@@ -1,9 +1,10 @@
 ﻿using Frank.Libraries.FluentValidation;
-using Xunit;
+using Frank.Libraries.Tests.TestingInfrastructure;
+using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.FluentValidation
 {
-    public class Mod10ShortValidatorTests
+    public class Mod10ShortValidatorTests : TestBase
     {
         //[Fact]
         public void TestMethod1()
@@ -15,7 +16,10 @@ namespace Frank.Libraries.Tests.FluentValidation
 
 
             // Assert
-            Assert.True(false);
+        }
+
+        public Mod10ShortValidatorTests(ITestOutputHelper outputHelper) : base(outputHelper)
+        {
         }
     }
 }
