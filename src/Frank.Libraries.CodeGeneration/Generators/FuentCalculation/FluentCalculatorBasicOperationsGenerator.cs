@@ -3,9 +3,9 @@ using CodegenCS;
 
 namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
 {
-    public static class FluentCalculatorBasicOperationsGenerator
+    public class FluentCalculatorBasicOperationsGenerator : IGenerator
     {
-        public static string Generate(string namespaceName = "Frank.Libraries.Calculators.FluentCalculation", string className = "FluentCalculatorBasicOperations")
+        public string Generate(string namespaceName, string className)
         {
             var w = new CodegenTextWriter();
 

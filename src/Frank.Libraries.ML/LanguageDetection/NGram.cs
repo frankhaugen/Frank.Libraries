@@ -2,7 +2,7 @@
 
 namespace Frank.Libraries.ML.LanguageDetection
 {
-    internal class NGram
+    public class NGram
     {
         public const int NGramLength = 3;
 

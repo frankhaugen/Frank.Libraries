@@ -7,7 +7,7 @@ namespace Frank.Libraries.CodeGeneration.Generators
 {
     public class TestGenerator
     {
-        public string Generate(string namespaceName, Type type, DirectoryInfo? directoryInfo = null, bool saveToFile = false)
+        public string Generate(string namespaceName, Type type, DirectoryInfo? directoryInfo = null)
         {
             var w = new CodegenTextWriter();
 
@@ -57,8 +57,6 @@ namespace Frank.Libraries.CodeGeneration.Generators
                     }
                 });
             });
-
-            if (saveToFile) w.SaveToFile(Path.Combine(directoryInfo!.FullName, $"{type.Name}Tests.cs"));
 
             return w.GetContents();
         }

@@ -67,34 +67,4 @@ namespace Frank.Libraries.Tests.Time
             _outputHelper.WriteLine(result.ToString());
         }
     }
-    public class CronServiceTests
-    {
-        private readonly IClock _clock;
-        private readonly ITestOutputHelper _outputHelper;
-
-        private const int Year = 2021;
-        private const int Month = 10;
-        private const int Day = 10;
-        private const int Hour = 13;
-        private const int Minute = 37;
-
-
-        public CronServiceTests(ITestOutputHelper outputHelper)
-        {
-            _outputHelper = outputHelper;
-        }
-
-        [Fact]
-        public void TimeServiceToString()
-        {
-            // Arrange
-            var service = new CronService();
-
-            // Act
-            var result = service.GetDescription("0 0 */1 * * 1 2021", Culture.NB);
-
-            // Assert
-            _outputHelper.WriteLine(result);
-        }
-    }
 }

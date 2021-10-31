@@ -64,5 +64,14 @@
         <None Update="TestingInfrastructure\Files\**">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Update="TestingInfrastructure\Files\Json\Constants\IrcErrorMessages.json">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Gaming" />
+      <Folder Include="Internet" />
+      <Folder Include="ML" />
     </ItemGroup>
 </Project>

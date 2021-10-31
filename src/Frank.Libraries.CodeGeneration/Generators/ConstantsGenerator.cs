@@ -1,14 +1,18 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using CodegenCS;
 using Frank.Libraries.CodeGeneration.Extensions;
 using Frank.Libraries.CodeGeneration.Models;
 
 namespace Frank.Libraries.CodeGeneration.Generators
 {
-    public class ConstantsGenerator
+    public class ConstantsGenerator : IGenerator
     {
-        public string Generate(string namespaceName, string className, List<Resource> resources, DirectoryInfo? directoryInfo = null, bool saveToFile = false)
+        private readonly List<Resource> _resources;
+
+        public ConstantsGenerator(List<Resource> resources) => _resources = resources;
+        public ConstantsGenerator() => _resources = new List<Resource>();
+
+        public string Generate(string namespaceName, string className)
         {
             var w = new CodegenTextWriter();
 
@@ -16,14 +20,12 @@ namespace Frank.Libraries.CodeGeneration.Generators
             {
                 w.WithCurlyBraces($"public static class {className.ToNameCase()}", () =>
                 {
-                    foreach (var resource in resources)
+                    foreach (var resource in _resources)
                     {
                         w.WriteLine($"public const string {resource.Key.ToNameCase()} = \"{resource.Value}\";");
                     }
                 });
             });
-
-            if (saveToFile) w.SaveToFile(new FileInfo(Path.Combine(directoryInfo!.FullName, $"{className.ToNameCase()}.cs")).FullName);
 
             return w.GetContents();
         }

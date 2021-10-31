@@ -1,0 +1,126 @@
+[
+    {
+        "Key": "MessageInvalidUserRegistrationInfo",
+        "Value": "The registration info for a user must have a valid nick name and user name."
+    },
+    {
+        "Key": "MessageInvalidChannelType",
+        "Value": "The channel type \u0027{0}\u0027 sent by the server is invalid."
+    },
+    {
+        "Key": "MessageTooManyParams",
+        "Value": "No more than 15 command parameters may be specified."
+    },
+    {
+        "Key": "MessageInvalidQuotedChar",
+        "Value": "The quoted character \u0027{0}\u0027 was not recognised."
+    },
+    {
+        "Key": "MessageInvalidTag",
+        "Value": "The message tag \u0027{0}\u0027 is invalid."
+    },
+    {
+        "Key": "MessageInvalidMiddleParameter",
+        "Value": "The non-trailing parameter \u0027{0}\u0027 is invalid."
+    },
+    {
+        "Key": "MessageInvalidRegistrationInfoObject",
+        "Value": "The object provided for registration info is of an unknown type."
+    },
+    {
+        "Key": "MessageInvalidRealName",
+        "Value": "The specified real name is invalid."
+    },
+    {
+        "Key": "MessageInvalidUrlScheme",
+        "Value": "The URL scheme \u0027{0}\u0027 is not valid."
+    },
+    {
+        "Key": "MessageInvalidUserName",
+        "Value": "The specified user name is invalid."
+    },
+    {
+        "Key": "MessageInvalidUserMode",
+        "Value": "The specified user mode is invalid."
+    },
+    {
+        "Key": "MessageTargetMaskInvalidType",
+        "Value": "The type of the given target mask \u0027{0}\u0027 is invalid."
+    },
+    {
+        "Key": "MessageSourceNotUser",
+        "Value": "The message source \u0027{0}\u0027 is not a user."
+    },
+    {
+        "Key": "MessageInvalidServiceRegistrationInfo",
+        "Value": "The registration info for a service must have a valid nick name and description."
+    },
+    {
+        "Key": "MessageCannotSetUserMode",
+        "Value": "Cannot set user mode for \u0027{0}\u0027."
+    },
+    {
+        "Key": "MessageNoValidAddress",
+        "Value": "The host name \u0027{0}\u0027 does not resolve to a valid IP address."
+    },
+    {
+        "Key": "MessageISupportPrefixInvalid",
+        "Value": "The ISUPPORT message sent by the server contains an invalid PREFIX parameter."
+    },
+    {
+        "Key": "MessageTooManyModeParameters",
+        "Value": "No more than 3 mode parameters may be sent per message."
+    },
+    {
+        "Key": "MessageInvalidTrailingParameter",
+        "Value": "The trailing parameter \u0027{0}\u0027 is invalid."
+    },
+    {
+        "Key": "MessageInvalidNickName",
+        "Value": "The specified nick name is invalid."
+    },
+    {
+        "Key": "MessageInvalidSource",
+        "Value": "The source \u0027{0}\u0027 of the message was not recognised as either a server or user."
+    },
+    {
+        "Key": "MessageInvalidPrefix",
+        "Value": "The message prefix \u0027{0}\u0027 is invalid."
+    },
+    {
+        "Key": "MessageInvalidCommandDefinition",
+        "Value": "The command definition \u0027{0}\u0027 is invalid."
+    },
+    {
+        "Key": "MessageInvalidTargetName",
+        "Value": "A target name may not contain any \u0027,\u0027 character."
+    },
+    {
+        "Key": "MessageInvalidMessageCommand",
+        "Value": "The command \u0027{0}\u0027 was not recognised."
+    },
+    {
+        "Key": "MessageRawMessageTooLong",
+        "Value": "The length of a raw message must not exceed {0} characters."
+    },
+    {
+        "Key": "MessageTargetMaskTooShort",
+        "Value": "The target mask must be contain at least two characters."
+    },
+    {
+        "Key": "MessageInvalidCommand",
+        "Value": "The message command \u0027{0}\u0027 is invalid."
+    },
+    {
+        "Key": "MessageValueCannotBeEmptyString",
+        "Value": "The value cannot be an empty string"
+    },
+    {
+        "Key": "MessageNotEnoughModeParameters",
+        "Value": "Not enough mode parameters were specified for the given modes."
+    },
+    {
+        "Key": "MessageInvalidPassword",
+        "Value": "The specified password is invalid."
+    }
+]

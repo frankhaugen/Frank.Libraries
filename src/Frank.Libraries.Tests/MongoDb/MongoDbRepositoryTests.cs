@@ -17,32 +17,22 @@ namespace Frank.Libraries.Tests.MongoDb
 {
     public class MongoDbRepositoryTests
     {
-        private MongoDbRunner _runner;
-
-        public MongoDbRepositoryTests()
+        private MongoDbRepository<MongoTestModel> SetupRepository(MongoDbRunner runner)
         {
-            _runner = MongoDbRunner.Start();
-        }
-
-        private MongoDbRepository<MongoTestModel> SetupRepository()
-        {
-            _runner = MongoDbRunner.Start();
-
-            MongoClient client = new MongoClient(_runner.ConnectionString);
+            MongoClient client = new MongoClient(runner.ConnectionString);
             var database = client.GetDatabase(nameof(MongoDbRepositoryTests));
 
-            var dbContext = new MongoDbContext<TestMongoConfiguration>(Options.Create(new TestMongoConfiguration() { ConnectionString = _runner.ConnectionString, DatabaseName = nameof(MongoDbRepositoryTests) }));
+            var dbContext = new MongoDbContext<TestMongoConfiguration>(Options.Create(new TestMongoConfiguration() { ConnectionString = runner.ConnectionString, DatabaseName = nameof(MongoDbRepositoryTests) }));
             var mongoDbRepository = new MongoDbRepository<MongoTestModel>(dbContext);
             return mongoDbRepository;
         }
-
-        private void TearDownRepository() => _runner.Dispose();
 
         [Fact]
         public async Task AsQueryable()
         {
             // Arrange
-            var repository = SetupRepository();
+            using var runner = MongoDbRunner.Start();
+            var repository = SetupRepository(runner);
             var newItems = CreateTestDocuments();
             await repository.InsertManyAsync(newItems);
             var firstItem = newItems.First();
@@ -54,15 +44,14 @@ namespace Frank.Libraries.Tests.MongoDb
             result.Should().NotBeNullOrEmpty();
             result.Should().HaveSameCount(newItems);
             result.FirstOrDefault(x => x.Name == firstItem.Name).Should().BeEquivalentTo(firstItem, options => options.Excluding(x => x.DateOfBirth));
-
-            TearDownRepository();
         }
 
         [Fact]
         public async Task FindById_OneValue_ReturnsCorrectValue()
         {
             // Arrange
-            var repository = SetupRepository();
+            using var runner = MongoDbRunner.Start();
+            var repository = SetupRepository(runner);
             var newItem = CreateTestDocument();
             await repository.InsertOneAsync(newItem);
 
@@ -74,15 +63,14 @@ namespace Frank.Libraries.Tests.MongoDb
             result.Name.Should().Be(newItem.Name);
             result.DateOfBirth.Should().BeCloseTo(newItem.DateOfBirth, TimeSpan.FromHours(13));
             result.YearlySalary.Should().Be(newItem.YearlySalary);
-
-            TearDownRepository();
         }
 
         [Fact]
         public async Task Insert()
         {
             // Arrange
-            var repository = SetupRepository();
+            using var runner = MongoDbRunner.Start();
+            var repository = SetupRepository(runner);
             var newItem = CreateTestDocument();
 
             // Act
@@ -90,8 +78,21 @@ namespace Frank.Libraries.Tests.MongoDb
 
             // Assert
             (await repository.FindByIdAsync(newItem.Id)).Should().NotBeNull();
+        }
 
-            TearDownRepository();
+        [Fact]
+        public async Task FilterBy()
+        {
+            // Arrange
+            using var runner = MongoDbRunner.Start();
+            var repository = SetupRepository(runner);
+            var newItem = CreateTestDocument();
+
+            // Act
+            await repository.InsertOneAsync(newItem);
+
+            // Assert
+            repository.FilterBy(x => x.Name.Contains(newItem.Name, StringComparison.InvariantCultureIgnoreCase)).Should().NotBeNull();
         }
 
         private MongoTestModel CreateTestDocument() => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.GenerateNewId()).Generate();

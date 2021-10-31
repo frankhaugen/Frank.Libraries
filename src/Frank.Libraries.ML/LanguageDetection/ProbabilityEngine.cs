@@ -5,22 +5,20 @@ namespace Frank.Libraries.ML.LanguageDetection
 {
     internal class ProbabilityEngine
     {
-        private readonly IReadOnlyList<LanguageModel>? _languages;
-        private readonly Dictionary<string, Dictionary<LanguageModel, double>> _wordLanguageProbabilities;
+        private readonly WordProbabilities _wordLanguageProbabilities;
         private readonly LanguageDetectionOptions _options;
 
-        internal ProbabilityEngine(LanguageDetectionOptions options, IReadOnlyList<LanguageModel>? languages, Dictionary<string, Dictionary<LanguageModel, double>> wordLanguageProbabilities)
+        internal ProbabilityEngine(LanguageDetectionOptions options, WordProbabilities wordLanguageProbabilities)
         {
             _options = options;
-            _languages = languages;
             _wordLanguageProbabilities = wordLanguageProbabilities;
         }
 
         internal double[] InitializeProbabilities()
         {
-            var prob = new double[_languages.LongCount()];
+            var prob = new double[Languages.List.Count];
             for (var i = 0; i < prob.Length; i++)
-                prob[i] = 1.0 / _languages.LongCount();
+                prob[i] = 1.0 / Languages.List.Count;
             return prob;
         }
 
@@ -34,7 +32,7 @@ namespace Frank.Libraries.ML.LanguageDetection
 
             for (var i = 0; i < prob.Length; i++)
             {
-                var profile = _languages.ElementAt(i);
+                var profile = Languages.List.ElementAt(i);
                 prob[i] *= weight + (languageProbabilities.ContainsKey(profile) ? languageProbabilities[profile] : 0);
             }
         }
@@ -71,7 +69,7 @@ namespace Frank.Libraries.ML.LanguageDetection
                     if (i != list.Count && !(list[i].Probability < p))
                         continue;
 
-                    list.Insert(i, new Language { LanguageCode = _languages.ElementAt(j).LanguageCode, Probability = p });
+                    list.Insert(i, new Language { LanguageCode = Languages.List.ElementAt(j).LanguageCode, Probability = p });
                     break;
                 }
             }
