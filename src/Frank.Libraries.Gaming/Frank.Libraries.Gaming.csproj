@@ -24,4 +24,8 @@
             <PackagePath></PackagePath>
         </None>
     </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="OpenTK" Version="4.6.7" />
+    </ItemGroup>
 </Project>
