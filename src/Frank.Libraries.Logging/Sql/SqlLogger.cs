@@ -18,10 +18,7 @@ namespace Frank.Libraries.Logging.Sql
 
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
-            if (!IsEnabled(logLevel))
-            {
-                return;
-            }
+            if (!IsEnabled(logLevel)) return;
 
             var query = SqlQueryConstructor.ConstructQuery(logLevel, eventId, state, exception, formatter, _name);
 

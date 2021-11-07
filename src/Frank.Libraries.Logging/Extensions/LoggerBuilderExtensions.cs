@@ -18,7 +18,7 @@ namespace Frank.Libraries.Logging.Extensions
 
             builder.Services.Configure(configuration);
             builder.Services.TryAddEnumerable(ServiceDescriptor.Singleton<ILoggerProvider, EntityFrameworkLoggerProvider<TContext>>());
-
+            builder.AddFilter("Microsoft.EntityFrameworkCore", LogLevel.Warning);
             return builder;
         }
     }

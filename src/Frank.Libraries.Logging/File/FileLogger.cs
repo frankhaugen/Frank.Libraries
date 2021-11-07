@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.Json;
+using Frank.Libraries.Logging.Shared;
 using Microsoft.Extensions.Logging;
 
 namespace Frank.Libraries.Logging.File
@@ -17,8 +18,9 @@ namespace Frank.Libraries.Logging.File
 
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
-            if (!IsEnabled(logLevel))
-                return;
+            if (!IsEnabled(logLevel)) return;
+
+            var log = LogHelper.GetLog(_name, logLevel, eventId, state, exception, formatter);
 
             var line = $"{logLevel}{_configuration.Delimiter}{AppDomain.CurrentDomain.FriendlyName}{_configuration.Delimiter}{formatter(state, exception)}{_configuration.Delimiter}{typeof(TState).Name}{_configuration.Delimiter}{eventId.Id}{_configuration.Delimiter}{eventId.Name}{_configuration.Delimiter}{JsonSerializer.Serialize(exception)}{_configuration.Delimiter}{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss:fff}{_configuration.Delimiter}{_name}";
             LogFileWriter.WriteString(line, _configuration.GetPath());

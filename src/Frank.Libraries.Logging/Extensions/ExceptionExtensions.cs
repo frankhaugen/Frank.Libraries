@@ -19,9 +19,23 @@ namespace Frank.Libraries.Logging.Extensions
         {
             var list = new List<string>();
 
-            for (var tempEx = ex; tempEx != null; tempEx = tempEx.InnerException)
+            try
             {
-                list.Add(tempEx.Message);
+                for (var tempEx = ex; tempEx != null; tempEx = tempEx.InnerException)
+                {
+                    try
+                    {
+                        list.Add(tempEx.Message);
+                    }
+                    catch
+                    {
+                        list.Add("FailureToParse");
+                    }
+                }
+            }
+            catch
+            {
+                list.Add("FailureToFlatten");
             }
 
             return string.Join(" | ", list);

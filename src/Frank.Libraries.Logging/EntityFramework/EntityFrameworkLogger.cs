@@ -1,5 +1,4 @@
 using System;
-using Frank.Libraries.Logging.Extensions;
 using Frank.Libraries.Logging.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,26 +22,15 @@ namespace Frank.Libraries.Logging.EntityFramework
 
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
-            using var scope = _serviceProvider.CreateScope();
-            using var context = ActivatorUtilities.CreateInstance<TContext>(scope.ServiceProvider);
+            if (!IsEnabled(logLevel)) return;
 
-            var log = new Log()
-            {
-                Timestamp = DateTime.UtcNow,
-                EventId = eventId.Id,
-                EventName = eventId.Name,
-                Level = logLevel.ToString(),
-                Message = exception.FlattenMessages(),
-                Exception = exception.Message,
-                Type = typeof(TState).Name,
-                Name = _name,
-                ApplicationName = AppDomain.CurrentDomain.FriendlyName
-            };
-
-            context.Set<Log>().Add(log);
+            var log = LogHelper.GetLog(_name, logLevel, eventId, state, exception, formatter);
 
             try
             {
+                using var scope = _serviceProvider.CreateScope();
+                using var context = scope.ServiceProvider.GetRequiredService<TContext>();
+                context.Set<Log>().Add(log);
                 context.SaveChanges();
             }
             catch

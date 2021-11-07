@@ -1,7 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Data.SqlClient;
 using System.Text;
-using Frank.Libraries.Logging.EntityFramework;
 using Frank.Libraries.Logging.Exceptions;
 using Frank.Libraries.Logging.Shared;
 using Microsoft.Extensions.Logging;
@@ -52,10 +51,10 @@ namespace Frank.Libraries.Logging.Sql
             query.AppendLine($"{nameof(Log.Level)} varchar(32),");
             query.AppendLine($"{nameof(Log.ApplicationName)} varchar(256),");
             query.AppendLine($"{nameof(Log.Message)} varchar(5120),");
-            query.AppendLine($"{nameof(Log.Type)} varchar(256),");
+            query.AppendLine($"{nameof(Log.DotnetVersion)} varchar(256),");
             query.AppendLine($"{nameof(Log.EventId)} varchar(256),");
             query.AppendLine($"{nameof(Log.EventName)} varchar(256),");
-            query.AppendLine($"{nameof(Log.Exception)} varchar(5120),");
+            query.AppendLine($"{nameof(Log.Stacktrace)} varchar(5120),");
             query.AppendLine($"{nameof(Log.Timestamp)} [datetime2],");
             query.AppendLine($"{nameof(Log.Name)} varchar(256),");
             query.AppendLine(")");
