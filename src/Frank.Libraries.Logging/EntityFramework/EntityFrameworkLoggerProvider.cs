@@ -13,12 +13,7 @@ namespace Frank.Libraries.Logging.EntityFramework
 
         public EntityFrameworkLoggerProvider(IServiceProvider serviceProvider, IOptions<EntityFrameworkLoggerConfiguration> options)
         {
-            if (serviceProvider == null)
-            {
-                throw new ArgumentNullException(nameof(serviceProvider));
-            }
-
-            _serviceProvider = serviceProvider;
+            _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
             _configuration = options.Value;
         }
 

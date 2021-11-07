@@ -1,6 +1,8 @@
 ﻿using System;
+using Frank.Libraries.Logging.EntityFramework;
 using Frank.Libraries.Logging.File;
 using Frank.Libraries.Logging.Sql;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
@@ -12,8 +14,8 @@ namespace Frank.Libraries.Logging.Extensions
         {
             var sqlConfiguration = new SqlLoggerConfiguration()
             {
-                LogLevel = Enum.Parse<LogLevel>(configuration["SqlLoggerConfiguration:LogLevel"]),
-                ConnectionString = configuration["SqlLoggerConfiguration:ConnectionString"]
+                LogLevel = Enum.Parse<LogLevel>(configuration[$"{nameof(SqlLoggerConfiguration)}:{nameof(SqlLoggerConfiguration.LogLevel)}"]),
+                ConnectionString = configuration[$"{nameof(SqlLoggerConfiguration)}:{nameof(SqlLoggerConfiguration.ConnectionString)}"]
             };
 
             return AddLogger(loggerFactory, sqlConfiguration);
@@ -30,8 +32,8 @@ namespace Frank.Libraries.Logging.Extensions
         {
             var fileConfiguration = new FileLoggerConfiguration()
             {
-                LogLevel = Enum.Parse<LogLevel>(configuration["FileLoggerConfiguration:LogLevel"]),
-                Directory = configuration["FileLoggerConfiguration:Path"]
+                LogLevel = Enum.Parse<LogLevel>(configuration[$"{nameof(FileLoggerConfiguration)}:{nameof(FileLoggerConfiguration.LogLevel)}"]),
+                Directory = configuration[$"{nameof(FileLoggerConfiguration)}:{nameof(FileLoggerConfiguration.Directory)}"]
             };
 
             return AddLogger(loggerFactory, fileConfiguration);
@@ -44,6 +46,31 @@ namespace Frank.Libraries.Logging.Extensions
             return AddLogger(loggerFactory, config);
         }
 
+        // public static ILoggerFactory UseEntityFrameworkLogger<T>(this ILoggerFactory loggerFactory, IConfiguration configuration)
+        // where T : DbContext
+        // {
+        //     var entityFrameworkLoggerConfiguration = new EntityFrameworkLoggerConfiguration()
+        //     {
+        //         LogLevel = Enum.Parse<LogLevel>(configuration[$"{nameof(EntityFrameworkLoggerConfiguration)}:{nameof(EntityFrameworkLoggerConfiguration.LogLevel)}"]),
+        //     };
+        //
+        //     return AddLogger<T>(loggerFactory, entityFrameworkLoggerConfiguration);
+        // }
+
+        // public static ILoggerFactory UseEntityFrameworkLogger(this ILoggerFactory loggerFactory, Action<FileLoggerConfiguration> fileConfiguration)
+        // {
+        //     var config = new FileLoggerConfiguration();
+        //     fileConfiguration(config);
+        //     return AddLogger(loggerFactory, config);
+        // }
+
+        // private static ILoggerFactory AddLogger<T>(ILoggerFactory loggerFactory, EntityFrameworkLoggerConfiguration entityFrameworkLoggerConfiguration)
+        // where T : DbContext
+        // {
+        //     loggerFactory.AddProvider(new EntityFrameworkLoggerProvider<T>(loggerFactory));
+        //
+        //     return loggerFactory;
+        // }
 
         private static ILoggerFactory AddLogger(ILoggerFactory loggerFactory, FileLoggerConfiguration fileConfiguration)
         {

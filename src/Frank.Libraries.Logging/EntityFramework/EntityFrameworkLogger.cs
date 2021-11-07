@@ -33,7 +33,10 @@ namespace Frank.Libraries.Logging.EntityFramework
                 EventName = eventId.Name,
                 Level = logLevel.ToString(),
                 Message = exception.FlattenMessages(),
-                Name = _name
+                Exception = exception.Message,
+                Type = typeof(TState).Name,
+                Name = _name,
+                ApplicationName = AppDomain.CurrentDomain.FriendlyName
             };
 
             context.Set<Log>().Add(log);
