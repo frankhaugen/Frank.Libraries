@@ -9,13 +9,14 @@ namespace Frank.Libraries.Logging.Extensions
 {
     public static class LoggerBuilderExtensions
     {
-        public static ILoggingBuilder AddEntityFrameworkLogger<TContext>(this ILoggingBuilder builder) where TContext : DbContext
+        public static ILoggingBuilder AddEntityFrameworkLogger<TContext>(this ILoggingBuilder builder, Action<EntityFrameworkLoggerConfiguration> configuration) where TContext : DbContext
         {
             if (builder == null)
             {
                 throw new ArgumentNullException(nameof(builder));
             }
 
+            builder.Services.Configure(configuration);
             builder.Services.TryAddEnumerable(ServiceDescriptor.Singleton<ILoggerProvider, EntityFrameworkLoggerProvider<TContext>>());
 
             return builder;

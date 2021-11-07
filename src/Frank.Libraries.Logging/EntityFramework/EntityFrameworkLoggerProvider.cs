@@ -1,6 +1,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace Frank.Libraries.Logging.EntityFramework
 {
@@ -10,7 +11,7 @@ namespace Frank.Libraries.Logging.EntityFramework
         private readonly IServiceProvider _serviceProvider;
         private readonly EntityFrameworkLoggerConfiguration _configuration;
 
-        public EntityFrameworkLoggerProvider(IServiceProvider serviceProvider, EntityFrameworkLoggerConfiguration configuration)
+        public EntityFrameworkLoggerProvider(IServiceProvider serviceProvider, IOptions<EntityFrameworkLoggerConfiguration> options)
         {
             if (serviceProvider == null)
             {
@@ -18,7 +19,7 @@ namespace Frank.Libraries.Logging.EntityFramework
             }
 
             _serviceProvider = serviceProvider;
-            _configuration = configuration;
+            _configuration = options.Value;
         }
 
         public override ILogger CreateLogger(string categoryName) => new EntityFrameworkLogger<TContext>(_serviceProvider, _configuration, categoryName);
