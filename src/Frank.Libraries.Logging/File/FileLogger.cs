@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Text.Json;
-using Frank.Libraries.Logging.FileLogging;
 using Microsoft.Extensions.Logging;
 
-namespace Frank.Libraries.Logging
+namespace Frank.Libraries.Logging.File
 {
     public class FileLogger : ILogger
     {

@@ -1,7 +1,6 @@
-﻿using System.IO;
-using System.Threading;
+﻿using System.Threading;
 
-namespace Frank.Libraries.Logging.FileLogging
+namespace Frank.Libraries.Logging.File
 {
     internal static class LogFileWriter
     {
@@ -12,7 +11,7 @@ namespace Frank.Libraries.Logging.FileLogging
             try
             {
                 _locker.AcquireWriterLock(int.MaxValue);
-                File.AppendAllLines(path, new[] { value });
+                System.IO.File.AppendAllLines(path, new[] { value });
             }
             finally
             {

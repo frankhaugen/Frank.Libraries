@@ -1,9 +1,12 @@
 ﻿using System.Collections.Concurrent;
 using System.Data.SqlClient;
 using System.Text;
+using Frank.Libraries.Logging.EntityFramework;
+using Frank.Libraries.Logging.Exceptions;
+using Frank.Libraries.Logging.Shared;
 using Microsoft.Extensions.Logging;
 
-namespace Frank.Libraries.Logging
+namespace Frank.Libraries.Logging.Sql
 {
     public sealed class SqlLoggerProvider : ILoggerProvider
     {
@@ -24,12 +27,12 @@ namespace Frank.Libraries.Logging
         {
             if (TableExists()) return _loggers.GetOrAdd(categoryName, name => new SqlLogger(name, _configuration));
             if (CreateTable()) return _loggers.GetOrAdd(categoryName, name => new SqlLogger(name, _configuration));
-            throw new SqlLoggerException("A table could not be found or created. Make sure your connection string is correct");
+            throw new LoggerException<SqlLogger>("A table could not be found or created. Make sure your connection string is correct");
         }
 
         private bool TableExists()
         {
-            var tableName = $"{nameof(LogItem)}s";
+            var tableName = $"{nameof(Log)}s";
             var query = $"SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME='{tableName}'";
 
             using var connection = new SqlConnection(_configuration.ConnectionString);
@@ -43,18 +46,18 @@ namespace Frank.Libraries.Logging
         private bool CreateTable()
         {
             var query = new StringBuilder();
-            query.AppendLine($"CREATE TABLE {nameof(LogItem)}s");
+            query.AppendLine($"CREATE TABLE {nameof(Log)}s");
             query.AppendLine("(");
-            query.AppendLine($"{nameof(LogItem.Id)} [bigint] NOT NULL IDENTITY(1, 1) PRIMARY KEY,");
-            query.AppendLine($"{nameof(LogItem.LogLevel)} varchar(32),");
-            query.AppendLine($"{nameof(LogItem.ApplicationName)} varchar(256),");
-            query.AppendLine($"{nameof(LogItem.Message)} varchar(5120),");
-            query.AppendLine($"{nameof(LogItem.Type)} varchar(256),");
-            query.AppendLine($"{nameof(LogItem.EventId)} varchar(256),");
-            query.AppendLine($"{nameof(LogItem.EventName)} varchar(256),");
-            query.AppendLine($"{nameof(LogItem.Exception)} varchar(5120),");
-            query.AppendLine($"{nameof(LogItem.DateTime)} [datetime2],");
-            query.AppendLine($"{nameof(LogItem.Name)} varchar(256),");
+            query.AppendLine($"{nameof(Log.Id)} [bigint] NOT NULL IDENTITY(1, 1) PRIMARY KEY,");
+            query.AppendLine($"{nameof(Log.Level)} varchar(32),");
+            query.AppendLine($"{nameof(Log.ApplicationName)} varchar(256),");
+            query.AppendLine($"{nameof(Log.Message)} varchar(5120),");
+            query.AppendLine($"{nameof(Log.Type)} varchar(256),");
+            query.AppendLine($"{nameof(Log.EventId)} varchar(256),");
+            query.AppendLine($"{nameof(Log.EventName)} varchar(256),");
+            query.AppendLine($"{nameof(Log.Exception)} varchar(5120),");
+            query.AppendLine($"{nameof(Log.Timestamp)} [datetime2],");
+            query.AppendLine($"{nameof(Log.Name)} varchar(256),");
             query.AppendLine(")");
 
             using var connection = new SqlConnection(_configuration.ConnectionString);

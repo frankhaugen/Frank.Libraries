@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using Microsoft.Extensions.Logging;
 
-namespace Frank.Libraries.Logging
+namespace Frank.Libraries.Logging.File
 {
     public sealed class FileLoggerProvider : ILoggerProvider
     {
