@@ -109,14 +109,10 @@ namespace Frank.Libraries.IRC
         /// </summary>
         public event EventHandler<IrcMessageEventArgs> NoticeReceived;
 
-        #region IIrcMessageTarget Members
-
         string IIrcMessageTarget.Name
         {
             get { return Name; }
         }
-
-        #endregion
 
         /// <summary>
         ///     Occurs when a property value changes.
@@ -587,10 +583,8 @@ namespace Frank.Libraries.IRC
             return Name;
         }
 
-        #region IIrcMessageReceiveHandler Members
-
         void IIrcMessageReceiveHandler.HandleMessageReceived(IIrcMessageSource source, IList<IIrcMessageTarget> targets,
-            string text)
+                                                             string text)
         {
             HandleMessageReceived(source, targets, text);
         }
@@ -600,8 +594,6 @@ namespace Frank.Libraries.IRC
         {
             HandleNoticeReceived(source, targets, text);
         }
-
-        #endregion
     }
 
     /// <summary>

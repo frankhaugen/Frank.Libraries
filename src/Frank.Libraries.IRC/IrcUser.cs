@@ -250,23 +250,15 @@ namespace Frank.Libraries.IRC
             }
         }
 
-        #region IIrcMessageSource Members
-
         string IIrcMessageSource.Name
         {
             get { return NickName; }
         }
 
-        #endregion
-
-        #region IIrcMessageTarget Members
-
         string IIrcMessageTarget.Name
         {
             get { return NickName; }
         }
-
-        #endregion
 
         /// <summary>
         ///     Occurs when a property value changes.

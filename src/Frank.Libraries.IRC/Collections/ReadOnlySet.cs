@@ -58,8 +58,6 @@ namespace Frank.Libraries.IRC.Collections
             return sb.ToString();
         }
 
-#region ISet<T> Members
-
         bool ISet<T>.Add(T item)
         {
             throw new NotSupportedException();
@@ -187,10 +185,6 @@ namespace Frank.Libraries.IRC.Collections
             return this.set.SetEquals(other);
         }
 
-#endregion
-
-#region ICollection<T> Members
-
         /// <summary>
         /// Gets the number of elements that are contained in the set.
         /// </summary>
@@ -259,10 +253,6 @@ namespace Frank.Libraries.IRC.Collections
             this.set.CopyTo(array, arrayIndex);
         }
 
-#endregion
-
-#region IEnumerable<T> Members
-
         /// <summary>
         /// Returns an enumerator that iterates through the set.
         /// </summary>
@@ -271,10 +261,6 @@ namespace Frank.Libraries.IRC.Collections
         {
             return ((IEnumerable<T>)this.set).GetEnumerator();
         }
-
-#endregion
-
-#region ICollection Members
 
         void ICollection.CopyTo(Array array, int index)
         {
@@ -291,36 +277,22 @@ namespace Frank.Libraries.IRC.Collections
             get { return this.syncRoot; }
         }
 
-#endregion
-
-#region IEnumerable Members
-
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this.set).GetEnumerator();
         }
 
-#endregion
-
 #if !SILVERLIGHT && !NETSTANDARD1_5
-
-#region ISerializable Members
 
         void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
         {
             ((ISerializable)this.set).GetObjectData(info, context);
         }
 
-#endregion
-
-#region IDeserializationCallback Members
-
         void IDeserializationCallback.OnDeserialization(object sender)
         {
             ((IDeserializationCallback)this.set).OnDeserialization(sender);
         }
-
-#endregion
 
 #endif
     }

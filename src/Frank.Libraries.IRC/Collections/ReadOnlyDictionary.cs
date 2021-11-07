@@ -40,8 +40,6 @@ namespace Frank.Libraries.IRC.Collections
             this.dictionary = dictionary;
         }
 
-#region IDictionary<TKey, TValue> Members
-
         /// <summary>
         /// Gets a collection containing the keys in the dictionary.
         /// </summary>
@@ -121,10 +119,6 @@ namespace Frank.Libraries.IRC.Collections
             throw new NotSupportedException();
         }
 
-#endregion
-
-#region ICollection<KeyValuePair<TKey, TValue>> Members
-
         /// <summary>
         /// Gets the number of key/value pairs contained in the dictionary.
         /// </summary>
@@ -164,10 +158,6 @@ namespace Frank.Libraries.IRC.Collections
             this.dictionary.CopyTo(array, arrayIndex);
         }
 
-#endregion
-
-#region IEnumerable<KeyValuePair<TKey, TValue>> Members
-
         /// <summary>
         /// Returns an enumerator that iterates through the dictionary.
         /// </summary>
@@ -176,10 +166,6 @@ namespace Frank.Libraries.IRC.Collections
         {
             return ((IEnumerable<KeyValuePair<TKey, TValue>>)this.dictionary).GetEnumerator();
         }
-
-#endregion
-
-#region IDictionary Members
 
         ICollection IDictionary.Keys
         {
@@ -238,10 +224,6 @@ namespace Frank.Libraries.IRC.Collections
             return ((IDictionary)this.dictionary).GetEnumerator();
         }
 
-#endregion
-
-#region ICollection Members
-
         void ICollection.CopyTo(Array array, int index)
         {
             ((ICollection)this.dictionary).CopyTo(array, index);
@@ -262,36 +244,22 @@ namespace Frank.Libraries.IRC.Collections
             get { return ((ICollection)this.dictionary).SyncRoot; }
         }
 
-#endregion
-
-#region IEnumerable Members
-
         IEnumerator IEnumerable.GetEnumerator()
         {
             return ((IEnumerable)this.dictionary).GetEnumerator();
         }
 
-#endregion
-
 #if !SILVERLIGHT && !NETSTANDARD1_5
-
-#region ISerializable Members
 
         void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
         {
             ((ISerializable)this.dictionary).GetObjectData(info, context);
         }
 
-#endregion
-
-#region IDeserializationCallback Members
-
         void IDeserializationCallback.OnDeserialization(object sender)
         {
             ((IDeserializationCallback)this.dictionary).OnDeserialization(sender);
         }
-
-#endregion
 
 #endif
     }

@@ -17,14 +17,10 @@
         /// <value>The host name of the server.</value>
         public string HostName { get; }
 
-        #region IIrcMessageSource Members
-
         string IIrcMessageSource.Name
         {
             get { return HostName; }
         }
-
-        #endregion
 
         /// <summary>
         ///     Returns a string representation of this instance.

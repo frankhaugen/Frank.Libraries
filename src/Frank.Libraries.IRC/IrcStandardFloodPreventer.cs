@@ -56,8 +56,6 @@ namespace Frank.Libraries.IRC
         /// <value>The period of the counter, in milliseconds.</value>
         public long CounterPeriod { get; }
 
-        #region IIrcFloodPreventer Members
-
         /// <inheritdoc />
         public long GetSendDelay()
         {
@@ -80,7 +78,5 @@ namespace Frank.Libraries.IRC
             // Increment message count.
             messageCounter++;
         }
-
-        #endregion
     }
 }

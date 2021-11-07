@@ -472,8 +472,6 @@ namespace Frank.Libraries.IRC
                 handler(this, e);
         }
 
-        #region IIrcMessageSendHandler Members
-
         void IIrcMessageSendHandler.HandleMessageSent(IList<IIrcMessageTarget> targets, string text)
         {
             HandleMessageSent(targets, text);
@@ -484,12 +482,8 @@ namespace Frank.Libraries.IRC
             HandleNoticeSent(targets, text);
         }
 
-        #endregion
-
-        #region IIrcMessageReceiveHandler Members
-
         void IIrcMessageReceiveHandler.HandleMessageReceived(IIrcMessageSource source, IList<IIrcMessageTarget> targets,
-            string text)
+                                                             string text)
         {
             HandleMessageReceived(source, targets, text);
         }
@@ -499,7 +493,5 @@ namespace Frank.Libraries.IRC
         {
             HandleNoticeReceived(source, targets, text);
         }
-
-        #endregion
     }
 }
