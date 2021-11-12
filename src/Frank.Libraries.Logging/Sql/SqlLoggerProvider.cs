@@ -44,6 +44,16 @@ namespace Frank.Libraries.Logging.Sql
 
         private bool CreateTable()
         {
+            var properties = typeof(Log).GetProperties();
+
+            foreach (var propertyInfo in properties)
+            {
+                if (propertyInfo.PropertyType == typeof(long))
+                {
+
+                }
+            }
+
             var query = new StringBuilder();
             query.AppendLine($"CREATE TABLE {nameof(Log)}s");
             query.AppendLine("(");
