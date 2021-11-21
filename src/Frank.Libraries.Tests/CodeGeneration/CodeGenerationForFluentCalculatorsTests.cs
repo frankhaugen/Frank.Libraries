@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using Frank.Libraries.CodeGeneration;
+using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.CodeGeneration.Generators.FuentCalculation;
 using Frank.Libraries.Tests.TestingInfrastructure;
 using Xunit;
@@ -33,7 +33,9 @@ namespace Frank.Libraries.Tests.CodeGeneration
 
             // Assert
             Output(result);
-            if (createFile) Output(new FileInfo(Path.Combine(SolutionDirectory().FullName, RootNamespace, Namespace, $"{className}.cs")), result);
+            if (createFile)
+                Output(new FileInfo(Path.Combine(SolutionDirectory()
+                                                     .FullName, RootNamespace, Namespace, $"{className}.cs")), result);
         }
     }
 }

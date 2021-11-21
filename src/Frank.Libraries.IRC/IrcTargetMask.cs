@@ -35,8 +35,9 @@ namespace Frank.Libraries.IRC
 
                 default:
                     throw new ArgumentException(string.Format(
-                        Resources.MessageTargetMaskInvalidType, targetMask), nameof(targetMask));
+                                                    Resources.MessageTargetMaskInvalidType, targetMask), nameof(targetMask));
             }
+
             Mask = Mask?.Substring(1);
         }
 

@@ -27,6 +27,7 @@ namespace Frank.Libraries.Json
             {
                 _options.Folder = _fileSystem.Path.Combine(_fileSystem.Directory.GetCurrentDirectory(), "Data");
             }
+
             _filePath = _fileSystem.Path.Combine(_options.Folder, typeof(TEntity).Name + ".json");
             Setup();
         }
@@ -42,7 +43,9 @@ namespace Frank.Libraries.Json
             {
                 _fileSystem.File.WriteAllText(_filePath, new List<TEntity>().ToJson());
             }
-            _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
+
+            _collection = _fileSystem.File.ReadAllText(_filePath)
+                                     .FromJson<List<TEntity>>();
         }
 
         public List<TEntity> GetList()
@@ -51,7 +54,8 @@ namespace Frank.Libraries.Json
             //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
 
             //return _collection;
-            return _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
+            return _fileSystem.File.ReadAllText(_filePath)
+                              .FromJson<List<TEntity>>();
         }
 
         public IEnumerable<TEntity> GetCollection()
@@ -60,7 +64,8 @@ namespace Frank.Libraries.Json
             //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
 
             //return _collection;
-            return _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
+            return _fileSystem.File.ReadAllText(_filePath)
+                              .FromJson<List<TEntity>>();
         }
 
         public IQueryable<TEntity> GetQueryable()
@@ -69,7 +74,9 @@ namespace Frank.Libraries.Json
             //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
 
             //return _collection.AsQueryable();
-            return _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>().AsQueryable();
+            return _fileSystem.File.ReadAllText(_filePath)
+                              .FromJson<List<TEntity>>()
+                              .AsQueryable();
         }
 
         public TEntity GetById(Guid id)

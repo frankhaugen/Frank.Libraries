@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 namespace Frank.Libraries.Logging.Exceptions
 {
     public class LoggerException<TLogger> : Exception
-    where TLogger : ILogger
+        where TLogger : ILogger
     {
         private readonly string _loggerName;
 

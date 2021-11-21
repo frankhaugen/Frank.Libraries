@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 namespace Frank.Libraries.Logging.EntityFramework
 {
     public class EntityFrameworkLogger<TContext> : ILogger
-    where TContext : DbContext
+        where TContext : DbContext
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly string _name;
@@ -30,7 +30,8 @@ namespace Frank.Libraries.Logging.EntityFramework
             {
                 using var scope = _serviceProvider.CreateScope();
                 using var context = scope.ServiceProvider.GetRequiredService<TContext>();
-                context.Set<Log>().Add(log);
+                context.Set<Log>()
+                       .Add(log);
                 context.SaveChanges();
             }
             catch

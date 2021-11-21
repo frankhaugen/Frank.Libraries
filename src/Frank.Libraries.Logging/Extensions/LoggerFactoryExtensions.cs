@@ -1,8 +1,6 @@
 ﻿using System;
-using Frank.Libraries.Logging.EntityFramework;
 using Frank.Libraries.Logging.File;
 using Frank.Libraries.Logging.Sql;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 

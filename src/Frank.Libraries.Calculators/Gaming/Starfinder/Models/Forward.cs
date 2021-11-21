@@ -1,25 +1,20 @@
-using System.Text.Json.Serialization; 
-namespace Frank.Libraries.Calculators.Gaming.Starfinder.Models{ 
+using System.Text.Json.Serialization;
 
+namespace Frank.Libraries.Calculators.Gaming.Starfinder.Models
+{
     public class Forward
     {
-        [JsonPropertyName("weaponId")]
-        public string WeaponId { get; set; }
+        [JsonPropertyName("weaponId")] public string WeaponId { get; set; }
 
-        [JsonPropertyName("weight")]
-        public string Weight { get; set; }
+        [JsonPropertyName("weight")] public string Weight { get; set; }
 
-        [JsonPropertyName("templateWeight")]
-        public string TemplateWeight { get; set; }
+        [JsonPropertyName("templateWeight")] public string TemplateWeight { get; set; }
 
-        [JsonPropertyName("isFromTemplate")]
-        public bool IsFromTemplate { get; set; }
+        [JsonPropertyName("isFromTemplate")] public bool IsFromTemplate { get; set; }
 
-        [JsonPropertyName("canBeLinked")]
-        public bool CanBeLinked { get; set; }
+        [JsonPropertyName("canBeLinked")] public bool CanBeLinked { get; set; }
 
-        [JsonPropertyName("isLinked")]
-        public bool IsLinked { get; set; }
+        [JsonPropertyName("isLinked")] public bool IsLinked { get; set; }
 
         [JsonPropertyName("canHaveOrbitalDiscount")]
         public bool CanHaveOrbitalDiscount { get; set; }
@@ -27,8 +22,6 @@ namespace Frank.Libraries.Calculators.Gaming.Starfinder.Models{
         [JsonPropertyName("hasOrbitalDiscount")]
         public bool HasOrbitalDiscount { get; set; }
 
-        [JsonPropertyName("specialMaterial")]
-        public string SpecialMaterial { get; set; }
+        [JsonPropertyName("specialMaterial")] public string SpecialMaterial { get; set; }
     }
-
 }

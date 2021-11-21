@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+
 // ReSharper disable UnusedMember.Global
 // ReSharper disable InconsistentNaming
 // ReSharper disable MissingXmlDoc
@@ -41,13 +42,21 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Benin")] BJ = 24,
         [Description("Bermuda")] BM = 25,
         [Description("Bhutan")] BT = 26,
-        [Description("Bolivia (Plurinational State of)")] BO = 27,
-        [Description("Bonaire, Sint Eustatius and Saba")] BQ = 28,
-        [Description("Bosnia and Herzegovina")] BA = 29,
+
+        [Description("Bolivia (Plurinational State of)")]
+        BO = 27,
+
+        [Description("Bonaire, Sint Eustatius and Saba")]
+        BQ = 28,
+
+        [Description("Bosnia and Herzegovina")]
+        BA = 29,
         [Description("Botswana")] BW = 30,
         [Description("Bouvet Island")] BV = 31,
         [Description("Brazil")] BR = 32,
-        [Description("British Indian Ocean Territory")] IO = 33,
+
+        [Description("British Indian Ocean Territory")]
+        IO = 33,
         [Description("Brunei Darussalam")] BN = 34,
         [Description("Bulgaria")] BG = 35,
         [Description("Burkina Faso")] BF = 36,
@@ -57,16 +66,22 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Cameroon")] CM = 40,
         [Description("Canada")] CA = 41,
         [Description("Cayman Islands")] KY = 42,
-        [Description("Central African Republic")] CF = 43,
+
+        [Description("Central African Republic")]
+        CF = 43,
         [Description("Chad")] TD = 44,
         [Description("Chile")] CL = 45,
         [Description("China")] CN = 46,
         [Description("Christmas Island")] CX = 47,
-        [Description("Cocos (Keeling) Islands")] CC = 48,
+
+        [Description("Cocos (Keeling) Islands")]
+        CC = 48,
         [Description("Colombia")] CO = 49,
         [Description("Comoros")] KM = 50,
         [Description("Congo")] CG = 51,
-        [Description("Congo (Democratic Republic of the)")] CD = 52,
+
+        [Description("Congo (Democratic Republic of the)")]
+        CD = 52,
         [Description("Cook Islands")] CK = 53,
         [Description("Costa Rica")] CR = 54,
         [Description("Côte d'Ivoire")] CI = 55,
@@ -86,14 +101,18 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Eritrea")] ER = 69,
         [Description("Estonia")] EE = 70,
         [Description("Ethiopia")] ET = 71,
-        [Description("Falkland Islands (Malvinas)")] FK = 72,
+
+        [Description("Falkland Islands (Malvinas)")]
+        FK = 72,
         [Description("Faroe Islands")] FO = 73,
         [Description("Fiji")] FJ = 74,
         [Description("Finland")] FI = 75,
         [Description("France")] FR = 76,
         [Description("French Guiana")] GF = 77,
         [Description("French Polynesia")] PF = 78,
-        [Description("French Southern Territories")] TF = 79,
+
+        [Description("French Southern Territories")]
+        TF = 79,
         [Description("Gabon")] GA = 80,
         [Description("Gambia")] GM = 81,
         [Description("Georgia")] GE = 82,
@@ -111,7 +130,9 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Guinea-Bissau")] GW = 94,
         [Description("Guyana")] GY = 95,
         [Description("Haiti")] HT = 96,
-        [Description("Heard Island and McDonald Islands")] HM = 97,
+
+        [Description("Heard Island and McDonald Islands")]
+        HM = 97,
         [Description("Holy See")] VA = 98,
         [Description("Honduras")] HN = 99,
         [Description("Hong Kong")] HK = 100,
@@ -119,7 +140,9 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Iceland")] IS = 102,
         [Description("India")] IN = 103,
         [Description("Indonesia")] ID = 104,
-        [Description("Iran (Islamic Republic of)")] IR = 105,
+
+        [Description("Iran (Islamic Republic of)")]
+        IR = 105,
         [Description("Iraq")] IQ = 106,
         [Description("Ireland")] IE = 107,
         [Description("Isle of Man")] IM = 108,
@@ -132,11 +155,15 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Kazakhstan")] KZ = 115,
         [Description("Kenya")] KE = 116,
         [Description("Kiribati")] KI = 117,
-        [Description("Korea (Democratic People's Republic of)")] KP = 118,
+
+        [Description("Korea (Democratic People's Republic of)")]
+        KP = 118,
         [Description("Korea (Republic of)")] KR = 119,
         [Description("Kuwait")] KW = 120,
         [Description("Kyrgyzstan")] KG = 121,
-        [Description("Lao People's Democratic Republic")] LA = 122,
+
+        [Description("Lao People's Democratic Republic")]
+        LA = 122,
         [Description("Latvia")] LV = 123,
         [Description("Lebanon")] LB = 124,
         [Description("Lesotho")] LS = 125,
@@ -146,7 +173,9 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Lithuania")] LT = 129,
         [Description("Luxembourg")] LU = 130,
         [Description("Macao")] MO = 131,
-        [Description("Macedonia (the former Yugoslav Republic of)")] MK = 132,
+
+        [Description("Macedonia (the former Yugoslav Republic of)")]
+        MK = 132,
         [Description("Madagascar")] MG = 133,
         [Description("Malawi")] MW = 134,
         [Description("Malaysia")] MY = 135,
@@ -159,7 +188,9 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Mauritius")] MU = 142,
         [Description("Mayotte")] YT = 143,
         [Description("Mexico")] MX = 144,
-        [Description("Micronesia (Federated States of)")] FM = 145,
+
+        [Description("Micronesia (Federated States of)")]
+        FM = 145,
         [Description("Moldova (Republic of)")] MD = 146,
         [Description("Monaco")] MC = 147,
         [Description("Mongolia")] MN = 148,
@@ -179,7 +210,9 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Nigeria")] NG = 162,
         [Description("Niue")] NU = 163,
         [Description("Norfolk Island")] NF = 164,
-        [Description("Northern Mariana Islands")] MP = 165,
+
+        [Description("Northern Mariana Islands")]
+        MP = 165,
         [Description("Norway")] NO = 166,
         [Description("Oman")] OM = 167,
         [Description("Pakistan")] PK = 168,
@@ -200,12 +233,20 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Russian Federation")] RU = 183,
         [Description("Rwanda")] RW = 184,
         [Description("Saint Barthélemy")] BL = 185,
-        [Description("Saint Helena, Ascension and Tristan da Cunha")] SH = 186,
+
+        [Description("Saint Helena, Ascension and Tristan da Cunha")]
+        SH = 186,
         [Description("Saint Kitts and Nevis")] KN = 187,
         [Description("Saint Lucia")] LC = 188,
-        [Description("Saint Martin (French part)")] MF = 189,
-        [Description("Saint Pierre and Miquelon")] PM = 190,
-        [Description("Saint Vincent and the Grenadines")] VC = 191,
+
+        [Description("Saint Martin (French part)")]
+        MF = 189,
+
+        [Description("Saint Pierre and Miquelon")]
+        PM = 190,
+
+        [Description("Saint Vincent and the Grenadines")]
+        VC = 191,
         [Description("Samoa")] WS = 192,
         [Description("San Marino")] SM = 193,
         [Description("Sao Tome and Principe")] ST = 194,
@@ -215,26 +256,36 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Seychelles")] SC = 198,
         [Description("Sierra Leone")] SL = 199,
         [Description("Singapore")] SG = 200,
-        [Description("Sint Maarten (Dutch part)")] SX = 201,
+
+        [Description("Sint Maarten (Dutch part)")]
+        SX = 201,
         [Description("Slovakia")] SK = 202,
         [Description("Slovenia")] SI = 203,
         [Description("Solomon Islands")] SB = 204,
         [Description("Somalia")] SO = 205,
         [Description("South Africa")] ZA = 206,
-        [Description("South Georgia and the South Sandwich Islands")] GS = 207,
+
+        [Description("South Georgia and the South Sandwich Islands")]
+        GS = 207,
         [Description("South Sudan")] SS = 208,
         [Description("Spain")] ES = 209,
         [Description("Sri Lanka")] LK = 210,
         [Description("Sudan")] SD = 211,
         [Description("Suriname")] SR = 212,
-        [Description("Svalbard and Jan Mayen")] SJ = 213,
+
+        [Description("Svalbard and Jan Mayen")]
+        SJ = 213,
         [Description("Swaziland")] SZ = 214,
         [Description("Sweden")] SE = 215,
         [Description("Switzerland")] CH = 216,
         [Description("Syrian Arab Republic")] SY = 217,
-        [Description("Taiwan, Province of China[a]")] TW = 218,
+
+        [Description("Taiwan, Province of China[a]")]
+        TW = 218,
         [Description("Tajikistan")] TJ = 219,
-        [Description("Tanzania, United Republic of")] TZ = 220,
+
+        [Description("Tanzania, United Republic of")]
+        TZ = 220,
         [Description("Thailand")] TH = 221,
         [Description("Timor-Leste")] TL = 222,
         [Description("Togo")] TG = 223,
@@ -244,20 +295,32 @@ namespace Frank.Libraries.Enums.Countries
         [Description("Tunisia")] TN = 227,
         [Description("Turkey")] TR = 228,
         [Description("Turkmenistan")] TM = 229,
-        [Description("Turks and Caicos Islands")] TC = 230,
+
+        [Description("Turks and Caicos Islands")]
+        TC = 230,
         [Description("Tuvalu")] TV = 231,
         [Description("Uganda")] UG = 232,
         [Description("Ukraine")] UA = 233,
         [Description("United Arab Emirates")] AE = 234,
-        [Description("United Kingdom of Great Britain and Northern Ireland")] GB = 235,
-        [Description("United States of America")] US = 236,
-        [Description("United States Minor Outlying Islands")] UM = 237,
+
+        [Description("United Kingdom of Great Britain and Northern Ireland")]
+        GB = 235,
+
+        [Description("United States of America")]
+        US = 236,
+
+        [Description("United States Minor Outlying Islands")]
+        UM = 237,
         [Description("Uruguay")] UY = 238,
         [Description("Uzbekistan")] UZ = 239,
         [Description("Vanuatu")] VU = 240,
-        [Description("Venezuela (Bolivarian Republic of)")] VE = 241,
+
+        [Description("Venezuela (Bolivarian Republic of)")]
+        VE = 241,
         [Description("Viet Nam")] VN = 242,
-        [Description("Virgin Islands (British)")] VG = 243,
+
+        [Description("Virgin Islands (British)")]
+        VG = 243,
         [Description("Virgin Islands (U.S.)")] VI = 244,
         [Description("Wallis and Futuna")] WF = 245,
         [Description("Western Sahara")] EH = 246,

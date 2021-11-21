@@ -1,11 +1,11 @@
-﻿using AutoBogus;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AutoBogus;
 using Bogus;
 using ConsoleTableExt;
 using FluentAssertions;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
-using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -34,8 +34,10 @@ namespace Frank.Libraries.Tests.Extensions
 
             // Assert
             var testDocuments = result.ToList();
-            testDocuments.Should().BeEquivalentTo(items);
-            testDocuments.Should().HaveSameCount(items);
+            testDocuments.Should()
+                         .BeEquivalentTo(items);
+            testDocuments.Should()
+                         .HaveSameCount(items);
         }
 
         [Fact]
@@ -48,10 +50,12 @@ namespace Frank.Libraries.Tests.Extensions
             // Act
             var result = dataTable.Pivot(dataTable.Columns[1], dataTable.Columns[3]);
             var consoleTable = ConsoleTableBuilder.From(result);
-            _outputHelper.WriteLine(consoleTable.Export().ToString());
+            _outputHelper.WriteLine(consoleTable.Export()
+                                                .ToString());
 
             // Assert
-            _faker.Name.Locale.Should().NotBeEmpty();
+            _faker.Name.Locale.Should()
+                  .NotBeEmpty();
         }
 
         private List<T> CreateTestModels<T>(int count = 10) where T : class => new AutoFaker<T>().Generate(count);

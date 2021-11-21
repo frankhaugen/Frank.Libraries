@@ -1,35 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-      <IsPackable>false</IsPackable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
-    <PackageReference Include="AutoBogus" Version="2.13.1" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.1"/>
+        <PackageReference Include="AutoBogus" Version="2.13.1"/>
+    </ItemGroup>
 
-  <ItemGroup>
-      <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
-      <ProjectReference Include="..\Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj" />
-    <ProjectReference Include="..\Frank.Libraries.ML\Frank.Libraries.ML.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj"/>
+        <ProjectReference Include="..\Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj"/>
+        <ProjectReference Include="..\Frank.Libraries.ML\Frank.Libraries.ML.csproj"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="BenchmarkDotNet.Artifacts\**" />
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="BenchmarkDotNet.Artifacts\**"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**" />
-  </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="BenchmarkDotNet.Artifacts\**" />
-    <None Update="LanguageDetection\Texts\NorwegianSult.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="BenchmarkDotNet.Artifacts\**"/>
+        <None Update="LanguageDetection\Texts\NorwegianSult.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
 </Project>

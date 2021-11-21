@@ -109,6 +109,5 @@ namespace Frank.Libraries.Tests.FluentCalculation
             // Assert
             Output(result);
         }
-
     }
 }

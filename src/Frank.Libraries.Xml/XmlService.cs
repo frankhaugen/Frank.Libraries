@@ -18,7 +18,7 @@ namespace Frank.Libraries.Xml
         {
             using TextReader xmlReader = new StringReader(xml);
 
-            var settings = new XmlReaderSettings();//http://docs.oasis-open.org/ubl/os-UBL-2.1/xsdrt/
+            var settings = new XmlReaderSettings(); //http://docs.oasis-open.org/ubl/os-UBL-2.1/xsdrt/
 
             foreach (var xsd in xsds)
             {

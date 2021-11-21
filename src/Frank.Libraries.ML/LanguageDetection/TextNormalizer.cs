@@ -48,6 +48,7 @@ namespace Frank.Libraries.ML.LanguageDetection
             {
                 textWithoutLatin.Append(c);
             }
+
             text = textWithoutLatin.ToString();
 
             return text;

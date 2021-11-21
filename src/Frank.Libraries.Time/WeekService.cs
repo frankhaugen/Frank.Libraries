@@ -12,9 +12,16 @@ namespace Frank.Libraries.Time
             _clock = clock;
         }
 
-        public int Year => _clock.GetCurrentInstant().InUtc().Year;
-        public int Week => ISOWeek.GetWeekOfYear(_clock.GetCurrentInstant().ToDateTimeUtc());
-        public int Day => (int)_clock.GetCurrentInstant().InUtc().DayOfWeek;
+        public int Year => _clock.GetCurrentInstant()
+                                 .InUtc()
+                                 .Year;
+
+        public int Week => ISOWeek.GetWeekOfYear(_clock.GetCurrentInstant()
+                                                       .ToDateTimeUtc());
+
+        public int Day => (int)_clock.GetCurrentInstant()
+                                     .InUtc()
+                                     .DayOfWeek;
 
         /// <summary>
         /// The day of week starts on monday

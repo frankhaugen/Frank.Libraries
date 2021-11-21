@@ -34,7 +34,7 @@ namespace Frank.Libraries.ML.LanguageDetection
             }
         }
 
-        internal static List<string> ExtractNGrams(this WordProbabilities probabilities,  string text)
+        internal static List<string> ExtractNGrams(this WordProbabilities probabilities, string text)
         {
             var list = new List<string>();
 

@@ -29,8 +29,10 @@ namespace Frank.Libraries.Security.Encryption
             cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
             cryptoStream.FlushFinalBlock();
             var cipherTextBytes = saltStringBytes;
-            cipherTextBytes = cipherTextBytes.Concat(ivStringBytes).ToArray();
-            cipherTextBytes = cipherTextBytes.Concat(memoryStream.ToArray()).ToArray();
+            cipherTextBytes = cipherTextBytes.Concat(ivStringBytes)
+                                             .ToArray();
+            cipherTextBytes = cipherTextBytes.Concat(memoryStream.ToArray())
+                                             .ToArray();
             memoryStream.Close();
             cryptoStream.Close();
             return Convert.ToBase64String(cipherTextBytes);
@@ -39,9 +41,14 @@ namespace Frank.Libraries.Security.Encryption
         public static string Decrypt(string passPhrase, string cipherText)
         {
             var cipherTextBytesWithSaltAndIv = Convert.FromBase64String(cipherText);
-            var saltStringBytes = cipherTextBytesWithSaltAndIv.Take(Keysize / 8).ToArray();
-            var ivStringBytes = cipherTextBytesWithSaltAndIv.Skip(Keysize / 8).Take(Keysize / 8).ToArray();
-            var cipherTextBytes = cipherTextBytesWithSaltAndIv.Skip((Keysize / 8) * 2).Take(cipherTextBytesWithSaltAndIv.Length - ((Keysize / 8) * 2)).ToArray();
+            var saltStringBytes = cipherTextBytesWithSaltAndIv.Take(Keysize / 8)
+                                                              .ToArray();
+            var ivStringBytes = cipherTextBytesWithSaltAndIv.Skip(Keysize / 8)
+                                                            .Take(Keysize / 8)
+                                                            .ToArray();
+            var cipherTextBytes = cipherTextBytesWithSaltAndIv.Skip((Keysize / 8) * 2)
+                                                              .Take(cipherTextBytesWithSaltAndIv.Length - ((Keysize / 8) * 2))
+                                                              .ToArray();
             using var password = new Rfc2898DeriveBytes(passPhrase, saltStringBytes, DerivationIterations);
             var keyBytes = password.GetBytes(Keysize / 8);
             using var symmetricKey = new RijndaelManaged();

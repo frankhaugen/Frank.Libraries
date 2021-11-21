@@ -29,7 +29,8 @@ namespace Frank.Libraries.Tests.Security
             }
 
             // Assert
-            resultList.Should().OnlyHaveUniqueItems();
+            resultList.Should()
+                      .OnlyHaveUniqueItems();
         }
 
         [Fact]
@@ -78,7 +79,8 @@ namespace Frank.Libraries.Tests.Security
             var result = passwordGenerator.GeneratePassword();
 
             // Assert
-            result.Should().HaveLength(12);
+            result.Should()
+                  .HaveLength(12);
         }
 
         [Fact]
@@ -92,7 +94,8 @@ namespace Frank.Libraries.Tests.Security
             var result = passwordGenerator.GeneratePassword(characterCount);
 
             // Assert
-            result.Should().HaveLength(characterCount);
+            result.Should()
+                  .HaveLength(characterCount);
             _outputHelper.WriteLine(result);
         }
     }

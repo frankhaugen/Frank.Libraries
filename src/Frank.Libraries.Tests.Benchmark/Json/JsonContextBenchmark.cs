@@ -20,8 +20,7 @@ namespace Frank.Libraries.Tests.Benchmark.Json
         private JsonContext<JsonTestModel> _jsonContext;
         private readonly Guid _guid = Guid.NewGuid();
 
-        [Params(100000)]
-        public int Records { get; set; }
+        [Params(100000)] public int Records { get; set; }
 
         public JsonContextBenchmark()
         {
@@ -70,7 +69,10 @@ namespace Frank.Libraries.Tests.Benchmark.Json
 
             var files = directory.EnumerateFiles();
 
-            BenchmarkDotNet.Loggers.ConsoleLogger.Default.WriteLine(LogKind.Default, "Filesize:" + files.Select(x => x.Length).Sum().ToString("N"));
+            BenchmarkDotNet.Loggers.ConsoleLogger.Default.WriteLine(LogKind.Default, "Filesize:"
+                                                                                     + files.Select(x => x.Length)
+                                                                                            .Sum()
+                                                                                            .ToString("N"));
 
             foreach (var fileInfo in files)
             {

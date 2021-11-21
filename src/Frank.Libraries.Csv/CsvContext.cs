@@ -38,7 +38,8 @@ namespace Frank.Libraries.Csv
             csv.Context.TypeConverterOptionsCache.AddOptions<DateTime>(options);
             csv.Context.TypeConverterOptionsCache.AddOptions<DateTime?>(options);
             csv.Context.RegisterClassMap<TMap>();
-            return csv.GetRecords<T>().ToList();
+            return csv.GetRecords<T>()
+                      .ToList();
         }
 
         public List<T> Read<T, TMap>(string text, string delimiter = ";", string newLine = "\n", bool hasHeaderRecord = true) where TMap : ClassMap<T> where T : class, new()
@@ -49,7 +50,8 @@ namespace Frank.Libraries.Csv
             csv.Context.TypeConverterOptionsCache.AddOptions<DateTime>(options);
             csv.Context.TypeConverterOptionsCache.AddOptions<DateTime?>(options);
             csv.Context.RegisterClassMap<TMap>();
-            return csv.GetRecords<T>().ToList();
+            return csv.GetRecords<T>()
+                      .ToList();
         }
 
         public void Write<T, TMap>(FileInfo file, List<T> records, string delimiter = ";", string newLine = "\n", bool hasHeaderRecord = true) where TMap : ClassMap<T> where T : class, new()

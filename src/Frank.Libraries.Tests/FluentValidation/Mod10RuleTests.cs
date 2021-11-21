@@ -18,8 +18,10 @@ namespace Frank.Libraries.Tests.FluentValidation
             var result = validator.Validate(number);
 
             // Assert
-            result.Errors.Should().BeEmpty();
-            result.IsValid.Should().BeTrue();
+            result.Errors.Should()
+                  .BeEmpty();
+            result.IsValid.Should()
+                  .BeTrue();
         }
 
         [Fact]
@@ -33,8 +35,10 @@ namespace Frank.Libraries.Tests.FluentValidation
             var result = validator.Validate(number);
 
             // Assert
-            result.Errors.Should().BeEmpty();
-            result.IsValid.Should().BeTrue();
+            result.Errors.Should()
+                  .BeEmpty();
+            result.IsValid.Should()
+                  .BeTrue();
         }
 
         [Theory]
@@ -49,9 +53,12 @@ namespace Frank.Libraries.Tests.FluentValidation
             var result = Mod10Rule.GetMod10(value);
 
             // Assert
-            result.Should().NotBeNull();
-            result.ControlNumber.Should().Be(expectedControlNumber);
-            result.IsValid.Should().Be(expectedValidity);
+            result.Should()
+                  .NotBeNull();
+            result.ControlNumber.Should()
+                  .Be(expectedControlNumber);
+            result.IsValid.Should()
+                  .Be(expectedValidity);
         }
     }
 }

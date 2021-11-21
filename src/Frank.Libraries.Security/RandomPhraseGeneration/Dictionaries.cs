@@ -16,14 +16,18 @@ namespace Frank.Libraries.Security.RandomPhraseGeneration
 
         public Dictionaries()
         {
-            Nouns = GetResource("english-nouns.txt").Split('\n');
-            Adjectives = GetResource("english-adjectives.txt").Split('\n');
-            Verbs = GetResource("english-verbs.txt").Split('\n');
+            Nouns = GetResource("english-nouns.txt")
+                .Split('\n');
+            Adjectives = GetResource("english-adjectives.txt")
+                .Split('\n');
+            Verbs = GetResource("english-verbs.txt")
+                .Split('\n');
         }
 
         private string GetResource(string filename)
         {
-            var assembly = GetType().Assembly;
+            var assembly = GetType()
+                .Assembly;
             using var stream = assembly.GetManifestResourceStream(ResourceNamePrefix + filename)!;
             using var streamReader = new StreamReader(stream!);
             var rawString = streamReader.ReadToEnd();
@@ -33,9 +37,9 @@ namespace Frank.Libraries.Security.RandomPhraseGeneration
         public IReadOnlyDictionary<WordVariant, IReadOnlyList<string>> GetDictionaryOfDictionaries() =>
             new ReadOnlyDictionary<WordVariant, IReadOnlyList<string>>(new Dictionary<WordVariant, IReadOnlyList<string>>
             {
-                {WordVariant.Adjective, Adjectives},
-                {WordVariant.Noun, Nouns},
-                {WordVariant.Verb, Verbs}
+                { WordVariant.Adjective, Adjectives },
+                { WordVariant.Noun, Nouns },
+                { WordVariant.Verb, Verbs }
             });
     }
 }

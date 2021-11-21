@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
-    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+<Invoice xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+         xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+         xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
     <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
     <cbc:ID>TOSL108</cbc:ID>
     <cbc:IssueDate>2009-12-15</cbc:IssueDate>
@@ -9,7 +9,8 @@
     <cbc:Note languageID="en">Ordered in our booth at the convention.</cbc:Note>
     <cbc:TaxPointDate>2009-11-30</cbc:TaxPointDate>
     <cbc:DocumentCurrencyCode listID="ISO 4217 Alpha" listAgencyID="6"
-        >EUR</cbc:DocumentCurrencyCode>
+    >EUR
+    </cbc:DocumentCurrencyCode>
     <cbc:AccountingCost>Project cost code 123</cbc:AccountingCost>
     <cac:InvoicePeriod>
         <cbc:StartDate>2009-11-01</cbc:StartDate>
@@ -36,7 +37,8 @@
         <cbc:DocumentType>Drawing</cbc:DocumentType>
         <cac:Attachment>
             <cbc:EmbeddedDocumentBinaryObject mimeCode="application/pdf"
-                >UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+            >UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi
+            </cbc:EmbeddedDocumentBinaryObject>
         </cac:Attachment>
     </cac:AdditionalDocumentReference>
     <cac:AccountingSupplierParty>
@@ -60,7 +62,8 @@
                 <cbc:CountrySubentityCode>RegionA</cbc:CountrySubentityCode>
                 <cac:Country>
                     <cbc:IdentificationCode listID="ISO3166-1" listAgencyID="6"
-                        >DK</cbc:IdentificationCode>
+                    >DK
+                    </cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
             <cac:PartyTaxScheme>
@@ -114,7 +117,8 @@
                 <cbc:CountrySubentity>RegionB</cbc:CountrySubentity>
                 <cac:Country>
                     <cbc:IdentificationCode listID="ISO3166-1" listAgencyID="6"
-                        >BE</cbc:IdentificationCode>
+                    >BE
+                    </cbc:IdentificationCode>
                 </cac:Country>
             </cac:PostalAddress>
             <cac:PartyTaxScheme>
@@ -177,7 +181,8 @@
     </cac:Delivery>
     <cac:PaymentMeans>
         <cbc:PaymentMeansCode listID="UN/ECE 4461"
-            >31</cbc:PaymentMeansCode>
+        >31
+        </cbc:PaymentMeansCode>
         <cbc:PaymentDueDate>2009-12-31</cbc:PaymentDueDate>
         <cbc:PaymentChannelCode>IBAN</cbc:PaymentChannelCode>
         <cbc:PaymentID>Payref1</cbc:PaymentID>
@@ -234,7 +239,8 @@
                 <cbc:ID schemeID="UN/ECE 5305" schemeAgencyID="6">E</cbc:ID>
                 <cbc:Percent>0</cbc:Percent>
                 <cbc:TaxExemptionReasonCode listID="CWA 15577" listAgencyID="ZZZ"
-                    >AAM</cbc:TaxExemptionReasonCode>
+                >AAM
+                </cbc:TaxExemptionReasonCode>
                 <cbc:TaxExemptionReason>Exempt New Means of Transport</cbc:TaxExemptionReason>
                 <cac:TaxScheme>
                     <cbc:ID schemeID="UN/ECE 5153" schemeAgencyID="6">VAT</cbc:ID>
@@ -288,11 +294,13 @@
             </cac:StandardItemIdentification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="113" listID="UNSPSC"
-                    >12344321</cbc:ItemClassificationCode>
+                >12344321
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="2" listID="CPV"
-                    >65434568</cbc:ItemClassificationCode>
+                >65434568
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <ClassifiedTaxCategory
                 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
@@ -340,11 +348,13 @@
             </cac:StandardItemIdentification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="113" listID="UNSPSC"
-                    >32344324</cbc:ItemClassificationCode>
+                >32344324
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="2" listID="CPV"
-                    >65434567</cbc:ItemClassificationCode>
+                >65434567
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <ClassifiedTaxCategory
                 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
@@ -380,11 +390,13 @@
             </cac:StandardItemIdentification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="113" listID="UNSPSC"
-                    >32344324</cbc:ItemClassificationCode>
+                >32344324
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="2" listID="CPV"
-                    >65434566</cbc:ItemClassificationCode>
+                >65434566
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <ClassifiedTaxCategory
                 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
@@ -427,11 +439,13 @@
             </cac:StandardItemIdentification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="113" listID="UNSPSC"
-                    >12344322</cbc:ItemClassificationCode>
+                >12344322
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="2" listID="CPV"
-                    >65434565</cbc:ItemClassificationCode>
+                >65434565
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <ClassifiedTaxCategory
                 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
@@ -468,11 +482,13 @@
             </cac:StandardItemIdentification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="113" listID="UNSPSC"
-                    >12344325</cbc:ItemClassificationCode>
+                >12344325
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <cac:CommodityClassification>
                 <cbc:ItemClassificationCode listAgencyID="2" listID="CPV"
-                    >65434564</cbc:ItemClassificationCode>
+                >65434564
+                </cbc:ItemClassificationCode>
             </cac:CommodityClassification>
             <ClassifiedTaxCategory
                 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">

@@ -66,14 +66,8 @@ namespace Frank.Libraries.IRC.Collections
         /// </exception>
         public TValue this[TKey key]
         {
-            get
-            {
-                return this.dictionary[key];
-            }
-            set
-            {
-                throw new NotSupportedException();
-            }
+            get { return this.dictionary[key]; }
+            set { throw new NotSupportedException(); }
         }
 
         /// <summary>
@@ -189,14 +183,8 @@ namespace Frank.Libraries.IRC.Collections
 
         object IDictionary.this[object key]
         {
-            get
-            {
-                return ((IDictionary)this.dictionary)[key];
-            }
-            set
-            {
-                throw new NotSupportedException();
-            }
+            get { return ((IDictionary)this.dictionary)[key]; }
+            set { throw new NotSupportedException(); }
         }
 
         void IDictionary.Add(object key, object value)

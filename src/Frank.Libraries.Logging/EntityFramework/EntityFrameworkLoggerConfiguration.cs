@@ -4,6 +4,5 @@ namespace Frank.Libraries.Logging.EntityFramework
 {
     public class EntityFrameworkLoggerConfiguration : LoggerConfigurationBase
     {
-
     }
 }

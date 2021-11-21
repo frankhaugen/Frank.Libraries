@@ -8,7 +8,6 @@ using System.Net.Sockets;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using Frank.Libraries.IRC.Properties;
-
 #if !SILVERLIGHT
 
 #endif
@@ -42,7 +41,7 @@ namespace Frank.Libraries.IRC
         {
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             sendTimer = new Timer(WritePendingMessages, null,
-                Timeout.Infinite, Timeout.Infinite);
+                                  Timeout.Infinite, Timeout.Infinite);
             disconnectedEvent = new AutoResetEvent(false);
 
             messageSendQueue = new Queue<Tuple<string, object>>();
@@ -69,26 +68,31 @@ namespace Frank.Libraries.IRC
 
                     HandleClientDisconnected();
                 }
+
                 if (receiveStream != null)
                 {
                     receiveStream.Dispose();
                     receiveStream = null;
                 }
+
                 if (dataStream != null)
                 {
                     dataStream.Dispose();
                     dataStream = null;
                 }
+
                 if (dataStreamReader != null)
                 {
                     dataStreamReader.Dispose();
                     dataStreamReader = null;
                 }
+
                 if (sendTimer != null)
                 {
                     sendTimer.Dispose();
                     sendTimer = null;
                 }
+
                 if (disconnectedEvent != null)
                 {
                     disconnectedEvent.Dispose();
@@ -122,9 +126,11 @@ namespace Frank.Libraries.IRC
                 useSsl = true;
             else
                 throw new ArgumentException(string.Format(Resources.MessageInvalidUrlScheme,
-                    url.Scheme), "url");
+                                                          url.Scheme), "url");
 
-            Connect(url.Host, url.Port == -1 ? DefaultPort : url.Port, useSsl, registrationInfo);
+            Connect(url.Host, url.Port == -1
+                        ? DefaultPort
+                        : url.Port, useSsl, registrationInfo);
         }
 
         /// <inheritdoc cref="Connect(string, int, bool, IrcRegistrationInfo)"/>
@@ -336,7 +342,7 @@ namespace Frank.Libraries.IRC
             var receiveEventArgs = new SocketAsyncEventArgs();
             Debug.Assert(receiveStream.Buffer.Length - (int)receiveStream.WritePosition > 0);
             receiveEventArgs.SetBuffer(receiveStream.Buffer, (int)receiveStream.WritePosition,
-                receiveStream.Buffer.Length - (int)receiveStream.WritePosition);
+                                       receiveStream.Buffer.Length - (int)receiveStream.WritePosition);
             receiveEventArgs.Completed += ReceiveCompleted;
 
             if (!socket.ReceiveAsync(receiveEventArgs))
@@ -513,7 +519,7 @@ namespace Frank.Libraries.IRC
         protected override void HandleClientConnected(IrcRegistrationInfo regInfo)
         {
             DebugUtilities.WriteEvent(string.Format("Connected to server at '{0}'.",
-                ((IPEndPoint)socket.RemoteEndPoint).Address));
+                                                    ((IPEndPoint)socket.RemoteEndPoint).Address));
 
             base.HandleClientConnected(regInfo);
         }
@@ -563,7 +569,7 @@ namespace Frank.Libraries.IRC
         {
             if (!IsDisposed && IsConnected)
                 return string.Format("{0}@{1}", LocalUser.UserName,
-                    ServerName ?? socket.RemoteEndPoint.ToString());
+                                     ServerName ?? socket.RemoteEndPoint.ToString());
             return "(Not connected)";
         }
 
@@ -575,7 +581,7 @@ namespace Frank.Libraries.IRC
             {
                 // Create SSL stream over network stream to use for data transmission.
                 var sslStream = new SslStream(receiveStream, true,
-                    SslUserCertificateValidationCallback);
+                                              SslUserCertificateValidationCallback);
 
 #if NETSTANDARD1_5
                 var authTask = sslStream.AuthenticateAsClientAsync(targetHost);
@@ -586,12 +592,13 @@ namespace Frank.Libraries.IRC
                 Debug.Assert(sslStream.IsAuthenticated);
                 return sslStream;
             }
+
             // Use network stream directly for data transmission.
             return receiveStream;
         }
 
         private bool SslUserCertificateValidationCallback(object sender, X509Certificate certificate, X509Chain chain,
-            SslPolicyErrors sslPolicyErrors)
+                                                          SslPolicyErrors sslPolicyErrors)
         {
             // Raise an event to decide whether the certificate is valid.
             var eventArgs = new IrcValidateSslCertificateEventArgs(certificate, chain, sslPolicyErrors);

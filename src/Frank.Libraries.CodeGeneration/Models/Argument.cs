@@ -17,7 +17,8 @@ namespace Frank.Libraries.CodeGeneration.Models
         public Argument(Type type, string? name = null, bool isNullable = false, bool isParams = false, bool isExtension = false, string defaultValue = "")
         {
             Type = type;
-            Name = name.FallbackIfNull(nameof(Type).ToCamelcase());
+            Name = name.FallbackIfNull(nameof(Type)
+                                           .ToCamelcase());
             IsParams = isParams;
             HasDefaultValue = !string.IsNullOrWhiteSpace(defaultValue);
             DefaultValue = defaultValue;
@@ -29,14 +30,14 @@ namespace Frank.Libraries.CodeGeneration.Models
         public override string ToString()
         {
             return new StringBuilder()
-                .AppendIf("this ", IsExtension)
-                .AppendIf("params ", IsParams)
-                .Append(Type.FullName.FallbackIfNull(Type.Name))
-                .AppendIf("? ", IsNullable, " ")
-                .Append(Name)
-                .AppendIf(" = ", HasDefaultValue)
-                .AppendIf(DefaultValue, HasDefaultValue)
-                .ToString();
+                   .AppendIf("this ", IsExtension)
+                   .AppendIf("params ", IsParams)
+                   .Append(Type.FullName.FallbackIfNull(Type.Name))
+                   .AppendIf("? ", IsNullable, " ")
+                   .Append(Name)
+                   .AppendIf(" = ", HasDefaultValue)
+                   .AppendIf(DefaultValue, HasDefaultValue)
+                   .ToString();
         }
     }
 }

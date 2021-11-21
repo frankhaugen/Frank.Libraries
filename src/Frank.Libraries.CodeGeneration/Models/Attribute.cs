@@ -14,6 +14,7 @@ namespace Frank.Libraries.CodeGeneration.Models
         }
 
         /// <inheritdoc/>
-        public override string ToString() => new StringBuilder().AppendSurroundedBy('[', Name, ']').ToString();
+        public override string ToString() => new StringBuilder().AppendSurroundedBy('[', Name, ']')
+                                                                .ToString();
     }
 }

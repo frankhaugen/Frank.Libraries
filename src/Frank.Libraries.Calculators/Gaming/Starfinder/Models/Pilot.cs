@@ -1,19 +1,15 @@
-using System.Text.Json.Serialization; 
-namespace Frank.Libraries.Calculators.Gaming.Starfinder.Models{ 
+using System.Text.Json.Serialization;
 
+namespace Frank.Libraries.Calculators.Gaming.Starfinder.Models
+{
     public class Pilot
     {
-        [JsonPropertyName("countOfficers")]
-        public int CountOfficers { get; set; }
+        [JsonPropertyName("countOfficers")] public int CountOfficers { get; set; }
 
-        [JsonPropertyName("countOfficerCrew")]
-        public int CountOfficerCrew { get; set; }
+        [JsonPropertyName("countOfficerCrew")] public int CountOfficerCrew { get; set; }
 
-        [JsonPropertyName("hasRole")]
-        public bool HasRole { get; set; }
+        [JsonPropertyName("hasRole")] public bool HasRole { get; set; }
 
-        [JsonPropertyName("skills")]
-        public Skills Skills { get; set; }
+        [JsonPropertyName("skills")] public Skills Skills { get; set; }
     }
-
 }

@@ -24,7 +24,8 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var result = languages;
 
             // Assert
-            result.Should().NotBeNull();
+            result.Should()
+                  .NotBeNull();
 
             foreach (var language in result)
             {
@@ -42,9 +43,12 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var result = languages.Random();
 
             // Assert
-            result.Should().NotBeNull();
-            result.Frequency.Should().NotBeNull();
-            result.WordCount.Should().NotBeNull();
+            result.Should()
+                  .NotBeNull();
+            result.Frequency.Should()
+                  .NotBeNull();
+            result.WordCount.Should()
+                  .NotBeNull();
         }
 
         [Fact]
@@ -57,9 +61,12 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var result = languages.FirstOrDefault(x => x.LanguageCode.GetName() == "Norwegian");
 
             // Assert
-            result.Should().NotBeNull();
-            result?.Frequency.Should().NotBeNull();
-            result?.WordCount.Should().NotBeNull();
+            result.Should()
+                  .NotBeNull();
+            result?.Frequency.Should()
+                  .NotBeNull();
+            result?.WordCount.Should()
+                  .NotBeNull();
         }
 
         [Fact]
@@ -72,7 +79,8 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var result = ngram.Get(0);
 
             // Assert
-            result.Should().BeNull();
+            result.Should()
+                  .BeNull();
         }
 
         [Fact]
@@ -85,7 +93,8 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var result = ngram.Get(100);
 
             // Assert
-            result.Should().BeNull();
+            result.Should()
+                  .BeNull();
         }
 
         [Fact]
@@ -99,7 +108,8 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var result = ngram.Get(1);
 
             // Assert
-            result.Should().NotBeNull();
+            result.Should()
+                  .NotBeNull();
         }
 
         [Fact]
@@ -114,7 +124,8 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var result = ngram.Get(1);
 
             // Assert
-            result.Should().NotBeNull();
+            result.Should()
+                  .NotBeNull();
         }
     }
 }

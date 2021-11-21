@@ -50,7 +50,6 @@ namespace Frank.Libraries.Logging.Sql
             {
                 if (propertyInfo.PropertyType == typeof(long))
                 {
-
                 }
             }
 

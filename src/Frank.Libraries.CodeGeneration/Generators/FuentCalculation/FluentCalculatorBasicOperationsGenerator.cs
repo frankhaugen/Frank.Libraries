@@ -29,10 +29,11 @@ namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
                             if (@operator.Key == Operator.Divide && typesOverride.Contains(type)) returnType = "decimal";
                             else
                             {
-
                             }
+
                             w.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
                         }
+
                         w.WriteLine(" ");
                     }
                 });
@@ -69,7 +70,6 @@ namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
             Multiply,
             Divide,
             PowerOf,
-
         }
     }
 }

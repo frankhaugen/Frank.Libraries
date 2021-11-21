@@ -22,8 +22,10 @@ namespace Frank.Libraries.Extensions
                             property.SetValue(item, row[column.ColumnName], null);
                     }
                 }
+
                 output.Add(item);
             }
+
             return output;
         }
 
@@ -35,16 +37,20 @@ namespace Frank.Libraries.Extensions
             temp.Columns.Remove(pivotColumn.ColumnName);
             temp.Columns.Remove(pivotValue.ColumnName);
             var pkColumnNames = temp.Columns.Cast<DataColumn>()
-                .Select(c => c.ColumnName)
-                .ToArray();
+                                    .Select(c => c.ColumnName)
+                                    .ToArray();
 
             // prep results table
-            var result = temp.DefaultView.ToTable(true, pkColumnNames).Copy();
-            result.PrimaryKey = result.Columns.Cast<DataColumn>().ToArray();
+            var result = temp.DefaultView.ToTable(true, pkColumnNames)
+                             .Copy();
+            result.PrimaryKey = result.Columns.Cast<DataColumn>()
+                                      .ToArray();
             dt.AsEnumerable()
-                .Select(r => r[pivotColumn.ColumnName].ToString())
-                .Distinct().ToList()
-                .ForEach(c => result.Columns.Add(c, pivotColumn.DataType));
+              .Select(r => r[pivotColumn.ColumnName]
+                          .ToString())
+              .Distinct()
+              .ToList()
+              .ForEach(c => result.Columns.Add(c, pivotColumn.DataType));
 
             // load it
             foreach (DataRow row in dt.Rows)
@@ -56,7 +62,9 @@ namespace Frank.Libraries.Extensions
                         .ToArray());
                 // the aggregate used here is LATEST
                 // adjust the next line if you want (SUM, MAX, etc...)
-                aggRow![row[pivotColumn.ColumnName].ToString() ?? string.Empty] = row[pivotValue.ColumnName];
+                aggRow![row[pivotColumn.ColumnName]
+                            .ToString()
+                        ?? string.Empty] = row[pivotValue.ColumnName];
             }
 
             return result;

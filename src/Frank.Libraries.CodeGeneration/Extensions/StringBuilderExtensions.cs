@@ -8,17 +8,21 @@ namespace Frank.Libraries.CodeGeneration.Extensions
     {
         public static StringBuilder AppendWithTrailingSpace(this StringBuilder source, string value)
         {
-            return source.Append(value).Append(" ");
+            return source.Append(value)
+                         .Append(" ");
         }
 
         public static StringBuilder AppendSurroundedBy(this StringBuilder source, char prefix, string value, char suffix)
         {
-            return source.Append(prefix).Append(value).Append(suffix);
+            return source.Append(prefix)
+                         .Append(value)
+                         .Append(suffix);
         }
 
         public static StringBuilder AppendIndented(this StringBuilder source, string value, int indents = 0)
         {
-            return source.Append(Helpers.Indent(indents)).Append(value);
+            return source.Append(Helpers.Indent(indents))
+                         .Append(value);
         }
 
         public static StringBuilder AppendIndents(this StringBuilder source, int indents = 0)

@@ -40,7 +40,7 @@ namespace Frank.Libraries.IRC.Ctcp
             {
                 var localDateTime = DateTimeOffset.Now.ToString("o");
 
-                SendMessageTime(new[] {message.Source}, localDateTime, true);
+                SendMessageTime(new[] { message.Source }, localDateTime, true);
             }
         }
 
@@ -61,7 +61,7 @@ namespace Frank.Libraries.IRC.Ctcp
             {
                 if (ClientVersion != null)
                 {
-                    SendMessageVersion(new[] {message.Source}, ClientVersion, true);
+                    SendMessageVersion(new[] { message.Source }, ClientVersion, true);
                 }
             }
         }
@@ -83,11 +83,11 @@ namespace Frank.Libraries.IRC.Ctcp
                 var errorMessage = parts.Item2;
 
                 OnErrorMessageResponseReceived(new CtcpErrorMessageReceivedEventArgs(message.Source,
-                    failedQuery, errorMessage));
+                                                                                     failedQuery, errorMessage));
             }
             else
             {
-                SendMessageErrMsg(new[] {message.Source}, message.Data + " :" + messageNoError, true);
+                SendMessageErrMsg(new[] { message.Source }, message.Data + " :" + messageNoError, true);
             }
         }
 
@@ -110,7 +110,7 @@ namespace Frank.Libraries.IRC.Ctcp
             }
             else
             {
-                SendMessagePing(new[] {message.Source}, message.Data, true);
+                SendMessagePing(new[] { message.Source }, message.Data, true);
             }
         }
     }

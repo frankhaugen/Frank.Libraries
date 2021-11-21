@@ -26,6 +26,7 @@ namespace Frank.Libraries.Security.RandomPhraseGeneration
                 var k = RandomNumberGenerator.GetInt32(n + 1);
                 (shuffled[k], shuffled[n]) = (shuffled[n], shuffled[k]);
             }
+
             return shuffled;
         }
     }

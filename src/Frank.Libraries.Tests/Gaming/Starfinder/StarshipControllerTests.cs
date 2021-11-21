@@ -20,15 +20,18 @@ namespace Frank.Libraries.Tests.Gaming.Starfinder
             Size = Size.Medium,
             HitPoints = 100,
             Tier = 4,
-            Mounts = new List<Mount>() {new Mount()
+            Mounts = new List<Mount>()
             {
-                Arc = Arc.Turret,
-                WeaponSize = WeaponSize.Light,
-                Weapon = new Weapon()
+                new Mount()
                 {
-                    Damage = new Damage(2, 12)
+                    Arc = Arc.Turret,
+                    WeaponSize = WeaponSize.Light,
+                    Weapon = new Weapon()
+                    {
+                        Damage = new Damage(2, 12)
+                    }
                 }
-            }},
+            },
             Maneuverability = Maneuverability.Good,
             Pilot = new CrewMember() { Role = Role.Pilot, Character = new Character() { Skills = new List<Skill>() { new Skill() { Name = SkillName.Piloting, Rank = 5 } } } },
             ShieldGenerator = new ShieldGenerator()
@@ -48,7 +51,8 @@ namespace Frank.Libraries.Tests.Gaming.Starfinder
             var result = starshipController.PilotingCheck();
 
             // Assert
-            result.Should().BePositive();
+            result.Should()
+                  .BePositive();
         }
 
         [Fact]
@@ -68,7 +72,8 @@ namespace Frank.Libraries.Tests.Gaming.Starfinder
                 rollResult);
 
             // Assert
-            result.Should().BePositive();
+            result.Should()
+                  .BePositive();
         }
     }
 }

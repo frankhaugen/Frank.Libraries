@@ -11,9 +11,17 @@ namespace Frank.Libraries.Time
             _clock = clock;
         }
 
-        public int Year => _clock.GetCurrentInstant().InUtc().Year;
-        public int Month => _clock.GetCurrentInstant().InUtc().Month;
-        public int Day => _clock.GetCurrentInstant().InUtc().Day;
+        public int Year => _clock.GetCurrentInstant()
+                                 .InUtc()
+                                 .Year;
+
+        public int Month => _clock.GetCurrentInstant()
+                                  .InUtc()
+                                  .Month;
+
+        public int Day => _clock.GetCurrentInstant()
+                                .InUtc()
+                                .Day;
 
         public override string ToString() => $"{Year:0000}-{Month:00}-{Day:00}";
     }

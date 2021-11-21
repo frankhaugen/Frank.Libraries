@@ -68,6 +68,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Tests.Bench
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.ML", "Frank.Libraries.ML\Frank.Libraries.ML.csproj", "{C7D95057-2095-411B-A6F1-6B813585D56A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Fiken", "Frank.Libraries.Fiken\Frank.Libraries.Fiken.csproj", "{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -402,6 +404,18 @@ Global
 		{C7D95057-2095-411B-A6F1-6B813585D56A}.Release|x64.Build.0 = Release|Any CPU
 		{C7D95057-2095-411B-A6F1-6B813585D56A}.Release|x86.ActiveCfg = Release|Any CPU
 		{C7D95057-2095-411B-A6F1-6B813585D56A}.Release|x86.Build.0 = Release|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Debug|x64.Build.0 = Debug|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Debug|x86.Build.0 = Debug|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Release|x64.ActiveCfg = Release|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Release|x64.Build.0 = Release|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Release|x86.ActiveCfg = Release|Any CPU
+		{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

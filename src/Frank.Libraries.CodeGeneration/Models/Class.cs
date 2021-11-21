@@ -46,6 +46,7 @@ namespace Frank.Libraries.CodeGeneration.Models
         public void SetConstructor(Method method) => Constructor = method;
 
         public void AddMethods(List<Method> methods) => Methods.AddRange(methods);
+
         public void AddMethod(Method method)
         {
             if (!UsingNamespaces.Contains($"using {method.Signature.ReturnType?.Namespace.FallbackIfNull("System")};"))
@@ -60,6 +61,7 @@ namespace Frank.Libraries.CodeGeneration.Models
         public void AddUsingNamespace(string @namespace) => UsingNamespaces.Add($"using {@namespace.FallbackIfEmpty("System")};");
 
         public void AddProperties(Dictionary<string, Type> properties) => properties.DoForEach(x => AddProperty(x.Key, x.Value));
+
         public void AddProperty(string name, Type type)
         {
             if (!UsingNamespaces.Contains($"using {type.Namespace.FallbackIfNull("System")};"))
@@ -70,30 +72,42 @@ namespace Frank.Libraries.CodeGeneration.Models
 
         /// <inheritdoc/>
         public string CreateInterface() => new StringBuilder()
-            .AppendIf(string.Join('\n', UsingNamespaces.OrderBy(x => x)), UsingNamespaces.Any())
-            .AppendIndentedLine(0, $"namespace {Namespace}")
-            .AppendIndentedLine(0, "{")
-            .AppendIndentedLine(1, $"public interface I{Name}")
-            .AppendIndentedLine(1, "{")
-            .AppendIndentedLines(Properties.Select(x => $"public {x.Value} {x.Key} " + "{ get; set; }").ToList(), 2)
-            .AppendIndentedLines(Methods.Select(x => x.Signature).Select(x => x.ToString().Remove("async ").Remove("public ").ToString() + ";").ToList().FallbackIfNull(new List<string?>()), 0)
-            .AppendIndentedLine(1, "}")
-            .AppendIndentedLine(0, "}")
-            .ToString();
+                                           .AppendIf(string.Join('\n', UsingNamespaces.OrderBy(x => x)), UsingNamespaces.Any())
+                                           .AppendIndentedLine(0, $"namespace {Namespace}")
+                                           .AppendIndentedLine(0, "{")
+                                           .AppendIndentedLine(1, $"public interface I{Name}")
+                                           .AppendIndentedLine(1, "{")
+                                           .AppendIndentedLines(Properties.Select(x => $"public {x.Value} {x.Key} " + "{ get; set; }")
+                                                                          .ToList(), 2)
+                                           .AppendIndentedLines(Methods.Select(x => x.Signature)
+                                                                       .Select(x => x.ToString()
+                                                                                     .Remove("async ")
+                                                                                     .Remove("public ")
+                                                                                     .ToString()
+                                                                                    + ";")
+                                                                       .ToList()
+                                                                       .FallbackIfNull(new List<string?>()), 0)
+                                           .AppendIndentedLine(1, "}")
+                                           .AppendIndentedLine(0, "}")
+                                           .ToString();
 
         /// <inheritdoc/>
         public override string ToString() => new StringBuilder()
-            .AppendIf(string.Join('\n', UsingNamespaces.OrderBy(x => x)), UsingNamespaces.Any())
-            .AppendIndentedLine(0, $"namespace {Namespace}")
-            .AppendIndentedLine(0, "{")
-            .AppendIndentedLine(1, $"public {(IsStatic ? "static" : "")} class {Name}").AppendIf($" : {Extender}", !string.IsNullOrWhiteSpace(Extender))
-            .AppendIndentedLine(1, "{")
-            .AppendIndentedLines(Properties.Select(x => $"public {x.Value} {x.Key} " + "{ get; set; }").ToList(), 2)
-            .AppendIndentedLine(0, Constructor.ToString().Replace(" void", ""))
-            .AppendIndentedLines(Methods.ToStrings().ToList(), 0)
-            .AppendIndentedLine(1, "}")
-            .AppendIndentedLine(0, "}")
-            .ToString();
+                                             .AppendIf(string.Join('\n', UsingNamespaces.OrderBy(x => x)), UsingNamespaces.Any())
+                                             .AppendIndentedLine(0, $"namespace {Namespace}")
+                                             .AppendIndentedLine(0, "{")
+                                             .AppendIndentedLine(1, $"public {(IsStatic ? "static" : "")} class {Name}")
+                                             .AppendIf($" : {Extender}", !string.IsNullOrWhiteSpace(Extender))
+                                             .AppendIndentedLine(1, "{")
+                                             .AppendIndentedLines(Properties.Select(x => $"public {x.Value} {x.Key} " + "{ get; set; }")
+                                                                            .ToList(), 2)
+                                             .AppendIndentedLine(0, Constructor.ToString()
+                                                                               .Replace(" void", ""))
+                                             .AppendIndentedLines(Methods.ToStrings()
+                                                                         .ToList(), 0)
+                                             .AppendIndentedLine(1, "}")
+                                             .AppendIndentedLine(0, "}")
+                                             .ToString();
 
         public void ToFile(DirectoryInfo directory)
         {
@@ -101,6 +115,7 @@ namespace Frank.Libraries.CodeGeneration.Models
             {
                 directory.Create();
             }
+
             File.WriteAllText(Path.Combine(directory.FullName, Name + ".cs"), ToString());
         }
     }

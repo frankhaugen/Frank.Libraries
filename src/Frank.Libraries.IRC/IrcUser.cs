@@ -305,7 +305,7 @@ namespace Frank.Libraries.IRC
         /// </param>
         public void WhoWas(int entriesCount = -1)
         {
-            client.QueryWhoWas(new[] {nickName}, entriesCount);
+            client.QueryWhoWas(new[] { nickName }, entriesCount);
         }
 
         /// <summary>
@@ -335,7 +335,8 @@ namespace Frank.Libraries.IRC
 
         internal void HandeQuit(string comment)
         {
-            foreach (var cu in GetChannelUsers().ToArray())
+            foreach (var cu in GetChannelUsers()
+                         .ToArray())
                 cu.Channel.HandleUserQuit(cu, comment);
             OnQuit(new IrcCommentEventArgs(comment));
         }

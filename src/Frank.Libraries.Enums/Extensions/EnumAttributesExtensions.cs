@@ -15,9 +15,12 @@ namespace Frank.Libraries.Enums.Extensions
         /// <returns></returns>
         public static string GetName<T>(this T value) where T : Enum
         {
-            var field = value.GetType().GetField(value.ToString());
+            var field = value.GetType()
+                             .GetField(value.ToString());
             var attributes = field?.GetCustomAttributes(typeof(NameAttribute), false);
-            return !(attributes?.SingleOrDefault() is NameAttribute attribute) ? value.ToString() : attribute.GetName();
+            return !(attributes?.SingleOrDefault() is NameAttribute attribute)
+                ? value.ToString()
+                : attribute.GetName();
         }
 
         /// <summary>
@@ -27,9 +30,12 @@ namespace Frank.Libraries.Enums.Extensions
         /// <returns></returns>
         public static string GetLocalName<T>(this T value) where T : Enum
         {
-            var field = value.GetType().GetField(value.ToString());
+            var field = value.GetType()
+                             .GetField(value.ToString());
             var attributes = field?.GetCustomAttributes(typeof(LocalNameAttribute), false);
-            return !(attributes?.SingleOrDefault() is LocalNameAttribute attribute) ? value.ToString() : attribute.GetName();
+            return !(attributes?.SingleOrDefault() is LocalNameAttribute attribute)
+                ? value.ToString()
+                : attribute.GetName();
         }
     }
 }

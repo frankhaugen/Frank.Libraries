@@ -27,7 +27,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = items.Batch(maxItems);
 
             // Assert
-            result.Should().HaveCount(10);
+            result.Should()
+                  .HaveCount(10);
         }
 
         [Fact]
@@ -40,7 +41,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = items.Random();
 
             // Assert
-            items.Should().Contain(result);
+            items.Should()
+                 .Contain(result);
         }
 
         [Fact]

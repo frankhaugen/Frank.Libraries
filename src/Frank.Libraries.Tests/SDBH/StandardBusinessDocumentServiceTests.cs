@@ -19,14 +19,17 @@ namespace Frank.Libraries.Tests.SDBH
             // Arrange
             var service = new StandardBusinessDocumentService();
             var pathToFile = Path.Combine(Directory.GetCurrentDirectory(), "TestingInfrastructure", "Files", "Xml", "StandardBusinessDocument.xml");
-            File.Exists(pathToFile).Should().BeTrue();
+            File.Exists(pathToFile)
+                .Should()
+                .BeTrue();
             var xml = File.ReadAllText(pathToFile);
 
             // Act
             var result = service.Deserialize(xml);
 
             // Assert
-            result.StandardBusinessDocumentHeader.Should().NotBeNull();
+            result.StandardBusinessDocumentHeader.Should()
+                  .NotBeNull();
         }
 
         [Fact]

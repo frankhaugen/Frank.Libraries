@@ -18,7 +18,8 @@ namespace Frank.Libraries.ML.LanguageDetection
             var rawString = streamReader.ReadToEnd();
             var json = Regex.Unescape(rawString);
             var list = JsonConvert.DeserializeObject<List<LanguageModel>>(json) ?? new List<LanguageModel>();
-            List = list.OrderBy(x => x.LanguageCode).ToList();
+            List = list.OrderBy(x => x.LanguageCode)
+                       .ToList();
         }
     }
 }

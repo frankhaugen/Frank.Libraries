@@ -35,7 +35,9 @@ namespace Frank.Libraries.Tests.CodeGeneration.Generators
 
             // Assert
             Output(result);
-            if (createFile) Output(new FileInfo(Path.Combine(SolutionDirectory().FullName, RootNamespace, Namespace, $"{className}.cs")), result);
+            if (createFile)
+                Output(new FileInfo(Path.Combine(SolutionDirectory()
+                                                     .FullName, RootNamespace, Namespace, $"{className}.cs")), result);
         }
     }
 }

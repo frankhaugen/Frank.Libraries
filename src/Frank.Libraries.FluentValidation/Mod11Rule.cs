@@ -19,10 +19,11 @@ namespace FluentValidation
         public static IRuleBuilder<short, short> IsMod11(this IRuleBuilder<short, short> ruleBuilder)
         {
             return ruleBuilder
-                .Must(x => x > 0)
-                .WithMessage("Is a non-positive number")
-                .Must(x => GetMod11(x.ToString()).IsValid)
-                .WithMessage("Is not valid according to Mod 10");
+                   .Must(x => x > 0)
+                   .WithMessage("Is a non-positive number")
+                   .Must(x => GetMod11(x.ToString())
+                             .IsValid)
+                   .WithMessage("Is not valid according to Mod 10");
         }
 
         /// <summary>
@@ -36,7 +37,8 @@ namespace FluentValidation
             {
                 if (value < 1)
                     context.AddFailure(nameof(value), "Is a non-positive number");
-                else if (!GetMod11(value.ToString()).IsValid)
+                else if (!GetMod11(value.ToString())
+                             .IsValid)
                     context.AddFailure(nameof(value), "Is not valid according to Mod 10");
             });
         }
@@ -52,7 +54,8 @@ namespace FluentValidation
             {
                 if (value < 1)
                     context.AddFailure(nameof(value), "Is a non-positive number");
-                else if (!GetMod11(value.ToString()).IsValid)
+                else if (!GetMod11(value.ToString())
+                             .IsValid)
                     context.AddFailure(nameof(value), "Is not valid according to Mod 10");
             });
         }
@@ -68,7 +71,8 @@ namespace FluentValidation
             {
                 if (string.IsNullOrWhiteSpace(value))
                     context.AddFailure(nameof(value), "Is null, empty, or whitespace");
-                else if (!GetMod11(value).IsValid)
+                else if (!GetMod11(value)
+                             .IsValid)
                     context.AddFailure(nameof(value), "Is not valid according to Mod 10");
             });
         }
@@ -94,7 +98,6 @@ namespace FluentValidation
             var sisteSiffer = (int)char.GetNumericValue(value.Last());
 
             return (GetCheckDigit(value) == sisteSiffer, sisteSiffer);
-
         }
 
         private static int GetCheckDigit(string number)

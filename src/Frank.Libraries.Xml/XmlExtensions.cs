@@ -40,7 +40,7 @@ namespace Frank.Libraries.Xml
             using var stringWriter = new StringWriter();
             // serialize a class to a StringWriter class instance..
             xmlSerializer!.Serialize(stringWriter, toSerialize); // a base class of the StringWriter instance is TextWriter..
-            return stringWriter!.ToString(); // return the value..
+            return stringWriter!.ToString();                     // return the value..
         }
 
         // THIS: (C): VPKSoft, 2018, https://www.vpksoft.net

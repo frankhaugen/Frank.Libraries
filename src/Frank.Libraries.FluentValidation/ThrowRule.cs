@@ -26,7 +26,8 @@ namespace Frank.Libraries.FluentValidation
             messageBuilder.AppendLine($"\tSource: {exception.Source}");
             messageBuilder.AppendLine($"\tMessage: {exception.Message}");
             messageBuilder.AppendLine($"\tStackTrace:");
-            foreach (var line in exception.StackTrace?.Replace("\r", "").Split("\n")!)
+            foreach (var line in exception.StackTrace?.Replace("\r", "")
+                                          .Split("\n")!)
             {
                 messageBuilder.AppendLine($"\t\t{line}");
             }
@@ -54,7 +55,8 @@ namespace Frank.Libraries.FluentValidation
             }
         }
 
-        private static string ToSentenceCase<T>(this T source) where T : Exception => Regex.Replace(source.GetType().Name, "[a-z][A-Z]", m => $"{m.Value[0]} {char.ToLower(m.Value[1])}");
+        private static string ToSentenceCase<T>(this T source) where T : Exception => Regex.Replace(source.GetType()
+                                                                                                          .Name, "[a-z][A-Z]", m => $"{m.Value[0]} {char.ToLower(m.Value[1])}");
 
         private static string ToTitleCase<T>(this T source) where T : Exception
         {

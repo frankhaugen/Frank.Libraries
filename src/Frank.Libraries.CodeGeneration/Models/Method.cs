@@ -30,7 +30,8 @@ namespace Frank.Libraries.CodeGeneration.Models
                 .AppendIf(Helpers.Indent(2) + string.Join($"\n{Helpers.Indent(2)}", Attributes.ToStrings()) + "\n", Attributes.Any())
                 .AppendIndentedLine(2, Signature.ToString())
                 .AppendIndentedLine(2, "{")
-                .AppendIndentedLines(CodeLines.ToStrings().ToList(), 2)
+                .AppendIndentedLines(CodeLines.ToStrings()
+                                              .ToList(), 2)
                 .AppendIndentedLine(2, "}")
                 .ToString();
     }

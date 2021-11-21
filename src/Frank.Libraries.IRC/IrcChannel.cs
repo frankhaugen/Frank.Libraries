@@ -206,7 +206,7 @@ namespace Frank.Libraries.IRC
         /// <param name="comment">The comment to give for the kick, or <see langword="null" /> for none.</param>
         public void Kick(string userNickName, string comment = null)
         {
-            client.Kick(this, new[] {userNickName}, comment);
+            client.Kick(this, new[] { userNickName }, comment);
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace Frank.Libraries.IRC
         /// <inheritdoc cref="SetModes(IEnumerable{char})" />
         public void SetModes(params char[] newModes)
         {
-            SetModes((IEnumerable<char>) newModes);
+            SetModes((IEnumerable<char>)newModes);
         }
 
         /// <inheritdoc cref="SetModes(string, IEnumerable{string})" />
@@ -257,7 +257,7 @@ namespace Frank.Libraries.IRC
             if (newModes == null)
                 throw new ArgumentNullException("newModes");
 
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
                 SetModes(newModes.Except(modes), modes.Except(newModes));
         }
 
@@ -265,7 +265,7 @@ namespace Frank.Libraries.IRC
         /// <exception cref="ArgumentNullException"><paramref name="setModes" /> is <see langword="null" />.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="unsetModes" /> is <see langword="null" />.</exception>
         public void SetModes(IEnumerable<char> setModes, IEnumerable<char> unsetModes,
-            IEnumerable<string> modeParameters = null)
+                             IEnumerable<string> modeParameters = null)
         {
             if (setModes == null)
                 throw new ArgumentNullException("setModes");
@@ -273,7 +273,7 @@ namespace Frank.Libraries.IRC
                 throw new ArgumentNullException("unsetModes");
 
             SetModes("+" + string.Join(string.Empty, setModes) + "-" + string.Join(string.Empty, unsetModes),
-                modeParameters);
+                     modeParameters);
         }
 
         /// <inheritdoc cref="SetModes(string, IEnumerable{string})" />
@@ -282,7 +282,7 @@ namespace Frank.Libraries.IRC
             if (modes == null)
                 throw new ArgumentNullException("modes");
 
-            SetModes(modes, (IEnumerable<string>) modeParameters);
+            SetModes(modes, (IEnumerable<string>)modeParameters);
         }
 
         /// <summary>
@@ -314,12 +314,12 @@ namespace Frank.Libraries.IRC
         /// </param>
         public void Leave(string comment = null)
         {
-            client.Leave(new[] {Name}, comment);
+            client.Leave(new[] { Name }, comment);
         }
 
         internal void HandleUserNameReply(IrcChannelUser channelUser)
         {
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
             {
                 if (users.Contains(channelUser))
                 {
@@ -333,7 +333,7 @@ namespace Frank.Libraries.IRC
             }
 
             channelUser.Channel = this;
-            lock (((ICollection) Users).SyncRoot)
+            lock (((ICollection)Users).SyncRoot)
                 users.Add(channelUser);
         }
 
@@ -356,17 +356,18 @@ namespace Frank.Libraries.IRC
 
         internal void HandleModesChanged(IrcUser source, string newModes, IEnumerable<string> newModeParameters)
         {
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
                 modes.UpdateModes(newModes, newModeParameters, client.ChannelUserModes,
-                    (add, mode, modeParameter) => users.Single(
-                        cu => cu.User.NickName == modeParameter).HandleModeChanged(add, mode));
+                                  (add, mode, modeParameter) => users.Single(
+                                                                         cu => cu.User.NickName == modeParameter)
+                                                                     .HandleModeChanged(add, mode));
 
             OnModesChanged(new IrcUserEventArgs(source));
         }
 
         internal void HandleUserJoined(IrcChannelUser channelUser)
         {
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
             {
                 if (users.Contains(channelUser))
                 {
@@ -380,7 +381,7 @@ namespace Frank.Libraries.IRC
             }
 
             channelUser.Channel = this;
-            lock (((ICollection) Users).SyncRoot)
+            lock (((ICollection)Users).SyncRoot)
                 users.Add(channelUser);
 
             OnUserJoined(new IrcChannelUserEventArgs(channelUser, null));
@@ -388,13 +389,13 @@ namespace Frank.Libraries.IRC
 
         internal void HandleUserLeft(IrcUser user, string comment)
         {
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
                 HandleUserLeft(users.Single(u => u.User == user), comment);
         }
 
         internal void HandleUserLeft(IrcChannelUser channelUser, string comment)
         {
-            lock (((ICollection) Users).SyncRoot)
+            lock (((ICollection)Users).SyncRoot)
                 users.Remove(channelUser);
 
             OnUserLeft(new IrcChannelUserEventArgs(channelUser, comment));
@@ -402,13 +403,13 @@ namespace Frank.Libraries.IRC
 
         internal void HandleUserKicked(IrcUser user, string comment)
         {
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
                 HandleUserKicked(users.Single(u => u.User == user), comment);
         }
 
         internal void HandleUserKicked(IrcChannelUser channelUser, string comment)
         {
-            lock (((ICollection) Users).SyncRoot)
+            lock (((ICollection)Users).SyncRoot)
                 users.Remove(channelUser);
 
             OnUserKicked(new IrcChannelUserEventArgs(channelUser, comment));
@@ -416,13 +417,13 @@ namespace Frank.Libraries.IRC
 
         internal void HandleUserInvited(IrcUser user)
         {
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
                 OnUserInvited(new IrcUserEventArgs(user));
         }
 
         internal void HandleUserQuit(IrcChannelUser channelUser, string comment)
         {
-            lock (((ICollection) Users).SyncRoot)
+            lock (((ICollection)Users).SyncRoot)
                 users.Remove(channelUser);
         }
 
@@ -590,7 +591,7 @@ namespace Frank.Libraries.IRC
         }
 
         void IIrcMessageReceiveHandler.HandleNoticeReceived(IIrcMessageSource source, IList<IIrcMessageTarget> targets,
-            string text)
+                                                            string text)
         {
             HandleNoticeReceived(source, targets, text);
         }

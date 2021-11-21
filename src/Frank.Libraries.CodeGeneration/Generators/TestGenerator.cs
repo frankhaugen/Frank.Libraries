@@ -44,6 +44,7 @@ namespace Frank.Libraries.CodeGeneration.Generators
                             {
                                 w.WriteLine($"var {param.Name?.ToLower()} = new {param.ParameterType.Name};");
                             }
+
                             w.WriteLine(w.NewLine);
 
                             w.WriteLine("// Act");

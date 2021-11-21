@@ -58,8 +58,7 @@ namespace Frank.Libraries.AzureStorage.FileShare
                 {
                     if (item.IsDirectory)
                         remaining.Enqueue(dir.GetSubdirectoryClient(item.Name));
-                    else
-                        if (item.FileSize != null) _shareFiles.Add(new ShareFileMetadata(item.Name, HttpUtility.UrlDecode(dir.Path) ?? string.Empty, item.FileSize.Value));
+                    else if (item.FileSize != null) _shareFiles.Add(new ShareFileMetadata(item.Name, HttpUtility.UrlDecode(dir.Path) ?? string.Empty, item.FileSize.Value));
                 }
             }
         }
@@ -71,7 +70,8 @@ namespace Frank.Libraries.AzureStorage.FileShare
 
         public IEnumerable<ShareFileMetadata> Search(string filename)
         {
-            return _shareFiles.Where(x => x.Name.ToLowerInvariant().Contains(Path.GetFileNameWithoutExtension(filename)));
+            return _shareFiles.Where(x => x.Name.ToLowerInvariant()
+                                           .Contains(Path.GetFileNameWithoutExtension(filename)));
         }
 
         public IEnumerable<ShareFileMetadata> FileItems
@@ -100,7 +100,9 @@ namespace Frank.Libraries.AzureStorage.FileShare
         {
             try
             {
-                fileData = DownloadAsync(shareFile).GetAwaiter().GetResult();
+                fileData = DownloadAsync(shareFile)
+                           .GetAwaiter()
+                           .GetResult();
                 return true;
             }
             catch (Exception e)
@@ -114,7 +116,8 @@ namespace Frank.Libraries.AzureStorage.FileShare
         public async Task<byte[]> DownloadAsync(ShareFileMetadata shareFile)
         {
             var directory = _shareClient.GetDirectoryClient(shareFile.GetEncodedDirectoryPath);
-            var download = await directory.GetFileClient(shareFile.Name).DownloadAsync();
+            var download = await directory.GetFileClient(shareFile.Name)
+                                          .DownloadAsync();
             var stream = new MemoryStream();
             try
             {
@@ -147,7 +150,8 @@ namespace Frank.Libraries.AzureStorage.FileShare
             var directory = _shareClient.GetDirectoryClient(directoryPath);
             try
             {
-                await directory.GetFileClient(filename).UploadAsync(stream);
+                await directory.GetFileClient(filename)
+                               .UploadAsync(stream);
             }
             catch (Exception e)
             {

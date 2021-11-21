@@ -26,11 +26,12 @@ namespace Frank.Libraries.CodeGeneration.Models
 
         /// <inheritdoc/>
         public override string ToString() => new StringBuilder()
-            .Append($"public{(IsStatic ? " static" : " ")}{(IsAsync ? "async " : "")}")
-            .AppendIf(ReturnType?.Name ?? string.Empty, ReturnType != null, "void")
-            .AppendIf("? ", IsNullable, " ")
-            .Append(Name)
-            .AppendSurroundedBy('(', string.Join(", ", Arguments.FallbackIfNull(new List<Argument>()).Select(x => x.ToString())), ')')
-            .ToString();
+                                             .Append($"public{(IsStatic ? " static" : " ")}{(IsAsync ? "async " : "")}")
+                                             .AppendIf(ReturnType?.Name ?? string.Empty, ReturnType != null, "void")
+                                             .AppendIf("? ", IsNullable, " ")
+                                             .Append(Name)
+                                             .AppendSurroundedBy('(', string.Join(", ", Arguments.FallbackIfNull(new List<Argument>())
+                                                                                                 .Select(x => x.ToString())), ')')
+                                             .ToString();
     }
 }

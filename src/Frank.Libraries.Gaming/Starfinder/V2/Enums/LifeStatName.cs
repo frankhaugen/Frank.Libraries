@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Gaming.Starfinder.V2;
+namespace Frank.Libraries.Gaming.Starfinder.V2.Enums;
 
 public enum LifeStatName
 {

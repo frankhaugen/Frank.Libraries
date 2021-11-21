@@ -63,10 +63,10 @@ namespace Frank.Libraries.IRC
             regexServerName = @"(?<server>[^%@]+?\.[^%@]*)";
             regexNickNameId = string.Format(@"{0}(?:(?:!{1})?@{2})?", regexNickName, regexUserName, regexHostName);
             regexUserNameId = string.Format(@"{0}(?:(?:%{1})?@{2}|%{1})", regexUserName, regexHostName,
-                regexServerName);
+                                            regexServerName);
             regexMessagePrefix = string.Format(@"^(?:{0}|{1})$", regexServerName, regexNickNameId);
             regexMessageTarget = string.Format(@"^(?:{0}|{1}|{2}|{3})$", regexChannelName, regexUserNameId,
-                regexTargetMask, regexNickNameId);
+                                               regexTargetMask, regexNickNameId);
 
             isupportPrefix = @"\((?<modes>.*)\)(?<prefixes>.*)";
         }
@@ -452,7 +452,9 @@ namespace Frank.Libraries.IRC
         {
             CheckDisposed();
 
-            SendMessageStats(query == null ? null : query.Value.ToString(), targetServer);
+            SendMessageStats(query == null
+                                 ? null
+                                 : query.Value.ToString(), targetServer);
         }
 
         /// <summary>
@@ -613,7 +615,8 @@ namespace Frank.Libraries.IRC
             listedStatsEntries.Add(new IrcServerStatisticalEntry
             {
                 Type = type,
-                Parameters = message.Parameters.Skip(1).ToArray()
+                Parameters = message.Parameters.Skip(1)
+                                    .ToArray()
             });
         }
 
@@ -635,8 +638,10 @@ namespace Frank.Libraries.IRC
                 case "prefix":
                     var prefixValueMatch = Regex.Match(paramValue, isupportPrefix);
                     ;
-                    var prefixes = prefixValueMatch.Groups["prefixes"].GetValue();
-                    var modes = prefixValueMatch.Groups["modes"].GetValue();
+                    var prefixes = prefixValueMatch.Groups["prefixes"]
+                                                   .GetValue();
+                    var modes = prefixValueMatch.Groups["modes"]
+                                                .GetValue();
 
                     if (prefixes.Length != modes.Length)
                         throw new ProtocolViolationException(Resources.MessageISupportPrefixInvalid);
@@ -699,6 +704,7 @@ namespace Frank.Libraries.IRC
                 else
                     modeParameters.Add(p);
             }
+
             return Tuple.Create(modes.ToString(), (IEnumerable<string>)modeParameters.AsReadOnly());
         }
 
@@ -712,7 +718,8 @@ namespace Frank.Libraries.IRC
             if (namesList == null)
                 throw new ArgumentNullException("namesList");
 
-            return namesList.Split(',').Select(n => GetChannelFromName(n));
+            return namesList.Split(',')
+                            .Select(n => GetChannelFromName(n));
         }
 
         /// <summary>
@@ -726,7 +733,8 @@ namespace Frank.Libraries.IRC
                 throw new ArgumentNullException("nickNamesList");
 
             lock (((ICollection)Users).SyncRoot)
-                return nickNamesList.Split(',').Select(n => users.Single(u => u.NickName == n));
+                return nickNamesList.Split(',')
+                                    .Select(n => users.Single(u => u.NickName == n));
         }
 
         /// <summary>
@@ -783,7 +791,7 @@ namespace Frank.Libraries.IRC
 
                 default:
                     throw new ArgumentException(string.Format(
-                        Resources.MessageInvalidChannelType, type), "type");
+                                                    Resources.MessageInvalidChannelType, type), "type");
             }
         }
 
@@ -802,16 +810,23 @@ namespace Frank.Libraries.IRC
 
             // Check whether target name represents channel, user, or target mask.
             var targetNameMatch = Regex.Match(targetName, regexMessageTarget);
-            var channelName = targetNameMatch.Groups["channel"].GetValue();
-            var nickName = targetNameMatch.Groups["nick"].GetValue();
-            var userName = targetNameMatch.Groups["user"].GetValue();
-            var hostName = targetNameMatch.Groups["host"].GetValue();
-            var serverName = targetNameMatch.Groups["server"].GetValue();
-            var targetMask = targetNameMatch.Groups["targetMask"].GetValue();
+            var channelName = targetNameMatch.Groups["channel"]
+                                             .GetValue();
+            var nickName = targetNameMatch.Groups["nick"]
+                                          .GetValue();
+            var userName = targetNameMatch.Groups["user"]
+                                          .GetValue();
+            var hostName = targetNameMatch.Groups["host"]
+                                          .GetValue();
+            var serverName = targetNameMatch.Groups["server"]
+                                            .GetValue();
+            var targetMask = targetNameMatch.Groups["targetMask"]
+                                            .GetValue();
             if (channelName != null)
             {
                 return GetChannelFromName(channelName);
             }
+
             if (nickName != null)
             {
                 // Find user by nick name. If no user exists in list, create it and set its properties.
@@ -823,6 +838,7 @@ namespace Frank.Libraries.IRC
 
                 return user;
             }
+
             if (userName != null)
             {
                 // Find user by user name. If no user exists in list, create it and set its properties.
@@ -832,12 +848,14 @@ namespace Frank.Libraries.IRC
 
                 return user;
             }
+
             if (targetMask != null)
             {
                 return new IrcTargetMask(targetMask);
             }
+
             throw new ArgumentException(string.Format(
-                Resources.MessageInvalidSource, targetName), "targetName");
+                                            Resources.MessageInvalidSource, targetName), "targetName");
         }
 
         /// <summary>
@@ -855,14 +873,19 @@ namespace Frank.Libraries.IRC
 
             // Check whether prefix represents server or user.
             var prefixMatch = Regex.Match(prefix, regexMessagePrefix);
-            var serverName = prefixMatch.Groups["server"].GetValue();
-            var nickName = prefixMatch.Groups["nick"].GetValue();
-            var userName = prefixMatch.Groups["user"].GetValue();
-            var hostName = prefixMatch.Groups["host"].GetValue();
+            var serverName = prefixMatch.Groups["server"]
+                                        .GetValue();
+            var nickName = prefixMatch.Groups["nick"]
+                                      .GetValue();
+            var userName = prefixMatch.Groups["user"]
+                                      .GetValue();
+            var hostName = prefixMatch.Groups["host"]
+                                      .GetValue();
             if (serverName != null)
             {
                 return GetServerFromHostName(serverName);
             }
+
             if (nickName != null)
             {
                 // Find user by nick name. If no user exists in list, create it and set its properties.
@@ -874,8 +897,9 @@ namespace Frank.Libraries.IRC
 
                 return user;
             }
+
             throw new ArgumentException(string.Format(
-                Resources.MessageInvalidSource, prefix), "prefix");
+                                            Resources.MessageInvalidSource, prefix), "prefix");
         }
 
         /// <inheritdoc cref="GetServerFromHostName(string, out bool)"/>
@@ -911,6 +935,7 @@ namespace Frank.Libraries.IRC
             {
                 createdNew = false;
             }
+
             return server;
         }
 
@@ -995,6 +1020,7 @@ namespace Frank.Libraries.IRC
                     createdNew = false;
                 }
             }
+
             user.IsOnline = isOnline;
             return user;
         }
@@ -1069,8 +1095,8 @@ namespace Frank.Libraries.IRC
             ChannelUserModes = new ReadOnlyCollection<char>(channelUserModes);
             channelUserModesPrefixes = new Dictionary<char, char>
             {
-                {'@', 'o'},
-                {'+', 'v'}
+                { '@', 'o' },
+                { '+', 'v' }
             };
             motdBuilder = new StringBuilder();
             networkInformation = new IrcNetworkInfo();
@@ -1114,9 +1140,10 @@ namespace Frank.Libraries.IRC
                 else
                 {
                     throw new ProtocolViolationException(string.Format(
-                        Resources.MessageInvalidCommandDefinition, attribute.CommandName));
+                                                             Resources.MessageInvalidCommandDefinition, attribute.CommandName));
                 }
             }
+
             ;
         }
 
@@ -1169,7 +1196,8 @@ namespace Frank.Libraries.IRC
                 lineBuilder.Append(":" + CheckPrefix(message.Prefix) + " ");
 
             // Append command name to line.
-            lineBuilder.Append(CheckCommand(message.Command).ToUpperInvariant());
+            lineBuilder.Append(CheckCommand(message.Command)
+                                   .ToUpperInvariant());
 
             // Append each parameter to line, adding ':' character before last parameter.
             for (var i = 0; i < message.Parameters.Count - 1; i++)
@@ -1177,6 +1205,7 @@ namespace Frank.Libraries.IRC
                 if (message.Parameters[i] != null)
                     lineBuilder.Append(" " + CheckMiddleParameter(message.Parameters[i]));
             }
+
             if (message.Parameters.Count > 0)
             {
                 var lastParameter = message.Parameters[message.Parameters.Count - 1];
@@ -1202,9 +1231,7 @@ namespace Frank.Libraries.IRC
             // Try to find corresponding message processor for command of given message.
             MessageProcessor messageProcessor;
             int commandCode;
-            if (messageProcessors.TryGetValue(message.Command, out messageProcessor) ||
-                (int.TryParse(message.Command, out commandCode) &&
-                 numericMessageProcessors.TryGetValue(commandCode, out messageProcessor)))
+            if (messageProcessors.TryGetValue(message.Command, out messageProcessor) || (int.TryParse(message.Command, out commandCode) && numericMessageProcessors.TryGetValue(commandCode, out messageProcessor)))
             {
                 try
                 {
@@ -1234,7 +1261,7 @@ namespace Frank.Libraries.IRC
             if (value.Length == 0 || value.Any(IsInvalidMessageChar))
             {
                 throw new ArgumentException(string.Format(
-                    Resources.MessageInvalidPrefix, value), "value");
+                                                Resources.MessageInvalidPrefix, value), "value");
             }
 
             return value;
@@ -1247,7 +1274,7 @@ namespace Frank.Libraries.IRC
             if (value.Length == 0 || value.Any(IsInvalidMessageChar))
             {
                 throw new ArgumentException(string.Format(
-                    Resources.MessageInvalidCommand, value), "value");
+                                                Resources.MessageInvalidCommand, value), "value");
             }
 
             return value;
@@ -1260,7 +1287,7 @@ namespace Frank.Libraries.IRC
             if (value.Length == 0 || value.Any(c => IsInvalidMessageChar(c) || c == ' ') || value[0] == ':')
             {
                 throw new ArgumentException(string.Format(
-                    Resources.MessageInvalidMiddleParameter, value), "value");
+                                                Resources.MessageInvalidMiddleParameter, value), "value");
             }
 
             return value;
@@ -1273,7 +1300,7 @@ namespace Frank.Libraries.IRC
             if (value.Any(c => IsInvalidMessageChar(c)))
             {
                 throw new ArgumentException(string.Format(
-                    Resources.MessageInvalidMiddleParameter, value), "value");
+                                                Resources.MessageInvalidMiddleParameter, value), "value");
             }
 
             return value;
@@ -1300,22 +1327,20 @@ namespace Frank.Libraries.IRC
             // Check that given registration info is valid.
             if (registrationInfo is IrcUserRegistrationInfo)
             {
-                if (registrationInfo.NickName == null ||
-                    ((IrcUserRegistrationInfo)registrationInfo).UserName == null)
+                if (registrationInfo.NickName == null || ((IrcUserRegistrationInfo)registrationInfo).UserName == null)
                     throw new ArgumentException(Resources.MessageInvalidUserRegistrationInfo,
-                        registrationInfoParamName);
+                                                registrationInfoParamName);
             }
             else if (registrationInfo is IrcServiceRegistrationInfo)
             {
-                if (registrationInfo.NickName == null ||
-                    ((IrcServiceRegistrationInfo)registrationInfo).Description == null)
+                if (registrationInfo.NickName == null || ((IrcServiceRegistrationInfo)registrationInfo).Description == null)
                     throw new ArgumentException(Resources.MessageInvalidServiceRegistrationInfo,
-                        registrationInfoParamName);
+                                                registrationInfoParamName);
             }
             else
             {
                 throw new ArgumentException(Resources.MessageInvalidRegistrationInfoObject,
-                    registrationInfoParamName);
+                                            registrationInfoParamName);
             }
         }
 
@@ -1370,6 +1395,7 @@ namespace Frank.Libraries.IRC
                     paramStartIndex++;
                     paramEndIndex = paramsLine.Length;
                 }
+
                 parameters[i] = paramsLine.Substring(paramStartIndex, paramEndIndex - paramStartIndex);
                 if (paramEndIndex == paramsLine.Length)
                     break;
@@ -1403,10 +1429,10 @@ namespace Frank.Libraries.IRC
                 // Register client as service.
                 var serviceRegInfo = (IrcServiceRegistrationInfo)regInfo;
                 SendMessageService(serviceRegInfo.NickName, serviceRegInfo.Distribution,
-                    serviceRegInfo.Description);
+                                   serviceRegInfo.Description);
 
                 localUser = new IrcLocalUser(serviceRegInfo.NickName, serviceRegInfo.Distribution,
-                    serviceRegInfo.Description);
+                                             serviceRegInfo.Description);
             }
             else
             {
@@ -1414,11 +1440,12 @@ namespace Frank.Libraries.IRC
                 var userRegInfo = (IrcUserRegistrationInfo)regInfo;
                 SendMessageNick(userRegInfo.NickName);
                 SendMessageUser(userRegInfo.UserName, GetNumericUserMode(userRegInfo.UserModes),
-                    userRegInfo.RealName);
+                                userRegInfo.RealName);
 
                 localUser = new IrcLocalUser(userRegInfo.NickName, userRegInfo.UserName, userRegInfo.RealName,
-                    userRegInfo.UserModes);
+                                             userRegInfo.UserModes);
             }
+
             localUser.Client = this;
 
             // Add local user to list of known users.
@@ -1726,7 +1753,8 @@ namespace Frank.Libraries.IRC
         protected void CheckDisposed()
         {
             if (IsDisposed)
-                throw new ObjectDisposedException(GetType().FullName);
+                throw new ObjectDisposedException(GetType()
+                                                      .FullName);
         }
 
         /// <summary>
@@ -1737,7 +1765,7 @@ namespace Frank.Libraries.IRC
         {
             if (!IsDisposed && IsConnected)
                 return string.Format("{0}@{1}", localUser.UserName,
-                    ServerName);
+                                     ServerName);
             return "(Not connected)";
         }
 
@@ -1887,7 +1915,8 @@ namespace Frank.Libraries.IRC
         internal void SendPrivateMessage(IEnumerable<string> targetsNames, string text)
         {
             var targetsNamesArray = targetsNames.ToArray();
-            var targets = targetsNamesArray.Select(n => GetMessageTarget(n)).ToArray();
+            var targets = targetsNamesArray.Select(n => GetMessageTarget(n))
+                                           .ToArray();
             SendMessagePrivateMessage(targetsNamesArray, text);
             localUser.HandleMessageSent(targets, text);
         }
@@ -1895,7 +1924,8 @@ namespace Frank.Libraries.IRC
         internal void SendNotice(IEnumerable<string> targetsNames, string text)
         {
             var targetsNamesArray = targetsNames.ToArray();
-            var targets = targetsNamesArray.Select(n => GetMessageTarget(n)).ToArray();
+            var targets = targetsNamesArray.Select(n => GetMessageTarget(n))
+                                           .ToArray();
             SendMessageNotice(targetsNamesArray, text);
             localUser.HandleNoticeSent(targets, text);
         }

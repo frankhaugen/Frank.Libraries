@@ -41,9 +41,13 @@ namespace Frank.Libraries.Tests.MongoDb
             var result = repository.AsQueryable();
 
             // Assert
-            result.Should().NotBeNullOrEmpty();
-            result.Should().HaveSameCount(newItems);
-            result.FirstOrDefault(x => x.Name == firstItem.Name).Should().BeEquivalentTo(firstItem, options => options.Excluding(x => x.DateOfBirth));
+            result.Should()
+                  .NotBeNullOrEmpty();
+            result.Should()
+                  .HaveSameCount(newItems);
+            result.FirstOrDefault(x => x.Name == firstItem.Name)
+                  .Should()
+                  .BeEquivalentTo(firstItem, options => options.Excluding(x => x.DateOfBirth));
         }
 
         [Fact]
@@ -59,10 +63,14 @@ namespace Frank.Libraries.Tests.MongoDb
             var result = await repository.FindByIdAsync(newItem.Id);
 
             // Assert
-            result.Should().NotBeNull();
-            result.Name.Should().Be(newItem.Name);
-            result.DateOfBirth.Should().BeCloseTo(newItem.DateOfBirth, TimeSpan.FromHours(13));
-            result.YearlySalary.Should().Be(newItem.YearlySalary);
+            result.Should()
+                  .NotBeNull();
+            result.Name.Should()
+                  .Be(newItem.Name);
+            result.DateOfBirth.Should()
+                  .BeCloseTo(newItem.DateOfBirth, TimeSpan.FromHours(13));
+            result.YearlySalary.Should()
+                  .Be(newItem.YearlySalary);
         }
 
         [Fact]
@@ -77,7 +85,8 @@ namespace Frank.Libraries.Tests.MongoDb
             await repository.InsertOneAsync(newItem);
 
             // Assert
-            (await repository.FindByIdAsync(newItem.Id)).Should().NotBeNull();
+            (await repository.FindByIdAsync(newItem.Id)).Should()
+                                                        .NotBeNull();
         }
 
         [Fact]
@@ -92,10 +101,13 @@ namespace Frank.Libraries.Tests.MongoDb
             await repository.InsertOneAsync(newItem);
 
             // Assert
-            repository.FilterBy(x => x.Name.Contains(newItem.Name, StringComparison.InvariantCultureIgnoreCase)).Should().NotBeNull();
+            repository.FilterBy(x => x.Name.Contains(newItem.Name, StringComparison.InvariantCultureIgnoreCase))
+                      .Should()
+                      .NotBeNull();
         }
 
-        private MongoTestModel CreateTestDocument() => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.GenerateNewId()).Generate();
+        private MongoTestModel CreateTestDocument() => new AutoFaker<MongoTestModel>().RuleFor(x => x.Id, ObjectId.GenerateNewId())
+                                                                                      .Generate();
 
         private List<MongoTestModel> CreateTestDocuments(int count = 10)
         {

@@ -33,7 +33,10 @@ namespace Frank.Libraries.ML.LanguageDetection
             for (var i = 0; i < prob.Length; i++)
             {
                 var profile = Languages.List.ElementAt(i);
-                prob[i] *= weight + (languageProbabilities.ContainsKey(profile) ? languageProbabilities[profile] : 0);
+                prob[i] *= weight
+                           + (languageProbabilities.ContainsKey(profile)
+                               ? languageProbabilities[profile]
+                               : 0);
             }
         }
 
@@ -66,10 +69,18 @@ namespace Frank.Libraries.ML.LanguageDetection
 
                 for (var i = 0; i <= list.Count; i++)
                 {
-                    if (i != list.Count && !(list[i].Probability < p))
+                    if (i != list.Count
+                        && !(list[i]
+                                 .Probability
+                             < p))
                         continue;
 
-                    list.Insert(i, new Language { LanguageCode = Languages.List.ElementAt(j).LanguageCode, Probability = p });
+                    list.Insert(i, new Language
+                    {
+                        LanguageCode = Languages.List.ElementAt(j)
+                                                .LanguageCode,
+                        Probability = p
+                    });
                     break;
                 }
             }

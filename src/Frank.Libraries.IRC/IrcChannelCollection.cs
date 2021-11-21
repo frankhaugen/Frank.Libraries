@@ -26,7 +26,7 @@ namespace Frank.Libraries.IRC
         /// <inheritdoc cref="Join(IEnumerable{string})" />
         public void Join(params string[] channels)
         {
-            Join((IEnumerable<string>) channels);
+            Join((IEnumerable<string>)channels);
         }
 
         /// <inheritdoc cref="Join(IEnumerable{System.Tuple{string,string}})" />
@@ -39,7 +39,7 @@ namespace Frank.Libraries.IRC
         /// <inheritdoc cref="Join(IEnumerable{Tuple{string, string}})" />
         public void Join(params Tuple<string, string>[] channels)
         {
-            Join((IEnumerable<Tuple<string, string>>) channels);
+            Join((IEnumerable<Tuple<string, string>>)channels);
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Frank.Libraries.IRC
         /// <inheritdoc cref="Leave(IEnumerable{string}, string)" />
         public void Leave(params string[] channels)
         {
-            Leave((IEnumerable<string>) channels);
+            Leave((IEnumerable<string>)channels);
         }
 
         /// <summary>

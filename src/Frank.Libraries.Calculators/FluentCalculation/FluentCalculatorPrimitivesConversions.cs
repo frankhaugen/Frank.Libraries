@@ -1,5 +1,5 @@
 using System;
- 
+
 namespace Frank.Libraries.Calculators.FluentCalculation
 {
     public static class FluentCalculatorPrimitivesConversions
@@ -93,6 +93,5 @@ namespace Frank.Libraries.Calculators.FluentCalculation
         public static ulong ToUlong(this decimal source) => Convert.ToUInt64(source);
         public static float ToFloat(this decimal source) => Convert.ToSingle(source);
         public static double ToDouble(this decimal source) => Convert.ToDouble(source);
-
     }
 }

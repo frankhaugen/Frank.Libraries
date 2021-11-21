@@ -18,9 +18,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.Storage.Files.Shares" Version="12.8.0" />
-        <PackageReference Include="Azure.Storage.Blobs" Version="12.10.0" />
-        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+        <PackageReference Include="Azure.Storage.Files.Shares" Version="12.8.0"/>
+        <PackageReference Include="Azure.Storage.Blobs" Version="12.10.0"/>
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -31,6 +31,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Blob\" />
+        <Folder Include="Blob\"/>
     </ItemGroup>
 </Project>

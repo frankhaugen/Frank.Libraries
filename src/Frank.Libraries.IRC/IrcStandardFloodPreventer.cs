@@ -60,16 +60,18 @@ namespace Frank.Libraries.IRC
         public long GetSendDelay()
         {
             // Subtract however many counter periods have elapsed since last decrement of counter.
-            var currentTime = DateTime.Now.Ticks/ticksPerMillisecond;
+            var currentTime = DateTime.Now.Ticks / ticksPerMillisecond;
             var elapsedMilliseconds = currentTime - lastCounterDecrementTime;
-            var tempMessageCounter = Math.Max(0L, messageCounter - elapsedMilliseconds/CounterPeriod);
-            messageCounter = tempMessageCounter > int.MaxValue ? int.MaxValue : (int) tempMessageCounter;
+            var tempMessageCounter = Math.Max(0L, messageCounter - elapsedMilliseconds / CounterPeriod);
+            messageCounter = tempMessageCounter > int.MaxValue
+                ? int.MaxValue
+                : (int)tempMessageCounter;
 
             // Update time of last decrement of counter to theoretical time of decrement.
-            lastCounterDecrementTime = currentTime - elapsedMilliseconds%CounterPeriod;
+            lastCounterDecrementTime = currentTime - elapsedMilliseconds % CounterPeriod;
 
             // Return time until next message can be sent.
-            return Math.Max((messageCounter - MaxMessageBurst)*CounterPeriod - elapsedMilliseconds, 0);
+            return Math.Max((messageCounter - MaxMessageBurst) * CounterPeriod - elapsedMilliseconds, 0);
         }
 
         /// <inheritdoc />

@@ -10,6 +10,7 @@ namespace Frank.Libraries.MongoDb
             {
                 return objectId;
             }
+
             return ObjectId.Empty;
         }
     }

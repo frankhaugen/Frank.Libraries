@@ -33,7 +33,8 @@ namespace Frank.Libraries.Tests.Xml
             _outputHelper.WriteLine(result);
 
             // Assert
-            result.Should().NotBeNullOrWhiteSpace();
+            result.Should()
+                  .NotBeNullOrWhiteSpace();
         }
 
         [Fact]
@@ -47,7 +48,8 @@ namespace Frank.Libraries.Tests.Xml
             _outputHelper.WriteLine(result!.ToJson());
 
             // Assert
-            result?.Salary.Should().Be(100000);
+            result?.Salary.Should()
+                  .Be(100000);
         }
     }
 }

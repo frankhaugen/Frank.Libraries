@@ -46,17 +46,24 @@ namespace Frank.Libraries.Tests.TestingInfrastructure.Generators
             foreach (var number in kid.Reverse())
             {
                 var intNumber = int.Parse(number.ToString());
-                var sum = isOne ? intNumber : 2 * intNumber;
+                var sum = isOne
+                    ? intNumber
+                    : 2 * intNumber;
                 if (sum > 9)
                 {
                     sum = (sum % 10) + 1;
                 }
+
                 isOne = !isOne;
                 controlNumber += sum;
             }
+
             return
                 (10 - (controlNumber % 10))
-                % 10 == 0 ? 0 : 10 - (controlNumber % 10);
+                % 10
+                == 0
+                    ? 0
+                    : 10 - (controlNumber % 10);
         }
     }
 }

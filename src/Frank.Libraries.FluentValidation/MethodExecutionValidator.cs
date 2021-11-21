@@ -7,7 +7,8 @@ namespace Frank.Libraries.FluentValidation
     {
         public MethodExecutionValidator()
         {
-            RuleFor(x => x).ThrowsNot();
+            RuleFor(x => x)
+                .ThrowsNot();
         }
     }
 }

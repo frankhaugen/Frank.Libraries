@@ -19,7 +19,8 @@ namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration
             var result2 = enumerableRandomizer.GetRandomValue();
 
             // Assert
-            result2.Should().NotBe(result1);
+            result2.Should()
+                   .NotBe(result1);
         }
     }
 }

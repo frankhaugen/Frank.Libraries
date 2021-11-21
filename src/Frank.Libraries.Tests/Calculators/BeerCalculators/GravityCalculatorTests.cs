@@ -25,7 +25,8 @@ namespace Frank.Libraries.Tests.Calculators.BeerCalculators
             var result = gravityCalculator.Calculate(specificGravity, temperature, calibrationTemperature);
 
             // Assert
-            result.Should().BeApproximately(expected, 0.00099m);
+            result.Should()
+                  .BeApproximately(expected, 0.00099m);
         }
 
         [Theory]
@@ -47,7 +48,8 @@ namespace Frank.Libraries.Tests.Calculators.BeerCalculators
             var result = gravityCalculator.CalculateFahrenheit(specificGravity, fahrenheitTemperature, fahrenheitCalibrationTemperature);
 
             // Assert
-            result.Should().BeApproximately(expected, 0.00099m);
+            result.Should()
+                  .BeApproximately(expected, 0.00099m);
         }
     }
 }

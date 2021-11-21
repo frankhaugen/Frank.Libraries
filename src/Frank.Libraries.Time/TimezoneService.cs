@@ -19,19 +19,26 @@ namespace Frank.Libraries.Time
         /// Get a list of all timezones
         /// </summary>
         /// <returns></returns>
-        public IReadOnlyList<DateTimeZone> GetTimezones() => DateTimeZoneProviders.Tzdb.GetAllZones().ToList();
+        public IReadOnlyList<DateTimeZone> GetTimezones() => DateTimeZoneProviders.Tzdb.GetAllZones()
+                                                                                  .ToList();
 
         /// <summary>
         /// Get a list of timezones that apply to a UTC offset
         /// </summary>
         /// <returns>A readomnly list of timezones</returns>
-        public IReadOnlyList<DateTimeZone> GetTimezones(Offset offset) => DateTimeZoneProviders.Tzdb.GetAllZones().Where(x => x.GetUtcOffset(_clock.GetCurrentInstant()).Minus(offset) == Offset.Zero).ToList();
+        public IReadOnlyList<DateTimeZone> GetTimezones(Offset offset) => DateTimeZoneProviders.Tzdb.GetAllZones()
+                                                                                               .Where(x => x.GetUtcOffset(_clock.GetCurrentInstant())
+                                                                                                            .Minus(offset)
+                                                                                                           == Offset.Zero)
+                                                                                               .ToList();
 
         /// <summary>
         /// Get a list of timezone names
         /// </summary>
         /// <returns></returns>
-        public IReadOnlyList<string> GetTimezoneNames() => DateTimeZoneProviders.Tzdb.GetAllZones().Select(x => x.Id).ToList();
+        public IReadOnlyList<string> GetTimezoneNames() => DateTimeZoneProviders.Tzdb.GetAllZones()
+                                                                                .Select(x => x.Id)
+                                                                                .ToList();
 
         /// <summary>
         /// Get the timezone of the system
@@ -63,6 +70,7 @@ namespace Frank.Libraries.Time
         /// Gets the current system's timezone
         /// </summary>
         /// <returns></returns>
-        public override string ToString() => GetSystemTimezone().ToString();
+        public override string ToString() => GetSystemTimezone()
+            .ToString();
     }
 }

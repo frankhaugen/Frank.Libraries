@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.Options;
-using MongoDB.Driver;
-using System.Linq;
+﻿using System.Linq;
 using System.Reflection;
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 
 namespace Frank.Libraries.MongoDb
 {
@@ -22,7 +22,10 @@ namespace Frank.Libraries.MongoDb
 
         private string GetAttributeCollectionName<T>()
         {
-            return (typeof(T).GetTypeInfo().GetCustomAttributes(typeof(CollectionName)).FirstOrDefault() as CollectionName)?.Name ?? typeof(T).Name.ToLowerInvariant();
+            return (typeof(T).GetTypeInfo()
+                             .GetCustomAttributes(typeof(CollectionName))
+                             .FirstOrDefault() as CollectionName)?.Name
+                   ?? typeof(T).Name.ToLowerInvariant();
         }
     }
 }

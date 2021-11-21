@@ -28,13 +28,16 @@ namespace Frank.Libraries.Security.PasswordGeneration
             for (var i = 0; i < characterCount; i++)
             {
                 var characters = CombineCharactersToSingleString();
-                output += characters[GetRandom(CombineCharactersToSingleString().Length - 1)];
+                output += characters[GetRandom(CombineCharactersToSingleString()
+                                                   .Length
+                                               - 1)];
             }
 
             return output;
         }
 
-        public string CombineCharactersToSingleString() => string.Join("", _characters.SelectMany(x => x.Value).Select(x => x));
+        public string CombineCharactersToSingleString() => string.Join("", _characters.SelectMany(x => x.Value)
+                                                                                      .Select(x => x));
 
         public void AddCharacterVariantsToDictionary(CharacterVariant[] characterVariants)
         {
@@ -84,7 +87,8 @@ namespace Frank.Libraries.Security.PasswordGeneration
 
         public CharacterVariant GetRandomCharacterVariant()
         {
-            return _characters.ElementAt(GetRandom(_characters.Count)).Key;
+            return _characters.ElementAt(GetRandom(_characters.Count))
+                              .Key;
         }
 
         public int GetRandom(int maxValue)

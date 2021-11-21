@@ -22,9 +22,12 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var detector = new LanguageDetectionService(new LanguageDetectionOptions());
             var result = detector.Detect(text);
 
-            result.Should().NotBeNull();
-            result?.LanguageCode.Should().Be(LanguageCode.ENG);
-            result?.Name.Should().Be(LanguageCode.ENG.GetName());
+            result.Should()
+                  .NotBeNull();
+            result?.LanguageCode.Should()
+                  .Be(LanguageCode.ENG);
+            result?.Name.Should()
+                  .Be(LanguageCode.ENG.GetName());
         }
 
         [Theory]
@@ -39,9 +42,12 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
             var detector = new LanguageDetectionService(new LanguageDetectionOptions());
             var result = detector.Detect(text)!;
 
-            result.Should().NotBeNull();
-            result.LanguageCode.Should().Be(expected);
-            result.Name.Should().Be(expected.GetName());
+            result.Should()
+                  .NotBeNull();
+            result.LanguageCode.Should()
+                  .Be(expected);
+            result.Name.Should()
+                  .Be(expected.GetName());
             _outputHelper.WriteLine($"{result.LanguageCode}\t{result.Name}\t{result.Probability}");
         }
 
@@ -65,7 +71,8 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
 
             var result = detector.Detect(text);
 
-            result.Should().BeNull();
+            result.Should()
+                  .BeNull();
         }
 
         [Fact]
@@ -77,7 +84,8 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
 
             var result = detector.Is(LanguageCode.NOR, text);
 
-            result.Should().BeTrue();
+            result.Should()
+                  .BeTrue();
         }
 
         [Fact]
@@ -89,20 +97,21 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
 
             var result = detector.Is(LanguageCode.INA, text);
 
-            result.Should().BeFalse();
+            result.Should()
+                  .BeFalse();
         }
 
         [Fact]
         public void Detect_TextIsInterlinguaThatDoesNotExist_DoesNotReturnInterlingua()
         {
-            var text = "Patre nostre, qui es in le celos, que tu nomine sia sanctificate; que tu regno veni; que tu voluntate sia facite como in le celo, etiam super le terra." +
-                "Da nos hodie nostre pan quotidian, e pardona a nos nostre debitas como etiam nos los pardona a nostre debitores. E non induce nos in tentation, sed libera nos del mal. Amen.";
+            var text = "Patre nostre, qui es in le celos, que tu nomine sia sanctificate; que tu regno veni; que tu voluntate sia facite como in le celo, etiam super le terra." + "Da nos hodie nostre pan quotidian, e pardona a nos nostre debitas como etiam nos los pardona a nostre debitores. E non induce nos in tentation, sed libera nos del mal. Amen.";
 
             var detector = new LanguageDetectionService(new LanguageDetectionOptions());
 
             var result = detector.Detect(text);
 
-            result!.LanguageCode.Should().NotBe(LanguageCode.INA);
+            result!.LanguageCode.Should()
+                   .NotBe(LanguageCode.INA);
         }
 
         [Fact]
@@ -114,7 +123,8 @@ namespace Frank.Libraries.Tests.ML.LanguageDetection
 
             var result = detector.Detect(text);
 
-            result.Should().BeNull();
+            result.Should()
+                  .BeNull();
         }
     }
 }

@@ -8,7 +8,9 @@ namespace Frank.Libraries.CodeGeneration.Extensions
     {
         public static string ToCamelcase(this string source)
         {
-            var firstCharacter = source.First().ToString().ToLower();
+            var firstCharacter = source.First()
+                                       .ToString()
+                                       .ToLower();
 
             source = source.Remove(0, 1);
             source = firstCharacter + source;
@@ -31,7 +33,8 @@ namespace Frank.Libraries.CodeGeneration.Extensions
 
         public static string ToSentenceCase(this string source) => Regex.Replace(source, "[a-z][A-Z]", m => $"{m.Value[0]} {char.ToLower(m.Value[1])}");
 
-        public static string ToNameCase(this string source) => source.ToPascalCase().Remove(" ", "\n", "\n\r", "\r", "\t");
+        public static string ToNameCase(this string source) => source.ToPascalCase()
+                                                                     .Remove(" ", "\n", "\n\r", "\r", "\t");
 
         public static string ToPascalCase(this string source) => source.ToTitleCase()
                                                                        .Remove(" ")

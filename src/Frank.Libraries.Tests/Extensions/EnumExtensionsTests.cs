@@ -19,7 +19,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = enumValue.AsString();
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -34,7 +35,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = enumValue.AsInteger();
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         //[Theory]

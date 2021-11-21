@@ -19,6 +19,7 @@ namespace Frank.Libraries.Tests.TestingInfrastructure.Generators
 
             return stringBuilder.ToString();
         }
+
         private static int RandomDigit => RandomNumberGenerator.GetInt32(0, 10);
     }
 }

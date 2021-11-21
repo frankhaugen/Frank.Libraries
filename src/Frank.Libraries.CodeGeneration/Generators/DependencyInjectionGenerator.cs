@@ -14,7 +14,8 @@ namespace Frank.Libraries.CodeGeneration.Generators
         public DependencyInjectionGenerator(Dictionary<Class, ServiceLifetime> classes, string extensionMethodName = "AddGeneratedDependencies")
         {
             var signature = new MethodSignature($"{extensionMethodName}", arguments: new List<Argument>() { new(typeof(IServiceCollection), "services", isExtension: true) });
-            var lines = classes.Select(x => GetAddServiceCodeLine(x.Value, x.Key.Name)).ToList();
+            var lines = classes.Select(x => GetAddServiceCodeLine(x.Value, x.Key.Name))
+                               .ToList();
             var method = new Method(signature, lines);
 
             _classes = classes.Keys.ToList();

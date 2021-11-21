@@ -23,9 +23,9 @@ namespace Frank.Libraries.Tests.Security.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>
             {
-                {CharacterVariant.Digits, CharacterLists.Digits},
-                {CharacterVariant.Lowercase, CharacterLists.Lowercase},
-                {CharacterVariant.Uppercase, CharacterLists.Uppercase}
+                { CharacterVariant.Digits, CharacterLists.Digits },
+                { CharacterVariant.Lowercase, CharacterLists.Lowercase },
+                { CharacterVariant.Uppercase, CharacterLists.Uppercase }
             };
 
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
@@ -50,7 +50,8 @@ namespace Frank.Libraries.Tests.Security.PasswordGeneration
             passwordGeneratorHelper.AddCharacterVariantsToDictionary(characterVariants);
 
             // Assert
-            characters.Should().HaveCount(characterVariants.Length);
+            characters.Should()
+                      .HaveCount(characterVariants.Length);
         }
 
         [Fact]
@@ -59,9 +60,9 @@ namespace Frank.Libraries.Tests.Security.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>
             {
-                {CharacterVariant.Digits, CharacterLists.Digits},
-                {CharacterVariant.Lowercase, CharacterLists.Lowercase},
-                {CharacterVariant.Uppercase, CharacterLists.Uppercase}
+                { CharacterVariant.Digits, CharacterLists.Digits },
+                { CharacterVariant.Lowercase, CharacterLists.Lowercase },
+                { CharacterVariant.Uppercase, CharacterLists.Uppercase }
             };
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
             var characterVariants = new[] { CharacterVariant.Lowercase, CharacterVariant.Special };
@@ -100,9 +101,9 @@ namespace Frank.Libraries.Tests.Security.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>
             {
-                {CharacterVariant.Digits, CharacterLists.Digits},
-                {CharacterVariant.Lowercase, CharacterLists.Lowercase},
-                {CharacterVariant.Uppercase, CharacterLists.Uppercase}
+                { CharacterVariant.Digits, CharacterLists.Digits },
+                { CharacterVariant.Lowercase, CharacterLists.Lowercase },
+                { CharacterVariant.Uppercase, CharacterLists.Uppercase }
             };
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
             var characterCount = 0;
@@ -117,9 +118,9 @@ namespace Frank.Libraries.Tests.Security.PasswordGeneration
             // Arrange
             var characters = new Dictionary<CharacterVariant, string>
             {
-                {CharacterVariant.Digits, CharacterLists.Digits},
-                {CharacterVariant.Lowercase, CharacterLists.Lowercase},
-                {CharacterVariant.Uppercase, CharacterLists.Uppercase}
+                { CharacterVariant.Digits, CharacterLists.Digits },
+                { CharacterVariant.Lowercase, CharacterLists.Lowercase },
+                { CharacterVariant.Uppercase, CharacterLists.Uppercase }
             };
             var passwordGeneratorHelper = new PasswordGeneratorHelper(characters);
 
@@ -127,7 +128,8 @@ namespace Frank.Libraries.Tests.Security.PasswordGeneration
             var result = passwordGeneratorHelper.GetRandomCharacterVariant();
 
             // Assert
-            characters.Should().ContainKey(result);
+            characters.Should()
+                      .ContainKey(result);
         }
 
         [Fact]
@@ -143,8 +145,10 @@ namespace Frank.Libraries.Tests.Security.PasswordGeneration
             var result2 = passwordGeneratorHelper.GetRandom(maxValue);
 
             // Assert
-            result1.Should().NotBe(result2);
-            result1.Should().BeInRange(0, maxValue);
+            result1.Should()
+                   .NotBe(result2);
+            result1.Should()
+                   .BeInRange(0, maxValue);
         }
     }
 }

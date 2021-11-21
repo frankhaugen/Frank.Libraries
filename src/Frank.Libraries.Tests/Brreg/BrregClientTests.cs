@@ -1,7 +1,7 @@
-﻿using FluentAssertions;
-using Frank.Libraries.Brreg;
-using System;
+﻿using System;
 using System.Threading.Tasks;
+using FluentAssertions;
+using Frank.Libraries.Brreg;
 using Xunit;
 
 namespace Frank.Libraries.Tests.Brreg
@@ -19,9 +19,13 @@ namespace Frank.Libraries.Tests.Brreg
             var result = await brregClient.GetCompanyAsync(organizationNumber);
 
             // Assert
-            result!.RegistrationNumber.Should().Be(organizationNumber);
-            result!.Name.Should().NotBeNullOrWhiteSpace();
-            result!.Name!.ToLowerInvariant().Should().Contain("semine");
+            result!.RegistrationNumber.Should()
+                   .Be(organizationNumber);
+            result!.Name.Should()
+                   .NotBeNullOrWhiteSpace();
+            result!.Name!.ToLowerInvariant()
+                   .Should()
+                   .Contain("semine");
         }
 
         [Fact]
@@ -53,10 +57,14 @@ namespace Frank.Libraries.Tests.Brreg
                 pageSize);
 
             // Assert
-            result.Data.Should().NotBeNull();
-            result.Data?.Companies.Should().NotBeNullOrEmpty();
-            result.Data?.Companies.Should().OnlyHaveUniqueItems();
-            result.Links?.Self.Should().NotBeNull();
+            result.Data.Should()
+                  .NotBeNull();
+            result.Data?.Companies.Should()
+                  .NotBeNullOrEmpty();
+            result.Data?.Companies.Should()
+                  .OnlyHaveUniqueItems();
+            result.Links?.Self.Should()
+                  .NotBeNull();
         }
     }
 }

@@ -27,7 +27,8 @@ namespace Frank.Libraries.Tests.Time
             var result = service.IsValid(expression, format);
 
             // Assert
-            result.Should().BeTrue();
+            result.Should()
+                  .BeTrue();
         }
 
         //[Fact]
@@ -42,7 +43,6 @@ namespace Frank.Libraries.Tests.Time
             var result = service.Parse(expression, format);
 
             // Assert
-
         }
 
         [Fact]
@@ -50,7 +50,8 @@ namespace Frank.Libraries.Tests.Time
         {
             // Arrange
             var service = new CronService();
-            var expression = "* * * * *"; ;
+            var expression = "* * * * *";
+            ;
             CronExpression? cronExpression = null;
             CronFormat format = CronFormat.IncludeSeconds;
 
@@ -125,6 +126,5 @@ namespace Frank.Libraries.Tests.Time
 
             // Assert
         }
-
     }
 }

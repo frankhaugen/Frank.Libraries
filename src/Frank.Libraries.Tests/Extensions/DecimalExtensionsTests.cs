@@ -6,7 +6,6 @@ namespace Frank.Libraries.Tests.Extensions
 {
     public class DecimalExtensionsTests
     {
-
         [Theory]
         [InlineData(2.0, 2.0)]
         [InlineData(2.1, 2.1)]
@@ -20,7 +19,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = value.ToFloat();
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -36,7 +36,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = value.ToDouble();
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -51,7 +52,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = value.ToInteger();
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -66,7 +68,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = value.ToPowerOf(powerOf);
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
     }
 }

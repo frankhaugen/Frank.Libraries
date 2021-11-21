@@ -23,7 +23,7 @@ namespace Frank.Libraries.IRC
             var sourceUser = message.Source as IrcUser;
             if (sourceUser == null)
                 throw new ProtocolViolationException(string.Format(
-                    Resources.MessageSourceNotUser, message.Source.Name));
+                                                         Resources.MessageSourceNotUser, message.Source.Name));
 
             // Local or remote user has changed nick name.
             Debug.Assert(message.Parameters[0] != null);
@@ -44,7 +44,7 @@ namespace Frank.Libraries.IRC
             var sourceUser = message.Source as IrcUser;
             if (sourceUser == null)
                 throw new ProtocolViolationException(string.Format(
-                    Resources.MessageSourceNotUser, message.Source.Name));
+                                                         Resources.MessageSourceNotUser, message.Source.Name));
 
             // Remote user has quit server.
             Debug.Assert(message.Parameters[0] != null);
@@ -64,11 +64,12 @@ namespace Frank.Libraries.IRC
             var sourceUser = message.Source as IrcUser;
             if (sourceUser == null)
                 throw new ProtocolViolationException(string.Format(
-                    Resources.MessageSourceNotUser, message.Source.Name));
+                                                         Resources.MessageSourceNotUser, message.Source.Name));
 
             // Local or remote user has joined one or more channels.
             Debug.Assert(message.Parameters[0] != null);
-            var chans = GetChannelsFromList(message.Parameters[0]).ToArray();
+            var chans = GetChannelsFromList(message.Parameters[0])
+                .ToArray();
             if (sourceUser == localUser)
                 chans.ForEach(c => localUser.HandleJoinedChannel(c));
             else
@@ -85,12 +86,13 @@ namespace Frank.Libraries.IRC
             var sourceUser = message.Source as IrcUser;
             if (sourceUser == null)
                 throw new ProtocolViolationException(string.Format(
-                    Resources.MessageSourceNotUser, message.Source.Name));
+                                                         Resources.MessageSourceNotUser, message.Source.Name));
 
             // Local or remote user has left one or more channels.
             Debug.Assert(message.Parameters[0] != null);
             var comment = message.Parameters[1];
-            var chans = GetChannelsFromList(message.Parameters[0]).ToArray();
+            var chans = GetChannelsFromList(message.Parameters[0])
+                .ToArray();
             if (sourceUser == localUser)
                 chans.ForEach(c => localUser.HandleLeftChannel(c));
             else
@@ -116,7 +118,7 @@ namespace Frank.Libraries.IRC
                 var source = message.Source as IrcUser;
                 OnChannelModeChanged(channel, source, modesAndParameters.Item1, modesAndParameters.Item2);
                 channel.HandleModesChanged(source, modesAndParameters.Item1,
-                    modesAndParameters.Item2);
+                                           modesAndParameters.Item2);
             }
             else if (message.Parameters[0] == localUser.NickName)
             {
@@ -126,12 +128,12 @@ namespace Frank.Libraries.IRC
             else
             {
                 throw new ProtocolViolationException(string.Format(Resources.MessageCannotSetUserMode,
-                    message.Parameters[0]));
+                                                                   message.Parameters[0]));
             }
         }
 
         protected virtual void OnChannelModeChanged(IrcChannel channel, IrcUser source, string newModes,
-            IEnumerable<string> newModeParameters)
+                                                    IEnumerable<string> newModeParameters)
         {
         }
 
@@ -158,12 +160,13 @@ namespace Frank.Libraries.IRC
             Debug.Assert(message.Parameters[0] != null);
             var channels = GetChannelsFromList(message.Parameters[0]);
             Debug.Assert(message.Parameters[1] != null);
-            var users = GetUsersFromList(message.Parameters[1]).ToArray();
+            var users = GetUsersFromList(message.Parameters[1])
+                .ToArray();
             var comment = message.Parameters[2];
 
             // Handle kick command for each user given in message.
             foreach (var channelUser in channels.Zip(users,
-                (channel, user) => channel.GetChannelUser(user)))
+                                                     (channel, user) => channel.GetChannelUser(user)))
             {
                 if (channelUser.User == localUser)
                 {
@@ -178,6 +181,7 @@ namespace Frank.Libraries.IRC
                     // Local user has left channel. Do not process kicks of remote users.
                     break;
                 }
+
                 // Remote user was kicked from channel.
                 channelUser.Channel.HandleUserKicked(channelUser, comment);
             }
@@ -209,7 +213,10 @@ namespace Frank.Libraries.IRC
         {
             // Get list of message targets.
             Debug.Assert(message.Parameters[0] != null);
-            var targets = message.Parameters[0].Split(',').Select(n => GetMessageTarget(n)).ToArray();
+            var targets = message.Parameters[0]
+                                 .Split(',')
+                                 .Select(n => GetMessageTarget(n))
+                                 .ToArray();
 
             // Get message text.
             Debug.Assert(message.Parameters[1] != null);
@@ -233,7 +240,10 @@ namespace Frank.Libraries.IRC
         {
             // Get list of message targets.
             Debug.Assert(message.Parameters[0] != null);
-            var targets = message.Parameters[0].Split(',').Select(n => GetMessageTarget(n)).ToArray();
+            var targets = message.Parameters[0]
+                                 .Split(',')
+                                 .Select(n => GetMessageTarget(n))
+                                 .ToArray();
 
             // Get message text.
             Debug.Assert(message.Parameters[1] != null);
@@ -310,10 +320,17 @@ namespace Frank.Libraries.IRC
             WelcomeMessage = message.Parameters[1];
 
             // Extract nick name, user name, and host name from welcome message. Use fallback info if not present.
-            var nickNameIdMatch = Regex.Match(WelcomeMessage.Split(' ').Last(), regexNickNameId);
-            localUser.NickName = nickNameIdMatch.Groups["nick"].GetValue() ?? localUser.NickName;
-            localUser.UserName = nickNameIdMatch.Groups["user"].GetValue() ?? localUser.UserName;
-            localUser.HostName = nickNameIdMatch.Groups["host"].GetValue() ?? localUser.HostName;
+            var nickNameIdMatch = Regex.Match(WelcomeMessage.Split(' ')
+                                                            .Last(), regexNickNameId);
+            localUser.NickName = nickNameIdMatch.Groups["nick"]
+                                                .GetValue()
+                                 ?? localUser.NickName;
+            localUser.UserName = nickNameIdMatch.Groups["user"]
+                                                .GetValue()
+                                 ?? localUser.UserName;
+            localUser.HostName = nickNameIdMatch.Groups["host"]
+                                                .GetValue()
+                                 ?? localUser.HostName;
 
             isRegistered = true;
             OnRegistered(new EventArgs());
@@ -378,10 +395,12 @@ namespace Frank.Libraries.IRC
 
             // Check if message is RPL_BOUNCE or RPL_ISUPPORT.
             Debug.Assert(message.Parameters[1] != null);
-            if (message.Parameters[1].StartsWith("Try server"))
+            if (message.Parameters[1]
+                       .StartsWith("Try server"))
             {
                 // Message is RPL_BOUNCE. Current server is redirecting client to new server.
-                var textParts = message.Parameters[0].Split(' ', ',');
+                var textParts = message.Parameters[0]
+                                       .Split(' ', ',');
                 var serverAddress = textParts[2];
                 var serverPort = int.Parse(textParts[6]);
 
@@ -395,9 +414,12 @@ namespace Frank.Libraries.IRC
                     if (message.Parameters[i + 1] == null)
                         break;
 
-                    var paramParts = message.Parameters[i].Split('=');
+                    var paramParts = message.Parameters[i]
+                                            .Split('=');
                     var paramName = paramParts[0];
-                    var paramValue = paramParts.Length == 1 ? null : paramParts[1];
+                    var paramValue = paramParts.Length == 1
+                        ? null
+                        : paramParts[1];
                     HandleISupportParameter(paramName, paramValue);
                     serverSupportedFeatures.Set(paramName, paramValue);
                 }
@@ -638,7 +660,8 @@ namespace Frank.Libraries.IRC
             var infoParts = info.Split(' ');
             for (var i = 0; i < infoParts.Length; i++)
             {
-                switch (infoParts[i].ToLowerInvariant())
+                switch (infoParts[i]
+                            .ToLowerInvariant())
                 {
                     case "user":
                     case "users":
@@ -687,7 +710,9 @@ namespace Frank.Libraries.IRC
 
             // Set each user listed in reply as online.
             Debug.Assert(message.Parameters[1] != null);
-            var onlineUsers = message.Parameters[1].Split(' ').Select(n => GetUserFromNickName(n));
+            var onlineUsers = message.Parameters[1]
+                                     .Split(' ')
+                                     .Select(n => GetUserFromNickName(n));
             onlineUsers.ForEach(u => u.IsOnline = true);
         }
 
@@ -842,7 +867,8 @@ namespace Frank.Libraries.IRC
             var user = GetUserFromNickName(message.Parameters[1]);
 
             Debug.Assert(message.Parameters[2] != null);
-            foreach (var channelId in message.Parameters[2].Split(' '))
+            foreach (var channelId in message.Parameters[2]
+                                             .Split(' '))
             {
                 if (channelId.Length == 0)
                     return;
@@ -966,7 +992,9 @@ namespace Frank.Libraries.IRC
             Debug.Assert(message.Parameters[0] == localUser.NickName);
 
             Debug.Assert(message.Parameters[1] != null);
-            var channel = message.Parameters[1] == "*" ? null : GetChannelFromName(message.Parameters[1]);
+            var channel = message.Parameters[1] == "*"
+                ? null
+                : GetChannelFromName(message.Parameters[1]);
 
             Debug.Assert(message.Parameters[5] != null);
             var user = GetUserFromNickName(message.Parameters[5]);
@@ -1008,7 +1036,8 @@ namespace Frank.Libraries.IRC
             }
 
             Debug.Assert(message.Parameters[7] != null);
-            var lastParamParts = message.Parameters[7].SplitIntoPair(" ");
+            var lastParamParts = message.Parameters[7]
+                                        .SplitIntoPair(" ");
             user.HopCount = int.Parse(lastParamParts.Item1);
             if (lastParamParts.Item2 != null)
                 user.RealName = lastParamParts.Item2;
@@ -1028,11 +1057,14 @@ namespace Frank.Libraries.IRC
             if (channel != null)
             {
                 Debug.Assert(message.Parameters[1] != null);
-                Debug.Assert(message.Parameters[1].Length == 1);
+                Debug.Assert(message.Parameters[1]
+                                    .Length
+                             == 1);
                 channel.HandleTypeChanged(GetChannelType(message.Parameters[1][0]));
 
                 Debug.Assert(message.Parameters[3] != null);
-                foreach (var userId in message.Parameters[3].Split(' '))
+                foreach (var userId in message.Parameters[3]
+                                              .Split(' '))
                 {
                     if (userId.Length == 0)
                         return;
@@ -1060,7 +1092,8 @@ namespace Frank.Libraries.IRC
             var clientServerHostName = message.Parameters[2];
             Debug.Assert(ServerName == null || clientServerHostName == ServerName);
             Debug.Assert(message.Parameters[3] != null);
-            var infoParts = message.Parameters[3].SplitIntoPair(" ");
+            var infoParts = message.Parameters[3]
+                                   .SplitIntoPair(" ");
             Debug.Assert(infoParts.Item2 != null);
             var hopCount = int.Parse(infoParts.Item1);
             var info = infoParts.Item2;
@@ -1165,7 +1198,8 @@ namespace Frank.Libraries.IRC
             Debug.Assert(message.Parameters[0] != null);
 
             Debug.Assert(message.Parameters[1] != null);
-            localUser.NickName = message.Parameters[1].Split(' ')[3];
+            localUser.NickName = message.Parameters[1]
+                                        .Split(' ')[3];
 
             isRegistered = true;
             OnRegistered(new EventArgs());
@@ -1208,6 +1242,7 @@ namespace Frank.Libraries.IRC
                     errorMessage = message.Parameters[i];
                     break;
                 }
+
                 errorParameters.Add(message.Parameters[i]);
             }
 

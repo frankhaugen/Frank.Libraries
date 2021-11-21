@@ -17,7 +17,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUint();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -31,7 +32,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToShort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -45,7 +47,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUshort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -59,7 +62,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToLong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -73,7 +77,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUlong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -87,7 +92,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToFloat();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -101,7 +107,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDouble();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -115,7 +122,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDecimal();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -129,7 +137,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToInt();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -143,7 +152,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToShort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -157,7 +167,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUshort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -171,7 +182,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToLong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -185,7 +197,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUlong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -199,7 +212,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToFloat();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -213,7 +227,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDouble();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -227,7 +242,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDecimal();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -241,7 +257,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToInt();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -255,7 +272,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUint();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -269,7 +287,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUshort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -283,7 +302,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToLong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -297,7 +317,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUlong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -311,7 +332,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToFloat();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -325,7 +347,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDouble();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -339,7 +362,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDecimal();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -353,7 +377,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToInt();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -367,7 +392,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUint();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -381,7 +407,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToShort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -395,7 +422,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToLong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -409,7 +437,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUlong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -423,7 +452,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToFloat();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -437,7 +467,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDouble();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -451,7 +482,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDecimal();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -465,7 +497,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToInt();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -479,7 +512,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUint();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -493,7 +527,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToShort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -507,7 +542,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUshort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -521,7 +557,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUlong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -535,7 +572,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToFloat();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -549,7 +587,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDouble();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -563,7 +602,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDecimal();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -577,7 +617,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToInt();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -591,7 +632,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUint();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -605,7 +647,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToShort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -619,7 +662,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUshort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -633,7 +677,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToLong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -647,7 +692,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToFloat();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -661,7 +707,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDouble();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -675,7 +722,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDecimal();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -689,7 +737,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToInt();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -703,7 +752,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUint();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -717,7 +767,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToShort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -731,7 +782,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUshort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -745,7 +797,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToLong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -759,7 +812,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUlong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -773,7 +827,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDouble();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -787,7 +842,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDecimal();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -801,7 +857,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToInt();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -815,7 +872,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUint();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -829,7 +887,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToShort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -843,7 +902,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUshort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -857,7 +917,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToLong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -871,7 +932,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUlong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -885,7 +947,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToFloat();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -899,7 +962,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDecimal();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -913,7 +977,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToInt();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -927,7 +992,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUint();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -941,7 +1007,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToShort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -955,7 +1022,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUshort();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -969,7 +1037,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToLong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -983,7 +1052,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToUlong();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -997,7 +1067,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToFloat();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
 
         [Fact]
@@ -1011,7 +1082,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.ToDouble();
 
             // Assert
-            result.Should().BeGreaterThan(0);
+            result.Should()
+                  .BeGreaterThan(0);
         }
     }
 }

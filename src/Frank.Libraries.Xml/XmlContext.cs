@@ -25,6 +25,7 @@ namespace Frank.Libraries.Xml
             {
                 _options.Folder = Path.Combine(Directory.GetCurrentDirectory(), "Data");
             }
+
             _filePath = Path.Combine(_options.Folder, typeof(TEntity).Name + ".xml");
             Setup();
         }
@@ -40,13 +41,16 @@ namespace Frank.Libraries.Xml
             {
                 File.WriteAllText(_filePath, new List<TEntity>().SerializeObjectToXml());
             }
-            _collection.AddRange(File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>()!);
+
+            _collection.AddRange(File.ReadAllText(_filePath)
+                                     .DeserializeObjectFromXml<List<TEntity>>()!);
         }
 
         public IEnumerable<TEntity> GetCollection()
         {
             if (!_collection.Any())
-                _collection.AddRange(File.ReadAllText(_filePath).DeserializeObjectFromXml<List<TEntity>>()!);
+                _collection.AddRange(File.ReadAllText(_filePath)
+                                         .DeserializeObjectFromXml<List<TEntity>>()!);
 
             return _collection;
         }

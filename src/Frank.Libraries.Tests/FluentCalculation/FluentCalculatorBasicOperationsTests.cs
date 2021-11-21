@@ -18,7 +18,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Add(value);
 
             // Assert
-            result.Should().BeGreaterThan(1);
+            result.Should()
+                  .BeGreaterThan(1);
         }
 
         [Fact]
@@ -33,7 +34,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Add(value);
 
             // Assert
-            result.Should().BeGreaterThan(1);
+            result.Should()
+                  .BeGreaterThan(1);
         }
 
         [Fact]
@@ -48,7 +50,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Add(value);
 
             // Assert
-            result.Should().BeGreaterThan(1);
+            result.Should()
+                  .BeGreaterThan(1);
         }
 
         [Fact]
@@ -62,7 +65,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Add(value);
 
             // Assert
-            result.Should().BeGreaterThan(1);
+            result.Should()
+                  .BeGreaterThan(1);
         }
 
         [Fact]
@@ -76,7 +80,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Add(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -91,7 +96,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Add(value);
 
             // Assert
-            result.Should().BeGreaterThan(1);
+            result.Should()
+                  .BeGreaterThan(1);
         }
 
         [Fact]
@@ -105,7 +111,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Subtract(value);
 
             // Assert
-            result.Should().BeLessThanOrEqualTo(1);
+            result.Should()
+                  .BeLessThanOrEqualTo(1);
         }
 
         [Fact]
@@ -120,7 +127,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Subtract(value);
 
             // Assert
-            result.Should().BeLessThanOrEqualTo(1);
+            result.Should()
+                  .BeLessThanOrEqualTo(1);
         }
 
         [Fact]
@@ -135,7 +143,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Subtract(value);
 
             // Assert
-            result.Should().BeLessThanOrEqualTo(1);
+            result.Should()
+                  .BeLessThanOrEqualTo(1);
         }
 
         [Fact]
@@ -150,7 +159,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Subtract(value);
 
             // Assert
-            result.Should().BeLessThanOrEqualTo(1);
+            result.Should()
+                  .BeLessThanOrEqualTo(1);
         }
 
         [Fact]
@@ -165,7 +175,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Subtract(value);
 
             // Assert
-            result.Should().BeLessThanOrEqualTo(1);
+            result.Should()
+                  .BeLessThanOrEqualTo(1);
         }
 
         [Fact]
@@ -180,7 +191,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Subtract(value);
 
             // Assert
-            result.Should().BeLessThanOrEqualTo(1);
+            result.Should()
+                  .BeLessThanOrEqualTo(1);
         }
 
         [Fact]
@@ -195,7 +207,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Multiply(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -210,7 +223,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Multiply(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -225,7 +239,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Multiply(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -240,7 +255,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Multiply(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -255,7 +271,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Multiply(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -270,7 +287,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Multiply(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -285,7 +303,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Divide(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -300,7 +319,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Divide(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -315,7 +335,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Divide(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -330,7 +351,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Divide(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -345,7 +367,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Divide(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
 
         [Fact]
@@ -360,7 +383,8 @@ namespace Frank.Libraries.Tests.FluentCalculation
             var result = source.Divide(value);
 
             // Assert
-            result.Should().BeGreaterThanOrEqualTo(1);
+            result.Should()
+                  .BeGreaterThanOrEqualTo(1);
         }
     }
 }

@@ -25,6 +25,7 @@ namespace Frank.Libraries.Gaming.Starfinder.Common
             Results = rolls;
         }
 
-        public int GetResult() => Results.Select(x => x.Result).Sum();
+        public int GetResult() => Results.Select(x => x.Result)
+                                         .Sum();
     }
 }

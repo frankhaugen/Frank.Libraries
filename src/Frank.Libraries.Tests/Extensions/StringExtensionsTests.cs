@@ -21,7 +21,8 @@ namespace Frank.Libraries.Tests.Extensions
             var result = email.IsEmail();
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
     }
 }

@@ -51,7 +51,9 @@ namespace Frank.Libraries.ML.LanguageDetection
                 return _buffer.ToString(_buffer.Length - n, n);
 
             var c = _buffer[^1];
-            return c == ' ' ? null : c.ToString();
+            return c == ' '
+                ? null
+                : c.ToString();
         }
     }
 }

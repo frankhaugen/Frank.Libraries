@@ -10,8 +10,8 @@ namespace Frank.Libraries.Calculators.Converters
             var result = new PolarCoordinates();
 
             result.Radius = DecimalEx.Sqrt((coordinates.X * coordinates.X)
-                                      + (coordinates.Y * coordinates.Y)
-                                      + (coordinates.Z * coordinates.Z));
+                                           + (coordinates.Y * coordinates.Y)
+                                           + (coordinates.Z * coordinates.Z));
             result.Inclination = DecimalEx.ACos(coordinates.Z / result.Radius);
             result.Azimuth = DecimalEx.ATan(coordinates.Y / coordinates.X);
 
@@ -29,6 +29,5 @@ namespace Frank.Libraries.Calculators.Converters
 
             return result;
         }
-
     }
 }

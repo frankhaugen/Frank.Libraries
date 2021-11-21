@@ -34,16 +34,16 @@ namespace Frank.Libraries.IRC.Ctcp
 
         private static readonly IDictionary<char, char> lowLevelQuotedChars = new Dictionary<char, char>
         {
-            {'\0', '0'},
-            {'\n', 'n'},
-            {'\r', 'r'}
+            { '\0', '0' },
+            { '\n', 'n' },
+            { '\r', 'r' }
         };
 
         private static readonly IDictionary<char, char> lowLevelDequotedChars = lowLevelQuotedChars.Invert();
 
         private static readonly IDictionary<char, char> ctcpQuotedChars = new Dictionary<char, char>
         {
-            {taggedDataDelimeterChar, 'a'}
+            { taggedDataDelimeterChar, 'a' }
         };
 
         private static readonly IDictionary<char, char> ctcpDequotedChars = ctcpQuotedChars.Invert();
@@ -256,13 +256,14 @@ namespace Frank.Libraries.IRC.Ctcp
         private void InitializeMessageProcessors()
         {
             // Find each method defined as processor for CTCP message.
-            this.GetAttributedMethods<MessageProcessorAttribute, MessageProcessor>().ForEach(item =>
-            {
-                var attribute = item.Item1;
-                var methodDelegate = item.Item2;
+            this.GetAttributedMethods<MessageProcessorAttribute, MessageProcessor>()
+                .ForEach(item =>
+                {
+                    var attribute = item.Item1;
+                    var methodDelegate = item.Item2;
 
-                messageProcessors.Add(attribute.CommandName, methodDelegate);
-            });
+                    messageProcessors.Add(attribute.CommandName, methodDelegate);
+                });
         }
 
         private void ReadMessage(IrcPreviewMessageEventArgs previewMessageEventArgs, bool isNotice)
@@ -271,8 +272,7 @@ namespace Frank.Libraries.IRC.Ctcp
                 return;
 
             // Check if message represents tagged data.
-            if (previewMessageEventArgs.Text.First() == taggedDataDelimeterChar &&
-                previewMessageEventArgs.Text.Last() == taggedDataDelimeterChar)
+            if (previewMessageEventArgs.Text.First() == taggedDataDelimeterChar && previewMessageEventArgs.Text.Last() == taggedDataDelimeterChar)
             {
                 if (previewMessageEventArgs.Source is IrcUser)
                 {
@@ -283,7 +283,7 @@ namespace Frank.Libraries.IRC.Ctcp
 
                     // Parse tagged data into message.
                     var dequotedText = LowLevelDequote(CtcpDequote(previewMessageEventArgs.Text.Substring(
-                        1, previewMessageEventArgs.Text.Length - 2)));
+                                                                       1, previewMessageEventArgs.Text.Length - 2)));
                     var firstSpaceIndex = dequotedText.IndexOf(' ');
                     if (firstSpaceIndex == -1)
                     {
@@ -293,7 +293,8 @@ namespace Frank.Libraries.IRC.Ctcp
                     else
                     {
                         message.Tag = dequotedText.Substring(0, firstSpaceIndex);
-                        message.Data = dequotedText.Substring(firstSpaceIndex + 1).TrimStart(':');
+                        message.Data = dequotedText.Substring(firstSpaceIndex + 1)
+                                                   .TrimStart(':');
                     }
 
                     ReadMessage(message);
@@ -336,7 +337,7 @@ namespace Frank.Libraries.IRC.Ctcp
         /// <param name="data">The data contained by the message.</param>
         /// <param name="isResponse"><see langword="true"/> if the message is a response to another message; <see langword="false"/>, otherwise.</param>
         protected void WriteMessage(IList<IIrcMessageTarget> targets, string tag, string data = null,
-            bool isResponse = false)
+                                    bool isResponse = false)
         {
             WriteMessage(targets, new CtcpMessage(IrcClient.LocalUser, targets, tag, data, isResponse));
         }
@@ -351,7 +352,9 @@ namespace Frank.Libraries.IRC.Ctcp
                 throw new ArgumentException(Resources.MessageInvalidTag, "message");
 
             var tag = message.Tag.ToUpperInvariant();
-            var taggedData = message.Data == null ? tag : tag + " :" + message.Data;
+            var taggedData = message.Data == null
+                ? tag
+                : tag + " :" + message.Data;
             WriteMessage(targets, taggedData, message.IsResponse);
             OnRawMessageSent(new CtcpRawMessageEventArgs(message));
         }
@@ -548,7 +551,7 @@ namespace Frank.Libraries.IRC.Ctcp
             /// <param name="data">The data contained by the message, or <see langword="null"/> for no data.</param>
             /// <param name="isResponse"><see langword="true"/> if the message is a response to another message; <see langword="false"/>, otherwise.</param>
             public CtcpMessage(IrcUser source, IList<IIrcMessageTarget> targets, string tag, string data,
-                bool isResponse)
+                               bool isResponse)
             {
                 Source = source;
                 Targets = targets;

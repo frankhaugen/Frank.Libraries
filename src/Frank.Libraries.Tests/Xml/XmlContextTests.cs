@@ -1,10 +1,10 @@
-﻿using AutoBogus;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Xml;
 using Microsoft.Extensions.Options;
-using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace Frank.Libraries.Tests.Xml
@@ -24,7 +24,9 @@ namespace Frank.Libraries.Tests.Xml
             var result = xmlContext.GetCollection();
 
             // Assert
-            result.FirstOrDefault(x => x.Name == testModel.Name).Should().NotBeNull();
+            result.FirstOrDefault(x => x.Name == testModel.Name)
+                  .Should()
+                  .NotBeNull();
         }
 
         [Fact]
@@ -40,8 +42,11 @@ namespace Frank.Libraries.Tests.Xml
             var result = xmlContext.GetCollection();
 
             // Assert
-            result.FirstOrDefault().Should().NotBeNull();
-            result.Should().Contain(testModels);
+            result.FirstOrDefault()
+                  .Should()
+                  .NotBeNull();
+            result.Should()
+                  .Contain(testModels);
         }
 
         private XmlTestModel CreateTestModel() => new AutoFaker<XmlTestModel>().Generate();

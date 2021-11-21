@@ -3,14 +3,15 @@ using CodegenCS;
 using Frank.Libraries.CodeGeneration.Extensions;
 using MoreLinq.Extensions;
 
-namespace Frank.Libraries.CodeGeneration.Generators
+namespace Frank.Libraries.CodeGeneration.Generators.Enums
 {
     public class CulutureGenerator : IGenerator
     {
         public string Generate(string namespaceName, string className = "Culture")
         {
             var writer = new CodegenTextWriter();
-            var cultures = CultureInfo.GetCultures(CultureTypes.NeutralCultures).DistinctBy(x => x.TwoLetterISOLanguageName);
+            var cultures = CultureInfo.GetCultures(CultureTypes.NeutralCultures)
+                                      .DistinctBy(x => x.TwoLetterISOLanguageName);
 
             writer.WriteLine("using System.ComponentModel;");
             writer.WriteLine(" // ReSharper disable InconsistentNaming");

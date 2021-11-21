@@ -19,7 +19,8 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var result = TemperatureConverter.FahrenheitToCelsius(temperature);
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -35,7 +36,8 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var result = TemperatureConverter.CelsiusToFahrenheit(temperature);
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -51,7 +53,8 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var result = TemperatureConverter.CelsiusToKelvin(temperature);
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -67,7 +70,8 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var result = TemperatureConverter.KelvinToCelsius(temperature);
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -83,7 +87,8 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var result = TemperatureConverter.FahrenheitToKelvin(temperature);
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
 
         [Theory]
@@ -99,7 +104,8 @@ namespace Frank.Libraries.Tests.Calculators.Converters
             var result = TemperatureConverter.KelvinToFahrenheit(temperature);
 
             // Assert
-            result.Should().Be(expected);
+            result.Should()
+                  .Be(expected);
         }
     }
 }

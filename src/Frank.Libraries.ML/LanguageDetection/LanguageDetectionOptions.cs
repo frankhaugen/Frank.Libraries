@@ -1,5 +1,6 @@
 ﻿// ReSharper disable FunctionComplexityOverflow
 // ReSharper disable TooManyDependencies
+
 namespace Frank.Libraries.ML.LanguageDetection
 {
     /// <summary>

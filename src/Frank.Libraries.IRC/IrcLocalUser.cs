@@ -129,7 +129,7 @@ namespace Frank.Libraries.IRC
             if (text == null)
                 throw new ArgumentNullException("text");
 
-            SendMessage(new[] {target}, text);
+            SendMessage(new[] { target }, text);
         }
 
         /// <inheritdoc cref="SendMessage(IEnumerable{string}, string, Encoding)" />
@@ -157,7 +157,7 @@ namespace Frank.Libraries.IRC
             if (text == null)
                 throw new ArgumentNullException("text");
 
-            SendMessage(new[] {target}, text);
+            SendMessage(new[] { target }, text);
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace Frank.Libraries.IRC
             if (text == null)
                 throw new ArgumentNullException("text");
 
-            SendNotice(new[] {target}, text);
+            SendNotice(new[] { target }, text);
         }
 
         /// <inheritdoc cref="SendNotice(IEnumerable{string}, string, Encoding)" />
@@ -215,7 +215,7 @@ namespace Frank.Libraries.IRC
             if (text == null)
                 throw new ArgumentNullException("text");
 
-            SendNotice(new[] {target}, text);
+            SendNotice(new[] { target }, text);
         }
 
         /// <summary>
@@ -281,7 +281,7 @@ namespace Frank.Libraries.IRC
         /// <inheritdoc cref="SetModes(IEnumerable{char})" />
         public void SetModes(params char[] newModes)
         {
-            SetModes((IEnumerable<char>) newModes);
+            SetModes((IEnumerable<char>)newModes);
         }
 
         /// <inheritdoc cref="SetModes(string)" />
@@ -296,7 +296,7 @@ namespace Frank.Libraries.IRC
             if (newModes == null)
                 throw new ArgumentNullException("newModes");
 
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
                 SetModes(newModes.Except(modes), modes.Except(newModes));
         }
 
@@ -331,7 +331,7 @@ namespace Frank.Libraries.IRC
 
         internal void HandleModesChanged(string newModes)
         {
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
                 modes.UpdateModes(newModes);
 
             OnModesChanged(new EventArgs());
@@ -489,7 +489,7 @@ namespace Frank.Libraries.IRC
         }
 
         void IIrcMessageReceiveHandler.HandleNoticeReceived(IIrcMessageSource source, IList<IIrcMessageTarget> targets,
-            string text)
+                                                            string text)
         {
             HandleNoticeReceived(source, targets, text);
         }

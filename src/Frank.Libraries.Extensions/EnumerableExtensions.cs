@@ -17,12 +17,12 @@ namespace Frank.Libraries.Extensions
         //        innerSelector,
         //        (e1, e2) => );
         //}
-        
+
         public static IEnumerable<IEnumerable<T>> Batch<T>(this IEnumerable<T> items, int maxItems = 256)
         {
             return items.Select((item, inx) => new { item, inx })
-                .GroupBy(x => x.inx / maxItems)
-                .Select(g => g.Select(x => x.item));
+                        .GroupBy(x => x.inx / maxItems)
+                        .Select(g => g.Select(x => x.item));
         }
 
         public static Stack<T> ToStack<T>(this IEnumerable<T> enumerable)
@@ -36,11 +36,11 @@ namespace Frank.Libraries.Extensions
         }
 
         public static IEnumerable<TResult> RightJoin<TSource, TInner, TKey, TResult>(
-                this IEnumerable<TSource> source,
-                IEnumerable<TInner> inner,
-                Func<TSource, TKey> pk,
-                Func<TInner, TKey> fk,
-                Func<TSource, TInner, TResult> result) where TSource : class where TInner : class
+            this IEnumerable<TSource> source,
+            IEnumerable<TInner> inner,
+            Func<TSource, TKey> pk,
+            Func<TInner, TKey> fk,
+            Func<TSource, TInner, TResult> result) where TSource : class where TInner : class
         {
             IEnumerable<TResult> _result = Enumerable.Empty<TResult>();
 
@@ -55,24 +55,26 @@ namespace Frank.Libraries.Extensions
 
         public static IEnumerable<TResult>
             FulltExcludingJoin<TSource, TInner, TKey, TResult>(this IEnumerable<TSource> source,
-                IEnumerable<TInner> inner,
-                Func<TSource, TKey> pk,
-                Func<TInner, TKey> fk,
-                Func<TSource, TInner, TResult> result)
+                                                               IEnumerable<TInner> inner,
+                                                               Func<TSource, TKey> pk,
+                                                               Func<TInner, TKey> fk,
+                                                               Func<TSource, TInner, TResult> result)
             where TSource : class where TInner : class
         {
-            var left = source.LeftExcludingJoin(inner, pk, fk, result).ToList();
-            var right = source.RightExcludingJoin(inner, pk, fk, result).ToList();
+            var left = source.LeftExcludingJoin(inner, pk, fk, result)
+                             .ToList();
+            var right = source.RightExcludingJoin(inner, pk, fk, result)
+                              .ToList();
 
             return left.Union(right);
         }
 
         public static IEnumerable<TResult>
             RightExcludingJoin<TSource, TInner, TKey, TResult>(this IEnumerable<TSource> source,
-                IEnumerable<TInner> inner,
-                Func<TSource, TKey> pk,
-                Func<TInner, TKey> fk,
-                Func<TSource, TInner, TResult> result)
+                                                               IEnumerable<TInner> inner,
+                                                               Func<TSource, TKey> pk,
+                                                               Func<TInner, TKey> fk,
+                                                               Func<TSource, TInner, TResult> result)
             where TSource : class where TInner : class
         {
             IEnumerable<TResult> _result = Enumerable.Empty<TResult>();
@@ -89,10 +91,10 @@ namespace Frank.Libraries.Extensions
 
         public static IEnumerable<TResult>
             LeftExcludingJoin<TSource, TInner, TKey, TResult>(this IEnumerable<TSource> source,
-                IEnumerable<TInner> inner,
-                Func<TSource, TKey> pk,
-                Func<TInner, TKey> fk,
-                Func<TSource, TInner, TResult> result)
+                                                              IEnumerable<TInner> inner,
+                                                              Func<TSource, TKey> pk,
+                                                              Func<TInner, TKey> fk,
+                                                              Func<TSource, TInner, TResult> result)
             where TSource : class where TInner : class
         {
             IEnumerable<TResult> _result = Enumerable.Empty<TResult>();
@@ -109,14 +111,16 @@ namespace Frank.Libraries.Extensions
 
         public static IEnumerable<TResult>
             FullOuterJoin<TSource, TInner, TKey, TResult>(this IEnumerable<TSource> source,
-                IEnumerable<TInner> inner,
-                Func<TSource, TKey> pk,
-                Func<TInner, TKey> fk,
-                Func<TSource, TInner, TResult> result)
+                                                          IEnumerable<TInner> inner,
+                                                          Func<TSource, TKey> pk,
+                                                          Func<TInner, TKey> fk,
+                                                          Func<TSource, TInner, TResult> result)
             where TSource : class where TInner : class
         {
-            var left = source.LeftJoin(inner, pk, fk, result).ToList();
-            var right = source.RightJoin(inner, pk, fk, result).ToList();
+            var left = source.LeftJoin(inner, pk, fk, result)
+                             .ToList();
+            var right = source.RightJoin(inner, pk, fk, result)
+                              .ToList();
 
             return left.Union(right);
         }
@@ -129,23 +133,23 @@ namespace Frank.Libraries.Extensions
             Func<TOuter, TInner, TResult> resultSelector)
         {
             return outer
-                .GroupJoin(inner, outerKeySelector, innerKeySelector, (outerObj, inners) =>
-                    new
-                    {
-                        outerObj,
-                        inners = inners.DefaultIfEmpty()
-                    })
-                .SelectMany(a => a.inners.Select(innerObj => resultSelector(a.outerObj, innerObj)));
+                   .GroupJoin(inner, outerKeySelector, innerKeySelector, (outerObj, inners) =>
+                                  new
+                                  {
+                                      outerObj,
+                                      inners = inners.DefaultIfEmpty()
+                                  })
+                   .SelectMany(a => a.inners.Select(innerObj => resultSelector(a.outerObj, innerObj)));
         }
 
         public static IEnumerable<TResult> LeftOuterJoin<TLeft, TRight, TKey, TResult>(this IEnumerable<TLeft> left, IEnumerable<TRight> right, Func<TLeft, TKey> leftKey, Func<TRight, TKey> rightKey,
-            Func<TLeft, TRight, TResult> result)
+                                                                                       Func<TLeft, TRight, TResult> result)
         {
             return left.GroupJoin(right, leftKey, rightKey, (l, r) => new { l, r })
-                .SelectMany(
-                    o => o.r.DefaultIfEmpty(),
-                    (l, r) => new { lft = l.l, rght = r })
-                .Select(o => result.Invoke(o.lft, o.rght));
+                       .SelectMany(
+                           o => o.r.DefaultIfEmpty(),
+                           (l, r) => new { lft = l.l, rght = r })
+                       .Select(o => result.Invoke(o.lft, o.rght));
         }
 
         public static T Random<T>(this IEnumerable<T> items)
@@ -175,7 +179,8 @@ namespace Frank.Libraries.Extensions
                 var values = new object[props.Length];
                 for (var i = 0; i < props.Length; i++)
                 {
-                    values[i] = props[i].GetValue(item, null)!;
+                    values[i] = props[i]
+                        .GetValue(item, null)!;
                 }
 
                 tb.Rows.Add(values);
@@ -190,27 +195,31 @@ namespace Frank.Libraries.Extensions
             var table = new DataTable();
             var rowName = ((MemberExpression)rowSelector.Body).Member.Name;
             table.Columns.Add(new DataColumn(rowName));
-            var columns = source.Select(columnSelector).Distinct().ToList();
+            var columns = source.Select(columnSelector)
+                                .Distinct()
+                                .ToList();
 
             foreach (var column in columns.Where(column => column != null))
                 if (column != null)
                     table.Columns.Add(new DataColumn(column.ToString()));
 
             var rows = source.GroupBy(rowSelector.Compile())
-                .Select(rowGroup => new
-                {
-                    rowGroup.Key,
-                    Values = columns.GroupJoin(
-                        rowGroup,
-                        c => c,
-                        r => columnSelector(r)!,
-                        (c, columnGroup) => dataSelector(columnGroup))
-                }).ToList();
+                             .Select(rowGroup => new
+                             {
+                                 rowGroup.Key,
+                                 Values = columns.GroupJoin(
+                                     rowGroup,
+                                     c => c,
+                                     r => columnSelector(r)!,
+                                     (c, columnGroup) => dataSelector(columnGroup))
+                             })
+                             .ToList();
 
             foreach (var row in rows)
             {
                 var dataRow = table.NewRow();
-                var items = row.Values.Cast<object>().ToList();
+                var items = row.Values.Cast<object>()
+                               .ToList();
                 items.Insert(0, row.Key!);
                 dataRow.ItemArray = items.ToArray();
                 table.Rows.Add(dataRow);

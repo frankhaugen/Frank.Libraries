@@ -5,7 +5,6 @@ namespace Frank.Libraries.Internet.Wikipedia.Models.Related
 {
     public class Related
     {
-        [JsonPropertyName("pages")]
-        public List<Page> Pages { get; set; }
+        [JsonPropertyName("pages")] public List<Page> Pages { get; set; }
     }
 }

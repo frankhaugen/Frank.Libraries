@@ -33,6 +33,7 @@ namespace Frank.Libraries.IRC
                     currentLine = lineBuilder.ToString();
                     break;
                 }
+
                 if (nextChar == '\r' || nextChar == '\n')
                 {
                     TextReader.Read();
@@ -45,7 +46,7 @@ namespace Frank.Libraries.IRC
                 }
 
                 // Append next character to line.
-                lineBuilder.Append((char) TextReader.Read());
+                lineBuilder.Append((char)TextReader.Read());
             }
 
             return null;

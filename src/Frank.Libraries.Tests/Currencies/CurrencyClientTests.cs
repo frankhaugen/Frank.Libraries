@@ -25,8 +25,10 @@ namespace Frank.Libraries.Tests.Currencies
             var result = await _currencyClient.GetLatestRates();
 
             // Assert
-            result.Should().NotBeNull();
-            result.Success.Should().BeTrue();
+            result.Should()
+                  .NotBeNull();
+            result.Success.Should()
+                  .BeTrue();
             _outputHelper.WriteLine(result.ToJson());
         }
 
@@ -37,7 +39,8 @@ namespace Frank.Libraries.Tests.Currencies
             var result = await _currencyClient.Convert();
 
             // Assert
-            result.Should().Be(1);
+            result.Should()
+                  .Be(1);
         }
     }
 }

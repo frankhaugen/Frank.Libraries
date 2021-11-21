@@ -24,6 +24,7 @@ namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
                         {
                             writer.WriteLine($"public static {conversion.Key} To{conversion.Key.ToTitleCase()}(this {type} source) => Convert.{conversion.Value}(source);");
                         }
+
                         writer.WriteLine("");
                     }
                 });

@@ -19,10 +19,11 @@ namespace FluentValidation
         public static IRuleBuilder<short, short> IsMod10(this IRuleBuilder<short, short> ruleBuilder)
         {
             return ruleBuilder
-                .Must(x => x > 0)
-                .WithMessage("Is a non-positive number")
-                .Must(x => GetMod10(x.ToString()).IsValid)
-                .WithMessage("Is not valid according to Mod 10");
+                   .Must(x => x > 0)
+                   .WithMessage("Is a non-positive number")
+                   .Must(x => GetMod10(x.ToString())
+                             .IsValid)
+                   .WithMessage("Is not valid according to Mod 10");
         }
 
         /// <summary>
@@ -36,7 +37,8 @@ namespace FluentValidation
             {
                 if (value < 1)
                     context.AddFailure(nameof(value), "Is a non-positive number");
-                else if (!GetMod10(value.ToString()).IsValid)
+                else if (!GetMod10(value.ToString())
+                             .IsValid)
                     context.AddFailure(nameof(value), "Is not valid according to Mod 10");
             });
         }
@@ -52,7 +54,8 @@ namespace FluentValidation
             {
                 if (value < 1)
                     context.AddFailure(nameof(value), "Is a non-positive number");
-                else if (!GetMod10(value.ToString()).IsValid)
+                else if (!GetMod10(value.ToString())
+                             .IsValid)
                     context.AddFailure(nameof(value), "Is not valid according to Mod 10");
             });
         }
@@ -68,7 +71,8 @@ namespace FluentValidation
             {
                 if (string.IsNullOrWhiteSpace(value))
                     context.AddFailure(nameof(value), "Is null, empty, or whitespace");
-                else if (!GetMod10(value).IsValid)
+                else if (!GetMod10(value)
+                             .IsValid)
                     context.AddFailure(nameof(value), "Is not valid according to Mod 10");
             });
         }
@@ -104,7 +108,9 @@ namespace FluentValidation
 
             var calculation = (10 - (controlNumber % 10)) % 10;
 
-            return (calculation != 0, calculation == 0 ? 0 : 10 - (controlNumber % 10));
+            return (calculation != 0, calculation == 0
+                        ? 0
+                        : 10 - (controlNumber % 10));
         }
     }
 }

@@ -30,7 +30,8 @@ namespace Frank.Libraries.Tests.Security.Encryption
             Output(decryptedString);
 
             // Assert
-            decryptedString.Should().Be(text);
+            decryptedString.Should()
+                           .Be(text);
         }
     }
 }

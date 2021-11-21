@@ -36,8 +36,11 @@ namespace Frank.Libraries.Security
 
         public string GetAdjectiveNounPair() => string.Join(' ', GetStructuredRandomWordList(WordVariant.Adjective, WordVariant.Noun));
 
-        public List<string> GetStructuredRandomWordList(params WordVariant[] variants) => variants.Select(wordVariant => new EnumerableRandomizer<string>(_dictionaries.GetDictionaryOfDictionaries()[wordVariant]).GetRandomValue()).ToList();
+        public List<string> GetStructuredRandomWordList(params WordVariant[] variants) => variants.Select(wordVariant => new EnumerableRandomizer<string>(_dictionaries.GetDictionaryOfDictionaries()[wordVariant]).GetRandomValue())
+                                                                                                  .ToList();
 
-        public List<string> GetRandomWordList(params WordVariant[] variants) => new EnumerableRandomizer<WordVariant>(variants).Shuffle().Select(wordVariant => new EnumerableRandomizer<string>(_dictionaries.GetDictionaryOfDictionaries()[wordVariant]).GetRandomValue()).ToList();
+        public List<string> GetRandomWordList(params WordVariant[] variants) => new EnumerableRandomizer<WordVariant>(variants).Shuffle()
+                                                                                                                               .Select(wordVariant => new EnumerableRandomizer<string>(_dictionaries.GetDictionaryOfDictionaries()[wordVariant]).GetRandomValue())
+                                                                                                                               .ToList();
     }
 }

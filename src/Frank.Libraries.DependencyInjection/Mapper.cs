@@ -15,11 +15,11 @@ namespace Frank.Libraries.DependencyInjection
 
         private void MapToDestination<TSource, TDestination>(TSource source, TDestination destination) =>
             destination?.GetType()
-                .GetMembers()
-                .Where(x => x.MemberType == MemberTypes.Property || x.MemberType == MemberTypes.Field)
-                .Select(x => x.Name)
-                .ToList()
-                .ForEach(x => SetValue(source, destination, GetMembers(source, destination, x)));
+                       .GetMembers()
+                       .Where(x => x.MemberType == MemberTypes.Property || x.MemberType == MemberTypes.Field)
+                       .Select(x => x.Name)
+                       .ToList()
+                       .ForEach(x => SetValue(source, destination, GetMembers(source, destination, x)));
 
         private MemberInfo SetValue<TSource, TDestination>(TSource source, TDestination destination, (MemberInfo SourceMember, MemberInfo DestinationMember) members) => SetValue(source, destination, members.SourceMember, members.DestinationMember);
 
@@ -43,8 +43,8 @@ namespace Frank.Libraries.DependencyInjection
             return member switch
             {
                 PropertyInfo propertyInfo => propertyInfo.GetValue(source),
-                FieldInfo fieldInfo => fieldInfo.GetValue(source),
-                _ => null
+                FieldInfo fieldInfo       => fieldInfo.GetValue(source),
+                _                         => null
             };
         }
 
@@ -60,17 +60,20 @@ namespace Frank.Libraries.DependencyInjection
 
         private FieldInfo GetFieldInfo<T>(T type, string name) where T : new()
         {
-            return type.GetType().GetField(name);
+            return type.GetType()
+                       .GetField(name);
         }
 
         private PropertyInfo GetPropertyInfo<T>(T type, string name) where T : new()
         {
-            return type.GetType().GetProperty(name);
+            return type.GetType()
+                       .GetProperty(name);
         }
 
         private void MapMembers<TSource, TDestination>(TSource source, TDestination destination) where TDestination : new()
         {
-            foreach (var memberInfo in destination.GetType().GetMembers())
+            foreach (var memberInfo in destination.GetType()
+                                                  .GetMembers())
             {
                 MapMember(source, memberInfo, destination);
             }
@@ -78,24 +81,42 @@ namespace Frank.Libraries.DependencyInjection
 
         private void MapMember<TSource, TDestination>(TSource source, MemberInfo memberInfo, TDestination destination) where TDestination : new()
         {
-            var sourceMember = source.GetType().GetMember(memberInfo.Name).FirstOrDefault();
+            var sourceMember = source.GetType()
+                                     .GetMember(memberInfo.Name)
+                                     .FirstOrDefault();
 
             var mapped = false;
 
             if (memberInfo.MemberType == sourceMember?.MemberType && memberInfo.MemberType == MemberTypes.Property)
             {
-                mapped = JustDoIt(() => destination.GetType().GetProperty(memberInfo.Name)?.SetValue(destination, source.GetType().GetProperty(sourceMember.Name)?.GetValue(source)));
+                mapped = JustDoIt(() => destination.GetType()
+                                                   .GetProperty(memberInfo.Name)
+                                                   ?.SetValue(destination, source.GetType()
+                                                                                 .GetProperty(sourceMember.Name)
+                                                                                 ?.GetValue(source)));
             }
 
             if (memberInfo.MemberType == sourceMember?.MemberType && memberInfo.MemberType == MemberTypes.Field)
             {
-                mapped = JustDoIt(() => destination.GetType().GetField(memberInfo.Name)?.SetValue(destination, source.GetType().GetField(sourceMember.Name)?.GetValue(source)));
+                mapped = JustDoIt(() => destination.GetType()
+                                                   .GetField(memberInfo.Name)
+                                                   ?.SetValue(destination, source.GetType()
+                                                                                 .GetField(sourceMember.Name)
+                                                                                 ?.GetValue(source)));
             }
 
             mapped = memberInfo.MemberType switch
             {
-                MemberTypes.Field when sourceMember?.MemberType == MemberTypes.Property => JustDoIt(() => destination.GetType().GetField(memberInfo.Name)?.SetValue(destination, source.GetType().GetProperty(sourceMember.Name)?.GetValue(source))),
-                MemberTypes.Property when sourceMember?.MemberType == MemberTypes.Field => JustDoIt(() => destination.GetType().GetProperty(memberInfo.Name)?.SetValue(destination, source.GetType().GetField(sourceMember.Name)?.GetValue(source))),
+                MemberTypes.Field when sourceMember?.MemberType == MemberTypes.Property => JustDoIt(() => destination.GetType()
+                                                                                                                     .GetField(memberInfo.Name)
+                                                                                                                     ?.SetValue(destination, source.GetType()
+                                                                                                                                                   .GetProperty(sourceMember.Name)
+                                                                                                                                                   ?.GetValue(source))),
+                MemberTypes.Property when sourceMember?.MemberType == MemberTypes.Field => JustDoIt(() => destination.GetType()
+                                                                                                                     .GetProperty(memberInfo.Name)
+                                                                                                                     ?.SetValue(destination, source.GetType()
+                                                                                                                                                   .GetField(sourceMember.Name)
+                                                                                                                                                   ?.GetValue(source))),
                 _ => mapped
             };
 
@@ -108,8 +129,12 @@ namespace Frank.Libraries.DependencyInjection
         private (MemberInfo SourceMember, MemberInfo DestinationMember) GetMembers<TSource, TDestination>(TSource source, TDestination destination, string name)
         {
             (MemberInfo SourceMember, MemberInfo DestinationMember) output;
-            output.SourceMember = source.GetType().GetMember(name).FirstOrDefault();
-            output.DestinationMember = destination.GetType().GetMember(name).FirstOrDefault();
+            output.SourceMember = source.GetType()
+                                        .GetMember(name)
+                                        .FirstOrDefault();
+            output.DestinationMember = destination.GetType()
+                                                  .GetMember(name)
+                                                  .FirstOrDefault();
             return output;
         }
 

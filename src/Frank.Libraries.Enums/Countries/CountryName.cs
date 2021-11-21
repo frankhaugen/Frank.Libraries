@@ -254,6 +254,5 @@ namespace Frank.Libraries.Enums.Countries
         Zambia = 244,
         Zimbabwe = 245,
         ÅlandIslands = 246,
-
     }
 }

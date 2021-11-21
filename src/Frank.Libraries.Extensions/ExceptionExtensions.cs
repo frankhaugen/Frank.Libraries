@@ -7,8 +7,9 @@ namespace Frank.Libraries.Extensions
     {
         public static FriendlyException GetFriendly<T>(this T source) where T : Exception
         {
-            return new FriendlyException(source.GetType().Name.ToTitleCase(), source.Message, source.StackTrace,
-                source.InnerException);
+            return new FriendlyException(source.GetType()
+                                               .Name.ToTitleCase(), source.Message, source.StackTrace,
+                                         source.InnerException);
         }
 
         public static string ToJson(this FriendlyException source)

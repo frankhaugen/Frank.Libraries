@@ -23,13 +23,19 @@ namespace Frank.Libraries.Tests.DependencyInjection
             serviceResult.SetValue(name);
 
             // Assert
-            serviceResult.GetName().Should().Be(name);
+            serviceResult.GetName()
+                         .Should()
+                         .Be(name);
             optionResult.Name = "NotFrank";
-            serviceResult.GetName().Should().Be(optionResult.Name);
+            serviceResult.GetName()
+                         .Should()
+                         .Be(optionResult.Name);
             serviceResult.SetValue(name);
 
             var serviceResult2 = IocContainer.GetService<Service>();
-            serviceResult2.GetValue().Should().Be(name);
+            serviceResult2.GetValue()
+                          .Should()
+                          .Be(name);
         }
 
         private class Option : IOption

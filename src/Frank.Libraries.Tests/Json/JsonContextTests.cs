@@ -13,6 +13,7 @@ namespace Frank.Libraries.Tests.Json
     public class JsonContextTests
     {
         private const string TestFolder = "c:/tests";
+
         //private readonly MockFileSystem _mockFileSystem;
         private readonly IFileSystem _mockFileSystem;
 
@@ -62,7 +63,8 @@ namespace Frank.Libraries.Tests.Json
             var result = jsonContext.GetCollection();
 
             // Assert
-            result.Should().NotBeNullOrEmpty();
+            result.Should()
+                  .NotBeNullOrEmpty();
             Teardown(sessionId);
         }
 
@@ -80,7 +82,8 @@ namespace Frank.Libraries.Tests.Json
             var result = jsonContext.GetQueryable();
 
             // Assert
-            result.Should().NotBeNullOrEmpty();
+            result.Should()
+                  .NotBeNullOrEmpty();
             Teardown(sessionId);
         }
 
@@ -125,7 +128,8 @@ namespace Frank.Libraries.Tests.Json
             var result = jsonContext.SaveChanges();
 
             // Assert
-            result.Should().BeTrue();
+            result.Should()
+                  .BeTrue();
             Teardown(sessionId);
         }
 

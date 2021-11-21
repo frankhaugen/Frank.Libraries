@@ -26,7 +26,8 @@ namespace Frank.Libraries.Tests.FluentValidation
             var result = methodValidator.Validate(delegate { AMethod(a, b); });
 
             // Assert
-            result.IsValid.Should().Be(isValid);
+            result.IsValid.Should()
+                  .Be(isValid);
 
             foreach (var validationFailure in result.Errors.Select(x => x.ToString()))
             {
@@ -48,7 +49,8 @@ namespace Frank.Libraries.Tests.FluentValidation
             var result = methodValidator.Validate(delegate { AMethod(a, b); });
 
             // Assert
-            result.IsValid.Should().Be(isValid);
+            result.IsValid.Should()
+                  .Be(isValid);
 
             foreach (var validationFailure in result.Errors.Select(x => x.ToString()))
             {

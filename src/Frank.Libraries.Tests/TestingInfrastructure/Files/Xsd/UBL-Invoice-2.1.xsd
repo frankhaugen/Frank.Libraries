@@ -7,20 +7,27 @@
   Generated on:      2013-10-31 17:17z
   Copyright (c) OASIS Open 2013. All Rights Reserved.
 -->
-<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
-    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.1">
+<xsd:schema xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+            xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+            xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+            targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" elementFormDefault="qualified"
+            attributeFormDefault="unqualified" version="2.1">
     <!-- ===== Imports ===== -->
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="UBL-CommonAggregateComponents-2.1.xsd"/>
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="UBL-CommonBasicComponents-2.1.xsd"/>
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="UBL-CommonExtensionComponents-2.1.xsd"/>
+    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                schemaLocation="UBL-CommonAggregateComponents-2.1.xsd"/>
+    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                schemaLocation="UBL-CommonBasicComponents-2.1.xsd"/>
+    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                schemaLocation="UBL-CommonExtensionComponents-2.1.xsd"/>
     <!-- ===== Element Declarations ===== -->
     <xsd:element name="Invoice" type="InvoiceType">
         <xsd:annotation>
-            <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
+            <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this
+                Schema expression
+            </xsd:documentation>
         </xsd:annotation>
     </xsd:element>
     <!-- ===== Type Definitions ===== -->
@@ -47,8 +54,11 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                            <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. UBL Version Identifier. Identifier
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type
+                                that defines all of the elements that might be encountered in the current instance.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -64,8 +74,10 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Customization Identifier. Identifier</ccts:DictionaryEntryName>
-                            <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Customization Identifier. Identifier
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
@@ -82,7 +94,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-                            <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
+                            <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -98,8 +111,11 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
-                            <ccts:Definition>Identifies an instance of executing a profile, to associate all transactions in a collaboration.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Profile Execution Identifier. Identifier
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>Identifies an instance of executing a profile, to associate all
+                                transactions in a collaboration.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Profile Execution Identifier</ccts:PropertyTerm>
@@ -133,7 +149,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                            <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
+                            <ccts:Definition>Indicates whether this document is a copy (true) or not (false).
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -150,7 +167,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. UUID. Identifier</ccts:DictionaryEntryName>
-                            <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
+                            <ccts:Definition>A universally unique identifier for an instance of this document.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -166,7 +184,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Issue Date. Date</ccts:DictionaryEntryName>
-                            <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
+                            <ccts:Definition>The date, assigned by the sender, on which this document was issued.
+                            </ccts:Definition>
                             <ccts:Cardinality>1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -183,7 +202,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Issue Time. Time</ccts:DictionaryEntryName>
-                            <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
+                            <ccts:Definition>The time, assigned by the sender, at which this document was issued.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -231,7 +251,9 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Note. Text</ccts:DictionaryEntryName>
-                            <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
+                            <ccts:Definition>Free-form text pertinent to this document, conveying information that is
+                                not contained explicitly in other structures.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -247,7 +269,9 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Tax Point Date. Date</ccts:DictionaryEntryName>
-                            <ccts:Definition>The date of the Invoice, used to indicate the point at which tax becomes applicable.</ccts:Definition>
+                            <ccts:Definition>The date of the Invoice, used to indicate the point at which tax becomes
+                                applicable.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Tax Point Date</ccts:PropertyTerm>
@@ -281,7 +305,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Tax_ Currency Code. Code</ccts:DictionaryEntryName>
-                            <ccts:Definition>A code signifying the currency used for tax amounts in the Invoice.</ccts:Definition>
+                            <ccts:Definition>A code signifying the currency used for tax amounts in the Invoice.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Tax</ccts:PropertyTermQualifier>
@@ -299,7 +324,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Pricing_ Currency Code. Code</ccts:DictionaryEntryName>
-                            <ccts:Definition>A code signifying the currency used for prices in the Invoice.</ccts:Definition>
+                            <ccts:Definition>A code signifying the currency used for prices in the Invoice.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Pricing</ccts:PropertyTermQualifier>
@@ -317,7 +343,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Payment_ Currency Code. Code</ccts:DictionaryEntryName>
-                            <ccts:Definition>A code signifying the currency used for payment in the Invoice.</ccts:Definition>
+                            <ccts:Definition>A code signifying the currency used for payment in the Invoice.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Payment</ccts:PropertyTermQualifier>
@@ -334,8 +361,11 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Payment Alternative_ Currency Code. Code</ccts:DictionaryEntryName>
-                            <ccts:Definition>A code signifying the alternative currency used for payment in the Invoice.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Payment Alternative_ Currency Code. Code
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>A code signifying the alternative currency used for payment in the
+                                Invoice.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Payment Alternative</ccts:PropertyTermQualifier>
@@ -353,7 +383,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Accounting Cost Code. Code</ccts:DictionaryEntryName>
-                            <ccts:Definition>The buyer's accounting code, applied to the Invoice as a whole.</ccts:Definition>
+                            <ccts:Definition>The buyer's accounting code, applied to the Invoice as a whole.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Accounting Cost Code</ccts:PropertyTerm>
@@ -369,7 +400,9 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Accounting Cost. Text</ccts:DictionaryEntryName>
-                            <ccts:Definition>The buyer's accounting code, applied to the Invoice as a whole, expressed as text.</ccts:Definition>
+                            <ccts:Definition>The buyer's accounting code, applied to the Invoice as a whole, expressed
+                                as text.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -401,7 +434,9 @@
                         <ccts:Component>
                             <ccts:ComponentType>BBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Buyer_ Reference. Text</ccts:DictionaryEntryName>
-                            <ccts:Definition>A reference provided by the buyer used for internal routing of the document.</ccts:Definition>
+                            <ccts:Definition>A reference provided by the buyer used for internal routing of the
+                                document.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Buyer</ccts:PropertyTermQualifier>
@@ -435,7 +470,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Order Reference</ccts:DictionaryEntryName>
-                            <ccts:Definition>A reference to the Order with which this Invoice is associated.</ccts:Definition>
+                            <ccts:Definition>A reference to the Order with which this Invoice is associated.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Order Reference</ccts:PropertyTerm>
@@ -451,7 +487,8 @@
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
                             <ccts:DictionaryEntryName>Invoice. Billing Reference</ccts:DictionaryEntryName>
-                            <ccts:Definition>A reference to a billing document associated with this document.</ccts:Definition>
+                            <ccts:Definition>A reference to a billing document associated with this document.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTerm>Billing Reference</ccts:PropertyTerm>
@@ -466,8 +503,10 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Despatch_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                            <ccts:Definition>A reference to a Despatch Advice associated with this document.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Despatch_ Document Reference. Document Reference
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>A reference to a Despatch Advice associated with this document.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -483,8 +522,10 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Receipt_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                            <ccts:Definition>A reference to a Receipt Advice associated with this document.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Receipt_ Document Reference. Document Reference
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>A reference to a Receipt Advice associated with this document.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Receipt</ccts:PropertyTermQualifier>
@@ -500,7 +541,8 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Statement_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                            <ccts:DictionaryEntryName>Invoice. Statement_ Document Reference. Document Reference
+                            </ccts:DictionaryEntryName>
                             <ccts:Definition>A reference to a Statement associated with this document.</ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
@@ -517,8 +559,10 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Originator_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                            <ccts:Definition>A reference to an originator document associated with this document.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Originator_ Document Reference. Document Reference
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>A reference to an originator document associated with this document.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -534,7 +578,8 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Contract_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                            <ccts:DictionaryEntryName>Invoice. Contract_ Document Reference. Document Reference
+                            </ccts:DictionaryEntryName>
                             <ccts:Definition>A reference to a contract associated with this document.</ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
@@ -551,8 +596,10 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                            <ccts:Definition>A reference to an additional document associated with this document.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Additional_ Document Reference. Document Reference
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>A reference to an additional document associated with this document.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -600,7 +647,8 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Accounting_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
+                            <ccts:DictionaryEntryName>Invoice. Accounting_ Supplier Party. Supplier Party
+                            </ccts:DictionaryEntryName>
                             <ccts:Definition>The accounting supplier party.</ccts:Definition>
                             <ccts:Cardinality>1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
@@ -617,7 +665,8 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Accounting_ Customer Party. Customer Party</ccts:DictionaryEntryName>
+                            <ccts:DictionaryEntryName>Invoice. Accounting_ Customer Party. Customer Party
+                            </ccts:DictionaryEntryName>
                             <ccts:Definition>The accounting customer party.</ccts:Definition>
                             <ccts:Cardinality>1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
@@ -651,7 +700,8 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Buyer_ Customer Party. Customer Party</ccts:DictionaryEntryName>
+                            <ccts:DictionaryEntryName>Invoice. Buyer_ Customer Party. Customer Party
+                            </ccts:DictionaryEntryName>
                             <ccts:Definition>The buyer.</ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
@@ -668,7 +718,8 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Seller_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
+                            <ccts:DictionaryEntryName>Invoice. Seller_ Supplier Party. Supplier Party
+                            </ccts:DictionaryEntryName>
                             <ccts:Definition>The seller.</ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
@@ -685,7 +736,8 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Tax Representative_ Party. Party</ccts:DictionaryEntryName>
+                            <ccts:DictionaryEntryName>Invoice. Tax Representative_ Party. Party
+                            </ccts:DictionaryEntryName>
                             <ccts:Definition>The tax representative.</ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
@@ -799,8 +851,10 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Tax_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
-                            <ccts:Definition>The exchange rate between the document currency and the tax currency.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Tax_ Exchange Rate. Exchange Rate
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>The exchange rate between the document currency and the tax currency.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Tax</ccts:PropertyTermQualifier>
@@ -816,8 +870,10 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Pricing_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
-                            <ccts:Definition>The exchange rate between the document currency and the pricing currency.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Pricing_ Exchange Rate. Exchange Rate
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>The exchange rate between the document currency and the pricing currency.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Pricing</ccts:PropertyTermQualifier>
@@ -833,8 +889,10 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Payment_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
-                            <ccts:Definition>The exchange rate between the document currency and the payment currency.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Payment_ Exchange Rate. Exchange Rate
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>The exchange rate between the document currency and the payment currency.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Payment</ccts:PropertyTermQualifier>
@@ -850,8 +908,11 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Payment Alternative_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
-                            <ccts:Definition>The exchange rate between the document currency and the payment alternative currency.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Payment Alternative_ Exchange Rate. Exchange Rate
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>The exchange rate between the document currency and the payment alternative
+                                currency.
+                            </ccts:Definition>
                             <ccts:Cardinality>0..1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Payment Alternative</ccts:PropertyTermQualifier>
@@ -883,7 +944,8 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Withholding_ Tax Total. Tax Total</ccts:DictionaryEntryName>
+                            <ccts:DictionaryEntryName>Invoice. Withholding_ Tax Total. Tax Total
+                            </ccts:DictionaryEntryName>
                             <ccts:Definition>The total withholding tax.</ccts:Definition>
                             <ccts:Cardinality>0..n</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
@@ -900,8 +962,11 @@
                     <xsd:documentation>
                         <ccts:Component>
                             <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                            <ccts:DictionaryEntryName>Invoice. Legal_ Monetary Total. Monetary Total</ccts:DictionaryEntryName>
-                            <ccts:Definition>The total amount payable on the Invoice, including Allowances, Charges, and Taxes.</ccts:Definition>
+                            <ccts:DictionaryEntryName>Invoice. Legal_ Monetary Total. Monetary Total
+                            </ccts:DictionaryEntryName>
+                            <ccts:Definition>The total amount payable on the Invoice, including Allowances, Charges, and
+                                Taxes.
+                            </ccts:Definition>
                             <ccts:Cardinality>1</ccts:Cardinality>
                             <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                             <ccts:PropertyTermQualifier>Legal</ccts:PropertyTermQualifier>
@@ -931,7 +996,7 @@
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== --><!--
+    <!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any
   intellectual property or other rights that might be claimed to pertain
   to the implementation or use of the technology described in this

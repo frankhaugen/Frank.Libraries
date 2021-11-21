@@ -9,7 +9,6 @@ namespace Frank.Libraries.Logging.Extensions
     /// </summary>
     public static class ExceptionExtensions
     {
-
         /// <summary>
         /// Concatenate the Message property of an Exception and any InnerExceptions.
         /// </summary>
@@ -49,7 +48,8 @@ namespace Frank.Libraries.Logging.Extensions
         public static string ToLogString(this Exception ex)
         {
             string msg = "Type: '{0}' Message: '{1}'";
-            return string.Format(CultureInfo.InvariantCulture, msg, ex.GetType().ToString(), ex.FlattenMessages());
+            return string.Format(CultureInfo.InvariantCulture, msg, ex.GetType()
+                                                                      .ToString(), ex.FlattenMessages());
         }
     }
 }

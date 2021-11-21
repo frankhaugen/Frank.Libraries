@@ -26,20 +26,20 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="languages.json" />
-        <None Remove="LICENSE" />
+        <None Remove="languages.json"/>
+        <None Remove="LICENSE"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-        <PackageReference Include="System.Text.Json" Version="5.0.2" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
+        <PackageReference Include="System.Text.Json" Version="5.0.2"/>
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Include="LanguageDetection\languages.json" />
+        <EmbeddedResource Include="LanguageDetection\languages.json"/>
     </ItemGroup>
 </Project>

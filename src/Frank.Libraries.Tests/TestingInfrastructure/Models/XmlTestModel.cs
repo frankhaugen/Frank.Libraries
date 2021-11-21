@@ -1,5 +1,5 @@
-﻿using Frank.Libraries.Xml;
-using System;
+﻿using System;
+using Frank.Libraries.Xml;
 
 namespace Frank.Libraries.Tests.TestingInfrastructure.Models
 {

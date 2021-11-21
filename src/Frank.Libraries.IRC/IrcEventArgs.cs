@@ -211,7 +211,7 @@ namespace Frank.Libraries.IRC
     {
         /// <inheritdoc />
         public IrcPreviewMessageEventArgs(IIrcMessageSource source, IList<IIrcMessageTarget> targets, string text,
-            Encoding encoding)
+                                          Encoding encoding)
             : base(source, targets, text, encoding)
         {
             Handled = false;
@@ -241,7 +241,7 @@ namespace Frank.Libraries.IRC
         /// <exception cref="ArgumentNullException"><paramref name="targets" /> is <see langword="null" />.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="text" /> is <see langword="null" />.</exception>
         public IrcMessageEventArgs(IIrcMessageSource source, IList<IIrcMessageTarget> targets, string text,
-            Encoding encoding)
+                                   Encoding encoding)
         {
             if (targets == null)
                 throw new ArgumentNullException("target");
@@ -636,7 +636,7 @@ namespace Frank.Libraries.IRC
         /// <param name="chain">The chain of certificate authorities.</param>
         /// <param name="sslPolicyErrors">The errors associated with the remote certificate.</param>
         public IrcValidateSslCertificateEventArgs(X509Certificate certificate, X509Chain chain,
-            SslPolicyErrors sslPolicyErrors)
+                                                  SslPolicyErrors sslPolicyErrors)
         {
             Certificate = certificate;
             Chain = chain;

@@ -8,6 +8,7 @@ namespace Frank.Libraries.Enums.Attributes
     public class LocalNameAttribute : Attribute
     {
         private readonly string _name;
+
         /// <inheritdoc />
         public LocalNameAttribute(string name)
         {

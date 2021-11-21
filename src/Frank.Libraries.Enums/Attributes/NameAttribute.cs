@@ -8,6 +8,7 @@ namespace Frank.Libraries.Enums.Attributes
     public class NameAttribute : Attribute
     {
         private readonly string _name;
+
         /// <inheritdoc />
         public NameAttribute(string name)
         {

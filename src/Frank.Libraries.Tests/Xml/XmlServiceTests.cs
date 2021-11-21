@@ -19,20 +19,25 @@ namespace Frank.Libraries.Tests.Xml
 
             foreach (var xsdFile in xsdFiles)
             {
-                File.Exists(xsdFile).Should().BeTrue();
+                File.Exists(xsdFile)
+                    .Should()
+                    .BeTrue();
                 var xsd = File.ReadAllText(xsdFile);
                 xsds.Add(xsd);
             }
 
             var pathToXmlFile = Path.Combine(Directory.GetCurrentDirectory(), "TestingInfrastructure", "Files", "Xml", "Invoice1.xml");
-            File.Exists(pathToXmlFile).Should().BeTrue();
+            File.Exists(pathToXmlFile)
+                .Should()
+                .BeTrue();
             var xml = File.ReadAllText(pathToXmlFile);
 
             // Act
             var result = service.Validate(xml, xsds.ToArray());
 
             // Assert
-            result.Should().BeNullOrEmpty();
+            result.Should()
+                  .BeNullOrEmpty();
         }
     }
 }

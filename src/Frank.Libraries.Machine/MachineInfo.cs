@@ -28,9 +28,11 @@ namespace Frank.Libraries.Machine
 
         public TimeSpan Uptime() => TimeSpan.FromTicks(Environment.TickCount64);
 
-        public List<Device> GetDeviceList() => DeviceList.Local.GetAllDevices().ToList();
+        public List<Device> GetDeviceList() => DeviceList.Local.GetAllDevices()
+                                                         .ToList();
 
-        public DateTimeOffset GetSystemTime() => SystemClock.Instance.GetCurrentInstant().ToDateTimeOffset();
+        public DateTimeOffset GetSystemTime() => SystemClock.Instance.GetCurrentInstant()
+                                                            .ToDateTimeOffset();
     }
 
     public class DeviceInfo

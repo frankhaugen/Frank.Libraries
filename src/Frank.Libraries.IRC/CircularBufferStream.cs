@@ -30,13 +30,13 @@ namespace Frank.Libraries.IRC
         public long WritePosition
         {
             get { return writePosition; }
-            set { writePosition = value%Buffer.Length; }
+            set { writePosition = value % Buffer.Length; }
         }
 
         public override long Position
         {
             get { return readPosition; }
-            set { readPosition = value%Buffer.Length; }
+            set { readPosition = value % Buffer.Length; }
         }
 
         public override long Length
@@ -44,7 +44,9 @@ namespace Frank.Libraries.IRC
             get
             {
                 var length = writePosition - readPosition;
-                return length < 0 ? Buffer.Length + length : length;
+                return length < 0
+                    ? Buffer.Length + length
+                    : length;
             }
         }
 
@@ -73,13 +75,13 @@ namespace Frank.Libraries.IRC
             switch (origin)
             {
                 case SeekOrigin.Begin:
-                    readPosition = offset%Buffer.Length;
+                    readPosition = offset % Buffer.Length;
                     break;
                 case SeekOrigin.End:
-                    readPosition = (Buffer.Length - offset)%Buffer.Length;
+                    readPosition = (Buffer.Length - offset) % Buffer.Length;
                     break;
                 case SeekOrigin.Current:
-                    readPosition = (readPosition + offset)%Buffer.Length;
+                    readPosition = (readPosition + offset) % Buffer.Length;
                     break;
                 default:
                     throw new NotSupportedException();
@@ -97,10 +99,10 @@ namespace Frank.Libraries.IRC
         {
             // Write block of bytes from given buffer into circular buffer, wrapping around when necessary.
             int writeCount;
-            while ((writeCount = Math.Min(count, (int) (Buffer.Length - writePosition))) > 0)
+            while ((writeCount = Math.Min(count, (int)(Buffer.Length - writePosition))) > 0)
             {
                 var oldWritePosition = writePosition;
-                var newWritePosition = (writePosition + writeCount)%Buffer.Length;
+                var newWritePosition = (writePosition + writeCount) % Buffer.Length;
                 if (newWritePosition > readPosition && oldWritePosition < readPosition)
                 {
 #if !SILVERLIGHT && !NETSTANDARD1_5
@@ -109,7 +111,8 @@ namespace Frank.Libraries.IRC
                     throw new IOException("The CircularBuffer was overflowed!");
 #endif
                 }
-                System.Buffer.BlockCopy(buffer, offset, Buffer, (int) writePosition, writeCount);
+
+                System.Buffer.BlockCopy(buffer, offset, Buffer, (int)writePosition, writeCount);
                 writePosition = newWritePosition;
 
                 offset += writeCount;
@@ -123,18 +126,20 @@ namespace Frank.Libraries.IRC
             var totalReadCount = 0;
             int readCount;
             count = Math.Min(buffer.Length - offset, count);
-            while ((readCount = Math.Min(count, (int) Length)) > 0)
+            while ((readCount = Math.Min(count, (int)Length)) > 0)
             {
                 if (readCount > Buffer.Length - readPosition)
                 {
-                    readCount = (int) (Buffer.Length - readPosition);
+                    readCount = (int)(Buffer.Length - readPosition);
                 }
-                System.Buffer.BlockCopy(Buffer, (int) readPosition, buffer, offset, readCount);
-                readPosition = (readPosition + readCount)%Buffer.Length;
+
+                System.Buffer.BlockCopy(Buffer, (int)readPosition, buffer, offset, readCount);
+                readPosition = (readPosition + readCount) % Buffer.Length;
                 offset += readCount;
                 count = Math.Min(buffer.Length - offset, count);
                 totalReadCount += readCount;
             }
+
             return totalReadCount;
         }
     }

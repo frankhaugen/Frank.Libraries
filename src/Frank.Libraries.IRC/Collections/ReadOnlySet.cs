@@ -37,7 +37,7 @@ namespace Frank.Libraries.IRC.Collections
         {
             if (set == null)
                 throw new ArgumentNullException("set");
-            
+
             this.set = set;
         }
 
@@ -249,7 +249,7 @@ namespace Frank.Libraries.IRC.Collections
         {
             if (array == null)
                 throw new ArgumentNullException("item");
-            
+
             this.set.CopyTo(array, arrayIndex);
         }
 

@@ -10,7 +10,8 @@ namespace Frank.Libraries.FluentValidation
         /// <inheritdoc />
         public Mod11StringValidator()
         {
-            RuleFor(x => x).IsMod11();
+            RuleFor(x => x)
+                .IsMod11();
         }
     }
 }

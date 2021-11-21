@@ -25,7 +25,8 @@ namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration
             var result = randomPhraseGenerator.GetRandomPhrase(length, capitalizeRandomWords);
 
             // Assert
-            result.Should().NotBeNullOrWhiteSpace();
+            result.Should()
+                  .NotBeNullOrWhiteSpace();
         }
 
         [Fact]
@@ -40,7 +41,8 @@ namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration
             var result = randomPhraseGenerator.GetRandomPhrase(length, capitalizeRandomWords);
 
             // Assert
-            result.Should().NotBeNullOrWhiteSpace();
+            result.Should()
+                  .NotBeNullOrWhiteSpace();
         }
 
         [Fact]
@@ -59,6 +61,7 @@ namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration
                 // Assert
                 _outputHelper.WriteLine(result);
             }
+
             stopwatch.Stop();
             _outputHelper.WriteLine(stopwatch.Elapsed.TotalSeconds.ToString("R"));
         }

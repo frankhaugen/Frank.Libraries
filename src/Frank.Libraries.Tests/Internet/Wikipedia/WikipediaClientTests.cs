@@ -19,7 +19,8 @@ namespace Frank.Libraries.Tests.Internet.Wikipedia
             var result = await wikipediaClient.GetSummary(title);
 
             // Assert
-            result.Title.Should().Be("Norway");
+            result.Title.Should()
+                  .Be("Norway");
         }
     }
 }

@@ -18,7 +18,8 @@ namespace Frank.Libraries.Time
             DayOfWeekStartIndexZero = true,
             Use24HourTimeFormat = true,
             Verbose = true,
-            Locale = _defaultCulture.ToString().ToLowerInvariant()
+            Locale = _defaultCulture.ToString()
+                                    .ToLowerInvariant()
         };
 
         /// <summary>

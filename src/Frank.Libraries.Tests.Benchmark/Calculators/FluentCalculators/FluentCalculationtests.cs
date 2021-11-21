@@ -3,15 +3,12 @@ using BenchmarkDotNet.Attributes;
 
 namespace Frank.Libraries.Tests.Benchmark.Calculators.FluentCalculators
 {
-
     [MemoryDiagnoser]
     [ThreadingDiagnoser]
     [DisassemblyDiagnoser]
     public class FluentCalculationBenchmarks
     {
-
-        [Params(1000)]
-        public int Exponent { get; set; }
+        [Params(1000)] public int Exponent { get; set; }
 
         [Benchmark]
         public void Fluent()

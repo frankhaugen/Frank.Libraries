@@ -1,13 +1,11 @@
-using System.Text.Json.Serialization; 
-namespace Frank.Libraries.Calculators.Gaming.Starfinder.Models{ 
+using System.Text.Json.Serialization;
 
+namespace Frank.Libraries.Calculators.Gaming.Starfinder.Models
+{
     public class Perception
     {
-        [JsonPropertyName("modifier")]
-        public int Modifier { get; set; }
+        [JsonPropertyName("modifier")] public int Modifier { get; set; }
 
-        [JsonPropertyName("ranks")]
-        public int Ranks { get; set; }
+        [JsonPropertyName("ranks")] public int Ranks { get; set; }
     }
-
 }

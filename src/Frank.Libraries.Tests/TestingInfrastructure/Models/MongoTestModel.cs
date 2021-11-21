@@ -1,6 +1,6 @@
-﻿using Frank.Libraries.MongoDb;
+﻿using System;
+using Frank.Libraries.MongoDb;
 using MongoDB.Bson;
-using System;
 
 namespace Frank.Libraries.Tests.TestingInfrastructure.Models
 {

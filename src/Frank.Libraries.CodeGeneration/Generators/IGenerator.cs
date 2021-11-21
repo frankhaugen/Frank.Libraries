@@ -1,4 +1,4 @@
-namespace Frank.Libraries.CodeGeneration
+namespace Frank.Libraries.CodeGeneration.Generators
 {
     public interface IGenerator
     {

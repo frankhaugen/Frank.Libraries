@@ -26,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="CsvHelper" Version="27.1.1" />
-        <PackageReference Include="RestSharp" Version="106.13.0" />
+        <PackageReference Include="CsvHelper" Version="27.1.1"/>
+        <PackageReference Include="RestSharp" Version="106.13.0"/>
     </ItemGroup>
 </Project>

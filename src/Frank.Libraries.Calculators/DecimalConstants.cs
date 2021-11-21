@@ -4,15 +4,19 @@ namespace Frank.Libraries.Calculators
     {
         /// <summary> The pi (π) constant. Pi radians is equivalent to 180 degrees. </summary>
         /// <remarks> See http://en.wikipedia.org/wiki/Pi </remarks>
-        public const decimal Pi = 3.1415926535897932384626433833m;              // 180 degrees - see http://en.wikipedia.org/wiki/Pi
+        public const decimal Pi = 3.1415926535897932384626433833m; // 180 degrees - see http://en.wikipedia.org/wiki/Pi
+
         /// <summary> π/2 - in radians is equivalent to 90 degrees. </summary>
-        public const decimal PiHalf = 1.5707963267948966192313216916m;          //  90 degrees
+        public const decimal PiHalf = 1.5707963267948966192313216916m; //  90 degrees
+
         /// <summary> π/4 - in radians is equivalent to 45 degrees. </summary>
-        public const decimal PiQuarter = 0.7853981633974483096156608458m;       //  45 degrees
+        public const decimal PiQuarter = 0.7853981633974483096156608458m; //  45 degrees
+
         /// <summary> π/12 - in radians is equivalent to 15 degrees. </summary>
-        public const decimal PiTwelfth = 0.2617993877991494365385536153m;       //  15 degrees
+        public const decimal PiTwelfth = 0.2617993877991494365385536153m; //  15 degrees
+
         /// <summary> 2π - in radians is equivalent to 360 degrees. </summary>
-        public const decimal TwoPi = 6.2831853071795864769252867666m;           // 360 degrees
+        public const decimal TwoPi = 6.2831853071795864769252867666m; // 360 degrees
 
         /// <summary>
         /// Smallest non-zero decimal value.
@@ -36,6 +40,7 @@ namespace Frank.Libraries.Calculators
         /// From: http://oeis.org/A002392/constant
         /// </remarks>
         public const decimal Ln10 = 2.3025850929940456840179914547m;
+
         /// <summary>
         /// The value of the natural logarithm of 2.
         /// </summary>

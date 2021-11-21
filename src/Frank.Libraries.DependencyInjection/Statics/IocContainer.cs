@@ -11,9 +11,11 @@ namespace Frank.Libraries.DependencyInjection.Statics
 
         public static void AddService<T>(T service) where T : IService
         {
-            if (_services.ContainsKey(service.GetType().Name))
+            if (_services.ContainsKey(service.GetType()
+                                             .Name))
                 return;
-            _services.Add(service.GetType().Name, service);
+            _services.Add(service.GetType()
+                                 .Name, service);
         }
 
         public static T GetService<T>() where T : IService

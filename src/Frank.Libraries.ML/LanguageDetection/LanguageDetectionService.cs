@@ -26,7 +26,8 @@ namespace Frank.Libraries.ML.LanguageDetection
         /// <returns>True, false or null</returns>
         public bool Is(LanguageCode languageCode, string text)
         {
-            var detectedLanguage = _detectionEngine.DetectAll(text).FirstOrDefault();
+            var detectedLanguage = _detectionEngine.DetectAll(text)
+                                                   .FirstOrDefault();
             return detectedLanguage != null && detectedLanguage.LanguageCode == languageCode;
         }
 
@@ -35,7 +36,8 @@ namespace Frank.Libraries.ML.LanguageDetection
         /// </summary>
         /// <param name="text"></param>
         /// <returns></returns>
-        public Language? Detect(string text) => _detectionEngine.DetectAll(text).FirstOrDefault();
+        public Language? Detect(string text) => _detectionEngine.DetectAll(text)
+                                                                .FirstOrDefault();
 
         /// <summary>
         /// Gets the list of languages detected from the text inputted

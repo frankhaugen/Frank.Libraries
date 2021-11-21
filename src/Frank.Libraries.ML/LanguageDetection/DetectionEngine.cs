@@ -27,14 +27,16 @@ namespace Frank.Libraries.ML.LanguageDetection
 
             var languageProbabilities = new double[Languages.List.Count];
 
-            var random = _options.RandomSeed != null ? new Random(_options.RandomSeed.Value) : new Random();
+            var random = _options.RandomSeed != null
+                ? new Random(_options.RandomSeed.Value)
+                : new Random();
 
             for (var t = 0; t < _options.Trials; t++)
             {
                 var probs = _probabilityEngine.InitializeProbabilities();
                 var alpha = _options.Alpha + random.NextDouble() * _options.AlphaWidth;
 
-                for (var i = 0; ; i++)
+                for (var i = 0;; i++)
                 {
                     var r = random.Next(ngrams.Count);
                     _probabilityEngine.UpdateProbabilities(probs, ngrams[r], _options.Alpha!.Value);

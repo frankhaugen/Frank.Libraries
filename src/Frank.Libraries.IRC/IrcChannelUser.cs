@@ -17,6 +17,7 @@ namespace Frank.Libraries.IRC
     public class IrcChannelUser : INotifyPropertyChanged
     {
         private IrcChannel channel;
+
         // Collection of channel modes currently active on user.
         private readonly HashSet<char> modes;
 
@@ -109,7 +110,7 @@ namespace Frank.Libraries.IRC
 
         internal void HandleModeChanged(bool add, char mode)
         {
-            lock (((ICollection) Modes).SyncRoot)
+            lock (((ICollection)Modes).SyncRoot)
             {
                 if (add)
                     modes.Add(mode);

@@ -26,10 +26,14 @@ namespace Frank.Libraries.Tests.Mapping
             var result = mapper.Map<Person, User>(source);
 
             // Assert
-            result.Name.Should().Be(source.Name);
-            result.Age.Should().Be(source.Age);
-            result.Address.Should().NotBeNull();
-            result.Address.City.Should().Be(source.Address.City);
+            result.Name.Should()
+                  .Be(source.Name);
+            result.Age.Should()
+                  .Be(source.Age);
+            result.Address.Should()
+                  .NotBeNull();
+            result.Address.City.Should()
+                  .Be(source.Address.City);
         }
 
         private class User

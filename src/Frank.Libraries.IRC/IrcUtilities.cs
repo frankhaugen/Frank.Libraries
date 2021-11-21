@@ -9,8 +9,8 @@ namespace Frank.Libraries.IRC
     {
         // Updates collection of modes from specified mode string. Mode string is of form `( "+" | "-" ) ( mode character )+`.
         public static void UpdateModes(this ICollection<char> collection, string newModes,
-            IEnumerable<string> newModeParameters = null, ICollection<char> modesWithParameters = null,
-            Action<bool, char, string> handleModeParameter = null)
+                                       IEnumerable<string> newModeParameters = null, ICollection<char> modesWithParameters = null,
+                                       Action<bool, char, string> handleModeParameter = null)
         {
             if (collection == null)
                 throw new ArgumentNullException("collection");
@@ -26,7 +26,9 @@ namespace Frank.Libraries.IRC
 
             // Reads list of mode changes, where each group of modes is prefixed by a '+' or '-', representing respectively setting or unsetting of the given modes.
             bool? addMode = null;
-            var modeParametersEnumerator = newModeParameters == null ? null : newModeParameters.GetEnumerator();
+            var modeParametersEnumerator = newModeParameters == null
+                ? null
+                : newModeParameters.GetEnumerator();
             foreach (var mode in newModes)
             {
                 if (mode == '+')
@@ -43,7 +45,7 @@ namespace Frank.Libraries.IRC
                     {
                         if (!modeParametersEnumerator.MoveNext())
                             throw new ArgumentException(Resources.MessageNotEnoughModeParameters,
-                                "newModeParameters");
+                                                        "newModeParameters");
                         handleModeParameter(addMode.Value, mode, modeParametersEnumerator.Current);
                     }
                     else

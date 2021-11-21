@@ -1,5 +1,5 @@
-﻿using Frank.Libraries.Json;
-using System;
+﻿using System;
+using Frank.Libraries.Json;
 
 namespace Frank.Libraries.Tests.TestingInfrastructure.Models
 {

@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using Frank.Libraries.Enums.Countries;
 using Frank.Libraries.Time;
 using NodaTime;
 using NodaTime.Testing;
@@ -49,7 +48,8 @@ namespace Frank.Libraries.Tests.Time
             var result = service.Hours;
 
             // Assert
-            result.Should().Be(Hour);
+            result.Should()
+                  .Be(Hour);
             _outputHelper.WriteLine(result.ToString());
         }
 
@@ -63,7 +63,8 @@ namespace Frank.Libraries.Tests.Time
             var result = service.Minutes;
 
             // Assert
-            result.Should().Be(Minute);
+            result.Should()
+                  .Be(Minute);
             _outputHelper.WriteLine(result.ToString());
         }
     }

@@ -112,12 +112,13 @@ namespace Frank.Libraries.IRC
         protected void SendMessageJoin(IEnumerable<Tuple<string, string>> channels)
         {
             var secureChannels = channels.Select(c =>
-            {
-                EnsureChannelName(c.Item1);
-                return c;
-            }).ToList();
+                                         {
+                                             EnsureChannelName(c.Item1);
+                                             return c;
+                                         })
+                                         .ToList();
             WriteMessage(null, "join", string.Join(",", secureChannels.Select(c => c.Item1)),
-                string.Join(",", secureChannels.Select(c => c.Item2)));
+                         string.Join(",", secureChannels.Select(c => c.Item2)));
         }
 
         /// <summary>
@@ -127,10 +128,11 @@ namespace Frank.Libraries.IRC
         protected void SendMessageJoin(IEnumerable<string> channels)
         {
             var secureChannels = channels.Select(c =>
-            {
-                EnsureChannelName(c);
-                return c;
-            }).ToList();
+                                         {
+                                             EnsureChannelName(c);
+                                             return c;
+                                         })
+                                         .ToList();
             WriteMessage(null, "join", string.Join(",", secureChannels));
         }
 
@@ -151,7 +153,7 @@ namespace Frank.Libraries.IRC
         /// <param name="modes">The mode string that indicates the channel modes to change.</param>
         /// <param name="modeParameters">A collection of parameters to the specified <paramref name="modes"/>.</param>
         protected void SendMessageChannelMode(string channel, string modes = null,
-            IEnumerable<string> modeParameters = null)
+                                              IEnumerable<string> modeParameters = null)
         {
             string modeParametersList = null;
             if (modeParameters != null)
@@ -161,6 +163,7 @@ namespace Frank.Libraries.IRC
                     throw new ArgumentException(Resources.MessageTooManyModeParameters);
                 modeParametersList = string.Join(",", modeParametersArray);
             }
+
             WriteMessage(null, "mode", channel, modes, modeParametersList);
         }
 
@@ -181,7 +184,9 @@ namespace Frank.Libraries.IRC
         /// <param name="targetServer">The name of the server to which to forward the message, or <see langword="null"/> for the current server.</param>
         protected void SendMessageNames(IEnumerable<string> channels = null, string targetServer = null)
         {
-            WriteMessage(null, "names", channels == null ? null : string.Join(",", channels), targetServer);
+            WriteMessage(null, "names", channels == null
+                             ? null
+                             : string.Join(",", channels), targetServer);
         }
 
         /// <summary>
@@ -191,7 +196,9 @@ namespace Frank.Libraries.IRC
         /// <param name="targetServer">The name of the server to which to forward the message, or <see langword="null"/> for the current server.</param>
         protected void SendMessageList(IEnumerable<string> channels = null, string targetServer = null)
         {
-            WriteMessage(null, "list", channels == null ? null : string.Join(",", channels), targetServer);
+            WriteMessage(null, "list", channels == null
+                             ? null
+                             : string.Join(",", channels), targetServer);
         }
 
         /// <summary>
@@ -220,7 +227,7 @@ namespace Frank.Libraries.IRC
         protected void SendMessageKick(IEnumerable<Tuple<string, string>> channelsUsers, string comment = null)
         {
             WriteMessage(null, "kick", string.Join(",", channelsUsers.Select(user => user.Item1)),
-                string.Join(",", channelsUsers.Select(user => user.Item2)), comment);
+                         string.Join(",", channelsUsers.Select(user => user.Item2)), comment);
         }
 
         /// <summary>
@@ -236,6 +243,7 @@ namespace Frank.Libraries.IRC
                 if (target.Contains(","))
                     throw new ArgumentException(Resources.MessageInvalidTargetName, "arguments");
             }
+
             WriteMessage(null, "privmsg", string.Join(",", targetsArray), text);
         }
 
@@ -252,6 +260,7 @@ namespace Frank.Libraries.IRC
                 if (target.Contains(","))
                     throw new ArgumentException(Resources.MessageInvalidTargetName, "arguments");
             }
+
             WriteMessage(null, "notice", string.Join(",", targetsArray), text);
         }
 
@@ -377,7 +386,9 @@ namespace Frank.Libraries.IRC
         /// <param name="onlyOperators"><see langword="true"/> to match only server operators; <see langword="false"/> to match all users.</param>
         protected void SendMessageWho(string mask = null, bool onlyOperators = false)
         {
-            WriteMessage(null, "who", mask, onlyOperators ? "o" : null);
+            WriteMessage(null, "who", mask, onlyOperators
+                             ? "o"
+                             : null);
         }
 
         /// <summary>
@@ -397,7 +408,7 @@ namespace Frank.Libraries.IRC
         /// <param name="entriesCount">The maximum number of (most recent) entries to return.</param>
         /// <param name="targetServer">The name of the server to which to forward the message, or <see langword="null"/> for the current server.</param>
         protected void SendMessageWhoWas(IEnumerable<string> nickNames, int entriesCount = -1,
-            string targetServer = null)
+                                         string targetServer = null)
         {
             WriteMessage(null, "whowas", string.Join(",", nickNames), entriesCount.ToString(), targetServer);
         }

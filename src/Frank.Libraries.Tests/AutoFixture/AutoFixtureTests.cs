@@ -10,7 +10,9 @@ namespace Frank.Libraries.Tests.AutoFixture
         [Fact]
         public void TestFixtureCreation()
         {
-            var company = new Fixture().OmitRecursion().Build<XmlTestModel>().Create();
+            var company = new Fixture().OmitRecursion()
+                                       .Build<XmlTestModel>()
+                                       .Create();
         }
     }
 }

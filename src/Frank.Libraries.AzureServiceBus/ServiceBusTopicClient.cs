@@ -36,7 +36,9 @@ namespace Frank.Libraries.AzureServiceBus
             {
                 await _topicClient.SendAsync(new Message()
                 {
-                    MessageId = messageId ?? Guid.NewGuid().ToString(),
+                    MessageId = messageId
+                                ?? Guid.NewGuid()
+                                       .ToString(),
                     Label = label,
                     Body = JsonSerializer.SerializeToUtf8Bytes(body, new JsonSerializerOptions()
                     {

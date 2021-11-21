@@ -1,10 +1,10 @@
-﻿using MongoDB.Bson;
-using MongoDB.Driver;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace Frank.Libraries.MongoDb
 {
@@ -24,34 +24,41 @@ namespace Frank.Libraries.MongoDb
 
         public virtual IEnumerable<TEntity> FilterBy(Expression<Func<TEntity, bool>> filterExpression)
         {
-            return _collection.Find(filterExpression).ToEnumerable();
+            return _collection.Find(filterExpression)
+                              .ToEnumerable();
         }
 
         public virtual IEnumerable<TProjected> FilterBy<TProjected>(Expression<Func<TEntity, bool>> filterExpression, Expression<Func<TEntity, TProjected>> projectionExpression)
         {
-            return _collection.Find(filterExpression).Project(projectionExpression).ToEnumerable();
+            return _collection.Find(filterExpression)
+                              .Project(projectionExpression)
+                              .ToEnumerable();
         }
 
         public virtual TEntity FindOne(Expression<Func<TEntity, bool>> filterExpression)
         {
-            return _collection.Find(filterExpression).FirstOrDefault();
+            return _collection.Find(filterExpression)
+                              .FirstOrDefault();
         }
 
         public virtual Task<TEntity> FindOneAsync(Expression<Func<TEntity, bool>> filterExpression)
         {
-            return Task.Run(() => _collection.Find(filterExpression).FirstOrDefaultAsync());
+            return Task.Run(() => _collection.Find(filterExpression)
+                                             .FirstOrDefaultAsync());
         }
 
         public virtual TEntity FindById(ObjectId objectId)
         {
             var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
-            return _collection.Find(filter).SingleOrDefault();
+            return _collection.Find(filter)
+                              .SingleOrDefault();
         }
 
         public virtual async Task<TEntity> FindByIdAsync(ObjectId objectId)
         {
             var filter = Builders<TEntity>.Filter.Eq(doc => doc.Id, objectId);
-            return await _collection.Find(filter).SingleOrDefaultAsync();
+            return await _collection.Find(filter)
+                                    .SingleOrDefaultAsync();
         }
 
         public virtual void InsertOne(TEntity document)
