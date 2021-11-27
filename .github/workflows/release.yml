@@ -31,5 +31,5 @@ jobs:
     
     - name: Publish
       working-directory: src
-      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate -v m
+      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
 
