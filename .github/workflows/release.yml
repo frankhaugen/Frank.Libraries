@@ -19,18 +19,10 @@ jobs:
       with:
         repository: ${{ github.repository }}
         releases-only: true
-        
-    - name: Restore
-      working-directory: src
-      run: dotnet restore -v m
-        
-    - name: Build
-      working-directory: src
-      run: dotnet build --configuration Release -p:Version=${{ steps.find.outputs.tag }} --no-restore -v m
-        
+    
     - name: Pack
       working-directory: src
-      run: dotnet pack --configuration Release --no-restore --no-build p:Version=${{ steps.find.outputs.tag }} -v m
+      run: dotnet pack --configuration Release p:Version=${{ steps.find.outputs.tag }} -v m
     
     - uses: AButler/upload-release-assets@v2.0
       with:
