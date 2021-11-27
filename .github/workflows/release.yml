@@ -26,11 +26,11 @@ jobs:
         
     - name: Build
       working-directory: src
-      run: dotnet build --configuration Release -p:Version=${{ steps.find.outputs.tag }} --no-restore
+      run: dotnet build --configuration Release -p:Version=${{ steps.find.outputs.tag }} --no-restore -v m
         
     - name: Pack
       working-directory: src
-      run: dotnet pack --configuration Release --no-restore --no-build p:Version=${{ steps.find.outputs.tag }} -v m --output nupkgs
+      run: dotnet pack --configuration Release --no-restore --no-build p:Version=${{ steps.find.outputs.tag }} -v m
     
     - uses: AButler/upload-release-assets@v2.0
       with:
@@ -39,5 +39,5 @@ jobs:
     
     - name: Publish
       working-directory: src
-      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate -v m
 
