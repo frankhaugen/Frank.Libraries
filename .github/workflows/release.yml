@@ -22,7 +22,7 @@ jobs:
     
     - name: Pack
       working-directory: src
-      run: dotnet pack --configuration Release p:Version=${{ steps.find.outputs.tag }} -v m
+      run: dotnet pack --configuration Release -p:Version=${{ steps.find.outputs.tag }} -v m
     
     - uses: AButler/upload-release-assets@v2.0
       with:
