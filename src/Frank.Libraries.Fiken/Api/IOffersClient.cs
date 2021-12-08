@@ -16,7 +16,7 @@ public interface IOffersClient
     /// <param name="comment"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToOfferDraft(string companySlug, long? draftId, string filename, string comment, byte[] file);
+    void AddAttachmentToOfferDraft(long? draftId, string filename, string comment, byte[] file);
 
     /// <summary>
     ///  Creates an offer draft.
@@ -32,7 +32,7 @@ public interface IOffersClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void CreateOfferFromDraft(string companySlug, long? draftId);
+    void CreateOfferFromDraft(long? draftId);
 
     /// <summary>
     ///  Delete offer draft with specified id.
@@ -40,7 +40,7 @@ public interface IOffersClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void DeleteOfferDraft(string companySlug, long? draftId);
+    void DeleteOfferDraft(long? draftId);
 
     /// <summary>
     ///  Returns offer with specified id.
@@ -48,7 +48,7 @@ public interface IOffersClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="offerId">The offerId (primary key of the returned object) is returned as the first field in the GET all offers call </param>
     /// <returns>Offer</returns>
-    Offer GetOffer(string companySlug, string offerId);
+    Offer GetOffer(string offerId);
 
     /// <summary>
     ///  Returns offer draft with specified id.
@@ -56,7 +56,7 @@ public interface IOffersClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>InvoiceishDraftResult</returns>
-    InvoiceishDraftResult GetOfferDraft(string companySlug, long? draftId);
+    InvoiceishDraftResult GetOfferDraft(long? draftId);
 
     /// <summary>
     ///  Returns all attachments for specified draft.
@@ -64,7 +64,7 @@ public interface IOffersClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>List&lt;Attachment&gt;</returns>
-    List<Attachment> GetOfferDraftAttachments(string companySlug, long? draftId);
+    List<Attachment> GetOfferDraftAttachments(long? draftId);
 
     /// <summary>
     ///  Returns all offer drafts for given company.
@@ -73,7 +73,7 @@ public interface IOffersClient
     /// <param name="page">Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0. </param>
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <returns>List&lt;InvoiceishDraftResult&gt;</returns>
-    List<InvoiceishDraftResult> GetOfferDrafts(string companySlug, int? page, int? pageSize);
+    List<InvoiceishDraftResult> GetOfferDrafts(int? page, int? pageSize);
 
     /// <summary>
     ///  Returns all offers for given company
@@ -82,7 +82,7 @@ public interface IOffersClient
     /// <param name="page">Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0. </param>
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <returns>List&lt;Offer&gt;</returns>
-    List<Offer> GetOffers(string companySlug, int? page, int? pageSize);
+    List<Offer> GetOffers(int? page, int? pageSize);
 
     /// <summary>
     ///  Updates offer draft with provided id.

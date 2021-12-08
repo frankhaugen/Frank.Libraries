@@ -16,7 +16,7 @@ public interface ICreditNotesClient
     /// <param name="comment"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToCreditNoteDraft(string companySlug, long? draftId, string filename, string comment, byte[] file);
+    void AddAttachmentToCreditNoteDraft(long? draftId, string filename, string comment, byte[] file);
 
     /// <summary>
     ///  Creates a credit note draft.
@@ -32,7 +32,7 @@ public interface ICreditNotesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void CreateCreditNoteFromDraft(string companySlug, long? draftId);
+    void CreateCreditNoteFromDraft(long? draftId);
 
     /// <summary>
     ///  Creates a new credit note.
@@ -56,7 +56,7 @@ public interface ICreditNotesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void DeleteCreditNoteDraft(string companySlug, long? draftId);
+    void DeleteCreditNoteDraft(long? draftId);
 
     /// <summary>
     ///  Returns credit note with specified id.
@@ -64,7 +64,7 @@ public interface ICreditNotesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="creditNoteId">The creditNoteId (primary key of the returned object) is returned as the first field in the GET all credit notes call; not to be confused with creditNoteNumber </param>
     /// <returns>CreditNoteResult</returns>
-    CreditNoteResult GetCreditNote(string companySlug, string creditNoteId);
+    CreditNoteResult GetCreditNote(string creditNoteId);
 
     /// <summary>
     ///  Returns credit note draft with specified id.
@@ -72,7 +72,7 @@ public interface ICreditNotesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>InvoiceishDraftResult</returns>
-    InvoiceishDraftResult GetCreditNoteDraft(string companySlug, long? draftId);
+    InvoiceishDraftResult GetCreditNoteDraft(long? draftId);
 
     /// <summary>
     ///  Returns all attachments for specified draft.
@@ -80,7 +80,7 @@ public interface ICreditNotesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>List&lt;Attachment&gt;</returns>
-    List<Attachment> GetCreditNoteDraftAttachments(string companySlug, long? draftId);
+    List<Attachment> GetCreditNoteDraftAttachments(long? draftId);
 
     /// <summary>
     ///  Returns all credit note drafts for given company.
@@ -89,7 +89,7 @@ public interface ICreditNotesClient
     /// <param name="page">Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0. </param>
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <returns>List&lt;InvoiceishDraftResult&gt;</returns>
-    List<InvoiceishDraftResult> GetCreditNoteDrafts(string companySlug, int? page, int? pageSize);
+    List<InvoiceishDraftResult> GetCreditNoteDrafts(int? page, int? pageSize);
 
     /// <summary>
     ///  Returns all credit notes for given company
@@ -105,7 +105,7 @@ public interface ICreditNotesClient
     /// <param name="customerId">Returns only credit notes sent to specified customer. Must be the contactId provided by a GET contacts call. </param>
     /// <param name="settled">When set to true, returns only credit notes that have been settled. Otherwise false returns all credit notes that have not been fully settled. </param>
     /// <returns>List&lt;CreditNoteResult&gt;</returns>
-    List<CreditNoteResult> GetCreditNotes(string companySlug, int? page, int? pageSize, DateTime? issueDate, DateTime? issueDateLe, DateTime? issueDateLt, DateTime? issueDateGe, DateTime? issueDateGt, long? customerId, bool? settled);
+    List<CreditNoteResult> GetCreditNotes(int? page, int? pageSize, DateTime? issueDate, DateTime? issueDateLe, DateTime? issueDateLt, DateTime? issueDateGe, DateTime? issueDateGt, long? customerId, bool? settled);
 
     /// <summary>
     ///  Sends the specified document

@@ -1,4 +1,5 @@
-﻿using Frank.Libraries.Tests.TestingInfrastructure;
+﻿using System;
+using Frank.Libraries.Tests.TestingInfrastructure;
 using Frank.Libraries.Time;
 using NodaTime;
 using NodaTime.Testing;
@@ -9,17 +10,17 @@ namespace Frank.Libraries.Tests
 {
     public class DateServiceTests : TestBase
     {
-        private IClock subClock;
+        private readonly IClock _subClock;
 
         public DateServiceTests(ITestOutputHelper outputHelper) : base(outputHelper)
         {
-            this.subClock = new FakeClock(new Instant());
+            this._subClock = new FakeClock(new Instant());
         }
 
         private DateService CreateService()
         {
             return new DateService(
-                this.subClock);
+                this._subClock);
         }
 
         [Fact]

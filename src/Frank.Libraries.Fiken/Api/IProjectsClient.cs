@@ -21,7 +21,7 @@ public interface IProjectsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="projectId"></param>
     /// <returns></returns>
-    void DeleteProject(string companySlug, long? projectId);
+    void DeleteProject(long? projectId);
 
     /// <summary>
     ///  Returns project with specified id.
@@ -29,7 +29,7 @@ public interface IProjectsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="projectId"></param>
     /// <returns>ProjectResult</returns>
-    ProjectResult GetProject(string companySlug, long? projectId);
+    ProjectResult GetProject(long? projectId);
 
     /// <summary>
     ///  Returns all projects for given company
@@ -39,7 +39,7 @@ public interface IProjectsClient
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <param name="completed">Filter results based on completed / not completed.</param>
     /// <returns>List&lt;ProjectResult&gt;</returns>
-    List<ProjectResult> GetProjects(string companySlug, int? page, int? pageSize, bool? completed);
+    List<ProjectResult> GetProjects(int? page, int? pageSize, bool? completed);
 
     /// <summary>
     ///  Updates project with provided id.

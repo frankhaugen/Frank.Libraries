@@ -16,7 +16,7 @@ public interface IOrderConfirmationsClient
     /// <param name="comment"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToOrderConfirmationDraft(string companySlug, long? draftId, string filename, string comment, byte[] file);
+    void AddAttachmentToOrderConfirmationDraft(long? draftId, string filename, string comment, byte[] file);
 
     /// <summary>
     ///  Creates an invoice draft from an order confirmation
@@ -24,7 +24,7 @@ public interface IOrderConfirmationsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="confirmationId">The confirmationId (primary key of the returned object) is returned as the first field in the GET all order confirmations call </param>
     /// <returns></returns>
-    void CreateInvoicDraftFromOrderConfirmation(string companySlug, string confirmationId);
+    void CreateInvoicDraftFromOrderConfirmation(string confirmationId);
 
     /// <summary>
     ///  Creates an order confirmation draft.
@@ -40,7 +40,7 @@ public interface IOrderConfirmationsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void CreateOrderConfirmationFromDraft(string companySlug, long? draftId);
+    void CreateOrderConfirmationFromDraft(long? draftId);
 
     /// <summary>
     ///  Delete order confirmation draft with specified id.
@@ -48,7 +48,7 @@ public interface IOrderConfirmationsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void DeleteOrderConfirmationDraft(string companySlug, long? draftId);
+    void DeleteOrderConfirmationDraft(long? draftId);
 
     /// <summary>
     ///  Returns order confirmation with specified id.
@@ -56,7 +56,7 @@ public interface IOrderConfirmationsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="confirmationId">The confirmationId (primary key of the returned object) is returned as the first field in the GET all order confirmations call </param>
     /// <returns>OrderConfirmation</returns>
-    OrderConfirmation GetOrderConfirmation(string companySlug, string confirmationId);
+    OrderConfirmation GetOrderConfirmation(string confirmationId);
 
     /// <summary>
     ///  Returns order confirmation draft with specified id.
@@ -64,7 +64,7 @@ public interface IOrderConfirmationsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>InvoiceishDraftResult</returns>
-    InvoiceishDraftResult GetOrderConfirmationDraft(string companySlug, long? draftId);
+    InvoiceishDraftResult GetOrderConfirmationDraft(long? draftId);
 
     /// <summary>
     ///  Returns all attachments for specified draft.
@@ -72,7 +72,7 @@ public interface IOrderConfirmationsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>List&lt;Attachment&gt;</returns>
-    List<Attachment> GetOrderConfirmationDraftAttachments(string companySlug, long? draftId);
+    List<Attachment> GetOrderConfirmationDraftAttachments(long? draftId);
 
     /// <summary>
     ///  Returns all order confirmation drafts for given company.
@@ -81,7 +81,7 @@ public interface IOrderConfirmationsClient
     /// <param name="page">Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0. </param>
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <returns>List&lt;InvoiceishDraftResult&gt;</returns>
-    List<InvoiceishDraftResult> GetOrderConfirmationDrafts(string companySlug, int? page, int? pageSize);
+    List<InvoiceishDraftResult> GetOrderConfirmationDrafts(int? page, int? pageSize);
 
     /// <summary>
     ///  Returns all order confirmations for given company
@@ -90,7 +90,7 @@ public interface IOrderConfirmationsClient
     /// <param name="page">Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0. </param>
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <returns>List&lt;OrderConfirmation&gt;</returns>
-    List<OrderConfirmation> GetOrderConfirmations(string companySlug, int? page, int? pageSize);
+    List<OrderConfirmation> GetOrderConfirmations(int? page, int? pageSize);
 
     /// <summary>
     ///  Updates order confirmation draft with provided id.

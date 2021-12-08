@@ -28,7 +28,7 @@ public interface IInboxClient
     /// <param name="status"></param>
     /// <param name="name">Filter documents based on their name, case-insensitive substring match.</param>
     /// <returns>List&lt;InboxResult&gt;</returns>
-    List<InboxResult> GetInbox(string companySlug, int? page, int? pageSize, string sortBy, string status, string name);
+    List<InboxResult> GetInbox(int? page, int? pageSize, string sortBy, string status, string name);
 
     /// <summary>
     ///  Returns the inbox document with specified id
@@ -36,5 +36,5 @@ public interface IInboxClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="inboxDocumentId"></param>
     /// <returns>InboxResult</returns>
-    InboxResult GetInboxDocument(string companySlug, long? inboxDocumentId);
+    InboxResult GetInboxDocument(long? inboxDocumentId);
 }

@@ -167,19 +167,16 @@ namespace Frank.Libraries.Extensions
         {
             var tb = new DataTable(typeof(T).Name);
 
-            var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            var properties = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
 
-            foreach (var prop in props)
-            {
-                tb.Columns.Add(prop.Name, prop.PropertyType);
-            }
+            foreach (var property in properties) tb.Columns.Add(property.Name, Nullable.GetUnderlyingType(property.PropertyType) ?? property.PropertyType);
 
             foreach (var item in items)
             {
-                var values = new object[props.Length];
-                for (var i = 0; i < props.Length; i++)
+                var values = new object[properties.Length];
+                for (var i = 0; i < properties.Length; i++)
                 {
-                    values[i] = props[i]
+                    values[i] = properties[i]
                         .GetValue(item, null)!;
                 }
 

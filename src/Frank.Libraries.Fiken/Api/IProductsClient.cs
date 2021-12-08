@@ -29,7 +29,7 @@ public interface IProductsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="productId">The productId (primary key of the returned object) is returned in the GET all products call; not to be confused with productNumber. </param>
     /// <returns></returns>
-    void DeleteProduct(string companySlug, long? productId);
+    void DeleteProduct(long? productId);
 
     /// <summary>
     ///  Returns product with specified id.
@@ -37,7 +37,7 @@ public interface IProductsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="productId">The productId (primary key of the returned object) is returned in the GET all products call; not to be confused with productNumber. </param>
     /// <returns>Product</returns>
-    Product GetProduct(string companySlug, long? productId);
+    Product GetProduct(long? productId);
 
     /// <summary>
     ///  Returns all products for given company
@@ -51,7 +51,7 @@ public interface IProductsClient
     /// <param name="productNumber">Find all results with product number (varenummer) equal to the specified parameter.</param>
     /// <param name="active">Returns active (true) or inactive (false) products.</param>
     /// <returns>List&lt;Product&gt;</returns>
-    List<Product> GetProducts(string companySlug, int? page, int? pageSize, DateTime? createdDate, DateTime? lastModified, string name, string productNumber, bool? active);
+    List<Product> GetProducts(int? page, int? pageSize, DateTime? createdDate, DateTime? lastModified, string name, string productNumber, bool? active);
 
     /// <summary>
     ///  Updates an existing product.

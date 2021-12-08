@@ -15,7 +15,7 @@ public interface IJournalEntriesClient
     /// <param name="filename"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToJournalEntry(string companySlug, long? journalEntryId, string filename, byte[] file);
+    void AddAttachmentToJournalEntry(long? journalEntryId, string filename, byte[] file);
 
     /// <summary>
     ///  Creates a new general journal entry (fri postering).
@@ -37,7 +37,7 @@ public interface IJournalEntriesClient
     /// <param name="dateGe">Filter based on date greater than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; </param>
     /// <param name="dateGt">Filter based on date strictly greater than parameter value Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; </param>
     /// <returns>List&lt;JournalEntry&gt;</returns>
-    List<JournalEntry> GetJournalEntries(string companySlug, int? page, int? pageSize, DateTime? date, DateTime? dateLe, DateTime? dateLt, DateTime? dateGe, DateTime? dateGt);
+    List<JournalEntry> GetJournalEntries(int? page, int? pageSize, DateTime? date, DateTime? dateLe, DateTime? dateLt, DateTime? dateGe, DateTime? dateGt);
 
     /// <summary>
     ///  Returns all journal entries within a given company&#x27;s Journal Entry Service
@@ -45,7 +45,7 @@ public interface IJournalEntriesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="journalEntryId"></param>
     /// <returns>JournalEntry</returns>
-    JournalEntry GetJournalEntry(string companySlug, long? journalEntryId);
+    JournalEntry GetJournalEntry(long? journalEntryId);
 
     /// <summary>
     ///  Returns all attachments for a given Journal Entry
@@ -53,5 +53,5 @@ public interface IJournalEntriesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="journalEntryId"></param>
     /// <returns>List&lt;Attachment&gt;</returns>
-    List<Attachment> GetJournalEntryAttachments(string companySlug, long? journalEntryId);
+    List<Attachment> GetJournalEntryAttachments(long? journalEntryId);
 }

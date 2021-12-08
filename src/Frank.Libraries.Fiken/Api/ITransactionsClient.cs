@@ -13,5 +13,5 @@ public interface ITransactionsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="transactionId"></param>
     /// <returns>Transaction</returns>
-    Transaction GetTransaction(string companySlug, long? transactionId);
+    Transaction GetTransaction(long? transactionId);
 }

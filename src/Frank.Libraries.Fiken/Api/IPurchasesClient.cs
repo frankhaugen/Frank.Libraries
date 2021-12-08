@@ -17,7 +17,7 @@ public interface IPurchasesClient
     /// <param name="attachToSale"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToPurchase(string companySlug, long? purchaseId, string filename, bool? attachToPayment, bool? attachToSale, byte[] file);
+    void AddAttachmentToPurchase(long? purchaseId, string filename, bool? attachToPayment, bool? attachToSale, byte[] file);
 
     /// <summary>
     ///  Creates and adds a new attachment to a draft
@@ -27,7 +27,7 @@ public interface IPurchasesClient
     /// <param name="filename"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToPurchaseDraft(string companySlug, long? draftId, string filename, byte[] file);
+    void AddAttachmentToPurchaseDraft(long? draftId, string filename, byte[] file);
 
     /// <summary>
     ///  Creates a new purchase.
@@ -51,7 +51,7 @@ public interface IPurchasesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void CreatePurchaseFromDraft(string companySlug, long? draftId);
+    void CreatePurchaseFromDraft(long? draftId);
 
     /// <summary>
     ///  Creates a new payment for a purchase
@@ -69,7 +69,7 @@ public interface IPurchasesClient
     /// <param name="purchaseId"></param>
     /// <param name="description">Required description for deleting the purchase</param>
     /// <returns>PurchaseResult</returns>
-    PurchaseResult DeletePurchase(string companySlug, long? purchaseId, string description);
+    PurchaseResult DeletePurchase(long? purchaseId, string description);
 
     /// <summary>
     ///  Delete draft with specified id.
@@ -77,7 +77,7 @@ public interface IPurchasesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void DeletePurchaseDraft(string companySlug, long? draftId);
+    void DeletePurchaseDraft(long? draftId);
 
     /// <summary>
     ///  Returns purchase with specified id.
@@ -85,7 +85,7 @@ public interface IPurchasesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="purchaseId"></param>
     /// <returns>PurchaseResult</returns>
-    PurchaseResult GetPurchase(string companySlug, long? purchaseId);
+    PurchaseResult GetPurchase(long? purchaseId);
 
     /// <summary>
     ///  Returns all attachments for specified purchase.
@@ -93,7 +93,7 @@ public interface IPurchasesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="purchaseId"></param>
     /// <returns>List&lt;Attachment&gt;</returns>
-    List<Attachment> GetPurchaseAttachments(string companySlug, long? purchaseId);
+    List<Attachment> GetPurchaseAttachments(long? purchaseId);
 
     /// <summary>
     ///  Returns draft with specified id.
@@ -101,7 +101,7 @@ public interface IPurchasesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>DraftResult</returns>
-    DraftResult GetPurchaseDraft(string companySlug, long? draftId);
+    DraftResult GetPurchaseDraft(long? draftId);
 
     /// <summary>
     ///  Returns all attachments for specified draft.
@@ -109,7 +109,7 @@ public interface IPurchasesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>List&lt;Attachment&gt;</returns>
-    List<Attachment> GetPurchaseDraftAttachments(string companySlug, long? draftId);
+    List<Attachment> GetPurchaseDraftAttachments(long? draftId);
 
     /// <summary>
     ///  Returns all purchase drafts for given company.
@@ -118,7 +118,7 @@ public interface IPurchasesClient
     /// <param name="page">Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0. </param>
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <returns>List&lt;DraftResult&gt;</returns>
-    List<DraftResult> GetPurchaseDrafts(string companySlug, int? page, int? pageSize);
+    List<DraftResult> GetPurchaseDrafts(int? page, int? pageSize);
 
     /// <summary>
     ///  Returns given payment for specified purchase
@@ -127,7 +127,7 @@ public interface IPurchasesClient
     /// <param name="purchaseId"></param>
     /// <param name="paymentId"></param>
     /// <returns>Payment</returns>
-    Payment GetPurchasePayment(string companySlug, long? purchaseId, long? paymentId);
+    Payment GetPurchasePayment(long? purchaseId, long? paymentId);
 
     /// <summary>
     ///  Returns all purchases for given company
@@ -135,7 +135,7 @@ public interface IPurchasesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="purchaseId"></param>
     /// <returns>List&lt;Payment&gt;</returns>
-    List<Payment> GetPurchasePayments(string companySlug, long? purchaseId);
+    List<Payment> GetPurchasePayments(long? purchaseId);
 
     /// <summary>
     ///  Returns all purchases for given company
@@ -145,7 +145,7 @@ public interface IPurchasesClient
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <param name="sortBy">Sorts results in either ascending (asc) or descending (desc) order based on the parameter value.</param>
     /// <returns>List&lt;PurchaseResult&gt;</returns>
-    List<PurchaseResult> GetPurchases(string companySlug, int? page, int? pageSize, string sortBy);
+    List<PurchaseResult> GetPurchases(int? page, int? pageSize, string sortBy);
 
     /// <summary>
     ///  Updates draft with provided id.

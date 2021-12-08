@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Xml;
+﻿using System.IO;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
@@ -8,23 +6,27 @@ namespace Frank.Libraries.Xml
 {
     public static class XmlExtensions
     {
-        public static bool TryParse(this string xml, out XElement? xElement, out XmlException? exception)
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="xml"></param>
+        /// <param name="xElement"></param>
+        /// <param name="exception"></param>
+        /// <returns></returns>
+        public static bool TrySerializeToXml(this string xml, out XElement? xElement)
         {
             try
             {
                 xElement = XElement.Parse(xml);
-                exception = null;
                 return true;
             }
-            catch (XmlException e)
+            catch
             {
-                exception = e;
                 xElement = null;
                 return false;
             }
         }
 
-        // THIS: (C): https://stackoverflow.com/questions/2434534/serialize-an-object-to-string
         /// <summary>
         /// A helper to serialize an object to a string containing XML data of the object.
         /// </summary>
@@ -33,17 +35,12 @@ namespace Frank.Libraries.Xml
         /// <returns>A string containing XML data of the object.</returns>
         public static string SerializeObjectToXml<T>(this T toSerialize) where T : class, new()
         {
-            // create an instance of a XmlSerializer class with the typeof(T)..
-            var xmlSerializer = new XmlSerializer(toSerialize!.GetType());
-
-            // using is necessary with classes which implement the IDisposable interface..
+            var xmlSerializer = new XmlSerializer(typeof(T));
             using var stringWriter = new StringWriter();
-            // serialize a class to a StringWriter class instance..
-            xmlSerializer!.Serialize(stringWriter, toSerialize); // a base class of the StringWriter instance is TextWriter..
-            return stringWriter!.ToString();                     // return the value..
+            xmlSerializer.Serialize(stringWriter, toSerialize);
+            return stringWriter!.ToString();
         }
 
-        // THIS: (C): VPKSoft, 2018, https://www.vpksoft.net
         /// <summary>
         /// Deserializes an object which is saved to an XML data string. If the object has no instance a new object will be constructed if possible.
         /// <note type="note">An exception will occur if a null reference is called an no valid constructor of the class is available.</note>
@@ -53,20 +50,11 @@ namespace Frank.Libraries.Xml
         /// <returns>An object which is deserialized from the XML data string.</returns>
         public static T? DeserializeObjectFromXml<T>(this string xmlData) where T : class, new()
         {
-            // if a null instance of an object called this try to create a "default" instance for it with typeof(T),
-            // this will throw an exception no useful constructor is found..
-            var voidInstance = Activator.CreateInstance(typeof(T));
-
-            // create an instance of a XmlSerializer class with the typeof(T)..
-            var xmlSerializer = new XmlSerializer(voidInstance!.GetType());
-
-            // construct a StringReader class instance of the given xmlData parameter to be deserialized by the XmlSerializer class instance..
+            var xmlSerializer = new XmlSerializer(typeof(T));
             using var stringReader = new StringReader(xmlData);
-            // return the "new" object deserialized via the XmlSerializer class instance..
             return (T)xmlSerializer.Deserialize(stringReader)!;
         }
 
-        // THIS: (C): VPKSoft, 2018, https://www.vpksoft.net
         /// <summary>
         /// Tries to deserializes an object which is saved to an XML data string. If the object has no instance a new object will be constructed if possible.
         /// <note type="note">An exception will occur if a null reference is called an no valid constructor of the class is available.</note>
@@ -79,11 +67,9 @@ namespace Frank.Libraries.Xml
         {
             try
             {
-                var voidInstance = Activator.CreateInstance(typeof(T));
-                var xmlSerializer = new XmlSerializer(voidInstance!.GetType());
+                var xmlSerializer = new XmlSerializer(typeof(T));
                 using var stringReader = new StringReader(xmlData);
                 value = ((T)xmlSerializer.Deserialize(stringReader)!)!;
-
                 return true;
             }
             catch

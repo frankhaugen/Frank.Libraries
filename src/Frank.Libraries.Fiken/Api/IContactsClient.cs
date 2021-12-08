@@ -16,7 +16,7 @@ public interface IContactsClient
     /// <param name="comment"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToContact(string companySlug, long? contactId, string filename, string comment, byte[] file);
+    void AddAttachmentToContact(long? contactId, string filename, string comment, byte[] file);
 
     /// <summary>
     ///  Adds a new contact person to a contact
@@ -42,7 +42,7 @@ public interface IContactsClient
     /// <param name="contactId"></param>
     /// <param name="contactPersonId"></param>
     /// <returns></returns>
-    void DeleteContactContactPerson(string companySlug, long? contactId, long? contactPersonId);
+    void DeleteContactContactPerson(long? contactId, long? contactPersonId);
 
     /// <summary>
     ///  Retrieves specified contact. ContactId is returned with a GET contacts call as the first returned field. ContactId is returned in the Location response header for POST contact.
@@ -50,7 +50,7 @@ public interface IContactsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="contactId"></param>
     /// <returns>Contact</returns>
-    Contact GetContact(string companySlug, long? contactId);
+    Contact GetContact(long? contactId);
 
     /// <summary>
     ///  Retrieves contact person(s) for a specified contact.
@@ -58,7 +58,7 @@ public interface IContactsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="contactId"></param>
     /// <returns>List&lt;ContactPerson&gt;</returns>
-    List<ContactPerson> GetContactContactPerson(string companySlug, long? contactId);
+    List<ContactPerson> GetContactContactPerson(long? contactId);
 
     /// <summary>
     ///  Retrieves specified contact person
@@ -67,7 +67,7 @@ public interface IContactsClient
     /// <param name="contactId"></param>
     /// <param name="contactPersonId"></param>
     /// <returns>ContactPerson</returns>
-    ContactPerson GetContactPerson(string companySlug, long? contactId, long? contactPersonId);
+    ContactPerson GetContactPerson(long? contactId, long? contactPersonId);
 
     /// <summary>
     ///  Retrieves all contacts for the specified company.
@@ -92,7 +92,7 @@ public interface IContactsClient
     /// <param name="group">Return contacts in contact group, exact match only. Groups are only used for customers, not suppliers.</param>
     /// <param name="sortBy"></param>
     /// <returns>List&lt;Contact&gt;</returns>
-    List<Contact> GetContacts(string companySlug, int? page, int? pageSize, DateTime? lastModified, DateTime? lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, int? supplierNumber, int? customerNumber, int? memberNumber, string name, string organizationNumber, string email, bool? customer, bool? supplier, bool? inactive, string group, string sortBy);
+    List<Contact> GetContacts(int? page, int? pageSize, DateTime? lastModified, DateTime? lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, int? supplierNumber, int? customerNumber, int? memberNumber, string name, string organizationNumber, string email, bool? customer, bool? supplier, bool? inactive, string group, string sortBy);
 
     /// <summary>
     ///  Updates an existing contact.

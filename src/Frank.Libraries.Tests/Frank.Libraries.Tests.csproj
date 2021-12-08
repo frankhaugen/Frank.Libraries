@@ -8,23 +8,23 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Atc.Test" Version="1.0.45"/>
-        <PackageReference Include="AutoBogus" Version="2.13.1"/>
-        <PackageReference Include="AutoMapper" Version="10.1.1"/>
-        <PackageReference Include="ConsoleTableExt" Version="3.1.9"/>
+        <PackageReference Include="Atc.Test" Version="1.0.45" />
+        <PackageReference Include="AutoBogus" Version="2.13.1" />
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="ConsoleTableExt" Version="3.1.9" />
         <PackageReference Include="coverlet.msbuild" Version="3.1.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Divergic.Logging.Xunit" Version="3.6.0"/>
-        <PackageReference Include="EntityFrameworkCoreMock.NSubstitute" Version="2.3.0"/>
-        <PackageReference Include="FluentAssertions" Version="6.2.0"/>
-        <PackageReference Include="Microsoft.CodeCoverage" Version="17.0.0"/>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0"/>
-        <PackageReference Include="Mongo2Go" Version="3.1.3"/>
-        <PackageReference Include="NodaTime.Testing" Version="3.0.9"/>
-        <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="13.2.47"/>
-        <PackageReference Include="xunit" Version="2.4.1"/>
+        <PackageReference Include="Divergic.Logging.Xunit" Version="3.6.0" />
+        <PackageReference Include="EntityFrameworkCoreMock.NSubstitute" Version="2.3.0" />
+        <PackageReference Include="FluentAssertions" Version="6.2.0" />
+        <PackageReference Include="Microsoft.CodeCoverage" Version="17.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+        <PackageReference Include="Mongo2Go" Version="3.1.3" />
+        <PackageReference Include="NodaTime.Testing" Version="3.0.9" />
+        <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="13.2.47" />
+        <PackageReference Include="xunit" Version="2.4.1" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -36,30 +36,31 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Libraries.AutoFixture\Frank.Libraries.AutoFixture.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.AzureServiceBus\Frank.Libraries.AzureServiceBus.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.AzureStorage\Frank.Libraries.AzureStorage.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Brreg\Frank.Libraries.Brreg.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.CodeGeneration\Frank.Libraries.CodeGeneration.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Csv\Frank.Libraries.Csv.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Currency\Frank.Libraries.Currency.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.DependencyInjection\Frank.Libraries.DependencyInjection.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Extensions\Frank.Libraries.Extensions.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Gaming\Frank.Libraries.Gaming.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.FluentValidation\Frank.Libraries.FluentValidation.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Internet\Frank.Libraries.Internet.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Logging\Frank.Libraries.Logging.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.ML\Frank.Libraries.ML.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.SBDH\Frank.Libraries.SBDH.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Security\Frank.Libraries.Security.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Time\Frank.Libraries.Time.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Ubl\Frank.Libraries.Ubl.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.IRC\Frank.Libraries.IRC.csproj"/>
+        <ProjectReference Include="..\Frank.Libraries.AutoFixture\Frank.Libraries.AutoFixture.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.AzureServiceBus\Frank.Libraries.AzureServiceBus.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.AzureStorage\Frank.Libraries.AzureStorage.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Brreg\Frank.Libraries.Brreg.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.CodeGeneration\Frank.Libraries.CodeGeneration.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Csv\Frank.Libraries.Csv.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Currency\Frank.Libraries.Currency.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.DependencyInjection\Frank.Libraries.DependencyInjection.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Extensions\Frank.Libraries.Extensions.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Fiken\Frank.Libraries.Fiken.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Gaming\Frank.Libraries.Gaming.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.FluentValidation\Frank.Libraries.FluentValidation.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Internet\Frank.Libraries.Internet.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Logging\Frank.Libraries.Logging.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.ML\Frank.Libraries.ML.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.SBDH\Frank.Libraries.SBDH.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Security\Frank.Libraries.Security.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Time\Frank.Libraries.Time.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Ubl\Frank.Libraries.Ubl.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Xml\Frank.Libraries.Xml.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.IRC\Frank.Libraries.IRC.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -72,8 +73,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Gaming"/>
-        <Folder Include="Internet"/>
-        <Folder Include="ML"/>
+        <Folder Include="Gaming" />
+        <Folder Include="Internet" />
+        <Folder Include="ML" />
     </ItemGroup>
 </Project>

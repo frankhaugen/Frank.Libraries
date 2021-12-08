@@ -21,7 +21,7 @@ public interface IBankAccountsClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="bankAccountId"></param>
     /// <returns>BankAccountResult</returns>
-    BankAccountResult GetBankAccount(string companySlug, long? bankAccountId);
+    BankAccountResult GetBankAccount(long? bankAccountId);
 
     /// <summary>
     ///  Retrieves all bank accounts associated with the company.
@@ -30,5 +30,5 @@ public interface IBankAccountsClient
     /// <param name="page">Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0. </param>
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <returns>List&lt;BankAccountResult&gt;</returns>
-    List<BankAccountResult> GetBankAccounts(string companySlug, int? page, int? pageSize);
+    List<BankAccountResult> GetBankAccounts(int? page, int? pageSize);
 }

@@ -1,20 +1,22 @@
 ﻿using System;
-using System.Text.Json;
+using System.Collections.Generic;
 
 namespace Frank.Libraries.Extensions
 {
     public static class ExceptionExtensions
     {
-        public static FriendlyException GetFriendly<T>(this T source) where T : Exception
+        public static List<Exception> GetAll<T>(this T exception) where T : Exception
         {
-            return new FriendlyException(source.GetType()
-                                               .Name.ToTitleCase(), source.Message, source.StackTrace,
-                                         source.InnerException);
-        }
+            var exceptions = new List<Exception>();
+            var currentException = exception as Exception;
 
-        public static string ToJson(this FriendlyException source)
-        {
-            return JsonSerializer.Serialize(source, new JsonSerializerOptions() { WriteIndented = true, IgnoreNullValues = true, MaxDepth = 1 });
+            while (currentException != null)
+            {
+                exceptions.Add(currentException);
+                currentException = currentException.InnerException;
+            }
+
+            return exceptions;
         }
     }
 }

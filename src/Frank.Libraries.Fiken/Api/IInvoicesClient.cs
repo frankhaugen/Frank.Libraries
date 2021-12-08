@@ -15,7 +15,7 @@ public interface IInvoicesClient
     /// <param name="filename"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToInvoice(string companySlug, long? invoiceId, string filename, byte[] file);
+    void AddAttachmentToInvoice(long? invoiceId, string filename, byte[] file);
 
     /// <summary>
     ///  Creates and adds a new attachment to an invoice draft
@@ -26,7 +26,7 @@ public interface IInvoicesClient
     /// <param name="comment"></param>
     /// <param name="file"></param>
     /// <returns></returns>
-    void AddAttachmentToInvoiceDraft(string companySlug, long? draftId, string filename, string comment, byte[] file);
+    void AddAttachmentToInvoiceDraft(long? draftId, string filename, string comment, byte[] file);
 
     /// <summary>
     ///  Creates an invoice. There are two types of invoice lines that can be added to an invoice line: product line or free text line. Provide a product Id if you are invoicing a product. All information regarding the price and VAT for this product will be added to the invoice. It is however also possible to override the unit amount by sending information in both fields \&quot;productId\&quot; and \&quot;unitAmount\&quot;. An invoice line can also be a free text line meaning that no existing product will be associated with the invoiced line. In this case all information regarding the price and VAT of the product or service to be invoiced must be provided.
@@ -50,7 +50,7 @@ public interface IInvoicesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void CreateInvoiceFromDraft(string companySlug, long? draftId);
+    void CreateInvoiceFromDraft(long? draftId);
 
     /// <summary>
     ///  Delete invoice draft with specified id.
@@ -58,7 +58,7 @@ public interface IInvoicesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns></returns>
-    void DeleteInvoiceDraft(string companySlug, long? draftId);
+    void DeleteInvoiceDraft(long? draftId);
 
     /// <summary>
     ///  Returns invoice with specified id.
@@ -66,7 +66,7 @@ public interface IInvoicesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="invoiceId">The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber </param>
     /// <returns>InvoiceResult</returns>
-    InvoiceResult GetInvoice(string companySlug, long? invoiceId);
+    InvoiceResult GetInvoice(long? invoiceId);
 
     /// <summary>
     ///  Returns all attachments for a given Invoice
@@ -74,7 +74,7 @@ public interface IInvoicesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="invoiceId">The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber </param>
     /// <returns>List&lt;Attachment&gt;</returns>
-    List<Attachment> GetInvoiceAttachments(string companySlug, long? invoiceId);
+    List<Attachment> GetInvoiceAttachments(long? invoiceId);
 
     /// <summary>
     ///  Returns invoice draft with specified id.
@@ -82,7 +82,7 @@ public interface IInvoicesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>InvoiceishDraftResult</returns>
-    InvoiceishDraftResult GetInvoiceDraft(string companySlug, long? draftId);
+    InvoiceishDraftResult GetInvoiceDraft(long? draftId);
 
     /// <summary>
     ///  Returns all attachments for specified draft.
@@ -90,7 +90,7 @@ public interface IInvoicesClient
     /// <param name="companySlug">Slug of company to retrieve</param>
     /// <param name="draftId">The draftId (primary key of the returned object) is returned in the GET all drafts call. </param>
     /// <returns>List&lt;Attachment&gt;</returns>
-    List<Attachment> GetInvoiceDraftAttachments(string companySlug, long? draftId);
+    List<Attachment> GetInvoiceDraftAttachments(long? draftId);
 
     /// <summary>
     ///  Returns all invoice drafts for given company.
@@ -100,7 +100,7 @@ public interface IInvoicesClient
     /// <param name="pageSize">Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. </param>
     /// <param name="orderReference">Filter based on order reference for a given invoice</param>
     /// <returns>List&lt;InvoiceishDraftResult&gt;</returns>
-    List<InvoiceishDraftResult> GetInvoiceDrafts(string companySlug, int? page, int? pageSize, string orderReference);
+    List<InvoiceishDraftResult> GetInvoiceDrafts(int? page, int? pageSize, string orderReference);
 
     /// <summary>
     ///  Returns all invoices for given company. You can filter based on issue date, last modified date, customer ID, and if the invoice is settled or not.
@@ -123,7 +123,7 @@ public interface IInvoicesClient
     /// <param name="orderReference">Filter based on order reference for a given invoice</param>
     /// <param name="invoiceDraftUuid">Filter based on the UUID of the invoice draft that was used to create a given invoice</param>
     /// <returns>List&lt;InvoiceResult&gt;</returns>
-    List<InvoiceResult> GetInvoices(string companySlug, int? page, int? pageSize, DateTime? issueDate, DateTime? issueDateLe, DateTime? issueDateLt, DateTime? issueDateGe, DateTime? issueDateGt, DateTime? lastModified, DateTime? lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, long? customerId, bool? settled, string orderReference, Guid? invoiceDraftUuid);
+    List<InvoiceResult> GetInvoices(int? page, int? pageSize, DateTime? issueDate, DateTime? issueDateLe, DateTime? issueDateLt, DateTime? issueDateGe, DateTime? issueDateGt, DateTime? lastModified, DateTime? lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, long? customerId, bool? settled, string orderReference, Guid? invoiceDraftUuid);
 
     /// <summary>
     ///  Sends the specified document

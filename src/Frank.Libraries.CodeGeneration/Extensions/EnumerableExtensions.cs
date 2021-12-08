@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Frank.Libraries.CodeGeneration.Extensions
 {
@@ -19,8 +20,17 @@ namespace Frank.Libraries.CodeGeneration.Extensions
 
         public static IEnumerable<T> DoForEach<T>(this IEnumerable<T> source, Action<T> action)
         {
+            if (source == null || !source.Any())
+            {
+                return source;
+            }
+
             foreach (var value in source)
             {
+                if (value == null)
+                {
+                    continue;
+                }
                 action.Invoke(value);
             }
 
