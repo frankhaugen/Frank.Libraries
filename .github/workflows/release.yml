@@ -9,11 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: '6.0.x'
     
     - name: Find Latest Tag
       id: find
@@ -21,17 +19,17 @@ jobs:
       with:
         repository: ${{ github.repository }}
         releases-only: true
-        
-    - name: Pack NuGet
+    
+    - name: Pack
       working-directory: src
-      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}
+      run: dotnet pack --configuration Release -p:Version=${{ steps.find.outputs.tag }} -v m
     
     - uses: AButler/upload-release-assets@v2.0
       with:
         files: "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg"
         repo-token: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Push NuGets
+    - name: Publish
       working-directory: src
       run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
 
