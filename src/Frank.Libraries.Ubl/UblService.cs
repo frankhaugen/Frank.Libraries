@@ -3,29 +3,28 @@ using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace Frank.Libraries.Ubl
+namespace Frank.Libraries.Ubl;
+
+/// <summary>
+/// A service to interact with UBLs in <c>this</c> library
+/// </summary>
+public class UblService
 {
     /// <summary>
-    /// A service to interact with UBLs in <c>this</c> library
+    /// Get an Invoice back based on the XML
     /// </summary>
-    public class UblService
+    /// <param name="xml"></param>
+    /// <returns></returns>
+    public InvoiceType DeserializeToInvoiceType(string xml)
     {
-        /// <summary>
-        /// Get an Invoice back based on the XML
-        /// </summary>
-        /// <param name="xml"></param>
-        /// <returns></returns>
-        public InvoiceType DeserializeToInvoiceType(string xml)
-        {
-            _ = XElement.Parse(xml);
+        _ = XElement.Parse(xml);
 
-            var serializer = new XmlSerializer(typeof(InvoiceType));
+        var serializer = new XmlSerializer(typeof(InvoiceType));
 
-            using var stringReader = new StringReader(xml);
-            using var xmlReader = XmlReader.Create(stringReader);
-            var document = (InvoiceType)serializer.Deserialize(xmlReader);
+        using var stringReader = new StringReader(xml);
+        using var xmlReader = XmlReader.Create(stringReader);
+        var document = (InvoiceType)serializer.Deserialize(xmlReader);
 
-            return document;
-        }
+        return document;
     }
 }
