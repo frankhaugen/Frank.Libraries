@@ -1,6 +1,5 @@
-﻿namespace Frank.Libraries.Gaming.Starfinder.Combat.Ground
+﻿namespace Frank.Libraries.Gaming.Starfinder.Combat.Ground;
+
+public class Square
 {
-    public class Square
-    {
-    }
 }

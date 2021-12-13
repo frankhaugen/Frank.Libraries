@@ -1,6 +1,5 @@
-﻿namespace Frank.Libraries.Gaming.Starfinder.Combat.Space
+﻿namespace Frank.Libraries.Gaming.Starfinder.Combat.Space;
+
+public class HexGrid
 {
-    public class HexGrid
-    {
-    }
 }
