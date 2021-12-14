@@ -13,22 +13,21 @@ namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
             var writer = new CodegenTextWriter();
             writer.WriteLine($"using System;");
             writer.WriteLine($" ");
-            writer.WithCurlyBraces($"namespace {namespaceName}", () =>
-            {
-                writer.WithCurlyBraces($"public static class {className}", () =>
-                {
-                    foreach (var type in Types)
-                    {
-                        writer.WriteLine($"// {type.ToTitleCase()} ");
-                        foreach (var conversion in Conversions.Where(x => x.Key != type))
-                        {
-                            writer.WriteLine($"public static {conversion.Key} To{conversion.Key.ToTitleCase()}(this {type} source) => Convert.{conversion.Value}(source);");
-                        }
+            writer.WriteLine($"namespace {namespaceName};");
+            writer.WriteLine(" ");
+            writer.WithCurlyBraces($"public static class {className}", () =>
+                            {
+                                foreach (var type in Types)
+                                {
+                                    writer.WriteLine($"// {type.ToTitleCase()} ");
+                                    foreach (var (key, value) in Conversions.Where(x => x.Key != type))
+                                    {
+                                        writer.WriteLine($"public static {key} To{key.ToTitleCase()}(this {type} source) => Convert.{value}(source);");
+                                    }
 
-                        writer.WriteLine("");
-                    }
-                });
-            });
+                                    writer.WriteLine("");
+                                }
+                            });
 
             return writer.GetContents();
         }

@@ -14,20 +14,19 @@ namespace Frank.Libraries.CodeGeneration.Generators
 
         public string Generate(string namespaceName, string className)
         {
-            var w = new CodegenTextWriter();
+            var writer = new CodegenTextWriter();
 
-            w.WithCurlyBraces($"namespace {namespaceName.ToNameCase()}", () =>
-            {
-                w.WithCurlyBraces($"public static class {className.ToNameCase()}", () =>
+            writer.WriteLine($"namespace {namespaceName};");
+            writer.WriteLine(" ");
+            writer.WithCurlyBraces($"public static class {className.ToNameCase()}", () =>
                 {
                     foreach (var resource in _resources)
                     {
-                        w.WriteLine($"public const string {resource.Key.ToNameCase()} = \"{resource.Value}\";");
+                        writer.WriteLine($"public const string {resource.Key.ToNameCase()} = \"{resource.Value}\";");
                     }
                 });
-            });
 
-            return w.GetContents();
+            return writer.GetContents();
         }
     }
 }

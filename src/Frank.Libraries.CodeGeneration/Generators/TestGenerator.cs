@@ -14,7 +14,7 @@ namespace Frank.Libraries.CodeGeneration.Generators
 
         public string Generate(string namespaceName, Type type)
         {
-            var w = new CodegenTextWriter();
+            var writer = new CodegenTextWriter();
             var constructors = type.GetConstructors();
             var constructorParameters = new List<ParameterInfo>();
 
@@ -23,58 +23,64 @@ namespace Frank.Libraries.CodeGeneration.Generators
                 constructors.First().GetParameters().DoForEach(x => constructorParameters.Add(x));
             }
 
-            w.WriteLine($"using {type.Namespace};");
-            w.WriteLine($"using System.Threading.Tasks;");
-            w.WriteLine($"using Xunit;");
-            w.WriteLine($"using Xunit.Abstractions;");
-            w.WriteLine($"using FluentAssertions;");
-            w.WriteLine($"using NSubstitute;");
-            w.WriteLine($"using Frank.Libraries.Extensions;");
+            writer.WriteLine($"using {type.Namespace};");
+            writer.WriteLine($"using System.Threading.Tasks;");
+            writer.WriteLine($"using Xunit;");
+            writer.WriteLine($"using Xunit.Abstractions;");
+            writer.WriteLine($"using FluentAssertions;");
+            writer.WriteLine($"using NSubstitute;");
+            writer.WriteLine($"using Frank.Libraries.Extensions;");
 
-            constructorParameters.DoForEach(x => w.WriteLine($"using {x.GetType().Namespace};"));
+            constructorParameters.DoForEach(x => writer.WriteLine($"using {x.GetType().Namespace};"));
 
-            w.Write(w.NewLine);
-            w.WithCurlyBraces($"namespace {namespaceName}", () =>
-            {
-                w.WithCurlyBraces($"public class {type.Name}Tests", () =>
-                {
-                    constructorParameters.DoForEach(x => w.WriteLine($"private readonly {x.GetType().Name} _{x.GetType().Name.ToCamelcase()} = Substitue.For<{x.GetType().Name}>;"));
+            writer.Write(writer.NewLine);
+            writer.WriteLine($"namespace {namespaceName};");
+            writer.WriteLine(" ");
+            writer.WithCurlyBraces($"public class {type.Name}Tests", () =>
+                            {
+                                constructorParameters.DoForEach(x => writer.WriteLine($"private readonly {x.GetType().Name} _{x.GetType().Name.ToCamelcase()} = Substitue.For<{x.GetType().Name}>;"));
 
-                    w.WriteLine($"private readonly ITestOutputHelper _outputHelper;");
-                    w.Write(w.NewLine);
-                    w.WriteLine($"private readonly {type.Name} _sut{type.Name};");
-                    w.Write(w.NewLine);
+                                writer.WriteLine($"private readonly ITestOutputHelper _outputHelper;");
+                                writer.Write(writer.NewLine);
+                                if (!type.IsAbstract && !type.IsSealed)
+                                {
+                                    writer.WriteLine($"private readonly {type.Name} _sut{type.Name};");
+                                }
+                                writer.Write(writer.NewLine);
 
-                    w.WithCurlyBraces($"public {type.Name}Tests(ITestOutputHelper outputHelper)", () =>
-                    {
-                        w.WriteLine($"_outputHelper = outputHelper;");
-                        w.WriteLine($"_sut{type.Name} = new {type.Name}();");
-                    });
+                                writer.WithCurlyBraces($"public {type.Name}Tests(ITestOutputHelper outputHelper)", () =>
+                                {
+                                    writer.WriteLine($"_outputHelper = outputHelper;");
 
-                    foreach (var method in type.GetMethods())
-                    {
-                        if (method.IsPrivate)
-                        {
-                            continue;
-                        }
-                        if (method.IsDefined(typeof(ExtensionAttribute)))
-                        {
-                            SetupExtensionMethodTest(w, method);
-                        }
-                        else
-                        {
-                            SetupInstanceMethodTest(w, type, method);
-                        }
-                    }
-                });
-            });
+                                    if (!type.IsAbstract && !type.IsSealed)
+                                    {
+                                        writer.WriteLine($"_sut{type.Name} = new {type.Name}();");
+                                    }
+                                });
 
-            return w.GetContents();
+                                foreach (var method in type.GetMethods())
+                                {
+                                    if (method.IsPrivate)
+                                    {
+                                        continue;
+                                    }
+                                    if (method.IsDefined(typeof(ExtensionAttribute)))
+                                    {
+                                        SetupExtensionMethodTest(writer, method);
+                                    }
+                                    else
+                                    {
+                                        SetupInstanceMethodTest(writer, type, method);
+                                    }
+                                }
+                            });
+
+            return writer.GetContents();
         }
 
         private void SetupExtensionMethodTest(CodegenTextWriter w, MethodInfo method)
         {
-            w.WriteLine(w.NewLine);
+            w.Write(w.NewLine);
             w.WriteLine($"[Fact]");
             w.WithCurlyBraces($"public async Task {method.Name}Test()", () =>
             {
@@ -101,7 +107,7 @@ namespace Frank.Libraries.CodeGeneration.Generators
 
         private void SetupInstanceMethodTest(CodegenTextWriter w, Type type, MethodInfo method)
         {
-            w.WriteLine(w.NewLine);
+            w.Write(w.NewLine);
             w.WriteLine($"[Fact]");
             w.WithCurlyBraces($"public async Task {method.Name}Test()", () =>
             {

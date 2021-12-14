@@ -18,9 +18,9 @@ namespace Frank.Libraries.Tests.CodeGeneration
         }
 
         [Theory]
-        [InlineData(typeof(FluentCalculatorBasicOperationsGenerator), false)]
-        [InlineData(typeof(FluentCalculatorExponentialOperationsGenerator), false)]
-        [InlineData(typeof(FluentCalculatorPrimitivesConversionsGenerator), false)]
+        [InlineData(typeof(FluentCalculatorBasicOperationsGenerator), true)]
+        [InlineData(typeof(FluentCalculatorExponentialOperationsGenerator), true)]
+        [InlineData(typeof(FluentCalculatorPrimitivesConversionsGenerator), true)]
         public void Generate(Type generatorType, bool createFile)
         {
             // Arrange
@@ -33,9 +33,7 @@ namespace Frank.Libraries.Tests.CodeGeneration
 
             // Assert
             Output(result);
-            if (createFile)
-                Output(new FileInfo(Path.Combine(SolutionDirectory()
-                                                     .FullName, RootNamespace, Namespace, $"{className}.cs")), result);
+            if (createFile) Output(new FileInfo(Path.Combine(SolutionDirectory().FullName, RootNamespace, Namespace, $"{className}.cs")), result);
         }
     }
 }

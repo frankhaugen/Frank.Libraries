@@ -7,7 +7,7 @@ namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
     {
         public string Generate(string namespaceName, string className)
         {
-            var w = new CodegenTextWriter();
+            var writer = new CodegenTextWriter();
 
             var typesOverride = new List<string>
             {
@@ -16,30 +16,29 @@ namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
                 "long"
             };
 
-            w.WithCurlyBraces($"namespace {namespaceName}", () =>
+            writer.WriteLine($"namespace {namespaceName};");
+            writer.WriteLine(" ");
+            writer.WithCurlyBraces($"public static class {className}", () =>
             {
-                w.WithCurlyBraces($"public static class {className}", () =>
+                foreach (var @operator in Operators)
                 {
-                    foreach (var @operator in Operators)
+                    writer.WriteLine($"// {@operator.Key} ");
+                    foreach (var type in Types)
                     {
-                        w.WriteLine($"// {@operator.Key} ");
-                        foreach (var type in Types)
+                        var returnType = type;
+                        if (@operator.Key == Operator.Divide && typesOverride.Contains(type)) returnType = "decimal";
+                        else
                         {
-                            var returnType = type;
-                            if (@operator.Key == Operator.Divide && typesOverride.Contains(type)) returnType = "decimal";
-                            else
-                            {
-                            }
-
-                            w.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
                         }
 
-                        w.WriteLine(" ");
+                        writer.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
                     }
-                });
+
+                    writer.WriteLine(" ");
+                }
             });
 
-            return w.GetContents();
+            return writer.GetContents();
         }
 
         private static List<string> Types => new()

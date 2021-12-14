@@ -1,6 +1,5 @@
 using System.Globalization;
 using CodegenCS;
-using Frank.Libraries.CodeGeneration.Extensions;
 using MoreLinq.Extensions;
 
 namespace Frank.Libraries.CodeGeneration.Generators.Enums
@@ -17,9 +16,9 @@ namespace Frank.Libraries.CodeGeneration.Generators.Enums
             writer.WriteLine(" // ReSharper disable InconsistentNaming");
             writer.WriteLine(" ");
 
-            writer.WithCurlyBraces($"namespace {namespaceName.ToNameCase()}", () =>
-            {
-                writer.WithCurlyBraces($"public enum {className}", () =>
+            writer.WriteLine($"namespace {namespaceName};");
+            writer.WriteLine(" ");
+            writer.WithCurlyBraces($"public enum {className}", () =>
                 {
                     foreach (var culture in cultures)
                     {
@@ -29,7 +28,6 @@ namespace Frank.Libraries.CodeGeneration.Generators.Enums
                         writer.WriteLine();
                     }
                 });
-            });
 
             return writer.GetContents();
         }

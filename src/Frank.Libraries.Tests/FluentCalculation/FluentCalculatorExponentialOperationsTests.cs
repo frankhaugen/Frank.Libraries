@@ -1,4 +1,5 @@
-﻿using Frank.Libraries.Calculators.FluentCalculation;
+﻿using FluentAssertions;
+using Frank.Libraries.Calculators.FluentCalculation;
 using Frank.Libraries.Tests.TestingInfrastructure;
 using Xunit;
 using Xunit.Abstractions;
@@ -7,17 +8,19 @@ namespace Frank.Libraries.Tests.FluentCalculation
 {
     public class FluentCalculatorExponentialOperationsTests : TestBase
     {
-        [Fact]
-        public void Pow_StateUnderTest_ExpectedBehavior()
+        [Theory]
+        [InlineData(3, 2, 9)]
+        [InlineData(2, 4, 16)]
+        public void Pow_StateUnderTest_ExpectedBehavior(int source, int value, int expected)
         {
             // Arrange
-            int source = 0;
-            int value = 0;
 
             // Act
             var result = source.Pow(value);
 
             // Assert
+            result.Should()
+                  .Be(expected);
             Output(result);
         }
 
@@ -25,12 +28,14 @@ namespace Frank.Libraries.Tests.FluentCalculation
         public void Sqrt_StateUnderTest_ExpectedBehavior()
         {
             // Arrange
-            int source = 0;
+            var source = 9;
 
             // Act
             var result = source.Sqrt();
 
             // Assert
+            result.Should()
+                  .Be(3);
             Output(result);
         }
 
@@ -39,7 +44,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         {
             // Arrange
             uint source = 0;
-            int value = 0;
+            var value = 0;
 
             // Act
             var result = source.Pow(value);
@@ -66,7 +71,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         {
             // Arrange
             short source = 0;
-            int value = 0;
+            var value = 0;
 
             // Act
             var result = source.Pow(value);
@@ -93,7 +98,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         {
             // Arrange
             ushort source = 0;
-            int value = 0;
+            var value = 0;
 
             // Act
             var result = source.Pow(value);
@@ -120,7 +125,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         {
             // Arrange
             long source = 0;
-            int value = 0;
+            var value = 0;
 
             // Act
             var result = source.Pow(value);
@@ -147,7 +152,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         {
             // Arrange
             ulong source = 0;
-            int value = 0;
+            var value = 0;
 
             // Act
             var result = source.Pow(value);
@@ -174,7 +179,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         {
             // Arrange
             float source = 0;
-            int value = 0;
+            var value = 0;
 
             // Act
             var result = source.Pow(value);
@@ -201,7 +206,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         {
             // Arrange
             double source = 0;
-            int value = 0;
+            var value = 0;
 
             // Act
             var result = source.Pow(value);
@@ -228,7 +233,7 @@ namespace Frank.Libraries.Tests.FluentCalculation
         {
             // Arrange
             decimal source = 0;
-            int value = 0;
+            var value = 0;
 
             // Act
             var result = source.Pow(value);
