@@ -32,6 +32,20 @@ namespace Frank.Libraries.Tests.Currencies
             _outputHelper.WriteLine(result.ToJson());
         }
 
+        [Fact]
+        public async Task GetLatestRatesAsDictionary_UsingDefaults_ShouldSucceed()
+        {
+            // Act
+            var result = await _currencyClient.GetLatestRates();
+
+            // Assert
+            result.Should()
+                  .NotBeNull();
+            result.Success.Should()
+                  .BeTrue();
+            _outputHelper.WriteLine(result.Rates.GetRates().ToJson());
+        }
+
         //[Fact]
         public async Task Convert_UsingDefaults_ShouldReturnOne()
         {

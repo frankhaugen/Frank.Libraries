@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -98,7 +100,7 @@ namespace Frank.Libraries.Currency
 
         [JsonPropertyName("ETB")] public decimal ETB { get; set; }
 
-        [JsonPropertyName("EUR")] public int EUR { get; set; }
+        [JsonPropertyName("EUR")] public decimal EUR { get; set; }
 
         [JsonPropertyName("FJD")] public decimal FJD { get; set; }
 
@@ -345,19 +347,27 @@ namespace Frank.Libraries.Currency
         public decimal GetRate(CurrencyCode currencyCode = CurrencyCode.EUR)
         {
             decimal? value = decimal.Zero;
-            //var property = GetType().GetRuntimeProperties().Single(prop => prop.GetCustomAttribute<JsonPropertyNameAttribute>()!.Name.Equals(currencyCode.ToString(), StringComparison.InvariantCultureIgnoreCase));
-            var property = this.GetType()
-                               .GetProperty(currencyCode.ToString());
+            var property = this.GetType().GetProperty(currencyCode.ToString());
+            if (property != null) throw new ArgumentException(JsonSerializer.Serialize(property.GetValue(value.Value)));
+            return value.Value;
+        }
 
-            if (property != null)
+        public Dictionary<CurrencyCode, decimal> GetRates()
+        {
+            var output = new Dictionary<CurrencyCode, decimal>();
+            var properties = this.GetType().GetProperties().Where(x => x.PropertyType.FullName == typeof(decimal).FullName);
+
+            foreach (var property in properties)
             {
-                throw new ArgumentException(JsonSerializer.Serialize(property.GetValue(value.Value)));
+                var currencyCode = Enum.Parse<CurrencyCode>(property.Name);
+                var rate = property.GetValue(this) is decimal
+                    ? (decimal)property.GetValue(this)
+                    : decimal.MinValue;
+
+                output.Add(currencyCode, rate);
             }
 
-            var constantValue = property.GetValue(typeof(decimal), null);
-
-            //.GetValue(value);
-            return value.Value;
+            return output;
         }
     }
 }

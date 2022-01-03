@@ -1,5 +1,6 @@
+using System;
 using FluentAssertions;
-using Frank.Libraries.Extensions;
+using Frank.Libraries.Calculators.FluentCalculation;
 using Xunit;
 
 namespace Frank.Libraries.Tests.Extensions
@@ -43,17 +44,18 @@ namespace Frank.Libraries.Tests.Extensions
         [Theory]
         [InlineData(2.0, 2)]
         [InlineData(2.1, 2)]
-        [InlineData(2.5, 3)]
+        [InlineData(2.5, 2)]
+        [InlineData(2.55, 3)]
+        [InlineData(2.50000000001, 3)]
         public void ToInteger(decimal value, int expected)
         {
             // Arrange
 
             // Act
-            var result = value.ToInteger();
+            var result = value.ToInt();
 
             // Assert
-            result.Should()
-                  .Be(expected);
+            result.Should().Be(expected);
         }
 
         [Theory]
@@ -65,7 +67,7 @@ namespace Frank.Libraries.Tests.Extensions
             // Arrange
 
             // Act
-            var result = value.ToPowerOf(powerOf);
+            var result = value.Pow(powerOf);
 
             // Assert
             result.Should()

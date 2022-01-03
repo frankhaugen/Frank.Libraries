@@ -21,9 +21,11 @@ string** | UUID are represented as 32 hexadecimal (base-16) digits, displayed in
 **Lines** | [**List&lt;InvoiceLineResult&gt;**](InvoiceLineResult.md) |  | [optional]
 **Currency** | **string** | ISO 4217 currency code, default value is NOK | [optional] [default to "NOK"]
 **ContactId** | [****](.md) | Contact associated with offer. | [optional]
+
 **
-ContactPersonId** | [****](.md) | Contact person associated with offer. Must belong to the provided contact. | [optional]
-**ProjectId** | [****](.md) |  | [optional]
+ContactPersonId** | [****](.md) | Contact person associated with offer. Must belong to the provided contact.
+| [optional]
+**ProjectId** | [****](.md) | | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Frank.Libraries.CodeGeneration.Extensions
 {
@@ -9,6 +10,13 @@ namespace Frank.Libraries.CodeGeneration.Extensions
         {
             source.AddRange(values);
             return source;
+        }
+
+        public static void AddUnique<T>(this List<T> source, T value)
+        {
+            if (source.Select(x => x.GetHashCode())
+                      .Contains(value.GetHashCode())) return;
+            source.Add(value);
         }
 
         public static List<T> TryAdd<T>(this List<T> source, T value)

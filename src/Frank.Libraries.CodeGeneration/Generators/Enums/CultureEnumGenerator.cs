@@ -19,15 +19,15 @@ namespace Frank.Libraries.CodeGeneration.Generators.Enums
             writer.WriteLine($"namespace {namespaceName};");
             writer.WriteLine(" ");
             writer.WithCurlyBraces($"public enum {className}", () =>
+            {
+                foreach (var culture in cultures)
                 {
-                    foreach (var culture in cultures)
-                    {
-                        writer.WriteLine($"/// <summary> {culture.EnglishName} </summary>");
-                        writer.WriteLine($"[Description(\"{culture.EnglishName}\")]");
-                        writer.WriteLine($"{culture.TwoLetterISOLanguageName.ToUpperInvariant()},");
-                        writer.WriteLine();
-                    }
-                });
+                    writer.WriteLine($"/// <summary> {culture.EnglishName} </summary>");
+                    writer.WriteLine($"[Description(\"{culture.EnglishName}\")]");
+                    writer.WriteLine($"{culture.TwoLetterISOLanguageName.ToUpperInvariant()},");
+                    writer.WriteLine();
+                }
+            });
 
             return writer.GetContents();
         }

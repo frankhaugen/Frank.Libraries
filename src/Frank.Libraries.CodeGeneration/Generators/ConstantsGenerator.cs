@@ -19,12 +19,12 @@ namespace Frank.Libraries.CodeGeneration.Generators
             writer.WriteLine($"namespace {namespaceName};");
             writer.WriteLine(" ");
             writer.WithCurlyBraces($"public static class {className.ToNameCase()}", () =>
+            {
+                foreach (var resource in _resources)
                 {
-                    foreach (var resource in _resources)
-                    {
-                        writer.WriteLine($"public const string {resource.Key.ToNameCase()} = \"{resource.Value}\";");
-                    }
-                });
+                    writer.WriteLine($"public const string {resource.Key.ToNameCase()} = \"{resource.Value}\";");
+                }
+            });
 
             return writer.GetContents();
         }

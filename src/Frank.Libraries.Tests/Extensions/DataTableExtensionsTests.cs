@@ -2,7 +2,6 @@
 using System.Linq;
 using AutoBogus;
 using Bogus;
-using ConsoleTableExt;
 using FluentAssertions;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
@@ -49,9 +48,7 @@ namespace Frank.Libraries.Tests.Extensions
 
             // Act
             var result = dataTable.Pivot(dataTable.Columns[1], dataTable.Columns[3]);
-            var consoleTable = ConsoleTableBuilder.From(result);
-            _outputHelper.WriteLine(consoleTable.Export()
-                                                .ToString());
+            _outputHelper.WriteTable(result.ToEnumerable<Currency.Currency>());
 
             // Assert
             _faker.Name.Locale.Should()

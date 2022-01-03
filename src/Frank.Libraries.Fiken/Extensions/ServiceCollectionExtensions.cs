@@ -1,4 +1,3 @@
-using Frank.Libraries.Fiken.Client;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +11,7 @@ public static class ServiceCollectionExtensions
         // services.AddTransient();
 
 
-        services.ConfigureOptions<Configuration>();
+        services.ConfigureOptions<FikenConfiguration>();
         return services;
 
     }

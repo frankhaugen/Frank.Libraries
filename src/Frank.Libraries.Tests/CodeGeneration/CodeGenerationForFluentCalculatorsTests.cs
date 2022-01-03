@@ -18,9 +18,9 @@ namespace Frank.Libraries.Tests.CodeGeneration
         }
 
         [Theory]
-        [InlineData(typeof(FluentCalculatorBasicOperationsGenerator), true)]
-        [InlineData(typeof(FluentCalculatorExponentialOperationsGenerator), true)]
-        [InlineData(typeof(FluentCalculatorPrimitivesConversionsGenerator), true)]
+        [InlineData(typeof(FluentCalculatorBasicOperationsGenerator), false)]
+        [InlineData(typeof(FluentCalculatorExponentialOperationsGenerator), false)]
+        [InlineData(typeof(FluentCalculatorPrimitivesConversionsGenerator), false)]
         public void Generate(Type generatorType, bool createFile)
         {
             // Arrange

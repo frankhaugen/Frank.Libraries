@@ -31,6 +31,7 @@ namespace Frank.Libraries.CodeGeneration.Extensions
                 {
                     continue;
                 }
+
                 action.Invoke(value);
             }
 
