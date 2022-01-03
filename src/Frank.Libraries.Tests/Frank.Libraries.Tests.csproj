@@ -19,6 +19,7 @@
         <PackageReference Include="Divergic.Logging.Xunit" Version="3.6.0" />
         <PackageReference Include="EntityFrameworkCoreMock.NSubstitute" Version="2.3.0" />
         <PackageReference Include="FluentAssertions" Version="6.2.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="2.10.0" />
         <PackageReference Include="Microsoft.CodeCoverage" Version="17.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
         <PackageReference Include="Mongo2Go" Version="3.1.3" />
