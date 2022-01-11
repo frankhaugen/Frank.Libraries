@@ -101,7 +101,7 @@ public class XkcdClientTests
         var root = syntaxTree.GetRoot() as CompilationUnitSyntax;
         var namespaceSyntax = root.Members.OfType<NamespaceDeclarationSyntax>().First();
         var classes = namespaceSyntax.Members.OfType<ClassDeclarationSyntax>();
-        var records = namespaceSyntax.Members.OfType<RecordDeclarationSyntax>();
+        var records = namespaceSyntax.Members.OfType<Microsoft.CodeAnalysis.CSharp.Syntax.RecordDeclarationSyntax>();
         var enums = namespaceSyntax.Members.OfType<EnumDeclarationSyntax>();
 
         //var classesDictionary = classes.ToDictionary(x => x.Identifier.ToString(), x => x);

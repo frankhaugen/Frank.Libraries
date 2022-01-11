@@ -21,5 +21,25 @@ public static class Frames
                                      new List<ExpansionBay>(),
                                      1,
                                      1,
+                                     -1,
+                                     4,
                                      4);
+    public static Frame Explorer => new(FrameName.Explorer,
+                                     ShipSize.Medium,
+                                     Maneuverability.Good,
+                                     55,
+                                     10,
+                                     new List<Mount>
+                                     {
+                                         new(Arc.Forward,
+                                             ShipWeaponSize.Light),
+                                         new(Arc.Aft,
+                                             ShipWeaponSize.Light)
+                                     },
+                                     new List<ExpansionBay>(),
+                                     1,
+                                     1,
+                                     -1,
+                                     11,
+                                     12);
 }

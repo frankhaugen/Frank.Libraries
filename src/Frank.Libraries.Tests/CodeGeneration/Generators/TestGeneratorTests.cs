@@ -7,6 +7,7 @@ using Frank.Libraries.Calculators.FluentCalculation;
 using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Fiken.Clients;
+using Frank.Libraries.Gaming.Starfinder;
 using Frank.Libraries.Internet.Xkcd;
 using Xunit;
 using Xunit.Abstractions;
@@ -31,6 +32,7 @@ public class TestGeneratorTests
     [InlineData(typeof(UserClient), false)]
     [InlineData(typeof(CompaniesClient), false)]
     [InlineData(typeof(XkcdClient), false)]
+    [InlineData(typeof(StarshipController), false)]
     public async Task RunTestGenerator(Type type, bool writeFile)
     {
         var localNamespace = type.Namespace.Replace("Frank.Libraries.", "");
