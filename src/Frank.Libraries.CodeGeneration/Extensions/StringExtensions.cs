@@ -22,7 +22,7 @@ namespace Frank.Libraries.CodeGeneration.Extensions
 
         public static string Remove(this string source, params string[] values)
         {
-            var temp = new string(source);
+            var temp = new string(source.ToCharArray());
             return values.Aggregate(temp, (current, value) => current.Remove(value));
         }
 

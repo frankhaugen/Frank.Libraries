@@ -73,7 +73,7 @@ namespace Frank.Libraries.CodeGeneration.Extensions
 
             if (enumerator.MoveNext())
             {
-                var set = new HashSet<TKey>(7, comparer);
+                var set = new HashSet<TKey>(comparer);
                 do
                 {
                     TSource element = enumerator.Current;

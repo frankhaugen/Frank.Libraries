@@ -20,9 +20,9 @@ namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
                 foreach (var type in Types)
                 {
                     writer.WriteLine($"// {type.ToTitleCase()} ");
-                    foreach (var (key, value) in Conversions.Where(x => x.Key != type))
+                    foreach (var kvp in Conversions.Where(x => x.Key != type).ToList())
                     {
-                        writer.WriteLine($"public static {key} To{key.ToTitleCase()}(this {type} source) => Convert.{value}(source);");
+                        writer.WriteLine($"public static {kvp.Key} To{kvp.Key.ToTitleCase()}(this {type} source) => Convert.{kvp.Value}(source);");
                     }
 
                     writer.WriteLine("");
