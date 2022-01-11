@@ -44,7 +44,7 @@ namespace Frank.Libraries.CodeGeneration.Generators
             }
 
             constructorParameters.DoForEach(x => namespaces.AddUnique(x.GetType().Namespace));
-            Enumerable.DistinctBy(types, x => x.Name).DoForEach(x => namespaces.AddUnique(x.Namespace));
+            types.Distinct(x => x.Name).DoForEach(x => namespaces.AddUnique(x.Namespace));
 
             namespaces.Where(x => !string.IsNullOrWhiteSpace(x)).OrderBy(x => x).ForEach(x => writer.WriteLine($"using {x};"));
 

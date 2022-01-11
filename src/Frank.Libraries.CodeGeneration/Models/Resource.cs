@@ -8,7 +8,7 @@
             Value = value;
         }
 
-        public string Key { get; init; }
-        public string Value { get; init; }
+        public string Key { get; }
+        public string Value { get; }
     }
 }
