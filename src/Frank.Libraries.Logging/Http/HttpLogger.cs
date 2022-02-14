@@ -1,20 +1,20 @@
 using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Frank.Libraries.Logging.Shared;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using RestSharp;
 
-namespace Frank.Libraries.Logging.EntityFramework
+namespace Frank.Libraries.Logging.Http
 {
-    public class EntityFrameworkLogger<TContext> : ILogger
-        where TContext : DbContext
+    public class HttpLogger : ILogger
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly string _name;
-        private readonly EntityFrameworkLoggerConfiguration _configuration;
+        private readonly HttpLoggerConfiguration _configuration;
 
-        public EntityFrameworkLogger(IServiceProvider serviceProvider, EntityFrameworkLoggerConfiguration configuration, string name)
+        public HttpLogger(IServiceProvider serviceProvider, HttpLoggerConfiguration configuration, string name)
         {
             _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
             _configuration = configuration;
@@ -30,13 +30,8 @@ namespace Frank.Libraries.Logging.EntityFramework
             try
             {
                 using var scope = _serviceProvider.CreateScope();
-                var context = scope.ServiceProvider.GetRequiredService<TContext>();
-
-                Task.Run(() =>
-                {
-                    context.Set<Log>().Add(log);
-                    context.SaveChanges();
-                });
+                var client = scope.ServiceProvider.GetRequiredService<RestClient>();
+                // Task.Run(() => client.Request().SendJsonAsync(HttpMethod.Post, log).GetAwaiter().GetResult());
             }
             catch
             {

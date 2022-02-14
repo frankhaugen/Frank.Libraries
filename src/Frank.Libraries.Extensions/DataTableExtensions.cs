@@ -18,7 +18,7 @@ namespace Frank.Libraries.Extensions
                 {
                     foreach (var property in typeof(T).GetProperties())
                     {
-                        if (property.Name == column.ColumnName)
+                        if (property.Name == column.ColumnName && property.PropertyType == column.DataType)
                             property.SetValue(item, row[column.ColumnName], null);
                     }
                 }

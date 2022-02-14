@@ -17,9 +17,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
 		.editorconfig = .editorconfig
+		..\.gitignore = ..\.gitignore
 		CodeMaid.config = CodeMaid.config
 		icon.png = icon.png
-		..\.gitignore = ..\.gitignore
 		..\LICENSE = ..\LICENSE
 		..\README.md = ..\README.md
 	EndProjectSection
@@ -64,11 +64,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Gaming", "F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Machine", "Frank.Libraries.Machine\Frank.Libraries.Machine.csproj", "{0AFA4405-2899-46A8-BC3F-EA62D32C2E1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Tests.Benchmark", "Frank.Libraries.Tests.Benchmark\Frank.Libraries.Tests.Benchmark.csproj", "{ED76EA07-6ED5-483D-8B64-820683B17729}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Tests.Benchmark", "Frank.Libraries.Tests.Benchmark\Frank.Libraries.Tests.Benchmark.csproj", "{ED76EA07-6ED5-483D-8B64-820683B17729}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.ML", "Frank.Libraries.ML\Frank.Libraries.ML.csproj", "{C7D95057-2095-411B-A6F1-6B813585D56A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.ML", "Frank.Libraries.ML\Frank.Libraries.ML.csproj", "{C7D95057-2095-411B-A6F1-6B813585D56A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Fiken", "Frank.Libraries.Fiken\Frank.Libraries.Fiken.csproj", "{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Frank.Libraries.Fiken", "Frank.Libraries.Fiken\Frank.Libraries.Fiken.csproj", "{FE8CFA4C-BDAC-49DA-9C74-549393ACE798}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

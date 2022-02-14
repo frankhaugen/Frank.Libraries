@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using HidSharp;
+using LibreHardwareMonitor.Hardware;
+using LibreHardwareMonitor.Hardware.CPU;
 using NodaTime;
 
 namespace Frank.Libraries.Machine
@@ -33,6 +35,7 @@ namespace Frank.Libraries.Machine
 
         public DateTimeOffset GetSystemTime() => SystemClock.Instance.GetCurrentInstant()
                                                             .ToDateTimeOffset();
+
     }
 
     public class DeviceInfo

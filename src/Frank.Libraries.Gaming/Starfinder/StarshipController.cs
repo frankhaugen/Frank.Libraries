@@ -8,14 +8,18 @@ using Frank.Libraries.Gaming.Starfinder.Space.Models.Enums;
 
 namespace Frank.Libraries.Gaming.Starfinder;
 
-public class StarshipController
+public class CharacterSheet
+{
+
+}
+public class StarshipSheet
 {
     private readonly Starship _ship;
     private Dictionary<Arc, int> _shields;
     private Dictionary<Arc, Dictionary<int, Mount>> _mounts;
     private int _hullPoints;
 
-    public StarshipController(Starship ship)
+    public StarshipSheet(Starship ship)
     {
         _ship = ship;
         _shields = new Dictionary<Arc, int> { { Arc.Forward, _ship.ShieldGenerator.ShieldPoints }, { Arc.Starboard, _ship.ShieldGenerator.ShieldPoints }, { Arc.Aft, _ship.ShieldGenerator.ShieldPoints }, { Arc.Port, _ship.ShieldGenerator.ShieldPoints } };

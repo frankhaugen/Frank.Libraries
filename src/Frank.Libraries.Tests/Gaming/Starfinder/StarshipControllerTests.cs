@@ -22,10 +22,10 @@ public class StarshipControllerTests
     public StarshipControllerTests(ITestOutputHelper outputHelper)
     {
         _outputHelper = outputHelper;
-        _sutStarshipController = new StarshipController(_starship);
+        _sutStarshipController = new StarshipSheet(_starship);
     }
 
-    private readonly StarshipController _sutStarshipController;
+    private readonly StarshipSheet _sutStarshipController;
 
 
     // [Fact]

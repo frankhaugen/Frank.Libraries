@@ -16,7 +16,7 @@ namespace Frank.Libraries.Tests.Internet.Wikipedia
             _outputHelper = outputHelper;
         }
 
-        [Fact]
+        // [Fact]
         public async Task GetSummary_StateUnderTest_ExpectedBehavior()
         {
             // Arrange

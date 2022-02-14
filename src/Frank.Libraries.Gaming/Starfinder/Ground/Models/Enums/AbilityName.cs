@@ -6,5 +6,6 @@ public enum AbilityName
     Dexterity,
     Constitution,
     Intelligence,
+    Wisdom,
     Charisma
 }

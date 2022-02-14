@@ -31,8 +31,8 @@ public class TestGeneratorTests
     [InlineData(typeof(AccountsClient), false)]
     [InlineData(typeof(UserClient), false)]
     [InlineData(typeof(CompaniesClient), false)]
-    [InlineData(typeof(XkcdClient), false)]
-    [InlineData(typeof(StarshipController), false)]
+    // [InlineData(typeof(XkcdClient), false)]
+    [InlineData(typeof(StarshipSheet), false)]
     public async Task RunTestGenerator(Type type, bool writeFile)
     {
         var localNamespace = type.Namespace.Replace("Frank.Libraries.", "");

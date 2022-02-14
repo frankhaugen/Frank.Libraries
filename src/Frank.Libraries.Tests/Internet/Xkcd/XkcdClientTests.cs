@@ -160,7 +160,7 @@ public class XkcdClientTests
         }
     }
 
-    [Fact]
+    // [Fact]
     public async Task GetComicTest()
     {
         // Arrange
@@ -174,7 +174,7 @@ public class XkcdClientTests
         result.ToString().Should().NotBeNullOrEmpty();
     }
 
-    [Fact]
+    // [Fact]
     public async Task GetComicImageTest()
     {
         // Arrange

@@ -7,9 +7,9 @@ namespace Frank.Libraries.Internet.Wikipedia
 {
     public class WikipediaClient : IWikipediaClient
     {
-        private readonly IRestClient _restClient;
+        private readonly RestClient _restClient;
 
-        public WikipediaClient(IRestClient restClient)
+        public WikipediaClient(RestClient restClient)
         {
             _restClient = restClient;
         }

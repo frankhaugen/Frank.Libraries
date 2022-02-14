@@ -18,7 +18,7 @@ namespace Frank.Libraries.Tests.Currencies
             _currencyClient = new CurrencyClient();
         }
 
-        [Fact]
+        // [Fact]
         public async Task GetLatestRates_UsingDefaults_ShouldSucceed()
         {
             // Act
@@ -32,7 +32,7 @@ namespace Frank.Libraries.Tests.Currencies
             _outputHelper.WriteLine(result.ToJson());
         }
 
-        [Fact]
+        // [Fact]
         public async Task GetLatestRatesAsDictionary_UsingDefaults_ShouldSucceed()
         {
             // Act
