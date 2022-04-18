@@ -29,11 +29,10 @@ namespace Frank.Libraries.Logging.EntityFramework
 
             try
             {
-                using var scope = _serviceProvider.CreateScope();
-                var context = scope.ServiceProvider.GetRequiredService<TContext>();
-
                 Task.Run(() =>
                 {
+                    using var scope = _serviceProvider.CreateScope();
+                    using var context = scope.ServiceProvider.GetRequiredService<TContext>();
                     context.Set<Log>().Add(log);
                     context.SaveChanges();
                 });

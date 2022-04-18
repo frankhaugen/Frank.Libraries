@@ -24,7 +24,7 @@ namespace Frank.Libraries.Logging.Extensions
             return builder;
         }
 
-        public static ILoggingBuilder AddHttpLogger<TContext>(this ILoggingBuilder builder, Action<EntityFrameworkLoggerConfiguration> configuration) where TContext : DbContext
+        public static ILoggingBuilder AddHttpLogger<THttpClient>(this ILoggingBuilder builder, Action<EntityFrameworkLoggerConfiguration> configuration) where THttpClient : IHttpLoggerClient
         {
             if (builder == null)
             {
@@ -37,7 +37,7 @@ namespace Frank.Libraries.Logging.Extensions
             return builder;
         }
 
-        public static ILoggingBuilder AddFileLogger<TContext>(this ILoggingBuilder builder, Action<FileLoggerConfiguration> configuration) where TContext : DbContext
+        public static ILoggingBuilder AddFileLogger(this ILoggingBuilder builder, Action<FileLoggerConfiguration> configuration)
         {
             if (builder == null)
             {

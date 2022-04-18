@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.Json;
 using Frank.Libraries.Logging.Shared;
 using Microsoft.Extensions.Logging;
 
@@ -21,9 +20,9 @@ namespace Frank.Libraries.Logging.File
             if (!IsEnabled(logLevel)) return;
 
             var log = LogHelper.GetLog(_name, logLevel, eventId, state, exception, formatter);
-
-            var line = $"{logLevel}{_configuration.Delimiter}{AppDomain.CurrentDomain.FriendlyName}{_configuration.Delimiter}{formatter(state, exception)}{_configuration.Delimiter}{typeof(TState).Name}{_configuration.Delimiter}{eventId.Id}{_configuration.Delimiter}{eventId.Name}{_configuration.Delimiter}{JsonSerializer.Serialize(exception)}{_configuration.Delimiter}{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss:fff}{_configuration.Delimiter}{_name}";
-            LogFileWriter.WriteString(line, _configuration.GetPath());
+            var d = _configuration.Delimiter;
+            var line = $"{log.Level}{d}{log.ApplicationName}{d}{log.Message}{d}{log.EventId}{d}{eventId.Id}{d}{eventId.Name}{d}{exception.Message}{d}{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss:fff}{d}{_name}";
+            LogFileWriter.WriteString(line.Replace(Environment.NewLine, @"\n"), _configuration.GetPath());
         }
 
         public bool IsEnabled(LogLevel logLevel)

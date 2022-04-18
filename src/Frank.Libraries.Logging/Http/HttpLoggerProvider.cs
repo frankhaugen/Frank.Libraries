@@ -12,7 +12,6 @@ namespace Frank.Libraries.Logging.Http
         public HttpLoggerProvider(IServiceProvider serviceProvider, IOptions<HttpLoggerConfiguration> options)
         {
             _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
-            // FlurlHttp.Configure(settings => settings.HttpClientFactory = new PollyHttpClientFactory());
             _configuration = options.Value;
         }
 

@@ -8,6 +8,11 @@ using RestSharp;
 
 namespace Frank.Libraries.Logging.Http
 {
+    public interface IHttpLoggerClient
+    {
+        void SendLog(Uri endpoint, Log log);
+    }
+
     public class HttpLogger : ILogger
     {
         private readonly IServiceProvider _serviceProvider;
@@ -29,9 +34,12 @@ namespace Frank.Libraries.Logging.Http
 
             try
             {
-                using var scope = _serviceProvider.CreateScope();
-                var client = scope.ServiceProvider.GetRequiredService<RestClient>();
-                // Task.Run(() => client.Request().SendJsonAsync(HttpMethod.Post, log).GetAwaiter().GetResult());
+                Task.Run(() =>
+                {
+                    using var scope = _serviceProvider.CreateScope();
+                    var client = scope.ServiceProvider.GetRequiredService<IHttpLoggerClient>();
+                    client.SendLog(_configuration.Endpoint, log);
+                });
             }
             catch
             {
