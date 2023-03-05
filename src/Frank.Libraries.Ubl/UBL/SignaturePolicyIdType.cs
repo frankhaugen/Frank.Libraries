@@ -1,74 +1,55 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-public partial class SignaturePolicyIdType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+public class SignaturePolicyIdType
 {
+    private DigestAlgAndValueType sigPolicyHashField;
 
     private ObjectIdentifierType sigPolicyIdField;
 
-    private TransformType[] transformsField;
-
-    private DigestAlgAndValueType sigPolicyHashField;
-
     private AnyType[] sigPolicyQualifiersField;
 
-    /// <remarks/>
+    private TransformType[] transformsField;
+
+    /// <remarks />
     public ObjectIdentifierType SigPolicyId
     {
-        get
-        {
-            return this.sigPolicyIdField;
-        }
-        set
-        {
-            this.sigPolicyIdField = value;
-        }
+        get => sigPolicyIdField;
+        set => sigPolicyIdField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-    [System.Xml.Serialization.XmlArrayItemAttribute("Transform", IsNullable = false)]
+    /// <remarks />
+    [XmlArray(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+    [XmlArrayItem("Transform", IsNullable = false)]
     public TransformType[] Transforms
     {
-        get
-        {
-            return this.transformsField;
-        }
-        set
-        {
-            this.transformsField = value;
-        }
+        get => transformsField;
+        set => transformsField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DigestAlgAndValueType SigPolicyHash
     {
-        get
-        {
-            return this.sigPolicyHashField;
-        }
-        set
-        {
-            this.sigPolicyHashField = value;
-        }
+        get => sigPolicyHashField;
+        set => sigPolicyHashField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("SigPolicyQualifier", IsNullable = false)]
+    /// <remarks />
+    [XmlArrayItem("SigPolicyQualifier", IsNullable = false)]
     public AnyType[] SigPolicyQualifiers
     {
-        get
-        {
-            return this.sigPolicyQualifiersField;
-        }
-        set
-        {
-            this.sigPolicyQualifiersField = value;
-        }
+        get => sigPolicyQualifiersField;
+        set => sigPolicyQualifiersField = value;
     }
 }

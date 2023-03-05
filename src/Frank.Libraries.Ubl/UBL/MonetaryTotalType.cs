@@ -1,156 +1,107 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AnticipatedMonetaryTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class MonetaryTotalType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AnticipatedMonetaryTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class MonetaryTotalType
 {
+    private AllowanceTotalAmountType allowanceTotalAmountField;
+
+    private ChargeTotalAmountType chargeTotalAmountField;
 
     private LineExtensionAmountType lineExtensionAmountField;
+
+    private PayableAlternativeAmountType payableAlternativeAmountField;
+
+    private PayableAmountType payableAmountField;
+
+    private PayableRoundingAmountType payableRoundingAmountField;
+
+    private PrepaidAmountType prepaidAmountField;
 
     private TaxExclusiveAmountType taxExclusiveAmountField;
 
     private TaxInclusiveAmountType taxInclusiveAmountField;
 
-    private AllowanceTotalAmountType allowanceTotalAmountField;
-
-    private ChargeTotalAmountType chargeTotalAmountField;
-
-    private PrepaidAmountType prepaidAmountField;
-
-    private PayableRoundingAmountType payableRoundingAmountField;
-
-    private PayableAmountType payableAmountField;
-
-    private PayableAlternativeAmountType payableAlternativeAmountField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineExtensionAmountType LineExtensionAmount
     {
-        get
-        {
-            return this.lineExtensionAmountField;
-        }
-        set
-        {
-            this.lineExtensionAmountField = value;
-        }
+        get => lineExtensionAmountField;
+        set => lineExtensionAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxExclusiveAmountType TaxExclusiveAmount
     {
-        get
-        {
-            return this.taxExclusiveAmountField;
-        }
-        set
-        {
-            this.taxExclusiveAmountField = value;
-        }
+        get => taxExclusiveAmountField;
+        set => taxExclusiveAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxInclusiveAmountType TaxInclusiveAmount
     {
-        get
-        {
-            return this.taxInclusiveAmountField;
-        }
-        set
-        {
-            this.taxInclusiveAmountField = value;
-        }
+        get => taxInclusiveAmountField;
+        set => taxInclusiveAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AllowanceTotalAmountType AllowanceTotalAmount
     {
-        get
-        {
-            return this.allowanceTotalAmountField;
-        }
-        set
-        {
-            this.allowanceTotalAmountField = value;
-        }
+        get => allowanceTotalAmountField;
+        set => allowanceTotalAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ChargeTotalAmountType ChargeTotalAmount
     {
-        get
-        {
-            return this.chargeTotalAmountField;
-        }
-        set
-        {
-            this.chargeTotalAmountField = value;
-        }
+        get => chargeTotalAmountField;
+        set => chargeTotalAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PrepaidAmountType PrepaidAmount
     {
-        get
-        {
-            return this.prepaidAmountField;
-        }
-        set
-        {
-            this.prepaidAmountField = value;
-        }
+        get => prepaidAmountField;
+        set => prepaidAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PayableRoundingAmountType PayableRoundingAmount
     {
-        get
-        {
-            return this.payableRoundingAmountField;
-        }
-        set
-        {
-            this.payableRoundingAmountField = value;
-        }
+        get => payableRoundingAmountField;
+        set => payableRoundingAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PayableAmountType PayableAmount
     {
-        get
-        {
-            return this.payableAmountField;
-        }
-        set
-        {
-            this.payableAmountField = value;
-        }
+        get => payableAmountField;
+        set => payableAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PayableAlternativeAmountType PayableAlternativeAmount
     {
-        get
-        {
-            return this.payableAlternativeAmountField;
-        }
-        set
-        {
-            this.payableAlternativeAmountField = value;
-        }
+        get => payableAlternativeAmountField;
+        set => payableAlternativeAmountField = value;
     }
 }

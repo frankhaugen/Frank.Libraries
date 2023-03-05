@@ -1,77 +1,59 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-[System.Xml.Serialization.XmlRootAttribute("Object", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
-public partial class ObjectType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+[XmlRoot("Object", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
+public class ObjectType
 {
+    private XmlNode[] anyField;
 
-    private System.Xml.XmlNode[] anyField;
+    private string encodingField;
 
     private string idField;
 
     private string mimeTypeField;
 
-    private string encodingField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlTextAttribute()]
-    [System.Xml.Serialization.XmlAnyElementAttribute()]
-    public System.Xml.XmlNode[] Any
+    /// <remarks />
+    [XmlText]
+    [XmlAnyElement]
+    public XmlNode[] Any
     {
-        get
-        {
-            return this.anyField;
-        }
-        set
-        {
-            this.anyField = value;
-        }
+        get => anyField;
+        set => anyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
+    /// <remarks />
+    [XmlAttribute]
     public string MimeType
     {
-        get
-        {
-            return this.mimeTypeField;
-        }
-        set
-        {
-            this.mimeTypeField = value;
-        }
+        get => mimeTypeField;
+        set => mimeTypeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
+    /// <remarks />
+    [XmlAttribute(DataType = "anyURI")]
     public string Encoding
     {
-        get
-        {
-            return this.encodingField;
-        }
-        set
-        {
-            this.encodingField = value;
-        }
+        get => encodingField;
+        set => encodingField = value;
     }
 }

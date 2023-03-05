@@ -1,42 +1,35 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("SPUserNotice", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class SPUserNoticeType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("SPUserNotice", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class SPUserNoticeType
 {
+    private string explicitTextField;
 
     private NoticeReferenceType noticeRefField;
 
-    private string explicitTextField;
-
-    /// <remarks/>
+    /// <remarks />
     public NoticeReferenceType NoticeRef
     {
-        get
-        {
-            return this.noticeRefField;
-        }
-        set
-        {
-            this.noticeRefField = value;
-        }
+        get => noticeRefField;
+        set => noticeRefField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public string ExplicitText
     {
-        get
-        {
-            return this.explicitTextField;
-        }
-        set
-        {
-            this.explicitTextField = value;
-        }
+        get => explicitTextField;
+        set => explicitTextField = value;
     }
 }

@@ -1,186 +1,125 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("QuotationLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class QuotationLineType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("QuotationLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class QuotationLineType
 {
+    private LineItemType[] alternativeLineItemField;
+
+    private DocumentReferenceType[] documentReferenceField;
 
     private IDType idField;
+
+    private LineExtensionAmountType lineExtensionAmountField;
+
+    private LineItemType lineItemField;
 
     private NoteType[] noteField;
 
     private QuantityType2 quantityField;
 
-    private LineExtensionAmountType lineExtensionAmountField;
-
-    private TotalTaxAmountType totalTaxAmountField;
-
     private RequestForQuotationLineIDType requestForQuotationLineIDField;
-
-    private DocumentReferenceType[] documentReferenceField;
-
-    private LineItemType lineItemField;
-
-    private LineItemType[] sellerProposedSubstituteLineItemField;
-
-    private LineItemType[] alternativeLineItemField;
 
     private LineReferenceType requestLineReferenceField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private LineItemType[] sellerProposedSubstituteLineItemField;
+
+    private TotalTaxAmountType totalTaxAmountField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public QuantityType2 Quantity
     {
-        get
-        {
-            return this.quantityField;
-        }
-        set
-        {
-            this.quantityField = value;
-        }
+        get => quantityField;
+        set => quantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineExtensionAmountType LineExtensionAmount
     {
-        get
-        {
-            return this.lineExtensionAmountField;
-        }
-        set
-        {
-            this.lineExtensionAmountField = value;
-        }
+        get => lineExtensionAmountField;
+        set => lineExtensionAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TotalTaxAmountType TotalTaxAmount
     {
-        get
-        {
-            return this.totalTaxAmountField;
-        }
-        set
-        {
-            this.totalTaxAmountField = value;
-        }
+        get => totalTaxAmountField;
+        set => totalTaxAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RequestForQuotationLineIDType RequestForQuotationLineID
     {
-        get
-        {
-            return this.requestForQuotationLineIDField;
-        }
-        set
-        {
-            this.requestForQuotationLineIDField = value;
-        }
+        get => requestForQuotationLineIDField;
+        set => requestForQuotationLineIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
+    /// <remarks />
+    [XmlElement("DocumentReference")]
     public DocumentReferenceType[] DocumentReference
     {
-        get
-        {
-            return this.documentReferenceField;
-        }
-        set
-        {
-            this.documentReferenceField = value;
-        }
+        get => documentReferenceField;
+        set => documentReferenceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LineItemType LineItem
     {
-        get
-        {
-            return this.lineItemField;
-        }
-        set
-        {
-            this.lineItemField = value;
-        }
+        get => lineItemField;
+        set => lineItemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SellerProposedSubstituteLineItem")]
+    /// <remarks />
+    [XmlElement("SellerProposedSubstituteLineItem")]
     public LineItemType[] SellerProposedSubstituteLineItem
     {
-        get
-        {
-            return this.sellerProposedSubstituteLineItemField;
-        }
-        set
-        {
-            this.sellerProposedSubstituteLineItemField = value;
-        }
+        get => sellerProposedSubstituteLineItemField;
+        set => sellerProposedSubstituteLineItemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AlternativeLineItem")]
+    /// <remarks />
+    [XmlElement("AlternativeLineItem")]
     public LineItemType[] AlternativeLineItem
     {
-        get
-        {
-            return this.alternativeLineItemField;
-        }
-        set
-        {
-            this.alternativeLineItemField = value;
-        }
+        get => alternativeLineItemField;
+        set => alternativeLineItemField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LineReferenceType RequestLineReference
     {
-        get
-        {
-            return this.requestLineReferenceField;
-        }
-        set
-        {
-            this.requestLineReferenceField = value;
-        }
+        get => requestLineReferenceField;
+        set => requestLineReferenceField = value;
     }
 }

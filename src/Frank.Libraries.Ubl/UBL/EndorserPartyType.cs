@@ -1,74 +1,55 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("EndorserParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class EndorserPartyType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("EndorserParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class EndorserPartyType
 {
+    private PartyType partyField;
 
     private RoleCodeType roleCodeField;
 
     private SequenceNumericType sequenceNumericField;
 
-    private PartyType partyField;
-
     private ContactType signatoryContactField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RoleCodeType RoleCode
     {
-        get
-        {
-            return this.roleCodeField;
-        }
-        set
-        {
-            this.roleCodeField = value;
-        }
+        get => roleCodeField;
+        set => roleCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SequenceNumericType SequenceNumeric
     {
-        get
-        {
-            return this.sequenceNumericField;
-        }
-        set
-        {
-            this.sequenceNumericField = value;
-        }
+        get => sequenceNumericField;
+        set => sequenceNumericField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType Party
     {
-        get
-        {
-            return this.partyField;
-        }
-        set
-        {
-            this.partyField = value;
-        }
+        get => partyField;
+        set => partyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContactType SignatoryContact
     {
-        get
-        {
-            return this.signatoryContactField;
-        }
-        set
-        {
-            this.signatoryContactField = value;
-        }
+        get => signatoryContactField;
+        set => signatoryContactField = value;
     }
 }

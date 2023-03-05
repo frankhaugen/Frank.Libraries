@@ -1,5 +1,4 @@
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Frank.Libraries.Fiken.Extensions;
@@ -13,6 +12,5 @@ public static class ServiceCollectionExtensions
 
         services.ConfigureOptions<FikenConfiguration>();
         return services;
-
     }
 }

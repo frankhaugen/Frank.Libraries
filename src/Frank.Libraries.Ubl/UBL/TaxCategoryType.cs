@@ -1,14 +1,21 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ApplicableTaxCategory", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TaxCategoryType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ApplicableTaxCategory", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TaxCategoryType
 {
+    private BaseUnitMeasureType baseUnitMeasureField;
 
     private IDType idField;
 
@@ -16,156 +23,94 @@ public partial class TaxCategoryType
 
     private PercentType1 percentField;
 
-    private BaseUnitMeasureType baseUnitMeasureField;
-
     private PerUnitAmountType perUnitAmountField;
 
     private TaxExemptionReasonCodeType taxExemptionReasonCodeField;
 
     private TaxExemptionReasonType[] taxExemptionReasonField;
 
+    private TaxSchemeType taxSchemeField;
+
     private TierRangeType tierRangeField;
 
     private TierRatePercentType tierRatePercentField;
 
-    private TaxSchemeType taxSchemeField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1 Name
     {
-        get
-        {
-            return this.nameField;
-        }
-        set
-        {
-            this.nameField = value;
-        }
+        get => nameField;
+        set => nameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PercentType1 Percent
     {
-        get
-        {
-            return this.percentField;
-        }
-        set
-        {
-            this.percentField = value;
-        }
+        get => percentField;
+        set => percentField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BaseUnitMeasureType BaseUnitMeasure
     {
-        get
-        {
-            return this.baseUnitMeasureField;
-        }
-        set
-        {
-            this.baseUnitMeasureField = value;
-        }
+        get => baseUnitMeasureField;
+        set => baseUnitMeasureField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PerUnitAmountType PerUnitAmount
     {
-        get
-        {
-            return this.perUnitAmountField;
-        }
-        set
-        {
-            this.perUnitAmountField = value;
-        }
+        get => perUnitAmountField;
+        set => perUnitAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxExemptionReasonCodeType TaxExemptionReasonCode
     {
-        get
-        {
-            return this.taxExemptionReasonCodeField;
-        }
-        set
-        {
-            this.taxExemptionReasonCodeField = value;
-        }
+        get => taxExemptionReasonCodeField;
+        set => taxExemptionReasonCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxExemptionReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("TaxExemptionReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxExemptionReasonType[] TaxExemptionReason
     {
-        get
-        {
-            return this.taxExemptionReasonField;
-        }
-        set
-        {
-            this.taxExemptionReasonField = value;
-        }
+        get => taxExemptionReasonField;
+        set => taxExemptionReasonField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TierRangeType TierRange
     {
-        get
-        {
-            return this.tierRangeField;
-        }
-        set
-        {
-            this.tierRangeField = value;
-        }
+        get => tierRangeField;
+        set => tierRangeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TierRatePercentType TierRatePercent
     {
-        get
-        {
-            return this.tierRatePercentField;
-        }
-        set
-        {
-            this.tierRatePercentField = value;
-        }
+        get => tierRatePercentField;
+        set => tierRatePercentField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public TaxSchemeType TaxScheme
     {
-        get
-        {
-            return this.taxSchemeField;
-        }
-        set
-        {
-            this.taxSchemeField = value;
-        }
+        get => taxSchemeField;
+        set => taxSchemeField = value;
     }
 }

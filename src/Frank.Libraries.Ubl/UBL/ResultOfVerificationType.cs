@@ -1,22 +1,21 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ResultOfVerification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ResultOfVerificationType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ResultOfVerification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ResultOfVerificationType
 {
-
-    private ValidatorIDType validatorIDField;
-
-    private ValidationResultCodeType validationResultCodeField;
-
-    private ValidationDateType validationDateField;
-
-    private ValidationTimeType validationTimeField;
+    private PartyType signatoryPartyField;
 
     private ValidateProcessType validateProcessField;
 
@@ -24,116 +23,74 @@ public partial class ResultOfVerificationType
 
     private ValidateToolVersionType validateToolVersionField;
 
-    private PartyType signatoryPartyField;
+    private ValidationDateType validationDateField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private ValidationResultCodeType validationResultCodeField;
+
+    private ValidationTimeType validationTimeField;
+
+    private ValidatorIDType validatorIDField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidatorIDType ValidatorID
     {
-        get
-        {
-            return this.validatorIDField;
-        }
-        set
-        {
-            this.validatorIDField = value;
-        }
+        get => validatorIDField;
+        set => validatorIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidationResultCodeType ValidationResultCode
     {
-        get
-        {
-            return this.validationResultCodeField;
-        }
-        set
-        {
-            this.validationResultCodeField = value;
-        }
+        get => validationResultCodeField;
+        set => validationResultCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidationDateType ValidationDate
     {
-        get
-        {
-            return this.validationDateField;
-        }
-        set
-        {
-            this.validationDateField = value;
-        }
+        get => validationDateField;
+        set => validationDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidationTimeType ValidationTime
     {
-        get
-        {
-            return this.validationTimeField;
-        }
-        set
-        {
-            this.validationTimeField = value;
-        }
+        get => validationTimeField;
+        set => validationTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidateProcessType ValidateProcess
     {
-        get
-        {
-            return this.validateProcessField;
-        }
-        set
-        {
-            this.validateProcessField = value;
-        }
+        get => validateProcessField;
+        set => validateProcessField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidateToolType ValidateTool
     {
-        get
-        {
-            return this.validateToolField;
-        }
-        set
-        {
-            this.validateToolField = value;
-        }
+        get => validateToolField;
+        set => validateToolField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidateToolVersionType ValidateToolVersion
     {
-        get
-        {
-            return this.validateToolVersionField;
-        }
-        set
-        {
-            this.validateToolVersionField = value;
-        }
+        get => validateToolVersionField;
+        set => validateToolVersionField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType SignatoryParty
     {
-        get
-        {
-            return this.signatoryPartyField;
-        }
-        set
-        {
-            this.signatoryPartyField = value;
-        }
+        get => signatoryPartyField;
+        set => signatoryPartyField = value;
     }
 }

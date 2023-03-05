@@ -1,188 +1,127 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ExternalReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ExternalReferenceType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ExternalReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ExternalReferenceType
 {
+    private CharacterSetCodeType characterSetCodeField;
 
-    private URIType uRIField;
+    private DescriptionType[] descriptionField;
 
     private DocumentHashType documentHashField;
 
-    private HashAlgorithmMethodType hashAlgorithmMethodField;
+    private EncodingCodeType encodingCodeField;
 
     private ExpiryDateType expiryDateField;
 
     private ExpiryTimeType expiryTimeField;
 
-    private MimeCodeType mimeCodeField;
+    private FileNameType fileNameField;
 
     private FormatCodeType formatCodeField;
 
-    private EncodingCodeType encodingCodeField;
+    private HashAlgorithmMethodType hashAlgorithmMethodField;
 
-    private CharacterSetCodeType characterSetCodeField;
+    private MimeCodeType mimeCodeField;
 
-    private FileNameType fileNameField;
+    private URIType uRIField;
 
-    private DescriptionType[] descriptionField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public URIType URI
     {
-        get
-        {
-            return this.uRIField;
-        }
-        set
-        {
-            this.uRIField = value;
-        }
+        get => uRIField;
+        set => uRIField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DocumentHashType DocumentHash
     {
-        get
-        {
-            return this.documentHashField;
-        }
-        set
-        {
-            this.documentHashField = value;
-        }
+        get => documentHashField;
+        set => documentHashField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public HashAlgorithmMethodType HashAlgorithmMethod
     {
-        get
-        {
-            return this.hashAlgorithmMethodField;
-        }
-        set
-        {
-            this.hashAlgorithmMethodField = value;
-        }
+        get => hashAlgorithmMethodField;
+        set => hashAlgorithmMethodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ExpiryDateType ExpiryDate
     {
-        get
-        {
-            return this.expiryDateField;
-        }
-        set
-        {
-            this.expiryDateField = value;
-        }
+        get => expiryDateField;
+        set => expiryDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ExpiryTimeType ExpiryTime
     {
-        get
-        {
-            return this.expiryTimeField;
-        }
-        set
-        {
-            this.expiryTimeField = value;
-        }
+        get => expiryTimeField;
+        set => expiryTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MimeCodeType MimeCode
     {
-        get
-        {
-            return this.mimeCodeField;
-        }
-        set
-        {
-            this.mimeCodeField = value;
-        }
+        get => mimeCodeField;
+        set => mimeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public FormatCodeType FormatCode
     {
-        get
-        {
-            return this.formatCodeField;
-        }
-        set
-        {
-            this.formatCodeField = value;
-        }
+        get => formatCodeField;
+        set => formatCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EncodingCodeType EncodingCode
     {
-        get
-        {
-            return this.encodingCodeField;
-        }
-        set
-        {
-            this.encodingCodeField = value;
-        }
+        get => encodingCodeField;
+        set => encodingCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CharacterSetCodeType CharacterSetCode
     {
-        get
-        {
-            return this.characterSetCodeField;
-        }
-        set
-        {
-            this.characterSetCodeField = value;
-        }
+        get => characterSetCodeField;
+        set => characterSetCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public FileNameType FileName
     {
-        get
-        {
-            return this.fileNameField;
-        }
-        set
-        {
-            this.fileNameField = value;
-        }
+        get => fileNameField;
+        set => fileNameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 }

@@ -1,91 +1,66 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ContractExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ContractExtensionType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ContractExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ContractExtensionType
 {
-
-    private OptionsDescriptionType[] optionsDescriptionField;
+    private MaximumNumberNumericType maximumNumberNumericField;
 
     private MinimumNumberNumericType minimumNumberNumericField;
 
-    private MaximumNumberNumericType maximumNumberNumericField;
+    private OptionsDescriptionType[] optionsDescriptionField;
 
     private PeriodType optionValidityPeriodField;
 
     private RenewalType[] renewalField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("OptionsDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("OptionsDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public OptionsDescriptionType[] OptionsDescription
     {
-        get
-        {
-            return this.optionsDescriptionField;
-        }
-        set
-        {
-            this.optionsDescriptionField = value;
-        }
+        get => optionsDescriptionField;
+        set => optionsDescriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MinimumNumberNumericType MinimumNumberNumeric
     {
-        get
-        {
-            return this.minimumNumberNumericField;
-        }
-        set
-        {
-            this.minimumNumberNumericField = value;
-        }
+        get => minimumNumberNumericField;
+        set => minimumNumberNumericField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MaximumNumberNumericType MaximumNumberNumeric
     {
-        get
-        {
-            return this.maximumNumberNumericField;
-        }
-        set
-        {
-            this.maximumNumberNumericField = value;
-        }
+        get => maximumNumberNumericField;
+        set => maximumNumberNumericField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType OptionValidityPeriod
     {
-        get
-        {
-            return this.optionValidityPeriodField;
-        }
-        set
-        {
-            this.optionValidityPeriodField = value;
-        }
+        get => optionValidityPeriodField;
+        set => optionValidityPeriodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Renewal")]
+    /// <remarks />
+    [XmlElement("Renewal")]
     public RenewalType[] Renewal
     {
-        get
-        {
-            return this.renewalField;
-        }
-        set
-        {
-            this.renewalField = value;
-        }
+        get => renewalField;
+        set => renewalField = value;
     }
 }

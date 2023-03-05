@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10.0</LangVersion>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <IsPackable>true</IsPackable>
         <RepositoryType>Git</RepositoryType>
@@ -26,6 +25,7 @@
 
     <ItemGroup>
         <PackageReference Include="ConsoleTables" Version="2.4.2"/>
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0"/>
         <PackageReference Include="xunit.abstractions" Version="2.0.3"/>
     </ItemGroup>
 </Project>

@@ -1,153 +1,104 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("SubscriberConsumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class SubscriberConsumptionType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("SubscriberConsumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class SubscriberConsumptionType
 {
+    private ConsumptionType consumptionField;
 
     private ConsumptionIDType consumptionIDField;
 
-    private SpecificationTypeCodeType specificationTypeCodeField;
-
     private NoteType[] noteField;
-
-    private TotalMeteredQuantityType totalMeteredQuantityField;
-
-    private PartyType subscriberPartyField;
-
-    private ConsumptionPointType utilityConsumptionPointField;
 
     private OnAccountPaymentType[] onAccountPaymentField;
 
-    private ConsumptionType consumptionField;
+    private SpecificationTypeCodeType specificationTypeCodeField;
+
+    private PartyType subscriberPartyField;
 
     private SupplierConsumptionType[] supplierConsumptionField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private TotalMeteredQuantityType totalMeteredQuantityField;
+
+    private ConsumptionPointType utilityConsumptionPointField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ConsumptionIDType ConsumptionID
     {
-        get
-        {
-            return this.consumptionIDField;
-        }
-        set
-        {
-            this.consumptionIDField = value;
-        }
+        get => consumptionIDField;
+        set => consumptionIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SpecificationTypeCodeType SpecificationTypeCode
     {
-        get
-        {
-            return this.specificationTypeCodeField;
-        }
-        set
-        {
-            this.specificationTypeCodeField = value;
-        }
+        get => specificationTypeCodeField;
+        set => specificationTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TotalMeteredQuantityType TotalMeteredQuantity
     {
-        get
-        {
-            return this.totalMeteredQuantityField;
-        }
-        set
-        {
-            this.totalMeteredQuantityField = value;
-        }
+        get => totalMeteredQuantityField;
+        set => totalMeteredQuantityField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType SubscriberParty
     {
-        get
-        {
-            return this.subscriberPartyField;
-        }
-        set
-        {
-            this.subscriberPartyField = value;
-        }
+        get => subscriberPartyField;
+        set => subscriberPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ConsumptionPointType UtilityConsumptionPoint
     {
-        get
-        {
-            return this.utilityConsumptionPointField;
-        }
-        set
-        {
-            this.utilityConsumptionPointField = value;
-        }
+        get => utilityConsumptionPointField;
+        set => utilityConsumptionPointField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("OnAccountPayment")]
+    /// <remarks />
+    [XmlElement("OnAccountPayment")]
     public OnAccountPaymentType[] OnAccountPayment
     {
-        get
-        {
-            return this.onAccountPaymentField;
-        }
-        set
-        {
-            this.onAccountPaymentField = value;
-        }
+        get => onAccountPaymentField;
+        set => onAccountPaymentField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ConsumptionType Consumption
     {
-        get
-        {
-            return this.consumptionField;
-        }
-        set
-        {
-            this.consumptionField = value;
-        }
+        get => consumptionField;
+        set => consumptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SupplierConsumption")]
+    /// <remarks />
+    [XmlElement("SupplierConsumption")]
     public SupplierConsumptionType[] SupplierConsumption
     {
-        get
-        {
-            return this.supplierConsumptionField;
-        }
-        set
-        {
-            this.supplierConsumptionField = value;
-        }
+        get => supplierConsumptionField;
+        set => supplierConsumptionField = value;
     }
 }

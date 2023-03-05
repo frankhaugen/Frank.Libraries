@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10.0</LangVersion>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <!--<Nullable>enable</Nullable>-->
         <IsPackable>false</IsPackable>
         <RepositoryType>Git</RepositoryType>
@@ -23,9 +22,5 @@
             <Pack>True</Pack>
             <PackagePath></PackagePath>
         </None>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0"/>
     </ItemGroup>
 </Project>

@@ -1,60 +1,47 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("PromotionalSpecification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class PromotionalSpecificationType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("PromotionalSpecification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class PromotionalSpecificationType
 {
-
-    private SpecificationIDType specificationIDField;
+    private EventTacticType[] eventTacticField;
 
     private PromotionalEventLineItemType[] promotionalEventLineItemField;
 
-    private EventTacticType[] eventTacticField;
+    private SpecificationIDType specificationIDField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SpecificationIDType SpecificationID
     {
-        get
-        {
-            return this.specificationIDField;
-        }
-        set
-        {
-            this.specificationIDField = value;
-        }
+        get => specificationIDField;
+        set => specificationIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PromotionalEventLineItem")]
+    /// <remarks />
+    [XmlElement("PromotionalEventLineItem")]
     public PromotionalEventLineItemType[] PromotionalEventLineItem
     {
-        get
-        {
-            return this.promotionalEventLineItemField;
-        }
-        set
-        {
-            this.promotionalEventLineItemField = value;
-        }
+        get => promotionalEventLineItemField;
+        set => promotionalEventLineItemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("EventTactic")]
+    /// <remarks />
+    [XmlElement("EventTactic")]
     public EventTacticType[] EventTactic
     {
-        get
-        {
-            return this.eventTacticField;
-        }
-        set
-        {
-            this.eventTacticField = value;
-        }
+        get => eventTacticField;
+        set => eventTacticField = value;
     }
 }

@@ -8,10 +8,15 @@ namespace Frank.Libraries.Extensions;
 public static class FileInfoExtensions
 {
     public static string ReadAllText(this FileInfo value) => File.ReadAllText(value.FullName);
-    public static bool HasContent(this FileInfo value) => File.Exists(value.FullName) && File.ReadAllText(value.FullName).Any();
+
+    public static bool HasContent(this FileInfo value) => File.Exists(value.FullName)
+                                                          && File.ReadAllText(value.FullName)
+                                                                 .Any();
+
     public static byte[] ReadAllBytes(this FileInfo value) => File.ReadAllBytes(value.FullName);
 
-    public static List<string> ReadAllLines(this FileInfo value) => File.ReadAllLines(value.FullName).ToList();
+    public static List<string> ReadAllLines(this FileInfo value) => File.ReadAllLines(value.FullName)
+                                                                        .ToList();
 
     public static async Task WriteAllTextAsync(this FileInfo file, string value, bool overwrite = false) => await File.WriteAllTextAsync(file.FullName, value);
     public static async Task WriteAllLinesAsync(this FileInfo file, IEnumerable<string> values, bool overwrite = false) => await File.WriteAllLinesAsync(file.FullName, values);
@@ -23,6 +28,7 @@ public static class FileInfoExtensions
         {
             return;
         }
+
         await File.WriteAllTextAsync(file.FullName, value);
     }
 
@@ -32,6 +38,7 @@ public static class FileInfoExtensions
         {
             return;
         }
+
         await File.WriteAllLinesAsync(file.FullName, values);
     }
 
@@ -41,6 +48,7 @@ public static class FileInfoExtensions
         {
             return;
         }
+
         await File.WriteAllBytesAsync(file.FullName, value);
     }
 

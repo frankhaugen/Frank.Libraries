@@ -6,7 +6,11 @@ public class UniqueList<T> : List<T>
 {
     public new void Add(T value)
     {
-        if (Contains(value)) return;
+        if (Contains(value))
+        {
+            return;
+        }
+
         base.Add(value);
     }
 

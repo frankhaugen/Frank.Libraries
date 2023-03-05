@@ -1,7 +1,6 @@
-namespace Frank.Libraries.CodeGeneration.Generators
+namespace Frank.Libraries.CodeGeneration.Generators;
+
+public interface IGenerator
 {
-    public interface IGenerator
-    {
-        string Generate(string namespaceName, string className);
-    }
+    string Generate(string namespaceName, string className);
 }

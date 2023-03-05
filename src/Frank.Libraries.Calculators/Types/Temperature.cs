@@ -1,8 +1,7 @@
-namespace Frank.Libraries.Calculators.Types
+namespace Frank.Libraries.Calculators.Types;
+
+public struct Temperature
 {
-    public struct Temperature
-    {
-        public decimal Value { get; set; }
-        public decimal Bar { get; set; }
-    }
+    public decimal Value { get; set; }
+    public decimal Bar { get; set; }
 }

@@ -1,296 +1,193 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ProcurementProject", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ProcurementProjectType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ProcurementProject", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ProcurementProjectType
 {
-
-    private IDType idField;
-
-    private NameType1[] nameField;
-
-    private DescriptionType[] descriptionField;
-
-    private ProcurementTypeCodeType procurementTypeCodeField;
-
-    private ProcurementSubTypeCodeType procurementSubTypeCodeField;
-
-    private QualityControlCodeType qualityControlCodeField;
-
-    private RequiredFeeAmountType requiredFeeAmountField;
-
-    private FeeDescriptionType[] feeDescriptionField;
-
-    private RequestedDeliveryDateType requestedDeliveryDateField;
-
-    private EstimatedOverallContractQuantityType estimatedOverallContractQuantityField;
-
-    private NoteType[] noteField;
-
-    private RequestedTenderTotalType requestedTenderTotalField;
-
-    private CommodityClassificationType mainCommodityClassificationField;
-
     private CommodityClassificationType[] additionalCommodityClassificationField;
-
-    private LocationType1[] realizedLocationField;
-
-    private PeriodType plannedPeriodField;
 
     private ContractExtensionType contractExtensionField;
 
+    private DescriptionType[] descriptionField;
+
+    private EstimatedOverallContractQuantityType estimatedOverallContractQuantityField;
+
+    private FeeDescriptionType[] feeDescriptionField;
+
+    private IDType idField;
+
+    private CommodityClassificationType mainCommodityClassificationField;
+
+    private NameType1[] nameField;
+
+    private NoteType[] noteField;
+
+    private PeriodType plannedPeriodField;
+
+    private ProcurementSubTypeCodeType procurementSubTypeCodeField;
+
+    private ProcurementTypeCodeType procurementTypeCodeField;
+
+    private QualityControlCodeType qualityControlCodeField;
+
+    private LocationType1[] realizedLocationField;
+
+    private RequestedDeliveryDateType requestedDeliveryDateField;
+
+    private RequestedTenderTotalType requestedTenderTotalField;
+
     private RequestForTenderLineType[] requestForTenderLineField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private RequiredFeeAmountType requiredFeeAmountField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1[] Name
     {
-        get
-        {
-            return this.nameField;
-        }
-        set
-        {
-            this.nameField = value;
-        }
+        get => nameField;
+        set => nameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProcurementTypeCodeType ProcurementTypeCode
     {
-        get
-        {
-            return this.procurementTypeCodeField;
-        }
-        set
-        {
-            this.procurementTypeCodeField = value;
-        }
+        get => procurementTypeCodeField;
+        set => procurementTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProcurementSubTypeCodeType ProcurementSubTypeCode
     {
-        get
-        {
-            return this.procurementSubTypeCodeField;
-        }
-        set
-        {
-            this.procurementSubTypeCodeField = value;
-        }
+        get => procurementSubTypeCodeField;
+        set => procurementSubTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public QualityControlCodeType QualityControlCode
     {
-        get
-        {
-            return this.qualityControlCodeField;
-        }
-        set
-        {
-            this.qualityControlCodeField = value;
-        }
+        get => qualityControlCodeField;
+        set => qualityControlCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RequiredFeeAmountType RequiredFeeAmount
     {
-        get
-        {
-            return this.requiredFeeAmountField;
-        }
-        set
-        {
-            this.requiredFeeAmountField = value;
-        }
+        get => requiredFeeAmountField;
+        set => requiredFeeAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("FeeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("FeeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public FeeDescriptionType[] FeeDescription
     {
-        get
-        {
-            return this.feeDescriptionField;
-        }
-        set
-        {
-            this.feeDescriptionField = value;
-        }
+        get => feeDescriptionField;
+        set => feeDescriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RequestedDeliveryDateType RequestedDeliveryDate
     {
-        get
-        {
-            return this.requestedDeliveryDateField;
-        }
-        set
-        {
-            this.requestedDeliveryDateField = value;
-        }
+        get => requestedDeliveryDateField;
+        set => requestedDeliveryDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EstimatedOverallContractQuantityType EstimatedOverallContractQuantity
     {
-        get
-        {
-            return this.estimatedOverallContractQuantityField;
-        }
-        set
-        {
-            this.estimatedOverallContractQuantityField = value;
-        }
+        get => estimatedOverallContractQuantityField;
+        set => estimatedOverallContractQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public RequestedTenderTotalType RequestedTenderTotal
     {
-        get
-        {
-            return this.requestedTenderTotalField;
-        }
-        set
-        {
-            this.requestedTenderTotalField = value;
-        }
+        get => requestedTenderTotalField;
+        set => requestedTenderTotalField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CommodityClassificationType MainCommodityClassification
     {
-        get
-        {
-            return this.mainCommodityClassificationField;
-        }
-        set
-        {
-            this.mainCommodityClassificationField = value;
-        }
+        get => mainCommodityClassificationField;
+        set => mainCommodityClassificationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalCommodityClassification")]
+    /// <remarks />
+    [XmlElement("AdditionalCommodityClassification")]
     public CommodityClassificationType[] AdditionalCommodityClassification
     {
-        get
-        {
-            return this.additionalCommodityClassificationField;
-        }
-        set
-        {
-            this.additionalCommodityClassificationField = value;
-        }
+        get => additionalCommodityClassificationField;
+        set => additionalCommodityClassificationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("RealizedLocation")]
+    /// <remarks />
+    [XmlElement("RealizedLocation")]
     public LocationType1[] RealizedLocation
     {
-        get
-        {
-            return this.realizedLocationField;
-        }
-        set
-        {
-            this.realizedLocationField = value;
-        }
+        get => realizedLocationField;
+        set => realizedLocationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType PlannedPeriod
     {
-        get
-        {
-            return this.plannedPeriodField;
-        }
-        set
-        {
-            this.plannedPeriodField = value;
-        }
+        get => plannedPeriodField;
+        set => plannedPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContractExtensionType ContractExtension
     {
-        get
-        {
-            return this.contractExtensionField;
-        }
-        set
-        {
-            this.contractExtensionField = value;
-        }
+        get => contractExtensionField;
+        set => contractExtensionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("RequestForTenderLine")]
+    /// <remarks />
+    [XmlElement("RequestForTenderLine")]
     public RequestForTenderLineType[] RequestForTenderLine
     {
-        get
-        {
-            return this.requestForTenderLineField;
-        }
-        set
-        {
-            this.requestForTenderLineField = value;
-        }
+        get => requestForTenderLineField;
+        set => requestForTenderLineField = value;
     }
 }

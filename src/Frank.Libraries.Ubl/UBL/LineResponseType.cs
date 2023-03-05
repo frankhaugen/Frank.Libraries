@@ -1,43 +1,36 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("LineResponse", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class LineResponseType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("LineResponse", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class LineResponseType
 {
-
     private LineReferenceType lineReferenceField;
 
     private ResponseType[] responseField;
 
-    /// <remarks/>
+    /// <remarks />
     public LineReferenceType LineReference
     {
-        get
-        {
-            return this.lineReferenceField;
-        }
-        set
-        {
-            this.lineReferenceField = value;
-        }
+        get => lineReferenceField;
+        set => lineReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Response")]
+    /// <remarks />
+    [XmlElement("Response")]
     public ResponseType[] Response
     {
-        get
-        {
-            return this.responseField;
-        }
-        set
-        {
-            this.responseField = value;
-        }
+        get => responseField;
+        set => responseField = value;
     }
 }

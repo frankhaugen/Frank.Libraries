@@ -1,18 +1,33 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class SignatureType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class SignatureType
 {
+    private CanonicalizationMethodType canonicalizationMethodField;
+
+    private AttachmentType digitalSignatureAttachmentField;
 
     private IDType idField;
 
     private NoteType[] noteField;
+
+    private DocumentReferenceType originalDocumentReferenceField;
+
+    private PartyType signatoryPartyField;
+
+    private SignatureMethodType signatureMethodField;
 
     private ValidationDateType validationDateField;
 
@@ -20,150 +35,80 @@ public partial class SignatureType
 
     private ValidatorIDType validatorIDField;
 
-    private CanonicalizationMethodType canonicalizationMethodField;
-
-    private SignatureMethodType signatureMethodField;
-
-    private PartyType signatoryPartyField;
-
-    private AttachmentType digitalSignatureAttachmentField;
-
-    private DocumentReferenceType originalDocumentReferenceField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidationDateType ValidationDate
     {
-        get
-        {
-            return this.validationDateField;
-        }
-        set
-        {
-            this.validationDateField = value;
-        }
+        get => validationDateField;
+        set => validationDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidationTimeType ValidationTime
     {
-        get
-        {
-            return this.validationTimeField;
-        }
-        set
-        {
-            this.validationTimeField = value;
-        }
+        get => validationTimeField;
+        set => validationTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValidatorIDType ValidatorID
     {
-        get
-        {
-            return this.validatorIDField;
-        }
-        set
-        {
-            this.validatorIDField = value;
-        }
+        get => validatorIDField;
+        set => validatorIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CanonicalizationMethodType CanonicalizationMethod
     {
-        get
-        {
-            return this.canonicalizationMethodField;
-        }
-        set
-        {
-            this.canonicalizationMethodField = value;
-        }
+        get => canonicalizationMethodField;
+        set => canonicalizationMethodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SignatureMethodType SignatureMethod
     {
-        get
-        {
-            return this.signatureMethodField;
-        }
-        set
-        {
-            this.signatureMethodField = value;
-        }
+        get => signatureMethodField;
+        set => signatureMethodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType SignatoryParty
     {
-        get
-        {
-            return this.signatoryPartyField;
-        }
-        set
-        {
-            this.signatoryPartyField = value;
-        }
+        get => signatoryPartyField;
+        set => signatoryPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public AttachmentType DigitalSignatureAttachment
     {
-        get
-        {
-            return this.digitalSignatureAttachmentField;
-        }
-        set
-        {
-            this.digitalSignatureAttachmentField = value;
-        }
+        get => digitalSignatureAttachmentField;
+        set => digitalSignatureAttachmentField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DocumentReferenceType OriginalDocumentReference
     {
-        get
-        {
-            return this.originalDocumentReferenceField;
-        }
-        set
-        {
-            this.originalDocumentReferenceField = value;
-        }
+        get => originalDocumentReferenceField;
+        set => originalDocumentReferenceField = value;
     }
 }

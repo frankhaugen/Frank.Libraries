@@ -1,140 +1,97 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("TelecommunicationsSupplyLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TelecommunicationsSupplyLineType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("TelecommunicationsSupplyLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TelecommunicationsSupplyLineType
 {
-
-    private IDType idField;
-
-    private PhoneNumberType phoneNumberField;
+    private AllowanceChargeType[] allowanceChargeField;
 
     private DescriptionType[] descriptionField;
 
-    private LineExtensionAmountType lineExtensionAmountField;
-
     private ExchangeRateType[] exchangeRateField;
 
-    private AllowanceChargeType[] allowanceChargeField;
+    private IDType idField;
+
+    private LineExtensionAmountType lineExtensionAmountField;
+
+    private PhoneNumberType phoneNumberField;
 
     private TaxTotalType[] taxTotalField;
 
     private TelecommunicationsServiceType[] telecommunicationsServiceField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PhoneNumberType PhoneNumber
     {
-        get
-        {
-            return this.phoneNumberField;
-        }
-        set
-        {
-            this.phoneNumberField = value;
-        }
+        get => phoneNumberField;
+        set => phoneNumberField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineExtensionAmountType LineExtensionAmount
     {
-        get
-        {
-            return this.lineExtensionAmountField;
-        }
-        set
-        {
-            this.lineExtensionAmountField = value;
-        }
+        get => lineExtensionAmountField;
+        set => lineExtensionAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ExchangeRate")]
+    /// <remarks />
+    [XmlElement("ExchangeRate")]
     public ExchangeRateType[] ExchangeRate
     {
-        get
-        {
-            return this.exchangeRateField;
-        }
-        set
-        {
-            this.exchangeRateField = value;
-        }
+        get => exchangeRateField;
+        set => exchangeRateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]
+    /// <remarks />
+    [XmlElement("AllowanceCharge")]
     public AllowanceChargeType[] AllowanceCharge
     {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-        set
-        {
-            this.allowanceChargeField = value;
-        }
+        get => allowanceChargeField;
+        set => allowanceChargeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxTotal")]
+    /// <remarks />
+    [XmlElement("TaxTotal")]
     public TaxTotalType[] TaxTotal
     {
-        get
-        {
-            return this.taxTotalField;
-        }
-        set
-        {
-            this.taxTotalField = value;
-        }
+        get => taxTotalField;
+        set => taxTotalField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TelecommunicationsService")]
+    /// <remarks />
+    [XmlElement("TelecommunicationsService")]
     public TelecommunicationsServiceType[] TelecommunicationsService
     {
-        get
-        {
-            return this.telecommunicationsServiceField;
-        }
-        set
-        {
-            this.telecommunicationsServiceField = value;
-        }
+        get => telecommunicationsServiceField;
+        set => telecommunicationsServiceField = value;
     }
 }

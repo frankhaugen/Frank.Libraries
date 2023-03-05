@@ -9,11 +9,18 @@ public class Url
         Prefix = "http";
         Domain = domain;
         Tld = tld;
-        Segments = new();
-        SubDomains = new();
+        Segments = new Dictionary<int, string>();
+        SubDomains = new List<string>();
 
-        if (isHttps) Prefix += "s";
-        if (userWww) SubDomains.Add("www");
+        if (isHttps)
+        {
+            Prefix += "s";
+        }
+
+        if (userWww)
+        {
+            SubDomains.Add("www");
+        }
     }
 
     public string Prefix { get; }

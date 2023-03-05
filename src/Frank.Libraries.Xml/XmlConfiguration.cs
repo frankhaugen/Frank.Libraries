@@ -1,9 +1,8 @@
 ﻿using System.IO;
 
-namespace Frank.Libraries.Xml
+namespace Frank.Libraries.Xml;
+
+public class XmlConfiguration
 {
-    public class XmlConfiguration
-    {
-        public string Folder { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-    }
+    public string Folder { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "Data");
 }

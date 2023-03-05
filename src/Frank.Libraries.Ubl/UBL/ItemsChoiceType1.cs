@@ -1,19 +1,21 @@
+using System;
+using System.CodeDom.Compiler;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#", IncludeInSchema = false)]
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[XmlType(Namespace = "http://www.w3.org/2000/09/xmldsig#", IncludeInSchema = false)]
 public enum ItemsChoiceType1
 {
+    /// <remarks />
+    [XmlEnum("##any:")] Item,
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("##any:")]
-    Item,
-
-    /// <remarks/>
+    /// <remarks />
     PGPKeyID,
 
-    /// <remarks/>
-    PGPKeyPacket,
+    /// <remarks />
+    PGPKeyPacket
 }

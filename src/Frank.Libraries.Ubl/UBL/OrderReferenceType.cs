@@ -1,155 +1,106 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("OrderReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class OrderReferenceType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("OrderReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class OrderReferenceType
 {
-
-    private IDType idField;
-
-    private SalesOrderIDType salesOrderIDField;
-
     private CopyIndicatorType copyIndicatorField;
 
-    private UUIDType uUIDField;
+    private CustomerReferenceType customerReferenceField;
+
+    private DocumentReferenceType documentReferenceField;
+
+    private IDType idField;
 
     private IssueDateType issueDateField;
 
     private IssueTimeType issueTimeField;
 
-    private CustomerReferenceType customerReferenceField;
-
     private OrderTypeCodeType orderTypeCodeField;
 
-    private DocumentReferenceType documentReferenceField;
+    private SalesOrderIDType salesOrderIDField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private UUIDType uUIDField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SalesOrderIDType SalesOrderID
     {
-        get
-        {
-            return this.salesOrderIDField;
-        }
-        set
-        {
-            this.salesOrderIDField = value;
-        }
+        get => salesOrderIDField;
+        set => salesOrderIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CopyIndicatorType CopyIndicator
     {
-        get
-        {
-            return this.copyIndicatorField;
-        }
-        set
-        {
-            this.copyIndicatorField = value;
-        }
+        get => copyIndicatorField;
+        set => copyIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UUIDType UUID
     {
-        get
-        {
-            return this.uUIDField;
-        }
-        set
-        {
-            this.uUIDField = value;
-        }
+        get => uUIDField;
+        set => uUIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IssueDateType IssueDate
     {
-        get
-        {
-            return this.issueDateField;
-        }
-        set
-        {
-            this.issueDateField = value;
-        }
+        get => issueDateField;
+        set => issueDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IssueTimeType IssueTime
     {
-        get
-        {
-            return this.issueTimeField;
-        }
-        set
-        {
-            this.issueTimeField = value;
-        }
+        get => issueTimeField;
+        set => issueTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CustomerReferenceType CustomerReference
     {
-        get
-        {
-            return this.customerReferenceField;
-        }
-        set
-        {
-            this.customerReferenceField = value;
-        }
+        get => customerReferenceField;
+        set => customerReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public OrderTypeCodeType OrderTypeCode
     {
-        get
-        {
-            return this.orderTypeCodeField;
-        }
-        set
-        {
-            this.orderTypeCodeField = value;
-        }
+        get => orderTypeCodeField;
+        set => orderTypeCodeField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DocumentReferenceType DocumentReference
     {
-        get
-        {
-            return this.documentReferenceField;
-        }
-        set
-        {
-            this.documentReferenceField = value;
-        }
+        get => documentReferenceField;
+        set => documentReferenceField = value;
     }
 }

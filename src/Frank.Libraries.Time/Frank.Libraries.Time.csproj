@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10.0</LangVersion>
+        <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <IsPackable>true</IsPackable>
         <RepositoryType>Git</RepositoryType>
@@ -19,11 +18,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="CronExpressionDescriptor" Version="2.16.0"/>
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0"/>
-        <PackageReference Include="Cronos" Version="0.7.1"/>
-        <PackageReference Include="NodaTime" Version="3.0.9"/>
-        <PackageReference Include="TimeZoneConverter.Posix" Version="2.3.0"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0"/>
+        <PackageReference Include="NodaTime" Version="3.1.6"/>
+        <PackageReference Include="TimeZoneConverter.Posix" Version="4.0.0"/>
     </ItemGroup>
 
     <ItemGroup>

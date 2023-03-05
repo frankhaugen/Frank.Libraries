@@ -4,12 +4,11 @@
 // ReSharper disable StringLiteralTypo
 // ReSharper disable StringLiteralsWordIsNotInDictionary
 
-namespace Frank.Libraries.Enums.Units
+namespace Frank.Libraries.Enums.Units;
+
+public enum Temperature
 {
-    public enum Temperature
-    {
-        Kelvin,
-        Celsius,
-        Fahrenheit
-    }
+    Kelvin,
+    Celsius,
+    Fahrenheit
 }

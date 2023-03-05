@@ -1,74 +1,55 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("QualifyingProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class QualifyingPropertiesType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("QualifyingProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class QualifyingPropertiesType
 {
+    private string idField;
 
     private SignedPropertiesType signedPropertiesField;
 
-    private UnsignedPropertiesType unsignedPropertiesField;
-
     private string targetField;
 
-    private string idField;
+    private UnsignedPropertiesType unsignedPropertiesField;
 
-    /// <remarks/>
+    /// <remarks />
     public SignedPropertiesType SignedProperties
     {
-        get
-        {
-            return this.signedPropertiesField;
-        }
-        set
-        {
-            this.signedPropertiesField = value;
-        }
+        get => signedPropertiesField;
+        set => signedPropertiesField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public UnsignedPropertiesType UnsignedProperties
     {
-        get
-        {
-            return this.unsignedPropertiesField;
-        }
-        set
-        {
-            this.unsignedPropertiesField = value;
-        }
+        get => unsignedPropertiesField;
+        set => unsignedPropertiesField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
+    /// <remarks />
+    [XmlAttribute(DataType = "anyURI")]
     public string Target
     {
-        get
-        {
-            return this.targetField;
-        }
-        set
-        {
-            this.targetField = value;
-        }
+        get => targetField;
+        set => targetField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

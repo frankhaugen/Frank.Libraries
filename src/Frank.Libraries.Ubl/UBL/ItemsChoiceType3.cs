@@ -1,52 +1,54 @@
+using System;
+using System.CodeDom.Compiler;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#", IncludeInSchema = false)]
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#", IncludeInSchema = false)]
 public enum ItemsChoiceType3
 {
+    /// <remarks />
+    [XmlEnum("##any:")] Item,
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlEnumAttribute("##any:")]
-    Item,
-
-    /// <remarks/>
+    /// <remarks />
     ArchiveTimeStamp,
 
-    /// <remarks/>
+    /// <remarks />
     AttrAuthoritiesCertValues,
 
-    /// <remarks/>
+    /// <remarks />
     AttributeCertificateRefs,
 
-    /// <remarks/>
+    /// <remarks />
     AttributeRevocationRefs,
 
-    /// <remarks/>
+    /// <remarks />
     AttributeRevocationValues,
 
-    /// <remarks/>
+    /// <remarks />
     CertificateValues,
 
-    /// <remarks/>
+    /// <remarks />
     CompleteCertificateRefs,
 
-    /// <remarks/>
+    /// <remarks />
     CompleteRevocationRefs,
 
-    /// <remarks/>
+    /// <remarks />
     CounterSignature,
 
-    /// <remarks/>
+    /// <remarks />
     RefsOnlyTimeStamp,
 
-    /// <remarks/>
+    /// <remarks />
     RevocationValues,
 
-    /// <remarks/>
+    /// <remarks />
     SigAndRefsTimeStamp,
 
-    /// <remarks/>
-    SignatureTimeStamp,
+    /// <remarks />
+    SignatureTimeStamp
 }

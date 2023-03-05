@@ -1,44 +1,37 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("UnsignedDataObjectProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class UnsignedDataObjectPropertiesType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("UnsignedDataObjectProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class UnsignedDataObjectPropertiesType
 {
+    private string idField;
 
     private AnyType[] unsignedDataObjectPropertyField;
 
-    private string idField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("UnsignedDataObjectProperty")]
+    /// <remarks />
+    [XmlElement("UnsignedDataObjectProperty")]
     public AnyType[] UnsignedDataObjectProperty
     {
-        get
-        {
-            return this.unsignedDataObjectPropertyField;
-        }
-        set
-        {
-            this.unsignedDataObjectPropertyField = value;
-        }
+        get => unsignedDataObjectPropertyField;
+        set => unsignedDataObjectPropertyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

@@ -1,19 +1,20 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ConsumptionHistory", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ConsumptionHistoryType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ConsumptionHistory", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ConsumptionHistoryType
 {
-
-    private MeterNumberType meterNumberField;
-
-    private QuantityType2 quantityField;
-
     private AmountType2 amountField;
 
     private ConsumptionLevelCodeType consumptionLevelCodeField;
@@ -22,102 +23,64 @@ public partial class ConsumptionHistoryType
 
     private DescriptionType[] descriptionField;
 
+    private MeterNumberType meterNumberField;
+
     private PeriodType periodField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private QuantityType2 quantityField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MeterNumberType MeterNumber
     {
-        get
-        {
-            return this.meterNumberField;
-        }
-        set
-        {
-            this.meterNumberField = value;
-        }
+        get => meterNumberField;
+        set => meterNumberField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public QuantityType2 Quantity
     {
-        get
-        {
-            return this.quantityField;
-        }
-        set
-        {
-            this.quantityField = value;
-        }
+        get => quantityField;
+        set => quantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AmountType2 Amount
     {
-        get
-        {
-            return this.amountField;
-        }
-        set
-        {
-            this.amountField = value;
-        }
+        get => amountField;
+        set => amountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ConsumptionLevelCodeType ConsumptionLevelCode
     {
-        get
-        {
-            return this.consumptionLevelCodeField;
-        }
-        set
-        {
-            this.consumptionLevelCodeField = value;
-        }
+        get => consumptionLevelCodeField;
+        set => consumptionLevelCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ConsumptionLevelType ConsumptionLevel
     {
-        get
-        {
-            return this.consumptionLevelField;
-        }
-        set
-        {
-            this.consumptionLevelField = value;
-        }
+        get => consumptionLevelField;
+        set => consumptionLevelField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType Period
     {
-        get
-        {
-            return this.periodField;
-        }
-        set
-        {
-            this.periodField = value;
-        }
+        get => periodField;
+        set => periodField = value;
     }
 }

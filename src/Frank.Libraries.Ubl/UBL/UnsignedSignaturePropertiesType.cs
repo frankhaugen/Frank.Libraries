@@ -1,75 +1,62 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("UnsignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class UnsignedSignaturePropertiesType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("UnsignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class UnsignedSignaturePropertiesType
 {
-
-    private object[] itemsField;
+    private string idField;
 
     private ItemsChoiceType3[] itemsElementNameField;
 
-    private string idField;
+    private object[] itemsField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAnyElementAttribute()]
-    [System.Xml.Serialization.XmlElementAttribute("ArchiveTimeStamp", typeof(XAdESTimeStampType))]
-    [System.Xml.Serialization.XmlElementAttribute("AttrAuthoritiesCertValues", typeof(CertificateValuesType))]
-    [System.Xml.Serialization.XmlElementAttribute("AttributeCertificateRefs", typeof(CompleteCertificateRefsType))]
-    [System.Xml.Serialization.XmlElementAttribute("AttributeRevocationRefs", typeof(CompleteRevocationRefsType))]
-    [System.Xml.Serialization.XmlElementAttribute("AttributeRevocationValues", typeof(RevocationValuesType))]
-    [System.Xml.Serialization.XmlElementAttribute("CertificateValues", typeof(CertificateValuesType))]
-    [System.Xml.Serialization.XmlElementAttribute("CompleteCertificateRefs", typeof(CompleteCertificateRefsType))]
-    [System.Xml.Serialization.XmlElementAttribute("CompleteRevocationRefs", typeof(CompleteRevocationRefsType))]
-    [System.Xml.Serialization.XmlElementAttribute("CounterSignature", typeof(CounterSignatureType))]
-    [System.Xml.Serialization.XmlElementAttribute("RefsOnlyTimeStamp", typeof(XAdESTimeStampType))]
-    [System.Xml.Serialization.XmlElementAttribute("RevocationValues", typeof(RevocationValuesType))]
-    [System.Xml.Serialization.XmlElementAttribute("SigAndRefsTimeStamp", typeof(XAdESTimeStampType))]
-    [System.Xml.Serialization.XmlElementAttribute("SignatureTimeStamp", typeof(XAdESTimeStampType))]
-    [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
+    /// <remarks />
+    [XmlAnyElement]
+    [XmlElement("ArchiveTimeStamp", typeof(XAdESTimeStampType))]
+    [XmlElement("AttrAuthoritiesCertValues", typeof(CertificateValuesType))]
+    [XmlElement("AttributeCertificateRefs", typeof(CompleteCertificateRefsType))]
+    [XmlElement("AttributeRevocationRefs", typeof(CompleteRevocationRefsType))]
+    [XmlElement("AttributeRevocationValues", typeof(RevocationValuesType))]
+    [XmlElement("CertificateValues", typeof(CertificateValuesType))]
+    [XmlElement("CompleteCertificateRefs", typeof(CompleteCertificateRefsType))]
+    [XmlElement("CompleteRevocationRefs", typeof(CompleteRevocationRefsType))]
+    [XmlElement("CounterSignature", typeof(CounterSignatureType))]
+    [XmlElement("RefsOnlyTimeStamp", typeof(XAdESTimeStampType))]
+    [XmlElement("RevocationValues", typeof(RevocationValuesType))]
+    [XmlElement("SigAndRefsTimeStamp", typeof(XAdESTimeStampType))]
+    [XmlElement("SignatureTimeStamp", typeof(XAdESTimeStampType))]
+    [XmlChoiceIdentifier("ItemsElementName")]
     public object[] Items
     {
-        get
-        {
-            return this.itemsField;
-        }
-        set
-        {
-            this.itemsField = value;
-        }
+        get => itemsField;
+        set => itemsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
-    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    /// <remarks />
+    [XmlElement("ItemsElementName")]
+    [XmlIgnore]
     public ItemsChoiceType3[] ItemsElementName
     {
-        get
-        {
-            return this.itemsElementNameField;
-        }
-        set
-        {
-            this.itemsElementNameField = value;
-        }
+        get => itemsElementNameField;
+        set => itemsElementNameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

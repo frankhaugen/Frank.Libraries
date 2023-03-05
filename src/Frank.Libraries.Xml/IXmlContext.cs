@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Frank.Libraries.Xml
+namespace Frank.Libraries.Xml;
+
+public interface IXmlContext<TEntity> where TEntity : XmlEntity, new()
 {
-    public interface IXmlContext<TEntity> where TEntity : XmlEntity, new()
-    {
-        IEnumerable<TEntity> GetCollection();
-        void Add(TEntity entity);
-        void Add(List<TEntity> entities);
-        TEntity GetById(Guid id);
-        void Update(Guid id, TEntity entity);
-        void Delete(Guid id);
-        bool SaveChanges();
-        void DiscardChanges();
-    }
+    IEnumerable<TEntity> GetCollection();
+    void Add(TEntity entity);
+    void Add(List<TEntity> entities);
+    TEntity GetById(Guid id);
+    void Update(Guid id, TEntity entity);
+    void Delete(Guid id);
+    bool SaveChanges();
+    void DiscardChanges();
 }

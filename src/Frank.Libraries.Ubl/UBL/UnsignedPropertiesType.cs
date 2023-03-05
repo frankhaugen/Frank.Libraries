@@ -1,58 +1,45 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("UnsignedProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class UnsignedPropertiesType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("UnsignedProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class UnsignedPropertiesType
 {
-
-    private UnsignedSignaturePropertiesType unsignedSignaturePropertiesField;
+    private string idField;
 
     private UnsignedDataObjectPropertiesType unsignedDataObjectPropertiesField;
 
-    private string idField;
+    private UnsignedSignaturePropertiesType unsignedSignaturePropertiesField;
 
-    /// <remarks/>
+    /// <remarks />
     public UnsignedSignaturePropertiesType UnsignedSignatureProperties
     {
-        get
-        {
-            return this.unsignedSignaturePropertiesField;
-        }
-        set
-        {
-            this.unsignedSignaturePropertiesField = value;
-        }
+        get => unsignedSignaturePropertiesField;
+        set => unsignedSignaturePropertiesField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public UnsignedDataObjectPropertiesType UnsignedDataObjectProperties
     {
-        get
-        {
-            return this.unsignedDataObjectPropertiesField;
-        }
-        set
-        {
-            this.unsignedDataObjectPropertiesField = value;
-        }
+        get => unsignedDataObjectPropertiesField;
+        set => unsignedDataObjectPropertiesField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

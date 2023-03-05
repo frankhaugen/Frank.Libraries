@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10.0</LangVersion>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <IsPackable>true</IsPackable>
         <RepositoryType>Git</RepositoryType>
@@ -25,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="CsvHelper" Version="27.1.1"/>
+        <PackageReference Include="CsvHelper" Version="30.0.1"/>
     </ItemGroup>
 
 </Project>

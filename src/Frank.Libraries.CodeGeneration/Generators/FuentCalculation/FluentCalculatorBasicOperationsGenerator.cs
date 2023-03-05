@@ -1,74 +1,73 @@
 ﻿using System.Collections.Generic;
 using CodegenCS;
 
-namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation
+namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation;
+
+public class FluentCalculatorBasicOperationsGenerator : IGenerator
 {
-    public class FluentCalculatorBasicOperationsGenerator : IGenerator
+    private static List<string> Types => new()
     {
-        public string Generate(string namespaceName, string className)
-        {
-            var writer = new CodegenTextWriter();
+        "int",
+        //types.Add("uint");
+        "short",
+        //types.Add("ushort");
+        "long",
+        //types.Add("ulong");
+        "float",
+        "double",
+        "decimal"
+    };
 
-            var typesOverride = new List<string>
-            {
-                "int",
-                "short",
-                "long"
-            };
+    private static Dictionary<Operator, string> Operators => new()
+    {
+        { Operator.Add, "+" },
+        { Operator.Subtract, "-" },
+        { Operator.Multiply, "*" },
+        { Operator.Divide, "/" }
+    };
 
-            writer.WriteLine($"namespace {namespaceName};");
-            writer.WriteLine(" ");
-            writer.WithCurlyBraces($"public static class {className}", () =>
-            {
-                foreach (var @operator in Operators)
-                {
-                    writer.WriteLine($"// {@operator.Key} ");
-                    foreach (var type in Types)
-                    {
-                        var returnType = type;
-                        if (@operator.Key == Operator.Divide && typesOverride.Contains(type)) returnType = "decimal";
-                        else
-                        {
-                        }
+    public string Generate(string namespaceName, string className)
+    {
+        var writer = new CodegenTextWriter();
 
-                        writer.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
-                    }
-
-                    writer.WriteLine(" ");
-                }
-            });
-
-            return writer.GetContents();
-        }
-
-        private static List<string> Types => new()
+        var typesOverride = new List<string>
         {
             "int",
-            //types.Add("uint");
             "short",
-            //types.Add("ushort");
-            "long",
-            //types.Add("ulong");
-            "float",
-            "double",
-            "decimal"
+            "long"
         };
 
-        private static Dictionary<Operator, string> Operators => new()
+        writer.WriteLine($"namespace {namespaceName};");
+        writer.WriteLine(" ");
+        writer.WithCurlyBraces($"public static class {className}", () =>
         {
-            { Operator.Add, "+" },
-            { Operator.Subtract, "-" },
-            { Operator.Multiply, "*" },
-            { Operator.Divide, "/" }
-        };
+            foreach (var @operator in Operators)
+            {
+                writer.WriteLine($"// {@operator.Key} ");
+                foreach (var type in Types)
+                {
+                    var returnType = type;
+                    if (@operator.Key == Operator.Divide && typesOverride.Contains(type))
+                    {
+                        returnType = "decimal";
+                    }
 
-        private enum Operator
-        {
-            Add,
-            Subtract,
-            Multiply,
-            Divide,
-            PowerOf,
-        }
+                    writer.WriteLine($"public static {returnType} {@operator.Key}(this {type} source, {type} value) => ({returnType}) (source {@operator.Value} value);");
+                }
+
+                writer.WriteLine(" ");
+            }
+        });
+
+        return writer.GetContents();
+    }
+
+    private enum Operator
+    {
+        Add,
+        Subtract,
+        Multiply,
+        Divide,
+        PowerOf
     }
 }

@@ -7,15 +7,19 @@ namespace Frank.Libraries.ML.CharacterRecognition;
 
 public class Trainer
 {
-    Random _random = new Random();
-
     public readonly NeuralNet Net;
-    public int CurrentEpoch;
+
+    // We want to cancel any outstanding training when the user cancels or re-runs the query.
+    private readonly CancellationTokenSource _cancelSource = new();
+    private Random _random = new();
     public double CurrentAccuracy;
+    public int CurrentEpoch;
     public int Iterations;
     public string TrainingInfo;
 
     public Trainer(NeuralNet net) => Net = net;
+
+    private ParallelOptions CancellableParallel => new() { CancellationToken = _cancelSource.Token };
 
     public void Train(Sample[] trainingData, Sample[] testingData, double learningRate, int epochs)
     {
@@ -60,30 +64,29 @@ public class Trainer
         {
             firingNet.FeedForward(sample.Data);
             if (sample.IsOutputCorrect(firingNet.OutputValues.ToArray()))
+            {
                 good++;
+            }
             else
+            {
                 bad++;
+            }
         }
 
         return (double)good / (good + bad);
     }
 
-    static void Shuffle<T>(Random random, T[] array)
+    private static void Shuffle<T>(Random random, T[] array)
     {
         var n = array.Length;
         while (n > 1)
         {
             var k = random.Next(n--);
-            T temp = array[n];
+            var temp = array[n];
             array[n] = array[k];
             array[k] = temp;
         }
     }
-
-    // We want to cancel any outstanding training when the user cancels or re-runs the query.
-    CancellationTokenSource _cancelSource = new CancellationTokenSource();
-
-    ParallelOptions CancellableParallel => new ParallelOptions { CancellationToken = _cancelSource.Token };
     // Trainer() => Util.Cleanup += (sender, args) => _cancelSource.Cancel();
 
     // object ToDump() => NeuralNetRenderer(this);

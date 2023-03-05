@@ -1,104 +1,73 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("SupplierConsumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class SupplierConsumptionType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("SupplierConsumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class SupplierConsumptionType
 {
-
-    private DescriptionType[] descriptionField;
-
-    private PartyType utilitySupplierPartyField;
-
-    private PartyType utilityCustomerPartyField;
-
     private ConsumptionType consumptionField;
-
-    private ContractType contractField;
 
     private ConsumptionLineType[] consumptionLineField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private ContractType contractField;
+
+    private DescriptionType[] descriptionField;
+
+    private PartyType utilityCustomerPartyField;
+
+    private PartyType utilitySupplierPartyField;
+
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType UtilitySupplierParty
     {
-        get
-        {
-            return this.utilitySupplierPartyField;
-        }
-        set
-        {
-            this.utilitySupplierPartyField = value;
-        }
+        get => utilitySupplierPartyField;
+        set => utilitySupplierPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType UtilityCustomerParty
     {
-        get
-        {
-            return this.utilityCustomerPartyField;
-        }
-        set
-        {
-            this.utilityCustomerPartyField = value;
-        }
+        get => utilityCustomerPartyField;
+        set => utilityCustomerPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ConsumptionType Consumption
     {
-        get
-        {
-            return this.consumptionField;
-        }
-        set
-        {
-            this.consumptionField = value;
-        }
+        get => consumptionField;
+        set => consumptionField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContractType Contract
     {
-        get
-        {
-            return this.contractField;
-        }
-        set
-        {
-            this.contractField = value;
-        }
+        get => contractField;
+        set => contractField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ConsumptionLine")]
+    /// <remarks />
+    [XmlElement("ConsumptionLine")]
     public ConsumptionLineType[] ConsumptionLine
     {
-        get
-        {
-            return this.consumptionLineField;
-        }
-        set
-        {
-            this.consumptionLineField = value;
-        }
+        get => consumptionLineField;
+        set => consumptionLineField = value;
     }
 }

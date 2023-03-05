@@ -1,36 +1,27 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("Despatch", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class DespatchType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("Despatch", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class DespatchType
 {
-
-    private IDType idField;
-
-    private RequestedDespatchDateType requestedDespatchDateField;
-
-    private RequestedDespatchTimeType requestedDespatchTimeField;
-
-    private EstimatedDespatchDateType estimatedDespatchDateField;
-
-    private EstimatedDespatchTimeType estimatedDespatchTimeField;
-
     private ActualDespatchDateType actualDespatchDateField;
 
     private ActualDespatchTimeType actualDespatchTimeField;
 
-    private GuaranteedDespatchDateType guaranteedDespatchDateField;
+    private PartyType carrierPartyField;
 
-    private GuaranteedDespatchTimeType guaranteedDespatchTimeField;
-
-    private ReleaseIDType releaseIDField;
-
-    private InstructionsType[] instructionsField;
+    private ContactType contactField;
 
     private AddressType despatchAddressField;
 
@@ -38,272 +29,172 @@ public partial class DespatchType
 
     private PartyType despatchPartyField;
 
-    private PartyType carrierPartyField;
-
-    private PartyType[] notifyPartyField;
-
-    private ContactType contactField;
+    private EstimatedDespatchDateType estimatedDespatchDateField;
 
     private PeriodType estimatedDespatchPeriodField;
 
+    private EstimatedDespatchTimeType estimatedDespatchTimeField;
+
+    private GuaranteedDespatchDateType guaranteedDespatchDateField;
+
+    private GuaranteedDespatchTimeType guaranteedDespatchTimeField;
+
+    private IDType idField;
+
+    private InstructionsType[] instructionsField;
+
+    private PartyType[] notifyPartyField;
+
+    private ReleaseIDType releaseIDField;
+
+    private RequestedDespatchDateType requestedDespatchDateField;
+
     private PeriodType requestedDespatchPeriodField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private RequestedDespatchTimeType requestedDespatchTimeField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RequestedDespatchDateType RequestedDespatchDate
     {
-        get
-        {
-            return this.requestedDespatchDateField;
-        }
-        set
-        {
-            this.requestedDespatchDateField = value;
-        }
+        get => requestedDespatchDateField;
+        set => requestedDespatchDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RequestedDespatchTimeType RequestedDespatchTime
     {
-        get
-        {
-            return this.requestedDespatchTimeField;
-        }
-        set
-        {
-            this.requestedDespatchTimeField = value;
-        }
+        get => requestedDespatchTimeField;
+        set => requestedDespatchTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EstimatedDespatchDateType EstimatedDespatchDate
     {
-        get
-        {
-            return this.estimatedDespatchDateField;
-        }
-        set
-        {
-            this.estimatedDespatchDateField = value;
-        }
+        get => estimatedDespatchDateField;
+        set => estimatedDespatchDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EstimatedDespatchTimeType EstimatedDespatchTime
     {
-        get
-        {
-            return this.estimatedDespatchTimeField;
-        }
-        set
-        {
-            this.estimatedDespatchTimeField = value;
-        }
+        get => estimatedDespatchTimeField;
+        set => estimatedDespatchTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ActualDespatchDateType ActualDespatchDate
     {
-        get
-        {
-            return this.actualDespatchDateField;
-        }
-        set
-        {
-            this.actualDespatchDateField = value;
-        }
+        get => actualDespatchDateField;
+        set => actualDespatchDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ActualDespatchTimeType ActualDespatchTime
     {
-        get
-        {
-            return this.actualDespatchTimeField;
-        }
-        set
-        {
-            this.actualDespatchTimeField = value;
-        }
+        get => actualDespatchTimeField;
+        set => actualDespatchTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public GuaranteedDespatchDateType GuaranteedDespatchDate
     {
-        get
-        {
-            return this.guaranteedDespatchDateField;
-        }
-        set
-        {
-            this.guaranteedDespatchDateField = value;
-        }
+        get => guaranteedDespatchDateField;
+        set => guaranteedDespatchDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public GuaranteedDespatchTimeType GuaranteedDespatchTime
     {
-        get
-        {
-            return this.guaranteedDespatchTimeField;
-        }
-        set
-        {
-            this.guaranteedDespatchTimeField = value;
-        }
+        get => guaranteedDespatchTimeField;
+        set => guaranteedDespatchTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReleaseIDType ReleaseID
     {
-        get
-        {
-            return this.releaseIDField;
-        }
-        set
-        {
-            this.releaseIDField = value;
-        }
+        get => releaseIDField;
+        set => releaseIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Instructions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Instructions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public InstructionsType[] Instructions
     {
-        get
-        {
-            return this.instructionsField;
-        }
-        set
-        {
-            this.instructionsField = value;
-        }
+        get => instructionsField;
+        set => instructionsField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public AddressType DespatchAddress
     {
-        get
-        {
-            return this.despatchAddressField;
-        }
-        set
-        {
-            this.despatchAddressField = value;
-        }
+        get => despatchAddressField;
+        set => despatchAddressField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 DespatchLocation
     {
-        get
-        {
-            return this.despatchLocationField;
-        }
-        set
-        {
-            this.despatchLocationField = value;
-        }
+        get => despatchLocationField;
+        set => despatchLocationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType DespatchParty
     {
-        get
-        {
-            return this.despatchPartyField;
-        }
-        set
-        {
-            this.despatchPartyField = value;
-        }
+        get => despatchPartyField;
+        set => despatchPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType CarrierParty
     {
-        get
-        {
-            return this.carrierPartyField;
-        }
-        set
-        {
-            this.carrierPartyField = value;
-        }
+        get => carrierPartyField;
+        set => carrierPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("NotifyParty")]
+    /// <remarks />
+    [XmlElement("NotifyParty")]
     public PartyType[] NotifyParty
     {
-        get
-        {
-            return this.notifyPartyField;
-        }
-        set
-        {
-            this.notifyPartyField = value;
-        }
+        get => notifyPartyField;
+        set => notifyPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContactType Contact
     {
-        get
-        {
-            return this.contactField;
-        }
-        set
-        {
-            this.contactField = value;
-        }
+        get => contactField;
+        set => contactField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType EstimatedDespatchPeriod
     {
-        get
-        {
-            return this.estimatedDespatchPeriodField;
-        }
-        set
-        {
-            this.estimatedDespatchPeriodField = value;
-        }
+        get => estimatedDespatchPeriodField;
+        set => estimatedDespatchPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType RequestedDespatchPeriod
     {
-        get
-        {
-            return this.requestedDespatchPeriodField;
-        }
-        set
-        {
-            this.requestedDespatchPeriodField = value;
-        }
+        get => requestedDespatchPeriodField;
+        set => requestedDespatchPeriodField = value;
     }
 }

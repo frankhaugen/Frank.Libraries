@@ -1,22 +1,25 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using Cronos;
+using Frank.Libraries.Time.Providers;
 
-namespace Frank.Libraries.Time.Attributes
+namespace Frank.Libraries.Time.Attributes;
+
+[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
+public class CronAttribute : ValidationAttribute
 {
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Parameter)]
-    public class CronAttribute : ValidationAttribute
+    private const string DefaultErrorMessage = "The {0} field is not a valid cron -expression";
+
+    /// <inheritdoc />
+    public override bool IsValid(object value)
     {
-        private const string DefaultErrorMessage = "The {0} field is not a valid cron -expression";
-        private readonly CronFormat _format;
+        var cronVarantParser = new CronVariantParser();
 
-        public CronAttribute(CronFormat format = CronFormat.IncludeSeconds) : base(DefaultErrorMessage) => _format = format;
-
-        /// <inheritdoc />
-        public override bool IsValid(object value)
+        if (cronVarantParser.TryParse(value.ToString() ?? string.Empty, out var _))
         {
-            var cron = value.ToString();
-            return new CronService().IsValid(cron ?? "", _format);
+            return true;
         }
+
+        ErrorMessage = string.Format(DefaultErrorMessage, value);
+        return false;
     }
 }

@@ -1,89 +1,64 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("DataObjectFormat", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class DataObjectFormatType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("DataObjectFormat", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class DataObjectFormatType
 {
-
     private string descriptionField;
-
-    private ObjectIdentifierType objectIdentifierField;
-
-    private string mimeTypeField;
 
     private string encodingField;
 
+    private string mimeTypeField;
+
+    private ObjectIdentifierType objectIdentifierField;
+
     private string objectReferenceField;
 
-    /// <remarks/>
+    /// <remarks />
     public string Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ObjectIdentifierType ObjectIdentifier
     {
-        get
-        {
-            return this.objectIdentifierField;
-        }
-        set
-        {
-            this.objectIdentifierField = value;
-        }
+        get => objectIdentifierField;
+        set => objectIdentifierField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public string MimeType
     {
-        get
-        {
-            return this.mimeTypeField;
-        }
-        set
-        {
-            this.mimeTypeField = value;
-        }
+        get => mimeTypeField;
+        set => mimeTypeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "anyURI")]
+    /// <remarks />
+    [XmlElement(DataType = "anyURI")]
     public string Encoding
     {
-        get
-        {
-            return this.encodingField;
-        }
-        set
-        {
-            this.encodingField = value;
-        }
+        get => encodingField;
+        set => encodingField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
+    /// <remarks />
+    [XmlAttribute(DataType = "anyURI")]
     public string ObjectReference
     {
-        get
-        {
-            return this.objectReferenceField;
-        }
-        set
-        {
-            this.objectReferenceField = value;
-        }
+        get => objectReferenceField;
+        set => objectReferenceField = value;
     }
 }

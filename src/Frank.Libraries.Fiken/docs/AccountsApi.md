@@ -2,13 +2,13 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetAccount**](AccountsApi.md#getaccount) | **GET** /companies/{companySlug}/accounts/{accountCode} |
-[**GetAccountBalance**](AccountsApi.md#getaccountbalance) | **
-GET** /companies/{companySlug}/accountBalances/{accountCode} |
-[**GetAccountBalances**](AccountsApi.md#getaccountbalances) | **GET** /companies/{companySlug}/accountBalances |
-[**GetAccounts**](AccountsApi.md#getaccounts) | **GET** /companies/{companySlug}/accounts |
+ Method                                                       | HTTP request                                            | Description
+--------------------------------------------------------------|---------------------------------------------------------|-------------
+ [**GetAccount**](AccountsApi.md#getaccount)                  | **GET** /companies/{companySlug}/accounts/{accountCode} |
+ [**GetAccountBalance**](AccountsApi.md#getaccountbalance)    | **
+ GET** /companies/{companySlug}/accountBalances/{accountCode} |
+ [**GetAccountBalances**](AccountsApi.md#getaccountbalances)  | **GET** /companies/{companySlug}/accountBalances        |
+ [**GetAccounts**](AccountsApi.md#getaccounts)                | **GET** /companies/{companySlug}/accounts               |
 
 <a name="getaccount"></a>
 
@@ -60,10 +60,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**accountCode** | **string**| Code number of the bookkeeping account to retrieve for the current year. |
+ Name            | Type       | Description                                                              | Notes
+-----------------|------------|--------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                              |
+ **accountCode** | **string** | Code number of the bookkeeping account to retrieve for the current year. |
 
 ### Return type
 
@@ -130,12 +130,12 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**accountCode** | **string**| Code number of the bookkeeping account to retrieve |
-**date** | **
-DateTime?**| Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  |
+ Name            | Type                                                                                                           | Description                                        | Notes
+-----------------|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------|-------
+ **companySlug** | **string**                                                                                                     | Slug of company to retrieve                        |
+ **accountCode** | **string**                                                                                                     | Code number of the bookkeeping account to retrieve |
+ **date**        | **
+ DateTime?**     | Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; |
 
 ### Return type
 
@@ -156,7 +156,8 @@ DateTime?**| Dates are represented as strings formatted as YYYY-MM-DD. Example: 
 
 # **GetAccountBalances**
 
-> List<AccountBalance> GetAccountBalances (string companySlug, DateTime? date, long? fromAccount, long? toAccount, int? page, int? pageSize)
+> List<AccountBalance> GetAccountBalances (string companySlug, DateTime? date, long? fromAccount, long? toAccount, int?
+> page, int? pageSize)
 
 
 
@@ -206,19 +207,19 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**date** | **
-DateTime?**| Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  |
-**fromAccount** | **
-long?**| Filter parameter specifying which account numbers to return. Specify using the from and to parameters (excluding subaccount). | [optional]
-**toAccount** | **
-long?**| Filter parameter specifying which account numbers to return. Specify using the from and to parameters (excluding subaccount). | [optional]
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
+ Name            | Type                                                                                                                                           | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve |
+ **date**        | **
+ DateTime?**     | Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                 |
+ **fromAccount** | **
+ long?**         | Filter parameter specifying which account numbers to return. Specify using the from and to parameters (excluding subaccount).                  | [optional]
+ **toAccount**   | **
+ long?**         | Filter parameter specifying which account numbers to return. Specify using the from and to parameters (excluding subaccount).                  | [optional]
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
 
 ### Return type
 
@@ -287,17 +288,17 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**fromAccount** | **
-long?**| Filter parameter specifying which account numbers to return. Specify using the from and to parameters (excluding subaccount). | [optional]
-**toAccount** | **
-long?**| Filter parameter specifying which account numbers to return. Specify using the from and to parameters (excluding subaccount). | [optional]
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
+ Name            | Type                                                                                                                                           | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve |
+ **fromAccount** | **
+ long?**         | Filter parameter specifying which account numbers to return. Specify using the from and to parameters (excluding subaccount).                  | [optional]
+ **toAccount**   | **
+ long?**         | Filter parameter specifying which account numbers to return. Specify using the from and to parameters (excluding subaccount).                  | [optional]
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
 
 ### Return type
 

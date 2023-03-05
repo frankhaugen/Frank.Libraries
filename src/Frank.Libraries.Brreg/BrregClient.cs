@@ -5,45 +5,55 @@ using Flurl.Http;
 using Frank.Libraries.Brreg.Models.Company;
 using Frank.Libraries.Brreg.Models.Responses.CompanyList;
 
-namespace Frank.Libraries.Brreg
+namespace Frank.Libraries.Brreg;
+
+public class BrregClient
 {
-    public class BrregClient
+    private readonly string _baseUrl = "https://data.brreg.no/enhetsregisteret/api";
+
+    private string BrregUnitsUrl() => $"{_baseUrl}/enheter";
+
+    public async Task<Company> GetCompanyAsync(long registrationNumber)
     {
-        private readonly string _baseUrl = "https://data.brreg.no/enhetsregisteret/api";
+        var url = new Url(BrregUnitsUrl());
 
-        private string BrregUnitsUrl() => $"{_baseUrl}/enheter";
+        url.AppendPathSegment(registrationNumber);
 
-        public async Task<Company> GetCompanyAsync(long registrationNumber)
+        if (registrationNumber <= 0)
         {
-            var url = new Url(BrregUnitsUrl());
-
-            url.AppendPathSegment(registrationNumber);
-
-            if (registrationNumber <= 0)
-                throw new ArgumentException("Invalid value: 'organizationNumber'", nameof(registrationNumber));
-
-            if (url is null)
-                throw new ArgumentException($"Bad url: '{url}'", nameof(url));
-
-            return await url.GetJsonAsync<Company>();
+            throw new ArgumentException("Invalid value: 'organizationNumber'", nameof(registrationNumber));
         }
 
-        public async Task<CompaniesList> SearchForLegalEntityAsync(string? companyName = null, string? town = null, int currentPage = 0, int pageSize = 20)
+        if (url is null)
         {
-            var url = new Url(BrregUnitsUrl());
-
-            if (!string.IsNullOrWhiteSpace(companyName))
-                url.QueryParams.Add("navn", companyName);
-            if (!string.IsNullOrWhiteSpace(town))
-                url.QueryParams.Add("postadresse.poststed", town);
-
-            url.QueryParams.Add("page", currentPage);
-            url.QueryParams.Add("size", pageSize);
-
-            if (url is null)
-                throw new ArgumentException($"Bad url: '{url}'", nameof(url));
-
-            return await url.GetJsonAsync<CompaniesList>();
+            throw new ArgumentException($"Bad url: '{url}'", nameof(url));
         }
+
+        return await url.GetJsonAsync<Company>();
+    }
+
+    public async Task<CompaniesList> SearchForLegalEntityAsync(string? companyName = null, string? town = null, int currentPage = 0, int pageSize = 20)
+    {
+        var url = new Url(BrregUnitsUrl());
+
+        if (!string.IsNullOrWhiteSpace(companyName))
+        {
+            url.QueryParams.Add("navn", companyName);
+        }
+
+        if (!string.IsNullOrWhiteSpace(town))
+        {
+            url.QueryParams.Add("postadresse.poststed", town);
+        }
+
+        url.QueryParams.Add("page", currentPage);
+        url.QueryParams.Add("size", pageSize);
+
+        if (url is null)
+        {
+            throw new ArgumentException($"Bad url: '{url}'", nameof(url));
+        }
+
+        return await url.GetJsonAsync<CompaniesList>();
     }
 }

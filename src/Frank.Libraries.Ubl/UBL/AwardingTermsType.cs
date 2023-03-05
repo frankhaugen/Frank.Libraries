@@ -1,188 +1,127 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AwardingTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class AwardingTermsType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AwardingTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class AwardingTermsType
 {
-
-    private WeightingAlgorithmCodeType weightingAlgorithmCodeField;
-
-    private DescriptionType[] descriptionField;
-
-    private TechnicalCommitteeDescriptionType[] technicalCommitteeDescriptionField;
-
-    private LowTendersDescriptionType[] lowTendersDescriptionField;
-
-    private PrizeIndicatorType prizeIndicatorField;
-
-    private PrizeDescriptionType[] prizeDescriptionField;
-
-    private PaymentDescriptionType[] paymentDescriptionField;
-
-    private FollowupContractIndicatorType followupContractIndicatorField;
+    private AwardingCriterionType[] awardingCriterionField;
 
     private BindingOnBuyerIndicatorType bindingOnBuyerIndicatorField;
 
-    private AwardingCriterionType[] awardingCriterionField;
+    private DescriptionType[] descriptionField;
+
+    private FollowupContractIndicatorType followupContractIndicatorField;
+
+    private LowTendersDescriptionType[] lowTendersDescriptionField;
+
+    private PaymentDescriptionType[] paymentDescriptionField;
+
+    private PrizeDescriptionType[] prizeDescriptionField;
+
+    private PrizeIndicatorType prizeIndicatorField;
+
+    private TechnicalCommitteeDescriptionType[] technicalCommitteeDescriptionField;
 
     private PersonType[] technicalCommitteePersonField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private WeightingAlgorithmCodeType weightingAlgorithmCodeField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public WeightingAlgorithmCodeType WeightingAlgorithmCode
     {
-        get
-        {
-            return this.weightingAlgorithmCodeField;
-        }
-        set
-        {
-            this.weightingAlgorithmCodeField = value;
-        }
+        get => weightingAlgorithmCodeField;
+        set => weightingAlgorithmCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TechnicalCommitteeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("TechnicalCommitteeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TechnicalCommitteeDescriptionType[] TechnicalCommitteeDescription
     {
-        get
-        {
-            return this.technicalCommitteeDescriptionField;
-        }
-        set
-        {
-            this.technicalCommitteeDescriptionField = value;
-        }
+        get => technicalCommitteeDescriptionField;
+        set => technicalCommitteeDescriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("LowTendersDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("LowTendersDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LowTendersDescriptionType[] LowTendersDescription
     {
-        get
-        {
-            return this.lowTendersDescriptionField;
-        }
-        set
-        {
-            this.lowTendersDescriptionField = value;
-        }
+        get => lowTendersDescriptionField;
+        set => lowTendersDescriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PrizeIndicatorType PrizeIndicator
     {
-        get
-        {
-            return this.prizeIndicatorField;
-        }
-        set
-        {
-            this.prizeIndicatorField = value;
-        }
+        get => prizeIndicatorField;
+        set => prizeIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PrizeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("PrizeDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PrizeDescriptionType[] PrizeDescription
     {
-        get
-        {
-            return this.prizeDescriptionField;
-        }
-        set
-        {
-            this.prizeDescriptionField = value;
-        }
+        get => prizeDescriptionField;
+        set => prizeDescriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PaymentDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("PaymentDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PaymentDescriptionType[] PaymentDescription
     {
-        get
-        {
-            return this.paymentDescriptionField;
-        }
-        set
-        {
-            this.paymentDescriptionField = value;
-        }
+        get => paymentDescriptionField;
+        set => paymentDescriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public FollowupContractIndicatorType FollowupContractIndicator
     {
-        get
-        {
-            return this.followupContractIndicatorField;
-        }
-        set
-        {
-            this.followupContractIndicatorField = value;
-        }
+        get => followupContractIndicatorField;
+        set => followupContractIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BindingOnBuyerIndicatorType BindingOnBuyerIndicator
     {
-        get
-        {
-            return this.bindingOnBuyerIndicatorField;
-        }
-        set
-        {
-            this.bindingOnBuyerIndicatorField = value;
-        }
+        get => bindingOnBuyerIndicatorField;
+        set => bindingOnBuyerIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AwardingCriterion")]
+    /// <remarks />
+    [XmlElement("AwardingCriterion")]
     public AwardingCriterionType[] AwardingCriterion
     {
-        get
-        {
-            return this.awardingCriterionField;
-        }
-        set
-        {
-            this.awardingCriterionField = value;
-        }
+        get => awardingCriterionField;
+        set => awardingCriterionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TechnicalCommitteePerson")]
+    /// <remarks />
+    [XmlElement("TechnicalCommitteePerson")]
     public PersonType[] TechnicalCommitteePerson
     {
-        get
-        {
-            return this.technicalCommitteePersonField;
-        }
-        set
-        {
-            this.technicalCommitteePersonField = value;
-        }
+        get => technicalCommitteePersonField;
+        set => technicalCommitteePersonField = value;
     }
 }

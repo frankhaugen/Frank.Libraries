@@ -1,72 +1,59 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:Reminder-2")]
-[System.Xml.Serialization.XmlRootAttribute("Reminder", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:Reminder-2", IsNullable = false)]
-public partial class ReminderType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:Reminder-2")]
+[XmlRoot("Reminder", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:Reminder-2", IsNullable = false)]
+public class ReminderType
 {
+    private AccountingCostCodeType accountingCostCodeField;
 
-    private UBLExtensionType[] uBLExtensionsField;
+    private AccountingCostType accountingCostField;
 
-    private UBLVersionIDType uBLVersionIDField;
+    private CustomerPartyType accountingCustomerPartyField;
 
-    private CustomizationIDType customizationIDField;
+    private SupplierPartyType accountingSupplierPartyField;
 
-    private ProfileIDType profileIDField;
+    private DocumentReferenceType[] additionalDocumentReferenceField;
 
-    private ProfileExecutionIDType profileExecutionIDField;
-
-    private IDType idField;
+    private AllowanceChargeType[] allowanceChargeField;
 
     private CopyIndicatorType copyIndicatorField;
 
-    private UUIDType uUIDField;
+    private CustomizationIDType customizationIDField;
+
+    private DocumentCurrencyCodeType documentCurrencyCodeField;
+
+    private IDType idField;
 
     private IssueDateType issueDateField;
 
     private IssueTimeType issueTimeField;
 
-    private ReminderTypeCodeType reminderTypeCodeField;
-
-    private ReminderSequenceNumericType reminderSequenceNumericField;
-
-    private NoteType[] noteField;
-
-    private TaxPointDateType taxPointDateField;
-
-    private DocumentCurrencyCodeType documentCurrencyCodeField;
-
-    private TaxCurrencyCodeType taxCurrencyCodeField;
-
-    private PricingCurrencyCodeType pricingCurrencyCodeField;
-
-    private PaymentCurrencyCodeType paymentCurrencyCodeField;
-
-    private PaymentAlternativeCurrencyCodeType paymentAlternativeCurrencyCodeField;
-
-    private AccountingCostCodeType accountingCostCodeField;
-
-    private AccountingCostType accountingCostField;
+    private MonetaryTotalType legalMonetaryTotalField;
 
     private LineCountNumericType lineCountNumericField;
 
-    private PeriodType[] reminderPeriodField;
-
-    private DocumentReferenceType[] additionalDocumentReferenceField;
-
-    private SignatureType[] signatureField;
-
-    private SupplierPartyType accountingSupplierPartyField;
-
-    private CustomerPartyType accountingCustomerPartyField;
+    private NoteType[] noteField;
 
     private PartyType payeePartyField;
 
-    private PartyType taxRepresentativePartyField;
+    private PaymentAlternativeCurrencyCodeType paymentAlternativeCurrencyCodeField;
+
+    private ExchangeRateType paymentAlternativeExchangeRateField;
+
+    private PaymentCurrencyCodeType paymentCurrencyCodeField;
+
+    private ExchangeRateType paymentExchangeRateField;
 
     private PaymentMeansType[] paymentMeansField;
 
@@ -74,580 +61,358 @@ public partial class ReminderType
 
     private PaymentType[] prepaidPaymentField;
 
-    private AllowanceChargeType[] allowanceChargeField;
-
-    private ExchangeRateType taxExchangeRateField;
+    private PricingCurrencyCodeType pricingCurrencyCodeField;
 
     private ExchangeRateType pricingExchangeRateField;
 
-    private ExchangeRateType paymentExchangeRateField;
+    private ProfileExecutionIDType profileExecutionIDField;
 
-    private ExchangeRateType paymentAlternativeExchangeRateField;
-
-    private TaxTotalType[] taxTotalField;
-
-    private MonetaryTotalType legalMonetaryTotalField;
+    private ProfileIDType profileIDField;
 
     private ReminderLineType[] reminderLineField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
-    [System.Xml.Serialization.XmlArrayItemAttribute("UBLExtension", IsNullable = false)]
+    private PeriodType[] reminderPeriodField;
+
+    private ReminderSequenceNumericType reminderSequenceNumericField;
+
+    private ReminderTypeCodeType reminderTypeCodeField;
+
+    private SignatureType[] signatureField;
+
+    private TaxCurrencyCodeType taxCurrencyCodeField;
+
+    private ExchangeRateType taxExchangeRateField;
+
+    private TaxPointDateType taxPointDateField;
+
+    private PartyType taxRepresentativePartyField;
+
+    private TaxTotalType[] taxTotalField;
+
+    private UBLExtensionType[] uBLExtensionsField;
+
+    private UBLVersionIDType uBLVersionIDField;
+
+    private UUIDType uUIDField;
+
+    /// <remarks />
+    [XmlArray(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlArrayItem("UBLExtension", IsNullable = false)]
     public UBLExtensionType[] UBLExtensions
     {
-        get
-        {
-            return this.uBLExtensionsField;
-        }
-        set
-        {
-            this.uBLExtensionsField = value;
-        }
+        get => uBLExtensionsField;
+        set => uBLExtensionsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UBLVersionIDType UBLVersionID
     {
-        get
-        {
-            return this.uBLVersionIDField;
-        }
-        set
-        {
-            this.uBLVersionIDField = value;
-        }
+        get => uBLVersionIDField;
+        set => uBLVersionIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CustomizationIDType CustomizationID
     {
-        get
-        {
-            return this.customizationIDField;
-        }
-        set
-        {
-            this.customizationIDField = value;
-        }
+        get => customizationIDField;
+        set => customizationIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProfileIDType ProfileID
     {
-        get
-        {
-            return this.profileIDField;
-        }
-        set
-        {
-            this.profileIDField = value;
-        }
+        get => profileIDField;
+        set => profileIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProfileExecutionIDType ProfileExecutionID
     {
-        get
-        {
-            return this.profileExecutionIDField;
-        }
-        set
-        {
-            this.profileExecutionIDField = value;
-        }
+        get => profileExecutionIDField;
+        set => profileExecutionIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CopyIndicatorType CopyIndicator
     {
-        get
-        {
-            return this.copyIndicatorField;
-        }
-        set
-        {
-            this.copyIndicatorField = value;
-        }
+        get => copyIndicatorField;
+        set => copyIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UUIDType UUID
     {
-        get
-        {
-            return this.uUIDField;
-        }
-        set
-        {
-            this.uUIDField = value;
-        }
+        get => uUIDField;
+        set => uUIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IssueDateType IssueDate
     {
-        get
-        {
-            return this.issueDateField;
-        }
-        set
-        {
-            this.issueDateField = value;
-        }
+        get => issueDateField;
+        set => issueDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IssueTimeType IssueTime
     {
-        get
-        {
-            return this.issueTimeField;
-        }
-        set
-        {
-            this.issueTimeField = value;
-        }
+        get => issueTimeField;
+        set => issueTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReminderTypeCodeType ReminderTypeCode
     {
-        get
-        {
-            return this.reminderTypeCodeField;
-        }
-        set
-        {
-            this.reminderTypeCodeField = value;
-        }
+        get => reminderTypeCodeField;
+        set => reminderTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReminderSequenceNumericType ReminderSequenceNumeric
     {
-        get
-        {
-            return this.reminderSequenceNumericField;
-        }
-        set
-        {
-            this.reminderSequenceNumericField = value;
-        }
+        get => reminderSequenceNumericField;
+        set => reminderSequenceNumericField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxPointDateType TaxPointDate
     {
-        get
-        {
-            return this.taxPointDateField;
-        }
-        set
-        {
-            this.taxPointDateField = value;
-        }
+        get => taxPointDateField;
+        set => taxPointDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DocumentCurrencyCodeType DocumentCurrencyCode
     {
-        get
-        {
-            return this.documentCurrencyCodeField;
-        }
-        set
-        {
-            this.documentCurrencyCodeField = value;
-        }
+        get => documentCurrencyCodeField;
+        set => documentCurrencyCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxCurrencyCodeType TaxCurrencyCode
     {
-        get
-        {
-            return this.taxCurrencyCodeField;
-        }
-        set
-        {
-            this.taxCurrencyCodeField = value;
-        }
+        get => taxCurrencyCodeField;
+        set => taxCurrencyCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PricingCurrencyCodeType PricingCurrencyCode
     {
-        get
-        {
-            return this.pricingCurrencyCodeField;
-        }
-        set
-        {
-            this.pricingCurrencyCodeField = value;
-        }
+        get => pricingCurrencyCodeField;
+        set => pricingCurrencyCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PaymentCurrencyCodeType PaymentCurrencyCode
     {
-        get
-        {
-            return this.paymentCurrencyCodeField;
-        }
-        set
-        {
-            this.paymentCurrencyCodeField = value;
-        }
+        get => paymentCurrencyCodeField;
+        set => paymentCurrencyCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PaymentAlternativeCurrencyCodeType PaymentAlternativeCurrencyCode
     {
-        get
-        {
-            return this.paymentAlternativeCurrencyCodeField;
-        }
-        set
-        {
-            this.paymentAlternativeCurrencyCodeField = value;
-        }
+        get => paymentAlternativeCurrencyCodeField;
+        set => paymentAlternativeCurrencyCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AccountingCostCodeType AccountingCostCode
     {
-        get
-        {
-            return this.accountingCostCodeField;
-        }
-        set
-        {
-            this.accountingCostCodeField = value;
-        }
+        get => accountingCostCodeField;
+        set => accountingCostCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AccountingCostType AccountingCost
     {
-        get
-        {
-            return this.accountingCostField;
-        }
-        set
-        {
-            this.accountingCostField = value;
-        }
+        get => accountingCostField;
+        set => accountingCostField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineCountNumericType LineCountNumeric
     {
-        get
-        {
-            return this.lineCountNumericField;
-        }
-        set
-        {
-            this.lineCountNumericField = value;
-        }
+        get => lineCountNumericField;
+        set => lineCountNumericField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ReminderPeriod", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("ReminderPeriod", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public PeriodType[] ReminderPeriod
     {
-        get
-        {
-            return this.reminderPeriodField;
-        }
-        set
-        {
-            this.reminderPeriodField = value;
-        }
+        get => reminderPeriodField;
+        set => reminderPeriodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalDocumentReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("AdditionalDocumentReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public DocumentReferenceType[] AdditionalDocumentReference
     {
-        get
-        {
-            return this.additionalDocumentReferenceField;
-        }
-        set
-        {
-            this.additionalDocumentReferenceField = value;
-        }
+        get => additionalDocumentReferenceField;
+        set => additionalDocumentReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public SignatureType[] Signature
     {
-        get
-        {
-            return this.signatureField;
-        }
-        set
-        {
-            this.signatureField = value;
-        }
+        get => signatureField;
+        set => signatureField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public SupplierPartyType AccountingSupplierParty
     {
-        get
-        {
-            return this.accountingSupplierPartyField;
-        }
-        set
-        {
-            this.accountingSupplierPartyField = value;
-        }
+        get => accountingSupplierPartyField;
+        set => accountingSupplierPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public CustomerPartyType AccountingCustomerParty
     {
-        get
-        {
-            return this.accountingCustomerPartyField;
-        }
-        set
-        {
-            this.accountingCustomerPartyField = value;
-        }
+        get => accountingCustomerPartyField;
+        set => accountingCustomerPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public PartyType PayeeParty
     {
-        get
-        {
-            return this.payeePartyField;
-        }
-        set
-        {
-            this.payeePartyField = value;
-        }
+        get => payeePartyField;
+        set => payeePartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public PartyType TaxRepresentativeParty
     {
-        get
-        {
-            return this.taxRepresentativePartyField;
-        }
-        set
-        {
-            this.taxRepresentativePartyField = value;
-        }
+        get => taxRepresentativePartyField;
+        set => taxRepresentativePartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PaymentMeans", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("PaymentMeans", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public PaymentMeansType[] PaymentMeans
     {
-        get
-        {
-            return this.paymentMeansField;
-        }
-        set
-        {
-            this.paymentMeansField = value;
-        }
+        get => paymentMeansField;
+        set => paymentMeansField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PaymentTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("PaymentTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public PaymentTermsType[] PaymentTerms
     {
-        get
-        {
-            return this.paymentTermsField;
-        }
-        set
-        {
-            this.paymentTermsField = value;
-        }
+        get => paymentTermsField;
+        set => paymentTermsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PrepaidPayment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("PrepaidPayment", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public PaymentType[] PrepaidPayment
     {
-        get
-        {
-            return this.prepaidPaymentField;
-        }
-        set
-        {
-            this.prepaidPaymentField = value;
-        }
+        get => prepaidPaymentField;
+        set => prepaidPaymentField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("AllowanceCharge", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public AllowanceChargeType[] AllowanceCharge
     {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-        set
-        {
-            this.allowanceChargeField = value;
-        }
+        get => allowanceChargeField;
+        set => allowanceChargeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public ExchangeRateType TaxExchangeRate
     {
-        get
-        {
-            return this.taxExchangeRateField;
-        }
-        set
-        {
-            this.taxExchangeRateField = value;
-        }
+        get => taxExchangeRateField;
+        set => taxExchangeRateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public ExchangeRateType PricingExchangeRate
     {
-        get
-        {
-            return this.pricingExchangeRateField;
-        }
-        set
-        {
-            this.pricingExchangeRateField = value;
-        }
+        get => pricingExchangeRateField;
+        set => pricingExchangeRateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public ExchangeRateType PaymentExchangeRate
     {
-        get
-        {
-            return this.paymentExchangeRateField;
-        }
-        set
-        {
-            this.paymentExchangeRateField = value;
-        }
+        get => paymentExchangeRateField;
+        set => paymentExchangeRateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public ExchangeRateType PaymentAlternativeExchangeRate
     {
-        get
-        {
-            return this.paymentAlternativeExchangeRateField;
-        }
-        set
-        {
-            this.paymentAlternativeExchangeRateField = value;
-        }
+        get => paymentAlternativeExchangeRateField;
+        set => paymentAlternativeExchangeRateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("TaxTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public TaxTotalType[] TaxTotal
     {
-        get
-        {
-            return this.taxTotalField;
-        }
-        set
-        {
-            this.taxTotalField = value;
-        }
+        get => taxTotalField;
+        set => taxTotalField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public MonetaryTotalType LegalMonetaryTotal
     {
-        get
-        {
-            return this.legalMonetaryTotalField;
-        }
-        set
-        {
-            this.legalMonetaryTotalField = value;
-        }
+        get => legalMonetaryTotalField;
+        set => legalMonetaryTotalField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ReminderLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("ReminderLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public ReminderLineType[] ReminderLine
     {
-        get
-        {
-            return this.reminderLineField;
-        }
-        set
-        {
-            this.reminderLineField = value;
-        }
+        get => reminderLineField;
+        set => reminderLineField = value;
     }
 }

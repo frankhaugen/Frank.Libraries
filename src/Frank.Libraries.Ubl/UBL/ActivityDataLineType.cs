@@ -1,135 +1,92 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ActivityDataLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ActivityDataLineType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ActivityDataLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ActivityDataLineType
 {
-
-    private IDType idField;
-
-    private SupplyChainActivityTypeCodeType supplyChainActivityTypeCodeField;
-
-    private CustomerPartyType buyerCustomerPartyField;
-
-    private SupplierPartyType sellerSupplierPartyField;
-
-    private PeriodType activityPeriodField;
+    private LocationType1 activityFinalLocationField;
 
     private LocationType1 activityOriginLocationField;
 
-    private LocationType1 activityFinalLocationField;
+    private PeriodType activityPeriodField;
+
+    private CustomerPartyType buyerCustomerPartyField;
+
+    private IDType idField;
 
     private SalesItemType[] salesItemField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private SupplierPartyType sellerSupplierPartyField;
+
+    private SupplyChainActivityTypeCodeType supplyChainActivityTypeCodeField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SupplyChainActivityTypeCodeType SupplyChainActivityTypeCode
     {
-        get
-        {
-            return this.supplyChainActivityTypeCodeField;
-        }
-        set
-        {
-            this.supplyChainActivityTypeCodeField = value;
-        }
+        get => supplyChainActivityTypeCodeField;
+        set => supplyChainActivityTypeCodeField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CustomerPartyType BuyerCustomerParty
     {
-        get
-        {
-            return this.buyerCustomerPartyField;
-        }
-        set
-        {
-            this.buyerCustomerPartyField = value;
-        }
+        get => buyerCustomerPartyField;
+        set => buyerCustomerPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public SupplierPartyType SellerSupplierParty
     {
-        get
-        {
-            return this.sellerSupplierPartyField;
-        }
-        set
-        {
-            this.sellerSupplierPartyField = value;
-        }
+        get => sellerSupplierPartyField;
+        set => sellerSupplierPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType ActivityPeriod
     {
-        get
-        {
-            return this.activityPeriodField;
-        }
-        set
-        {
-            this.activityPeriodField = value;
-        }
+        get => activityPeriodField;
+        set => activityPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 ActivityOriginLocation
     {
-        get
-        {
-            return this.activityOriginLocationField;
-        }
-        set
-        {
-            this.activityOriginLocationField = value;
-        }
+        get => activityOriginLocationField;
+        set => activityOriginLocationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 ActivityFinalLocation
     {
-        get
-        {
-            return this.activityFinalLocationField;
-        }
-        set
-        {
-            this.activityFinalLocationField = value;
-        }
+        get => activityFinalLocationField;
+        set => activityFinalLocationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SalesItem")]
+    /// <remarks />
+    [XmlElement("SalesItem")]
     public SalesItemType[] SalesItem
     {
-        get
-        {
-            return this.salesItemField;
-        }
-        set
-        {
-            this.salesItemField = value;
-        }
+        get => salesItemField;
+        set => salesItemField = value;
     }
 }

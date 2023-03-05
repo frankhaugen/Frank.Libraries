@@ -274,388 +274,388 @@ namespace Example
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-| Class                                                                                                           | Method                                                                                      | HTTP request                                             | Description |
-|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|----------------------------------------------------------|-------------|
+| Class                                                                                                           | Method | HTTP request | Description |
+|-----------------------------------------------------------------------------------------------------------------|--------|--------------|-------------|
 | *AccountsApi*                                                                                                   | [**
-GetAccount**](docs/AccountsApi.md#getaccount)                                            | **                                                       |             |
-| GET** /companies/{companySlug}/accounts/{accountCode}                                                           |                                                                                             |                                                          |             |
+ GetAccount**](docs/AccountsApi.md#getaccount)                                                                   | **     |              |
+| GET** /companies/{companySlug}/accounts/{accountCode}                                                           |        |              |             |
 | *AccountsApi*                                                                                                   | [**
-GetAccountBalance**](docs/AccountsApi.md#getaccountbalance)                              | **                                                       |             |
-| GET** /companies/{companySlug}/accountBalances/{accountCode}                                                    |                                                                                             |                                                          |             |
+ GetAccountBalance**](docs/AccountsApi.md#getaccountbalance)                                                     | **     |              |
+| GET** /companies/{companySlug}/accountBalances/{accountCode}                                                    |        |              |             |
 | *AccountsApi*                                                                                                   | [**
-GetAccountBalances**](docs/AccountsApi.md#getaccountbalances)                            | **                                                       |             |
-| GET** /companies/{companySlug}/accountBalances                                                                  |                                                                                             |                                                          |             |
+ GetAccountBalances**](docs/AccountsApi.md#getaccountbalances)                                                   | **     |              |
+| GET** /companies/{companySlug}/accountBalances                                                                  |        |              |             |
 | *AccountsApi*                                                                                                   | [**
-GetAccounts**](docs/AccountsApi.md#getaccounts)                                          | **
-GET** /companies/{companySlug}/accounts                |             |
+ GetAccounts**](docs/AccountsApi.md#getaccounts)                                                                 | **
+ GET** /companies/{companySlug}/accounts                                                                         |        |
 | *BankAccountsApi*                                                                                               | [**
-CreateBankAccount**](docs/BankAccountsApi.md#createbankaccount)                          | **                                                       |             |
-| POST** /companies/{companySlug}/bankAccounts                                                                    |                                                                                             |                                                          |             |
+ CreateBankAccount**](docs/BankAccountsApi.md#createbankaccount)                                                 | **     |              |
+| POST** /companies/{companySlug}/bankAccounts                                                                    |        |              |             |
 | *BankAccountsApi*                                                                                               | [**
-GetBankAccount**](docs/BankAccountsApi.md#getbankaccount)                                | **                                                       |             |
-| GET** /companies/{companySlug}/bankAccounts/{bankAccountId}                                                     |                                                                                             |                                                          |             |
+ GetBankAccount**](docs/BankAccountsApi.md#getbankaccount)                                                       | **     |              |
+| GET** /companies/{companySlug}/bankAccounts/{bankAccountId}                                                     |        |              |             |
 | *BankAccountsApi*                                                                                               | [**
-GetBankAccounts**](docs/BankAccountsApi.md#getbankaccounts)                              | **                                                       |             |
-| GET** /companies/{companySlug}/bankAccounts                                                                     |                                                                                             |                                                          |             |
+ GetBankAccounts**](docs/BankAccountsApi.md#getbankaccounts)                                                     | **     |              |
+| GET** /companies/{companySlug}/bankAccounts                                                                     |        |              |             |
 | *CompaniesApi*                                                                                                  | [**
-GetCompanies**](docs/CompaniesApi.md#getcompanies)                                       | **
-GET** /companies                                       |             |
+ GetCompanies**](docs/CompaniesApi.md#getcompanies)                                                              | **
+ GET** /companies                                                                                                |        |
 | *CompaniesApi*                                                                                                  | [**
-GetCompany**](docs/CompaniesApi.md#getcompany)                                           | **
-GET** /companies/{companySlug}                         |             |
+ GetCompany**](docs/CompaniesApi.md#getcompany)                                                                  | **
+ GET** /companies/{companySlug}                                                                                  |        |
 | *ContactsApi*                                                                                                   | [**
-AddAttachmentToContact**](docs/ContactsApi.md#addattachmenttocontact)                    | **                                                       |             |
-| POST** /companies/{companySlug}/contacts/{contactId}/attachments                                                |                                                                                             |                                                          |             |
+ AddAttachmentToContact**](docs/ContactsApi.md#addattachmenttocontact)                                           | **     |              |
+| POST** /companies/{companySlug}/contacts/{contactId}/attachments                                                |        |              |             |
 | *ContactsApi*                                                                                                   | [**
-AddContactPersonToContact**](docs/ContactsApi.md#addcontactpersontocontact)              | **                                                       |             |
-| POST** /companies/{companySlug}/contacts/{contactId}/contactPerson                                              |                                                                                             |                                                          |             |
+ AddContactPersonToContact**](docs/ContactsApi.md#addcontactpersontocontact)                                     | **     |              |
+| POST** /companies/{companySlug}/contacts/{contactId}/contactPerson                                              |        |              |             |
 | *ContactsApi*                                                                                                   | [**
-CreateContact**](docs/ContactsApi.md#createcontact)                                      | **
-POST** /companies/{companySlug}/contacts               |             |
+ CreateContact**](docs/ContactsApi.md#createcontact)                                                             | **
+ POST** /companies/{companySlug}/contacts                                                                        |        |
 | *ContactsApi*                                                                                                   | [**
-DeleteContactContactPerson**](docs/ContactsApi.md#deletecontactcontactperson)            | **                                                       |             |
-| DELETE** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId}                          |                                                                                             |                                                          |             |
+ DeleteContactContactPerson**](docs/ContactsApi.md#deletecontactcontactperson)                                   | **     |              |
+| DELETE** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId}                          |        |              |             |
 | *ContactsApi*                                                                                                   | [**
-GetContact**](docs/ContactsApi.md#getcontact)                                            | **                                                       |             |
-| GET** /companies/{companySlug}/contacts/{contactId}                                                             |                                                                                             |                                                          |             |
+ GetContact**](docs/ContactsApi.md#getcontact)                                                                   | **     |              |
+| GET** /companies/{companySlug}/contacts/{contactId}                                                             |        |              |             |
 | *ContactsApi*                                                                                                   | [**
-GetContactContactPerson**](docs/ContactsApi.md#getcontactcontactperson)                  | **                                                       |             |
-| GET** /companies/{companySlug}/contacts/{contactId}/contactPerson                                               |                                                                                             |                                                          |             |
+ GetContactContactPerson**](docs/ContactsApi.md#getcontactcontactperson)                                         | **     |              |
+| GET** /companies/{companySlug}/contacts/{contactId}/contactPerson                                               |        |              |             |
 | *ContactsApi*                                                                                                   | [**
-GetContactPerson**](docs/ContactsApi.md#getcontactperson)                                | **                                                       |             |
-| GET** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId}                             |                                                                                             |                                                          |             |
+ GetContactPerson**](docs/ContactsApi.md#getcontactperson)                                                       | **     |              |
+| GET** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId}                             |        |              |             |
 | *ContactsApi*                                                                                                   | [**
-GetContacts**](docs/ContactsApi.md#getcontacts)                                          | **
-GET** /companies/{companySlug}/contacts                |             |
+ GetContacts**](docs/ContactsApi.md#getcontacts)                                                                 | **
+ GET** /companies/{companySlug}/contacts                                                                         |        |
 | *ContactsApi*                                                                                                   | [**
-UpdateContact**](docs/ContactsApi.md#updatecontact)                                      | **                                                       |             |
-| PUT** /companies/{companySlug}/contacts/{contactId}                                                             |                                                                                             |                                                          |             |
+ UpdateContact**](docs/ContactsApi.md#updatecontact)                                                             | **     |              |
+| PUT** /companies/{companySlug}/contacts/{contactId}                                                             |        |              |             |
 | *ContactsApi*                                                                                                   | [**
-UpdateContactContactPerson**](docs/ContactsApi.md#updatecontactcontactperson)            | **                                                       |             |
-| PUT** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId}                             |                                                                                             |                                                          |             |
+ UpdateContactContactPerson**](docs/ContactsApi.md#updatecontactcontactperson)                                   | **     |              |
+| PUT** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId}                             |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-AddAttachmentToCreditNoteDraft**](docs/CreditNotesApi.md#addattachmenttocreditnotedraft) | **                                                       |             |
-| POST** /companies/{companySlug}/creditNotes/drafts/{draftId}/attachments                                        |                                                                                             |                                                          |             |
+ AddAttachmentToCreditNoteDraft**](docs/CreditNotesApi.md#addattachmenttocreditnotedraft)                        | **     |              |
+| POST** /companies/{companySlug}/creditNotes/drafts/{draftId}/attachments                                        |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-CreateCreditNoteDraft**](docs/CreditNotesApi.md#createcreditnotedraft)                   | **                                                       |             |
-| POST** /companies/{companySlug}/creditNotes/drafts                                                              |                                                                                             |                                                          |             |
+ CreateCreditNoteDraft**](docs/CreditNotesApi.md#createcreditnotedraft)                                          | **     |              |
+| POST** /companies/{companySlug}/creditNotes/drafts                                                              |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-CreateCreditNoteFromDraft**](docs/CreditNotesApi.md#createcreditnotefromdraft)           | **                                                       |             |
-| POST** /companies/{companySlug}/creditNotes/drafts/{draftId}/createCreditNote                                   |                                                                                             |                                                          |             |
+ CreateCreditNoteFromDraft**](docs/CreditNotesApi.md#createcreditnotefromdraft)                                  | **     |              |
+| POST** /companies/{companySlug}/creditNotes/drafts/{draftId}/createCreditNote                                   |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-CreateFullCreditNote**](docs/CreditNotesApi.md#createfullcreditnote)                     | **                                                       |             |
-| POST** /companies/{companySlug}/creditNotes/full                                                                |                                                                                             |                                                          |             |
+ CreateFullCreditNote**](docs/CreditNotesApi.md#createfullcreditnote)                                            | **     |              |
+| POST** /companies/{companySlug}/creditNotes/full                                                                |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-CreatePartialCreditNote**](docs/CreditNotesApi.md#createpartialcreditnote)               | **                                                       |             |
-| POST** /companies/{companySlug}/creditNotes/partial                                                             |                                                                                             |                                                          |             |
+ CreatePartialCreditNote**](docs/CreditNotesApi.md#createpartialcreditnote)                                      | **     |              |
+| POST** /companies/{companySlug}/creditNotes/partial                                                             |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-DeleteCreditNoteDraft**](docs/CreditNotesApi.md#deletecreditnotedraft)                   | **                                                       |             |
-| DELETE** /companies/{companySlug}/creditNotes/drafts/{draftId}                                                  |                                                                                             |                                                          |             |
+ DeleteCreditNoteDraft**](docs/CreditNotesApi.md#deletecreditnotedraft)                                          | **     |              |
+| DELETE** /companies/{companySlug}/creditNotes/drafts/{draftId}                                                  |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-GetCreditNote**](docs/CreditNotesApi.md#getcreditnote)                                   | **                                                       |             |
-| GET** /companies/{companySlug}/creditNotes/{creditNoteId}                                                       |                                                                                             |                                                          |             |
+ GetCreditNote**](docs/CreditNotesApi.md#getcreditnote)                                                          | **     |              |
+| GET** /companies/{companySlug}/creditNotes/{creditNoteId}                                                       |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-GetCreditNoteDraft**](docs/CreditNotesApi.md#getcreditnotedraft)                         | **                                                       |             |
-| GET** /companies/{companySlug}/creditNotes/drafts/{draftId}                                                     |                                                                                             |                                                          |             |
+ GetCreditNoteDraft**](docs/CreditNotesApi.md#getcreditnotedraft)                                                | **     |              |
+| GET** /companies/{companySlug}/creditNotes/drafts/{draftId}                                                     |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-GetCreditNoteDraftAttachments**](docs/CreditNotesApi.md#getcreditnotedraftattachments)   | **                                                       |             |
-| GET** /companies/{companySlug}/creditNotes/drafts/{draftId}/attachments                                         |                                                                                             |                                                          |             |
+ GetCreditNoteDraftAttachments**](docs/CreditNotesApi.md#getcreditnotedraftattachments)                          | **     |              |
+| GET** /companies/{companySlug}/creditNotes/drafts/{draftId}/attachments                                         |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-GetCreditNoteDrafts**](docs/CreditNotesApi.md#getcreditnotedrafts)                       | **                                                       |             |
-| GET** /companies/{companySlug}/creditNotes/drafts                                                               |                                                                                             |                                                          |             |
+ GetCreditNoteDrafts**](docs/CreditNotesApi.md#getcreditnotedrafts)                                              | **     |              |
+| GET** /companies/{companySlug}/creditNotes/drafts                                                               |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-GetCreditNotes**](docs/CreditNotesApi.md#getcreditnotes)                                 | **                                                       |             |
-| GET** /companies/{companySlug}/creditNotes                                                                      |                                                                                             |                                                          |             |
+ GetCreditNotes**](docs/CreditNotesApi.md#getcreditnotes)                                                        | **     |              |
+| GET** /companies/{companySlug}/creditNotes                                                                      |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-SendCreditNote**](docs/CreditNotesApi.md#sendcreditnote)                                 | **                                                       |             |
-| POST** /companies/{companySlug}/creditNotes/send                                                                |                                                                                             |                                                          |             |
+ SendCreditNote**](docs/CreditNotesApi.md#sendcreditnote)                                                        | **     |              |
+| POST** /companies/{companySlug}/creditNotes/send                                                                |        |              |             |
 | *CreditNotesApi*                                                                                                | [**
-UpdateCreditNoteDraft**](docs/CreditNotesApi.md#updatecreditnotedraft)                   | **                                                       |             |
-| PUT** /companies/{companySlug}/creditNotes/drafts/{draftId}                                                     |                                                                                             |                                                          |             |
+ UpdateCreditNoteDraft**](docs/CreditNotesApi.md#updatecreditnotedraft)                                          | **     |              |
+| PUT** /companies/{companySlug}/creditNotes/drafts/{draftId}                                                     |        |              |             |
 | *GroupsApi*                                                                                                     | [**
-GetGroups**](docs/GroupsApi.md#getgroups)                                                | **
-GET** /companies/{companySlug}/groups                  |             |
+ GetGroups**](docs/GroupsApi.md#getgroups)                                                                       | **
+ GET** /companies/{companySlug}/groups                                                                           |        |
 | *InboxApi*                                                                                                      | [**
-CreateInboxDocument**](docs/InboxApi.md#createinboxdocument)                             | **
-POST** /companies/{companySlug}/inbox                  |             |
+ CreateInboxDocument**](docs/InboxApi.md#createinboxdocument)                                                    | **
+ POST** /companies/{companySlug}/inbox                                                                           |        |
 | *InboxApi*                                                                                                      | [**
-GetInbox**](docs/InboxApi.md#getinbox)                                                   | **
-GET** /companies/{companySlug}/inbox                   |             |
+ GetInbox**](docs/InboxApi.md#getinbox)                                                                          | **
+ GET** /companies/{companySlug}/inbox                                                                            |        |
 | *InboxApi*                                                                                                      | [**
-GetInboxDocument**](docs/InboxApi.md#getinboxdocument)                                   | **                                                       |             |
-| GET** /companies/{companySlug}/inbox/{inboxDocumentId}                                                          |                                                                                             |                                                          |             |
+ GetInboxDocument**](docs/InboxApi.md#getinboxdocument)                                                          | **     |              |
+| GET** /companies/{companySlug}/inbox/{inboxDocumentId}                                                          |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-AddAttachmentToInvoice**](docs/InvoicesApi.md#addattachmenttoinvoice)                    | **                                                       |             |
-| POST** /companies/{companySlug}/invoices/{invoiceId}/attachments                                                |                                                                                             |                                                          |             |
+ AddAttachmentToInvoice**](docs/InvoicesApi.md#addattachmenttoinvoice)                                           | **     |              |
+| POST** /companies/{companySlug}/invoices/{invoiceId}/attachments                                                |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-AddAttachmentToInvoiceDraft**](docs/InvoicesApi.md#addattachmenttoinvoicedraft)          | **                                                       |             |
-| POST** /companies/{companySlug}/invoices/drafts/{draftId}/attachments                                           |                                                                                             |                                                          |             |
+ AddAttachmentToInvoiceDraft**](docs/InvoicesApi.md#addattachmenttoinvoicedraft)                                 | **     |              |
+| POST** /companies/{companySlug}/invoices/drafts/{draftId}/attachments                                           |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-CreateInvoice**](docs/InvoicesApi.md#createinvoice)                                      | **
-POST** /companies/{companySlug}/invoices               |             |
+ CreateInvoice**](docs/InvoicesApi.md#createinvoice)                                                             | **
+ POST** /companies/{companySlug}/invoices                                                                        |        |
 | *InvoicesApi*                                                                                                   | [**
-CreateInvoiceDraft**](docs/InvoicesApi.md#createinvoicedraft)                            | **                                                       |             |
-| POST** /companies/{companySlug}/invoices/drafts                                                                 |                                                                                             |                                                          |             |
+ CreateInvoiceDraft**](docs/InvoicesApi.md#createinvoicedraft)                                                   | **     |              |
+| POST** /companies/{companySlug}/invoices/drafts                                                                 |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-CreateInvoiceFromDraft**](docs/InvoicesApi.md#createinvoicefromdraft)                    | **                                                       |             |
-| POST** /companies/{companySlug}/invoices/drafts/{draftId}/createInvoice                                         |                                                                                             |                                                          |             |
+ CreateInvoiceFromDraft**](docs/InvoicesApi.md#createinvoicefromdraft)                                           | **     |              |
+| POST** /companies/{companySlug}/invoices/drafts/{draftId}/createInvoice                                         |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-DeleteInvoiceDraft**](docs/InvoicesApi.md#deleteinvoicedraft)                            | **                                                       |             |
-| DELETE** /companies/{companySlug}/invoices/drafts/{draftId}                                                     |                                                                                             |                                                          |             |
+ DeleteInvoiceDraft**](docs/InvoicesApi.md#deleteinvoicedraft)                                                   | **     |              |
+| DELETE** /companies/{companySlug}/invoices/drafts/{draftId}                                                     |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-GetInvoice**](docs/InvoicesApi.md#getinvoice)                                            | **                                                       |             |
-| GET** /companies/{companySlug}/invoices/{invoiceId}                                                             |                                                                                             |                                                          |             |
+ GetInvoice**](docs/InvoicesApi.md#getinvoice)                                                                   | **     |              |
+| GET** /companies/{companySlug}/invoices/{invoiceId}                                                             |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-GetInvoiceAttachments**](docs/InvoicesApi.md#getinvoiceattachments)                      | **                                                       |             |
-| GET** /companies/{companySlug}/invoices/{invoiceId}/attachments                                                 |                                                                                             |                                                          |             |
+ GetInvoiceAttachments**](docs/InvoicesApi.md#getinvoiceattachments)                                             | **     |              |
+| GET** /companies/{companySlug}/invoices/{invoiceId}/attachments                                                 |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-GetInvoiceDraft**](docs/InvoicesApi.md#getinvoicedraft)                                  | **                                                       |             |
-| GET** /companies/{companySlug}/invoices/drafts/{draftId}                                                        |                                                                                             |                                                          |             |
+ GetInvoiceDraft**](docs/InvoicesApi.md#getinvoicedraft)                                                         | **     |              |
+| GET** /companies/{companySlug}/invoices/drafts/{draftId}                                                        |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-GetInvoiceDraftAttachments**](docs/InvoicesApi.md#getinvoicedraftattachments)            | **                                                       |             |
-| GET** /companies/{companySlug}/invoices/drafts/{draftId}/attachments                                            |                                                                                             |                                                          |             |
+ GetInvoiceDraftAttachments**](docs/InvoicesApi.md#getinvoicedraftattachments)                                   | **     |              |
+| GET** /companies/{companySlug}/invoices/drafts/{draftId}/attachments                                            |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-GetInvoiceDrafts**](docs/InvoicesApi.md#getinvoicedrafts)                                | **                                                       |             |
-| GET** /companies/{companySlug}/invoices/drafts                                                                  |                                                                                             |                                                          |             |
+ GetInvoiceDrafts**](docs/InvoicesApi.md#getinvoicedrafts)                                                       | **     |              |
+| GET** /companies/{companySlug}/invoices/drafts                                                                  |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-GetInvoices**](docs/InvoicesApi.md#getinvoices)                                          | **
-GET** /companies/{companySlug}/invoices                |             |
+ GetInvoices**](docs/InvoicesApi.md#getinvoices)                                                                 | **
+ GET** /companies/{companySlug}/invoices                                                                         |        |
 | *InvoicesApi*                                                                                                   | [**
-SendInvoice**](docs/InvoicesApi.md#sendinvoice)                                          | **
-POST** /companies/{companySlug}/invoices/send          |             |
+ SendInvoice**](docs/InvoicesApi.md#sendinvoice)                                                                 | **
+ POST** /companies/{companySlug}/invoices/send                                                                   |        |
 | *InvoicesApi*                                                                                                   | [**
-UpdateInvoice**](docs/InvoicesApi.md#updateinvoice)                                      | **                                                       |             |
-| PATCH** /companies/{companySlug}/invoices/{invoiceId}                                                           |                                                                                             |                                                          |             |
+ UpdateInvoice**](docs/InvoicesApi.md#updateinvoice)                                                             | **     |              |
+| PATCH** /companies/{companySlug}/invoices/{invoiceId}                                                           |        |              |             |
 | *InvoicesApi*                                                                                                   | [**
-UpdateInvoiceDraft**](docs/InvoicesApi.md#updateinvoicedraft)                            | **                                                       |             |
-| PUT** /companies/{companySlug}/invoices/drafts/{draftId}                                                        |                                                                                             |                                                          |             |
+ UpdateInvoiceDraft**](docs/InvoicesApi.md#updateinvoicedraft)                                                   | **     |              |
+| PUT** /companies/{companySlug}/invoices/drafts/{draftId}                                                        |        |              |             |
 | *JournalEntriesApi*                                                                                             | [**
-AddAttachmentToJournalEntry**](docs/JournalEntriesApi.md#addattachmenttojournalentry)    | **                                                       |             |
-| POST** /companies/{companySlug}/journalEntries/{journalEntryId}/attachments                                     |                                                                                             |                                                          |             |
+ AddAttachmentToJournalEntry**](docs/JournalEntriesApi.md#addattachmenttojournalentry)                           | **     |              |
+| POST** /companies/{companySlug}/journalEntries/{journalEntryId}/attachments                                     |        |              |             |
 | *JournalEntriesApi*                                                                                             | [**
-CreateGeneralJournalEntry**](docs/JournalEntriesApi.md#creategeneraljournalentry)        | **                                                       |             |
-| POST** /companies/{companySlug}/generalJournalEntries                                                           |                                                                                             |                                                          |             |
+ CreateGeneralJournalEntry**](docs/JournalEntriesApi.md#creategeneraljournalentry)                               | **     |              |
+| POST** /companies/{companySlug}/generalJournalEntries                                                           |        |              |             |
 | *JournalEntriesApi*                                                                                             | [**
-GetJournalEntries**](docs/JournalEntriesApi.md#getjournalentries)                        | **                                                       |             |
-| GET** /companies/{companySlug}/journalEntries                                                                   |                                                                                             |                                                          |             |
+ GetJournalEntries**](docs/JournalEntriesApi.md#getjournalentries)                                               | **     |              |
+| GET** /companies/{companySlug}/journalEntries                                                                   |        |              |             |
 | *JournalEntriesApi*                                                                                             | [**
-GetJournalEntry**](docs/JournalEntriesApi.md#getjournalentry)                            | **                                                       |             |
-| GET** /companies/{companySlug}/journalEntries/{journalEntryId}                                                  |                                                                                             |                                                          |             |
+ GetJournalEntry**](docs/JournalEntriesApi.md#getjournalentry)                                                   | **     |              |
+| GET** /companies/{companySlug}/journalEntries/{journalEntryId}                                                  |        |              |             |
 | *JournalEntriesApi*                                                                                             | [**
-GetJournalEntryAttachments**](docs/JournalEntriesApi.md#getjournalentryattachments)      | **                                                       |             |
-| GET** /companies/{companySlug}/journalEntries/{journalEntryId}/attachments                                      |                                                                                             |                                                          |             |
+ GetJournalEntryAttachments**](docs/JournalEntriesApi.md#getjournalentryattachments)                             | **     |              |
+| GET** /companies/{companySlug}/journalEntries/{journalEntryId}/attachments                                      |        |              |             |
 | *OffersApi*                                                                                                     | [**
-AddAttachmentToOfferDraft**](docs/OffersApi.md#addattachmenttoofferdraft)                | **                                                       |             |
-| POST** /companies/{companySlug}/offers/drafts/{draftId}/attachments                                             |                                                                                             |                                                          |             |
+ AddAttachmentToOfferDraft**](docs/OffersApi.md#addattachmenttoofferdraft)                                       | **     |              |
+| POST** /companies/{companySlug}/offers/drafts/{draftId}/attachments                                             |        |              |             |
 | *OffersApi*                                                                                                     | [**
-CreateOfferDraft**](docs/OffersApi.md#createofferdraft)                                  | **                                                       |             |
-| POST** /companies/{companySlug}/offers/drafts                                                                   |                                                                                             |                                                          |             |
+ CreateOfferDraft**](docs/OffersApi.md#createofferdraft)                                                         | **     |              |
+| POST** /companies/{companySlug}/offers/drafts                                                                   |        |              |             |
 | *OffersApi*                                                                                                     | [**
-CreateOfferFromDraft**](docs/OffersApi.md#createofferfromdraft)                          | **                                                       |             |
-| POST** /companies/{companySlug}/offers/drafts/{draftId}/createOffer                                             |                                                                                             |                                                          |             |
+ CreateOfferFromDraft**](docs/OffersApi.md#createofferfromdraft)                                                 | **     |              |
+| POST** /companies/{companySlug}/offers/drafts/{draftId}/createOffer                                             |        |              |             |
 | *OffersApi*                                                                                                     | [**
-DeleteOfferDraft**](docs/OffersApi.md#deleteofferdraft)                                  | **                                                       |             |
-| DELETE** /companies/{companySlug}/offers/drafts/{draftId}                                                       |                                                                                             |                                                          |             |
+ DeleteOfferDraft**](docs/OffersApi.md#deleteofferdraft)                                                         | **     |              |
+| DELETE** /companies/{companySlug}/offers/drafts/{draftId}                                                       |        |              |             |
 | *OffersApi*                                                                                                     | [**
-GetOffer**](docs/OffersApi.md#getoffer)                                                  | **
-GET** /companies/{companySlug}/offers/{offerId}        |             |
+ GetOffer**](docs/OffersApi.md#getoffer)                                                                         | **
+ GET** /companies/{companySlug}/offers/{offerId}                                                                 |        |
 | *OffersApi*                                                                                                     | [**
-GetOfferDraft**](docs/OffersApi.md#getofferdraft)                                        | **                                                       |             |
-| GET** /companies/{companySlug}/offers/drafts/{draftId}                                                          |                                                                                             |                                                          |             |
+ GetOfferDraft**](docs/OffersApi.md#getofferdraft)                                                               | **     |              |
+| GET** /companies/{companySlug}/offers/drafts/{draftId}                                                          |        |              |             |
 | *OffersApi*                                                                                                     | [**
-GetOfferDraftAttachments**](docs/OffersApi.md#getofferdraftattachments)                  | **                                                       |             |
-| GET** /companies/{companySlug}/offers/drafts/{draftId}/attachments                                              |                                                                                             |                                                          |             |
+ GetOfferDraftAttachments**](docs/OffersApi.md#getofferdraftattachments)                                         | **     |              |
+| GET** /companies/{companySlug}/offers/drafts/{draftId}/attachments                                              |        |              |             |
 | *OffersApi*                                                                                                     | [**
-GetOfferDrafts**](docs/OffersApi.md#getofferdrafts)                                      | **
-GET** /companies/{companySlug}/offers/drafts           |             |
+ GetOfferDrafts**](docs/OffersApi.md#getofferdrafts)                                                             | **
+ GET** /companies/{companySlug}/offers/drafts                                                                    |        |
 | *OffersApi*                                                                                                     | [**
-GetOffers**](docs/OffersApi.md#getoffers)                                                | **
-GET** /companies/{companySlug}/offers                  |             |
+ GetOffers**](docs/OffersApi.md#getoffers)                                                                       | **
+ GET** /companies/{companySlug}/offers                                                                           |        |
 | *OffersApi*                                                                                                     | [**
-UpdateOfferDraft**](docs/OffersApi.md#updateofferdraft)                                  | **                                                       |             |
-| PUT** /companies/{companySlug}/offers/drafts/{draftId}                                                          |                                                                                             |                                                          |             |
+ UpdateOfferDraft**](docs/OffersApi.md#updateofferdraft)                                                         | **     |              |
+| PUT** /companies/{companySlug}/offers/drafts/{draftId}                                                          |        |              |             |
 | *
-OrderConfirmationsApi*                                                                                         | [**                                                                                         |                                                          |             |
-| AddAttachmentToOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#addattachmenttoorderconfirmationdraft)   | **                                                                                          |                                                          |             |
-| POST** /companies/{companySlug}/orderConfirmations/drafts/{draftId}/attachments                                 |                                                                                             |                                                          |             |
+ OrderConfirmationsApi*                                                                                          | [**    |              |             |
+| AddAttachmentToOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#addattachmenttoorderconfirmationdraft)   | **     |              |             |
+| POST** /companies/{companySlug}/orderConfirmations/drafts/{draftId}/attachments                                 |        |              |             |
 | *
-OrderConfirmationsApi*                                                                                         | [**                                                                                         |                                                          |             |
-| CreateInvoicDraftFromOrderConfirmation**](docs/OrderConfirmationsApi.md#createinvoicdraftfromorderconfirmation) | **                                                                                          |                                                          |             |
-| POST** /companies/{companySlug}/orderConfirmations/{confirmationId}/createInvoiceDraft                          |                                                                                             |                                                          |             |
+ OrderConfirmationsApi*                                                                                          | [**    |              |             |
+| CreateInvoicDraftFromOrderConfirmation**](docs/OrderConfirmationsApi.md#createinvoicdraftfromorderconfirmation) | **     |              |             |
+| POST** /companies/{companySlug}/orderConfirmations/{confirmationId}/createInvoiceDraft                          |        |              |             |
 | *
-OrderConfirmationsApi*                                                                                         | [**                                                                                         |                                                          |             |
-| CreateOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#createorderconfirmationdraft)                     | **                                                                                          |                                                          |             |
-| POST** /companies/{companySlug}/orderConfirmations/drafts                                                       |                                                                                             |                                                          |             |
+ OrderConfirmationsApi*                                                                                          | [**    |              |             |
+| CreateOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#createorderconfirmationdraft)                     | **     |              |             |
+| POST** /companies/{companySlug}/orderConfirmations/drafts                                                       |        |              |             |
 | *
-OrderConfirmationsApi*                                                                                         | [**                                                                                         |                                                          |             |
-| CreateOrderConfirmationFromDraft**](docs/OrderConfirmationsApi.md#createorderconfirmationfromdraft)             | **                                                                                          |                                                          |             |
-| POST** /companies/{companySlug}/orderConfirmations/drafts/{draftId}/createOrderConfirmation                     |                                                                                             |                                                          |             |
+ OrderConfirmationsApi*                                                                                          | [**    |              |             |
+| CreateOrderConfirmationFromDraft**](docs/OrderConfirmationsApi.md#createorderconfirmationfromdraft)             | **     |              |             |
+| POST** /companies/{companySlug}/orderConfirmations/drafts/{draftId}/createOrderConfirmation                     |        |              |             |
 | *
-OrderConfirmationsApi*                                                                                         | [**                                                                                         |                                                          |             |
-| DeleteOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#deleteorderconfirmationdraft)                     | **                                                                                          |                                                          |             |
-| DELETE** /companies/{companySlug}/orderConfirmations/drafts/{draftId}                                           |                                                                                             |                                                          |             |
+ OrderConfirmationsApi*                                                                                          | [**    |              |             |
+| DeleteOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#deleteorderconfirmationdraft)                     | **     |              |             |
+| DELETE** /companies/{companySlug}/orderConfirmations/drafts/{draftId}                                           |        |              |             |
 | *OrderConfirmationsApi*                                                                                         | [**
-GetOrderConfirmation**](docs/OrderConfirmationsApi.md#getorderconfirmation)              | **                                                       |             |
-| GET** /companies/{companySlug}/orderConfirmations/{confirmationId}                                              |                                                                                             |                                                          |             |
+ GetOrderConfirmation**](docs/OrderConfirmationsApi.md#getorderconfirmation)                                     | **     |              |
+| GET** /companies/{companySlug}/orderConfirmations/{confirmationId}                                              |        |              |             |
 | *OrderConfirmationsApi*                                                                                         | [**
-GetOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#getorderconfirmationdraft)    | **                                                       |             |
-| GET** /companies/{companySlug}/orderConfirmations/drafts/{draftId}                                              |                                                                                             |                                                          |             |
+ GetOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#getorderconfirmationdraft)                           | **     |              |
+| GET** /companies/{companySlug}/orderConfirmations/drafts/{draftId}                                              |        |              |             |
 | *
-OrderConfirmationsApi*                                                                                         | [**                                                                                         |                                                          |             |
-| GetOrderConfirmationDraftAttachments**](docs/OrderConfirmationsApi.md#getorderconfirmationdraftattachments)     | **                                                                                          |                                                          |             |
-| GET** /companies/{companySlug}/orderConfirmations/drafts/{draftId}/attachments                                  |                                                                                             |                                                          |             |
+ OrderConfirmationsApi*                                                                                          | [**    |              |             |
+| GetOrderConfirmationDraftAttachments**](docs/OrderConfirmationsApi.md#getorderconfirmationdraftattachments)     | **     |              |             |
+| GET** /companies/{companySlug}/orderConfirmations/drafts/{draftId}/attachments                                  |        |              |             |
 | *
-OrderConfirmationsApi*                                                                                         | [**                                                                                         |                                                          |             |
-| GetOrderConfirmationDrafts**](docs/OrderConfirmationsApi.md#getorderconfirmationdrafts)                         | **                                                                                          |                                                          |             |
-| GET** /companies/{companySlug}/orderConfirmations/drafts                                                        |                                                                                             |                                                          |             |
+ OrderConfirmationsApi*                                                                                          | [**    |              |             |
+| GetOrderConfirmationDrafts**](docs/OrderConfirmationsApi.md#getorderconfirmationdrafts)                         | **     |              |             |
+| GET** /companies/{companySlug}/orderConfirmations/drafts                                                        |        |              |             |
 | *OrderConfirmationsApi*                                                                                         | [**
-GetOrderConfirmations**](docs/OrderConfirmationsApi.md#getorderconfirmations)            | **                                                       |             |
-| GET** /companies/{companySlug}/orderConfirmations                                                               |                                                                                             |                                                          |             |
+ GetOrderConfirmations**](docs/OrderConfirmationsApi.md#getorderconfirmations)                                   | **     |              |
+| GET** /companies/{companySlug}/orderConfirmations                                                               |        |              |             |
 | *
-OrderConfirmationsApi*                                                                                         | [**                                                                                         |                                                          |             |
-| UpdateOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#updateorderconfirmationdraft)                     | **                                                                                          |                                                          |             |
-| PUT** /companies/{companySlug}/orderConfirmations/drafts/{draftId}                                              |                                                                                             |                                                          |             |
+ OrderConfirmationsApi*                                                                                          | [**    |              |             |
+| UpdateOrderConfirmationDraft**](docs/OrderConfirmationsApi.md#updateorderconfirmationdraft)                     | **     |              |             |
+| PUT** /companies/{companySlug}/orderConfirmations/drafts/{draftId}                                              |        |              |             |
 | *ProductsApi*                                                                                                   | [**
-CreateProduct**](docs/ProductsApi.md#createproduct)                                      | **
-POST** /companies/{companySlug}/products               |             |
+ CreateProduct**](docs/ProductsApi.md#createproduct)                                                             | **
+ POST** /companies/{companySlug}/products                                                                        |        |
 | *ProductsApi*                                                                                                   | [**
-CreateProductSalesReport**](docs/ProductsApi.md#createproductsalesreport)                | **                                                       |             |
-| POST** /companies/{companySlug}/products/salesReport                                                            |                                                                                             |                                                          |             |
+ CreateProductSalesReport**](docs/ProductsApi.md#createproductsalesreport)                                       | **     |              |
+| POST** /companies/{companySlug}/products/salesReport                                                            |        |              |             |
 | *ProductsApi*                                                                                                   | [**
-DeleteProduct**](docs/ProductsApi.md#deleteproduct)                                      | **                                                       |             |
-| DELETE** /companies/{companySlug}/products/{productId}                                                          |                                                                                             |                                                          |             |
+ DeleteProduct**](docs/ProductsApi.md#deleteproduct)                                                             | **     |              |
+| DELETE** /companies/{companySlug}/products/{productId}                                                          |        |              |             |
 | *ProductsApi*                                                                                                   | [**
-GetProduct**](docs/ProductsApi.md#getproduct)                                            | **                                                       |             |
-| GET** /companies/{companySlug}/products/{productId}                                                             |                                                                                             |                                                          |             |
+ GetProduct**](docs/ProductsApi.md#getproduct)                                                                   | **     |              |
+| GET** /companies/{companySlug}/products/{productId}                                                             |        |              |             |
 | *ProductsApi*                                                                                                   | [**
-GetProducts**](docs/ProductsApi.md#getproducts)                                          | **
-GET** /companies/{companySlug}/products                |             |
+ GetProducts**](docs/ProductsApi.md#getproducts)                                                                 | **
+ GET** /companies/{companySlug}/products                                                                         |        |
 | *ProductsApi*                                                                                                   | [**
-UpdateProduct**](docs/ProductsApi.md#updateproduct)                                      | **                                                       |             |
-| PUT** /companies/{companySlug}/products/{productId}                                                             |                                                                                             |                                                          |             |
+ UpdateProduct**](docs/ProductsApi.md#updateproduct)                                                             | **     |              |
+| PUT** /companies/{companySlug}/products/{productId}                                                             |        |              |             |
 | *ProjectsApi*                                                                                                   | [**
-CreateProject**](docs/ProjectsApi.md#createproject)                                      | **
-POST** /companies/{companySlug}/projects               |             |
+ CreateProject**](docs/ProjectsApi.md#createproject)                                                             | **
+ POST** /companies/{companySlug}/projects                                                                        |        |
 | *ProjectsApi*                                                                                                   | [**
-DeleteProject**](docs/ProjectsApi.md#deleteproject)                                      | **                                                       |             |
-| DELETE** /companies/{companySlug}/projects/{projectId}                                                          |                                                                                             |                                                          |             |
+ DeleteProject**](docs/ProjectsApi.md#deleteproject)                                                             | **     |              |
+| DELETE** /companies/{companySlug}/projects/{projectId}                                                          |        |              |             |
 | *ProjectsApi*                                                                                                   | [**
-GetProject**](docs/ProjectsApi.md#getproject)                                            | **                                                       |             |
-| GET** /companies/{companySlug}/projects/{projectId}                                                             |                                                                                             |                                                          |             |
+ GetProject**](docs/ProjectsApi.md#getproject)                                                                   | **     |              |
+| GET** /companies/{companySlug}/projects/{projectId}                                                             |        |              |             |
 | *ProjectsApi*                                                                                                   | [**
-GetProjects**](docs/ProjectsApi.md#getprojects)                                          | **
-GET** /companies/{companySlug}/projects                |             |
+ GetProjects**](docs/ProjectsApi.md#getprojects)                                                                 | **
+ GET** /companies/{companySlug}/projects                                                                         |        |
 | *ProjectsApi*                                                                                                   | [**
-UpdateProject**](docs/ProjectsApi.md#updateproject)                                      | **                                                       |             |
-| PATCH** /companies/{companySlug}/projects/{projectId}                                                           |                                                                                             |                                                          |             |
+ UpdateProject**](docs/ProjectsApi.md#updateproject)                                                             | **     |              |
+| PATCH** /companies/{companySlug}/projects/{projectId}                                                           |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-AddAttachmentToPurchase**](docs/PurchasesApi.md#addattachmenttopurchase)                 | **                                                       |             |
-| POST** /companies/{companySlug}/purchases/{purchaseId}/attachments                                              |                                                                                             |                                                          |             |
+ AddAttachmentToPurchase**](docs/PurchasesApi.md#addattachmenttopurchase)                                        | **     |              |
+| POST** /companies/{companySlug}/purchases/{purchaseId}/attachments                                              |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-AddAttachmentToPurchaseDraft**](docs/PurchasesApi.md#addattachmenttopurchasedraft)       | **                                                       |             |
-| POST** /companies/{companySlug}/purchases/drafts/{draftId}/attachments                                          |                                                                                             |                                                          |             |
+ AddAttachmentToPurchaseDraft**](docs/PurchasesApi.md#addattachmenttopurchasedraft)                              | **     |              |
+| POST** /companies/{companySlug}/purchases/drafts/{draftId}/attachments                                          |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-CreatePurchase**](docs/PurchasesApi.md#createpurchase)                                   | **                                                       |             |
-| POST** /companies/{companySlug}/purchases                                                                       |                                                                                             |                                                          |             |
+ CreatePurchase**](docs/PurchasesApi.md#createpurchase)                                                          | **     |              |
+| POST** /companies/{companySlug}/purchases                                                                       |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-CreatePurchaseDraft**](docs/PurchasesApi.md#createpurchasedraft)                         | **                                                       |             |
-| POST** /companies/{companySlug}/purchases/drafts                                                                |                                                                                             |                                                          |             |
+ CreatePurchaseDraft**](docs/PurchasesApi.md#createpurchasedraft)                                                | **     |              |
+| POST** /companies/{companySlug}/purchases/drafts                                                                |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-CreatePurchaseFromDraft**](docs/PurchasesApi.md#createpurchasefromdraft)                 | **                                                       |             |
-| POST** /companies/{companySlug}/purchases/drafts/{draftId}/createPurchase                                       |                                                                                             |                                                          |             |
+ CreatePurchaseFromDraft**](docs/PurchasesApi.md#createpurchasefromdraft)                                        | **     |              |
+| POST** /companies/{companySlug}/purchases/drafts/{draftId}/createPurchase                                       |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-CreatePurchasePayment**](docs/PurchasesApi.md#createpurchasepayment)                     | **                                                       |             |
-| POST** /companies/{companySlug}/purchases/{purchaseId}/payments                                                 |                                                                                             |                                                          |             |
+ CreatePurchasePayment**](docs/PurchasesApi.md#createpurchasepayment)                                            | **     |              |
+| POST** /companies/{companySlug}/purchases/{purchaseId}/payments                                                 |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-DeletePurchase**](docs/PurchasesApi.md#deletepurchase)                                   | **                                                       |             |
-| PATCH** /companies/{companySlug}/purchases/{purchaseId}/delete                                                  |                                                                                             |                                                          |             |
+ DeletePurchase**](docs/PurchasesApi.md#deletepurchase)                                                          | **     |              |
+| PATCH** /companies/{companySlug}/purchases/{purchaseId}/delete                                                  |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-DeletePurchaseDraft**](docs/PurchasesApi.md#deletepurchasedraft)                         | **                                                       |             |
-| DELETE** /companies/{companySlug}/purchases/drafts/{draftId}                                                    |                                                                                             |                                                          |             |
+ DeletePurchaseDraft**](docs/PurchasesApi.md#deletepurchasedraft)                                                | **     |              |
+| DELETE** /companies/{companySlug}/purchases/drafts/{draftId}                                                    |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-GetPurchase**](docs/PurchasesApi.md#getpurchase)                                         | **                                                       |             |
-| GET** /companies/{companySlug}/purchases/{purchaseId}                                                           |                                                                                             |                                                          |             |
+ GetPurchase**](docs/PurchasesApi.md#getpurchase)                                                                | **     |              |
+| GET** /companies/{companySlug}/purchases/{purchaseId}                                                           |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-GetPurchaseAttachments**](docs/PurchasesApi.md#getpurchaseattachments)                   | **                                                       |             |
-| GET** /companies/{companySlug}/purchases/{purchaseId}/attachments                                               |                                                                                             |                                                          |             |
+ GetPurchaseAttachments**](docs/PurchasesApi.md#getpurchaseattachments)                                          | **     |              |
+| GET** /companies/{companySlug}/purchases/{purchaseId}/attachments                                               |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-GetPurchaseDraft**](docs/PurchasesApi.md#getpurchasedraft)                               | **                                                       |             |
-| GET** /companies/{companySlug}/purchases/drafts/{draftId}                                                       |                                                                                             |                                                          |             |
+ GetPurchaseDraft**](docs/PurchasesApi.md#getpurchasedraft)                                                      | **     |              |
+| GET** /companies/{companySlug}/purchases/drafts/{draftId}                                                       |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-GetPurchaseDraftAttachments**](docs/PurchasesApi.md#getpurchasedraftattachments)         | **                                                       |             |
-| GET** /companies/{companySlug}/purchases/drafts/{draftId}/attachments                                           |                                                                                             |                                                          |             |
+ GetPurchaseDraftAttachments**](docs/PurchasesApi.md#getpurchasedraftattachments)                                | **     |              |
+| GET** /companies/{companySlug}/purchases/drafts/{draftId}/attachments                                           |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-GetPurchaseDrafts**](docs/PurchasesApi.md#getpurchasedrafts)                             | **                                                       |             |
-| GET** /companies/{companySlug}/purchases/drafts                                                                 |                                                                                             |                                                          |             |
+ GetPurchaseDrafts**](docs/PurchasesApi.md#getpurchasedrafts)                                                    | **     |              |
+| GET** /companies/{companySlug}/purchases/drafts                                                                 |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-GetPurchasePayment**](docs/PurchasesApi.md#getpurchasepayment)                           | **                                                       |             |
-| GET** /companies/{companySlug}/purchases/{purchaseId}/payments/{paymentId}                                      |                                                                                             |                                                          |             |
+ GetPurchasePayment**](docs/PurchasesApi.md#getpurchasepayment)                                                  | **     |              |
+| GET** /companies/{companySlug}/purchases/{purchaseId}/payments/{paymentId}                                      |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-GetPurchasePayments**](docs/PurchasesApi.md#getpurchasepayments)                         | **                                                       |             |
-| GET** /companies/{companySlug}/purchases/{purchaseId}/payments                                                  |                                                                                             |                                                          |             |
+ GetPurchasePayments**](docs/PurchasesApi.md#getpurchasepayments)                                                | **     |              |
+| GET** /companies/{companySlug}/purchases/{purchaseId}/payments                                                  |        |              |             |
 | *PurchasesApi*                                                                                                  | [**
-GetPurchases**](docs/PurchasesApi.md#getpurchases)                                       | **
-GET** /companies/{companySlug}/purchases               |             |
+ GetPurchases**](docs/PurchasesApi.md#getpurchases)                                                              | **
+ GET** /companies/{companySlug}/purchases                                                                        |        |
 | *PurchasesApi*                                                                                                  | [**
-UpdatePurchaseDraft**](docs/PurchasesApi.md#updatepurchasedraft)                         | **                                                       |             |
-| PUT** /companies/{companySlug}/purchases/drafts/{draftId}                                                       |                                                                                             |                                                          |             |
+ UpdatePurchaseDraft**](docs/PurchasesApi.md#updatepurchasedraft)                                                | **     |              |
+| PUT** /companies/{companySlug}/purchases/drafts/{draftId}                                                       |        |              |             |
 | *SalesApi*                                                                                                      | [**
-AddAttachmentToSale**](docs/SalesApi.md#addattachmenttosale)                             | **                                                       |             |
-| POST** /companies/{companySlug}/sales/{saleId}/attachments                                                      |                                                                                             |                                                          |             |
+ AddAttachmentToSale**](docs/SalesApi.md#addattachmenttosale)                                                    | **     |              |
+| POST** /companies/{companySlug}/sales/{saleId}/attachments                                                      |        |              |             |
 | *SalesApi*                                                                                                      | [**
-AddAttachmentToSaleDraft**](docs/SalesApi.md#addattachmenttosaledraft)                   | **                                                       |             |
-| POST** /companies/{companySlug}/sales/drafts/{draftId}/attachments                                              |                                                                                             |                                                          |             |
+ AddAttachmentToSaleDraft**](docs/SalesApi.md#addattachmenttosaledraft)                                          | **     |              |
+| POST** /companies/{companySlug}/sales/drafts/{draftId}/attachments                                              |        |              |             |
 | *SalesApi*                                                                                                      | [**
-CreateSale**](docs/SalesApi.md#createsale)                                               | **
-POST** /companies/{companySlug}/sales                  |             |
+ CreateSale**](docs/SalesApi.md#createsale)                                                                      | **
+ POST** /companies/{companySlug}/sales                                                                           |        |
 | *SalesApi*                                                                                                      | [**
-CreateSaleDraft**](docs/SalesApi.md#createsaledraft)                                     | **
-POST** /companies/{companySlug}/sales/drafts           |             |
+ CreateSaleDraft**](docs/SalesApi.md#createsaledraft)                                                            | **
+ POST** /companies/{companySlug}/sales/drafts                                                                    |        |
 | *SalesApi*                                                                                                      | [**
-CreateSaleFromDraft**](docs/SalesApi.md#createsalefromdraft)                             | **                                                       |             |
-| POST** /companies/{companySlug}/sales/drafts/{draftId}/createSale                                               |                                                                                             |                                                          |             |
+ CreateSaleFromDraft**](docs/SalesApi.md#createsalefromdraft)                                                    | **     |              |
+| POST** /companies/{companySlug}/sales/drafts/{draftId}/createSale                                               |        |              |             |
 | *SalesApi*                                                                                                      | [**
-CreateSalePayment**](docs/SalesApi.md#createsalepayment)                                 | **                                                       |             |
-| POST** /companies/{companySlug}/sales/{saleId}/payments                                                         |                                                                                             |                                                          |             |
+ CreateSalePayment**](docs/SalesApi.md#createsalepayment)                                                        | **     |              |
+| POST** /companies/{companySlug}/sales/{saleId}/payments                                                         |        |              |             |
 | *SalesApi*                                                                                                      | [**
-DeleteSale**](docs/SalesApi.md#deletesale)                                               | **
-PATCH** /companies/{companySlug}/sales/{saleId}/delete |             |
+ DeleteSale**](docs/SalesApi.md#deletesale)                                                                      | **
+ PATCH** /companies/{companySlug}/sales/{saleId}/delete                                                          |        |
 | *SalesApi*                                                                                                      | [**
-DeleteSaleDraft**](docs/SalesApi.md#deletesaledraft)                                     | **                                                       |             |
-| DELETE** /companies/{companySlug}/sales/drafts/{draftId}                                                        |                                                                                             |                                                          |             |
+ DeleteSaleDraft**](docs/SalesApi.md#deletesaledraft)                                                            | **     |              |
+| DELETE** /companies/{companySlug}/sales/drafts/{draftId}                                                        |        |              |             |
 | *SalesApi*                                                                                                      | [**
-GetSale**](docs/SalesApi.md#getsale)                                                     | **
-GET** /companies/{companySlug}/sales/{saleId}          |             |
+ GetSale**](docs/SalesApi.md#getsale)                                                                            | **
+ GET** /companies/{companySlug}/sales/{saleId}                                                                   |        |
 | *SalesApi*                                                                                                      | [**
-GetSaleAttachments**](docs/SalesApi.md#getsaleattachments)                               | **                                                       |             |
-| GET** /companies/{companySlug}/sales/{saleId}/attachments                                                       |                                                                                             |                                                          |             |
+ GetSaleAttachments**](docs/SalesApi.md#getsaleattachments)                                                      | **     |              |
+| GET** /companies/{companySlug}/sales/{saleId}/attachments                                                       |        |              |             |
 | *SalesApi*                                                                                                      | [**
-GetSaleDraft**](docs/SalesApi.md#getsaledraft)                                           | **                                                       |             |
-| GET** /companies/{companySlug}/sales/drafts/{draftId}                                                           |                                                                                             |                                                          |             |
+ GetSaleDraft**](docs/SalesApi.md#getsaledraft)                                                                  | **     |              |
+| GET** /companies/{companySlug}/sales/drafts/{draftId}                                                           |        |              |             |
 | *SalesApi*                                                                                                      | [**
-GetSaleDraftAttachments**](docs/SalesApi.md#getsaledraftattachments)                     | **                                                       |             |
-| GET** /companies/{companySlug}/sales/drafts/{draftId}/attachments                                               |                                                                                             |                                                          |             |
+ GetSaleDraftAttachments**](docs/SalesApi.md#getsaledraftattachments)                                            | **     |              |
+| GET** /companies/{companySlug}/sales/drafts/{draftId}/attachments                                               |        |              |             |
 | *SalesApi*                                                                                                      | [**
-GetSaleDrafts**](docs/SalesApi.md#getsaledrafts)                                         | **
-GET** /companies/{companySlug}/sales/drafts            |             |
+ GetSaleDrafts**](docs/SalesApi.md#getsaledrafts)                                                                | **
+ GET** /companies/{companySlug}/sales/drafts                                                                     |        |
 | *SalesApi*                                                                                                      | [**
-GetSalePayment**](docs/SalesApi.md#getsalepayment)                                       | **                                                       |             |
-| GET** /companies/{companySlug}/sales/{saleId}/payments/{paymentId}                                              |                                                                                             |                                                          |             |
+ GetSalePayment**](docs/SalesApi.md#getsalepayment)                                                              | **     |              |
+| GET** /companies/{companySlug}/sales/{saleId}/payments/{paymentId}                                              |        |              |             |
 | *SalesApi*                                                                                                      | [**
-GetSalePayments**](docs/SalesApi.md#getsalepayments)                                     | **                                                       |             |
-| GET** /companies/{companySlug}/sales/{saleId}/payments                                                          |                                                                                             |                                                          |             |
+ GetSalePayments**](docs/SalesApi.md#getsalepayments)                                                            | **     |              |
+| GET** /companies/{companySlug}/sales/{saleId}/payments                                                          |        |              |             |
 | *SalesApi*                                                                                                      | [**
-GetSales**](docs/SalesApi.md#getsales)                                                   | **
-GET** /companies/{companySlug}/sales                   |             |
+ GetSales**](docs/SalesApi.md#getsales)                                                                          | **
+ GET** /companies/{companySlug}/sales                                                                            |        |
 | *SalesApi*                                                                                                      | [**
-UpdateSaleDraft**](docs/SalesApi.md#updatesaledraft)                                     | **                                                       |             |
-| PUT** /companies/{companySlug}/sales/drafts/{draftId}                                                           |                                                                                             |                                                          |             |
+ UpdateSaleDraft**](docs/SalesApi.md#updatesaledraft)                                                            | **     |              |
+| PUT** /companies/{companySlug}/sales/drafts/{draftId}                                                           |        |              |             |
 | *TransactionsApi*                                                                                               | [**
-GetTransaction**](docs/TransactionsApi.md#gettransaction)                                | **                                                       |             |
-| GET** /companies/{companySlug}/transactions/{transactionId}                                                     |                                                                                             |                                                          |             |
+ GetTransaction**](docs/TransactionsApi.md#gettransaction)                                                       | **     |              |
+| GET** /companies/{companySlug}/transactions/{transactionId}                                                     |        |              |             |
 | *UserApi*                                                                                                       | [**
-GetUser**](docs/UserApi.md#getuser)                                                      | **
-GET** /user                                            |             |
+ GetUser**](docs/UserApi.md#getuser)                                                                             | **
+ GET** /user                                                                                                     |        |
 
 <a name="documentation-for-models"></a>
 

@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetTransaction**](TransactionsApi.md#gettransaction) | **
-GET** /companies/{companySlug}/transactions/{transactionId} |
+ Method                                                      | HTTP request | Description
+-------------------------------------------------------------|--------------|-------------
+ [**GetTransaction**](TransactionsApi.md#gettransaction)     | **
+ GET** /companies/{companySlug}/transactions/{transactionId} |
 
 <a name="gettransaction"></a>
 
@@ -57,10 +57,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**transactionId** | **long?**|  |
+ Name              | Type       | Description                 | Notes
+-------------------|------------|-----------------------------|-------
+ **companySlug**   | **string** | Slug of company to retrieve |
+ **transactionId** | **long?**  |                             |
 
 ### Return type
 

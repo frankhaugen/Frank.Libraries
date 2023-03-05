@@ -1,184 +1,123 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("TransportExecutionTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TransportExecutionTermsType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("TransportExecutionTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TransportExecutionTermsType
 {
-
-    private TransportUserSpecialTermsType[] transportUserSpecialTermsField;
-
-    private TransportServiceProviderSpecialTermsType[] transportServiceProviderSpecialTermsField;
+    private PaymentTermsType bonusPaymentTermsField;
 
     private ChangeConditionsType[] changeConditionsField;
 
-    private PaymentTermsType[] paymentTermsField;
-
-    private DeliveryTermsType[] deliveryTermsField;
-
-    private PaymentTermsType bonusPaymentTermsField;
-
     private PaymentTermsType commissionPaymentTermsField;
 
-    private PaymentTermsType penaltyPaymentTermsField;
+    private DeliveryTermsType[] deliveryTermsField;
 
     private EnvironmentalEmissionType[] environmentalEmissionField;
 
     private NotificationRequirementType[] notificationRequirementField;
 
+    private PaymentTermsType[] paymentTermsField;
+
+    private PaymentTermsType penaltyPaymentTermsField;
+
     private PaymentTermsType serviceChargePaymentTermsField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TransportUserSpecialTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private TransportServiceProviderSpecialTermsType[] transportServiceProviderSpecialTermsField;
+
+    private TransportUserSpecialTermsType[] transportUserSpecialTermsField;
+
+    /// <remarks />
+    [XmlElement("TransportUserSpecialTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TransportUserSpecialTermsType[] TransportUserSpecialTerms
     {
-        get
-        {
-            return this.transportUserSpecialTermsField;
-        }
-        set
-        {
-            this.transportUserSpecialTermsField = value;
-        }
+        get => transportUserSpecialTermsField;
+        set => transportUserSpecialTermsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TransportServiceProviderSpecialTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("TransportServiceProviderSpecialTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TransportServiceProviderSpecialTermsType[] TransportServiceProviderSpecialTerms
     {
-        get
-        {
-            return this.transportServiceProviderSpecialTermsField;
-        }
-        set
-        {
-            this.transportServiceProviderSpecialTermsField = value;
-        }
+        get => transportServiceProviderSpecialTermsField;
+        set => transportServiceProviderSpecialTermsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ChangeConditions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("ChangeConditions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ChangeConditionsType[] ChangeConditions
     {
-        get
-        {
-            return this.changeConditionsField;
-        }
-        set
-        {
-            this.changeConditionsField = value;
-        }
+        get => changeConditionsField;
+        set => changeConditionsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PaymentTerms")]
+    /// <remarks />
+    [XmlElement("PaymentTerms")]
     public PaymentTermsType[] PaymentTerms
     {
-        get
-        {
-            return this.paymentTermsField;
-        }
-        set
-        {
-            this.paymentTermsField = value;
-        }
+        get => paymentTermsField;
+        set => paymentTermsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DeliveryTerms")]
+    /// <remarks />
+    [XmlElement("DeliveryTerms")]
     public DeliveryTermsType[] DeliveryTerms
     {
-        get
-        {
-            return this.deliveryTermsField;
-        }
-        set
-        {
-            this.deliveryTermsField = value;
-        }
+        get => deliveryTermsField;
+        set => deliveryTermsField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PaymentTermsType BonusPaymentTerms
     {
-        get
-        {
-            return this.bonusPaymentTermsField;
-        }
-        set
-        {
-            this.bonusPaymentTermsField = value;
-        }
+        get => bonusPaymentTermsField;
+        set => bonusPaymentTermsField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PaymentTermsType CommissionPaymentTerms
     {
-        get
-        {
-            return this.commissionPaymentTermsField;
-        }
-        set
-        {
-            this.commissionPaymentTermsField = value;
-        }
+        get => commissionPaymentTermsField;
+        set => commissionPaymentTermsField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PaymentTermsType PenaltyPaymentTerms
     {
-        get
-        {
-            return this.penaltyPaymentTermsField;
-        }
-        set
-        {
-            this.penaltyPaymentTermsField = value;
-        }
+        get => penaltyPaymentTermsField;
+        set => penaltyPaymentTermsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("EnvironmentalEmission")]
+    /// <remarks />
+    [XmlElement("EnvironmentalEmission")]
     public EnvironmentalEmissionType[] EnvironmentalEmission
     {
-        get
-        {
-            return this.environmentalEmissionField;
-        }
-        set
-        {
-            this.environmentalEmissionField = value;
-        }
+        get => environmentalEmissionField;
+        set => environmentalEmissionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("NotificationRequirement")]
+    /// <remarks />
+    [XmlElement("NotificationRequirement")]
     public NotificationRequirementType[] NotificationRequirement
     {
-        get
-        {
-            return this.notificationRequirementField;
-        }
-        set
-        {
-            this.notificationRequirementField = value;
-        }
+        get => notificationRequirementField;
+        set => notificationRequirementField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PaymentTermsType ServiceChargePaymentTerms
     {
-        get
-        {
-            return this.serviceChargePaymentTermsField;
-        }
-        set
-        {
-            this.serviceChargePaymentTermsField = value;
-        }
+        get => serviceChargePaymentTermsField;
+        set => serviceChargePaymentTermsField = value;
     }
 }

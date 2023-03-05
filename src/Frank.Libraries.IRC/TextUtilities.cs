@@ -4,85 +4,93 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Frank.Libraries.IRC.Properties;
 
-namespace Frank.Libraries.IRC
+namespace Frank.Libraries.IRC;
+
+// Utilities for text manipulation.
+internal static class TextUtilities
 {
-    // Utilities for text manipulation.
-    internal static class TextUtilities
+    // Gets single matched value of group, if match succeeded.
+    public static string GetValue(this Group match)
     {
-        // Gets single matched value of group, if match succeeded.
-        public static string GetValue(this Group match)
+        if (!match.Success)
         {
-            if (!match.Success)
-                return null;
-            return match.Value;
+            return null;
         }
 
-        // Enquotes specified string given escape character and mapping for quotation characters.
-        public static string Quote(this string value, char escapeChar, IDictionary<char, char> quotedChars)
+        return match.Value;
+    }
+
+    // Enquotes specified string given escape character and mapping for quotation characters.
+    public static string Quote(this string value, char escapeChar, IDictionary<char, char> quotedChars)
+    {
+        var textBuilder = new StringBuilder(value.Length * 2);
+        for (var i = 0; i < value.Length; i++)
         {
-            var textBuilder = new StringBuilder(value.Length * 2);
-            for (var i = 0; i < value.Length; i++)
+            var curQuotedChar = escapeChar;
+            if (quotedChars.TryGetValue(value[i], out curQuotedChar) || value[i] == escapeChar)
             {
-                var curQuotedChar = escapeChar;
-                if (quotedChars.TryGetValue(value[i], out curQuotedChar) || value[i] == escapeChar)
+                textBuilder.Append(escapeChar);
+                textBuilder.Append(curQuotedChar);
+            }
+            else
+            {
+                textBuilder.Append(value[i]);
+            }
+        }
+
+        return textBuilder.ToString();
+    }
+
+    // Dequotes specified string given escape character and mapping for quotation characters.
+    public static string Dequote(this string value, char escapeChar, IDictionary<char, char> dequotedChars)
+    {
+        var textBuilder = new StringBuilder(value.Length);
+        for (var i = 0; i < value.Length; i++)
+        {
+            if (value[i] == escapeChar)
+            {
+                i++;
+                var curDequotedChar = escapeChar;
+                if (dequotedChars.TryGetValue(value[i], out curDequotedChar) || value[i] == escapeChar)
                 {
-                    textBuilder.Append(escapeChar);
-                    textBuilder.Append(curQuotedChar);
+                    textBuilder.Append(curDequotedChar);
                 }
                 else
                 {
-                    textBuilder.Append(value[i]);
+                    throw new InvalidOperationException(
+                        Resources.MessageInvalidQuotedChar);
                 }
             }
-
-            return textBuilder.ToString();
-        }
-
-        // Dequotes specified string given escape character and mapping for quotation characters.
-        public static string Dequote(this string value, char escapeChar, IDictionary<char, char> dequotedChars)
-        {
-            var textBuilder = new StringBuilder(value.Length);
-            for (var i = 0; i < value.Length; i++)
+            else
             {
-                if (value[i] == escapeChar)
-                {
-                    i++;
-                    var curDequotedChar = escapeChar;
-                    if (dequotedChars.TryGetValue(value[i], out curDequotedChar) || value[i] == escapeChar)
-                    {
-                        textBuilder.Append(curDequotedChar);
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException(
-                            Resources.MessageInvalidQuotedChar);
-                    }
-                }
-                else
-                {
-                    textBuilder.Append(value[i]);
-                }
+                textBuilder.Append(value[i]);
             }
-
-            return textBuilder.ToString();
         }
 
-        // Splits specified string into pair of strings at position of first occurrence of separator.
-        public static Tuple<string, string> SplitIntoPair(this string value, string separator)
+        return textBuilder.ToString();
+    }
+
+    // Splits specified string into pair of strings at position of first occurrence of separator.
+    public static Tuple<string, string> SplitIntoPair(this string value, string separator)
+    {
+        var index = value.IndexOf(separator);
+        if (index < 0)
         {
-            var index = value.IndexOf(separator);
-            if (index < 0)
-                return Tuple.Create(value, (string)null);
-            return Tuple.Create(value.Substring(0, index), value.Substring(index + separator.Length));
+            return Tuple.Create(value, (string)null);
         }
 
-        // Change character encoding of specified string.
-        internal static string ChangeEncoding(this string value, Encoding currentEncoding, Encoding newEncoding)
+        return Tuple.Create(value.Substring(0, index), value.Substring(index + separator.Length));
+    }
+
+    // Change character encoding of specified string.
+    internal static string ChangeEncoding(this string value, Encoding currentEncoding, Encoding newEncoding)
+    {
+        if (newEncoding == null)
         {
-            if (newEncoding == null)
-                return value;
-            var buffer = currentEncoding.GetBytes(value);
-            return newEncoding.GetString(buffer, 0, buffer.Length);
+            return value;
         }
+
+        var buffer = currentEncoding.GetBytes(value);
+        return newEncoding.GetString(buffer, 0, buffer.Length);
     }
 }

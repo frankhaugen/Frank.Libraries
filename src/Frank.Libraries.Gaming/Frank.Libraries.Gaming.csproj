@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10.0</LangVersion>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
         <RepositoryType>Git</RepositoryType>
@@ -23,6 +22,93 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Engine" />
+        <Folder Include="Engine"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_assets_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_universe_graphics_graphic_id_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_roles_history_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response52.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Position5.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_shareholders_200_okShareholder_type.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response59.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response3.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_fleet_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_wallet_journal_200_okRef_type.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_membertracking_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_contacts_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_okGender.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_bookmarks_folders_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_standings_200_okFrom_type.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_calendar_event_id_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Bad_request.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_clones_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Victory_points6.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response15.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Victim.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_calendar_event_id_attendees_200_okEvent_response.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_roles_history_200_okRole_type.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_fittings_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Post_characters_character_id_fittings_fitting.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Graphics.cs" />
+      <Compile Remove="Engine\EveOnlineApi\LabelsColor.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Wallet.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_containers_logs_200_okAction.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Pins.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_contracts_contract_id_items_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response10.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_titles_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Position3.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_medals_issued_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_sovereignty_campaigns_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response36.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_markets_prices_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Extractor_details.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Post_characters_affiliation_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_fw_stats_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Unauthorized.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_incursions_200_okState.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_universe_stargates_stargate_id_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_contracts_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Active_total.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporation_corporation_id_mining_observers_observer_id_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Post_fleets_fleet_id_members_invitation.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_universe_groups_group_id_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Factions.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Gateway_timeout.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response63.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_orders_history_200_okState.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response22.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_notifications_contacts_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response20.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_mail_labels_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_standings_200_okFrom_type.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Roles2.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_killmails_recent_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response61.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_structures_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_contacts_labels_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Response38.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_fw_wars_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporation_corporation_id_mining_observers_200_okObserver_type.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Recipients2.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_universe_categories_category_id_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Last_week.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_loyalty_points_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_fw_stats_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Home_location.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Required_items.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_universe_ancestries_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Yesterday3.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Yesterday5.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_starbases_starbase_id_okFuel_bay_view.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_fw_systems_200_okContested.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_customs_offices_200_okStanding_level.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_characters_character_id_killmails_recent_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_facilities_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_medals_200_ok.cs" />
+      <Compile Remove="Engine\EveOnlineApi\Get_corporations_corporation_id_orders_history_200_okRange.cs" />
     </ItemGroup>
 </Project>

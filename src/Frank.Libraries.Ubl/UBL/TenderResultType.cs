@@ -1,265 +1,174 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("TenderResult", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TenderResultType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("TenderResult", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TenderResultType
 {
-
-    private TenderResultCodeType tenderResultCodeField;
-
-    private DescriptionType[] descriptionField;
-
     private AdvertisementAmountType advertisementAmountField;
 
     private AwardDateType awardDateField;
 
+    private TenderedProjectType awardedTenderedProjectField;
+
     private AwardTimeType awardTimeField;
 
-    private ReceivedTenderQuantityType receivedTenderQuantityField;
+    private ContractType contractField;
 
-    private LowerTenderAmountType lowerTenderAmountField;
+    private PeriodType contractFormalizationPeriodField;
+
+    private DescriptionType[] descriptionField;
 
     private HigherTenderAmountType higherTenderAmountField;
 
-    private StartDateType startDateField;
+    private LowerTenderAmountType lowerTenderAmountField;
 
     private ReceivedElectronicTenderQuantityType receivedElectronicTenderQuantityField;
 
     private ReceivedForeignTenderQuantityType receivedForeignTenderQuantityField;
 
-    private ContractType contractField;
+    private ReceivedTenderQuantityType receivedTenderQuantityField;
 
-    private TenderedProjectType awardedTenderedProjectField;
-
-    private PeriodType contractFormalizationPeriodField;
+    private StartDateType startDateField;
 
     private SubcontractTermsType[] subcontractTermsField;
 
+    private TenderResultCodeType tenderResultCodeField;
+
     private WinningPartyType[] winningPartyField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TenderResultCodeType TenderResultCode
     {
-        get
-        {
-            return this.tenderResultCodeField;
-        }
-        set
-        {
-            this.tenderResultCodeField = value;
-        }
+        get => tenderResultCodeField;
+        set => tenderResultCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AdvertisementAmountType AdvertisementAmount
     {
-        get
-        {
-            return this.advertisementAmountField;
-        }
-        set
-        {
-            this.advertisementAmountField = value;
-        }
+        get => advertisementAmountField;
+        set => advertisementAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AwardDateType AwardDate
     {
-        get
-        {
-            return this.awardDateField;
-        }
-        set
-        {
-            this.awardDateField = value;
-        }
+        get => awardDateField;
+        set => awardDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AwardTimeType AwardTime
     {
-        get
-        {
-            return this.awardTimeField;
-        }
-        set
-        {
-            this.awardTimeField = value;
-        }
+        get => awardTimeField;
+        set => awardTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReceivedTenderQuantityType ReceivedTenderQuantity
     {
-        get
-        {
-            return this.receivedTenderQuantityField;
-        }
-        set
-        {
-            this.receivedTenderQuantityField = value;
-        }
+        get => receivedTenderQuantityField;
+        set => receivedTenderQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LowerTenderAmountType LowerTenderAmount
     {
-        get
-        {
-            return this.lowerTenderAmountField;
-        }
-        set
-        {
-            this.lowerTenderAmountField = value;
-        }
+        get => lowerTenderAmountField;
+        set => lowerTenderAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public HigherTenderAmountType HigherTenderAmount
     {
-        get
-        {
-            return this.higherTenderAmountField;
-        }
-        set
-        {
-            this.higherTenderAmountField = value;
-        }
+        get => higherTenderAmountField;
+        set => higherTenderAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public StartDateType StartDate
     {
-        get
-        {
-            return this.startDateField;
-        }
-        set
-        {
-            this.startDateField = value;
-        }
+        get => startDateField;
+        set => startDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReceivedElectronicTenderQuantityType ReceivedElectronicTenderQuantity
     {
-        get
-        {
-            return this.receivedElectronicTenderQuantityField;
-        }
-        set
-        {
-            this.receivedElectronicTenderQuantityField = value;
-        }
+        get => receivedElectronicTenderQuantityField;
+        set => receivedElectronicTenderQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReceivedForeignTenderQuantityType ReceivedForeignTenderQuantity
     {
-        get
-        {
-            return this.receivedForeignTenderQuantityField;
-        }
-        set
-        {
-            this.receivedForeignTenderQuantityField = value;
-        }
+        get => receivedForeignTenderQuantityField;
+        set => receivedForeignTenderQuantityField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContractType Contract
     {
-        get
-        {
-            return this.contractField;
-        }
-        set
-        {
-            this.contractField = value;
-        }
+        get => contractField;
+        set => contractField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public TenderedProjectType AwardedTenderedProject
     {
-        get
-        {
-            return this.awardedTenderedProjectField;
-        }
-        set
-        {
-            this.awardedTenderedProjectField = value;
-        }
+        get => awardedTenderedProjectField;
+        set => awardedTenderedProjectField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType ContractFormalizationPeriod
     {
-        get
-        {
-            return this.contractFormalizationPeriodField;
-        }
-        set
-        {
-            this.contractFormalizationPeriodField = value;
-        }
+        get => contractFormalizationPeriodField;
+        set => contractFormalizationPeriodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SubcontractTerms")]
+    /// <remarks />
+    [XmlElement("SubcontractTerms")]
     public SubcontractTermsType[] SubcontractTerms
     {
-        get
-        {
-            return this.subcontractTermsField;
-        }
-        set
-        {
-            this.subcontractTermsField = value;
-        }
+        get => subcontractTermsField;
+        set => subcontractTermsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("WinningParty")]
+    /// <remarks />
+    [XmlElement("WinningParty")]
     public WinningPartyType[] WinningParty
     {
-        get
-        {
-            return this.winningPartyField;
-        }
-        set
-        {
-            this.winningPartyField = value;
-        }
+        get => winningPartyField;
+        set => winningPartyField = value;
     }
 }

@@ -1,59 +1,46 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("HaulageTradingTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TradingTermsType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("HaulageTradingTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TradingTermsType
 {
+    private AddressType applicableAddressField;
 
     private InformationType[] informationField;
 
     private ReferenceType referenceField;
 
-    private AddressType applicableAddressField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Information", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Information", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public InformationType[] Information
     {
-        get
-        {
-            return this.informationField;
-        }
-        set
-        {
-            this.informationField = value;
-        }
+        get => informationField;
+        set => informationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReferenceType Reference
     {
-        get
-        {
-            return this.referenceField;
-        }
-        set
-        {
-            this.referenceField = value;
-        }
+        get => referenceField;
+        set => referenceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public AddressType ApplicableAddress
     {
-        get
-        {
-            return this.applicableAddressField;
-        }
-        set
-        {
-            this.applicableAddressField = value;
-        }
+        get => applicableAddressField;
+        set => applicableAddressField = value;
     }
 }

@@ -1,117 +1,116 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Frank.Libraries.IRC.Ctcp
+namespace Frank.Libraries.IRC.Ctcp;
+
+// Defines all message processors for the client.
+partial class CtcpClient
 {
-    // Defines all message processors for the client.
-    partial class CtcpClient
+    /// <summary>
+    ///     Process ACTION messages received from a user.
+    /// </summary>
+    /// <param name="message">The message received from the user.</param>
+    [MessageProcessor("action")]
+    protected internal void ProcessMessageAction(CtcpMessage message)
     {
-        /// <summary>
-        ///     Process ACTION messages received from a user.
-        /// </summary>
-        /// <param name="message">The message received from the user.</param>
-        [MessageProcessor("action")]
-        protected internal void ProcessMessageAction(CtcpMessage message)
+        Debug.Assert(message.Data != null);
+
+        if (!message.IsResponse)
         {
-            Debug.Assert(message.Data != null);
+            var text = message.Data;
 
-            if (!message.IsResponse)
+            OnActionReceived(new CtcpMessageEventArgs(message.Source, message.Targets, text));
+        }
+    }
+
+    /// <summary>
+    ///     Process TIME messages received from a user.
+    /// </summary>
+    /// <param name="message">The message received from the user.</param>
+    [MessageProcessor("time")]
+    protected internal void ProcessMessageTime(CtcpMessage message)
+    {
+        if (message.IsResponse)
+        {
+            var dateTime = message.Data;
+
+            OnTimeResponseReceived(new CtcpTimeResponseReceivedEventArgs(message.Source, dateTime));
+        }
+        else
+        {
+            var localDateTime = DateTimeOffset.Now.ToString("o");
+
+            SendMessageTime(new[] { message.Source }, localDateTime, true);
+        }
+    }
+
+    /// <summary>
+    ///     Process VERSION messages received from a user.
+    /// </summary>
+    /// <param name="message">The message received from the user.</param>
+    [MessageProcessor("version")]
+    protected internal void ProcessMessageVersion(CtcpMessage message)
+    {
+        if (message.IsResponse)
+        {
+            var versionInfo = message.Data;
+
+            OnVersionResponseReceived(new CtcpVersionResponseReceivedEventArgs(message.Source, versionInfo));
+        }
+        else
+        {
+            if (ClientVersion != null)
             {
-                var text = message.Data;
-
-                OnActionReceived(new CtcpMessageEventArgs(message.Source, message.Targets, text));
+                SendMessageVersion(new[] { message.Source }, ClientVersion, true);
             }
         }
+    }
 
-        /// <summary>
-        ///     Process TIME messages received from a user.
-        /// </summary>
-        /// <param name="message">The message received from the user.</param>
-        [MessageProcessor("time")]
-        protected internal void ProcessMessageTime(CtcpMessage message)
+    /// <summary>
+    ///     Process ERRMSG messages received from a user.
+    /// </summary>
+    /// <param name="message">The message received from the user.</param>
+    [MessageProcessor("errmsg")]
+    protected internal void ProcessMessageErrMsg(CtcpMessage message)
+    {
+        Debug.Assert(message.Data != null);
+
+        if (message.IsResponse)
         {
-            if (message.IsResponse)
-            {
-                var dateTime = message.Data;
+            // Get failed query and error message from data.
+            var parts = message.Data.SplitIntoPair(" :");
+            var failedQuery = parts.Item1;
+            var errorMessage = parts.Item2;
 
-                OnTimeResponseReceived(new CtcpTimeResponseReceivedEventArgs(message.Source, dateTime));
-            }
-            else
-            {
-                var localDateTime = DateTimeOffset.Now.ToString("o");
-
-                SendMessageTime(new[] { message.Source }, localDateTime, true);
-            }
+            OnErrorMessageResponseReceived(new CtcpErrorMessageReceivedEventArgs(message.Source,
+                                                                                 failedQuery, errorMessage));
         }
-
-        /// <summary>
-        ///     Process VERSION messages received from a user.
-        /// </summary>
-        /// <param name="message">The message received from the user.</param>
-        [MessageProcessor("version")]
-        protected internal void ProcessMessageVersion(CtcpMessage message)
+        else
         {
-            if (message.IsResponse)
-            {
-                var versionInfo = message.Data;
-
-                OnVersionResponseReceived(new CtcpVersionResponseReceivedEventArgs(message.Source, versionInfo));
-            }
-            else
-            {
-                if (ClientVersion != null)
-                {
-                    SendMessageVersion(new[] { message.Source }, ClientVersion, true);
-                }
-            }
+            SendMessageErrMsg(new[] { message.Source }, message.Data + " :" + messageNoError, true);
         }
+    }
 
-        /// <summary>
-        ///     Process ERRMSG messages received from a user.
-        /// </summary>
-        /// <param name="message">The message received from the user.</param>
-        [MessageProcessor("errmsg")]
-        protected internal void ProcessMessageErrMsg(CtcpMessage message)
+    /// <summary>
+    ///     Process PING messages received from a user.
+    /// </summary>
+    /// <param name="message">The message received from the user.</param>
+    [MessageProcessor("ping")]
+    protected internal void ProcessMessagePing(CtcpMessage message)
+    {
+        Debug.Assert(message.Data != null);
+
+        if (message.IsResponse)
         {
-            Debug.Assert(message.Data != null);
+            // Calculate time elapsed since the ping request was sent.
+            var sendTime = new DateTime(long.Parse(message.Data));
+            var pingTime = DateTime.Now - sendTime;
 
-            if (message.IsResponse)
-            {
-                // Get failed query and error message from data.
-                var parts = message.Data.SplitIntoPair(" :");
-                var failedQuery = parts.Item1;
-                var errorMessage = parts.Item2;
-
-                OnErrorMessageResponseReceived(new CtcpErrorMessageReceivedEventArgs(message.Source,
-                                                                                     failedQuery, errorMessage));
-            }
-            else
-            {
-                SendMessageErrMsg(new[] { message.Source }, message.Data + " :" + messageNoError, true);
-            }
+            OnPingResponseReceived(new CtcpPingResponseReceivedEventArgs(message.Source, pingTime));
         }
-
-        /// <summary>
-        ///     Process PING messages received from a user.
-        /// </summary>
-        /// <param name="message">The message received from the user.</param>
-        [MessageProcessor("ping")]
-        protected internal void ProcessMessagePing(CtcpMessage message)
+        else
         {
-            Debug.Assert(message.Data != null);
-
-            if (message.IsResponse)
-            {
-                // Calculate time elapsed since the ping request was sent.
-                var sendTime = new DateTime(long.Parse(message.Data));
-                var pingTime = DateTime.Now - sendTime;
-
-                OnPingResponseReceived(new CtcpPingResponseReceivedEventArgs(message.Source, pingTime));
-            }
-            else
-            {
-                SendMessagePing(new[] { message.Source }, message.Data, true);
-            }
+            SendMessagePing(new[] { message.Source }, message.Data, true);
         }
     }
 }

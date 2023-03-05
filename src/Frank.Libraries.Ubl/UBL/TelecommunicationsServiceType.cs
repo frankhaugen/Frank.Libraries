@@ -1,346 +1,225 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("TelecommunicationsService", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TelecommunicationsServiceType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("TelecommunicationsService", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TelecommunicationsServiceType
 {
-
-    private IDType idField;
-
-    private CallDateType callDateField;
-
-    private CallTimeType callTimeField;
-
-    private ServiceNumberCalledType serviceNumberCalledField;
-
-    private TelecommunicationsServiceCategoryType telecommunicationsServiceCategoryField;
-
-    private TelecommunicationsServiceCategoryCodeType telecommunicationsServiceCategoryCodeField;
-
-    private MovieTitleType movieTitleField;
-
-    private RoamingPartnerNameType roamingPartnerNameField;
-
-    private PayPerViewType payPerViewField;
-
-    private QuantityType2 quantityField;
-
-    private TelecommunicationsServiceCallType telecommunicationsServiceCallField;
-
-    private TelecommunicationsServiceCallCodeType telecommunicationsServiceCallCodeField;
+    private AllowanceChargeType[] allowanceChargeField;
 
     private CallBaseAmountType callBaseAmountField;
 
+    private CallDateType callDateField;
+
+    private DutyType1[] callDutyField;
+
     private CallExtensionAmountType callExtensionAmountField;
 
-    private PriceType priceField;
+    private CallTimeType callTimeField;
 
     private CountryType countryField;
 
     private ExchangeRateType[] exchangeRateField;
 
-    private AllowanceChargeType[] allowanceChargeField;
+    private IDType idField;
+
+    private MovieTitleType movieTitleField;
+
+    private PayPerViewType payPerViewField;
+
+    private PriceType priceField;
+
+    private QuantityType2 quantityField;
+
+    private RoamingPartnerNameType roamingPartnerNameField;
+
+    private ServiceNumberCalledType serviceNumberCalledField;
 
     private TaxTotalType[] taxTotalField;
 
-    private DutyType1[] callDutyField;
+    private TelecommunicationsServiceCallCodeType telecommunicationsServiceCallCodeField;
+
+    private TelecommunicationsServiceCallType telecommunicationsServiceCallField;
+
+    private TelecommunicationsServiceCategoryCodeType telecommunicationsServiceCategoryCodeField;
+
+    private TelecommunicationsServiceCategoryType telecommunicationsServiceCategoryField;
 
     private DutyType1[] timeDutyField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CallDateType CallDate
     {
-        get
-        {
-            return this.callDateField;
-        }
-        set
-        {
-            this.callDateField = value;
-        }
+        get => callDateField;
+        set => callDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CallTimeType CallTime
     {
-        get
-        {
-            return this.callTimeField;
-        }
-        set
-        {
-            this.callTimeField = value;
-        }
+        get => callTimeField;
+        set => callTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ServiceNumberCalledType ServiceNumberCalled
     {
-        get
-        {
-            return this.serviceNumberCalledField;
-        }
-        set
-        {
-            this.serviceNumberCalledField = value;
-        }
+        get => serviceNumberCalledField;
+        set => serviceNumberCalledField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TelecommunicationsServiceCategoryType TelecommunicationsServiceCategory
     {
-        get
-        {
-            return this.telecommunicationsServiceCategoryField;
-        }
-        set
-        {
-            this.telecommunicationsServiceCategoryField = value;
-        }
+        get => telecommunicationsServiceCategoryField;
+        set => telecommunicationsServiceCategoryField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TelecommunicationsServiceCategoryCodeType TelecommunicationsServiceCategoryCode
     {
-        get
-        {
-            return this.telecommunicationsServiceCategoryCodeField;
-        }
-        set
-        {
-            this.telecommunicationsServiceCategoryCodeField = value;
-        }
+        get => telecommunicationsServiceCategoryCodeField;
+        set => telecommunicationsServiceCategoryCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MovieTitleType MovieTitle
     {
-        get
-        {
-            return this.movieTitleField;
-        }
-        set
-        {
-            this.movieTitleField = value;
-        }
+        get => movieTitleField;
+        set => movieTitleField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RoamingPartnerNameType RoamingPartnerName
     {
-        get
-        {
-            return this.roamingPartnerNameField;
-        }
-        set
-        {
-            this.roamingPartnerNameField = value;
-        }
+        get => roamingPartnerNameField;
+        set => roamingPartnerNameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PayPerViewType PayPerView
     {
-        get
-        {
-            return this.payPerViewField;
-        }
-        set
-        {
-            this.payPerViewField = value;
-        }
+        get => payPerViewField;
+        set => payPerViewField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public QuantityType2 Quantity
     {
-        get
-        {
-            return this.quantityField;
-        }
-        set
-        {
-            this.quantityField = value;
-        }
+        get => quantityField;
+        set => quantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TelecommunicationsServiceCallType TelecommunicationsServiceCall
     {
-        get
-        {
-            return this.telecommunicationsServiceCallField;
-        }
-        set
-        {
-            this.telecommunicationsServiceCallField = value;
-        }
+        get => telecommunicationsServiceCallField;
+        set => telecommunicationsServiceCallField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TelecommunicationsServiceCallCodeType TelecommunicationsServiceCallCode
     {
-        get
-        {
-            return this.telecommunicationsServiceCallCodeField;
-        }
-        set
-        {
-            this.telecommunicationsServiceCallCodeField = value;
-        }
+        get => telecommunicationsServiceCallCodeField;
+        set => telecommunicationsServiceCallCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CallBaseAmountType CallBaseAmount
     {
-        get
-        {
-            return this.callBaseAmountField;
-        }
-        set
-        {
-            this.callBaseAmountField = value;
-        }
+        get => callBaseAmountField;
+        set => callBaseAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CallExtensionAmountType CallExtensionAmount
     {
-        get
-        {
-            return this.callExtensionAmountField;
-        }
-        set
-        {
-            this.callExtensionAmountField = value;
-        }
+        get => callExtensionAmountField;
+        set => callExtensionAmountField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PriceType Price
     {
-        get
-        {
-            return this.priceField;
-        }
-        set
-        {
-            this.priceField = value;
-        }
+        get => priceField;
+        set => priceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CountryType Country
     {
-        get
-        {
-            return this.countryField;
-        }
-        set
-        {
-            this.countryField = value;
-        }
+        get => countryField;
+        set => countryField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ExchangeRate")]
+    /// <remarks />
+    [XmlElement("ExchangeRate")]
     public ExchangeRateType[] ExchangeRate
     {
-        get
-        {
-            return this.exchangeRateField;
-        }
-        set
-        {
-            this.exchangeRateField = value;
-        }
+        get => exchangeRateField;
+        set => exchangeRateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]
+    /// <remarks />
+    [XmlElement("AllowanceCharge")]
     public AllowanceChargeType[] AllowanceCharge
     {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-        set
-        {
-            this.allowanceChargeField = value;
-        }
+        get => allowanceChargeField;
+        set => allowanceChargeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxTotal")]
+    /// <remarks />
+    [XmlElement("TaxTotal")]
     public TaxTotalType[] TaxTotal
     {
-        get
-        {
-            return this.taxTotalField;
-        }
-        set
-        {
-            this.taxTotalField = value;
-        }
+        get => taxTotalField;
+        set => taxTotalField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("CallDuty")]
+    /// <remarks />
+    [XmlElement("CallDuty")]
     public DutyType1[] CallDuty
     {
-        get
-        {
-            return this.callDutyField;
-        }
-        set
-        {
-            this.callDutyField = value;
-        }
+        get => callDutyField;
+        set => callDutyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TimeDuty")]
+    /// <remarks />
+    [XmlElement("TimeDuty")]
     public DutyType1[] TimeDuty
     {
-        get
-        {
-            return this.timeDutyField;
-        }
-        set
-        {
-            this.timeDutyField = value;
-        }
+        get => timeDutyField;
+        set => timeDutyField = value;
     }
 }

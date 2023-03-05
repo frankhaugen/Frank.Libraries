@@ -1,91 +1,66 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("SalesItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class SalesItemType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("SalesItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class SalesItemType
 {
+    private ActivityPropertyType[] activityPropertyField;
+
+    private ItemType itemField;
 
     private QuantityType2 quantityField;
-
-    private ActivityPropertyType[] activityPropertyField;
 
     private PriceType[] taxExclusivePriceField;
 
     private PriceType[] taxInclusivePriceField;
 
-    private ItemType itemField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public QuantityType2 Quantity
     {
-        get
-        {
-            return this.quantityField;
-        }
-        set
-        {
-            this.quantityField = value;
-        }
+        get => quantityField;
+        set => quantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ActivityProperty")]
+    /// <remarks />
+    [XmlElement("ActivityProperty")]
     public ActivityPropertyType[] ActivityProperty
     {
-        get
-        {
-            return this.activityPropertyField;
-        }
-        set
-        {
-            this.activityPropertyField = value;
-        }
+        get => activityPropertyField;
+        set => activityPropertyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxExclusivePrice")]
+    /// <remarks />
+    [XmlElement("TaxExclusivePrice")]
     public PriceType[] TaxExclusivePrice
     {
-        get
-        {
-            return this.taxExclusivePriceField;
-        }
-        set
-        {
-            this.taxExclusivePriceField = value;
-        }
+        get => taxExclusivePriceField;
+        set => taxExclusivePriceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxInclusivePrice")]
+    /// <remarks />
+    [XmlElement("TaxInclusivePrice")]
     public PriceType[] TaxInclusivePrice
     {
-        get
-        {
-            return this.taxInclusivePriceField;
-        }
-        set
-        {
-            this.taxInclusivePriceField = value;
-        }
+        get => taxInclusivePriceField;
+        set => taxInclusivePriceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ItemType Item
     {
-        get
-        {
-            return this.itemField;
-        }
-        set
-        {
-            this.itemField = value;
-        }
+        get => itemField;
+        set => itemField = value;
     }
 }

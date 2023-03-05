@@ -1,14 +1,13 @@
-﻿namespace Frank.Libraries.Enums.Science.Astronomy
+﻿namespace Frank.Libraries.Enums.Science.Astronomy;
+
+public enum Planet
 {
-    public enum Planet
-    {
-        Mercury = 1,
-        Venus = 2,
-        Earth = 3,
-        Mars = 4,
-        Jupiter = 5,
-        Saturn = 6,
-        Uranus = 7,
-        Neptune = 8
-    }
+    Mercury = 1,
+    Venus = 2,
+    Earth = 3,
+    Mars = 4,
+    Jupiter = 5,
+    Saturn = 6,
+    Uranus = 7,
+    Neptune = 8
 }

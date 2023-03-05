@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateProduct**](ProductsApi.md#createproduct) | **POST** /companies/{companySlug}/products |
-[**CreateProductSalesReport**](ProductsApi.md#createproductsalesreport) | **
-POST** /companies/{companySlug}/products/salesReport |
-[**DeleteProduct**](ProductsApi.md#deleteproduct) | **DELETE** /companies/{companySlug}/products/{productId} |
-[**GetProduct**](ProductsApi.md#getproduct) | **GET** /companies/{companySlug}/products/{productId} |
-[**GetProducts**](ProductsApi.md#getproducts) | **GET** /companies/{companySlug}/products |
-[**UpdateProduct**](ProductsApi.md#updateproduct) | **PUT** /companies/{companySlug}/products/{productId} |
+ Method                                                                  | HTTP request                                             | Description
+-------------------------------------------------------------------------|----------------------------------------------------------|-------------
+ [**CreateProduct**](ProductsApi.md#createproduct)                       | **POST** /companies/{companySlug}/products               |
+ [**CreateProductSalesReport**](ProductsApi.md#createproductsalesreport) | **
+ POST** /companies/{companySlug}/products/salesReport                    |
+ [**DeleteProduct**](ProductsApi.md#deleteproduct)                       | **DELETE** /companies/{companySlug}/products/{productId} |
+ [**GetProduct**](ProductsApi.md#getproduct)                             | **GET** /companies/{companySlug}/products/{productId}    |
+ [**GetProducts**](ProductsApi.md#getproducts)                           | **GET** /companies/{companySlug}/products                |
+ [**UpdateProduct**](ProductsApi.md#updateproduct)                       | **PUT** /companies/{companySlug}/products/{productId}    |
 
 <a name="createproduct"></a>
 
@@ -60,10 +60,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**Product**](Product.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                      | Description                 | Notes
+-----------------|---------------------------|-----------------------------|-------
+ **body**        | [**Product**](Product.md) |                             |
+ **companySlug** | **string**                | Slug of company to retrieve |
 
 ### Return type
 
@@ -129,10 +129,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**ProductSalesReportRequest**](ProductSalesReportRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                                          | Description                 | Notes
+-----------------|---------------------------------------------------------------|-----------------------------|-------
+ **body**        | [**ProductSalesReportRequest**](ProductSalesReportRequest.md) |                             |
+ **companySlug** | **string**                                                    | Slug of company to retrieve |
 
 ### Return type
 
@@ -197,11 +197,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**productId** | **
-long?**| The productId (primary key of the returned object) is returned in the GET all products call; not to be confused with productNumber.  |
+ Name            | Type                                                                                                                                | Description                 | Notes
+-----------------|-------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                          | Slug of company to retrieve |
+ **productId**   | **
+ long?**         | The productId (primary key of the returned object) is returned in the GET all products call; not to be confused with productNumber. |
 
 ### Return type
 
@@ -267,11 +267,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**productId** | **
-long?**| The productId (primary key of the returned object) is returned in the GET all products call; not to be confused with productNumber.  |
+ Name            | Type                                                                                                                                | Description                 | Notes
+-----------------|-------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                          | Slug of company to retrieve |
+ **productId**   | **
+ long?**         | The productId (primary key of the returned object) is returned in the GET all products call; not to be confused with productNumber. |
 
 ### Return type
 
@@ -292,7 +292,8 @@ long?**| The productId (primary key of the returned object) is returned in the G
 
 # **GetProducts**
 
-> List<Product> GetProducts (string companySlug, int? page, int? pageSize, DateTime? createdDate, DateTime? lastModified, string name, string productNumber, bool? active)
+> List<Product> GetProducts (string companySlug, int? page, int? pageSize, DateTime? createdDate, DateTime?
+> lastModified, string name, string productNumber, bool? active)
 
 
 
@@ -343,21 +344,21 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**createdDate** | **
-DateTime?**| Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModified** | **
-DateTime?**| Filter based on date of last modification. Returns results that were last modified on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**name** | **string**| Find all results with product name equal to the specified parameter. | [optional]
-**productNumber** | **
-string**| Find all results with product number (varenummer) equal to the specified parameter. | [optional]
-**active** | **bool?**| Returns active (true) or inactive (false) products. | [optional]
+ Name              | Type                                                                                                                                                                                                                                         | Description                                                          | Notes
+-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|------------
+ **companySlug**   | **string**                                                                                                                                                                                                                                   | Slug of company to retrieve                                          |
+ **page**          | **
+ int?**            | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.                                                                                                            | [optional] [default to 0]
+ **pageSize**      | **
+ int?**            | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.                                                                                               | [optional] [default to 25]
+ **createdDate**   | **
+ DateTime?**       | Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                                                                                                               | [optional]
+ **lastModified**  | **
+ DateTime?**       | Filter based on date of last modification. Returns results that were last modified on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; | [optional]
+ **name**          | **string**                                                                                                                                                                                                                                   | Find all results with product name equal to the specified parameter. | [optional]
+ **productNumber** | **
+ string**          | Find all results with product number (varenummer) equal to the specified parameter.                                                                                                                                                          | [optional]
+ **active**        | **bool?**                                                                                                                                                                                                                                    | Returns active (true) or inactive (false) products.                  | [optional]
 
 ### Return type
 
@@ -423,12 +424,12 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**Product**](Product.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**productId** | **
-long?**| The productId (primary key of the returned object) is returned in the GET all products call; not to be confused with productNumber.  |
+ Name            | Type                                                                                                                                | Description                 | Notes
+-----------------|-------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **body**        | [**Product**](Product.md)                                                                                                           |                             |
+ **companySlug** | **string**                                                                                                                          | Slug of company to retrieve |
+ **productId**   | **
+ long?**         | The productId (primary key of the returned object) is returned in the GET all products call; not to be confused with productNumber. |
 
 ### Return type
 

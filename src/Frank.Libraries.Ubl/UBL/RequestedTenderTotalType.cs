@@ -1,140 +1,97 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("RequestedTenderTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class RequestedTenderTotalType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("RequestedTenderTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class RequestedTenderTotalType
 {
-
-    private EstimatedOverallContractAmountType estimatedOverallContractAmountField;
-
-    private TotalAmountType totalAmountField;
-
-    private TaxIncludedIndicatorType taxIncludedIndicatorField;
-
-    private MinimumAmountType minimumAmountField;
-
-    private MaximumAmountType maximumAmountField;
-
-    private MonetaryScopeType[] monetaryScopeField;
+    private TaxCategoryType[] applicableTaxCategoryField;
 
     private AverageSubsequentContractAmountType averageSubsequentContractAmountField;
 
-    private TaxCategoryType[] applicableTaxCategoryField;
+    private EstimatedOverallContractAmountType estimatedOverallContractAmountField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private MaximumAmountType maximumAmountField;
+
+    private MinimumAmountType minimumAmountField;
+
+    private MonetaryScopeType[] monetaryScopeField;
+
+    private TaxIncludedIndicatorType taxIncludedIndicatorField;
+
+    private TotalAmountType totalAmountField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EstimatedOverallContractAmountType EstimatedOverallContractAmount
     {
-        get
-        {
-            return this.estimatedOverallContractAmountField;
-        }
-        set
-        {
-            this.estimatedOverallContractAmountField = value;
-        }
+        get => estimatedOverallContractAmountField;
+        set => estimatedOverallContractAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TotalAmountType TotalAmount
     {
-        get
-        {
-            return this.totalAmountField;
-        }
-        set
-        {
-            this.totalAmountField = value;
-        }
+        get => totalAmountField;
+        set => totalAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxIncludedIndicatorType TaxIncludedIndicator
     {
-        get
-        {
-            return this.taxIncludedIndicatorField;
-        }
-        set
-        {
-            this.taxIncludedIndicatorField = value;
-        }
+        get => taxIncludedIndicatorField;
+        set => taxIncludedIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MinimumAmountType MinimumAmount
     {
-        get
-        {
-            return this.minimumAmountField;
-        }
-        set
-        {
-            this.minimumAmountField = value;
-        }
+        get => minimumAmountField;
+        set => minimumAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MaximumAmountType MaximumAmount
     {
-        get
-        {
-            return this.maximumAmountField;
-        }
-        set
-        {
-            this.maximumAmountField = value;
-        }
+        get => maximumAmountField;
+        set => maximumAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("MonetaryScope", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("MonetaryScope", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MonetaryScopeType[] MonetaryScope
     {
-        get
-        {
-            return this.monetaryScopeField;
-        }
-        set
-        {
-            this.monetaryScopeField = value;
-        }
+        get => monetaryScopeField;
+        set => monetaryScopeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AverageSubsequentContractAmountType AverageSubsequentContractAmount
     {
-        get
-        {
-            return this.averageSubsequentContractAmountField;
-        }
-        set
-        {
-            this.averageSubsequentContractAmountField = value;
-        }
+        get => averageSubsequentContractAmountField;
+        set => averageSubsequentContractAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ApplicableTaxCategory")]
+    /// <remarks />
+    [XmlElement("ApplicableTaxCategory")]
     public TaxCategoryType[] ApplicableTaxCategory
     {
-        get
-        {
-            return this.applicableTaxCategoryField;
-        }
-        set
-        {
-            this.applicableTaxCategoryField = value;
-        }
+        get => applicableTaxCategoryField;
+        set => applicableTaxCategoryField = value;
     }
 }

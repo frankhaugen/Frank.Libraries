@@ -1,516 +1,329 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AlternativeLineItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class LineItemType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AlternativeLineItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class LineItemType
 {
-
-    private IDType idField;
-
-    private SalesOrderIDType salesOrderIDField;
-
-    private UUIDType uUIDField;
-
-    private NoteType[] noteField;
-
-    private LineStatusCodeType lineStatusCodeField;
-
-    private QuantityType2 quantityField;
-
-    private LineExtensionAmountType lineExtensionAmountField;
-
-    private TotalTaxAmountType totalTaxAmountField;
-
-    private MinimumQuantityType minimumQuantityField;
-
-    private MaximumQuantityType maximumQuantityField;
-
-    private MinimumBackorderQuantityType minimumBackorderQuantityField;
-
-    private MaximumBackorderQuantityType maximumBackorderQuantityField;
-
-    private InspectionMethodCodeType inspectionMethodCodeField;
-
-    private PartialDeliveryIndicatorType partialDeliveryIndicatorField;
-
-    private BackOrderAllowedIndicatorType backOrderAllowedIndicatorField;
-
     private AccountingCostCodeType accountingCostCodeField;
 
     private AccountingCostType accountingCostField;
 
-    private WarrantyInformationType[] warrantyInformationField;
+    private AllowanceChargeType[] allowanceChargeField;
+
+    private BackOrderAllowedIndicatorType backOrderAllowedIndicatorField;
 
     private DeliveryType[] deliveryField;
 
     private DeliveryTermsType deliveryTermsField;
 
-    private PartyType originatorPartyField;
+    private IDType idField;
 
-    private OrderedShipmentType[] orderedShipmentField;
-
-    private PricingReferenceType pricingReferenceField;
-
-    private AllowanceChargeType[] allowanceChargeField;
-
-    private PriceType priceField;
+    private InspectionMethodCodeType inspectionMethodCodeField;
 
     private ItemType itemField;
 
-    private LineItemType[] subLineItemField;
-
-    private PeriodType warrantyValidityPeriodField;
-
-    private PartyType warrantyPartyField;
-
-    private TaxTotalType[] taxTotalField;
-
     private PriceExtensionType itemPriceExtensionField;
+
+    private LineExtensionAmountType lineExtensionAmountField;
 
     private LineReferenceType[] lineReferenceField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private LineStatusCodeType lineStatusCodeField;
+
+    private MaximumBackorderQuantityType maximumBackorderQuantityField;
+
+    private MaximumQuantityType maximumQuantityField;
+
+    private MinimumBackorderQuantityType minimumBackorderQuantityField;
+
+    private MinimumQuantityType minimumQuantityField;
+
+    private NoteType[] noteField;
+
+    private OrderedShipmentType[] orderedShipmentField;
+
+    private PartyType originatorPartyField;
+
+    private PartialDeliveryIndicatorType partialDeliveryIndicatorField;
+
+    private PriceType priceField;
+
+    private PricingReferenceType pricingReferenceField;
+
+    private QuantityType2 quantityField;
+
+    private SalesOrderIDType salesOrderIDField;
+
+    private LineItemType[] subLineItemField;
+
+    private TaxTotalType[] taxTotalField;
+
+    private TotalTaxAmountType totalTaxAmountField;
+
+    private UUIDType uUIDField;
+
+    private WarrantyInformationType[] warrantyInformationField;
+
+    private PartyType warrantyPartyField;
+
+    private PeriodType warrantyValidityPeriodField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SalesOrderIDType SalesOrderID
     {
-        get
-        {
-            return this.salesOrderIDField;
-        }
-        set
-        {
-            this.salesOrderIDField = value;
-        }
+        get => salesOrderIDField;
+        set => salesOrderIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UUIDType UUID
     {
-        get
-        {
-            return this.uUIDField;
-        }
-        set
-        {
-            this.uUIDField = value;
-        }
+        get => uUIDField;
+        set => uUIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineStatusCodeType LineStatusCode
     {
-        get
-        {
-            return this.lineStatusCodeField;
-        }
-        set
-        {
-            this.lineStatusCodeField = value;
-        }
+        get => lineStatusCodeField;
+        set => lineStatusCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public QuantityType2 Quantity
     {
-        get
-        {
-            return this.quantityField;
-        }
-        set
-        {
-            this.quantityField = value;
-        }
+        get => quantityField;
+        set => quantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineExtensionAmountType LineExtensionAmount
     {
-        get
-        {
-            return this.lineExtensionAmountField;
-        }
-        set
-        {
-            this.lineExtensionAmountField = value;
-        }
+        get => lineExtensionAmountField;
+        set => lineExtensionAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TotalTaxAmountType TotalTaxAmount
     {
-        get
-        {
-            return this.totalTaxAmountField;
-        }
-        set
-        {
-            this.totalTaxAmountField = value;
-        }
+        get => totalTaxAmountField;
+        set => totalTaxAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MinimumQuantityType MinimumQuantity
     {
-        get
-        {
-            return this.minimumQuantityField;
-        }
-        set
-        {
-            this.minimumQuantityField = value;
-        }
+        get => minimumQuantityField;
+        set => minimumQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MaximumQuantityType MaximumQuantity
     {
-        get
-        {
-            return this.maximumQuantityField;
-        }
-        set
-        {
-            this.maximumQuantityField = value;
-        }
+        get => maximumQuantityField;
+        set => maximumQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MinimumBackorderQuantityType MinimumBackorderQuantity
     {
-        get
-        {
-            return this.minimumBackorderQuantityField;
-        }
-        set
-        {
-            this.minimumBackorderQuantityField = value;
-        }
+        get => minimumBackorderQuantityField;
+        set => minimumBackorderQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MaximumBackorderQuantityType MaximumBackorderQuantity
     {
-        get
-        {
-            return this.maximumBackorderQuantityField;
-        }
-        set
-        {
-            this.maximumBackorderQuantityField = value;
-        }
+        get => maximumBackorderQuantityField;
+        set => maximumBackorderQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public InspectionMethodCodeType InspectionMethodCode
     {
-        get
-        {
-            return this.inspectionMethodCodeField;
-        }
-        set
-        {
-            this.inspectionMethodCodeField = value;
-        }
+        get => inspectionMethodCodeField;
+        set => inspectionMethodCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PartialDeliveryIndicatorType PartialDeliveryIndicator
     {
-        get
-        {
-            return this.partialDeliveryIndicatorField;
-        }
-        set
-        {
-            this.partialDeliveryIndicatorField = value;
-        }
+        get => partialDeliveryIndicatorField;
+        set => partialDeliveryIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BackOrderAllowedIndicatorType BackOrderAllowedIndicator
     {
-        get
-        {
-            return this.backOrderAllowedIndicatorField;
-        }
-        set
-        {
-            this.backOrderAllowedIndicatorField = value;
-        }
+        get => backOrderAllowedIndicatorField;
+        set => backOrderAllowedIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AccountingCostCodeType AccountingCostCode
     {
-        get
-        {
-            return this.accountingCostCodeField;
-        }
-        set
-        {
-            this.accountingCostCodeField = value;
-        }
+        get => accountingCostCodeField;
+        set => accountingCostCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AccountingCostType AccountingCost
     {
-        get
-        {
-            return this.accountingCostField;
-        }
-        set
-        {
-            this.accountingCostField = value;
-        }
+        get => accountingCostField;
+        set => accountingCostField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("WarrantyInformation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("WarrantyInformation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public WarrantyInformationType[] WarrantyInformation
     {
-        get
-        {
-            return this.warrantyInformationField;
-        }
-        set
-        {
-            this.warrantyInformationField = value;
-        }
+        get => warrantyInformationField;
+        set => warrantyInformationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Delivery")]
+    /// <remarks />
+    [XmlElement("Delivery")]
     public DeliveryType[] Delivery
     {
-        get
-        {
-            return this.deliveryField;
-        }
-        set
-        {
-            this.deliveryField = value;
-        }
+        get => deliveryField;
+        set => deliveryField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DeliveryTermsType DeliveryTerms
     {
-        get
-        {
-            return this.deliveryTermsField;
-        }
-        set
-        {
-            this.deliveryTermsField = value;
-        }
+        get => deliveryTermsField;
+        set => deliveryTermsField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType OriginatorParty
     {
-        get
-        {
-            return this.originatorPartyField;
-        }
-        set
-        {
-            this.originatorPartyField = value;
-        }
+        get => originatorPartyField;
+        set => originatorPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("OrderedShipment")]
+    /// <remarks />
+    [XmlElement("OrderedShipment")]
     public OrderedShipmentType[] OrderedShipment
     {
-        get
-        {
-            return this.orderedShipmentField;
-        }
-        set
-        {
-            this.orderedShipmentField = value;
-        }
+        get => orderedShipmentField;
+        set => orderedShipmentField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PricingReferenceType PricingReference
     {
-        get
-        {
-            return this.pricingReferenceField;
-        }
-        set
-        {
-            this.pricingReferenceField = value;
-        }
+        get => pricingReferenceField;
+        set => pricingReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]
+    /// <remarks />
+    [XmlElement("AllowanceCharge")]
     public AllowanceChargeType[] AllowanceCharge
     {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-        set
-        {
-            this.allowanceChargeField = value;
-        }
+        get => allowanceChargeField;
+        set => allowanceChargeField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PriceType Price
     {
-        get
-        {
-            return this.priceField;
-        }
-        set
-        {
-            this.priceField = value;
-        }
+        get => priceField;
+        set => priceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ItemType Item
     {
-        get
-        {
-            return this.itemField;
-        }
-        set
-        {
-            this.itemField = value;
-        }
+        get => itemField;
+        set => itemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SubLineItem")]
+    /// <remarks />
+    [XmlElement("SubLineItem")]
     public LineItemType[] SubLineItem
     {
-        get
-        {
-            return this.subLineItemField;
-        }
-        set
-        {
-            this.subLineItemField = value;
-        }
+        get => subLineItemField;
+        set => subLineItemField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType WarrantyValidityPeriod
     {
-        get
-        {
-            return this.warrantyValidityPeriodField;
-        }
-        set
-        {
-            this.warrantyValidityPeriodField = value;
-        }
+        get => warrantyValidityPeriodField;
+        set => warrantyValidityPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType WarrantyParty
     {
-        get
-        {
-            return this.warrantyPartyField;
-        }
-        set
-        {
-            this.warrantyPartyField = value;
-        }
+        get => warrantyPartyField;
+        set => warrantyPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxTotal")]
+    /// <remarks />
+    [XmlElement("TaxTotal")]
     public TaxTotalType[] TaxTotal
     {
-        get
-        {
-            return this.taxTotalField;
-        }
-        set
-        {
-            this.taxTotalField = value;
-        }
+        get => taxTotalField;
+        set => taxTotalField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PriceExtensionType ItemPriceExtension
     {
-        get
-        {
-            return this.itemPriceExtensionField;
-        }
-        set
-        {
-            this.itemPriceExtensionField = value;
-        }
+        get => itemPriceExtensionField;
+        set => itemPriceExtensionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("LineReference")]
+    /// <remarks />
+    [XmlElement("LineReference")]
     public LineReferenceType[] LineReference
     {
-        get
-        {
-            return this.lineReferenceField;
-        }
-        set
-        {
-            this.lineReferenceField = value;
-        }
+        get => lineReferenceField;
+        set => lineReferenceField = value;
     }
 }

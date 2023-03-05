@@ -2,30 +2,30 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AddAttachmentToInvoice**](InvoicesApi.md#addattachmenttoinvoice) | **
-POST** /companies/{companySlug}/invoices/{invoiceId}/attachments |
-[**AddAttachmentToInvoiceDraft**](InvoicesApi.md#addattachmenttoinvoicedraft) | **
-POST** /companies/{companySlug}/invoices/drafts/{draftId}/attachments |
-[**CreateInvoice**](InvoicesApi.md#createinvoice) | **POST** /companies/{companySlug}/invoices |
-[**CreateInvoiceDraft**](InvoicesApi.md#createinvoicedraft) | **POST** /companies/{companySlug}/invoices/drafts |
-[**CreateInvoiceFromDraft**](InvoicesApi.md#createinvoicefromdraft) | **
-POST** /companies/{companySlug}/invoices/drafts/{draftId}/createInvoice |
-[**DeleteInvoiceDraft**](InvoicesApi.md#deleteinvoicedraft) | **
-DELETE** /companies/{companySlug}/invoices/drafts/{draftId} |
-[**GetInvoice**](InvoicesApi.md#getinvoice) | **GET** /companies/{companySlug}/invoices/{invoiceId} |
-[**GetInvoiceAttachments**](InvoicesApi.md#getinvoiceattachments) | **
-GET** /companies/{companySlug}/invoices/{invoiceId}/attachments |
-[**GetInvoiceDraft**](InvoicesApi.md#getinvoicedraft) | **GET** /companies/{companySlug}/invoices/drafts/{draftId} |
-[**GetInvoiceDraftAttachments**](InvoicesApi.md#getinvoicedraftattachments) | **
-GET** /companies/{companySlug}/invoices/drafts/{draftId}/attachments |
-[**GetInvoiceDrafts**](InvoicesApi.md#getinvoicedrafts) | **GET** /companies/{companySlug}/invoices/drafts |
-[**GetInvoices**](InvoicesApi.md#getinvoices) | **GET** /companies/{companySlug}/invoices |
-[**SendInvoice**](InvoicesApi.md#sendinvoice) | **POST** /companies/{companySlug}/invoices/send |
-[**UpdateInvoice**](InvoicesApi.md#updateinvoice) | **PATCH** /companies/{companySlug}/invoices/{invoiceId} |
-[**UpdateInvoiceDraft**](InvoicesApi.md#updateinvoicedraft) | **
-PUT** /companies/{companySlug}/invoices/drafts/{draftId} |
+ Method                                                                        | HTTP request                                               | Description
+-------------------------------------------------------------------------------|------------------------------------------------------------|-------------
+ [**AddAttachmentToInvoice**](InvoicesApi.md#addattachmenttoinvoice)           | **
+ POST** /companies/{companySlug}/invoices/{invoiceId}/attachments              |
+ [**AddAttachmentToInvoiceDraft**](InvoicesApi.md#addattachmenttoinvoicedraft) | **
+ POST** /companies/{companySlug}/invoices/drafts/{draftId}/attachments         |
+ [**CreateInvoice**](InvoicesApi.md#createinvoice)                             | **POST** /companies/{companySlug}/invoices                 |
+ [**CreateInvoiceDraft**](InvoicesApi.md#createinvoicedraft)                   | **POST** /companies/{companySlug}/invoices/drafts          |
+ [**CreateInvoiceFromDraft**](InvoicesApi.md#createinvoicefromdraft)           | **
+ POST** /companies/{companySlug}/invoices/drafts/{draftId}/createInvoice       |
+ [**DeleteInvoiceDraft**](InvoicesApi.md#deleteinvoicedraft)                   | **
+ DELETE** /companies/{companySlug}/invoices/drafts/{draftId}                   |
+ [**GetInvoice**](InvoicesApi.md#getinvoice)                                   | **GET** /companies/{companySlug}/invoices/{invoiceId}      |
+ [**GetInvoiceAttachments**](InvoicesApi.md#getinvoiceattachments)             | **
+ GET** /companies/{companySlug}/invoices/{invoiceId}/attachments               |
+ [**GetInvoiceDraft**](InvoicesApi.md#getinvoicedraft)                         | **GET** /companies/{companySlug}/invoices/drafts/{draftId} |
+ [**GetInvoiceDraftAttachments**](InvoicesApi.md#getinvoicedraftattachments)   | **
+ GET** /companies/{companySlug}/invoices/drafts/{draftId}/attachments          |
+ [**GetInvoiceDrafts**](InvoicesApi.md#getinvoicedrafts)                       | **GET** /companies/{companySlug}/invoices/drafts           |
+ [**GetInvoices**](InvoicesApi.md#getinvoices)                                 | **GET** /companies/{companySlug}/invoices                  |
+ [**SendInvoice**](InvoicesApi.md#sendinvoice)                                 | **POST** /companies/{companySlug}/invoices/send            |
+ [**UpdateInvoice**](InvoicesApi.md#updateinvoice)                             | **PATCH** /companies/{companySlug}/invoices/{invoiceId}    |
+ [**UpdateInvoiceDraft**](InvoicesApi.md#updateinvoicedraft)                   | **
+ PUT** /companies/{companySlug}/invoices/drafts/{draftId}                      |
 
 <a name="addattachmenttoinvoice"></a>
 
@@ -77,13 +77,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**invoiceId** | **
-long?**| The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber  |
-**filename** | **string**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name            | Type                                                                                                                               | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|------------
+ **companySlug** | **string**                                                                                                                         | Slug of company to retrieve |
+ **invoiceId**   | **
+ long?**         | The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber |
+ **filename**    | **string**                                                                                                                         |                             | [optional]
+ **file**        | **byte[]****byte[]**                                                                                                               |                             | [optional]
 
 ### Return type
 
@@ -151,13 +151,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
-**filename** | **string**|  | [optional]
-**comment** | **string**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name            | Type                 | Description                                                                              | Notes
+-----------------|----------------------|------------------------------------------------------------------------------------------|------------
+ **companySlug** | **string**           | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**            | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
+ **filename**    | **string**           |                                                                                          | [optional]
+ **comment**     | **string**           |                                                                                          | [optional]
+ **file**        | **byte[]****byte[]** |                                                                                          | [optional]
 
 ### Return type
 
@@ -227,10 +227,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**InvoiceRequest**](InvoiceRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                    | Description                 | Notes
+-----------------|-----------------------------------------|-----------------------------|-------
+ **body**        | [**InvoiceRequest**](InvoiceRequest.md) |                             |
+ **companySlug** | **string**                              | Slug of company to retrieve |
 
 ### Return type
 
@@ -295,10 +295,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                                    | Description                 | Notes
+-----------------|---------------------------------------------------------|-----------------------------|-------
+ **body**        | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md) |                             |
+ **companySlug** | **string**                                              | Slug of company to retrieve |
 
 ### Return type
 
@@ -363,10 +363,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -431,10 +431,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -500,11 +500,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**invoiceId** | **
-long?**| The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber  |
+ Name            | Type                                                                                                                               | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                         | Slug of company to retrieve |
+ **invoiceId**   | **
+ long?**         | The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber |
 
 ### Return type
 
@@ -570,11 +570,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**invoiceId** | **
-long?**| The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber  |
+ Name            | Type                                                                                                                               | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                         | Slug of company to retrieve |
+ **invoiceId**   | **
+ long?**         | The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber |
 
 ### Return type
 
@@ -640,10 +640,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -709,10 +709,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -780,14 +780,14 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**orderReference** | **string**| Filter based on order reference for a given invoice | [optional]
+ Name               | Type                                                                                                                                           | Description                                         | Notes
+--------------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|------------
+ **companySlug**    | **string**                                                                                                                                     | Slug of company to retrieve                         |
+ **page**           | **
+ int?**             | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**       | **
+ int?**             | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
+ **orderReference** | **string**                                                                                                                                     | Filter based on order reference for a given invoice | [optional]
 
 ### Return type
 
@@ -808,7 +808,10 @@ int?**| Defines the number of entries to return on each page. Maximum number of 
 
 # **GetInvoices**
 
-> List<InvoiceResult> GetInvoices (string companySlug, int? page, int? pageSize, DateTime? issueDate, DateTime? issueDateLe, DateTime? issueDateLt, DateTime? issueDateGe, DateTime? issueDateGt, DateTime? lastModified, DateTime? lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, long? customerId, bool? settled, string orderReference, Guid? invoiceDraftUuid)
+> List<InvoiceResult> GetInvoices (string companySlug, int? page, int? pageSize, DateTime? issueDate, DateTime?
+> issueDateLe, DateTime? issueDateLt, DateTime? issueDateGe, DateTime? issueDateGt, DateTime? lastModified, DateTime?
+> lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, long? customerId, bool?
+> settled, string orderReference, Guid? invoiceDraftUuid)
 
 
 
@@ -869,40 +872,40 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**issueDate** | **
-DateTime?**| Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**issueDateLe** | **
-DateTime?**| Filter based on date less than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**issueDateLt** | **
-DateTime?**| Filter based on date strictly less than parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**issueDateGe** | **
-DateTime?**| Filter based on date greater than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**issueDateGt** | **
-DateTime?**| Filter based on date strictly greater than parameter value Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModified** | **
-DateTime?**| Filter based on date of last modification. Returns results that were last modified on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedLe** | **
-DateTime?**| Returns results that have been last modified before or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedLt** | **
-DateTime?**| Returns results that have been last modified strictly before the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedGe** | **
-DateTime?**| Returns results that have been last modified after or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedGt** | **
-DateTime?**| Returns results that have been last modified strictly after the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**customerId** | **
-long?**| Returns only invoices sent to specified customer. Must be the contactId provided by a GET contacts call.  | [optional]
-**settled** | **
-bool?**| When set to true, returns only invoices that have been settled. Otherwise false returns all invoices that have not been fully settled.  | [optional]
-**orderReference** | **string**| Filter based on order reference for a given invoice | [optional]
-**invoiceDraftUuid** | [**
-Guid?**](.md)| Filter based on the UUID of the invoice draft that was used to create a given invoice | [optional]
+ Name                 | Type                                                                                                                                                                                                                                         | Description                                         | Notes
+----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|------------
+ **companySlug**      | **string**                                                                                                                                                                                                                                   | Slug of company to retrieve                         |
+ **page**             | **
+ int?**               | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.                                                                                                            | [optional] [default to 0]
+ **pageSize**         | **
+ int?**               | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.                                                                                               | [optional] [default to 25]
+ **issueDate**        | **
+ DateTime?**          | Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                                                                                                               | [optional]
+ **issueDateLe**      | **
+ DateTime?**          | Filter based on date less than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                                                   | [optional]
+ **issueDateLt**      | **
+ DateTime?**          | Filter based on date strictly less than parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                                                      | [optional]
+ **issueDateGe**      | **
+ DateTime?**          | Filter based on date greater than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                                                | [optional]
+ **issueDateGt**      | **
+ DateTime?**          | Filter based on date strictly greater than parameter value Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                                                    | [optional]
+ **lastModified**     | **
+ DateTime?**          | Filter based on date of last modification. Returns results that were last modified on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; | [optional]
+ **lastModifiedLe**   | **
+ DateTime?**          | Returns results that have been last modified before or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                             | [optional]
+ **lastModifiedLt**   | **
+ DateTime?**          | Returns results that have been last modified strictly before the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                          | [optional]
+ **lastModifiedGe**   | **
+ DateTime?**          | Returns results that have been last modified after or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                              | [optional]
+ **lastModifiedGt**   | **
+ DateTime?**          | Returns results that have been last modified strictly after the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                           | [optional]
+ **customerId**       | **
+ long?**              | Returns only invoices sent to specified customer. Must be the contactId provided by a GET contacts call.                                                                                                                                     | [optional]
+ **settled**          | **
+ bool?**              | When set to true, returns only invoices that have been settled. Otherwise false returns all invoices that have not been fully settled.                                                                                                       | [optional]
+ **orderReference**   | **string**                                                                                                                                                                                                                                   | Filter based on order reference for a given invoice | [optional]
+ **invoiceDraftUuid** | [**
+ Guid?**](.md)        | Filter based on the UUID of the invoice draft that was used to create a given invoice                                                                                                                                                        | [optional]
 
 ### Return type
 
@@ -967,10 +970,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**SendInvoiceRequest**](SendInvoiceRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                            | Description                 | Notes
+-----------------|-------------------------------------------------|-----------------------------|-------
+ **body**        | [**SendInvoiceRequest**](SendInvoiceRequest.md) |                             |
+ **companySlug** | **string**                                      | Slug of company to retrieve |
 
 ### Return type
 
@@ -1037,12 +1040,12 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**UpdateInvoiceRequest**](UpdateInvoiceRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**invoiceId** | **
-long?**| The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber  |
+ Name            | Type                                                                                                                               | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **body**        | [**UpdateInvoiceRequest**](UpdateInvoiceRequest.md)                                                                                |                             |
+ **companySlug** | **string**                                                                                                                         | Slug of company to retrieve |
+ **invoiceId**   | **
+ long?**         | The invoiceId (primary key of the returned object) is returned in the GET all invoices call; not to be confused with invoiceNumber |
 
 ### Return type
 
@@ -1108,11 +1111,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type                                                    | Description                                                                              | Notes
+-----------------|---------------------------------------------------------|------------------------------------------------------------------------------------------|-------
+ **body**        | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md) |                                                                                          |
+ **companySlug** | **string**                                              | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**                                               | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 

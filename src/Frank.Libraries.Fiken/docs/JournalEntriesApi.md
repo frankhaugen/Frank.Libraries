@@ -2,17 +2,17 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AddAttachmentToJournalEntry**](JournalEntriesApi.md#addattachmenttojournalentry) | **
-POST** /companies/{companySlug}/journalEntries/{journalEntryId}/attachments |
-[**CreateGeneralJournalEntry**](JournalEntriesApi.md#creategeneraljournalentry) | **
-POST** /companies/{companySlug}/generalJournalEntries |
-[**GetJournalEntries**](JournalEntriesApi.md#getjournalentries) | **GET** /companies/{companySlug}/journalEntries |
-[**GetJournalEntry**](JournalEntriesApi.md#getjournalentry) | **
-GET** /companies/{companySlug}/journalEntries/{journalEntryId} |
-[**GetJournalEntryAttachments**](JournalEntriesApi.md#getjournalentryattachments) | **
-GET** /companies/{companySlug}/journalEntries/{journalEntryId}/attachments |
+ Method                                                                              | HTTP request                                    | Description
+-------------------------------------------------------------------------------------|-------------------------------------------------|-------------
+ [**AddAttachmentToJournalEntry**](JournalEntriesApi.md#addattachmenttojournalentry) | **
+ POST** /companies/{companySlug}/journalEntries/{journalEntryId}/attachments         |
+ [**CreateGeneralJournalEntry**](JournalEntriesApi.md#creategeneraljournalentry)     | **
+ POST** /companies/{companySlug}/generalJournalEntries                               |
+ [**GetJournalEntries**](JournalEntriesApi.md#getjournalentries)                     | **GET** /companies/{companySlug}/journalEntries |
+ [**GetJournalEntry**](JournalEntriesApi.md#getjournalentry)                         | **
+ GET** /companies/{companySlug}/journalEntries/{journalEntryId}                      |
+ [**GetJournalEntryAttachments**](JournalEntriesApi.md#getjournalentryattachments)   | **
+ GET** /companies/{companySlug}/journalEntries/{journalEntryId}/attachments          |
 
 <a name="addattachmenttojournalentry"></a>
 
@@ -64,12 +64,12 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**journalEntryId** | **long?**|  |
-**filename** | **string**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name               | Type                 | Description                 | Notes
+--------------------|----------------------|-----------------------------|------------
+ **companySlug**    | **string**           | Slug of company to retrieve |
+ **journalEntryId** | **long?**            |                             |
+ **filename**       | **string**           |                             | [optional]
+ **file**           | **byte[]****byte[]** |                             | [optional]
 
 ### Return type
 
@@ -134,10 +134,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**GeneralJournalEntryRequest**](GeneralJournalEntryRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                                            | Description                 | Notes
+-----------------|-----------------------------------------------------------------|-----------------------------|-------
+ **body**        | [**GeneralJournalEntryRequest**](GeneralJournalEntryRequest.md) |                             |
+ **companySlug** | **string**                                                      | Slug of company to retrieve |
 
 ### Return type
 
@@ -158,7 +158,8 @@ void (empty response body)
 
 # **GetJournalEntries**
 
-> List<JournalEntry> GetJournalEntries (string companySlug, int? page, int? pageSize, DateTime? date, DateTime? dateLe, DateTime? dateLt, DateTime? dateGe, DateTime? dateGt)
+> List<JournalEntry> GetJournalEntries (string companySlug, int? page, int? pageSize, DateTime? date, DateTime? dateLe,
+> DateTime? dateLt, DateTime? dateGe, DateTime? dateGt)
 
 
 
@@ -209,23 +210,23 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**date** | **
-DateTime?**| Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**dateLe** | **
-DateTime?**| Filter based on date less than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**dateLt** | **
-DateTime?**| Filter based on date strictly less than parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**dateGe** | **
-DateTime?**| Filter based on date greater than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**dateGt** | **
-DateTime?**| Filter based on date strictly greater than parameter value Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
+ Name            | Type                                                                                                                                                                          | Description                 | Notes
+-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                                                    | Slug of company to retrieve |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.                                             | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.                                | [optional] [default to 25]
+ **date**        | **
+ DateTime?**     | Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                                                | [optional]
+ **dateLe**      | **
+ DateTime?**     | Filter based on date less than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;    | [optional]
+ **dateLt**      | **
+ DateTime?**     | Filter based on date strictly less than parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;       | [optional]
+ **dateGe**      | **
+ DateTime?**     | Filter based on date greater than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; | [optional]
+ **dateGt**      | **
+ DateTime?**     | Filter based on date strictly greater than parameter value Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;     | [optional]
 
 ### Return type
 
@@ -291,10 +292,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**journalEntryId** | **long?**|  |
+ Name               | Type       | Description                 | Notes
+--------------------|------------|-----------------------------|-------
+ **companySlug**    | **string** | Slug of company to retrieve |
+ **journalEntryId** | **long?**  |                             |
 
 ### Return type
 
@@ -360,10 +361,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**journalEntryId** | **long?**|  |
+ Name               | Type       | Description                 | Notes
+--------------------|------------|-----------------------------|-------
+ **companySlug**    | **string** | Slug of company to retrieve |
+ **journalEntryId** | **long?**  |                             |
 
 ### Return type
 

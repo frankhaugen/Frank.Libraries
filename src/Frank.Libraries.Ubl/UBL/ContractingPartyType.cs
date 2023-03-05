@@ -1,75 +1,56 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ContractingParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ContractingPartyType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ContractingParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ContractingPartyType
 {
-
     private BuyerProfileURIType buyerProfileURIField;
-
-    private ContractingPartyTypeType[] contractingPartyType1Field;
 
     private ContractingActivityType[] contractingActivityField;
 
+    private ContractingPartyTypeType[] contractingPartyType1Field;
+
     private PartyType partyField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BuyerProfileURIType BuyerProfileURI
     {
-        get
-        {
-            return this.buyerProfileURIField;
-        }
-        set
-        {
-            this.buyerProfileURIField = value;
-        }
+        get => buyerProfileURIField;
+        set => buyerProfileURIField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ContractingPartyType")]
+    /// <remarks />
+    [XmlElement("ContractingPartyType")]
     public ContractingPartyTypeType[] ContractingPartyType1
     {
-        get
-        {
-            return this.contractingPartyType1Field;
-        }
-        set
-        {
-            this.contractingPartyType1Field = value;
-        }
+        get => contractingPartyType1Field;
+        set => contractingPartyType1Field = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ContractingActivity")]
+    /// <remarks />
+    [XmlElement("ContractingActivity")]
     public ContractingActivityType[] ContractingActivity
     {
-        get
-        {
-            return this.contractingActivityField;
-        }
-        set
-        {
-            this.contractingActivityField = value;
-        }
+        get => contractingActivityField;
+        set => contractingActivityField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType Party
     {
-        get
-        {
-            return this.partyField;
-        }
-        set
-        {
-            this.partyField = value;
-        }
+        get => partyField;
+        set => partyField = value;
     }
 }

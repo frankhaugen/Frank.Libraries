@@ -1,15 +1,11 @@
 ﻿using System;
 
-namespace Frank.Libraries.MongoDb
-{
-    [AttributeUsage(AttributeTargets.Class)]
-    public sealed class CollectionName : Attribute
-    {
-        public string? Name { get; set; }
+namespace Frank.Libraries.MongoDb;
 
-        public CollectionName(string name = null!)
-        {
-            Name = name;
-        }
-    }
+[AttributeUsage(AttributeTargets.Class)]
+public sealed class CollectionName : Attribute
+{
+    public CollectionName(string name = null!) => Name = name;
+
+    public string? Name { get; set; }
 }

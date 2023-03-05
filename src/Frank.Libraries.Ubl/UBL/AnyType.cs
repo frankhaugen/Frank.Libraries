@@ -1,45 +1,39 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("Any", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class AnyType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("Any", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class AnyType
 {
+    private XmlAttribute[] anyAttrField;
 
-    private System.Xml.XmlNode[] anyField;
+    private XmlNode[] anyField;
 
-    private System.Xml.XmlAttribute[] anyAttrField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlTextAttribute()]
-    [System.Xml.Serialization.XmlAnyElementAttribute()]
-    public System.Xml.XmlNode[] Any
+    /// <remarks />
+    [XmlText]
+    [XmlAnyElement]
+    public XmlNode[] Any
     {
-        get
-        {
-            return this.anyField;
-        }
-        set
-        {
-            this.anyField = value;
-        }
+        get => anyField;
+        set => anyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAnyAttributeAttribute()]
-    public System.Xml.XmlAttribute[] AnyAttr
+    /// <remarks />
+    [XmlAnyAttribute]
+    public XmlAttribute[] AnyAttr
     {
-        get
-        {
-            return this.anyAttrField;
-        }
-        set
-        {
-            this.anyAttrField = value;
-        }
+        get => anyAttrField;
+        set => anyAttrField = value;
     }
 }

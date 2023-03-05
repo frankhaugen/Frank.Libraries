@@ -1,56 +1,31 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:RequestForQuotation-2")]
-[System.Xml.Serialization.XmlRootAttribute("RequestForQuotation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:RequestForQuotation-2", IsNullable = false)]
-public partial class RequestForQuotationType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:RequestForQuotation-2")]
+[XmlRoot("RequestForQuotation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:RequestForQuotation-2", IsNullable = false)]
+public class RequestForQuotationType
 {
+    private DocumentReferenceType[] additionalDocumentReferenceField;
 
-    private UBLExtensionType[] uBLExtensionsField;
-
-    private UBLVersionIDType uBLVersionIDField;
-
-    private CustomizationIDType customizationIDField;
-
-    private ProfileIDType profileIDField;
-
-    private ProfileExecutionIDType profileExecutionIDField;
-
-    private IDType idField;
-
-    private CopyIndicatorType copyIndicatorField;
-
-    private UUIDType uUIDField;
-
-    private IssueDateType issueDateField;
-
-    private IssueTimeType issueTimeField;
-
-    private SubmissionDueDateType submissionDueDateField;
-
-    private NoteType[] noteField;
-
-    private PricingCurrencyCodeType pricingCurrencyCodeField;
-
-    private LineCountNumericType lineCountNumericField;
-
-    private PeriodType requestedValidityPeriodField;
+    private CustomerPartyType buyerCustomerPartyField;
 
     private DocumentReferenceType catalogueDocumentReferenceField;
 
-    private DocumentReferenceType[] additionalDocumentReferenceField;
+    private ContractType[] contractField;
 
-    private SignatureType[] signatureField;
+    private CopyIndicatorType copyIndicatorField;
 
-    private CustomerPartyType originatorCustomerPartyField;
-
-    private SupplierPartyType sellerSupplierPartyField;
-
-    private CustomerPartyType buyerCustomerPartyField;
+    private CustomizationIDType customizationIDField;
 
     private DeliveryType[] deliveryField;
 
@@ -58,372 +33,246 @@ public partial class RequestForQuotationType
 
     private CountryType destinationCountryField;
 
-    private ContractType[] contractField;
+    private IDType idField;
+
+    private IssueDateType issueDateField;
+
+    private IssueTimeType issueTimeField;
+
+    private LineCountNumericType lineCountNumericField;
+
+    private NoteType[] noteField;
+
+    private CustomerPartyType originatorCustomerPartyField;
+
+    private PricingCurrencyCodeType pricingCurrencyCodeField;
+
+    private ProfileExecutionIDType profileExecutionIDField;
+
+    private ProfileIDType profileIDField;
+
+    private PeriodType requestedValidityPeriodField;
 
     private RequestForQuotationLineType[] requestForQuotationLineField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
-    [System.Xml.Serialization.XmlArrayItemAttribute("UBLExtension", IsNullable = false)]
+    private SupplierPartyType sellerSupplierPartyField;
+
+    private SignatureType[] signatureField;
+
+    private SubmissionDueDateType submissionDueDateField;
+
+    private UBLExtensionType[] uBLExtensionsField;
+
+    private UBLVersionIDType uBLVersionIDField;
+
+    private UUIDType uUIDField;
+
+    /// <remarks />
+    [XmlArray(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+    [XmlArrayItem("UBLExtension", IsNullable = false)]
     public UBLExtensionType[] UBLExtensions
     {
-        get
-        {
-            return this.uBLExtensionsField;
-        }
-        set
-        {
-            this.uBLExtensionsField = value;
-        }
+        get => uBLExtensionsField;
+        set => uBLExtensionsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UBLVersionIDType UBLVersionID
     {
-        get
-        {
-            return this.uBLVersionIDField;
-        }
-        set
-        {
-            this.uBLVersionIDField = value;
-        }
+        get => uBLVersionIDField;
+        set => uBLVersionIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CustomizationIDType CustomizationID
     {
-        get
-        {
-            return this.customizationIDField;
-        }
-        set
-        {
-            this.customizationIDField = value;
-        }
+        get => customizationIDField;
+        set => customizationIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProfileIDType ProfileID
     {
-        get
-        {
-            return this.profileIDField;
-        }
-        set
-        {
-            this.profileIDField = value;
-        }
+        get => profileIDField;
+        set => profileIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProfileExecutionIDType ProfileExecutionID
     {
-        get
-        {
-            return this.profileExecutionIDField;
-        }
-        set
-        {
-            this.profileExecutionIDField = value;
-        }
+        get => profileExecutionIDField;
+        set => profileExecutionIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CopyIndicatorType CopyIndicator
     {
-        get
-        {
-            return this.copyIndicatorField;
-        }
-        set
-        {
-            this.copyIndicatorField = value;
-        }
+        get => copyIndicatorField;
+        set => copyIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UUIDType UUID
     {
-        get
-        {
-            return this.uUIDField;
-        }
-        set
-        {
-            this.uUIDField = value;
-        }
+        get => uUIDField;
+        set => uUIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IssueDateType IssueDate
     {
-        get
-        {
-            return this.issueDateField;
-        }
-        set
-        {
-            this.issueDateField = value;
-        }
+        get => issueDateField;
+        set => issueDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IssueTimeType IssueTime
     {
-        get
-        {
-            return this.issueTimeField;
-        }
-        set
-        {
-            this.issueTimeField = value;
-        }
+        get => issueTimeField;
+        set => issueTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SubmissionDueDateType SubmissionDueDate
     {
-        get
-        {
-            return this.submissionDueDateField;
-        }
-        set
-        {
-            this.submissionDueDateField = value;
-        }
+        get => submissionDueDateField;
+        set => submissionDueDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PricingCurrencyCodeType PricingCurrencyCode
     {
-        get
-        {
-            return this.pricingCurrencyCodeField;
-        }
-        set
-        {
-            this.pricingCurrencyCodeField = value;
-        }
+        get => pricingCurrencyCodeField;
+        set => pricingCurrencyCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineCountNumericType LineCountNumeric
     {
-        get
-        {
-            return this.lineCountNumericField;
-        }
-        set
-        {
-            this.lineCountNumericField = value;
-        }
+        get => lineCountNumericField;
+        set => lineCountNumericField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public PeriodType RequestedValidityPeriod
     {
-        get
-        {
-            return this.requestedValidityPeriodField;
-        }
-        set
-        {
-            this.requestedValidityPeriodField = value;
-        }
+        get => requestedValidityPeriodField;
+        set => requestedValidityPeriodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public DocumentReferenceType CatalogueDocumentReference
     {
-        get
-        {
-            return this.catalogueDocumentReferenceField;
-        }
-        set
-        {
-            this.catalogueDocumentReferenceField = value;
-        }
+        get => catalogueDocumentReferenceField;
+        set => catalogueDocumentReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalDocumentReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("AdditionalDocumentReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public DocumentReferenceType[] AdditionalDocumentReference
     {
-        get
-        {
-            return this.additionalDocumentReferenceField;
-        }
-        set
-        {
-            this.additionalDocumentReferenceField = value;
-        }
+        get => additionalDocumentReferenceField;
+        set => additionalDocumentReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("Signature", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public SignatureType[] Signature
     {
-        get
-        {
-            return this.signatureField;
-        }
-        set
-        {
-            this.signatureField = value;
-        }
+        get => signatureField;
+        set => signatureField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public CustomerPartyType OriginatorCustomerParty
     {
-        get
-        {
-            return this.originatorCustomerPartyField;
-        }
-        set
-        {
-            this.originatorCustomerPartyField = value;
-        }
+        get => originatorCustomerPartyField;
+        set => originatorCustomerPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public SupplierPartyType SellerSupplierParty
     {
-        get
-        {
-            return this.sellerSupplierPartyField;
-        }
-        set
-        {
-            this.sellerSupplierPartyField = value;
-        }
+        get => sellerSupplierPartyField;
+        set => sellerSupplierPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public CustomerPartyType BuyerCustomerParty
     {
-        get
-        {
-            return this.buyerCustomerPartyField;
-        }
-        set
-        {
-            this.buyerCustomerPartyField = value;
-        }
+        get => buyerCustomerPartyField;
+        set => buyerCustomerPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Delivery", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("Delivery", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public DeliveryType[] Delivery
     {
-        get
-        {
-            return this.deliveryField;
-        }
-        set
-        {
-            this.deliveryField = value;
-        }
+        get => deliveryField;
+        set => deliveryField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DeliveryTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("DeliveryTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public DeliveryTermsType[] DeliveryTerms
     {
-        get
-        {
-            return this.deliveryTermsField;
-        }
-        set
-        {
-            this.deliveryTermsField = value;
-        }
+        get => deliveryTermsField;
+        set => deliveryTermsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public CountryType DestinationCountry
     {
-        get
-        {
-            return this.destinationCountryField;
-        }
-        set
-        {
-            this.destinationCountryField = value;
-        }
+        get => destinationCountryField;
+        set => destinationCountryField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Contract", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("Contract", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public ContractType[] Contract
     {
-        get
-        {
-            return this.contractField;
-        }
-        set
-        {
-            this.contractField = value;
-        }
+        get => contractField;
+        set => contractField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("RequestForQuotationLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+    /// <remarks />
+    [XmlElement("RequestForQuotationLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
     public RequestForQuotationLineType[] RequestForQuotationLine
     {
-        get
-        {
-            return this.requestForQuotationLineField;
-        }
-        set
-        {
-            this.requestForQuotationLineField = value;
-        }
+        get => requestForQuotationLineField;
+        set => requestForQuotationLineField = value;
     }
 }

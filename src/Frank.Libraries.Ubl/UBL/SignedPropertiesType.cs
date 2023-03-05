@@ -1,58 +1,45 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("SignedProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class SignedPropertiesType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("SignedProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class SignedPropertiesType
 {
-
-    private SignedSignaturePropertiesType signedSignaturePropertiesField;
+    private string idField;
 
     private SignedDataObjectPropertiesType signedDataObjectPropertiesField;
 
-    private string idField;
+    private SignedSignaturePropertiesType signedSignaturePropertiesField;
 
-    /// <remarks/>
+    /// <remarks />
     public SignedSignaturePropertiesType SignedSignatureProperties
     {
-        get
-        {
-            return this.signedSignaturePropertiesField;
-        }
-        set
-        {
-            this.signedSignaturePropertiesField = value;
-        }
+        get => signedSignaturePropertiesField;
+        set => signedSignaturePropertiesField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public SignedDataObjectPropertiesType SignedDataObjectProperties
     {
-        get
-        {
-            return this.signedDataObjectPropertiesField;
-        }
-        set
-        {
-            this.signedDataObjectPropertiesField = value;
-        }
+        get => signedDataObjectPropertiesField;
+        set => signedDataObjectPropertiesField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

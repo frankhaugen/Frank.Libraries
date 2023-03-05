@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace Frank.Libraries.Xml
+namespace Frank.Libraries.Xml;
+
+public class XmlEntity
 {
-    public class XmlEntity
-    {
-        public Guid Id { get; set; }
-    }
+    public Guid Id { get; set; }
 }

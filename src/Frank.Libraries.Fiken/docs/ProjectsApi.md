@@ -2,13 +2,13 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateProject**](ProjectsApi.md#createproject) | **POST** /companies/{companySlug}/projects |
-[**DeleteProject**](ProjectsApi.md#deleteproject) | **DELETE** /companies/{companySlug}/projects/{projectId} |
-[**GetProject**](ProjectsApi.md#getproject) | **GET** /companies/{companySlug}/projects/{projectId} |
-[**GetProjects**](ProjectsApi.md#getprojects) | **GET** /companies/{companySlug}/projects |
-[**UpdateProject**](ProjectsApi.md#updateproject) | **PATCH** /companies/{companySlug}/projects/{projectId} |
+ Method                                            | HTTP request                                             | Description
+---------------------------------------------------|----------------------------------------------------------|-------------
+ [**CreateProject**](ProjectsApi.md#createproject) | **POST** /companies/{companySlug}/projects               |
+ [**DeleteProject**](ProjectsApi.md#deleteproject) | **DELETE** /companies/{companySlug}/projects/{projectId} |
+ [**GetProject**](ProjectsApi.md#getproject)       | **GET** /companies/{companySlug}/projects/{projectId}    |
+ [**GetProjects**](ProjectsApi.md#getprojects)     | **GET** /companies/{companySlug}/projects                |
+ [**UpdateProject**](ProjectsApi.md#updateproject) | **PATCH** /companies/{companySlug}/projects/{projectId}  |
 
 <a name="createproject"></a>
 
@@ -58,10 +58,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**ProjectRequest**](ProjectRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                    | Description                 | Notes
+-----------------|-----------------------------------------|-----------------------------|-------
+ **body**        | [**ProjectRequest**](ProjectRequest.md) |                             |
+ **companySlug** | **string**                              | Slug of company to retrieve |
 
 ### Return type
 
@@ -126,10 +126,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**projectId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **projectId**   | **long?**  |                             |
 
 ### Return type
 
@@ -195,10 +195,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**projectId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **projectId**   | **long?**  |                             |
 
 ### Return type
 
@@ -266,14 +266,14 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**completed** | **bool?**| Filter results based on completed / not completed. | [optional]
+ Name            | Type                                                                                                                                           | Description                                        | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|------------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve                        |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
+ **completed**   | **bool?**                                                                                                                                      | Filter results based on completed / not completed. | [optional]
 
 ### Return type
 
@@ -339,11 +339,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**UpdateProjectRequest**](UpdateProjectRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**projectId** | **long?**|  |
+ Name            | Type                                                | Description                 | Notes
+-----------------|-----------------------------------------------------|-----------------------------|-------
+ **body**        | [**UpdateProjectRequest**](UpdateProjectRequest.md) |                             |
+ **companySlug** | **string**                                          | Slug of company to retrieve |
+ **projectId**   | **long?**                                           |                             |
 
 ### Return type
 

@@ -1,10 +1,9 @@
-﻿namespace Frank.Libraries.Security.Shared
+﻿namespace Frank.Libraries.Security.Shared;
+
+public enum CharacterVariant
 {
-    public enum CharacterVariant
-    {
-        Uppercase,
-        Lowercase,
-        Digits,
-        Special
-    }
+    Uppercase,
+    Lowercase,
+    Digits,
+    Special
 }

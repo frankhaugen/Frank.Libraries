@@ -1,10 +1,10 @@
 using System;
- 
+
 namespace Frank.Libraries.Calculators.FluentCalculation;
- 
+
 public static class FluentCalculatorPrimitivesConversions
 {
-    // Int 
+    // Int
     public static uint ToUint(this int source) => Convert.ToUInt32(source);
     public static short ToShort(this int source) => Convert.ToInt16(source);
     public static ushort ToUshort(this int source) => Convert.ToUInt16(source);
@@ -14,7 +14,7 @@ public static class FluentCalculatorPrimitivesConversions
     public static double ToDouble(this int source) => Convert.ToDouble(source);
     public static decimal ToDecimal(this int source) => Convert.ToDecimal(source);
 
-    // Uint 
+    // Uint
     public static int ToInt(this uint source) => Convert.ToInt32(source);
     public static short ToShort(this uint source) => Convert.ToInt16(source);
     public static ushort ToUshort(this uint source) => Convert.ToUInt16(source);
@@ -24,7 +24,7 @@ public static class FluentCalculatorPrimitivesConversions
     public static double ToDouble(this uint source) => Convert.ToDouble(source);
     public static decimal ToDecimal(this uint source) => Convert.ToDecimal(source);
 
-    // Short 
+    // Short
     public static int ToInt(this short source) => Convert.ToInt32(source);
     public static uint ToUint(this short source) => Convert.ToUInt32(source);
     public static ushort ToUshort(this short source) => Convert.ToUInt16(source);
@@ -34,7 +34,7 @@ public static class FluentCalculatorPrimitivesConversions
     public static double ToDouble(this short source) => Convert.ToDouble(source);
     public static decimal ToDecimal(this short source) => Convert.ToDecimal(source);
 
-    // Ushort 
+    // Ushort
     public static int ToInt(this ushort source) => Convert.ToInt32(source);
     public static uint ToUint(this ushort source) => Convert.ToUInt32(source);
     public static short ToShort(this ushort source) => Convert.ToInt16(source);
@@ -44,7 +44,7 @@ public static class FluentCalculatorPrimitivesConversions
     public static double ToDouble(this ushort source) => Convert.ToDouble(source);
     public static decimal ToDecimal(this ushort source) => Convert.ToDecimal(source);
 
-    // Long 
+    // Long
     public static int ToInt(this long source) => Convert.ToInt32(source);
     public static uint ToUint(this long source) => Convert.ToUInt32(source);
     public static short ToShort(this long source) => Convert.ToInt16(source);
@@ -54,7 +54,7 @@ public static class FluentCalculatorPrimitivesConversions
     public static double ToDouble(this long source) => Convert.ToDouble(source);
     public static decimal ToDecimal(this long source) => Convert.ToDecimal(source);
 
-    // Ulong 
+    // Ulong
     public static int ToInt(this ulong source) => Convert.ToInt32(source);
     public static uint ToUint(this ulong source) => Convert.ToUInt32(source);
     public static short ToShort(this ulong source) => Convert.ToInt16(source);
@@ -64,7 +64,7 @@ public static class FluentCalculatorPrimitivesConversions
     public static double ToDouble(this ulong source) => Convert.ToDouble(source);
     public static decimal ToDecimal(this ulong source) => Convert.ToDecimal(source);
 
-    // Float 
+    // Float
     public static int ToInt(this float source) => Convert.ToInt32(source);
     public static uint ToUint(this float source) => Convert.ToUInt32(source);
     public static short ToShort(this float source) => Convert.ToInt16(source);
@@ -74,7 +74,7 @@ public static class FluentCalculatorPrimitivesConversions
     public static double ToDouble(this float source) => Convert.ToDouble(source);
     public static decimal ToDecimal(this float source) => Convert.ToDecimal(source);
 
-    // Double 
+    // Double
     public static int ToInt(this double source) => Convert.ToInt32(source);
     public static uint ToUint(this double source) => Convert.ToUInt32(source);
     public static short ToShort(this double source) => Convert.ToInt16(source);
@@ -84,7 +84,7 @@ public static class FluentCalculatorPrimitivesConversions
     public static float ToFloat(this double source) => Convert.ToSingle(source);
     public static decimal ToDecimal(this double source) => Convert.ToDecimal(source);
 
-    // Decimal 
+    // Decimal
     public static int ToInt(this decimal source) => Convert.ToInt32(source);
     public static uint ToUint(this decimal source) => Convert.ToUInt32(source);
     public static short ToShort(this decimal source) => Convert.ToInt16(source);
@@ -93,5 +93,4 @@ public static class FluentCalculatorPrimitivesConversions
     public static ulong ToUlong(this decimal source) => Convert.ToUInt64(source);
     public static float ToFloat(this decimal source) => Convert.ToSingle(source);
     public static double ToDouble(this decimal source) => Convert.ToDouble(source);
-
 }

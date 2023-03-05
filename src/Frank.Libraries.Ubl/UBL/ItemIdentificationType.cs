@@ -1,107 +1,76 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AdditionalItemIdentification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ItemIdentificationType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AdditionalItemIdentification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ItemIdentificationType
 {
-
-    private IDType idField;
+    private BarcodeSymbologyIDType barcodeSymbologyIDField;
 
     private ExtendedIDType extendedIDField;
 
-    private BarcodeSymbologyIDType barcodeSymbologyIDField;
-
-    private PhysicalAttributeType[] physicalAttributeField;
-
-    private DimensionType[] measurementDimensionField;
+    private IDType idField;
 
     private PartyType issuerPartyField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private DimensionType[] measurementDimensionField;
+
+    private PhysicalAttributeType[] physicalAttributeField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ExtendedIDType ExtendedID
     {
-        get
-        {
-            return this.extendedIDField;
-        }
-        set
-        {
-            this.extendedIDField = value;
-        }
+        get => extendedIDField;
+        set => extendedIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BarcodeSymbologyIDType BarcodeSymbologyID
     {
-        get
-        {
-            return this.barcodeSymbologyIDField;
-        }
-        set
-        {
-            this.barcodeSymbologyIDField = value;
-        }
+        get => barcodeSymbologyIDField;
+        set => barcodeSymbologyIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PhysicalAttribute")]
+    /// <remarks />
+    [XmlElement("PhysicalAttribute")]
     public PhysicalAttributeType[] PhysicalAttribute
     {
-        get
-        {
-            return this.physicalAttributeField;
-        }
-        set
-        {
-            this.physicalAttributeField = value;
-        }
+        get => physicalAttributeField;
+        set => physicalAttributeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("MeasurementDimension")]
+    /// <remarks />
+    [XmlElement("MeasurementDimension")]
     public DimensionType[] MeasurementDimension
     {
-        get
-        {
-            return this.measurementDimensionField;
-        }
-        set
-        {
-            this.measurementDimensionField = value;
-        }
+        get => measurementDimensionField;
+        set => measurementDimensionField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType IssuerParty
     {
-        get
-        {
-            return this.issuerPartyField;
-        }
-        set
-        {
-            this.issuerPartyField = value;
-        }
+        get => issuerPartyField;
+        set => issuerPartyField = value;
     }
 }

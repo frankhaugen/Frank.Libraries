@@ -1,57 +1,44 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("ObjectIdentifier", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class ObjectIdentifierType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("ObjectIdentifier", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class ObjectIdentifierType
 {
-
-    private IdentifierType2 identifierField;
-
     private string descriptionField;
 
     private DocumentationReferencesType documentationReferencesField;
 
-    /// <remarks/>
+    private IdentifierType2 identifierField;
+
+    /// <remarks />
     public IdentifierType2 Identifier
     {
-        get
-        {
-            return this.identifierField;
-        }
-        set
-        {
-            this.identifierField = value;
-        }
+        get => identifierField;
+        set => identifierField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public string Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DocumentationReferencesType DocumentationReferences
     {
-        get
-        {
-            return this.documentationReferencesField;
-        }
-        set
-        {
-            this.documentationReferencesField = value;
-        }
+        get => documentationReferencesField;
+        set => documentationReferencesField = value;
     }
 }

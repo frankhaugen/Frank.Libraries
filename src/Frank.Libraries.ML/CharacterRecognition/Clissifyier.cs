@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
@@ -9,6 +10,8 @@ namespace Frank.Libraries.ML.CharacterRecognition;
 
 public class Clissifyier
 {
+    private const int ImageWidthHeight = 28;
+
 // #LINQPad optimize+
     private Sample[] _trainingData, _testingData;
 
@@ -22,7 +25,7 @@ public class Clissifyier
 
         var trainer = new Trainer(net).Dump();
 
-        await Task.Run(() => trainer.Train(_trainingData, _testingData, learningRate: .01, epochs: 10));
+        await Task.Run(() => trainer.Train(_trainingData, _testingData, .01, 10));
 
         var failures =
             from testInfo in GetImageTestInfo(new FiringNet(net), _testingData)
@@ -35,13 +38,18 @@ public class Clissifyier
     }
 
 
-    const int ImageWidthHeight = 28;
-
-
     private static Color GetColor(double value, double min, double max, byte alpha)
     {
-        if (value < min) value = min;
-        if (value > max) value = max;
+        if (value < min)
+        {
+            value = min;
+        }
+
+        if (value > max)
+        {
+            value = max;
+        }
+
         var scaledValue = value < 0
             ? value / min
             : value / max;
@@ -57,33 +65,39 @@ public class Clissifyier
     }
 
 
-    static byte[] BitmapToByteArray(System.Drawing.Bitmap bitmap)
+    private static byte[] BitmapToByteArray(Bitmap bitmap)
     {
-        System.Drawing.Imaging.BitmapData bmpdata = null;
+        BitmapData bmpdata = null;
         try
         {
-            bmpdata = bitmap.LockBits(new System.Drawing.Rectangle(0, 0, bitmap.Width, bitmap.Height), System.Drawing.Imaging.ImageLockMode.ReadOnly, bitmap.PixelFormat);
+            bmpdata = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadOnly, bitmap.PixelFormat);
             var numbytes = bmpdata.Stride * bitmap.Height;
             var bytedata = new byte [numbytes];
-            IntPtr ptr = bmpdata.Scan0;
+            var ptr = bmpdata.Scan0;
             Marshal.Copy(ptr, bytedata, 0, numbytes);
             return bytedata;
         }
         finally
         {
             if (bmpdata != null)
+            {
                 bitmap.UnlockBits(bmpdata);
+            }
         }
     }
 
-    static byte[] CentreImage(byte[] image, int stride)
+    private static byte[] CentreImage(byte[] image, int stride)
     {
         var indexed = image.Select((value, i) => new { Column = i % stride, Row = i / stride, Value = value })
                            .ToArray();
         var orderedX = indexed.Where(x => x.Value > 10)
                               .OrderBy(x => x.Column)
                               .ToArray();
-        if (!orderedX.Any()) return image;
+        if (!orderedX.Any())
+        {
+            return image;
+        }
+
         var leftMargin = orderedX.First()
                                  .Column;
         var rightMargin = stride
@@ -104,15 +118,19 @@ public class Clissifyier
         for (var j = 0; j < stride; j++)
         {
             if (i < adjustmentDown || i >= stride + adjustmentDown || j < adjustmentRight || j >= stride + adjustmentRight)
+            {
                 newImage[i * stride + j] = 0;
+            }
             else
+            {
                 newImage[i * stride + j] = image[(i - adjustmentDown) * stride + j - adjustmentRight];
+            }
         }
 
         return newImage;
     }
 
-    static IEnumerable<TestInfo> GetImageTestInfo(FiringNet firingNet, Sample[] samples)
+    private static IEnumerable<TestInfo> GetImageTestInfo(FiringNet firingNet, Sample[] samples)
     {
         foreach (ImageSample sample in samples)
         {
@@ -122,8 +140,7 @@ public class Clissifyier
     }
 }
 
-
-class Garbage
+internal class Garbage
 {
     //
     //

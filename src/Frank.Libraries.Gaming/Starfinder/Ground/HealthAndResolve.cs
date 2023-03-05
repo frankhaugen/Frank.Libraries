@@ -3,13 +3,13 @@ namespace Frank.Libraries.Gaming.Starfinder.Characters;
 public class HealthAndResolve
 {
     private readonly int _maxHealth;
-    private int _health = 0;
-
-    private readonly int _maxStamina;
-    private int _stamina = 0;
 
     private readonly int _maxResolve;
-    private int _resolve = 0;
+
+    private readonly int _maxStamina;
+    private int _health;
+    private int _resolve;
+    private int _stamina;
 
     public HealthAndResolve(int maxHealth, int maxStamina, int maxResolve)
     {

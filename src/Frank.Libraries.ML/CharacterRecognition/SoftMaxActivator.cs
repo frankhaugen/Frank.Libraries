@@ -16,7 +16,9 @@ public class SoftMaxActivator : Activator
 
         foreach (var neuron in layer)
         {
-            neuron.Output /= sum == 0 ? 1 : sum;
+            neuron.Output /= sum == 0
+                ? 1
+                : sum;
         }
     }
 

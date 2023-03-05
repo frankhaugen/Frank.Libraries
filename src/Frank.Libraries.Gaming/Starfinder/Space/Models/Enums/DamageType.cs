@@ -4,5 +4,5 @@ public enum GroundDamageType
 {
     Fire,
     Electricity,
-    Sonic,
+    Sonic
 }

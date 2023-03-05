@@ -1,139 +1,96 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ItemInstance", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ItemInstanceType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ItemInstance", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ItemInstanceType
 {
+    private ItemPropertyType[] additionalItemPropertyField;
 
-    private ProductTraceIDType productTraceIDField;
+    private BestBeforeDateType bestBeforeDateField;
+
+    private LotIdentificationType lotIdentificationField;
 
     private ManufactureDateType manufactureDateField;
 
     private ManufactureTimeType manufactureTimeField;
 
-    private BestBeforeDateType bestBeforeDateField;
+    private ProductTraceIDType productTraceIDField;
 
     private RegistrationIDType registrationIDField;
 
     private SerialIDType serialIDField;
 
-    private ItemPropertyType[] additionalItemPropertyField;
-
-    private LotIdentificationType lotIdentificationField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProductTraceIDType ProductTraceID
     {
-        get
-        {
-            return this.productTraceIDField;
-        }
-        set
-        {
-            this.productTraceIDField = value;
-        }
+        get => productTraceIDField;
+        set => productTraceIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ManufactureDateType ManufactureDate
     {
-        get
-        {
-            return this.manufactureDateField;
-        }
-        set
-        {
-            this.manufactureDateField = value;
-        }
+        get => manufactureDateField;
+        set => manufactureDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ManufactureTimeType ManufactureTime
     {
-        get
-        {
-            return this.manufactureTimeField;
-        }
-        set
-        {
-            this.manufactureTimeField = value;
-        }
+        get => manufactureTimeField;
+        set => manufactureTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BestBeforeDateType BestBeforeDate
     {
-        get
-        {
-            return this.bestBeforeDateField;
-        }
-        set
-        {
-            this.bestBeforeDateField = value;
-        }
+        get => bestBeforeDateField;
+        set => bestBeforeDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RegistrationIDType RegistrationID
     {
-        get
-        {
-            return this.registrationIDField;
-        }
-        set
-        {
-            this.registrationIDField = value;
-        }
+        get => registrationIDField;
+        set => registrationIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SerialIDType SerialID
     {
-        get
-        {
-            return this.serialIDField;
-        }
-        set
-        {
-            this.serialIDField = value;
-        }
+        get => serialIDField;
+        set => serialIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalItemProperty")]
+    /// <remarks />
+    [XmlElement("AdditionalItemProperty")]
     public ItemPropertyType[] AdditionalItemProperty
     {
-        get
-        {
-            return this.additionalItemPropertyField;
-        }
-        set
-        {
-            this.additionalItemPropertyField = value;
-        }
+        get => additionalItemPropertyField;
+        set => additionalItemPropertyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LotIdentificationType LotIdentification
     {
-        get
-        {
-            return this.lotIdentificationField;
-        }
-        set
-        {
-            this.lotIdentificationField = value;
-        }
+        get => lotIdentificationField;
+        set => lotIdentificationField = value;
     }
 }

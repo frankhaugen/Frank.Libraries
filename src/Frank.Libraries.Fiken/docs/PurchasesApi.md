@@ -2,42 +2,43 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AddAttachmentToPurchase**](PurchasesApi.md#addattachmenttopurchase) | **
-POST** /companies/{companySlug}/purchases/{purchaseId}/attachments |
-[**AddAttachmentToPurchaseDraft**](PurchasesApi.md#addattachmenttopurchasedraft) | **
-POST** /companies/{companySlug}/purchases/drafts/{draftId}/attachments |
-[**CreatePurchase**](PurchasesApi.md#createpurchase) | **POST** /companies/{companySlug}/purchases |
-[**CreatePurchaseDraft**](PurchasesApi.md#createpurchasedraft) | **POST** /companies/{companySlug}/purchases/drafts |
-[**CreatePurchaseFromDraft**](PurchasesApi.md#createpurchasefromdraft) | **
-POST** /companies/{companySlug}/purchases/drafts/{draftId}/createPurchase |
-[**CreatePurchasePayment**](PurchasesApi.md#createpurchasepayment) | **
-POST** /companies/{companySlug}/purchases/{purchaseId}/payments |
-[**DeletePurchase**](PurchasesApi.md#deletepurchase) | **
-PATCH** /companies/{companySlug}/purchases/{purchaseId}/delete |
-[**DeletePurchaseDraft**](PurchasesApi.md#deletepurchasedraft) | **
-DELETE** /companies/{companySlug}/purchases/drafts/{draftId} |
-[**GetPurchase**](PurchasesApi.md#getpurchase) | **GET** /companies/{companySlug}/purchases/{purchaseId} |
-[**GetPurchaseAttachments**](PurchasesApi.md#getpurchaseattachments) | **
-GET** /companies/{companySlug}/purchases/{purchaseId}/attachments |
-[**GetPurchaseDraft**](PurchasesApi.md#getpurchasedraft) | **GET** /companies/{companySlug}/purchases/drafts/{draftId} |
-[**GetPurchaseDraftAttachments**](PurchasesApi.md#getpurchasedraftattachments) | **
-GET** /companies/{companySlug}/purchases/drafts/{draftId}/attachments |
-[**GetPurchaseDrafts**](PurchasesApi.md#getpurchasedrafts) | **GET** /companies/{companySlug}/purchases/drafts |
-[**GetPurchasePayment**](PurchasesApi.md#getpurchasepayment) | **
-GET** /companies/{companySlug}/purchases/{purchaseId}/payments/{paymentId} |
-[**GetPurchasePayments**](PurchasesApi.md#getpurchasepayments) | **
-GET** /companies/{companySlug}/purchases/{purchaseId}/payments |
-[**GetPurchases**](PurchasesApi.md#getpurchases) | **GET** /companies/{companySlug}/purchases |
-[**UpdatePurchaseDraft**](PurchasesApi.md#updatepurchasedraft) | **
-PUT** /companies/{companySlug}/purchases/drafts/{draftId} |
+ Method                                                                           | HTTP request                                                | Description
+----------------------------------------------------------------------------------|-------------------------------------------------------------|-------------
+ [**AddAttachmentToPurchase**](PurchasesApi.md#addattachmenttopurchase)           | **
+ POST** /companies/{companySlug}/purchases/{purchaseId}/attachments               |
+ [**AddAttachmentToPurchaseDraft**](PurchasesApi.md#addattachmenttopurchasedraft) | **
+ POST** /companies/{companySlug}/purchases/drafts/{draftId}/attachments           |
+ [**CreatePurchase**](PurchasesApi.md#createpurchase)                             | **POST** /companies/{companySlug}/purchases                 |
+ [**CreatePurchaseDraft**](PurchasesApi.md#createpurchasedraft)                   | **POST** /companies/{companySlug}/purchases/drafts          |
+ [**CreatePurchaseFromDraft**](PurchasesApi.md#createpurchasefromdraft)           | **
+ POST** /companies/{companySlug}/purchases/drafts/{draftId}/createPurchase        |
+ [**CreatePurchasePayment**](PurchasesApi.md#createpurchasepayment)               | **
+ POST** /companies/{companySlug}/purchases/{purchaseId}/payments                  |
+ [**DeletePurchase**](PurchasesApi.md#deletepurchase)                             | **
+ PATCH** /companies/{companySlug}/purchases/{purchaseId}/delete                   |
+ [**DeletePurchaseDraft**](PurchasesApi.md#deletepurchasedraft)                   | **
+ DELETE** /companies/{companySlug}/purchases/drafts/{draftId}                     |
+ [**GetPurchase**](PurchasesApi.md#getpurchase)                                   | **GET** /companies/{companySlug}/purchases/{purchaseId}     |
+ [**GetPurchaseAttachments**](PurchasesApi.md#getpurchaseattachments)             | **
+ GET** /companies/{companySlug}/purchases/{purchaseId}/attachments                |
+ [**GetPurchaseDraft**](PurchasesApi.md#getpurchasedraft)                         | **GET** /companies/{companySlug}/purchases/drafts/{draftId} |
+ [**GetPurchaseDraftAttachments**](PurchasesApi.md#getpurchasedraftattachments)   | **
+ GET** /companies/{companySlug}/purchases/drafts/{draftId}/attachments            |
+ [**GetPurchaseDrafts**](PurchasesApi.md#getpurchasedrafts)                       | **GET** /companies/{companySlug}/purchases/drafts           |
+ [**GetPurchasePayment**](PurchasesApi.md#getpurchasepayment)                     | **
+ GET** /companies/{companySlug}/purchases/{purchaseId}/payments/{paymentId}       |
+ [**GetPurchasePayments**](PurchasesApi.md#getpurchasepayments)                   | **
+ GET** /companies/{companySlug}/purchases/{purchaseId}/payments                   |
+ [**GetPurchases**](PurchasesApi.md#getpurchases)                                 | **GET** /companies/{companySlug}/purchases                  |
+ [**UpdatePurchaseDraft**](PurchasesApi.md#updatepurchasedraft)                   | **
+ PUT** /companies/{companySlug}/purchases/drafts/{draftId}                        |
 
 <a name="addattachmenttopurchase"></a>
 
 # **AddAttachmentToPurchase**
 
-> void AddAttachmentToPurchase (string companySlug, long? purchaseId, string filename, bool? attachToPayment, bool? attachToSale, byte[] file)
+> void AddAttachmentToPurchase (string companySlug, long? purchaseId, string filename, bool? attachToPayment, bool?
+> attachToSale, byte[] file)
 
 
 
@@ -85,14 +86,14 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**purchaseId** | **long?**|  |
-**filename** | **string**|  | [optional]
-**attachToPayment** | **bool?**|  | [optional]
-**attachToSale** | **bool?**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name                | Type                 | Description                 | Notes
+---------------------|----------------------|-----------------------------|------------
+ **companySlug**     | **string**           | Slug of company to retrieve |
+ **purchaseId**      | **long?**            |                             |
+ **filename**        | **string**           |                             | [optional]
+ **attachToPayment** | **bool?**            |                             | [optional]
+ **attachToSale**    | **bool?**            |                             | [optional]
+ **file**            | **byte[]****byte[]** |                             | [optional]
 
 ### Return type
 
@@ -159,12 +160,12 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
-**filename** | **string**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name            | Type                 | Description                                                                              | Notes
+-----------------|----------------------|------------------------------------------------------------------------------------------|------------
+ **companySlug** | **string**           | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**            | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
+ **filename**    | **string**           |                                                                                          | [optional]
+ **file**        | **byte[]****byte[]** |                                                                                          | [optional]
 
 ### Return type
 
@@ -229,10 +230,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**PurchaseRequest**](PurchaseRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                      | Description                 | Notes
+-----------------|-------------------------------------------|-----------------------------|-------
+ **body**        | [**PurchaseRequest**](PurchaseRequest.md) |                             |
+ **companySlug** | **string**                                | Slug of company to retrieve |
 
 ### Return type
 
@@ -297,10 +298,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**DraftRequest**](DraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                | Description                 | Notes
+-----------------|-------------------------------------|-----------------------------|-------
+ **body**        | [**DraftRequest**](DraftRequest.md) |                             |
+ **companySlug** | **string**                          | Slug of company to retrieve |
 
 ### Return type
 
@@ -365,10 +366,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -434,11 +435,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**Payment**](Payment.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**purchaseId** | **long?**|  |
+ Name            | Type                      | Description                 | Notes
+-----------------|---------------------------|-----------------------------|-------
+ **body**        | [**Payment**](Payment.md) |                             |
+ **companySlug** | **string**                | Slug of company to retrieve |
+ **purchaseId**  | **long?**                 |                             |
 
 ### Return type
 
@@ -506,11 +507,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**purchaseId** | **long?**|  |
-**description** | **string**| Required description for deleting the purchase |
+ Name            | Type       | Description                                    | Notes
+-----------------|------------|------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                    |
+ **purchaseId**  | **long?**  |                                                |
+ **description** | **string** | Required description for deleting the purchase |
 
 ### Return type
 
@@ -575,10 +576,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -644,10 +645,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**purchaseId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **purchaseId**  | **long?**  |                             |
 
 ### Return type
 
@@ -713,10 +714,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**purchaseId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **purchaseId**  | **long?**  |                             |
 
 ### Return type
 
@@ -782,10 +783,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -851,10 +852,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -921,13 +922,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
+ Name            | Type                                                                                                                                           | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
 
 ### Return type
 
@@ -994,11 +995,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**purchaseId** | **long?**|  |
-**paymentId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **purchaseId**  | **long?**  |                             |
+ **paymentId**   | **long?**  |                             |
 
 ### Return type
 
@@ -1064,10 +1065,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**purchaseId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **purchaseId**  | **long?**  |                             |
 
 ### Return type
 
@@ -1135,15 +1136,15 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**sortBy** | **
-string**| Sorts results in either ascending (asc) or descending (desc) order based on the parameter value. | [optional] [default to date asc]
+ Name            | Type                                                                                                                                           | Description                      | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|-------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve      |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
+ **sortBy**      | **
+ string**        | Sorts results in either ascending (asc) or descending (desc) order based on the parameter value.                                               | [optional] [default to date asc]
 
 ### Return type
 
@@ -1209,11 +1210,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**DraftRequest**](DraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type                                | Description                                                                              | Notes
+-----------------|-------------------------------------|------------------------------------------------------------------------------------------|-------
+ **body**        | [**DraftRequest**](DraftRequest.md) |                                                                                          |
+ **companySlug** | **string**                          | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**                           | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 

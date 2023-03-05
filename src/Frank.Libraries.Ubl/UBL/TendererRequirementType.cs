@@ -1,92 +1,67 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("SpecificTendererRequirement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TendererRequirementType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("SpecificTendererRequirement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TendererRequirementType
 {
-
-    private NameType1[] nameField;
-
-    private TendererRequirementTypeCodeType tendererRequirementTypeCodeField;
-
     private DescriptionType[] descriptionField;
 
     private LegalReferenceType legalReferenceField;
 
+    private NameType1[] nameField;
+
     private EvidenceType[] suggestedEvidenceField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private TendererRequirementTypeCodeType tendererRequirementTypeCodeField;
+
+    /// <remarks />
+    [XmlElement("Name", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1[] Name
     {
-        get
-        {
-            return this.nameField;
-        }
-        set
-        {
-            this.nameField = value;
-        }
+        get => nameField;
+        set => nameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TendererRequirementTypeCodeType TendererRequirementTypeCode
     {
-        get
-        {
-            return this.tendererRequirementTypeCodeField;
-        }
-        set
-        {
-            this.tendererRequirementTypeCodeField = value;
-        }
+        get => tendererRequirementTypeCodeField;
+        set => tendererRequirementTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LegalReferenceType LegalReference
     {
-        get
-        {
-            return this.legalReferenceField;
-        }
-        set
-        {
-            this.legalReferenceField = value;
-        }
+        get => legalReferenceField;
+        set => legalReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SuggestedEvidence")]
+    /// <remarks />
+    [XmlElement("SuggestedEvidence")]
     public EvidenceType[] SuggestedEvidence
     {
-        get
-        {
-            return this.suggestedEvidenceField;
-        }
-        set
-        {
-            this.suggestedEvidenceField = value;
-        }
+        get => suggestedEvidenceField;
+        set => suggestedEvidenceField = value;
     }
 }

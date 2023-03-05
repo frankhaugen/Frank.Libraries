@@ -1,59 +1,46 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("TendererPartyQualification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TendererPartyQualificationType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("TendererPartyQualification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TendererPartyQualificationType
 {
+    private QualifyingPartyType[] additionalQualifyingPartyField;
 
     private ProcurementProjectLotType[] interestedProcurementProjectLotField;
 
     private QualifyingPartyType mainQualifyingPartyField;
 
-    private QualifyingPartyType[] additionalQualifyingPartyField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("InterestedProcurementProjectLot")]
+    /// <remarks />
+    [XmlElement("InterestedProcurementProjectLot")]
     public ProcurementProjectLotType[] InterestedProcurementProjectLot
     {
-        get
-        {
-            return this.interestedProcurementProjectLotField;
-        }
-        set
-        {
-            this.interestedProcurementProjectLotField = value;
-        }
+        get => interestedProcurementProjectLotField;
+        set => interestedProcurementProjectLotField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public QualifyingPartyType MainQualifyingParty
     {
-        get
-        {
-            return this.mainQualifyingPartyField;
-        }
-        set
-        {
-            this.mainQualifyingPartyField = value;
-        }
+        get => mainQualifyingPartyField;
+        set => mainQualifyingPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalQualifyingParty")]
+    /// <remarks />
+    [XmlElement("AdditionalQualifyingParty")]
     public QualifyingPartyType[] AdditionalQualifyingParty
     {
-        get
-        {
-            return this.additionalQualifyingPartyField;
-        }
-        set
-        {
-            this.additionalQualifyingPartyField = value;
-        }
+        get => additionalQualifyingPartyField;
+        set => additionalQualifyingPartyField = value;
     }
 }

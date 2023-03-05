@@ -1,485 +1,310 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("Item", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ItemType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("Item", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ItemType
 {
+    private AdditionalInformationType[] additionalInformationField;
+
+    private ItemIdentificationType[] additionalItemIdentificationField;
+
+    private ItemPropertyType[] additionalItemPropertyField;
+
+    private BrandNameType[] brandNameField;
+
+    private ItemIdentificationType buyersItemIdentificationField;
+
+    private DocumentReferenceType catalogueDocumentReferenceField;
+
+    private CatalogueIndicatorType catalogueIndicatorField;
+
+    private ItemIdentificationType catalogueItemIdentificationField;
+
+    private CertificateType[] certificateField;
+
+    private TaxCategoryType[] classifiedTaxCategoryField;
+
+    private CommodityClassificationType[] commodityClassificationField;
 
     private DescriptionType[] descriptionField;
+
+    private DimensionType[] dimensionField;
+
+    private HazardousItemType[] hazardousItemField;
+
+    private HazardousRiskIndicatorType hazardousRiskIndicatorField;
+
+    private PartyType informationContentProviderPartyField;
+
+    private ItemInstanceType[] itemInstanceField;
+
+    private DocumentReferenceType[] itemSpecificationDocumentReferenceField;
+
+    private KeywordType[] keywordField;
+
+    private PartyType[] manufacturerPartyField;
+
+    private ItemIdentificationType[] manufacturersItemIdentificationField;
+
+    private ModelNameType[] modelNameField;
+
+    private NameType1 nameField;
+
+    private AddressType[] originAddressField;
+
+    private CountryType originCountryField;
 
     private PackQuantityType packQuantityField;
 
     private PackSizeNumericType packSizeNumericField;
 
-    private CatalogueIndicatorType catalogueIndicatorField;
-
-    private NameType1 nameField;
-
-    private HazardousRiskIndicatorType hazardousRiskIndicatorField;
-
-    private AdditionalInformationType[] additionalInformationField;
-
-    private KeywordType[] keywordField;
-
-    private BrandNameType[] brandNameField;
-
-    private ModelNameType[] modelNameField;
-
-    private ItemIdentificationType buyersItemIdentificationField;
-
     private ItemIdentificationType sellersItemIdentificationField;
-
-    private ItemIdentificationType[] manufacturersItemIdentificationField;
 
     private ItemIdentificationType standardItemIdentificationField;
 
-    private ItemIdentificationType catalogueItemIdentificationField;
-
-    private ItemIdentificationType[] additionalItemIdentificationField;
-
-    private DocumentReferenceType catalogueDocumentReferenceField;
-
-    private DocumentReferenceType[] itemSpecificationDocumentReferenceField;
-
-    private CountryType originCountryField;
-
-    private CommodityClassificationType[] commodityClassificationField;
-
     private TransactionConditionsType[] transactionConditionsField;
 
-    private HazardousItemType[] hazardousItemField;
-
-    private TaxCategoryType[] classifiedTaxCategoryField;
-
-    private ItemPropertyType[] additionalItemPropertyField;
-
-    private PartyType[] manufacturerPartyField;
-
-    private PartyType informationContentProviderPartyField;
-
-    private AddressType[] originAddressField;
-
-    private ItemInstanceType[] itemInstanceField;
-
-    private CertificateType[] certificateField;
-
-    private DimensionType[] dimensionField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PackQuantityType PackQuantity
     {
-        get
-        {
-            return this.packQuantityField;
-        }
-        set
-        {
-            this.packQuantityField = value;
-        }
+        get => packQuantityField;
+        set => packQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PackSizeNumericType PackSizeNumeric
     {
-        get
-        {
-            return this.packSizeNumericField;
-        }
-        set
-        {
-            this.packSizeNumericField = value;
-        }
+        get => packSizeNumericField;
+        set => packSizeNumericField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CatalogueIndicatorType CatalogueIndicator
     {
-        get
-        {
-            return this.catalogueIndicatorField;
-        }
-        set
-        {
-            this.catalogueIndicatorField = value;
-        }
+        get => catalogueIndicatorField;
+        set => catalogueIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1 Name
     {
-        get
-        {
-            return this.nameField;
-        }
-        set
-        {
-            this.nameField = value;
-        }
+        get => nameField;
+        set => nameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public HazardousRiskIndicatorType HazardousRiskIndicator
     {
-        get
-        {
-            return this.hazardousRiskIndicatorField;
-        }
-        set
-        {
-            this.hazardousRiskIndicatorField = value;
-        }
+        get => hazardousRiskIndicatorField;
+        set => hazardousRiskIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalInformation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("AdditionalInformation", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AdditionalInformationType[] AdditionalInformation
     {
-        get
-        {
-            return this.additionalInformationField;
-        }
-        set
-        {
-            this.additionalInformationField = value;
-        }
+        get => additionalInformationField;
+        set => additionalInformationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Keyword", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Keyword", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public KeywordType[] Keyword
     {
-        get
-        {
-            return this.keywordField;
-        }
-        set
-        {
-            this.keywordField = value;
-        }
+        get => keywordField;
+        set => keywordField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("BrandName", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("BrandName", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BrandNameType[] BrandName
     {
-        get
-        {
-            return this.brandNameField;
-        }
-        set
-        {
-            this.brandNameField = value;
-        }
+        get => brandNameField;
+        set => brandNameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ModelName", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("ModelName", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ModelNameType[] ModelName
     {
-        get
-        {
-            return this.modelNameField;
-        }
-        set
-        {
-            this.modelNameField = value;
-        }
+        get => modelNameField;
+        set => modelNameField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ItemIdentificationType BuyersItemIdentification
     {
-        get
-        {
-            return this.buyersItemIdentificationField;
-        }
-        set
-        {
-            this.buyersItemIdentificationField = value;
-        }
+        get => buyersItemIdentificationField;
+        set => buyersItemIdentificationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ItemIdentificationType SellersItemIdentification
     {
-        get
-        {
-            return this.sellersItemIdentificationField;
-        }
-        set
-        {
-            this.sellersItemIdentificationField = value;
-        }
+        get => sellersItemIdentificationField;
+        set => sellersItemIdentificationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ManufacturersItemIdentification")]
+    /// <remarks />
+    [XmlElement("ManufacturersItemIdentification")]
     public ItemIdentificationType[] ManufacturersItemIdentification
     {
-        get
-        {
-            return this.manufacturersItemIdentificationField;
-        }
-        set
-        {
-            this.manufacturersItemIdentificationField = value;
-        }
+        get => manufacturersItemIdentificationField;
+        set => manufacturersItemIdentificationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ItemIdentificationType StandardItemIdentification
     {
-        get
-        {
-            return this.standardItemIdentificationField;
-        }
-        set
-        {
-            this.standardItemIdentificationField = value;
-        }
+        get => standardItemIdentificationField;
+        set => standardItemIdentificationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ItemIdentificationType CatalogueItemIdentification
     {
-        get
-        {
-            return this.catalogueItemIdentificationField;
-        }
-        set
-        {
-            this.catalogueItemIdentificationField = value;
-        }
+        get => catalogueItemIdentificationField;
+        set => catalogueItemIdentificationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalItemIdentification")]
+    /// <remarks />
+    [XmlElement("AdditionalItemIdentification")]
     public ItemIdentificationType[] AdditionalItemIdentification
     {
-        get
-        {
-            return this.additionalItemIdentificationField;
-        }
-        set
-        {
-            this.additionalItemIdentificationField = value;
-        }
+        get => additionalItemIdentificationField;
+        set => additionalItemIdentificationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DocumentReferenceType CatalogueDocumentReference
     {
-        get
-        {
-            return this.catalogueDocumentReferenceField;
-        }
-        set
-        {
-            this.catalogueDocumentReferenceField = value;
-        }
+        get => catalogueDocumentReferenceField;
+        set => catalogueDocumentReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ItemSpecificationDocumentReference")]
+    /// <remarks />
+    [XmlElement("ItemSpecificationDocumentReference")]
     public DocumentReferenceType[] ItemSpecificationDocumentReference
     {
-        get
-        {
-            return this.itemSpecificationDocumentReferenceField;
-        }
-        set
-        {
-            this.itemSpecificationDocumentReferenceField = value;
-        }
+        get => itemSpecificationDocumentReferenceField;
+        set => itemSpecificationDocumentReferenceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CountryType OriginCountry
     {
-        get
-        {
-            return this.originCountryField;
-        }
-        set
-        {
-            this.originCountryField = value;
-        }
+        get => originCountryField;
+        set => originCountryField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("CommodityClassification")]
+    /// <remarks />
+    [XmlElement("CommodityClassification")]
     public CommodityClassificationType[] CommodityClassification
     {
-        get
-        {
-            return this.commodityClassificationField;
-        }
-        set
-        {
-            this.commodityClassificationField = value;
-        }
+        get => commodityClassificationField;
+        set => commodityClassificationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TransactionConditions")]
+    /// <remarks />
+    [XmlElement("TransactionConditions")]
     public TransactionConditionsType[] TransactionConditions
     {
-        get
-        {
-            return this.transactionConditionsField;
-        }
-        set
-        {
-            this.transactionConditionsField = value;
-        }
+        get => transactionConditionsField;
+        set => transactionConditionsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("HazardousItem")]
+    /// <remarks />
+    [XmlElement("HazardousItem")]
     public HazardousItemType[] HazardousItem
     {
-        get
-        {
-            return this.hazardousItemField;
-        }
-        set
-        {
-            this.hazardousItemField = value;
-        }
+        get => hazardousItemField;
+        set => hazardousItemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ClassifiedTaxCategory")]
+    /// <remarks />
+    [XmlElement("ClassifiedTaxCategory")]
     public TaxCategoryType[] ClassifiedTaxCategory
     {
-        get
-        {
-            return this.classifiedTaxCategoryField;
-        }
-        set
-        {
-            this.classifiedTaxCategoryField = value;
-        }
+        get => classifiedTaxCategoryField;
+        set => classifiedTaxCategoryField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalItemProperty")]
+    /// <remarks />
+    [XmlElement("AdditionalItemProperty")]
     public ItemPropertyType[] AdditionalItemProperty
     {
-        get
-        {
-            return this.additionalItemPropertyField;
-        }
-        set
-        {
-            this.additionalItemPropertyField = value;
-        }
+        get => additionalItemPropertyField;
+        set => additionalItemPropertyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ManufacturerParty")]
+    /// <remarks />
+    [XmlElement("ManufacturerParty")]
     public PartyType[] ManufacturerParty
     {
-        get
-        {
-            return this.manufacturerPartyField;
-        }
-        set
-        {
-            this.manufacturerPartyField = value;
-        }
+        get => manufacturerPartyField;
+        set => manufacturerPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType InformationContentProviderParty
     {
-        get
-        {
-            return this.informationContentProviderPartyField;
-        }
-        set
-        {
-            this.informationContentProviderPartyField = value;
-        }
+        get => informationContentProviderPartyField;
+        set => informationContentProviderPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("OriginAddress")]
+    /// <remarks />
+    [XmlElement("OriginAddress")]
     public AddressType[] OriginAddress
     {
-        get
-        {
-            return this.originAddressField;
-        }
-        set
-        {
-            this.originAddressField = value;
-        }
+        get => originAddressField;
+        set => originAddressField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ItemInstance")]
+    /// <remarks />
+    [XmlElement("ItemInstance")]
     public ItemInstanceType[] ItemInstance
     {
-        get
-        {
-            return this.itemInstanceField;
-        }
-        set
-        {
-            this.itemInstanceField = value;
-        }
+        get => itemInstanceField;
+        set => itemInstanceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Certificate")]
+    /// <remarks />
+    [XmlElement("Certificate")]
     public CertificateType[] Certificate
     {
-        get
-        {
-            return this.certificateField;
-        }
-        set
-        {
-            this.certificateField = value;
-        }
+        get => certificateField;
+        set => certificateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Dimension")]
+    /// <remarks />
+    [XmlElement("Dimension")]
     public DimensionType[] Dimension
     {
-        get
-        {
-            return this.dimensionField;
-        }
-        set
-        {
-            this.dimensionField = value;
-        }
+        get => dimensionField;
+        set => dimensionField = value;
     }
 }

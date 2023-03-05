@@ -1,214 +1,141 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("PaymentMeans", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class PaymentMeansType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("PaymentMeans", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class PaymentMeansType
 {
+    private CardAccountType cardAccountField;
+
+    private CreditAccountType creditAccountField;
 
     private IDType idField;
-
-    private PaymentMeansCodeType paymentMeansCodeField;
-
-    private PaymentDueDateType paymentDueDateField;
-
-    private PaymentChannelCodeType paymentChannelCodeField;
 
     private InstructionIDType instructionIDField;
 
     private InstructionNoteType[] instructionNoteField;
 
-    private PaymentIDType[] paymentIDField;
-
-    private CardAccountType cardAccountField;
+    private FinancialAccountType payeeFinancialAccountField;
 
     private FinancialAccountType payerFinancialAccountField;
 
-    private FinancialAccountType payeeFinancialAccountField;
+    private PaymentChannelCodeType paymentChannelCodeField;
 
-    private CreditAccountType creditAccountField;
+    private PaymentDueDateType paymentDueDateField;
+
+    private PaymentIDType[] paymentIDField;
 
     private PaymentMandateType paymentMandateField;
 
+    private PaymentMeansCodeType paymentMeansCodeField;
+
     private TradeFinancingType tradeFinancingField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PaymentMeansCodeType PaymentMeansCode
     {
-        get
-        {
-            return this.paymentMeansCodeField;
-        }
-        set
-        {
-            this.paymentMeansCodeField = value;
-        }
+        get => paymentMeansCodeField;
+        set => paymentMeansCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PaymentDueDateType PaymentDueDate
     {
-        get
-        {
-            return this.paymentDueDateField;
-        }
-        set
-        {
-            this.paymentDueDateField = value;
-        }
+        get => paymentDueDateField;
+        set => paymentDueDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PaymentChannelCodeType PaymentChannelCode
     {
-        get
-        {
-            return this.paymentChannelCodeField;
-        }
-        set
-        {
-            this.paymentChannelCodeField = value;
-        }
+        get => paymentChannelCodeField;
+        set => paymentChannelCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public InstructionIDType InstructionID
     {
-        get
-        {
-            return this.instructionIDField;
-        }
-        set
-        {
-            this.instructionIDField = value;
-        }
+        get => instructionIDField;
+        set => instructionIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("InstructionNote", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("InstructionNote", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public InstructionNoteType[] InstructionNote
     {
-        get
-        {
-            return this.instructionNoteField;
-        }
-        set
-        {
-            this.instructionNoteField = value;
-        }
+        get => instructionNoteField;
+        set => instructionNoteField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PaymentID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("PaymentID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PaymentIDType[] PaymentID
     {
-        get
-        {
-            return this.paymentIDField;
-        }
-        set
-        {
-            this.paymentIDField = value;
-        }
+        get => paymentIDField;
+        set => paymentIDField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CardAccountType CardAccount
     {
-        get
-        {
-            return this.cardAccountField;
-        }
-        set
-        {
-            this.cardAccountField = value;
-        }
+        get => cardAccountField;
+        set => cardAccountField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public FinancialAccountType PayerFinancialAccount
     {
-        get
-        {
-            return this.payerFinancialAccountField;
-        }
-        set
-        {
-            this.payerFinancialAccountField = value;
-        }
+        get => payerFinancialAccountField;
+        set => payerFinancialAccountField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public FinancialAccountType PayeeFinancialAccount
     {
-        get
-        {
-            return this.payeeFinancialAccountField;
-        }
-        set
-        {
-            this.payeeFinancialAccountField = value;
-        }
+        get => payeeFinancialAccountField;
+        set => payeeFinancialAccountField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CreditAccountType CreditAccount
     {
-        get
-        {
-            return this.creditAccountField;
-        }
-        set
-        {
-            this.creditAccountField = value;
-        }
+        get => creditAccountField;
+        set => creditAccountField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PaymentMandateType PaymentMandate
     {
-        get
-        {
-            return this.paymentMandateField;
-        }
-        set
-        {
-            this.paymentMandateField = value;
-        }
+        get => paymentMandateField;
+        set => paymentMandateField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public TradeFinancingType TradeFinancing
     {
-        get
-        {
-            return this.tradeFinancingField;
-        }
-        set
-        {
-            this.tradeFinancingField = value;
-        }
+        get => tradeFinancingField;
+        set => tradeFinancingField = value;
     }
 }

@@ -1,20 +1,35 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ActualPackage", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class PackageType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ActualPackage", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class PackageType
 {
+    private PackageType[] containedPackageField;
+
+    private TransportEquipmentType containingTransportEquipmentField;
+
+    private DeliveryType deliveryField;
+
+    private DeliveryUnitType[] deliveryUnitField;
+
+    private DespatchType despatchField;
+
+    private GoodsItemType[] goodsItemField;
 
     private IDType idField;
 
-    private QuantityType2 quantityField;
-
-    private ReturnableMaterialIndicatorType returnableMaterialIndicatorField;
+    private DimensionType[] measurementDimensionField;
 
     private PackageLevelCodeType packageLevelCodeField;
 
@@ -22,227 +37,127 @@ public partial class PackageType
 
     private PackingMaterialType[] packingMaterialField;
 
-    private TraceIDType traceIDField;
-
-    private PackageType[] containedPackageField;
-
-    private TransportEquipmentType containingTransportEquipmentField;
-
-    private GoodsItemType[] goodsItemField;
-
-    private DimensionType[] measurementDimensionField;
-
-    private DeliveryUnitType[] deliveryUnitField;
-
-    private DeliveryType deliveryField;
-
     private PickupType pickupField;
 
-    private DespatchType despatchField;
+    private QuantityType2 quantityField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private ReturnableMaterialIndicatorType returnableMaterialIndicatorField;
+
+    private TraceIDType traceIDField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public QuantityType2 Quantity
     {
-        get
-        {
-            return this.quantityField;
-        }
-        set
-        {
-            this.quantityField = value;
-        }
+        get => quantityField;
+        set => quantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReturnableMaterialIndicatorType ReturnableMaterialIndicator
     {
-        get
-        {
-            return this.returnableMaterialIndicatorField;
-        }
-        set
-        {
-            this.returnableMaterialIndicatorField = value;
-        }
+        get => returnableMaterialIndicatorField;
+        set => returnableMaterialIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PackageLevelCodeType PackageLevelCode
     {
-        get
-        {
-            return this.packageLevelCodeField;
-        }
-        set
-        {
-            this.packageLevelCodeField = value;
-        }
+        get => packageLevelCodeField;
+        set => packageLevelCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PackagingTypeCodeType PackagingTypeCode
     {
-        get
-        {
-            return this.packagingTypeCodeField;
-        }
-        set
-        {
-            this.packagingTypeCodeField = value;
-        }
+        get => packagingTypeCodeField;
+        set => packagingTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PackingMaterial", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("PackingMaterial", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PackingMaterialType[] PackingMaterial
     {
-        get
-        {
-            return this.packingMaterialField;
-        }
-        set
-        {
-            this.packingMaterialField = value;
-        }
+        get => packingMaterialField;
+        set => packingMaterialField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TraceIDType TraceID
     {
-        get
-        {
-            return this.traceIDField;
-        }
-        set
-        {
-            this.traceIDField = value;
-        }
+        get => traceIDField;
+        set => traceIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ContainedPackage")]
+    /// <remarks />
+    [XmlElement("ContainedPackage")]
     public PackageType[] ContainedPackage
     {
-        get
-        {
-            return this.containedPackageField;
-        }
-        set
-        {
-            this.containedPackageField = value;
-        }
+        get => containedPackageField;
+        set => containedPackageField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public TransportEquipmentType ContainingTransportEquipment
     {
-        get
-        {
-            return this.containingTransportEquipmentField;
-        }
-        set
-        {
-            this.containingTransportEquipmentField = value;
-        }
+        get => containingTransportEquipmentField;
+        set => containingTransportEquipmentField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("GoodsItem")]
+    /// <remarks />
+    [XmlElement("GoodsItem")]
     public GoodsItemType[] GoodsItem
     {
-        get
-        {
-            return this.goodsItemField;
-        }
-        set
-        {
-            this.goodsItemField = value;
-        }
+        get => goodsItemField;
+        set => goodsItemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("MeasurementDimension")]
+    /// <remarks />
+    [XmlElement("MeasurementDimension")]
     public DimensionType[] MeasurementDimension
     {
-        get
-        {
-            return this.measurementDimensionField;
-        }
-        set
-        {
-            this.measurementDimensionField = value;
-        }
+        get => measurementDimensionField;
+        set => measurementDimensionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DeliveryUnit")]
+    /// <remarks />
+    [XmlElement("DeliveryUnit")]
     public DeliveryUnitType[] DeliveryUnit
     {
-        get
-        {
-            return this.deliveryUnitField;
-        }
-        set
-        {
-            this.deliveryUnitField = value;
-        }
+        get => deliveryUnitField;
+        set => deliveryUnitField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DeliveryType Delivery
     {
-        get
-        {
-            return this.deliveryField;
-        }
-        set
-        {
-            this.deliveryField = value;
-        }
+        get => deliveryField;
+        set => deliveryField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PickupType Pickup
     {
-        get
-        {
-            return this.pickupField;
-        }
-        set
-        {
-            this.pickupField = value;
-        }
+        get => pickupField;
+        set => pickupField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DespatchType Despatch
     {
-        get
-        {
-            return this.despatchField;
-        }
-        set
-        {
-            this.despatchField = value;
-        }
+        get => despatchField;
+        set => despatchField = value;
     }
 }

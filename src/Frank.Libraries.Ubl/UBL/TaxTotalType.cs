@@ -1,18 +1,23 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("TaxTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TaxTotalType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("TaxTotal", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TaxTotalType
 {
+    private RoundingAmountType roundingAmountField;
 
     private TaxAmountType taxAmountField;
-
-    private RoundingAmountType roundingAmountField;
 
     private TaxEvidenceIndicatorType taxEvidenceIndicatorField;
 
@@ -20,73 +25,43 @@ public partial class TaxTotalType
 
     private TaxSubtotalType[] taxSubtotalField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxAmountType TaxAmount
     {
-        get
-        {
-            return this.taxAmountField;
-        }
-        set
-        {
-            this.taxAmountField = value;
-        }
+        get => taxAmountField;
+        set => taxAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RoundingAmountType RoundingAmount
     {
-        get
-        {
-            return this.roundingAmountField;
-        }
-        set
-        {
-            this.roundingAmountField = value;
-        }
+        get => roundingAmountField;
+        set => roundingAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxEvidenceIndicatorType TaxEvidenceIndicator
     {
-        get
-        {
-            return this.taxEvidenceIndicatorField;
-        }
-        set
-        {
-            this.taxEvidenceIndicatorField = value;
-        }
+        get => taxEvidenceIndicatorField;
+        set => taxEvidenceIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TaxIncludedIndicatorType TaxIncludedIndicator
     {
-        get
-        {
-            return this.taxIncludedIndicatorField;
-        }
-        set
-        {
-            this.taxIncludedIndicatorField = value;
-        }
+        get => taxIncludedIndicatorField;
+        set => taxIncludedIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxSubtotal")]
+    /// <remarks />
+    [XmlElement("TaxSubtotal")]
     public TaxSubtotalType[] TaxSubtotal
     {
-        get
-        {
-            return this.taxSubtotalField;
-        }
-        set
-        {
-            this.taxSubtotalField = value;
-        }
+        get => taxSubtotalField;
+        set => taxSubtotalField = value;
     }
 }

@@ -1,76 +1,57 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("EnergyWaterSupply", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class EnergyWaterSupplyType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("EnergyWaterSupply", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class EnergyWaterSupplyType
 {
+    private ConsumptionAverageType[] consumptionAverageField;
 
     private ConsumptionReportType[] consumptionReportField;
 
     private EnergyTaxReportType[] energyTaxReportField;
 
-    private ConsumptionAverageType[] consumptionAverageField;
-
     private ConsumptionCorrectionType[] energyWaterConsumptionCorrectionField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ConsumptionReport")]
+    /// <remarks />
+    [XmlElement("ConsumptionReport")]
     public ConsumptionReportType[] ConsumptionReport
     {
-        get
-        {
-            return this.consumptionReportField;
-        }
-        set
-        {
-            this.consumptionReportField = value;
-        }
+        get => consumptionReportField;
+        set => consumptionReportField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("EnergyTaxReport")]
+    /// <remarks />
+    [XmlElement("EnergyTaxReport")]
     public EnergyTaxReportType[] EnergyTaxReport
     {
-        get
-        {
-            return this.energyTaxReportField;
-        }
-        set
-        {
-            this.energyTaxReportField = value;
-        }
+        get => energyTaxReportField;
+        set => energyTaxReportField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ConsumptionAverage")]
+    /// <remarks />
+    [XmlElement("ConsumptionAverage")]
     public ConsumptionAverageType[] ConsumptionAverage
     {
-        get
-        {
-            return this.consumptionAverageField;
-        }
-        set
-        {
-            this.consumptionAverageField = value;
-        }
+        get => consumptionAverageField;
+        set => consumptionAverageField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("EnergyWaterConsumptionCorrection")]
+    /// <remarks />
+    [XmlElement("EnergyWaterConsumptionCorrection")]
     public ConsumptionCorrectionType[] EnergyWaterConsumptionCorrection
     {
-        get
-        {
-            return this.energyWaterConsumptionCorrectionField;
-        }
-        set
-        {
-            this.energyWaterConsumptionCorrectionField = value;
-        }
+        get => energyWaterConsumptionCorrectionField;
+        set => energyWaterConsumptionCorrectionField = value;
     }
 }

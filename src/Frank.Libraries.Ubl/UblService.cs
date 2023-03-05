@@ -6,12 +6,12 @@ using System.Xml.Serialization;
 namespace Frank.Libraries.Ubl;
 
 /// <summary>
-/// A service to interact with UBLs in <c>this</c> library
+///     A service to interact with UBLs in <c>this</c> library
 /// </summary>
 public class UblService
 {
     /// <summary>
-    /// Get an Invoice back based on the XML
+    ///     Get an Invoice back based on the XML
     /// </summary>
     /// <param name="xml"></param>
     /// <returns></returns>

@@ -1,91 +1,66 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ConsumptionReportReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ConsumptionReportReferenceType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ConsumptionReportReference", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ConsumptionReportReferenceType
 {
-
     private ConsumptionReportIDType consumptionReportIDField;
-
-    private ConsumptionTypeType consumptionTypeField;
 
     private ConsumptionTypeCodeType consumptionTypeCodeField;
 
-    private TotalConsumedQuantityType totalConsumedQuantityField;
+    private ConsumptionTypeType consumptionTypeField;
 
     private PeriodType periodField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private TotalConsumedQuantityType totalConsumedQuantityField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ConsumptionReportIDType ConsumptionReportID
     {
-        get
-        {
-            return this.consumptionReportIDField;
-        }
-        set
-        {
-            this.consumptionReportIDField = value;
-        }
+        get => consumptionReportIDField;
+        set => consumptionReportIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ConsumptionTypeType ConsumptionType
     {
-        get
-        {
-            return this.consumptionTypeField;
-        }
-        set
-        {
-            this.consumptionTypeField = value;
-        }
+        get => consumptionTypeField;
+        set => consumptionTypeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ConsumptionTypeCodeType ConsumptionTypeCode
     {
-        get
-        {
-            return this.consumptionTypeCodeField;
-        }
-        set
-        {
-            this.consumptionTypeCodeField = value;
-        }
+        get => consumptionTypeCodeField;
+        set => consumptionTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TotalConsumedQuantityType TotalConsumedQuantity
     {
-        get
-        {
-            return this.totalConsumedQuantityField;
-        }
-        set
-        {
-            this.totalConsumedQuantityField = value;
-        }
+        get => totalConsumedQuantityField;
+        set => totalConsumedQuantityField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType Period
     {
-        get
-        {
-            return this.periodField;
-        }
-        set
-        {
-            this.periodField = value;
-        }
+        get => periodField;
+        set => periodField = value;
     }
 }

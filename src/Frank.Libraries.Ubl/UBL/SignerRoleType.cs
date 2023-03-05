@@ -1,44 +1,37 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("SignerRole", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class SignerRoleType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("SignerRole", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class SignerRoleType
 {
+    private EncapsulatedPKIDataType[] certifiedRolesField;
 
     private AnyType[] claimedRolesField;
 
-    private EncapsulatedPKIDataType[] certifiedRolesField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("ClaimedRole", IsNullable = false)]
+    /// <remarks />
+    [XmlArrayItem("ClaimedRole", IsNullable = false)]
     public AnyType[] ClaimedRoles
     {
-        get
-        {
-            return this.claimedRolesField;
-        }
-        set
-        {
-            this.claimedRolesField = value;
-        }
+        get => claimedRolesField;
+        set => claimedRolesField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("CertifiedRole", IsNullable = false)]
+    /// <remarks />
+    [XmlArrayItem("CertifiedRole", IsNullable = false)]
     public EncapsulatedPKIDataType[] CertifiedRoles
     {
-        get
-        {
-            return this.certifiedRolesField;
-        }
-        set
-        {
-            this.certifiedRolesField = value;
-        }
+        get => certifiedRolesField;
+        set => certifiedRolesField = value;
     }
 }

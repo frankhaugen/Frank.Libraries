@@ -1,15 +1,20 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("RetailPlannedImpact", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class RetailPlannedImpactType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("RetailPlannedImpact", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class RetailPlannedImpactType
 {
-
     private AmountType2 amountField;
 
     private ForecastPurposeCodeType forecastPurposeCodeField;
@@ -18,58 +23,34 @@ public partial class RetailPlannedImpactType
 
     private PeriodType periodField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AmountType2 Amount
     {
-        get
-        {
-            return this.amountField;
-        }
-        set
-        {
-            this.amountField = value;
-        }
+        get => amountField;
+        set => amountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ForecastPurposeCodeType ForecastPurposeCode
     {
-        get
-        {
-            return this.forecastPurposeCodeField;
-        }
-        set
-        {
-            this.forecastPurposeCodeField = value;
-        }
+        get => forecastPurposeCodeField;
+        set => forecastPurposeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ForecastTypeCodeType ForecastTypeCode
     {
-        get
-        {
-            return this.forecastTypeCodeField;
-        }
-        set
-        {
-            this.forecastTypeCodeField = value;
-        }
+        get => forecastTypeCodeField;
+        set => forecastTypeCodeField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType Period
     {
-        get
-        {
-            return this.periodField;
-        }
-        set
-        {
-            this.periodField = value;
-        }
+        get => periodField;
+        set => periodField = value;
     }
 }

@@ -1,107 +1,76 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("FrameworkAgreement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class FrameworkAgreementType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("FrameworkAgreement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class FrameworkAgreementType
 {
+    private PeriodType durationPeriodField;
 
     private ExpectedOperatorQuantityType expectedOperatorQuantityField;
 
-    private MaximumOperatorQuantityType maximumOperatorQuantityField;
+    private FrequencyType[] frequencyField;
 
     private JustificationType[] justificationField;
 
-    private FrequencyType[] frequencyField;
-
-    private PeriodType durationPeriodField;
+    private MaximumOperatorQuantityType maximumOperatorQuantityField;
 
     private TenderRequirementType[] subsequentProcessTenderRequirementField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ExpectedOperatorQuantityType ExpectedOperatorQuantity
     {
-        get
-        {
-            return this.expectedOperatorQuantityField;
-        }
-        set
-        {
-            this.expectedOperatorQuantityField = value;
-        }
+        get => expectedOperatorQuantityField;
+        set => expectedOperatorQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MaximumOperatorQuantityType MaximumOperatorQuantity
     {
-        get
-        {
-            return this.maximumOperatorQuantityField;
-        }
-        set
-        {
-            this.maximumOperatorQuantityField = value;
-        }
+        get => maximumOperatorQuantityField;
+        set => maximumOperatorQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Justification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Justification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public JustificationType[] Justification
     {
-        get
-        {
-            return this.justificationField;
-        }
-        set
-        {
-            this.justificationField = value;
-        }
+        get => justificationField;
+        set => justificationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Frequency", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Frequency", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public FrequencyType[] Frequency
     {
-        get
-        {
-            return this.frequencyField;
-        }
-        set
-        {
-            this.frequencyField = value;
-        }
+        get => frequencyField;
+        set => frequencyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType DurationPeriod
     {
-        get
-        {
-            return this.durationPeriodField;
-        }
-        set
-        {
-            this.durationPeriodField = value;
-        }
+        get => durationPeriodField;
+        set => durationPeriodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SubsequentProcessTenderRequirement")]
+    /// <remarks />
+    [XmlElement("SubsequentProcessTenderRequirement")]
     public TenderRequirementType[] SubsequentProcessTenderRequirement
     {
-        get
-        {
-            return this.subsequentProcessTenderRequirementField;
-        }
-        set
-        {
-            this.subsequentProcessTenderRequirementField = value;
-        }
+        get => subsequentProcessTenderRequirementField;
+        set => subsequentProcessTenderRequirementField = value;
     }
 }

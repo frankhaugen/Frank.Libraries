@@ -2,10 +2,7 @@
 
 public class Cell
 {
-    public Cell(Position position)
-    {
-        Position = position;
-    }
+    public Cell(Position position) => Position = position;
 
     public Position Position { get; set; }
     public int Value { get; set; }

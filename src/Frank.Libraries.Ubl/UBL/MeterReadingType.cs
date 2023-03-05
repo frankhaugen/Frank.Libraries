@@ -1,220 +1,147 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("MeterReading", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class MeterReadingType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("MeterReading", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class MeterReadingType
 {
+    private DeliveredQuantityType deliveredQuantityField;
 
     private IDType idField;
+
+    private LatestMeterQuantityType latestMeterQuantityField;
+
+    private LatestMeterReadingDateType latestMeterReadingDateField;
+
+    private LatestMeterReadingMethodCodeType latestMeterReadingMethodCodeField;
+
+    private LatestMeterReadingMethodType latestMeterReadingMethodField;
+
+    private MeterReadingCommentsType[] meterReadingCommentsField;
 
     private MeterReadingTypeType meterReadingType1Field;
 
     private MeterReadingTypeCodeType meterReadingTypeCodeField;
 
-    private PreviousMeterReadingDateType previousMeterReadingDateField;
-
     private PreviousMeterQuantityType previousMeterQuantityField;
 
-    private LatestMeterReadingDateType latestMeterReadingDateField;
-
-    private LatestMeterQuantityType latestMeterQuantityField;
-
-    private PreviousMeterReadingMethodType previousMeterReadingMethodField;
+    private PreviousMeterReadingDateType previousMeterReadingDateField;
 
     private PreviousMeterReadingMethodCodeType previousMeterReadingMethodCodeField;
 
-    private LatestMeterReadingMethodType latestMeterReadingMethodField;
+    private PreviousMeterReadingMethodType previousMeterReadingMethodField;
 
-    private LatestMeterReadingMethodCodeType latestMeterReadingMethodCodeField;
-
-    private MeterReadingCommentsType[] meterReadingCommentsField;
-
-    private DeliveredQuantityType deliveredQuantityField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("MeterReadingType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("MeterReadingType", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MeterReadingTypeType MeterReadingType1
     {
-        get
-        {
-            return this.meterReadingType1Field;
-        }
-        set
-        {
-            this.meterReadingType1Field = value;
-        }
+        get => meterReadingType1Field;
+        set => meterReadingType1Field = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MeterReadingTypeCodeType MeterReadingTypeCode
     {
-        get
-        {
-            return this.meterReadingTypeCodeField;
-        }
-        set
-        {
-            this.meterReadingTypeCodeField = value;
-        }
+        get => meterReadingTypeCodeField;
+        set => meterReadingTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PreviousMeterReadingDateType PreviousMeterReadingDate
     {
-        get
-        {
-            return this.previousMeterReadingDateField;
-        }
-        set
-        {
-            this.previousMeterReadingDateField = value;
-        }
+        get => previousMeterReadingDateField;
+        set => previousMeterReadingDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PreviousMeterQuantityType PreviousMeterQuantity
     {
-        get
-        {
-            return this.previousMeterQuantityField;
-        }
-        set
-        {
-            this.previousMeterQuantityField = value;
-        }
+        get => previousMeterQuantityField;
+        set => previousMeterQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LatestMeterReadingDateType LatestMeterReadingDate
     {
-        get
-        {
-            return this.latestMeterReadingDateField;
-        }
-        set
-        {
-            this.latestMeterReadingDateField = value;
-        }
+        get => latestMeterReadingDateField;
+        set => latestMeterReadingDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LatestMeterQuantityType LatestMeterQuantity
     {
-        get
-        {
-            return this.latestMeterQuantityField;
-        }
-        set
-        {
-            this.latestMeterQuantityField = value;
-        }
+        get => latestMeterQuantityField;
+        set => latestMeterQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PreviousMeterReadingMethodType PreviousMeterReadingMethod
     {
-        get
-        {
-            return this.previousMeterReadingMethodField;
-        }
-        set
-        {
-            this.previousMeterReadingMethodField = value;
-        }
+        get => previousMeterReadingMethodField;
+        set => previousMeterReadingMethodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PreviousMeterReadingMethodCodeType PreviousMeterReadingMethodCode
     {
-        get
-        {
-            return this.previousMeterReadingMethodCodeField;
-        }
-        set
-        {
-            this.previousMeterReadingMethodCodeField = value;
-        }
+        get => previousMeterReadingMethodCodeField;
+        set => previousMeterReadingMethodCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LatestMeterReadingMethodType LatestMeterReadingMethod
     {
-        get
-        {
-            return this.latestMeterReadingMethodField;
-        }
-        set
-        {
-            this.latestMeterReadingMethodField = value;
-        }
+        get => latestMeterReadingMethodField;
+        set => latestMeterReadingMethodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LatestMeterReadingMethodCodeType LatestMeterReadingMethodCode
     {
-        get
-        {
-            return this.latestMeterReadingMethodCodeField;
-        }
-        set
-        {
-            this.latestMeterReadingMethodCodeField = value;
-        }
+        get => latestMeterReadingMethodCodeField;
+        set => latestMeterReadingMethodCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("MeterReadingComments", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("MeterReadingComments", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MeterReadingCommentsType[] MeterReadingComments
     {
-        get
-        {
-            return this.meterReadingCommentsField;
-        }
-        set
-        {
-            this.meterReadingCommentsField = value;
-        }
+        get => meterReadingCommentsField;
+        set => meterReadingCommentsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DeliveredQuantityType DeliveredQuantity
     {
-        get
-        {
-            return this.deliveredQuantityField;
-        }
-        set
-        {
-            this.deliveredQuantityField = value;
-        }
+        get => deliveredQuantityField;
+        set => deliveredQuantityField = value;
     }
 }

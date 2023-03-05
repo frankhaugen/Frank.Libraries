@@ -6,125 +6,124 @@ using Frank.Libraries.ML.LanguageDetection;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests.ML.LanguageDetection
+namespace Frank.Libraries.Tests.ML.LanguageDetection;
+
+public class LanguageDetectorTests
 {
-    public class LanguageDetectorTests
+    private readonly ITestOutputHelper _outputHelper;
+
+    public LanguageDetectorTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+
+    [Fact]
+    public void Detect_TextIsEnglish_ReturnsEnglish()
     {
-        private readonly ITestOutputHelper _outputHelper;
+        var text = "My name is Frank, and I am a Norwegian";
 
-        public LanguageDetectorTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+        var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+        var result = detector.Detect(text);
 
-        [Fact]
-        public void Detect_TextIsEnglish_ReturnsEnglish()
-        {
-            var text = "My name is Frank, and I am a Norwegian";
+        result.Should()
+              .NotBeNull();
+        result?.LanguageCode.Should()
+              .Be(LanguageCode.ENG);
+        result?.Name.Should()
+              .Be(LanguageCode.ENG.GetName());
+    }
 
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
-            var result = detector.Detect(text);
+    [Theory]
+    [InlineData("My name is Frank, and I am a Norwegian", LanguageCode.ENG)]
+    [InlineData("Mitt navn er Frank", LanguageCode.NOR)]
+    [InlineData("Midt navn er Frank", LanguageCode.DAN)]
+    [InlineData("好的", LanguageCode.CHI)]
+    [InlineData("Пожалуйста ", LanguageCode.RUS)]
+    [InlineData("Wo ist es? ", LanguageCode.GER)]
+    public void Detect(string text, LanguageCode expected)
+    {
+        var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+        var result = detector.Detect(text)!;
 
-            result.Should()
-                  .NotBeNull();
-            result?.LanguageCode.Should()
-                  .Be(LanguageCode.ENG);
-            result?.Name.Should()
-                  .Be(LanguageCode.ENG.GetName());
-        }
+        result.Should()
+              .NotBeNull();
+        result.LanguageCode.Should()
+              .Be(expected);
+        result.Name.Should()
+              .Be(expected.GetName());
+        _outputHelper.WriteLine($"{result.LanguageCode}\t{result.Name}\t{result.Probability}");
+    }
 
-        [Theory]
-        [InlineData("My name is Frank, and I am a Norwegian", LanguageCode.ENG)]
-        [InlineData("Mitt navn er Frank", LanguageCode.NOR)]
-        [InlineData("Midt navn er Frank", LanguageCode.DAN)]
-        [InlineData("好的", LanguageCode.CHI)]
-        [InlineData("Пожалуйста ", LanguageCode.RUS)]
-        [InlineData("Wo ist es? ", LanguageCode.GER)]
-        public void Detect(string text, LanguageCode expected)
-        {
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
-            var result = detector.Detect(text)!;
+    [Fact]
+    public void DetectAll()
+    {
+        var text = "rgeg hnøae uhbø eo ubh æeot i8h 308 y63åt80uh";
 
-            result.Should()
-                  .NotBeNull();
-            result.LanguageCode.Should()
-                  .Be(expected);
-            result.Name.Should()
-                  .Be(expected.GetName());
-            _outputHelper.WriteLine($"{result.LanguageCode}\t{result.Name}\t{result.Probability}");
-        }
+        var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+        var result = detector.DetectAll(text);
 
-        [Fact]
-        public void DetectAll()
-        {
-            var text = "rgeg hnøae uhbø eo ubh æeot i8h 308 y63åt80uh";
+        _outputHelper.WriteLine(result.ToJson());
+    }
 
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
-            var result = detector.DetectAll(text);
+    [Fact]
+    public void Detect_TextIsEmptyString_ReturnsNull()
+    {
+        var text = "";
 
-            _outputHelper.WriteLine(result.ToJson());
-        }
+        var detector = new LanguageDetectionService(new LanguageDetectionOptions());
 
-        [Fact]
-        public void Detect_TextIsEmptyString_ReturnsNull()
-        {
-            var text = "";
+        var result = detector.Detect(text);
 
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+        result.Should()
+              .BeNull();
+    }
 
-            var result = detector.Detect(text);
+    [Fact]
+    public void Is_TextIsNorwegian_ReturnsTrue()
+    {
+        var text = "Mitt navn er Frank";
 
-            result.Should()
-                  .BeNull();
-        }
+        var detector = new LanguageDetectionService(new LanguageDetectionOptions());
 
-        [Fact]
-        public void Is_TextIsNorwegian_ReturnsTrue()
-        {
-            var text = "Mitt navn er Frank";
+        var result = detector.Is(LanguageCode.NOR, text);
 
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+        result.Should()
+              .BeTrue();
+    }
 
-            var result = detector.Is(LanguageCode.NOR, text);
+    [Fact]
+    public void Is_TextIsInterlinguaThatDoesNotExist_ReturnsNull()
+    {
+        var text = "Patre nostre, qui es in le celos, que tu nomine sia sanctificate; que tu regno veni; que tu voluntate sia facite como in le celo, etiam super le terra.";
 
-            result.Should()
-                  .BeTrue();
-        }
+        var detector = new LanguageDetectionService(new LanguageDetectionOptions());
 
-        [Fact]
-        public void Is_TextIsInterlinguaThatDoesNotExist_ReturnsNull()
-        {
-            var text = "Patre nostre, qui es in le celos, que tu nomine sia sanctificate; que tu regno veni; que tu voluntate sia facite como in le celo, etiam super le terra.";
+        var result = detector.Is(LanguageCode.INA, text);
 
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+        result.Should()
+              .BeFalse();
+    }
 
-            var result = detector.Is(LanguageCode.INA, text);
+    [Fact]
+    public void Detect_TextIsInterlinguaThatDoesNotExist_DoesNotReturnInterlingua()
+    {
+        var text = "Patre nostre, qui es in le celos, que tu nomine sia sanctificate; que tu regno veni; que tu voluntate sia facite como in le celo, etiam super le terra." + "Da nos hodie nostre pan quotidian, e pardona a nos nostre debitas como etiam nos los pardona a nostre debitores. E non induce nos in tentation, sed libera nos del mal. Amen.";
 
-            result.Should()
-                  .BeFalse();
-        }
+        var detector = new LanguageDetectionService(new LanguageDetectionOptions());
 
-        [Fact]
-        public void Detect_TextIsInterlinguaThatDoesNotExist_DoesNotReturnInterlingua()
-        {
-            var text = "Patre nostre, qui es in le celos, que tu nomine sia sanctificate; que tu regno veni; que tu voluntate sia facite como in le celo, etiam super le terra." + "Da nos hodie nostre pan quotidian, e pardona a nos nostre debitas como etiam nos los pardona a nostre debitores. E non induce nos in tentation, sed libera nos del mal. Amen.";
+        var result = detector.Detect(text);
 
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
+        result!.LanguageCode.Should()
+               .NotBe(LanguageCode.INA);
+    }
 
-            var result = detector.Detect(text);
+    [Fact]
+    public void Detect_TextIsKlingonThatDoesNotExist_ReturnsNull()
+    {
+        var text = "HeghluʼmeH QaQ jajvam. bortaS bIr jabluʼDIʼ reH QaQquʼ nayʼ. bIlughbeʼ. Dochvetlh vISoplaHbeʼ. jIyajbeʼ.";
 
-            result!.LanguageCode.Should()
-                   .NotBe(LanguageCode.INA);
-        }
+        var detector = new LanguageDetectionService(new LanguageDetectionOptions());
 
-        [Fact]
-        public void Detect_TextIsKlingonThatDoesNotExist_ReturnsNull()
-        {
-            var text = "HeghluʼmeH QaQ jajvam. bortaS bIr jabluʼDIʼ reH QaQquʼ nayʼ. bIlughbeʼ. Dochvetlh vISoplaHbeʼ. jIyajbeʼ.";
+        var result = detector.Detect(text);
 
-            var detector = new LanguageDetectionService(new LanguageDetectionOptions());
-
-            var result = detector.Detect(text);
-
-            result.Should()
-                  .BeNull();
-        }
+        result.Should()
+              .BeNull();
     }
 }

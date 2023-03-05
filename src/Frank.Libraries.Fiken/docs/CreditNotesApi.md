@@ -2,30 +2,30 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AddAttachmentToCreditNoteDraft**](CreditNotesApi.md#addattachmenttocreditnotedraft) | **
-POST** /companies/{companySlug}/creditNotes/drafts/{draftId}/attachments |
-[**CreateCreditNoteDraft**](CreditNotesApi.md#createcreditnotedraft) | **
-POST** /companies/{companySlug}/creditNotes/drafts |
-[**CreateCreditNoteFromDraft**](CreditNotesApi.md#createcreditnotefromdraft) | **
-POST** /companies/{companySlug}/creditNotes/drafts/{draftId}/createCreditNote |
-[**CreateFullCreditNote**](CreditNotesApi.md#createfullcreditnote) | **
-POST** /companies/{companySlug}/creditNotes/full |
-[**CreatePartialCreditNote**](CreditNotesApi.md#createpartialcreditnote) | **
-POST** /companies/{companySlug}/creditNotes/partial |
-[**DeleteCreditNoteDraft**](CreditNotesApi.md#deletecreditnotedraft) | **
-DELETE** /companies/{companySlug}/creditNotes/drafts/{draftId} |
-[**GetCreditNote**](CreditNotesApi.md#getcreditnote) | **GET** /companies/{companySlug}/creditNotes/{creditNoteId} |
-[**GetCreditNoteDraft**](CreditNotesApi.md#getcreditnotedraft) | **
-GET** /companies/{companySlug}/creditNotes/drafts/{draftId} |
-[**GetCreditNoteDraftAttachments**](CreditNotesApi.md#getcreditnotedraftattachments) | **
-GET** /companies/{companySlug}/creditNotes/drafts/{draftId}/attachments |
-[**GetCreditNoteDrafts**](CreditNotesApi.md#getcreditnotedrafts) | **GET** /companies/{companySlug}/creditNotes/drafts |
-[**GetCreditNotes**](CreditNotesApi.md#getcreditnotes) | **GET** /companies/{companySlug}/creditNotes |
-[**SendCreditNote**](CreditNotesApi.md#sendcreditnote) | **POST** /companies/{companySlug}/creditNotes/send |
-[**UpdateCreditNoteDraft**](CreditNotesApi.md#updatecreditnotedraft) | **
-PUT** /companies/{companySlug}/creditNotes/drafts/{draftId} |
+ Method                                                                                 | HTTP request                                                | Description
+----------------------------------------------------------------------------------------|-------------------------------------------------------------|-------------
+ [**AddAttachmentToCreditNoteDraft**](CreditNotesApi.md#addattachmenttocreditnotedraft) | **
+ POST** /companies/{companySlug}/creditNotes/drafts/{draftId}/attachments               |
+ [**CreateCreditNoteDraft**](CreditNotesApi.md#createcreditnotedraft)                   | **
+ POST** /companies/{companySlug}/creditNotes/drafts                                     |
+ [**CreateCreditNoteFromDraft**](CreditNotesApi.md#createcreditnotefromdraft)           | **
+ POST** /companies/{companySlug}/creditNotes/drafts/{draftId}/createCreditNote          |
+ [**CreateFullCreditNote**](CreditNotesApi.md#createfullcreditnote)                     | **
+ POST** /companies/{companySlug}/creditNotes/full                                       |
+ [**CreatePartialCreditNote**](CreditNotesApi.md#createpartialcreditnote)               | **
+ POST** /companies/{companySlug}/creditNotes/partial                                    |
+ [**DeleteCreditNoteDraft**](CreditNotesApi.md#deletecreditnotedraft)                   | **
+ DELETE** /companies/{companySlug}/creditNotes/drafts/{draftId}                         |
+ [**GetCreditNote**](CreditNotesApi.md#getcreditnote)                                   | **GET** /companies/{companySlug}/creditNotes/{creditNoteId} |
+ [**GetCreditNoteDraft**](CreditNotesApi.md#getcreditnotedraft)                         | **
+ GET** /companies/{companySlug}/creditNotes/drafts/{draftId}                            |
+ [**GetCreditNoteDraftAttachments**](CreditNotesApi.md#getcreditnotedraftattachments)   | **
+ GET** /companies/{companySlug}/creditNotes/drafts/{draftId}/attachments                |
+ [**GetCreditNoteDrafts**](CreditNotesApi.md#getcreditnotedrafts)                       | **GET** /companies/{companySlug}/creditNotes/drafts         |
+ [**GetCreditNotes**](CreditNotesApi.md#getcreditnotes)                                 | **GET** /companies/{companySlug}/creditNotes                |
+ [**SendCreditNote**](CreditNotesApi.md#sendcreditnote)                                 | **POST** /companies/{companySlug}/creditNotes/send          |
+ [**UpdateCreditNoteDraft**](CreditNotesApi.md#updatecreditnotedraft)                   | **
+ PUT** /companies/{companySlug}/creditNotes/drafts/{draftId}                            |
 
 <a name="addattachmenttocreditnotedraft"></a>
 
@@ -78,13 +78,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
-**filename** | **string**|  | [optional]
-**comment** | **string**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name            | Type                 | Description                                                                              | Notes
+-----------------|----------------------|------------------------------------------------------------------------------------------|------------
+ **companySlug** | **string**           | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**            | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
+ **filename**    | **string**           |                                                                                          | [optional]
+ **comment**     | **string**           |                                                                                          | [optional]
+ **file**        | **byte[]****byte[]** |                                                                                          | [optional]
 
 ### Return type
 
@@ -149,10 +149,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                                    | Description                 | Notes
+-----------------|---------------------------------------------------------|-----------------------------|-------
+ **body**        | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md) |                             |
+ **companySlug** | **string**                                              | Slug of company to retrieve |
 
 ### Return type
 
@@ -217,10 +217,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -285,10 +285,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**FullCreditNoteRequest**](FullCreditNoteRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                                  | Description                 | Notes
+-----------------|-------------------------------------------------------|-----------------------------|-------
+ **body**        | [**FullCreditNoteRequest**](FullCreditNoteRequest.md) |                             |
+ **companySlug** | **string**                                            | Slug of company to retrieve |
 
 ### Return type
 
@@ -353,10 +353,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**PartialCreditNoteRequest**](PartialCreditNoteRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                                        | Description                 | Notes
+-----------------|-------------------------------------------------------------|-----------------------------|-------
+ **body**        | [**PartialCreditNoteRequest**](PartialCreditNoteRequest.md) |                             |
+ **companySlug** | **string**                                                  | Slug of company to retrieve |
 
 ### Return type
 
@@ -421,10 +421,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -490,11 +490,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**creditNoteId** | **
-string**| The creditNoteId (primary key of the returned object) is returned as the first field in the GET all credit notes call; not to be confused with creditNoteNumber  |
+ Name             | Type                                                                                                                                                            | Description                 | Notes
+------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug**  | **string**                                                                                                                                                      | Slug of company to retrieve |
+ **creditNoteId** | **
+ string**         | The creditNoteId (primary key of the returned object) is returned as the first field in the GET all credit notes call; not to be confused with creditNoteNumber |
 
 ### Return type
 
@@ -560,10 +560,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -629,10 +629,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -699,13 +699,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
+ Name            | Type                                                                                                                                           | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
 
 ### Return type
 
@@ -726,7 +726,8 @@ int?**| Defines the number of entries to return on each page. Maximum number of 
 
 # **GetCreditNotes**
 
-> List<CreditNoteResult> GetCreditNotes (string companySlug, int? page, int? pageSize, DateTime? issueDate, DateTime? issueDateLe, DateTime? issueDateLt, DateTime? issueDateGe, DateTime? issueDateGt, long? customerId, bool? settled)
+> List<CreditNoteResult> GetCreditNotes (string companySlug, int? page, int? pageSize, DateTime? issueDate, DateTime?
+> issueDateLe, DateTime? issueDateLt, DateTime? issueDateGe, DateTime? issueDateGt, long? customerId, bool? settled)
 
 
 
@@ -779,27 +780,27 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**issueDate** | **
-DateTime?**| Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**issueDateLe** | **
-DateTime?**| Filter based on date less than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**issueDateLt** | **
-DateTime?**| Filter based on date strictly less than parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**issueDateGe** | **
-DateTime?**| Filter based on date greater than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**issueDateGt** | **
-DateTime?**| Filter based on date strictly greater than parameter value Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**customerId** | **
-long?**| Returns only credit notes sent to specified customer. Must be the contactId provided by a GET contacts call.  | [optional]
-**settled** | **
-bool?**| When set to true, returns only credit notes that have been settled. Otherwise false returns all credit notes that have not been fully settled.  | [optional]
+ Name            | Type                                                                                                                                                                          | Description                 | Notes
+-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                                                    | Slug of company to retrieve |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.                                             | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.                                | [optional] [default to 25]
+ **issueDate**   | **
+ DateTime?**     | Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                                                                | [optional]
+ **issueDateLe** | **
+ DateTime?**     | Filter based on date less than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;    | [optional]
+ **issueDateLt** | **
+ DateTime?**     | Filter based on date strictly less than parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;       | [optional]
+ **issueDateGe** | **
+ DateTime?**     | Filter based on date greater than or equal to parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; | [optional]
+ **issueDateGt** | **
+ DateTime?**     | Filter based on date strictly greater than parameter value Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;     | [optional]
+ **customerId**  | **
+ long?**         | Returns only credit notes sent to specified customer. Must be the contactId provided by a GET contacts call.                                                                  | [optional]
+ **settled**     | **
+ bool?**         | When set to true, returns only credit notes that have been settled. Otherwise false returns all credit notes that have not been fully settled.                                | [optional]
 
 ### Return type
 
@@ -864,10 +865,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**SendCreditNoteRequest**](SendCreditNoteRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                                  | Description                 | Notes
+-----------------|-------------------------------------------------------|-----------------------------|-------
+ **body**        | [**SendCreditNoteRequest**](SendCreditNoteRequest.md) |                             |
+ **companySlug** | **string**                                            | Slug of company to retrieve |
 
 ### Return type
 
@@ -933,11 +934,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type                                                    | Description                                                                              | Notes
+-----------------|---------------------------------------------------------|------------------------------------------------------------------------------------------|-------
+ **body**        | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md) |                                                                                          |
+ **companySlug** | **string**                                              | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**                                               | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 

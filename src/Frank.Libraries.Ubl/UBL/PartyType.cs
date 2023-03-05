@@ -1,310 +1,201 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AdditionalInformationParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class PartyType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AdditionalInformationParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class PartyType
 {
-
-    private MarkCareIndicatorType markCareIndicatorField;
-
-    private MarkAttentionIndicatorType markAttentionIndicatorField;
-
-    private WebsiteURIType websiteURIField;
-
-    private LogoReferenceIDType logoReferenceIDField;
-
-    private EndpointIDType endpointIDField;
-
-    private IndustryClassificationCodeType industryClassificationCodeField;
-
-    private PartyIdentificationType[] partyIdentificationField;
-
-    private PartyNameType[] partyNameField;
-
-    private LanguageType languageField;
-
-    private AddressType postalAddressField;
-
-    private LocationType1 physicalLocationField;
-
-    private PartyTaxSchemeType[] partyTaxSchemeField;
-
-    private PartyLegalEntityType[] partyLegalEntityField;
+    private PartyType agentPartyField;
 
     private ContactType contactField;
 
-    private PersonType[] personField;
-
-    private PartyType agentPartyField;
-
-    private ServiceProviderPartyType[] serviceProviderPartyField;
-
-    private PowerOfAttorneyType[] powerOfAttorneyField;
+    private EndpointIDType endpointIDField;
 
     private FinancialAccountType financialAccountField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private IndustryClassificationCodeType industryClassificationCodeField;
+
+    private LanguageType languageField;
+
+    private LogoReferenceIDType logoReferenceIDField;
+
+    private MarkAttentionIndicatorType markAttentionIndicatorField;
+
+    private MarkCareIndicatorType markCareIndicatorField;
+
+    private PartyIdentificationType[] partyIdentificationField;
+
+    private PartyLegalEntityType[] partyLegalEntityField;
+
+    private PartyNameType[] partyNameField;
+
+    private PartyTaxSchemeType[] partyTaxSchemeField;
+
+    private PersonType[] personField;
+
+    private LocationType1 physicalLocationField;
+
+    private AddressType postalAddressField;
+
+    private PowerOfAttorneyType[] powerOfAttorneyField;
+
+    private ServiceProviderPartyType[] serviceProviderPartyField;
+
+    private WebsiteURIType websiteURIField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MarkCareIndicatorType MarkCareIndicator
     {
-        get
-        {
-            return this.markCareIndicatorField;
-        }
-        set
-        {
-            this.markCareIndicatorField = value;
-        }
+        get => markCareIndicatorField;
+        set => markCareIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MarkAttentionIndicatorType MarkAttentionIndicator
     {
-        get
-        {
-            return this.markAttentionIndicatorField;
-        }
-        set
-        {
-            this.markAttentionIndicatorField = value;
-        }
+        get => markAttentionIndicatorField;
+        set => markAttentionIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public WebsiteURIType WebsiteURI
     {
-        get
-        {
-            return this.websiteURIField;
-        }
-        set
-        {
-            this.websiteURIField = value;
-        }
+        get => websiteURIField;
+        set => websiteURIField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LogoReferenceIDType LogoReferenceID
     {
-        get
-        {
-            return this.logoReferenceIDField;
-        }
-        set
-        {
-            this.logoReferenceIDField = value;
-        }
+        get => logoReferenceIDField;
+        set => logoReferenceIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EndpointIDType EndpointID
     {
-        get
-        {
-            return this.endpointIDField;
-        }
-        set
-        {
-            this.endpointIDField = value;
-        }
+        get => endpointIDField;
+        set => endpointIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IndustryClassificationCodeType IndustryClassificationCode
     {
-        get
-        {
-            return this.industryClassificationCodeField;
-        }
-        set
-        {
-            this.industryClassificationCodeField = value;
-        }
+        get => industryClassificationCodeField;
+        set => industryClassificationCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PartyIdentification")]
+    /// <remarks />
+    [XmlElement("PartyIdentification")]
     public PartyIdentificationType[] PartyIdentification
     {
-        get
-        {
-            return this.partyIdentificationField;
-        }
-        set
-        {
-            this.partyIdentificationField = value;
-        }
+        get => partyIdentificationField;
+        set => partyIdentificationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PartyName")]
+    /// <remarks />
+    [XmlElement("PartyName")]
     public PartyNameType[] PartyName
     {
-        get
-        {
-            return this.partyNameField;
-        }
-        set
-        {
-            this.partyNameField = value;
-        }
+        get => partyNameField;
+        set => partyNameField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LanguageType Language
     {
-        get
-        {
-            return this.languageField;
-        }
-        set
-        {
-            this.languageField = value;
-        }
+        get => languageField;
+        set => languageField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public AddressType PostalAddress
     {
-        get
-        {
-            return this.postalAddressField;
-        }
-        set
-        {
-            this.postalAddressField = value;
-        }
+        get => postalAddressField;
+        set => postalAddressField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 PhysicalLocation
     {
-        get
-        {
-            return this.physicalLocationField;
-        }
-        set
-        {
-            this.physicalLocationField = value;
-        }
+        get => physicalLocationField;
+        set => physicalLocationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PartyTaxScheme")]
+    /// <remarks />
+    [XmlElement("PartyTaxScheme")]
     public PartyTaxSchemeType[] PartyTaxScheme
     {
-        get
-        {
-            return this.partyTaxSchemeField;
-        }
-        set
-        {
-            this.partyTaxSchemeField = value;
-        }
+        get => partyTaxSchemeField;
+        set => partyTaxSchemeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PartyLegalEntity")]
+    /// <remarks />
+    [XmlElement("PartyLegalEntity")]
     public PartyLegalEntityType[] PartyLegalEntity
     {
-        get
-        {
-            return this.partyLegalEntityField;
-        }
-        set
-        {
-            this.partyLegalEntityField = value;
-        }
+        get => partyLegalEntityField;
+        set => partyLegalEntityField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContactType Contact
     {
-        get
-        {
-            return this.contactField;
-        }
-        set
-        {
-            this.contactField = value;
-        }
+        get => contactField;
+        set => contactField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Person")]
+    /// <remarks />
+    [XmlElement("Person")]
     public PersonType[] Person
     {
-        get
-        {
-            return this.personField;
-        }
-        set
-        {
-            this.personField = value;
-        }
+        get => personField;
+        set => personField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType AgentParty
     {
-        get
-        {
-            return this.agentPartyField;
-        }
-        set
-        {
-            this.agentPartyField = value;
-        }
+        get => agentPartyField;
+        set => agentPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ServiceProviderParty")]
+    /// <remarks />
+    [XmlElement("ServiceProviderParty")]
     public ServiceProviderPartyType[] ServiceProviderParty
     {
-        get
-        {
-            return this.serviceProviderPartyField;
-        }
-        set
-        {
-            this.serviceProviderPartyField = value;
-        }
+        get => serviceProviderPartyField;
+        set => serviceProviderPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PowerOfAttorney")]
+    /// <remarks />
+    [XmlElement("PowerOfAttorney")]
     public PowerOfAttorneyType[] PowerOfAttorney
     {
-        get
-        {
-            return this.powerOfAttorneyField;
-        }
-        set
-        {
-            this.powerOfAttorneyField = value;
-        }
+        get => powerOfAttorneyField;
+        set => powerOfAttorneyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public FinancialAccountType FinancialAccount
     {
-        get
-        {
-            return this.financialAccountField;
-        }
-        set
-        {
-            this.financialAccountField = value;
-        }
+        get => financialAccountField;
+        set => financialAccountField = value;
     }
 }

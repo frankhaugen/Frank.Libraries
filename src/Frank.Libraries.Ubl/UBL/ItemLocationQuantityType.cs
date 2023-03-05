@@ -1,201 +1,134 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ItemLocationQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ItemLocationQuantityType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ItemLocationQuantity", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ItemLocationQuantityType
 {
-
-    private LeadTimeMeasureType leadTimeMeasureField;
-
-    private MinimumQuantityType minimumQuantityField;
-
-    private MaximumQuantityType maximumQuantityField;
-
-    private HazardousRiskIndicatorType hazardousRiskIndicatorField;
-
-    private TradingRestrictionsType[] tradingRestrictionsField;
-
-    private AddressType[] applicableTerritoryAddressField;
-
-    private PriceType priceField;
-
-    private DeliveryUnitType[] deliveryUnitField;
+    private AllowanceChargeType[] allowanceChargeField;
 
     private TaxCategoryType[] applicableTaxCategoryField;
 
-    private PackageType packageField;
+    private AddressType[] applicableTerritoryAddressField;
 
-    private AllowanceChargeType[] allowanceChargeField;
+    private DeliveryUnitType[] deliveryUnitField;
 
     private DependentPriceReferenceType dependentPriceReferenceField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private HazardousRiskIndicatorType hazardousRiskIndicatorField;
+
+    private LeadTimeMeasureType leadTimeMeasureField;
+
+    private MaximumQuantityType maximumQuantityField;
+
+    private MinimumQuantityType minimumQuantityField;
+
+    private PackageType packageField;
+
+    private PriceType priceField;
+
+    private TradingRestrictionsType[] tradingRestrictionsField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LeadTimeMeasureType LeadTimeMeasure
     {
-        get
-        {
-            return this.leadTimeMeasureField;
-        }
-        set
-        {
-            this.leadTimeMeasureField = value;
-        }
+        get => leadTimeMeasureField;
+        set => leadTimeMeasureField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MinimumQuantityType MinimumQuantity
     {
-        get
-        {
-            return this.minimumQuantityField;
-        }
-        set
-        {
-            this.minimumQuantityField = value;
-        }
+        get => minimumQuantityField;
+        set => minimumQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MaximumQuantityType MaximumQuantity
     {
-        get
-        {
-            return this.maximumQuantityField;
-        }
-        set
-        {
-            this.maximumQuantityField = value;
-        }
+        get => maximumQuantityField;
+        set => maximumQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public HazardousRiskIndicatorType HazardousRiskIndicator
     {
-        get
-        {
-            return this.hazardousRiskIndicatorField;
-        }
-        set
-        {
-            this.hazardousRiskIndicatorField = value;
-        }
+        get => hazardousRiskIndicatorField;
+        set => hazardousRiskIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TradingRestrictions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("TradingRestrictions", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TradingRestrictionsType[] TradingRestrictions
     {
-        get
-        {
-            return this.tradingRestrictionsField;
-        }
-        set
-        {
-            this.tradingRestrictionsField = value;
-        }
+        get => tradingRestrictionsField;
+        set => tradingRestrictionsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ApplicableTerritoryAddress")]
+    /// <remarks />
+    [XmlElement("ApplicableTerritoryAddress")]
     public AddressType[] ApplicableTerritoryAddress
     {
-        get
-        {
-            return this.applicableTerritoryAddressField;
-        }
-        set
-        {
-            this.applicableTerritoryAddressField = value;
-        }
+        get => applicableTerritoryAddressField;
+        set => applicableTerritoryAddressField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PriceType Price
     {
-        get
-        {
-            return this.priceField;
-        }
-        set
-        {
-            this.priceField = value;
-        }
+        get => priceField;
+        set => priceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DeliveryUnit")]
+    /// <remarks />
+    [XmlElement("DeliveryUnit")]
     public DeliveryUnitType[] DeliveryUnit
     {
-        get
-        {
-            return this.deliveryUnitField;
-        }
-        set
-        {
-            this.deliveryUnitField = value;
-        }
+        get => deliveryUnitField;
+        set => deliveryUnitField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ApplicableTaxCategory")]
+    /// <remarks />
+    [XmlElement("ApplicableTaxCategory")]
     public TaxCategoryType[] ApplicableTaxCategory
     {
-        get
-        {
-            return this.applicableTaxCategoryField;
-        }
-        set
-        {
-            this.applicableTaxCategoryField = value;
-        }
+        get => applicableTaxCategoryField;
+        set => applicableTaxCategoryField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PackageType Package
     {
-        get
-        {
-            return this.packageField;
-        }
-        set
-        {
-            this.packageField = value;
-        }
+        get => packageField;
+        set => packageField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]
+    /// <remarks />
+    [XmlElement("AllowanceCharge")]
     public AllowanceChargeType[] AllowanceCharge
     {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-        set
-        {
-            this.allowanceChargeField = value;
-        }
+        get => allowanceChargeField;
+        set => allowanceChargeField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DependentPriceReferenceType DependentPriceReference
     {
-        get
-        {
-            return this.dependentPriceReferenceField;
-        }
-        set
-        {
-            this.dependentPriceReferenceField = value;
-        }
+        get => dependentPriceReferenceField;
+        set => dependentPriceReferenceField = value;
     }
 }

@@ -1,124 +1,87 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-[System.Xml.Serialization.XmlRootAttribute("DSAKeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
-public partial class DSAKeyValueType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+[XmlRoot("DSAKeyValue", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
+public class DSAKeyValueType
 {
-
-    private byte[] pField;
-
-    private byte[] qField;
-
     private byte[] gField;
-
-    private byte[] yField;
 
     private byte[] jField;
 
-    private byte[] seedField;
+    private byte[] pField;
 
     private byte[] pgenCounterField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+    private byte[] qField;
+
+    private byte[] seedField;
+
+    private byte[] yField;
+
+    /// <remarks />
+    [XmlElement(DataType = "base64Binary")]
     public byte[] P
     {
-        get
-        {
-            return this.pField;
-        }
-        set
-        {
-            this.pField = value;
-        }
+        get => pField;
+        set => pField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+    /// <remarks />
+    [XmlElement(DataType = "base64Binary")]
     public byte[] Q
     {
-        get
-        {
-            return this.qField;
-        }
-        set
-        {
-            this.qField = value;
-        }
+        get => qField;
+        set => qField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+    /// <remarks />
+    [XmlElement(DataType = "base64Binary")]
     public byte[] G
     {
-        get
-        {
-            return this.gField;
-        }
-        set
-        {
-            this.gField = value;
-        }
+        get => gField;
+        set => gField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+    /// <remarks />
+    [XmlElement(DataType = "base64Binary")]
     public byte[] Y
     {
-        get
-        {
-            return this.yField;
-        }
-        set
-        {
-            this.yField = value;
-        }
+        get => yField;
+        set => yField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+    /// <remarks />
+    [XmlElement(DataType = "base64Binary")]
     public byte[] J
     {
-        get
-        {
-            return this.jField;
-        }
-        set
-        {
-            this.jField = value;
-        }
+        get => jField;
+        set => jField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+    /// <remarks />
+    [XmlElement(DataType = "base64Binary")]
     public byte[] Seed
     {
-        get
-        {
-            return this.seedField;
-        }
-        set
-        {
-            this.seedField = value;
-        }
+        get => seedField;
+        set => seedField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "base64Binary")]
+    /// <remarks />
+    [XmlElement(DataType = "base64Binary")]
     public byte[] PgenCounter
     {
-        get
-        {
-            return this.pgenCounterField;
-        }
-        set
-        {
-            this.pgenCounterField = value;
-        }
+        get => pgenCounterField;
+        set => pgenCounterField = value;
     }
 }

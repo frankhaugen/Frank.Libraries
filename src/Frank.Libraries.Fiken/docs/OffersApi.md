@@ -2,21 +2,21 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AddAttachmentToOfferDraft**](OffersApi.md#addattachmenttoofferdraft) | **
-POST** /companies/{companySlug}/offers/drafts/{draftId}/attachments |
-[**CreateOfferDraft**](OffersApi.md#createofferdraft) | **POST** /companies/{companySlug}/offers/drafts |
-[**CreateOfferFromDraft**](OffersApi.md#createofferfromdraft) | **
-POST** /companies/{companySlug}/offers/drafts/{draftId}/createOffer |
-[**DeleteOfferDraft**](OffersApi.md#deleteofferdraft) | **DELETE** /companies/{companySlug}/offers/drafts/{draftId} |
-[**GetOffer**](OffersApi.md#getoffer) | **GET** /companies/{companySlug}/offers/{offerId} |
-[**GetOfferDraft**](OffersApi.md#getofferdraft) | **GET** /companies/{companySlug}/offers/drafts/{draftId} |
-[**GetOfferDraftAttachments**](OffersApi.md#getofferdraftattachments) | **
-GET** /companies/{companySlug}/offers/drafts/{draftId}/attachments |
-[**GetOfferDrafts**](OffersApi.md#getofferdrafts) | **GET** /companies/{companySlug}/offers/drafts |
-[**GetOffers**](OffersApi.md#getoffers) | **GET** /companies/{companySlug}/offers |
-[**UpdateOfferDraft**](OffersApi.md#updateofferdraft) | **PUT** /companies/{companySlug}/offers/drafts/{draftId} |
+ Method                                                                  | HTTP request                                                | Description
+-------------------------------------------------------------------------|-------------------------------------------------------------|-------------
+ [**AddAttachmentToOfferDraft**](OffersApi.md#addattachmenttoofferdraft) | **
+ POST** /companies/{companySlug}/offers/drafts/{draftId}/attachments     |
+ [**CreateOfferDraft**](OffersApi.md#createofferdraft)                   | **POST** /companies/{companySlug}/offers/drafts             |
+ [**CreateOfferFromDraft**](OffersApi.md#createofferfromdraft)           | **
+ POST** /companies/{companySlug}/offers/drafts/{draftId}/createOffer     |
+ [**DeleteOfferDraft**](OffersApi.md#deleteofferdraft)                   | **DELETE** /companies/{companySlug}/offers/drafts/{draftId} |
+ [**GetOffer**](OffersApi.md#getoffer)                                   | **GET** /companies/{companySlug}/offers/{offerId}           |
+ [**GetOfferDraft**](OffersApi.md#getofferdraft)                         | **GET** /companies/{companySlug}/offers/drafts/{draftId}    |
+ [**GetOfferDraftAttachments**](OffersApi.md#getofferdraftattachments)   | **
+ GET** /companies/{companySlug}/offers/drafts/{draftId}/attachments      |
+ [**GetOfferDrafts**](OffersApi.md#getofferdrafts)                       | **GET** /companies/{companySlug}/offers/drafts              |
+ [**GetOffers**](OffersApi.md#getoffers)                                 | **GET** /companies/{companySlug}/offers                     |
+ [**UpdateOfferDraft**](OffersApi.md#updateofferdraft)                   | **PUT** /companies/{companySlug}/offers/drafts/{draftId}    |
 
 <a name="addattachmenttoofferdraft"></a>
 
@@ -69,13 +69,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
-**filename** | **string**|  | [optional]
-**comment** | **string**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name            | Type                 | Description                                                                              | Notes
+-----------------|----------------------|------------------------------------------------------------------------------------------|------------
+ **companySlug** | **string**           | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**            | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
+ **filename**    | **string**           |                                                                                          | [optional]
+ **comment**     | **string**           |                                                                                          | [optional]
+ **file**        | **byte[]****byte[]** |                                                                                          | [optional]
 
 ### Return type
 
@@ -140,10 +140,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                                    | Description                 | Notes
+-----------------|---------------------------------------------------------|-----------------------------|-------
+ **body**        | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md) |                             |
+ **companySlug** | **string**                                              | Slug of company to retrieve |
 
 ### Return type
 
@@ -208,10 +208,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -276,10 +276,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -345,11 +345,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**offerId** | **
-string**| The offerId (primary key of the returned object) is returned as the first field in the GET all offers call  |
+ Name            | Type                                                                                                       | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                 | Slug of company to retrieve |
+ **offerId**     | **
+ string**        | The offerId (primary key of the returned object) is returned as the first field in the GET all offers call |
 
 ### Return type
 
@@ -415,10 +415,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -484,10 +484,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -554,13 +554,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
+ Name            | Type                                                                                                                                           | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
 
 ### Return type
 
@@ -627,13 +627,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
+ Name            | Type                                                                                                                                           | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
 
 ### Return type
 
@@ -699,11 +699,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type                                                    | Description                                                                              | Notes
+-----------------|---------------------------------------------------------|------------------------------------------------------------------------------------------|-------
+ **body**        | [**InvoiceishDraftRequest**](InvoiceishDraftRequest.md) |                                                                                          |
+ **companySlug** | **string**                                              | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**                                               | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 

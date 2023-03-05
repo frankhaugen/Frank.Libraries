@@ -1,88 +1,63 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AppealTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class AppealTermsType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AppealTerms", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class AppealTermsType
 {
-
-    private DescriptionType[] descriptionField;
-
-    private PeriodType presentationPeriodField;
-
     private PartyType appealInformationPartyField;
 
     private PartyType appealReceiverPartyField;
 
+    private DescriptionType[] descriptionField;
+
     private PartyType mediationPartyField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private PeriodType presentationPeriodField;
+
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType PresentationPeriod
     {
-        get
-        {
-            return this.presentationPeriodField;
-        }
-        set
-        {
-            this.presentationPeriodField = value;
-        }
+        get => presentationPeriodField;
+        set => presentationPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType AppealInformationParty
     {
-        get
-        {
-            return this.appealInformationPartyField;
-        }
-        set
-        {
-            this.appealInformationPartyField = value;
-        }
+        get => appealInformationPartyField;
+        set => appealInformationPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType AppealReceiverParty
     {
-        get
-        {
-            return this.appealReceiverPartyField;
-        }
-        set
-        {
-            this.appealReceiverPartyField = value;
-        }
+        get => appealReceiverPartyField;
+        set => appealReceiverPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType MediationParty
     {
-        get
-        {
-            return this.mediationPartyField;
-        }
-        set
-        {
-            this.mediationPartyField = value;
-        }
+        get => mediationPartyField;
+        set => mediationPartyField = value;
     }
 }

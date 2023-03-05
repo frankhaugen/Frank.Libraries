@@ -1,384 +1,245 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ContractualDelivery", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class DeliveryType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ContractualDelivery", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class DeliveryType
 {
-
-    private IDType idField;
-
-    private QuantityType2 quantityField;
-
-    private MinimumQuantityType minimumQuantityField;
-
-    private MaximumQuantityType maximumQuantityField;
-
     private ActualDeliveryDateType actualDeliveryDateField;
 
     private ActualDeliveryTimeType actualDeliveryTimeField;
 
-    private LatestDeliveryDateType latestDeliveryDateField;
+    private LocationType1 alternativeDeliveryLocationField;
 
-    private LatestDeliveryTimeType latestDeliveryTimeField;
-
-    private ReleaseIDType releaseIDField;
-
-    private TrackingIDType trackingIDField;
+    private PartyType carrierPartyField;
 
     private AddressType deliveryAddressField;
 
     private LocationType1 deliveryLocationField;
 
-    private LocationType1 alternativeDeliveryLocationField;
-
-    private PeriodType requestedDeliveryPeriodField;
-
-    private PeriodType promisedDeliveryPeriodField;
-
-    private PeriodType estimatedDeliveryPeriodField;
-
-    private PartyType carrierPartyField;
-
     private PartyType deliveryPartyField;
-
-    private PartyType[] notifyPartyField;
-
-    private DespatchType despatchField;
 
     private DeliveryTermsType[] deliveryTermsField;
 
-    private DeliveryUnitType minimumDeliveryUnitField;
+    private DespatchType despatchField;
+
+    private PeriodType estimatedDeliveryPeriodField;
+
+    private IDType idField;
+
+    private LatestDeliveryDateType latestDeliveryDateField;
+
+    private LatestDeliveryTimeType latestDeliveryTimeField;
 
     private DeliveryUnitType maximumDeliveryUnitField;
 
+    private MaximumQuantityType maximumQuantityField;
+
+    private DeliveryUnitType minimumDeliveryUnitField;
+
+    private MinimumQuantityType minimumQuantityField;
+
+    private PartyType[] notifyPartyField;
+
+    private PeriodType promisedDeliveryPeriodField;
+
+    private QuantityType2 quantityField;
+
+    private ReleaseIDType releaseIDField;
+
+    private PeriodType requestedDeliveryPeriodField;
+
     private ShipmentType shipmentField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private TrackingIDType trackingIDField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public QuantityType2 Quantity
     {
-        get
-        {
-            return this.quantityField;
-        }
-        set
-        {
-            this.quantityField = value;
-        }
+        get => quantityField;
+        set => quantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MinimumQuantityType MinimumQuantity
     {
-        get
-        {
-            return this.minimumQuantityField;
-        }
-        set
-        {
-            this.minimumQuantityField = value;
-        }
+        get => minimumQuantityField;
+        set => minimumQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MaximumQuantityType MaximumQuantity
     {
-        get
-        {
-            return this.maximumQuantityField;
-        }
-        set
-        {
-            this.maximumQuantityField = value;
-        }
+        get => maximumQuantityField;
+        set => maximumQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ActualDeliveryDateType ActualDeliveryDate
     {
-        get
-        {
-            return this.actualDeliveryDateField;
-        }
-        set
-        {
-            this.actualDeliveryDateField = value;
-        }
+        get => actualDeliveryDateField;
+        set => actualDeliveryDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ActualDeliveryTimeType ActualDeliveryTime
     {
-        get
-        {
-            return this.actualDeliveryTimeField;
-        }
-        set
-        {
-            this.actualDeliveryTimeField = value;
-        }
+        get => actualDeliveryTimeField;
+        set => actualDeliveryTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LatestDeliveryDateType LatestDeliveryDate
     {
-        get
-        {
-            return this.latestDeliveryDateField;
-        }
-        set
-        {
-            this.latestDeliveryDateField = value;
-        }
+        get => latestDeliveryDateField;
+        set => latestDeliveryDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LatestDeliveryTimeType LatestDeliveryTime
     {
-        get
-        {
-            return this.latestDeliveryTimeField;
-        }
-        set
-        {
-            this.latestDeliveryTimeField = value;
-        }
+        get => latestDeliveryTimeField;
+        set => latestDeliveryTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ReleaseIDType ReleaseID
     {
-        get
-        {
-            return this.releaseIDField;
-        }
-        set
-        {
-            this.releaseIDField = value;
-        }
+        get => releaseIDField;
+        set => releaseIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TrackingIDType TrackingID
     {
-        get
-        {
-            return this.trackingIDField;
-        }
-        set
-        {
-            this.trackingIDField = value;
-        }
+        get => trackingIDField;
+        set => trackingIDField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public AddressType DeliveryAddress
     {
-        get
-        {
-            return this.deliveryAddressField;
-        }
-        set
-        {
-            this.deliveryAddressField = value;
-        }
+        get => deliveryAddressField;
+        set => deliveryAddressField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 DeliveryLocation
     {
-        get
-        {
-            return this.deliveryLocationField;
-        }
-        set
-        {
-            this.deliveryLocationField = value;
-        }
+        get => deliveryLocationField;
+        set => deliveryLocationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 AlternativeDeliveryLocation
     {
-        get
-        {
-            return this.alternativeDeliveryLocationField;
-        }
-        set
-        {
-            this.alternativeDeliveryLocationField = value;
-        }
+        get => alternativeDeliveryLocationField;
+        set => alternativeDeliveryLocationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType RequestedDeliveryPeriod
     {
-        get
-        {
-            return this.requestedDeliveryPeriodField;
-        }
-        set
-        {
-            this.requestedDeliveryPeriodField = value;
-        }
+        get => requestedDeliveryPeriodField;
+        set => requestedDeliveryPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType PromisedDeliveryPeriod
     {
-        get
-        {
-            return this.promisedDeliveryPeriodField;
-        }
-        set
-        {
-            this.promisedDeliveryPeriodField = value;
-        }
+        get => promisedDeliveryPeriodField;
+        set => promisedDeliveryPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType EstimatedDeliveryPeriod
     {
-        get
-        {
-            return this.estimatedDeliveryPeriodField;
-        }
-        set
-        {
-            this.estimatedDeliveryPeriodField = value;
-        }
+        get => estimatedDeliveryPeriodField;
+        set => estimatedDeliveryPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType CarrierParty
     {
-        get
-        {
-            return this.carrierPartyField;
-        }
-        set
-        {
-            this.carrierPartyField = value;
-        }
+        get => carrierPartyField;
+        set => carrierPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType DeliveryParty
     {
-        get
-        {
-            return this.deliveryPartyField;
-        }
-        set
-        {
-            this.deliveryPartyField = value;
-        }
+        get => deliveryPartyField;
+        set => deliveryPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("NotifyParty")]
+    /// <remarks />
+    [XmlElement("NotifyParty")]
     public PartyType[] NotifyParty
     {
-        get
-        {
-            return this.notifyPartyField;
-        }
-        set
-        {
-            this.notifyPartyField = value;
-        }
+        get => notifyPartyField;
+        set => notifyPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DespatchType Despatch
     {
-        get
-        {
-            return this.despatchField;
-        }
-        set
-        {
-            this.despatchField = value;
-        }
+        get => despatchField;
+        set => despatchField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DeliveryTerms")]
+    /// <remarks />
+    [XmlElement("DeliveryTerms")]
     public DeliveryTermsType[] DeliveryTerms
     {
-        get
-        {
-            return this.deliveryTermsField;
-        }
-        set
-        {
-            this.deliveryTermsField = value;
-        }
+        get => deliveryTermsField;
+        set => deliveryTermsField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DeliveryUnitType MinimumDeliveryUnit
     {
-        get
-        {
-            return this.minimumDeliveryUnitField;
-        }
-        set
-        {
-            this.minimumDeliveryUnitField = value;
-        }
+        get => minimumDeliveryUnitField;
+        set => minimumDeliveryUnitField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DeliveryUnitType MaximumDeliveryUnit
     {
-        get
-        {
-            return this.maximumDeliveryUnitField;
-        }
-        set
-        {
-            this.maximumDeliveryUnitField = value;
-        }
+        get => maximumDeliveryUnitField;
+        set => maximumDeliveryUnitField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ShipmentType Shipment
     {
-        get
-        {
-            return this.shipmentField;
-        }
-        set
-        {
-            this.shipmentField = value;
-        }
+        get => shipmentField;
+        set => shipmentField = value;
     }
 }

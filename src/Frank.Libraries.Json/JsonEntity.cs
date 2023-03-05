@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace Frank.Libraries.Json
+namespace Frank.Libraries.Json;
+
+public class JsonEntity
 {
-    public class JsonEntity
-    {
-        public Guid Id { get; set; } = Guid.NewGuid();
-    }
+    public Guid Id { get; set; } = Guid.NewGuid();
 }

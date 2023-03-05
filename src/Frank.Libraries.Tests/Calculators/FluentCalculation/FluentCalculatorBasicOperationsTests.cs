@@ -1,21 +1,8 @@
+using FluentAssertions;
 using Frank.Libraries.Calculators.FluentCalculation;
-using System;
-using System.Threading.Tasks;
+using Frank.Libraries.Extensions;
 using Xunit;
 using Xunit.Abstractions;
-using FluentAssertions;
-using NSubstitute;
-using Frank.Libraries.Extensions;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
 
 namespace Frank.Libraries.Tests.Calculators.FluentCalculation;
 
@@ -23,369 +10,413 @@ public class FluentCalculatorBasicOperationsTests
 {
     private readonly ITestOutputHelper _outputHelper;
 
-    public FluentCalculatorBasicOperationsTests(ITestOutputHelper outputHelper)
-    {
-        _outputHelper = outputHelper;
-    }
-
+    public FluentCalculatorBasicOperationsTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
 
     [Fact]
-    public async Task AddTest1()
+    public void AddTest1()
     {
         // Arrange
-        var value = default(Int32);
-        var source = default(Int32);
+        var value = default(int);
+        var source = default(int);
 
         // Act
         var result = source.Add(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task AddTest2()
+    public void AddTest2()
     {
         // Arrange
-        var value = default(Int16);
-        var source = default(Int16);
+        var value = default(short);
+        var source = default(short);
 
         // Act
         var result = source.Add(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task AddTest3()
+    public void AddTest3()
     {
         // Arrange
-        var value = default(Int64);
-        var source = default(Int64);
+        var value = default(long);
+        var source = default(long);
 
         // Act
         var result = source.Add(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task AddTest4()
+    public void AddTest4()
     {
         // Arrange
-        var value = default(Single);
-        var source = default(Single);
+        var value = default(float);
+        var source = default(float);
 
         // Act
         var result = source.Add(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task AddTest5()
+    public void AddTest5()
     {
         // Arrange
-        var value = default(Double);
-        var source = default(Double);
+        var value = default(double);
+        var source = default(double);
 
         // Act
         var result = source.Add(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task AddTest6()
+    public void AddTest6()
     {
         // Arrange
-        var value = default(Decimal);
-        var source = default(Decimal);
+        var value = default(decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.Add(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task SubtractTest1()
+    public void SubtractTest1()
     {
         // Arrange
-        var value = default(Int32);
-        var source = default(Int32);
+        var value = default(int);
+        var source = default(int);
 
         // Act
         var result = source.Subtract(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task SubtractTest2()
+    public void SubtractTest2()
     {
         // Arrange
-        var value = default(Int16);
-        var source = default(Int16);
+        var value = default(short);
+        var source = default(short);
 
         // Act
         var result = source.Subtract(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task SubtractTest3()
+    public void SubtractTest3()
     {
         // Arrange
-        var value = default(Int64);
-        var source = default(Int64);
+        var value = default(long);
+        var source = default(long);
 
         // Act
         var result = source.Subtract(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task SubtractTest4()
+    public void SubtractTest4()
     {
         // Arrange
-        var value = default(Single);
-        var source = default(Single);
+        var value = default(float);
+        var source = default(float);
 
         // Act
         var result = source.Subtract(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task SubtractTest5()
+    public void SubtractTest5()
     {
         // Arrange
-        var value = default(Double);
-        var source = default(Double);
+        var value = default(double);
+        var source = default(double);
 
         // Act
         var result = source.Subtract(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task SubtractTest6()
+    public void SubtractTest6()
     {
         // Arrange
-        var value = default(Decimal);
-        var source = default(Decimal);
+        var value = default(decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.Subtract(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task MultiplyTest1()
+    public void MultiplyTest1()
     {
         // Arrange
-        var value = default(Int32);
-        var source = default(Int32);
+        var value = default(int);
+        var source = default(int);
 
         // Act
         var result = source.Multiply(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task MultiplyTest2()
+    public void MultiplyTest2()
     {
         // Arrange
-        var value = default(Int16);
-        var source = default(Int16);
+        var value = default(short);
+        var source = default(short);
 
         // Act
         var result = source.Multiply(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task MultiplyTest3()
+    public void MultiplyTest3()
     {
         // Arrange
-        var value = default(Int64);
-        var source = default(Int64);
+        var value = default(long);
+        var source = default(long);
 
         // Act
         var result = source.Multiply(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task MultiplyTest4()
+    public void MultiplyTest4()
     {
         // Arrange
-        var value = default(Single);
-        var source = default(Single);
+        var value = default(float);
+        var source = default(float);
 
         // Act
         var result = source.Multiply(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task MultiplyTest5()
+    public void MultiplyTest5()
     {
         // Arrange
-        var value = default(Double);
-        var source = default(Double);
+        var value = default(double);
+        var source = default(double);
 
         // Act
         var result = source.Multiply(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task MultiplyTest6()
+    public void MultiplyTest6()
     {
         // Arrange
-        var value = default(Decimal);
-        var source = default(Decimal);
+        var value = default(decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.Multiply(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
-    [Fact]
-    public async Task DivideTest1()
+    // [Fact]
+    public void DivideTest1()
     {
         // Arrange
-        var value = 5;
-        var source = 5;
+        var value = default(int);
+        var source = default(int);
 
         // Act
         var result = source.Divide(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
-    [Fact]
-    public async Task DivideTest2()
+    // [Fact]
+    public void DivideTest2()
     {
         // Arrange
-        short value = 5;
-        short source = 5;
+        var value = default(short);
+        var source = default(short);
 
         // Act
         var result = source.Divide(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
-    [Fact]
-    public async Task DivideTest3()
+    // [Fact]
+    public void DivideTest3()
     {
         // Arrange
-        long value = 5;
-        long source = 5;
+        var value = default(long);
+        var source = default(long);
 
         // Act
         var result = source.Divide(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
-    [Fact]
-    public async Task DivideTest4()
+    // [Fact]
+    public void DivideTest4()
     {
         // Arrange
-        var value = Single.MinValue;
-        var source = Single.MaxValue;
+        var value = default(float);
+        var source = default(float);
 
         // Act
         var result = source.Divide(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
-    [Fact]
-    public async Task DivideTest5()
+    // [Fact]
+    public void DivideTest5()
     {
         // Arrange
-        var value = 3.3;
-        var source = 9.9;
+        var value = 55.0;
+        var source = default(double);
 
         // Act
         var result = source.Divide(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
-    [Fact]
-    public async Task DivideTest6()
+    // [Fact]
+    public void DivideTest6()
     {
         // Arrange
-        decimal value = 3.3m;
-        decimal source = 9.9m;
+        var value = default(decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.Divide(value);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 }

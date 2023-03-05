@@ -1,31 +1,28 @@
+using System.Threading.Tasks;
+using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Gaming.Starfinder;
 using Frank.Libraries.Gaming.Starfinder.Space;
 using Frank.Libraries.Gaming.Starfinder.Space.Models.Enums;
-using NSubstitute;
-using System;
-using System.Collections;
-using System.Reflection;
-using System.Threading.Tasks;
-using AutoBogus;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Gaming.Starfinder;
 
 public class StarshipControllerTests
 {
-    private readonly Starship _starship = new AutoFaker<Starship>().RuleFor(x => x.Name, faker => faker.Company.CompanyName()).Generate();
     private readonly ITestOutputHelper _outputHelper;
+
+    private readonly Starship _starship = new AutoFaker<Starship>().RuleFor(x => x.Name, faker => faker.Company.CompanyName())
+                                                                   .Generate();
+
+    private readonly StarshipSheet _sutStarshipController;
 
     public StarshipControllerTests(ITestOutputHelper outputHelper)
     {
         _outputHelper = outputHelper;
         _sutStarshipController = new StarshipSheet(_starship);
     }
-
-    private readonly StarshipSheet _sutStarshipController;
 
 
     // [Fact]
@@ -38,7 +35,9 @@ public class StarshipControllerTests
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     // [Fact]
@@ -54,6 +53,8 @@ public class StarshipControllerTests
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 }

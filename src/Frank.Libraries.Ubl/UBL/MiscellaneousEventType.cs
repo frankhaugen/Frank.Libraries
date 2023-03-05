@@ -1,44 +1,37 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("MiscellaneousEvent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class MiscellaneousEventType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("MiscellaneousEvent", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class MiscellaneousEventType
 {
+    private EventLineItemType[] eventLineItemField;
 
     private MiscellaneousEventTypeCodeType miscellaneousEventTypeCodeField;
 
-    private EventLineItemType[] eventLineItemField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MiscellaneousEventTypeCodeType MiscellaneousEventTypeCode
     {
-        get
-        {
-            return this.miscellaneousEventTypeCodeField;
-        }
-        set
-        {
-            this.miscellaneousEventTypeCodeField = value;
-        }
+        get => miscellaneousEventTypeCodeField;
+        set => miscellaneousEventTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("EventLineItem")]
+    /// <remarks />
+    [XmlElement("EventLineItem")]
     public EventLineItemType[] EventLineItem
     {
-        get
-        {
-            return this.eventLineItemField;
-        }
-        set
-        {
-            this.eventLineItemField = value;
-        }
+        get => eventLineItemField;
+        set => eventLineItemField = value;
     }
 }

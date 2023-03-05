@@ -1,16 +1,31 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("Event", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class EventType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("Event", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class EventType
 {
+    private CompletionIndicatorType completionIndicatorField;
+
+    private ContactType[] contactField;
+
+    private StatusType[] currentStatusField;
+
+    private DescriptionType[] descriptionField;
 
     private IdentificationIDType identificationIDField;
+
+    private LocationType1 occurenceLocationField;
 
     private OccurrenceDateType occurrenceDateField;
 
@@ -18,138 +33,74 @@ public partial class EventType
 
     private TypeCodeType typeCodeField;
 
-    private DescriptionType[] descriptionField;
-
-    private CompletionIndicatorType completionIndicatorField;
-
-    private StatusType[] currentStatusField;
-
-    private ContactType[] contactField;
-
-    private LocationType1 occurenceLocationField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IdentificationIDType IdentificationID
     {
-        get
-        {
-            return this.identificationIDField;
-        }
-        set
-        {
-            this.identificationIDField = value;
-        }
+        get => identificationIDField;
+        set => identificationIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public OccurrenceDateType OccurrenceDate
     {
-        get
-        {
-            return this.occurrenceDateField;
-        }
-        set
-        {
-            this.occurrenceDateField = value;
-        }
+        get => occurrenceDateField;
+        set => occurrenceDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public OccurrenceTimeType OccurrenceTime
     {
-        get
-        {
-            return this.occurrenceTimeField;
-        }
-        set
-        {
-            this.occurrenceTimeField = value;
-        }
+        get => occurrenceTimeField;
+        set => occurrenceTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TypeCodeType TypeCode
     {
-        get
-        {
-            return this.typeCodeField;
-        }
-        set
-        {
-            this.typeCodeField = value;
-        }
+        get => typeCodeField;
+        set => typeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CompletionIndicatorType CompletionIndicator
     {
-        get
-        {
-            return this.completionIndicatorField;
-        }
-        set
-        {
-            this.completionIndicatorField = value;
-        }
+        get => completionIndicatorField;
+        set => completionIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("CurrentStatus")]
+    /// <remarks />
+    [XmlElement("CurrentStatus")]
     public StatusType[] CurrentStatus
     {
-        get
-        {
-            return this.currentStatusField;
-        }
-        set
-        {
-            this.currentStatusField = value;
-        }
+        get => currentStatusField;
+        set => currentStatusField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Contact")]
+    /// <remarks />
+    [XmlElement("Contact")]
     public ContactType[] Contact
     {
-        get
-        {
-            return this.contactField;
-        }
-        set
-        {
-            this.contactField = value;
-        }
+        get => contactField;
+        set => contactField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 OccurenceLocation
     {
-        get
-        {
-            return this.occurenceLocationField;
-        }
-        set
-        {
-            this.occurenceLocationField = value;
-        }
+        get => occurenceLocationField;
+        set => occurenceLocationField = value;
     }
 }

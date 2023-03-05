@@ -1,14 +1,13 @@
-﻿namespace Frank.Libraries.CodeGeneration.Models
-{
-    public class Resource
-    {
-        public Resource(string key, string value)
-        {
-            Key = key;
-            Value = value;
-        }
+﻿namespace Frank.Libraries.CodeGeneration.Models;
 
-        public string Key { get; }
-        public string Value { get; }
+public class Resource
+{
+    public Resource(string key, string value)
+    {
+        Key = key;
+        Value = value;
     }
+
+    public string Key { get; }
+    public string Value { get; }
 }

@@ -1,13 +1,20 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
-namespace Frank.Libraries.Currency
+namespace Frank.Libraries.Currency;
+
+public class Currency
 {
-    public class Currency
-    {
-        public bool Success { get; set; }
-        public long Timestamp { get; set; }
-        public DateTime Date { get; set; }
-        public CurrencyCode Base { get; set; }
-        public Rates Rates { get; set; }
-    }
+    [JsonPropertyName("success")] public bool Success { get; set; }
+
+    [JsonPropertyName("timestamp")] public long Timestamp { get; set; }
+
+    [JsonPropertyName("date")]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public DateTime Date { get; set; }
+
+    [JsonPropertyName("base")] public CurrencyCode Base { get; set; }
+
+    [JsonPropertyName("rates")] public Dictionary<CurrencyCode, decimal> Rates { get; set; }
 }

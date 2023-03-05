@@ -1,17 +1,20 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("Pickup", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class PickupType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("Pickup", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class PickupType
 {
-
-    private IDType idField;
-
     private ActualPickupDateType actualPickupDateField;
 
     private ActualPickupTimeType actualPickupTimeField;
@@ -19,6 +22,8 @@ public partial class PickupType
     private EarliestPickupDateType earliestPickupDateField;
 
     private EarliestPickupTimeType earliestPickupTimeField;
+
+    private IDType idField;
 
     private LatestPickupDateType latestPickupDateField;
 
@@ -28,127 +33,73 @@ public partial class PickupType
 
     private PartyType pickupPartyField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ActualPickupDateType ActualPickupDate
     {
-        get
-        {
-            return this.actualPickupDateField;
-        }
-        set
-        {
-            this.actualPickupDateField = value;
-        }
+        get => actualPickupDateField;
+        set => actualPickupDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ActualPickupTimeType ActualPickupTime
     {
-        get
-        {
-            return this.actualPickupTimeField;
-        }
-        set
-        {
-            this.actualPickupTimeField = value;
-        }
+        get => actualPickupTimeField;
+        set => actualPickupTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EarliestPickupDateType EarliestPickupDate
     {
-        get
-        {
-            return this.earliestPickupDateField;
-        }
-        set
-        {
-            this.earliestPickupDateField = value;
-        }
+        get => earliestPickupDateField;
+        set => earliestPickupDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EarliestPickupTimeType EarliestPickupTime
     {
-        get
-        {
-            return this.earliestPickupTimeField;
-        }
-        set
-        {
-            this.earliestPickupTimeField = value;
-        }
+        get => earliestPickupTimeField;
+        set => earliestPickupTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LatestPickupDateType LatestPickupDate
     {
-        get
-        {
-            return this.latestPickupDateField;
-        }
-        set
-        {
-            this.latestPickupDateField = value;
-        }
+        get => latestPickupDateField;
+        set => latestPickupDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LatestPickupTimeType LatestPickupTime
     {
-        get
-        {
-            return this.latestPickupTimeField;
-        }
-        set
-        {
-            this.latestPickupTimeField = value;
-        }
+        get => latestPickupTimeField;
+        set => latestPickupTimeField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 PickupLocation
     {
-        get
-        {
-            return this.pickupLocationField;
-        }
-        set
-        {
-            this.pickupLocationField = value;
-        }
+        get => pickupLocationField;
+        set => pickupLocationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType PickupParty
     {
-        get
-        {
-            return this.pickupPartyField;
-        }
-        set
-        {
-            this.pickupPartyField = value;
-        }
+        get => pickupPartyField;
+        set => pickupPartyField = value;
     }
 }

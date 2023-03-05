@@ -1,128 +1,115 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(AmountType1))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(ValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TransactionCurrencyTaxAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalTaxAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalTaskAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalPaymentAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalInvoiceAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalDebitAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalCreditAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalBalanceAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TotalAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(ThresholdAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxableAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxInclusiveAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxExclusiveAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxEnergyOnAccountAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxEnergyBalanceAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxEnergyAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(TaxAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(SettlementDiscountAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(RoundingAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(RequiredFeeAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PriceAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PrepaidAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PerUnitAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PenaltyAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PayableRoundingAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PayableAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PayableAlternativeAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PartyCapacityAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(PaidAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(MinimumAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(MaximumPaidAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(MaximumAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(MaximumAdvertisementAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(MarketValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(LowerTenderAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(LineExtensionAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(LiabilityAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(InventoryValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(InsuranceValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(InsurancePremiumAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(HigherTenderAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(FreeOnBoardValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(FeeAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(FaceValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(EstimatedOverallContractAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(EstimatedAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(DocumentationFeeAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(DeclaredStatisticsValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(DeclaredForCarriageValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(DeclaredCustomsValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(DeclaredCarriageValueAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(DebitLineAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(CreditLineAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrectionUnitAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(CorrectionAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(CorporateStockAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(ChargeTotalAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(CallExtensionAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(CallBaseAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(BaseAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(BalanceAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(AverageSubsequentContractAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(AverageAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(AnnualAverageAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(AmountType2))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(AllowanceTotalAmountType))]
-[System.Xml.Serialization.XmlIncludeAttribute(typeof(AdvertisementAmountType))]
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
-public partial class AmountType
+/// <remarks />
+[XmlInclude(typeof(AmountType1))]
+[XmlInclude(typeof(ValueAmountType))]
+[XmlInclude(typeof(TransactionCurrencyTaxAmountType))]
+[XmlInclude(typeof(TotalTaxAmountType))]
+[XmlInclude(typeof(TotalTaskAmountType))]
+[XmlInclude(typeof(TotalPaymentAmountType))]
+[XmlInclude(typeof(TotalInvoiceAmountType))]
+[XmlInclude(typeof(TotalDebitAmountType))]
+[XmlInclude(typeof(TotalCreditAmountType))]
+[XmlInclude(typeof(TotalBalanceAmountType))]
+[XmlInclude(typeof(TotalAmountType))]
+[XmlInclude(typeof(ThresholdAmountType))]
+[XmlInclude(typeof(TaxableAmountType))]
+[XmlInclude(typeof(TaxInclusiveAmountType))]
+[XmlInclude(typeof(TaxExclusiveAmountType))]
+[XmlInclude(typeof(TaxEnergyOnAccountAmountType))]
+[XmlInclude(typeof(TaxEnergyBalanceAmountType))]
+[XmlInclude(typeof(TaxEnergyAmountType))]
+[XmlInclude(typeof(TaxAmountType))]
+[XmlInclude(typeof(SettlementDiscountAmountType))]
+[XmlInclude(typeof(RoundingAmountType))]
+[XmlInclude(typeof(RequiredFeeAmountType))]
+[XmlInclude(typeof(PriceAmountType))]
+[XmlInclude(typeof(PrepaidAmountType))]
+[XmlInclude(typeof(PerUnitAmountType))]
+[XmlInclude(typeof(PenaltyAmountType))]
+[XmlInclude(typeof(PayableRoundingAmountType))]
+[XmlInclude(typeof(PayableAmountType))]
+[XmlInclude(typeof(PayableAlternativeAmountType))]
+[XmlInclude(typeof(PartyCapacityAmountType))]
+[XmlInclude(typeof(PaidAmountType))]
+[XmlInclude(typeof(MinimumAmountType))]
+[XmlInclude(typeof(MaximumPaidAmountType))]
+[XmlInclude(typeof(MaximumAmountType))]
+[XmlInclude(typeof(MaximumAdvertisementAmountType))]
+[XmlInclude(typeof(MarketValueAmountType))]
+[XmlInclude(typeof(LowerTenderAmountType))]
+[XmlInclude(typeof(LineExtensionAmountType))]
+[XmlInclude(typeof(LiabilityAmountType))]
+[XmlInclude(typeof(InventoryValueAmountType))]
+[XmlInclude(typeof(InsuranceValueAmountType))]
+[XmlInclude(typeof(InsurancePremiumAmountType))]
+[XmlInclude(typeof(HigherTenderAmountType))]
+[XmlInclude(typeof(FreeOnBoardValueAmountType))]
+[XmlInclude(typeof(FeeAmountType))]
+[XmlInclude(typeof(FaceValueAmountType))]
+[XmlInclude(typeof(EstimatedOverallContractAmountType))]
+[XmlInclude(typeof(EstimatedAmountType))]
+[XmlInclude(typeof(DocumentationFeeAmountType))]
+[XmlInclude(typeof(DeclaredStatisticsValueAmountType))]
+[XmlInclude(typeof(DeclaredForCarriageValueAmountType))]
+[XmlInclude(typeof(DeclaredCustomsValueAmountType))]
+[XmlInclude(typeof(DeclaredCarriageValueAmountType))]
+[XmlInclude(typeof(DebitLineAmountType))]
+[XmlInclude(typeof(CreditLineAmountType))]
+[XmlInclude(typeof(CorrectionUnitAmountType))]
+[XmlInclude(typeof(CorrectionAmountType))]
+[XmlInclude(typeof(CorporateStockAmountType))]
+[XmlInclude(typeof(ChargeTotalAmountType))]
+[XmlInclude(typeof(CallExtensionAmountType))]
+[XmlInclude(typeof(CallBaseAmountType))]
+[XmlInclude(typeof(BaseAmountType))]
+[XmlInclude(typeof(BalanceAmountType))]
+[XmlInclude(typeof(AverageSubsequentContractAmountType))]
+[XmlInclude(typeof(AverageAmountType))]
+[XmlInclude(typeof(AnnualAverageAmountType))]
+[XmlInclude(typeof(AmountType2))]
+[XmlInclude(typeof(AllowanceTotalAmountType))]
+[XmlInclude(typeof(AdvertisementAmountType))]
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2")]
+public class AmountType
 {
+    private string currencyCodeListVersionIDField;
 
     private string currencyIDField;
 
-    private string currencyCodeListVersionIDField;
-
     private decimal valueField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
+    /// <remarks />
+    [XmlAttribute(DataType = "normalizedString")]
     public string currencyID
     {
-        get
-        {
-            return this.currencyIDField;
-        }
-        set
-        {
-            this.currencyIDField = value;
-        }
+        get => currencyIDField;
+        set => currencyIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "normalizedString")]
+    /// <remarks />
+    [XmlAttribute(DataType = "normalizedString")]
     public string currencyCodeListVersionID
     {
-        get
-        {
-            return this.currencyCodeListVersionIDField;
-        }
-        set
-        {
-            this.currencyCodeListVersionIDField = value;
-        }
+        get => currencyCodeListVersionIDField;
+        set => currencyCodeListVersionIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlTextAttribute()]
+    /// <remarks />
+    [XmlText]
     public decimal Value
     {
-        get
-        {
-            return this.valueField;
-        }
-        set
-        {
-            this.valueField = value;
-        }
+        get => valueField;
+        set => valueField = value;
     }
 }

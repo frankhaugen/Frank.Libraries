@@ -1,9 +1,8 @@
 ﻿using System.IO;
 
-namespace Frank.Libraries.Json
+namespace Frank.Libraries.Json;
+
+public class JsonConfiguration
 {
-    public class JsonConfiguration
-    {
-        public string Folder { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "Data");
-    }
+    public string Folder { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "Data");
 }

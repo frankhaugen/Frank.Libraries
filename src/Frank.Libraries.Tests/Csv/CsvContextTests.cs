@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,13 +14,13 @@ public class CsvContextTests
 {
     private readonly ITestOutputHelper _outputHelper;
 
+    private readonly CsvContext _sutCsvContext;
+
     public CsvContextTests(ITestOutputHelper outputHelper)
     {
         _outputHelper = outputHelper;
         _sutCsvContext = new CsvContext();
     }
-
-    private readonly CsvContext _sutCsvContext;
 
 
     [Fact]
@@ -38,7 +37,9 @@ public class CsvContextTests
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     // [Fact]
@@ -46,33 +47,37 @@ public class CsvContextTests
     {
         // Arrange
         var file = default(FileInfo);
-        var delimiter = default(String);
-        var newLine = default(String);
-        var hasHeaderRecord = default(Boolean);
+        var delimiter = default(string);
+        var newLine = default(string);
+        var hasHeaderRecord = default(bool);
 
         // Act
         var result = _sutCsvContext.Read<Person, PersonClassMap>(file, delimiter, newLine, hasHeaderRecord);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     // [Fact]
     public async Task ReadTest2()
     {
         // Arrange
-        var text = default(String);
-        var delimiter = default(String);
-        var newLine = default(String);
-        var hasHeaderRecord = default(Boolean);
+        var text = default(string);
+        var delimiter = default(string);
+        var newLine = default(string);
+        var hasHeaderRecord = default(bool);
 
         // Act
         var result = _sutCsvContext.Read<Person, PersonClassMap>(text, delimiter, newLine, hasHeaderRecord);
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     // [Fact]
@@ -99,9 +104,9 @@ public class CsvContextTests
         // Arrange
         var file = default(FileInfo);
         var records = default(List<Person>);
-        var delimiter = default(String);
-        var newLine = default(String);
-        var hasHeaderRecord = default(Boolean);
+        var delimiter = default(string);
+        var newLine = default(string);
+        var hasHeaderRecord = default(bool);
 
         // Act
         _sutCsvContext.Append<Person, PersonClassMap>(file, records, delimiter, newLine, hasHeaderRecord);
@@ -124,7 +129,9 @@ public class CsvContextTests
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     // [Fact]
@@ -137,6 +144,8 @@ public class CsvContextTests
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 }

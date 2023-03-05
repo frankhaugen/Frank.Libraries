@@ -1,9 +1,8 @@
-﻿namespace Frank.Libraries.Security.Shared
+﻿namespace Frank.Libraries.Security.Shared;
+
+public enum WordVariant
 {
-    public enum WordVariant
-    {
-        Noun,
-        Adjective,
-        Verb
-    }
+    Noun,
+    Adjective,
+    Verb
 }

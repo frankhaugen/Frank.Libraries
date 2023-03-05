@@ -1,169 +1,114 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("OrderLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class OrderLineType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("OrderLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class OrderLineType
 {
+    private LineItemType[] buyerProposedSubstituteLineItemField;
 
-    private SubstitutionStatusCodeType substitutionStatusCodeField;
+    private LineReferenceType catalogueLineReferenceField;
+
+    private DocumentReferenceType[] documentReferenceField;
+
+    private LineItemType lineItemField;
 
     private NoteType[] noteField;
 
-    private LineItemType lineItemField;
+    private OrderLineReferenceType[] orderLineReferenceField;
+
+    private LineReferenceType quotationLineReferenceField;
 
     private LineItemType[] sellerProposedSubstituteLineItemField;
 
     private LineItemType[] sellerSubstitutedLineItemField;
 
-    private LineItemType[] buyerProposedSubstituteLineItemField;
+    private SubstitutionStatusCodeType substitutionStatusCodeField;
 
-    private LineReferenceType catalogueLineReferenceField;
-
-    private LineReferenceType quotationLineReferenceField;
-
-    private OrderLineReferenceType[] orderLineReferenceField;
-
-    private DocumentReferenceType[] documentReferenceField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SubstitutionStatusCodeType SubstitutionStatusCode
     {
-        get
-        {
-            return this.substitutionStatusCodeField;
-        }
-        set
-        {
-            this.substitutionStatusCodeField = value;
-        }
+        get => substitutionStatusCodeField;
+        set => substitutionStatusCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LineItemType LineItem
     {
-        get
-        {
-            return this.lineItemField;
-        }
-        set
-        {
-            this.lineItemField = value;
-        }
+        get => lineItemField;
+        set => lineItemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SellerProposedSubstituteLineItem")]
+    /// <remarks />
+    [XmlElement("SellerProposedSubstituteLineItem")]
     public LineItemType[] SellerProposedSubstituteLineItem
     {
-        get
-        {
-            return this.sellerProposedSubstituteLineItemField;
-        }
-        set
-        {
-            this.sellerProposedSubstituteLineItemField = value;
-        }
+        get => sellerProposedSubstituteLineItemField;
+        set => sellerProposedSubstituteLineItemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("SellerSubstitutedLineItem")]
+    /// <remarks />
+    [XmlElement("SellerSubstitutedLineItem")]
     public LineItemType[] SellerSubstitutedLineItem
     {
-        get
-        {
-            return this.sellerSubstitutedLineItemField;
-        }
-        set
-        {
-            this.sellerSubstitutedLineItemField = value;
-        }
+        get => sellerSubstitutedLineItemField;
+        set => sellerSubstitutedLineItemField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("BuyerProposedSubstituteLineItem")]
+    /// <remarks />
+    [XmlElement("BuyerProposedSubstituteLineItem")]
     public LineItemType[] BuyerProposedSubstituteLineItem
     {
-        get
-        {
-            return this.buyerProposedSubstituteLineItemField;
-        }
-        set
-        {
-            this.buyerProposedSubstituteLineItemField = value;
-        }
+        get => buyerProposedSubstituteLineItemField;
+        set => buyerProposedSubstituteLineItemField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LineReferenceType CatalogueLineReference
     {
-        get
-        {
-            return this.catalogueLineReferenceField;
-        }
-        set
-        {
-            this.catalogueLineReferenceField = value;
-        }
+        get => catalogueLineReferenceField;
+        set => catalogueLineReferenceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LineReferenceType QuotationLineReference
     {
-        get
-        {
-            return this.quotationLineReferenceField;
-        }
-        set
-        {
-            this.quotationLineReferenceField = value;
-        }
+        get => quotationLineReferenceField;
+        set => quotationLineReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("OrderLineReference")]
+    /// <remarks />
+    [XmlElement("OrderLineReference")]
     public OrderLineReferenceType[] OrderLineReference
     {
-        get
-        {
-            return this.orderLineReferenceField;
-        }
-        set
-        {
-            this.orderLineReferenceField = value;
-        }
+        get => orderLineReferenceField;
+        set => orderLineReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
+    /// <remarks />
+    [XmlElement("DocumentReference")]
     public DocumentReferenceType[] DocumentReference
     {
-        get
-        {
-            return this.documentReferenceField;
-        }
-        set
-        {
-            this.documentReferenceField = value;
-        }
+        get => documentReferenceField;
+        set => documentReferenceField = value;
     }
 }

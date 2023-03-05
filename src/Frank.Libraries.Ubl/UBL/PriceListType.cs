@@ -1,75 +1,56 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("PreviousPriceList", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class PriceListType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("PreviousPriceList", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class PriceListType
 {
-
     private IDType idField;
+
+    private PriceListType previousPriceListField;
 
     private StatusCodeType statusCodeField;
 
     private PeriodType[] validityPeriodField;
 
-    private PriceListType previousPriceListField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public StatusCodeType StatusCode
     {
-        get
-        {
-            return this.statusCodeField;
-        }
-        set
-        {
-            this.statusCodeField = value;
-        }
+        get => statusCodeField;
+        set => statusCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ValidityPeriod")]
+    /// <remarks />
+    [XmlElement("ValidityPeriod")]
     public PeriodType[] ValidityPeriod
     {
-        get
-        {
-            return this.validityPeriodField;
-        }
-        set
-        {
-            this.validityPeriodField = value;
-        }
+        get => validityPeriodField;
+        set => validityPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PriceListType PreviousPriceList
     {
-        get
-        {
-            return this.previousPriceListField;
-        }
-        set
-        {
-            this.previousPriceListField = value;
-        }
+        get => previousPriceListField;
+        set => previousPriceListField = value;
     }
 }

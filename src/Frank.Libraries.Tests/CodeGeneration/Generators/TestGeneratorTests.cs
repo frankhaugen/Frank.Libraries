@@ -8,7 +8,6 @@ using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Fiken.Clients;
 using Frank.Libraries.Gaming.Starfinder;
-using Frank.Libraries.Internet.Xkcd;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -16,14 +15,10 @@ namespace Frank.Libraries.Tests.CodeGeneration.Generators;
 
 public class TestGeneratorTests
 {
+    private const string Something = "Frank.Libraries.Tests";
     private readonly ITestOutputHelper _outputHelper;
 
-    private const string Something = "Frank.Libraries.Tests";
-
-    public TestGeneratorTests(ITestOutputHelper outputHelper)
-    {
-        _outputHelper = outputHelper;
-    }
+    public TestGeneratorTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
 
     [Theory]
     [InlineData(typeof(FluentCalculatorBasicOperations), false)]
@@ -42,14 +37,15 @@ public class TestGeneratorTests
         var testProjectDirectory = solutionDirectory.GetSubDirectory(testProjectName);
 
         var directories = localNamespace.Split(".");
-        var allDirectories = directories.Prepend(testProjectDirectory.FullName).ToArray();
+        var allDirectories = directories.Prepend(testProjectDirectory.FullName)
+                                        .ToArray();
         var namespaceDirectory = new DirectoryInfo(Path.Combine(allDirectories));
 
         var testFilename = type.Name + "Tests.cs";
         var testFilePath = Path.Combine(namespaceDirectory.FullName, testFilename);
         var testFile = new FileInfo(testFilePath);
 
-        var result = new TestGenerator().Generate(type.Namespace.Replace("Frank.Libraries.", "Frank.Libraries.Tests."), type, new List<string>() {"ToString", "Equals", "GetHashCode", "GetType"});
+        var result = new TestGenerator().Generate(type.Namespace.Replace("Frank.Libraries.", "Frank.Libraries.Tests."), type, new List<string> { "ToString", "Equals", "GetHashCode", "GetType" });
         _outputHelper.WriteLine(result);
 
         if (writeFile)

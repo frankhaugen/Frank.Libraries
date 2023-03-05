@@ -2,38 +2,37 @@
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration
+namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration;
+
+public class DictionariesTests
 {
-    public class DictionariesTests
+    private readonly ITestOutputHelper _outputHelper;
+
+    public DictionariesTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+
+    [Fact]
+    public void GetAdjectives_ReturnsAdjectives()
     {
-        private readonly ITestOutputHelper _outputHelper;
+        // Arrange
+        var dictionaries = new Dictionaries();
 
-        public DictionariesTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+        // Act
+        var result = dictionaries.Adjectives;
 
-        [Fact]
-        public void GetAdjectives_ReturnsAdjectives()
-        {
-            // Arrange
-            var dictionaries = new Dictionaries();
+        // Assert
+        _outputHelper.WriteLine(string.Join('\n', result));
+    }
 
-            // Act
-            var result = dictionaries.Adjectives;
+    [Fact]
+    public void GetNouns_ReturnsNouns()
+    {
+        // Arrange
+        var dictionaries = new Dictionaries();
 
-            // Assert
-            _outputHelper.WriteLine(string.Join('\n', result));
-        }
+        // Act
+        var result = dictionaries.Nouns;
 
-        [Fact]
-        public void GetNouns_ReturnsNouns()
-        {
-            // Arrange
-            var dictionaries = new Dictionaries();
-
-            // Act
-            var result = dictionaries.Nouns;
-
-            // Assert
-            _outputHelper.WriteLine(string.Join('\n', result));
-        }
+        // Assert
+        _outputHelper.WriteLine(string.Join('\n', result));
     }
 }

@@ -1,89 +1,64 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AdditionalDocumentResponse", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class DocumentResponseType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AdditionalDocumentResponse", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class DocumentResponseType
 {
-
-    private ResponseType responseField;
-
     private DocumentReferenceType[] documentReferenceField;
 
     private PartyType issuerPartyField;
 
-    private PartyType recipientPartyField;
-
     private LineResponseType[] lineResponseField;
 
-    /// <remarks/>
+    private PartyType recipientPartyField;
+
+    private ResponseType responseField;
+
+    /// <remarks />
     public ResponseType Response
     {
-        get
-        {
-            return this.responseField;
-        }
-        set
-        {
-            this.responseField = value;
-        }
+        get => responseField;
+        set => responseField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
+    /// <remarks />
+    [XmlElement("DocumentReference")]
     public DocumentReferenceType[] DocumentReference
     {
-        get
-        {
-            return this.documentReferenceField;
-        }
-        set
-        {
-            this.documentReferenceField = value;
-        }
+        get => documentReferenceField;
+        set => documentReferenceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType IssuerParty
     {
-        get
-        {
-            return this.issuerPartyField;
-        }
-        set
-        {
-            this.issuerPartyField = value;
-        }
+        get => issuerPartyField;
+        set => issuerPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType RecipientParty
     {
-        get
-        {
-            return this.recipientPartyField;
-        }
-        set
-        {
-            this.recipientPartyField = value;
-        }
+        get => recipientPartyField;
+        set => recipientPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("LineResponse")]
+    /// <remarks />
+    [XmlElement("LineResponse")]
     public LineResponseType[] LineResponse
     {
-        get
-        {
-            return this.lineResponseField;
-        }
-        set
-        {
-            this.lineResponseField = value;
-        }
+        get => lineResponseField;
+        set => lineResponseField = value;
     }
 }

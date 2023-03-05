@@ -2,24 +2,24 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AddAttachmentToContact**](ContactsApi.md#addattachmenttocontact) | **
-POST** /companies/{companySlug}/contacts/{contactId}/attachments |
-[**AddContactPersonToContact**](ContactsApi.md#addcontactpersontocontact) | **
-POST** /companies/{companySlug}/contacts/{contactId}/contactPerson |
-[**CreateContact**](ContactsApi.md#createcontact) | **POST** /companies/{companySlug}/contacts |
-[**DeleteContactContactPerson**](ContactsApi.md#deletecontactcontactperson) | **
-DELETE** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId} |
-[**GetContact**](ContactsApi.md#getcontact) | **GET** /companies/{companySlug}/contacts/{contactId} |
-[**GetContactContactPerson**](ContactsApi.md#getcontactcontactperson) | **
-GET** /companies/{companySlug}/contacts/{contactId}/contactPerson |
-[**GetContactPerson**](ContactsApi.md#getcontactperson) | **
-GET** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId} |
-[**GetContacts**](ContactsApi.md#getcontacts) | **GET** /companies/{companySlug}/contacts |
-[**UpdateContact**](ContactsApi.md#updatecontact) | **PUT** /companies/{companySlug}/contacts/{contactId} |
-[**UpdateContactContactPerson**](ContactsApi.md#updatecontactcontactperson) | **
-PUT** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId} |
+ Method                                                                                 | HTTP request                                          | Description
+----------------------------------------------------------------------------------------|-------------------------------------------------------|-------------
+ [**AddAttachmentToContact**](ContactsApi.md#addattachmenttocontact)                    | **
+ POST** /companies/{companySlug}/contacts/{contactId}/attachments                       |
+ [**AddContactPersonToContact**](ContactsApi.md#addcontactpersontocontact)              | **
+ POST** /companies/{companySlug}/contacts/{contactId}/contactPerson                     |
+ [**CreateContact**](ContactsApi.md#createcontact)                                      | **POST** /companies/{companySlug}/contacts            |
+ [**DeleteContactContactPerson**](ContactsApi.md#deletecontactcontactperson)            | **
+ DELETE** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId} |
+ [**GetContact**](ContactsApi.md#getcontact)                                            | **GET** /companies/{companySlug}/contacts/{contactId} |
+ [**GetContactContactPerson**](ContactsApi.md#getcontactcontactperson)                  | **
+ GET** /companies/{companySlug}/contacts/{contactId}/contactPerson                      |
+ [**GetContactPerson**](ContactsApi.md#getcontactperson)                                | **
+ GET** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId}    |
+ [**GetContacts**](ContactsApi.md#getcontacts)                                          | **GET** /companies/{companySlug}/contacts             |
+ [**UpdateContact**](ContactsApi.md#updatecontact)                                      | **PUT** /companies/{companySlug}/contacts/{contactId} |
+ [**UpdateContactContactPerson**](ContactsApi.md#updatecontactcontactperson)            | **
+ PUT** /companies/{companySlug}/contacts/{contactId}/contactPerson/{contactPersonId}    |
 
 <a name="addattachmenttocontact"></a>
 
@@ -72,13 +72,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**contactId** | **long?**|  |
-**filename** | **string**|  | [optional]
-**comment** | **string**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name            | Type                 | Description                 | Notes
+-----------------|----------------------|-----------------------------|------------
+ **companySlug** | **string**           | Slug of company to retrieve |
+ **contactId**   | **long?**            |                             |
+ **filename**    | **string**           |                             | [optional]
+ **comment**     | **string**           |                             | [optional]
+ **file**        | **byte[]****byte[]** |                             | [optional]
 
 ### Return type
 
@@ -144,11 +144,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**ContactPerson**](ContactPerson.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**contactId** | **long?**|  |
+ Name            | Type                                  | Description                 | Notes
+-----------------|---------------------------------------|-----------------------------|-------
+ **body**        | [**ContactPerson**](ContactPerson.md) |                             |
+ **companySlug** | **string**                            | Slug of company to retrieve |
+ **contactId**   | **long?**                             |                             |
 
 ### Return type
 
@@ -213,10 +213,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**Contact**](Contact.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                      | Description                 | Notes
+-----------------|---------------------------|-----------------------------|-------
+ **body**        | [**Contact**](Contact.md) |                             |
+ **companySlug** | **string**                | Slug of company to retrieve |
 
 ### Return type
 
@@ -282,11 +282,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**contactId** | **long?**|  |
-**contactPersonId** | **long?**|  |
+ Name                | Type       | Description                 | Notes
+---------------------|------------|-----------------------------|-------
+ **companySlug**     | **string** | Slug of company to retrieve |
+ **contactId**       | **long?**  |                             |
+ **contactPersonId** | **long?**  |                             |
 
 ### Return type
 
@@ -353,10 +353,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**contactId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **contactId**   | **long?**  |                             |
 
 ### Return type
 
@@ -422,10 +422,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**contactId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **contactId**   | **long?**  |                             |
 
 ### Return type
 
@@ -492,11 +492,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**contactId** | **long?**|  |
-**contactPersonId** | **long?**|  |
+ Name                | Type       | Description                 | Notes
+---------------------|------------|-----------------------------|-------
+ **companySlug**     | **string** | Slug of company to retrieve |
+ **contactId**       | **long?**  |                             |
+ **contactPersonId** | **long?**  |                             |
 
 ### Return type
 
@@ -517,7 +517,12 @@ Name | Type | Description  | Notes
 
 # **GetContacts**
 
-> List<Contact> GetContacts (string companySlug, int? page, int? pageSize, DateTime? lastModified, DateTime? lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, int? supplierNumber, int? customerNumber, int? memberNumber, string name, string organizationNumber, string email, bool? customer, bool? supplier, bool? inactive, string group, string sortBy)
+> List<Contact> GetContacts (string companySlug, int? page, int? pageSize, DateTime? lastModified, DateTime?
+> lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, int? supplierNumber,
+> int?
+> customerNumber, int? memberNumber, string name, string organizationNumber, string email, bool? customer, bool?
+> supplier,
+> bool? inactive, string group, string sortBy)
 
 
 
@@ -579,38 +584,38 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**lastModified** | **
-DateTime?**| Filter based on date of last modification. Returns results that were last modified on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedLe** | **
-DateTime?**| Returns results that have been last modified before or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedLt** | **
-DateTime?**| Returns results that have been last modified strictly before the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedGe** | **
-DateTime?**| Returns results that have been last modified after or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedGt** | **
-DateTime?**| Returns results that have been last modified strictly after the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**supplierNumber** | **int?**| Find all results with the supplier number equal to the specified parameter. | [optional]
-**customerNumber** | **int?**| Find all results with the customer number equal to the specified parameter. | [optional]
-**memberNumber** | **int?**| Find all results with the member number equal to the specified parameter. | [optional]
-**name** | **string**| Find all results with the name equal to the specified parameter. | [optional]
-**organizationNumber** | **
-string**| Find all results with the organization number equal to the specified parameter. | [optional]
-**email** | **string**| Find all results with the email equal to the specified parameter. | [optional]
-**customer** | **
-bool?**| Returns all contacts that are customers. If filter is set for both supplier and customer &#x3D; true, only contacts that are both supplier and customer will be returned. | [optional]
-**supplier** | **
-bool?**| Returns all contacts that are suppliers. If filter is set for both supplier and customer &#x3D; true, only contacts that are both supplier and customer will be returned. | [optional]
-**inactive** | **bool?**| Return all active contacts (false) or all inactive contacts (true). | [optional]
-**group** | **
-string**| Return contacts in contact group, exact match only. Groups are only used for customers, not suppliers. | [optional]
-**sortBy** | **string**|  | [optional] [default to createdDate asc]
+ Name                   | Type                                                                                                                                                                                                                                         | Description                                                                 | Notes
+------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------
+ **companySlug**        | **string**                                                                                                                                                                                                                                   | Slug of company to retrieve                                                 |
+ **page**               | **
+ int?**                 | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.                                                                                                            | [optional] [default to 0]
+ **pageSize**           | **
+ int?**                 | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.                                                                                               | [optional] [default to 25]
+ **lastModified**       | **
+ DateTime?**            | Filter based on date of last modification. Returns results that were last modified on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; | [optional]
+ **lastModifiedLe**     | **
+ DateTime?**            | Returns results that have been last modified before or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                             | [optional]
+ **lastModifiedLt**     | **
+ DateTime?**            | Returns results that have been last modified strictly before the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                          | [optional]
+ **lastModifiedGe**     | **
+ DateTime?**            | Returns results that have been last modified after or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                              | [optional]
+ **lastModifiedGt**     | **
+ DateTime?**            | Returns results that have been last modified strictly after the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                           | [optional]
+ **supplierNumber**     | **int?**                                                                                                                                                                                                                                     | Find all results with the supplier number equal to the specified parameter. | [optional]
+ **customerNumber**     | **int?**                                                                                                                                                                                                                                     | Find all results with the customer number equal to the specified parameter. | [optional]
+ **memberNumber**       | **int?**                                                                                                                                                                                                                                     | Find all results with the member number equal to the specified parameter.   | [optional]
+ **name**               | **string**                                                                                                                                                                                                                                   | Find all results with the name equal to the specified parameter.            | [optional]
+ **organizationNumber** | **
+ string**               | Find all results with the organization number equal to the specified parameter.                                                                                                                                                              | [optional]
+ **email**              | **string**                                                                                                                                                                                                                                   | Find all results with the email equal to the specified parameter.           | [optional]
+ **customer**           | **
+ bool?**                | Returns all contacts that are customers. If filter is set for both supplier and customer &#x3D; true, only contacts that are both supplier and customer will be returned.                                                                    | [optional]
+ **supplier**           | **
+ bool?**                | Returns all contacts that are suppliers. If filter is set for both supplier and customer &#x3D; true, only contacts that are both supplier and customer will be returned.                                                                    | [optional]
+ **inactive**           | **bool?**                                                                                                                                                                                                                                    | Return all active contacts (false) or all inactive contacts (true).         | [optional]
+ **group**              | **
+ string**               | Return contacts in contact group, exact match only. Groups are only used for customers, not suppliers.                                                                                                                                       | [optional]
+ **sortBy**             | **string**                                                                                                                                                                                                                                   |                                                                             | [optional] [default to createdDate asc]
 
 ### Return type
 
@@ -676,11 +681,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**Contact**](Contact.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**contactId** | **long?**|  |
+ Name            | Type                      | Description                 | Notes
+-----------------|---------------------------|-----------------------------|-------
+ **body**        | [**Contact**](Contact.md) |                             |
+ **companySlug** | **string**                | Slug of company to retrieve |
+ **contactId**   | **long?**                 |                             |
 
 ### Return type
 
@@ -747,12 +752,12 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**ContactPerson**](ContactPerson.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**contactId** | **long?**|  |
-**contactPersonId** | **long?**|  |
+ Name                | Type                                  | Description                 | Notes
+---------------------|---------------------------------------|-----------------------------|-------
+ **body**            | [**ContactPerson**](ContactPerson.md) |                             |
+ **companySlug**     | **string**                            | Slug of company to retrieve |
+ **contactId**       | **long?**                             |                             |
+ **contactPersonId** | **long?**                             |                             |
 
 ### Return type
 

@@ -1,122 +1,85 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("CompletedTask", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class CompletedTaskType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("CompletedTask", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class CompletedTaskType
 {
-
     private AnnualAverageAmountType annualAverageAmountField;
-
-    private TotalTaskAmountType totalTaskAmountField;
-
-    private PartyCapacityAmountType partyCapacityAmountField;
 
     private DescriptionType[] descriptionField;
 
     private EvidenceSuppliedType[] evidenceSuppliedField;
 
+    private PartyCapacityAmountType partyCapacityAmountField;
+
     private PeriodType periodField;
 
     private CustomerPartyType recipientCustomerPartyField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private TotalTaskAmountType totalTaskAmountField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AnnualAverageAmountType AnnualAverageAmount
     {
-        get
-        {
-            return this.annualAverageAmountField;
-        }
-        set
-        {
-            this.annualAverageAmountField = value;
-        }
+        get => annualAverageAmountField;
+        set => annualAverageAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TotalTaskAmountType TotalTaskAmount
     {
-        get
-        {
-            return this.totalTaskAmountField;
-        }
-        set
-        {
-            this.totalTaskAmountField = value;
-        }
+        get => totalTaskAmountField;
+        set => totalTaskAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PartyCapacityAmountType PartyCapacityAmount
     {
-        get
-        {
-            return this.partyCapacityAmountField;
-        }
-        set
-        {
-            this.partyCapacityAmountField = value;
-        }
+        get => partyCapacityAmountField;
+        set => partyCapacityAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("EvidenceSupplied")]
+    /// <remarks />
+    [XmlElement("EvidenceSupplied")]
     public EvidenceSuppliedType[] EvidenceSupplied
     {
-        get
-        {
-            return this.evidenceSuppliedField;
-        }
-        set
-        {
-            this.evidenceSuppliedField = value;
-        }
+        get => evidenceSuppliedField;
+        set => evidenceSuppliedField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType Period
     {
-        get
-        {
-            return this.periodField;
-        }
-        set
-        {
-            this.periodField = value;
-        }
+        get => periodField;
+        set => periodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CustomerPartyType RecipientCustomerParty
     {
-        get
-        {
-            return this.recipientCustomerPartyField;
-        }
-        set
-        {
-            this.recipientCustomerPartyField = value;
-        }
+        get => recipientCustomerPartyField;
+        set => recipientCustomerPartyField = value;
     }
 }

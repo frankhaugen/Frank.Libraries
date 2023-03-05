@@ -1,154 +1,105 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("ConsumptionPoint", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ConsumptionPointType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("ConsumptionPoint", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ConsumptionPointType
 {
-
-    private IDType idField;
+    private AddressType addressField;
 
     private DescriptionType[] descriptionField;
 
-    private SubscriberIDType subscriberIDField;
+    private IDType idField;
 
-    private SubscriberTypeType subscriberTypeField;
+    private SubscriberIDType subscriberIDField;
 
     private SubscriberTypeCodeType subscriberTypeCodeField;
 
+    private SubscriberTypeType subscriberTypeField;
+
     private TotalDeliveredQuantityType totalDeliveredQuantityField;
-
-    private AddressType addressField;
-
-    private WebSiteAccessType webSiteAccessField;
 
     private MeterType[] utilityMeterField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private WebSiteAccessType webSiteAccessField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SubscriberIDType SubscriberID
     {
-        get
-        {
-            return this.subscriberIDField;
-        }
-        set
-        {
-            this.subscriberIDField = value;
-        }
+        get => subscriberIDField;
+        set => subscriberIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SubscriberTypeType SubscriberType
     {
-        get
-        {
-            return this.subscriberTypeField;
-        }
-        set
-        {
-            this.subscriberTypeField = value;
-        }
+        get => subscriberTypeField;
+        set => subscriberTypeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SubscriberTypeCodeType SubscriberTypeCode
     {
-        get
-        {
-            return this.subscriberTypeCodeField;
-        }
-        set
-        {
-            this.subscriberTypeCodeField = value;
-        }
+        get => subscriberTypeCodeField;
+        set => subscriberTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TotalDeliveredQuantityType TotalDeliveredQuantity
     {
-        get
-        {
-            return this.totalDeliveredQuantityField;
-        }
-        set
-        {
-            this.totalDeliveredQuantityField = value;
-        }
+        get => totalDeliveredQuantityField;
+        set => totalDeliveredQuantityField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public AddressType Address
     {
-        get
-        {
-            return this.addressField;
-        }
-        set
-        {
-            this.addressField = value;
-        }
+        get => addressField;
+        set => addressField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public WebSiteAccessType WebSiteAccess
     {
-        get
-        {
-            return this.webSiteAccessField;
-        }
-        set
-        {
-            this.webSiteAccessField = value;
-        }
+        get => webSiteAccessField;
+        set => webSiteAccessField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("UtilityMeter")]
+    /// <remarks />
+    [XmlElement("UtilityMeter")]
     public MeterType[] UtilityMeter
     {
-        get
-        {
-            return this.utilityMeterField;
-        }
-        set
-        {
-            this.utilityMeterField = value;
-        }
+        get => utilityMeterField;
+        set => utilityMeterField = value;
     }
 }

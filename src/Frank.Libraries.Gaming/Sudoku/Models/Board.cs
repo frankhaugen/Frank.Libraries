@@ -2,10 +2,9 @@
 
 public class Board
 {
-    public Board()
-    {
-        Cells = GenerateCells();
-    }
+    public Board() => Cells = GenerateCells();
+
+    public Cell[,] Cells { get; }
 
     private Cell[,] GenerateCells()
     {
@@ -21,6 +20,4 @@ public class Board
 
         return output;
     }
-
-    public Cell[,] Cells { get; }
 }

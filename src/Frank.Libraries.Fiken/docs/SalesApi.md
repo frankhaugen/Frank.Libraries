@@ -2,36 +2,37 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AddAttachmentToSale**](SalesApi.md#addattachmenttosale) | **
-POST** /companies/{companySlug}/sales/{saleId}/attachments |
-[**AddAttachmentToSaleDraft**](SalesApi.md#addattachmenttosaledraft) | **
-POST** /companies/{companySlug}/sales/drafts/{draftId}/attachments |
-[**CreateSale**](SalesApi.md#createsale) | **POST** /companies/{companySlug}/sales |
-[**CreateSaleDraft**](SalesApi.md#createsaledraft) | **POST** /companies/{companySlug}/sales/drafts |
-[**CreateSaleFromDraft**](SalesApi.md#createsalefromdraft) | **
-POST** /companies/{companySlug}/sales/drafts/{draftId}/createSale |
-[**CreateSalePayment**](SalesApi.md#createsalepayment) | **POST** /companies/{companySlug}/sales/{saleId}/payments |
-[**DeleteSale**](SalesApi.md#deletesale) | **PATCH** /companies/{companySlug}/sales/{saleId}/delete |
-[**DeleteSaleDraft**](SalesApi.md#deletesaledraft) | **DELETE** /companies/{companySlug}/sales/drafts/{draftId} |
-[**GetSale**](SalesApi.md#getsale) | **GET** /companies/{companySlug}/sales/{saleId} |
-[**GetSaleAttachments**](SalesApi.md#getsaleattachments) | **GET** /companies/{companySlug}/sales/{saleId}/attachments |
-[**GetSaleDraft**](SalesApi.md#getsaledraft) | **GET** /companies/{companySlug}/sales/drafts/{draftId} |
-[**GetSaleDraftAttachments**](SalesApi.md#getsaledraftattachments) | **
-GET** /companies/{companySlug}/sales/drafts/{draftId}/attachments |
-[**GetSaleDrafts**](SalesApi.md#getsaledrafts) | **GET** /companies/{companySlug}/sales/drafts |
-[**GetSalePayment**](SalesApi.md#getsalepayment) | **
-GET** /companies/{companySlug}/sales/{saleId}/payments/{paymentId} |
-[**GetSalePayments**](SalesApi.md#getsalepayments) | **GET** /companies/{companySlug}/sales/{saleId}/payments |
-[**GetSales**](SalesApi.md#getsales) | **GET** /companies/{companySlug}/sales |
-[**UpdateSaleDraft**](SalesApi.md#updatesaledraft) | **PUT** /companies/{companySlug}/sales/drafts/{draftId} |
+ Method                                                               | HTTP request                                                | Description
+----------------------------------------------------------------------|-------------------------------------------------------------|-------------
+ [**AddAttachmentToSale**](SalesApi.md#addattachmenttosale)           | **
+ POST** /companies/{companySlug}/sales/{saleId}/attachments           |
+ [**AddAttachmentToSaleDraft**](SalesApi.md#addattachmenttosaledraft) | **
+ POST** /companies/{companySlug}/sales/drafts/{draftId}/attachments   |
+ [**CreateSale**](SalesApi.md#createsale)                             | **POST** /companies/{companySlug}/sales                     |
+ [**CreateSaleDraft**](SalesApi.md#createsaledraft)                   | **POST** /companies/{companySlug}/sales/drafts              |
+ [**CreateSaleFromDraft**](SalesApi.md#createsalefromdraft)           | **
+ POST** /companies/{companySlug}/sales/drafts/{draftId}/createSale    |
+ [**CreateSalePayment**](SalesApi.md#createsalepayment)               | **POST** /companies/{companySlug}/sales/{saleId}/payments   |
+ [**DeleteSale**](SalesApi.md#deletesale)                             | **PATCH** /companies/{companySlug}/sales/{saleId}/delete    |
+ [**DeleteSaleDraft**](SalesApi.md#deletesaledraft)                   | **DELETE** /companies/{companySlug}/sales/drafts/{draftId}  |
+ [**GetSale**](SalesApi.md#getsale)                                   | **GET** /companies/{companySlug}/sales/{saleId}             |
+ [**GetSaleAttachments**](SalesApi.md#getsaleattachments)             | **GET** /companies/{companySlug}/sales/{saleId}/attachments |
+ [**GetSaleDraft**](SalesApi.md#getsaledraft)                         | **GET** /companies/{companySlug}/sales/drafts/{draftId}     |
+ [**GetSaleDraftAttachments**](SalesApi.md#getsaledraftattachments)   | **
+ GET** /companies/{companySlug}/sales/drafts/{draftId}/attachments    |
+ [**GetSaleDrafts**](SalesApi.md#getsaledrafts)                       | **GET** /companies/{companySlug}/sales/drafts               |
+ [**GetSalePayment**](SalesApi.md#getsalepayment)                     | **
+ GET** /companies/{companySlug}/sales/{saleId}/payments/{paymentId}   |
+ [**GetSalePayments**](SalesApi.md#getsalepayments)                   | **GET** /companies/{companySlug}/sales/{saleId}/payments    |
+ [**GetSales**](SalesApi.md#getsales)                                 | **GET** /companies/{companySlug}/sales                      |
+ [**UpdateSaleDraft**](SalesApi.md#updatesaledraft)                   | **PUT** /companies/{companySlug}/sales/drafts/{draftId}     |
 
 <a name="addattachmenttosale"></a>
 
 # **AddAttachmentToSale**
 
-> void AddAttachmentToSale (string companySlug, long? saleId, string filename, bool? attachToPayment, bool? attachToSale, byte[] file)
+> void AddAttachmentToSale (string companySlug, long? saleId, string filename, bool? attachToPayment, bool?
+> attachToSale, byte[] file)
 
 
 
@@ -79,14 +80,14 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**saleId** | **long?**|  |
-**filename** | **string**|  | [optional]
-**attachToPayment** | **bool?**|  | [optional]
-**attachToSale** | **bool?**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name                | Type                 | Description                 | Notes
+---------------------|----------------------|-----------------------------|------------
+ **companySlug**     | **string**           | Slug of company to retrieve |
+ **saleId**          | **long?**            |                             |
+ **filename**        | **string**           |                             | [optional]
+ **attachToPayment** | **bool?**            |                             | [optional]
+ **attachToSale**    | **bool?**            |                             | [optional]
+ **file**            | **byte[]****byte[]** |                             | [optional]
 
 ### Return type
 
@@ -153,12 +154,12 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
-**filename** | **string**|  | [optional]
-**file** | **byte[]****byte[]**|  | [optional]
+ Name            | Type                 | Description                                                                              | Notes
+-----------------|----------------------|------------------------------------------------------------------------------------------|------------
+ **companySlug** | **string**           | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**            | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
+ **filename**    | **string**           |                                                                                          | [optional]
+ **file**        | **byte[]****byte[]** |                                                                                          | [optional]
 
 ### Return type
 
@@ -223,10 +224,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**SaleRequest**](SaleRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                              | Description                 | Notes
+-----------------|-----------------------------------|-----------------------------|-------
+ **body**        | [**SaleRequest**](SaleRequest.md) |                             |
+ **companySlug** | **string**                        | Slug of company to retrieve |
 
 ### Return type
 
@@ -291,10 +292,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**DraftRequest**](DraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                                | Description                 | Notes
+-----------------|-------------------------------------|-----------------------------|-------
+ **body**        | [**DraftRequest**](DraftRequest.md) |                             |
+ **companySlug** | **string**                          | Slug of company to retrieve |
 
 ### Return type
 
@@ -359,10 +360,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -428,11 +429,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**Payment**](Payment.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**saleId** | **long?**|  |
+ Name            | Type                      | Description                 | Notes
+-----------------|---------------------------|-----------------------------|-------
+ **body**        | [**Payment**](Payment.md) |                             |
+ **companySlug** | **string**                | Slug of company to retrieve |
+ **saleId**      | **long?**                 |                             |
 
 ### Return type
 
@@ -500,11 +501,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**saleId** | **long?**|  |
-**description** | **string**| Required description for deleting the sale |
+ Name            | Type       | Description                                | Notes
+-----------------|------------|--------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                |
+ **saleId**      | **long?**  |                                            |
+ **description** | **string** | Required description for deleting the sale |
 
 ### Return type
 
@@ -569,10 +570,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -638,10 +639,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**saleId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **saleId**      | **long?**  |                             |
 
 ### Return type
 
@@ -707,10 +708,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**saleId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **saleId**      | **long?**  |                             |
 
 ### Return type
 
@@ -776,10 +777,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -845,10 +846,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type       | Description                                                                              | Notes
+-----------------|------------|------------------------------------------------------------------------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**  | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 
@@ -915,13 +916,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
+ Name            | Type                                                                                                                                           | Description                 | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|-------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
 
 ### Return type
 
@@ -988,11 +989,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**saleId** | **long?**|  |
-**paymentId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **saleId**      | **long?**  |                             |
+ **paymentId**   | **long?**  |                             |
 
 ### Return type
 
@@ -1058,10 +1059,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**saleId** | **long?**|  |
+ Name            | Type       | Description                 | Notes
+-----------------|------------|-----------------------------|-------
+ **companySlug** | **string** | Slug of company to retrieve |
+ **saleId**      | **long?**  |                             |
 
 ### Return type
 
@@ -1082,7 +1083,8 @@ Name | Type | Description  | Notes
 
 # **GetSales**
 
-> List<SaleResult> GetSales (string companySlug, int? page, int? pageSize, DateTime? lastModified, DateTime? lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, string saleNumber)
+> List<SaleResult> GetSales (string companySlug, int? page, int? pageSize, DateTime? lastModified, DateTime?
+> lastModifiedLe, DateTime? lastModifiedLt, DateTime? lastModifiedGe, DateTime? lastModifiedGt, string saleNumber)
 
 
 
@@ -1134,24 +1136,24 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**lastModified** | **
-DateTime?**| Filter based on date of last modification. Returns results that were last modified on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedLe** | **
-DateTime?**| Returns results that have been last modified before or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedLt** | **
-DateTime?**| Returns results that have been last modified strictly before the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedGe** | **
-DateTime?**| Returns results that have been last modified after or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**lastModifiedGt** | **
-DateTime?**| Returns results that have been last modified strictly after the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;  | [optional]
-**saleNumber** | **string**| Find all results with the sale number equal to the specified parameter. | [optional]
+ Name               | Type                                                                                                                                                                                                                                         | Description                                                             | Notes
+--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|------------
+ **companySlug**    | **string**                                                                                                                                                                                                                                   | Slug of company to retrieve                                             |
+ **page**           | **
+ int?**             | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.                                                                                                            | [optional] [default to 0]
+ **pageSize**       | **
+ int?**             | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.                                                                                               | [optional] [default to 25]
+ **lastModified**   | **
+ DateTime?**        | Filter based on date of last modification. Returns results that were last modified on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot; | [optional]
+ **lastModifiedLe** | **
+ DateTime?**        | Returns results that have been last modified before or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                             | [optional]
+ **lastModifiedLt** | **
+ DateTime?**        | Returns results that have been last modified strictly before the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                          | [optional]
+ **lastModifiedGe** | **
+ DateTime?**        | Returns results that have been last modified after or on the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                              | [optional]
+ **lastModifiedGt** | **
+ DateTime?**        | Returns results that have been last modified strictly after the date provided as a parameter value. Dates are represented as strings formatted as YYYY-MM-DD. Example: January 1st, 1970: \&quot;1970-01-01\&quot;                           | [optional]
+ **saleNumber**     | **string**                                                                                                                                                                                                                                   | Find all results with the sale number equal to the specified parameter. | [optional]
 
 ### Return type
 
@@ -1217,11 +1219,11 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**body** | [**DraftRequest**](DraftRequest.md)|  |
-**companySlug** | **string**| Slug of company to retrieve |
-**draftId** | **long?**| The draftId (primary key of the returned object) is returned in the GET all drafts call.  |
+ Name            | Type                                | Description                                                                              | Notes
+-----------------|-------------------------------------|------------------------------------------------------------------------------------------|-------
+ **body**        | [**DraftRequest**](DraftRequest.md) |                                                                                          |
+ **companySlug** | **string**                          | Slug of company to retrieve                                                              |
+ **draftId**     | **long?**                           | The draftId (primary key of the returned object) is returned in the GET all drafts call. |
 
 ### Return type
 

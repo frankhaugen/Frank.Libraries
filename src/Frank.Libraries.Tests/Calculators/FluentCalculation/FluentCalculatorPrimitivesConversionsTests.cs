@@ -1,1042 +1,1166 @@
+using FluentAssertions;
 using Frank.Libraries.Calculators.FluentCalculation;
-using System;
-using System.Threading.Tasks;
+using Frank.Libraries.Extensions;
 using Xunit;
 using Xunit.Abstractions;
-using FluentAssertions;
-using NSubstitute;
-using Frank.Libraries.Extensions;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
-using System;
 
 namespace Frank.Libraries.Tests.Calculators.FluentCalculation;
- 
+
 public class FluentCalculatorPrimitivesConversionsTests
 {
     private readonly ITestOutputHelper _outputHelper;
 
-    public FluentCalculatorPrimitivesConversionsTests(ITestOutputHelper outputHelper)
-    {
-        _outputHelper = outputHelper;
-    }
-
+    public FluentCalculatorPrimitivesConversionsTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
 
     [Fact]
-    public async Task ToUintTest1()
+    public void ToUintTest1()
     {
         // Arrange
-        var source = default(Int32);
+        var source = default(int);
 
         // Act
         var result = source.ToUint();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUintTest2()
+    public void ToUintTest2()
     {
         // Arrange
-        var source = default(Int16);
-
-        // Act
-        var result = source.ToUint();
-
-        // Assert
-        _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
-    }
-
-    [Fact]
-    public async Task ToUintTest3()
-    {
-        // Arrange
-        var source = default(UInt16);
+        var source = default(short);
 
         // Act
         var result = source.ToUint();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUintTest4()
+    public void ToUintTest3()
     {
         // Arrange
-        var source = default(Int64);
-
-        // Act
-        var result = source.ToUint();
-
-        // Assert
-        _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
-    }
-
-    [Fact]
-    public async Task ToUintTest5()
-    {
-        // Arrange
-        var source = default(UInt64);
+        var source = default(ushort);
 
         // Act
         var result = source.ToUint();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUintTest6()
+    public void ToUintTest4()
     {
         // Arrange
-        var source = default(Single);
-
-        // Act
-        var result = source.ToUint();
-
-        // Assert
-        _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
-    }
-
-    [Fact]
-    public async Task ToUintTest7()
-    {
-        // Arrange
-        var source = default(Double);
+        var source = default(long);
 
         // Act
         var result = source.ToUint();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUintTest8()
+    public void ToUintTest5()
     {
         // Arrange
-        var source = default(Decimal);
+        var source = default(ulong);
 
         // Act
         var result = source.ToUint();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToShortTest1()
+    public void ToUintTest6()
     {
         // Arrange
-        var source = default(Int32);
+        var source = default(float);
 
         // Act
-        var result = source.ToShort();
+        var result = source.ToUint();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToShortTest2()
+    public void ToUintTest7()
     {
         // Arrange
-        var source = default(UInt32);
+        var source = default(double);
 
         // Act
-        var result = source.ToShort();
+        var result = source.ToUint();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToShortTest3()
+    public void ToUintTest8()
     {
         // Arrange
-        var source = default(UInt16);
+        var source = default(decimal);
 
         // Act
-        var result = source.ToShort();
+        var result = source.ToUint();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToShortTest4()
+    public void ToShortTest1()
     {
         // Arrange
-        var source = default(Int64);
-
-        // Act
-        var result = source.ToShort();
-
-        // Assert
-        _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
-    }
-
-    [Fact]
-    public async Task ToShortTest5()
-    {
-        // Arrange
-        var source = default(UInt64);
+        var source = default(int);
 
         // Act
         var result = source.ToShort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToShortTest6()
+    public void ToShortTest2()
     {
         // Arrange
-        var source = default(Single);
+        var source = default(uint);
 
         // Act
         var result = source.ToShort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToShortTest7()
+    public void ToShortTest3()
     {
         // Arrange
-        var source = default(Double);
+        var source = default(ushort);
 
         // Act
         var result = source.ToShort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToShortTest8()
+    public void ToShortTest4()
     {
         // Arrange
-        var source = default(Decimal);
+        var source = default(long);
 
         // Act
         var result = source.ToShort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUshortTest1()
+    public void ToShortTest5()
     {
         // Arrange
-        var source = default(Int32);
+        var source = default(ulong);
+
+        // Act
+        var result = source.ToShort();
+
+        // Assert
+        _outputHelper.WriteLine(result);
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
+    }
+
+    [Fact]
+    public void ToShortTest6()
+    {
+        // Arrange
+        var source = default(float);
+
+        // Act
+        var result = source.ToShort();
+
+        // Assert
+        _outputHelper.WriteLine(result);
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
+    }
+
+    [Fact]
+    public void ToShortTest7()
+    {
+        // Arrange
+        var source = default(double);
+
+        // Act
+        var result = source.ToShort();
+
+        // Assert
+        _outputHelper.WriteLine(result);
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
+    }
+
+    [Fact]
+    public void ToShortTest8()
+    {
+        // Arrange
+        var source = default(decimal);
+
+        // Act
+        var result = source.ToShort();
+
+        // Assert
+        _outputHelper.WriteLine(result);
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
+    }
+
+    [Fact]
+    public void ToUshortTest1()
+    {
+        // Arrange
+        var source = default(int);
 
         // Act
         var result = source.ToUshort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUshortTest2()
+    public void ToUshortTest2()
     {
         // Arrange
-        var source = default(UInt32);
+        var source = default(uint);
 
         // Act
         var result = source.ToUshort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUshortTest3()
+    public void ToUshortTest3()
     {
         // Arrange
-        var source = default(Int16);
+        var source = default(short);
 
         // Act
         var result = source.ToUshort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUshortTest4()
+    public void ToUshortTest4()
     {
         // Arrange
-        var source = default(Int64);
+        var source = default(long);
 
         // Act
         var result = source.ToUshort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUshortTest5()
+    public void ToUshortTest5()
     {
         // Arrange
-        var source = default(UInt64);
+        var source = default(ulong);
 
         // Act
         var result = source.ToUshort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUshortTest6()
+    public void ToUshortTest6()
     {
         // Arrange
-        var source = default(Single);
+        var source = default(float);
 
         // Act
         var result = source.ToUshort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUshortTest7()
+    public void ToUshortTest7()
     {
         // Arrange
-        var source = default(Double);
+        var source = default(double);
 
         // Act
         var result = source.ToUshort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUshortTest8()
+    public void ToUshortTest8()
     {
         // Arrange
-        var source = default(Decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.ToUshort();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToLongTest1()
+    public void ToLongTest1()
     {
         // Arrange
-        var source = default(Int32);
+        var source = default(int);
 
         // Act
         var result = source.ToLong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToLongTest2()
+    public void ToLongTest2()
     {
         // Arrange
-        var source = default(UInt32);
+        var source = default(uint);
 
         // Act
         var result = source.ToLong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToLongTest3()
+    public void ToLongTest3()
     {
         // Arrange
-        var source = default(Int16);
+        var source = default(short);
 
         // Act
         var result = source.ToLong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToLongTest4()
+    public void ToLongTest4()
     {
         // Arrange
-        var source = default(UInt16);
+        var source = default(ushort);
 
         // Act
         var result = source.ToLong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToLongTest5()
+    public void ToLongTest5()
     {
         // Arrange
-        var source = default(UInt64);
+        var source = default(ulong);
 
         // Act
         var result = source.ToLong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToLongTest6()
+    public void ToLongTest6()
     {
         // Arrange
-        var source = default(Single);
+        var source = default(float);
 
         // Act
         var result = source.ToLong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToLongTest7()
+    public void ToLongTest7()
     {
         // Arrange
-        var source = default(Double);
+        var source = default(double);
 
         // Act
         var result = source.ToLong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToLongTest8()
+    public void ToLongTest8()
     {
         // Arrange
-        var source = default(Decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.ToLong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUlongTest1()
+    public void ToUlongTest1()
     {
         // Arrange
-        var source = default(Int32);
+        var source = default(int);
 
         // Act
         var result = source.ToUlong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUlongTest2()
+    public void ToUlongTest2()
     {
         // Arrange
-        var source = default(UInt32);
+        var source = default(uint);
 
         // Act
         var result = source.ToUlong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUlongTest3()
+    public void ToUlongTest3()
     {
         // Arrange
-        var source = default(Int16);
+        var source = default(short);
 
         // Act
         var result = source.ToUlong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUlongTest4()
+    public void ToUlongTest4()
     {
         // Arrange
-        var source = default(UInt16);
+        var source = default(ushort);
 
         // Act
         var result = source.ToUlong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUlongTest5()
+    public void ToUlongTest5()
     {
         // Arrange
-        var source = default(Int64);
+        var source = default(long);
 
         // Act
         var result = source.ToUlong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUlongTest6()
+    public void ToUlongTest6()
     {
         // Arrange
-        var source = default(Single);
+        var source = default(float);
 
         // Act
         var result = source.ToUlong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUlongTest7()
+    public void ToUlongTest7()
     {
         // Arrange
-        var source = default(Double);
+        var source = default(double);
 
         // Act
         var result = source.ToUlong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToUlongTest8()
+    public void ToUlongTest8()
     {
         // Arrange
-        var source = default(Decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.ToUlong();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToFloatTest1()
+    public void ToFloatTest1()
     {
         // Arrange
-        var source = default(Int32);
+        var source = default(int);
 
         // Act
         var result = source.ToFloat();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToFloatTest2()
+    public void ToFloatTest2()
     {
         // Arrange
-        var source = default(UInt32);
+        var source = default(uint);
 
         // Act
         var result = source.ToFloat();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToFloatTest3()
+    public void ToFloatTest3()
     {
         // Arrange
-        var source = default(Int16);
+        var source = default(short);
 
         // Act
         var result = source.ToFloat();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToFloatTest4()
+    public void ToFloatTest4()
     {
         // Arrange
-        var source = default(UInt16);
+        var source = default(ushort);
 
         // Act
         var result = source.ToFloat();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToFloatTest5()
+    public void ToFloatTest5()
     {
         // Arrange
-        var source = default(Int64);
+        var source = default(long);
 
         // Act
         var result = source.ToFloat();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToFloatTest6()
+    public void ToFloatTest6()
     {
         // Arrange
-        var source = default(UInt64);
+        var source = default(ulong);
 
         // Act
         var result = source.ToFloat();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToFloatTest7()
+    public void ToFloatTest7()
     {
         // Arrange
-        var source = default(Double);
+        var source = default(double);
 
         // Act
         var result = source.ToFloat();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToFloatTest8()
+    public void ToFloatTest8()
     {
         // Arrange
-        var source = default(Decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.ToFloat();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDoubleTest1()
+    public void ToDoubleTest1()
     {
         // Arrange
-        var source = default(Int32);
+        var source = default(int);
 
         // Act
         var result = source.ToDouble();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDoubleTest2()
+    public void ToDoubleTest2()
     {
         // Arrange
-        var source = default(UInt32);
+        var source = default(uint);
 
         // Act
         var result = source.ToDouble();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDoubleTest3()
+    public void ToDoubleTest3()
     {
         // Arrange
-        var source = default(Int16);
+        var source = default(short);
 
         // Act
         var result = source.ToDouble();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDoubleTest4()
+    public void ToDoubleTest4()
     {
         // Arrange
-        var source = default(UInt16);
+        var source = default(ushort);
 
         // Act
         var result = source.ToDouble();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDoubleTest5()
+    public void ToDoubleTest5()
     {
         // Arrange
-        var source = default(Int64);
+        var source = default(long);
 
         // Act
         var result = source.ToDouble();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDoubleTest6()
+    public void ToDoubleTest6()
     {
         // Arrange
-        var source = default(UInt64);
+        var source = default(ulong);
 
         // Act
         var result = source.ToDouble();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDoubleTest7()
+    public void ToDoubleTest7()
     {
         // Arrange
-        var source = default(Single);
+        var source = default(float);
 
         // Act
         var result = source.ToDouble();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDoubleTest8()
+    public void ToDoubleTest8()
     {
         // Arrange
-        var source = default(Decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.ToDouble();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDecimalTest1()
+    public void ToDecimalTest1()
     {
         // Arrange
-        var source = default(Int32);
+        var source = default(int);
 
         // Act
         var result = source.ToDecimal();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDecimalTest2()
+    public void ToDecimalTest2()
     {
         // Arrange
-        var source = default(UInt32);
+        var source = default(uint);
 
         // Act
         var result = source.ToDecimal();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDecimalTest3()
+    public void ToDecimalTest3()
     {
         // Arrange
-        var source = default(Int16);
+        var source = default(short);
 
         // Act
         var result = source.ToDecimal();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDecimalTest4()
+    public void ToDecimalTest4()
     {
         // Arrange
-        var source = default(UInt16);
+        var source = default(ushort);
 
         // Act
         var result = source.ToDecimal();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDecimalTest5()
+    public void ToDecimalTest5()
     {
         // Arrange
-        var source = default(Int64);
+        var source = default(long);
 
         // Act
         var result = source.ToDecimal();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDecimalTest6()
+    public void ToDecimalTest6()
     {
         // Arrange
-        var source = default(UInt64);
+        var source = default(ulong);
 
         // Act
         var result = source.ToDecimal();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDecimalTest7()
+    public void ToDecimalTest7()
     {
         // Arrange
-        var source = default(Single);
+        var source = default(float);
 
         // Act
         var result = source.ToDecimal();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToDecimalTest8()
+    public void ToDecimalTest8()
     {
         // Arrange
-        var source = default(Double);
+        var source = default(double);
 
         // Act
         var result = source.ToDecimal();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToIntTest1()
+    public void ToIntTest1()
     {
         // Arrange
-        var source = default(UInt32);
+        var source = default(uint);
 
         // Act
         var result = source.ToInt();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToIntTest2()
+    public void ToIntTest2()
     {
         // Arrange
-        var source = default(Int16);
+        var source = default(short);
 
         // Act
         var result = source.ToInt();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToIntTest3()
+    public void ToIntTest3()
     {
         // Arrange
-        var source = default(UInt16);
+        var source = default(ushort);
 
         // Act
         var result = source.ToInt();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToIntTest4()
+    public void ToIntTest4()
     {
         // Arrange
-        var source = default(Int64);
+        var source = default(long);
 
         // Act
         var result = source.ToInt();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToIntTest5()
+    public void ToIntTest5()
     {
         // Arrange
-        var source = default(UInt64);
+        var source = default(ulong);
 
         // Act
         var result = source.ToInt();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToIntTest6()
+    public void ToIntTest6()
     {
         // Arrange
-        var source = default(Single);
+        var source = default(float);
 
         // Act
         var result = source.ToInt();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToIntTest7()
+    public void ToIntTest7()
     {
         // Arrange
-        var source = default(Double);
+        var source = default(double);
 
         // Act
         var result = source.ToInt();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 
     [Fact]
-    public async Task ToIntTest8()
+    public void ToIntTest8()
     {
         // Arrange
-        var source = default(Decimal);
+        var source = default(decimal);
 
         // Act
         var result = source.ToInt();
 
         // Assert
         _outputHelper.WriteLine(result);
-        result.ToString().Should().NotBeNullOrEmpty();
+        result.ToString()
+              .Should()
+              .NotBeNullOrEmpty();
     }
 }

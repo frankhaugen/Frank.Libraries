@@ -1,43 +1,32 @@
-﻿using Frank.Libraries.Json;
-using Frank.Libraries.Tests.TestingInfrastructure;
+﻿using Frank.Libraries.Tests.TestingInfrastructure;
 using Frank.Libraries.Time;
-using Frank.Libraries.Xml;
 using NodaTime;
 using NodaTime.Testing;
-using RestSharp;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests;
+
+public class WeekServiceTests : TestBase
 {
-    public class WeekServiceTests : TestBase
+    private readonly IClock subClock;
+
+    public WeekServiceTests(ITestOutputHelper outputHelper) : base(outputHelper) => subClock = new FakeClock(new Instant());
+
+    private WeekService CreateService() =>
+        new WeekService(
+            subClock);
+
+    [Fact]
+    public void ToString_StateUnderTest_ExpectedBehavior()
     {
-        private IClock subClock;
+        // Arrange
+        var service = CreateService();
 
-        public WeekServiceTests(ITestOutputHelper outputHelper) : base(outputHelper)
-        {
-            this.subClock = new FakeClock(new Instant());
-        }
+        // Act
+        var result = service.ToString();
 
-        private WeekService CreateService()
-        {
-            return new WeekService(
-                this.subClock);
-        }
-
-        [Fact]
-        public void ToString_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var service = this.CreateService();
-
-            // Act
-            var result = service.ToString();
-
-            // Assert
-            Output(result);
-        }
-
-
+        // Assert
+        Output(result);
     }
 }

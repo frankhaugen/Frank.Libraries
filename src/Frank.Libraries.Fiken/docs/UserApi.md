@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetUser**](UserApi.md#getuser) | **GET** /user |
+ Method                            | HTTP request  | Description
+-----------------------------------|---------------|-------------
+ [**GetUser**](UserApi.md#getuser) | **GET** /user |
 
 <a name="getuser"></a>
 

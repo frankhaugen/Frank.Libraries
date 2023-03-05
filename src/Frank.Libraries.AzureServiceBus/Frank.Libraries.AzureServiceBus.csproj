@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>10.0</LangVersion>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <IsPackable>true</IsPackable>
         <RepositoryType>Git</RepositoryType>
@@ -25,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Azure.Management.ServiceBus" Version="3.0.0"/>
-        <PackageReference Include="Microsoft.Azure.ServiceBus" Version="5.1.3"/>
+        <PackageReference Include="Microsoft.Azure.Management.ServiceBus" Version="5.0.0"/>
+        <PackageReference Include="Microsoft.Azure.ServiceBus" Version="5.2.0"/>
     </ItemGroup>
 </Project>

@@ -1,60 +1,47 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("LotIdentification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class LotIdentificationType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("LotIdentification", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class LotIdentificationType
 {
-
-    private LotNumberIDType lotNumberIDField;
+    private ItemPropertyType[] additionalItemPropertyField;
 
     private ExpiryDateType expiryDateField;
 
-    private ItemPropertyType[] additionalItemPropertyField;
+    private LotNumberIDType lotNumberIDField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LotNumberIDType LotNumberID
     {
-        get
-        {
-            return this.lotNumberIDField;
-        }
-        set
-        {
-            this.lotNumberIDField = value;
-        }
+        get => lotNumberIDField;
+        set => lotNumberIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ExpiryDateType ExpiryDate
     {
-        get
-        {
-            return this.expiryDateField;
-        }
-        set
-        {
-            this.expiryDateField = value;
-        }
+        get => expiryDateField;
+        set => expiryDateField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalItemProperty")]
+    /// <remarks />
+    [XmlElement("AdditionalItemProperty")]
     public ItemPropertyType[] AdditionalItemProperty
     {
-        get
-        {
-            return this.additionalItemPropertyField;
-        }
-        set
-        {
-            this.additionalItemPropertyField = value;
-        }
+        get => additionalItemPropertyField;
+        set => additionalItemPropertyField = value;
     }
 }

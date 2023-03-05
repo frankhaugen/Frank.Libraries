@@ -4,67 +4,66 @@ using FluentAssertions;
 using Frank.Libraries.Brreg;
 using Xunit;
 
-namespace Frank.Libraries.Tests.Brreg
+namespace Frank.Libraries.Tests.Brreg;
+
+public class BrregClientTests
 {
-    public class BrregClientTests
+    [Fact]
+    public async Task GetCompanyAsync_CompanyNamedSemine_ShouldReturnCorrectCompany()
     {
-        [Fact]
-        public async Task GetCompanyAsync_CompanyNamedSemine_ShouldReturnCorrectCompany()
-        {
-            // Arrange
-            var brregClient = new BrregClient();
-            var organizationNumber = 915085865;
+        // Arrange
+        var brregClient = new BrregClient();
+        var organizationNumber = 915085865;
 
-            // Act
-            var result = await brregClient.GetCompanyAsync(organizationNumber);
+        // Act
+        var result = await brregClient.GetCompanyAsync(organizationNumber);
 
-            // Assert
-            result!.RegistrationNumber.Should()
-                   .Be(organizationNumber);
-            result!.Name.Should()
-                   .NotBeNullOrWhiteSpace();
-            result!.Name!.ToLowerInvariant()
-                   .Should()
-                   .Contain("semine");
-        }
+        // Assert
+        result!.RegistrationNumber.Should()
+               .Be(organizationNumber);
+        result!.Name.Should()
+               .NotBeNullOrWhiteSpace();
+        result!.Name!.ToLowerInvariant()
+               .Should()
+               .Contain("semine");
+    }
 
-        [Fact]
-        public async Task GetCompanyAsync_BadOrgNumber_ReturnsArgumentException()
-        {
-            // Arrange
-            var brregClient = new BrregClient();
-            long organizationNumber = 0;
+    [Fact]
+    public async Task GetCompanyAsync_BadOrgNumber_ReturnsArgumentException()
+    {
+        // Arrange
+        var brregClient = new BrregClient();
+        long organizationNumber = 0;
 
-            // Act & Assert
-            await Assert.ThrowsAsync<ArgumentException>(async () => await brregClient.GetCompanyAsync(organizationNumber));
-        }
+        // Act & Assert
+        await Assert.ThrowsAsync<ArgumentException>(async () => await brregClient.GetCompanyAsync(organizationNumber));
+    }
 
-        [Fact]
-        public async Task SearchForLegalEntityAsync()
-        {
-            // Arrange
-            var brregClient = new BrregClient();
-            var companyName = "Semine";
-            var town = "";
-            var currentPage = 0;
-            var pageSize = 100;
+    [Fact]
+    public async Task SearchForLegalEntityAsync()
+    {
+        // Arrange
+        var brregClient = new BrregClient();
+        var companyName = "Semine";
+        var town = "";
+        var currentPage = 0;
+        var pageSize = 100;
 
-            // Act
-            var result = await brregClient.SearchForLegalEntityAsync(
-                companyName,
-                town,
-                currentPage,
-                pageSize);
+        // Act
+        var result = await brregClient.SearchForLegalEntityAsync(
+            companyName,
+            town,
+            currentPage,
+            pageSize);
 
-            // Assert
-            result.Data.Should()
-                  .NotBeNull();
-            result.Data?.Companies.Should()
-                  .NotBeNullOrEmpty();
-            result.Data?.Companies.Should()
-                  .OnlyHaveUniqueItems();
-            result.Links?.Self.Should()
-                  .NotBeNull();
-        }
+        // Assert
+        result.Data.Should()
+              .NotBeNull();
+        result.Data?.Companies.Should()
+              .NotBeNullOrEmpty();
+        result.Data?.Companies.Should()
+              .OnlyHaveUniqueItems();
+        result.Links?.Self.Should()
+              .NotBeNull();
     }
 }

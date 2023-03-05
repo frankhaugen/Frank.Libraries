@@ -1,7 +1,3 @@
-using Frank.Libraries.Fiken.Models;
-using Microsoft.Extensions.Options;
-using RestSharp;
-
 namespace Frank.Libraries.Fiken.Clients;
 
 public class AuthenticationClient // : IAuthenticationClient

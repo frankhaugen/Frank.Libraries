@@ -1,293 +1,190 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("RemittanceAdviceLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class RemittanceAdviceLineType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("RemittanceAdviceLine", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class RemittanceAdviceLineType
 {
-
-    private IDType idField;
-
-    private NoteType[] noteField;
-
-    private UUIDType uUIDField;
-
-    private DebitLineAmountType debitLineAmountField;
-
-    private CreditLineAmountType creditLineAmountField;
-
-    private BalanceAmountType balanceAmountField;
-
-    private PaymentPurposeCodeType paymentPurposeCodeField;
-
-    private InvoicingPartyReferenceType invoicingPartyReferenceField;
+    private CustomerPartyType accountingCustomerPartyField;
 
     private SupplierPartyType accountingSupplierPartyField;
 
-    private CustomerPartyType accountingCustomerPartyField;
+    private BalanceAmountType balanceAmountField;
+
+    private BillingReferenceType[] billingReferenceField;
 
     private CustomerPartyType buyerCustomerPartyField;
 
-    private SupplierPartyType sellerSupplierPartyField;
+    private CreditLineAmountType creditLineAmountField;
 
-    private CustomerPartyType originatorCustomerPartyField;
-
-    private PartyType payeePartyField;
-
-    private PeriodType[] invoicePeriodField;
-
-    private BillingReferenceType[] billingReferenceField;
+    private DebitLineAmountType debitLineAmountField;
 
     private DocumentReferenceType[] documentReferenceField;
 
     private ExchangeRateType exchangeRateField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private IDType idField;
+
+    private PeriodType[] invoicePeriodField;
+
+    private InvoicingPartyReferenceType invoicingPartyReferenceField;
+
+    private NoteType[] noteField;
+
+    private CustomerPartyType originatorCustomerPartyField;
+
+    private PartyType payeePartyField;
+
+    private PaymentPurposeCodeType paymentPurposeCodeField;
+
+    private SupplierPartyType sellerSupplierPartyField;
+
+    private UUIDType uUIDField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Note", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NoteType[] Note
     {
-        get
-        {
-            return this.noteField;
-        }
-        set
-        {
-            this.noteField = value;
-        }
+        get => noteField;
+        set => noteField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UUIDType UUID
     {
-        get
-        {
-            return this.uUIDField;
-        }
-        set
-        {
-            this.uUIDField = value;
-        }
+        get => uUIDField;
+        set => uUIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DebitLineAmountType DebitLineAmount
     {
-        get
-        {
-            return this.debitLineAmountField;
-        }
-        set
-        {
-            this.debitLineAmountField = value;
-        }
+        get => debitLineAmountField;
+        set => debitLineAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CreditLineAmountType CreditLineAmount
     {
-        get
-        {
-            return this.creditLineAmountField;
-        }
-        set
-        {
-            this.creditLineAmountField = value;
-        }
+        get => creditLineAmountField;
+        set => creditLineAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BalanceAmountType BalanceAmount
     {
-        get
-        {
-            return this.balanceAmountField;
-        }
-        set
-        {
-            this.balanceAmountField = value;
-        }
+        get => balanceAmountField;
+        set => balanceAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PaymentPurposeCodeType PaymentPurposeCode
     {
-        get
-        {
-            return this.paymentPurposeCodeField;
-        }
-        set
-        {
-            this.paymentPurposeCodeField = value;
-        }
+        get => paymentPurposeCodeField;
+        set => paymentPurposeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public InvoicingPartyReferenceType InvoicingPartyReference
     {
-        get
-        {
-            return this.invoicingPartyReferenceField;
-        }
-        set
-        {
-            this.invoicingPartyReferenceField = value;
-        }
+        get => invoicingPartyReferenceField;
+        set => invoicingPartyReferenceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public SupplierPartyType AccountingSupplierParty
     {
-        get
-        {
-            return this.accountingSupplierPartyField;
-        }
-        set
-        {
-            this.accountingSupplierPartyField = value;
-        }
+        get => accountingSupplierPartyField;
+        set => accountingSupplierPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CustomerPartyType AccountingCustomerParty
     {
-        get
-        {
-            return this.accountingCustomerPartyField;
-        }
-        set
-        {
-            this.accountingCustomerPartyField = value;
-        }
+        get => accountingCustomerPartyField;
+        set => accountingCustomerPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CustomerPartyType BuyerCustomerParty
     {
-        get
-        {
-            return this.buyerCustomerPartyField;
-        }
-        set
-        {
-            this.buyerCustomerPartyField = value;
-        }
+        get => buyerCustomerPartyField;
+        set => buyerCustomerPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public SupplierPartyType SellerSupplierParty
     {
-        get
-        {
-            return this.sellerSupplierPartyField;
-        }
-        set
-        {
-            this.sellerSupplierPartyField = value;
-        }
+        get => sellerSupplierPartyField;
+        set => sellerSupplierPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public CustomerPartyType OriginatorCustomerParty
     {
-        get
-        {
-            return this.originatorCustomerPartyField;
-        }
-        set
-        {
-            this.originatorCustomerPartyField = value;
-        }
+        get => originatorCustomerPartyField;
+        set => originatorCustomerPartyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType PayeeParty
     {
-        get
-        {
-            return this.payeePartyField;
-        }
-        set
-        {
-            this.payeePartyField = value;
-        }
+        get => payeePartyField;
+        set => payeePartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("InvoicePeriod")]
+    /// <remarks />
+    [XmlElement("InvoicePeriod")]
     public PeriodType[] InvoicePeriod
     {
-        get
-        {
-            return this.invoicePeriodField;
-        }
-        set
-        {
-            this.invoicePeriodField = value;
-        }
+        get => invoicePeriodField;
+        set => invoicePeriodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("BillingReference")]
+    /// <remarks />
+    [XmlElement("BillingReference")]
     public BillingReferenceType[] BillingReference
     {
-        get
-        {
-            return this.billingReferenceField;
-        }
-        set
-        {
-            this.billingReferenceField = value;
-        }
+        get => billingReferenceField;
+        set => billingReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DocumentReference")]
+    /// <remarks />
+    [XmlElement("DocumentReference")]
     public DocumentReferenceType[] DocumentReference
     {
-        get
-        {
-            return this.documentReferenceField;
-        }
-        set
-        {
-            this.documentReferenceField = value;
-        }
+        get => documentReferenceField;
+        set => documentReferenceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ExchangeRateType ExchangeRate
     {
-        get
-        {
-            return this.exchangeRateField;
-        }
-        set
-        {
-            this.exchangeRateField = value;
-        }
+        get => exchangeRateField;
+        set => exchangeRateField = value;
     }
 }

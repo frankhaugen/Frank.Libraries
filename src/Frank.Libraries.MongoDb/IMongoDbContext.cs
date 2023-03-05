@@ -1,9 +1,8 @@
 ﻿using MongoDB.Driver;
 
-namespace Frank.Libraries.MongoDb
+namespace Frank.Libraries.MongoDb;
+
+public interface IMongoDbContext
 {
-    public interface IMongoDbContext
-    {
-        IMongoCollection<T> Collection<T>();
-    }
+    IMongoCollection<T> Collection<T>();
 }

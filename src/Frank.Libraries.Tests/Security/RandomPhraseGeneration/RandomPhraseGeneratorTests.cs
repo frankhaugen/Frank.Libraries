@@ -5,91 +5,90 @@ using Frank.Libraries.Security.Shared;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration
+namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration;
+
+public class RandomPhraseGeneratorTests
 {
-    public class RandomPhraseGeneratorTests
+    private readonly ITestOutputHelper _outputHelper;
+
+    public RandomPhraseGeneratorTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+
+    [Fact]
+    public void GetRandomPhrase_NoCapitalization_NotEmptyOrWhitespace()
     {
-        private readonly ITestOutputHelper _outputHelper;
+        // Arrange
+        var randomPhraseGenerator = new RandomPhraseGenerator();
+        var length = 5;
+        var capitalizeRandomWords = false;
 
-        public RandomPhraseGeneratorTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
+        // Act
+        var result = randomPhraseGenerator.GetRandomPhrase(length, capitalizeRandomWords);
 
-        [Fact]
-        public void GetRandomPhrase_NoCapitalization_NotEmptyOrWhitespace()
+        // Assert
+        result.Should()
+              .NotBeNullOrWhiteSpace();
+    }
+
+    [Fact]
+    public void GetRandomPhrase_WithCapitalization_CapitalizedNotEmptyOrWhitespace()
+    {
+        // Arrange
+        var randomPhraseGenerator = new RandomPhraseGenerator();
+        var length = 5;
+        var capitalizeRandomWords = true;
+
+        // Act
+        var result = randomPhraseGenerator.GetRandomPhrase(length, capitalizeRandomWords);
+
+        // Assert
+        result.Should()
+              .NotBeNullOrWhiteSpace();
+    }
+
+    [Fact]
+    public void GetAdjectiveNounPair_StateUnderTest_ExpectedBehavior()
+    {
+        // Arrange
+        var randomPhraseGenerator = new RandomPhraseGenerator();
+        var stopwatch = new Stopwatch();
+        stopwatch.Start();
+
+        for (var i = 0; i < 10; i++)
         {
-            // Arrange
-            var randomPhraseGenerator = new RandomPhraseGenerator();
-            var length = 5;
-            var capitalizeRandomWords = false;
-
             // Act
-            var result = randomPhraseGenerator.GetRandomPhrase(length, capitalizeRandomWords);
+            var result = randomPhraseGenerator.GetAdjectiveNounPair();
 
             // Assert
-            result.Should()
-                  .NotBeNullOrWhiteSpace();
+            _outputHelper.WriteLine(result);
         }
 
-        [Fact]
-        public void GetRandomPhrase_WithCapitalization_CapitalizedNotEmptyOrWhitespace()
-        {
-            // Arrange
-            var randomPhraseGenerator = new RandomPhraseGenerator();
-            var length = 5;
-            var capitalizeRandomWords = true;
+        stopwatch.Stop();
+        _outputHelper.WriteLine(stopwatch.Elapsed.TotalSeconds.ToString("R"));
+    }
 
-            // Act
-            var result = randomPhraseGenerator.GetRandomPhrase(length, capitalizeRandomWords);
+    [Fact]
+    public void GetStructuredRandomWordList_StateUnderTest_ExpectedBehavior()
+    {
+        // Arrange
+        var randomPhraseGenerator = new RandomPhraseGenerator();
 
-            // Assert
-            result.Should()
-                  .NotBeNullOrWhiteSpace();
-        }
+        // Act
+        var result = randomPhraseGenerator.GetStructuredRandomWordList(WordVariant.Adjective, WordVariant.Noun, WordVariant.Verb);
 
-        [Fact]
-        public void GetAdjectiveNounPair_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var randomPhraseGenerator = new RandomPhraseGenerator();
-            var stopwatch = new Stopwatch();
-            stopwatch.Start();
+        // Assert
+        _outputHelper.WriteLine(string.Join('\n', result));
+    }
 
-            for (var i = 0; i < 10; i++)
-            {
-                // Act
-                var result = randomPhraseGenerator.GetAdjectiveNounPair();
+    [Fact]
+    public void GetRandomWordList_StateUnderTest_ExpectedBehavior()
+    {
+        // Arrange
+        var randomPhraseGenerator = new RandomPhraseGenerator();
 
-                // Assert
-                _outputHelper.WriteLine(result);
-            }
+        // Act
+        var result = randomPhraseGenerator.GetRandomWordList(WordVariant.Adjective, WordVariant.Noun, WordVariant.Verb, WordVariant.Adjective, WordVariant.Noun);
 
-            stopwatch.Stop();
-            _outputHelper.WriteLine(stopwatch.Elapsed.TotalSeconds.ToString("R"));
-        }
-
-        [Fact]
-        public void GetStructuredRandomWordList_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var randomPhraseGenerator = new RandomPhraseGenerator();
-
-            // Act
-            var result = randomPhraseGenerator.GetStructuredRandomWordList(WordVariant.Adjective, WordVariant.Noun, WordVariant.Verb);
-
-            // Assert
-            _outputHelper.WriteLine(string.Join('\n', result));
-        }
-
-        [Fact]
-        public void GetRandomWordList_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var randomPhraseGenerator = new RandomPhraseGenerator();
-
-            // Act
-            var result = randomPhraseGenerator.GetRandomWordList(WordVariant.Adjective, WordVariant.Noun, WordVariant.Verb, WordVariant.Adjective, WordVariant.Noun);
-
-            // Assert
-            _outputHelper.WriteLine(string.Join('\n', result));
-        }
+        // Assert
+        _outputHelper.WriteLine(string.Join('\n', result));
     }
 }

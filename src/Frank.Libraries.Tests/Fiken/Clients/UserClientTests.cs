@@ -1,14 +1,3 @@
-using FluentAssertions;
-using Frank.Libraries.Extensions;
-using Frank.Libraries.Fiken.Clients;
-using NSubstitute;
-using System.Threading.Tasks;
-using Frank.Libraries.Fiken;
-using Microsoft.Extensions.Options;
-using RestSharp;
-using Xunit;
-using Xunit.Abstractions;
-
 namespace Frank.Libraries.Tests.Fiken.Clients;
 
 public class UserClientTests

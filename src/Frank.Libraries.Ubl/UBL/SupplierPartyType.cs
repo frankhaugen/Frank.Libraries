@@ -1,120 +1,83 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AccountingSupplierParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class SupplierPartyType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AccountingSupplierParty", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class SupplierPartyType
 {
-
-    private CustomerAssignedAccountIDType customerAssignedAccountIDField;
+    private ContactType accountingContactField;
 
     private AdditionalAccountIDType[] additionalAccountIDField;
 
-    private DataSendingCapabilityType dataSendingCapabilityField;
+    private CustomerAssignedAccountIDType customerAssignedAccountIDField;
 
-    private PartyType partyField;
+    private DataSendingCapabilityType dataSendingCapabilityField;
 
     private ContactType despatchContactField;
 
-    private ContactType accountingContactField;
+    private PartyType partyField;
 
     private ContactType sellerContactField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CustomerAssignedAccountIDType CustomerAssignedAccountID
     {
-        get
-        {
-            return this.customerAssignedAccountIDField;
-        }
-        set
-        {
-            this.customerAssignedAccountIDField = value;
-        }
+        get => customerAssignedAccountIDField;
+        set => customerAssignedAccountIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalAccountID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("AdditionalAccountID", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AdditionalAccountIDType[] AdditionalAccountID
     {
-        get
-        {
-            return this.additionalAccountIDField;
-        }
-        set
-        {
-            this.additionalAccountIDField = value;
-        }
+        get => additionalAccountIDField;
+        set => additionalAccountIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DataSendingCapabilityType DataSendingCapability
     {
-        get
-        {
-            return this.dataSendingCapabilityField;
-        }
-        set
-        {
-            this.dataSendingCapabilityField = value;
-        }
+        get => dataSendingCapabilityField;
+        set => dataSendingCapabilityField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PartyType Party
     {
-        get
-        {
-            return this.partyField;
-        }
-        set
-        {
-            this.partyField = value;
-        }
+        get => partyField;
+        set => partyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContactType DespatchContact
     {
-        get
-        {
-            return this.despatchContactField;
-        }
-        set
-        {
-            this.despatchContactField = value;
-        }
+        get => despatchContactField;
+        set => despatchContactField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContactType AccountingContact
     {
-        get
-        {
-            return this.accountingContactField;
-        }
-        set
-        {
-            this.accountingContactField = value;
-        }
+        get => accountingContactField;
+        set => accountingContactField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ContactType SellerContact
     {
-        get
-        {
-            return this.sellerContactField;
-        }
-        set
-        {
-            this.sellerContactField = value;
-        }
+        get => sellerContactField;
+        set => sellerContactField = value;
     }
 }

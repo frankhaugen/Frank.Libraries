@@ -1,73 +1,54 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-public partial class CRLIdentifierType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+public class CRLIdentifierType
 {
-
     private string issuerField;
 
-    private System.DateTime issueTimeField;
+    private DateTime issueTimeField;
 
     private string numberField;
 
     private string uRIField;
 
-    /// <remarks/>
+    /// <remarks />
     public string Issuer
     {
-        get
-        {
-            return this.issuerField;
-        }
-        set
-        {
-            this.issuerField = value;
-        }
+        get => issuerField;
+        set => issuerField = value;
     }
 
-    /// <remarks/>
-    public System.DateTime IssueTime
+    /// <remarks />
+    public DateTime IssueTime
     {
-        get
-        {
-            return this.issueTimeField;
-        }
-        set
-        {
-            this.issueTimeField = value;
-        }
+        get => issueTimeField;
+        set => issueTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(DataType = "integer")]
+    /// <remarks />
+    [XmlElement(DataType = "integer")]
     public string Number
     {
-        get
-        {
-            return this.numberField;
-        }
-        set
-        {
-            this.numberField = value;
-        }
+        get => numberField;
+        set => numberField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
+    /// <remarks />
+    [XmlAttribute(DataType = "anyURI")]
     public string URI
     {
-        get
-        {
-            return this.uRIField;
-        }
-        set
-        {
-            this.uRIField = value;
-        }
+        get => uRIField;
+        set => uRIField = value;
     }
 }

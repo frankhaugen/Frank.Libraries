@@ -1,9 +1,8 @@
-﻿namespace Frank.Libraries.FluentValidation
+﻿namespace Frank.Libraries.FluentValidation;
+
+internal class Mod11Temp
 {
-    class Mod11Temp
+    public class KontonummerValidator
     {
-        public class KontonummerValidator
-        {
-        }
     }
 }

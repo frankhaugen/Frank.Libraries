@@ -5,96 +5,90 @@ using System.Linq;
 using System.Security.Cryptography;
 using Frank.Libraries.Security.Shared;
 
-namespace Frank.Libraries.Security.PasswordGeneration
+namespace Frank.Libraries.Security.PasswordGeneration;
+
+/// <summary>
+///     This should be hidden
+/// </summary>
+[Browsable(false)]
+[EditorBrowsable(EditorBrowsableState.Never)]
+public class PasswordGeneratorHelper
 {
-    /// <summary>
-    /// This should be hidden
-    /// </summary>
-    [Browsable(false)]
-    [EditorBrowsable(EditorBrowsableState.Never)]
-    public class PasswordGeneratorHelper
+    private readonly Dictionary<CharacterVariant, string> _characters;
+
+    public PasswordGeneratorHelper(Dictionary<CharacterVariant, string> characters) => _characters = characters;
+
+    public string CreatePasswordString(int characterCount)
     {
-        private readonly Dictionary<CharacterVariant, string> _characters;
+        var output = "";
 
-        public PasswordGeneratorHelper(Dictionary<CharacterVariant, string> characters)
+        for (var i = 0; i < characterCount; i++)
         {
-            _characters = characters;
+            var characters = CombineCharactersToSingleString();
+            output += characters[GetRandom(CombineCharactersToSingleString()
+                                               .Length
+                                           - 1)];
         }
 
-        public string CreatePasswordString(int characterCount)
+        return output;
+    }
+
+    public string CombineCharactersToSingleString() => string.Join("", _characters.SelectMany(x => x.Value)
+                                                                                  .Select(x => x));
+
+    public void AddCharacterVariantsToDictionary(CharacterVariant[] characterVariants)
+    {
+        EnsurePositiveCharacterVariantCount(characterVariants);
+
+        foreach (var characterVariant in characterVariants)
         {
-            var output = "";
-
-            for (var i = 0; i < characterCount; i++)
+            switch (characterVariant)
             {
-                var characters = CombineCharactersToSingleString();
-                output += characters[GetRandom(CombineCharactersToSingleString()
-                                                   .Length
-                                               - 1)];
-            }
+                case CharacterVariant.Digits:
+                    _characters.Add(CharacterVariant.Digits, CharacterLists.Digits);
+                    break;
 
-            return output;
-        }
+                case CharacterVariant.Uppercase:
+                    _characters.Add(CharacterVariant.Uppercase, CharacterLists.Uppercase);
+                    break;
 
-        public string CombineCharactersToSingleString() => string.Join("", _characters.SelectMany(x => x.Value)
-                                                                                      .Select(x => x));
+                case CharacterVariant.Lowercase:
+                    _characters.Add(CharacterVariant.Lowercase, CharacterLists.Lowercase);
+                    break;
 
-        public void AddCharacterVariantsToDictionary(CharacterVariant[] characterVariants)
-        {
-            EnsurePositiveCharacterVariantCount(characterVariants);
+                case CharacterVariant.Special:
+                    _characters.Add(CharacterVariant.Special, CharacterLists.Special);
+                    break;
 
-            foreach (var characterVariant in characterVariants)
-            {
-                switch (characterVariant)
-                {
-                    case CharacterVariant.Digits:
-                        _characters.Add(CharacterVariant.Digits, CharacterLists.Digits);
-                        break;
-
-                    case CharacterVariant.Uppercase:
-                        _characters.Add(CharacterVariant.Uppercase, CharacterLists.Uppercase);
-                        break;
-
-                    case CharacterVariant.Lowercase:
-                        _characters.Add(CharacterVariant.Lowercase, CharacterLists.Lowercase);
-                        break;
-
-                    case CharacterVariant.Special:
-                        _characters.Add(CharacterVariant.Special, CharacterLists.Special);
-                        break;
-
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
+    }
 
-        public void EnsurePositiveCharacterVariantCount(CharacterVariant[] characterVariants)
+    public void EnsurePositiveCharacterVariantCount(CharacterVariant[] characterVariants)
+    {
+        if (characterVariants.Length < 1)
         {
-            if (characterVariants.Length < 1)
-            {
-                throw new ArgumentException("Value cannot be less than 1", nameof(characterVariants));
-            }
+            throw new ArgumentException("Value cannot be less than 1", nameof(characterVariants));
         }
+    }
 
-        public void EnsurePositiveCharacterCount(int characterCount)
+    public void EnsurePositiveCharacterCount(int characterCount)
+    {
+        if (characterCount < 1)
         {
-            if (characterCount < 1)
-            {
-                throw new ArgumentException("Value cannot be less than 1", nameof(characterCount));
-            }
+            throw new ArgumentException("Value cannot be less than 1", nameof(characterCount));
         }
+    }
 
-        public CharacterVariant GetRandomCharacterVariant()
-        {
-            return _characters.ElementAt(GetRandom(_characters.Count))
-                              .Key;
-        }
+    public CharacterVariant GetRandomCharacterVariant() =>
+        _characters.ElementAt(GetRandom(_characters.Count))
+                   .Key;
 
-        public int GetRandom(int maxValue)
-        {
-            var random = RandomNumberGenerator.GetInt32(maxValue);
-            return random;
-        }
+    public int GetRandom(int maxValue)
+    {
+        var random = RandomNumberGenerator.GetInt32(maxValue);
+        return random;
     }
 }

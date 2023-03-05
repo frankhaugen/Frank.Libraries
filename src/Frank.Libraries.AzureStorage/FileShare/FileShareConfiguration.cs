@@ -1,8 +1,7 @@
-﻿namespace Frank.Libraries.AzureStorage.FileShare
+﻿namespace Frank.Libraries.AzureStorage.FileShare;
+
+public class FileShareConfiguration
 {
-    public class FileShareConfiguration
-    {
-        public string? ConnectionString { get; set; }
-        public string? ShareName { get; set; }
-    }
+    public string? ConnectionString { get; set; }
+    public string? ShareName { get; set; }
 }

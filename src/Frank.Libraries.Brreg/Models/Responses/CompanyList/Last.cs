@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Frank.Libraries.Brreg.Models.Responses.CompanyList
+namespace Frank.Libraries.Brreg.Models.Responses.CompanyList;
+
+public class Last
 {
-    public class Last
-    {
-        [JsonProperty("href")] public string? Href { get; set; }
-    }
+    [JsonProperty("href")] public string? Href { get; set; }
 }

@@ -3,16 +3,15 @@ using Frank.Libraries.AutoFixture;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Xunit;
 
-namespace Frank.Libraries.Tests.AutoFixture
+namespace Frank.Libraries.Tests.AutoFixture;
+
+public class AutoFixtureTests
 {
-    public class AutoFixtureTests
+    [Fact]
+    public void TestFixtureCreation()
     {
-        [Fact]
-        public void TestFixtureCreation()
-        {
-            var company = new Fixture().OmitRecursion()
-                                       .Build<XmlTestModel>()
-                                       .Create();
-        }
+        var company = new Fixture().OmitRecursion()
+                                   .Build<XmlTestModel>()
+                                   .Create();
     }
 }

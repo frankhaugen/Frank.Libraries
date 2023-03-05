@@ -1,19 +1,18 @@
-﻿namespace Frank.Libraries.IRC
+﻿namespace Frank.Libraries.IRC;
+
+/// <summary>
+///     Defines a mechanism for preventing server floods by limiting the rate of outgoing raw messages from the client.
+/// </summary>
+public interface IIrcFloodPreventer
 {
     /// <summary>
-    ///     Defines a mechanism for preventing server floods by limiting the rate of outgoing raw messages from the client.
+    ///     Gets the time delay before which the client may currently send the next message.
     /// </summary>
-    public interface IIrcFloodPreventer
-    {
-        /// <summary>
-        ///     Gets the time delay before which the client may currently send the next message.
-        /// </summary>
-        /// <returns>The time delay before the next message may be sent, in milliseconds.</returns>
-        long GetSendDelay();
+    /// <returns>The time delay before the next message may be sent, in milliseconds.</returns>
+    long GetSendDelay();
 
-        /// <summary>
-        ///     Notifies the flood preventer that a message has just been send by the client.
-        /// </summary>
-        void HandleMessageSent();
-    }
+    /// <summary>
+    ///     Notifies the flood preventer that a message has just been send by the client.
+    /// </summary>
+    void HandleMessageSent();
 }

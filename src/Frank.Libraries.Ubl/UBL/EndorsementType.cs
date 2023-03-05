@@ -1,91 +1,66 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("EmbassyEndorsement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class EndorsementType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("EmbassyEndorsement", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class EndorsementType
 {
+    private ApprovalStatusType approvalStatusField;
 
     private DocumentIDType documentIDField;
 
-    private ApprovalStatusType approvalStatusField;
+    private EndorserPartyType endorserPartyField;
 
     private RemarksType[] remarksField;
 
-    private EndorserPartyType endorserPartyField;
-
     private SignatureType[] signatureField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DocumentIDType DocumentID
     {
-        get
-        {
-            return this.documentIDField;
-        }
-        set
-        {
-            this.documentIDField = value;
-        }
+        get => documentIDField;
+        set => documentIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ApprovalStatusType ApprovalStatus
     {
-        get
-        {
-            return this.approvalStatusField;
-        }
-        set
-        {
-            this.approvalStatusField = value;
-        }
+        get => approvalStatusField;
+        set => approvalStatusField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Remarks", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Remarks", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public RemarksType[] Remarks
     {
-        get
-        {
-            return this.remarksField;
-        }
-        set
-        {
-            this.remarksField = value;
-        }
+        get => remarksField;
+        set => remarksField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public EndorserPartyType EndorserParty
     {
-        get
-        {
-            return this.endorserPartyField;
-        }
-        set
-        {
-            this.endorserPartyField = value;
-        }
+        get => endorserPartyField;
+        set => endorserPartyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Signature")]
+    /// <remarks />
+    [XmlElement("Signature")]
     public SignatureType[] Signature
     {
-        get
-        {
-            return this.signatureField;
-        }
-        set
-        {
-            this.signatureField = value;
-        }
+        get => signatureField;
+        set => signatureField = value;
     }
 }

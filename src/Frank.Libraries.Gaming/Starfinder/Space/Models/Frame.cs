@@ -15,6 +15,4 @@ public record Frame(FrameName Name,
                     int DamageThreshold,
                     int CriticalThreshold,
                     int Cost
-    );
-
-
+);

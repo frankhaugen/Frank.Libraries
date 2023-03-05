@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
-        <LangVersion>10.0</LangVersion>
+        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <IsPackable>true</IsPackable>
         <RepositoryType>Git</RepositoryType>
@@ -25,8 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="CodegenCS" Version="1.1.1" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-        <PackageReference Include="morelinq" Version="3.3.2" />
+        <PackageReference Include="CodegenCS" Version="2.0.0"/>
+        <PackageReference Include="morelinq" Version="3.3.2"/>
     </ItemGroup>
 </Project>

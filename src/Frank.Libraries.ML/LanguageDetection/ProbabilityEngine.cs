@@ -1,91 +1,103 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Frank.Libraries.ML.LanguageDetection
+namespace Frank.Libraries.ML.LanguageDetection;
+
+internal class ProbabilityEngine
 {
-    internal class ProbabilityEngine
+    private readonly LanguageDetectionOptions _options;
+    private readonly WordProbabilities _wordLanguageProbabilities;
+
+    internal ProbabilityEngine(LanguageDetectionOptions options, WordProbabilities wordLanguageProbabilities)
     {
-        private readonly WordProbabilities _wordLanguageProbabilities;
-        private readonly LanguageDetectionOptions _options;
+        _options = options;
+        _wordLanguageProbabilities = wordLanguageProbabilities;
+    }
 
-        internal ProbabilityEngine(LanguageDetectionOptions options, WordProbabilities wordLanguageProbabilities)
+    internal double[] InitializeProbabilities()
+    {
+        var prob = new double[Languages.List.Count];
+        for (var i = 0; i < prob.Length; i++)
         {
-            _options = options;
-            _wordLanguageProbabilities = wordLanguageProbabilities;
+            prob[i] = 1.0 / Languages.List.Count;
         }
 
-        internal double[] InitializeProbabilities()
+        return prob;
+    }
+
+    internal void UpdateProbabilities(double[] prob, string word, double alpha)
+    {
+        if (!_wordLanguageProbabilities.ContainsKey(word))
         {
-            var prob = new double[Languages.List.Count];
-            for (var i = 0; i < prob.Length; i++)
-                prob[i] = 1.0 / Languages.List.Count;
-            return prob;
+            return;
         }
 
-        internal void UpdateProbabilities(double[] prob, string word, double alpha)
+        var languageProbabilities = _wordLanguageProbabilities[word];
+        var weight = alpha / _options.BaseFrequency!.Value;
+
+        for (var i = 0; i < prob.Length; i++)
         {
-            if (!_wordLanguageProbabilities.ContainsKey(word))
-                return;
+            var profile = Languages.List.ElementAt(i);
+            prob[i] *= weight
+                       + (languageProbabilities.ContainsKey(profile)
+                           ? languageProbabilities[profile]
+                           : 0);
+        }
+    }
 
-            var languageProbabilities = _wordLanguageProbabilities[word];
-            var weight = alpha / _options.BaseFrequency!.Value;
+    internal double NormalizeProbabilities(double[] probs)
+    {
+        double maxp = 0, sump = 0;
 
-            for (var i = 0; i < prob.Length; i++)
+        sump += probs.Sum();
+
+        for (var i = 0; i < probs.Length; ++i)
+        {
+            var p = probs[i] / sump;
+            if (maxp < p)
             {
-                var profile = Languages.List.ElementAt(i);
-                prob[i] *= weight
-                           + (languageProbabilities.ContainsKey(profile)
-                               ? languageProbabilities[profile]
-                               : 0);
+                maxp = p;
             }
+
+            probs[i] = p;
         }
 
-        internal double NormalizeProbabilities(double[] probs)
+        return maxp;
+    }
+
+    internal IEnumerable<Language> SortProbabilities(double[] probs)
+    {
+        var list = new List<Language>();
+
+        for (var j = 0; j < probs.Length; j++)
         {
-            double maxp = 0, sump = 0;
+            var p = probs[j];
 
-            sump += probs.Sum();
-
-            for (var i = 0; i < probs.Length; ++i)
+            if (!(p > _options.ProbabilityThreshold))
             {
-                var p = probs[i] / sump;
-                if (maxp < p) maxp = p;
-                probs[i] = p;
+                continue;
             }
 
-            return maxp;
-        }
-
-        internal IEnumerable<Language> SortProbabilities(double[] probs)
-        {
-            var list = new List<Language>();
-
-            for (var j = 0; j < probs.Length; j++)
+            for (var i = 0; i <= list.Count; i++)
             {
-                var p = probs[j];
-
-                if (!(p > _options.ProbabilityThreshold))
-                    continue;
-
-                for (var i = 0; i <= list.Count; i++)
+                if (i != list.Count
+                    && !(list[i]
+                             .Probability
+                         < p))
                 {
-                    if (i != list.Count
-                        && !(list[i]
-                                 .Probability
-                             < p))
-                        continue;
-
-                    list.Insert(i, new Language
-                    {
-                        LanguageCode = Languages.List.ElementAt(j)
-                                                .LanguageCode,
-                        Probability = p
-                    });
-                    break;
+                    continue;
                 }
-            }
 
-            return list;
+                list.Insert(i, new Language
+                {
+                    LanguageCode = Languages.List.ElementAt(j)
+                                            .LanguageCode,
+                    Probability = p
+                });
+                break;
+            }
         }
+
+        return list;
     }
 }

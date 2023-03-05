@@ -1,20 +1,21 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("SignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class SignedSignaturePropertiesType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("SignedSignatureProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class SignedSignaturePropertiesType
 {
-
-    private System.DateTime signingTimeField;
-
-    private bool signingTimeFieldSpecified;
-
-    private CertIDType[] signingCertificateField;
+    private string idField;
 
     private SignaturePolicyIdentifierType signaturePolicyIdentifierField;
 
@@ -22,99 +23,61 @@ public partial class SignedSignaturePropertiesType
 
     private SignerRoleType signerRoleField;
 
-    private string idField;
+    private CertIDType[] signingCertificateField;
 
-    /// <remarks/>
-    public System.DateTime SigningTime
+    private DateTime signingTimeField;
+
+    private bool signingTimeFieldSpecified;
+
+    /// <remarks />
+    public DateTime SigningTime
     {
-        get
-        {
-            return this.signingTimeField;
-        }
-        set
-        {
-            this.signingTimeField = value;
-        }
+        get => signingTimeField;
+        set => signingTimeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    /// <remarks />
+    [XmlIgnore]
     public bool SigningTimeSpecified
     {
-        get
-        {
-            return this.signingTimeFieldSpecified;
-        }
-        set
-        {
-            this.signingTimeFieldSpecified = value;
-        }
+        get => signingTimeFieldSpecified;
+        set => signingTimeFieldSpecified = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("Cert", IsNullable = false)]
+    /// <remarks />
+    [XmlArrayItem("Cert", IsNullable = false)]
     public CertIDType[] SigningCertificate
     {
-        get
-        {
-            return this.signingCertificateField;
-        }
-        set
-        {
-            this.signingCertificateField = value;
-        }
+        get => signingCertificateField;
+        set => signingCertificateField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public SignaturePolicyIdentifierType SignaturePolicyIdentifier
     {
-        get
-        {
-            return this.signaturePolicyIdentifierField;
-        }
-        set
-        {
-            this.signaturePolicyIdentifierField = value;
-        }
+        get => signaturePolicyIdentifierField;
+        set => signaturePolicyIdentifierField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public SignatureProductionPlaceType SignatureProductionPlace
     {
-        get
-        {
-            return this.signatureProductionPlaceField;
-        }
-        set
-        {
-            this.signatureProductionPlaceField = value;
-        }
+        get => signatureProductionPlaceField;
+        set => signatureProductionPlaceField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public SignerRoleType SignerRole
     {
-        get
-        {
-            return this.signerRoleField;
-        }
-        set
-        {
-            this.signerRoleField = value;
-        }
+        get => signerRoleField;
+        set => signerRoleField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

@@ -1,91 +1,66 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("FinalFinancialGuarantee", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class FinancialGuaranteeType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("FinalFinancialGuarantee", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class FinancialGuaranteeType
 {
-
-    private GuaranteeTypeCodeType guaranteeTypeCodeField;
-
-    private DescriptionType[] descriptionField;
-
-    private LiabilityAmountType liabilityAmountField;
-
     private AmountRateType amountRateField;
 
     private PeriodType constitutionPeriodField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private DescriptionType[] descriptionField;
+
+    private GuaranteeTypeCodeType guaranteeTypeCodeField;
+
+    private LiabilityAmountType liabilityAmountField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public GuaranteeTypeCodeType GuaranteeTypeCode
     {
-        get
-        {
-            return this.guaranteeTypeCodeField;
-        }
-        set
-        {
-            this.guaranteeTypeCodeField = value;
-        }
+        get => guaranteeTypeCodeField;
+        set => guaranteeTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LiabilityAmountType LiabilityAmount
     {
-        get
-        {
-            return this.liabilityAmountField;
-        }
-        set
-        {
-            this.liabilityAmountField = value;
-        }
+        get => liabilityAmountField;
+        set => liabilityAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AmountRateType AmountRate
     {
-        get
-        {
-            return this.amountRateField;
-        }
-        set
-        {
-            this.amountRateField = value;
-        }
+        get => amountRateField;
+        set => amountRateField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType ConstitutionPeriod
     {
-        get
-        {
-            return this.constitutionPeriodField;
-        }
-        set
-        {
-            this.constitutionPeriodField = value;
-        }
+        get => constitutionPeriodField;
+        set => constitutionPeriodField = value;
     }
 }

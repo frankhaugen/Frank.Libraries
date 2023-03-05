@@ -1,85 +1,66 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-[System.Xml.Serialization.XmlRootAttribute("KeyInfo", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
-public partial class KeyInfoType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+[XmlRoot("KeyInfo", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
+public class KeyInfoType
 {
-
-    private object[] itemsField;
+    private string idField;
 
     private ItemsChoiceType2[] itemsElementNameField;
 
+    private object[] itemsField;
+
     private string[] textField;
 
-    private string idField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAnyElementAttribute()]
-    [System.Xml.Serialization.XmlElementAttribute("KeyName", typeof(string))]
-    [System.Xml.Serialization.XmlElementAttribute("KeyValue", typeof(KeyValueType))]
-    [System.Xml.Serialization.XmlElementAttribute("MgmtData", typeof(string))]
-    [System.Xml.Serialization.XmlElementAttribute("PGPData", typeof(PGPDataType))]
-    [System.Xml.Serialization.XmlElementAttribute("RetrievalMethod", typeof(RetrievalMethodType))]
-    [System.Xml.Serialization.XmlElementAttribute("SPKIData", typeof(SPKIDataType))]
-    [System.Xml.Serialization.XmlElementAttribute("X509Data", typeof(X509DataType))]
-    [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
+    /// <remarks />
+    [XmlAnyElement]
+    [XmlElement("KeyName", typeof(string))]
+    [XmlElement("KeyValue", typeof(KeyValueType))]
+    [XmlElement("MgmtData", typeof(string))]
+    [XmlElement("PGPData", typeof(PGPDataType))]
+    [XmlElement("RetrievalMethod", typeof(RetrievalMethodType))]
+    [XmlElement("SPKIData", typeof(SPKIDataType))]
+    [XmlElement("X509Data", typeof(X509DataType))]
+    [XmlChoiceIdentifier("ItemsElementName")]
     public object[] Items
     {
-        get
-        {
-            return this.itemsField;
-        }
-        set
-        {
-            this.itemsField = value;
-        }
+        get => itemsField;
+        set => itemsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
-    [System.Xml.Serialization.XmlIgnoreAttribute()]
+    /// <remarks />
+    [XmlElement("ItemsElementName")]
+    [XmlIgnore]
     public ItemsChoiceType2[] ItemsElementName
     {
-        get
-        {
-            return this.itemsElementNameField;
-        }
-        set
-        {
-            this.itemsElementNameField = value;
-        }
+        get => itemsElementNameField;
+        set => itemsElementNameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlTextAttribute()]
+    /// <remarks />
+    [XmlText]
     public string[] Text
     {
-        get
-        {
-            return this.textField;
-        }
-        set
-        {
-            this.textField = value;
-        }
+        get => textField;
+        set => textField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

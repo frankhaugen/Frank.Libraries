@@ -5,34 +5,28 @@ using NodaTime.Testing;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests;
+
+public class TimeServiceTests : TestBase
 {
-    public class TimeServiceTests : TestBase
+    private readonly IClock subClock;
+
+    public TimeServiceTests(ITestOutputHelper outputHelper) : base(outputHelper) => subClock = new FakeClock(new Instant());
+
+    private TimeService CreateService() =>
+        new TimeService(
+            subClock);
+
+    [Fact]
+    public void ToString_StateUnderTest_ExpectedBehavior()
     {
-        private IClock subClock;
+        // Arrange
+        var service = CreateService();
 
-        public TimeServiceTests(ITestOutputHelper outputHelper) : base(outputHelper)
-        {
-            this.subClock = new FakeClock(new Instant());
-        }
+        // Act
+        var result = service.ToString();
 
-        private TimeService CreateService()
-        {
-            return new TimeService(
-                this.subClock);
-        }
-
-        [Fact]
-        public void ToString_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var service = this.CreateService();
-
-            // Act
-            var result = service.ToString();
-
-            // Assert
-            Output(result);
-        }
+        // Assert
+        Output(result);
     }
 }

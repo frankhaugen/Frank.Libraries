@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Frank.Libraries.Brreg.Models.Responses.CompanyList
+namespace Frank.Libraries.Brreg.Models.Responses.CompanyList;
+
+public class Embedded
 {
-    public class Embedded
-    {
-        [JsonProperty("enheter")] public List<Company.Company>? Companies { get; set; }
-    }
+    [JsonProperty("enheter")] public List<Company.Company>? Companies { get; set; }
 }

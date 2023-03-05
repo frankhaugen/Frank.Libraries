@@ -1,164 +1,110 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("UBLExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2", IsNullable = false)]
-public partial class UBLExtensionType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2")]
+[XmlRoot("UBLExtension", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2", IsNullable = false)]
+public class UBLExtensionType
 {
-
-    private IDType idField;
-
-    private NameType1 nameField;
-
     private ExtensionAgencyIDType extensionAgencyIDField;
 
     private ExtensionAgencyNameType extensionAgencyNameField;
 
-    private ExtensionVersionIDType extensionVersionIDField;
-
     private ExtensionAgencyURIType extensionAgencyURIField;
 
-    private ExtensionURIType extensionURIField;
+    private XmlElement extensionContentField;
 
     private ExtensionReasonCodeType extensionReasonCodeField;
 
     private ExtensionReasonType extensionReasonField;
 
-    private System.Xml.XmlElement extensionContentField;
+    private ExtensionURIType extensionURIField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private ExtensionVersionIDType extensionVersionIDField;
+
+    private IDType idField;
+
+    private NameType1 nameField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NameType1 Name
     {
-        get
-        {
-            return this.nameField;
-        }
-        set
-        {
-            this.nameField = value;
-        }
+        get => nameField;
+        set => nameField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ExtensionAgencyIDType ExtensionAgencyID
     {
-        get
-        {
-            return this.extensionAgencyIDField;
-        }
-        set
-        {
-            this.extensionAgencyIDField = value;
-        }
+        get => extensionAgencyIDField;
+        set => extensionAgencyIDField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ExtensionAgencyNameType ExtensionAgencyName
     {
-        get
-        {
-            return this.extensionAgencyNameField;
-        }
-        set
-        {
-            this.extensionAgencyNameField = value;
-        }
+        get => extensionAgencyNameField;
+        set => extensionAgencyNameField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ExtensionVersionIDType ExtensionVersionID
     {
-        get
-        {
-            return this.extensionVersionIDField;
-        }
-        set
-        {
-            this.extensionVersionIDField = value;
-        }
+        get => extensionVersionIDField;
+        set => extensionVersionIDField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ExtensionAgencyURIType ExtensionAgencyURI
     {
-        get
-        {
-            return this.extensionAgencyURIField;
-        }
-        set
-        {
-            this.extensionAgencyURIField = value;
-        }
+        get => extensionAgencyURIField;
+        set => extensionAgencyURIField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ExtensionURIType ExtensionURI
     {
-        get
-        {
-            return this.extensionURIField;
-        }
-        set
-        {
-            this.extensionURIField = value;
-        }
+        get => extensionURIField;
+        set => extensionURIField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ExtensionReasonCodeType ExtensionReasonCode
     {
-        get
-        {
-            return this.extensionReasonCodeField;
-        }
-        set
-        {
-            this.extensionReasonCodeField = value;
-        }
+        get => extensionReasonCodeField;
+        set => extensionReasonCodeField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ExtensionReasonType ExtensionReason
     {
-        get
-        {
-            return this.extensionReasonField;
-        }
-        set
-        {
-            this.extensionReasonField = value;
-        }
+        get => extensionReasonField;
+        set => extensionReasonField = value;
     }
 
-    /// <remarks/>
-    public System.Xml.XmlElement ExtensionContent
+    /// <remarks />
+    public XmlElement ExtensionContent
     {
-        get
-        {
-            return this.extensionContentField;
-        }
-        set
-        {
-            this.extensionContentField = value;
-        }
+        get => extensionContentField;
+        set => extensionContentField = value;
     }
 }

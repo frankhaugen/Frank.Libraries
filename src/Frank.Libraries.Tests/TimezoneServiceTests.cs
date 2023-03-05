@@ -5,118 +5,112 @@ using NodaTime.Testing;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests
+namespace Frank.Libraries.Tests;
+
+public class TimezoneServiceTests : TestBase
 {
-    public class TimezoneServiceTests : TestBase
+    private readonly IClock subClock;
+
+    public TimezoneServiceTests(ITestOutputHelper outputHelper) : base(outputHelper) => subClock = new FakeClock(new Instant());
+
+    private TimezoneService CreateService() =>
+        new TimezoneService(
+            subClock);
+
+    [Fact]
+    public void GetTimezones_StateUnderTest_ExpectedBehavior()
     {
-        private IClock subClock;
+        // Arrange
+        var service = CreateService();
 
-        public TimezoneServiceTests(ITestOutputHelper outputHelper) : base(outputHelper)
-        {
-            this.subClock = new FakeClock(new Instant());
-        }
+        // Act
+        var result = service.GetTimezones();
 
-        private TimezoneService CreateService()
-        {
-            return new TimezoneService(
-                this.subClock);
-        }
+        // Assert
+        Output(result);
+    }
 
-        [Fact]
-        public void GetTimezones_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var service = this.CreateService();
+    [Fact]
+    public void GetTimezones_StateUnderTest_ExpectedBehavior1()
+    {
+        // Arrange
+        var service = CreateService();
+        var offset = default(Offset);
 
-            // Act
-            var result = service.GetTimezones();
+        // Act
+        var result = service.GetTimezones(
+            offset);
 
-            // Assert
-            Output(result);
-        }
+        // Assert
+        Output(result);
+    }
 
-        [Fact]
-        public void GetTimezones_StateUnderTest_ExpectedBehavior1()
-        {
-            // Arrange
-            var service = this.CreateService();
-            Offset offset = default(global::NodaTime.Offset);
+    [Fact]
+    public void GetTimezoneNames_StateUnderTest_ExpectedBehavior()
+    {
+        // Arrange
+        var service = CreateService();
 
-            // Act
-            var result = service.GetTimezones(
-                offset);
+        // Act
+        var result = service.GetTimezoneNames();
 
-            // Assert
-            Output(result);
-        }
+        // Assert
+        Output(result);
+    }
 
-        [Fact]
-        public void GetTimezoneNames_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var service = this.CreateService();
+    [Fact]
+    public void GetSystemTimezone_StateUnderTest_ExpectedBehavior()
+    {
+        // Arrange
+        var service = CreateService();
 
-            // Act
-            var result = service.GetTimezoneNames();
+        // Act
+        var result = service.GetSystemTimezone();
 
-            // Assert
-            Output(result);
-        }
+        // Assert
+        Output(result);
+    }
 
-        [Fact]
-        public void GetSystemTimezone_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var service = this.CreateService();
+    //[Fact]
+    public void ParseTimezone_StateUnderTest_ExpectedBehavior()
+    {
+        // Arrange
+        var service = CreateService();
+        var ianaName = "europe-oslo";
 
-            // Act
-            var result = service.GetSystemTimezone();
+        // Act
+        var result = service.ParseTimezone(
+            ianaName);
 
-            // Assert
-            Output(result);
-        }
+        // Assert
+        Output(result);
+    }
 
-        //[Fact]
-        public void ParseTimezone_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var service = this.CreateService();
-            string ianaName = "europe-oslo";
+    [Fact]
+    public void TimezoneExist_StateUnderTest_ExpectedBehavior()
+    {
+        // Arrange
+        var service = CreateService();
+        var ianaName = "europe/oslo";
 
-            // Act
-            var result = service.ParseTimezone(
-                ianaName);
+        // Act
+        var result = service.TimezoneExist(
+            ianaName);
 
-            // Assert
-            Output(result);
-        }
+        // Assert
+        Output(result);
+    }
 
-        [Fact]
-        public void TimezoneExist_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var service = this.CreateService();
-            string ianaName = "europe/oslo";
+    [Fact]
+    public void ToString_StateUnderTest_ExpectedBehavior()
+    {
+        // Arrange
+        var service = CreateService();
 
-            // Act
-            var result = service.TimezoneExist(
-                ianaName);
+        // Act
+        var result = service.ToString();
 
-            // Assert
-            Output(result);
-        }
-
-        [Fact]
-        public void ToString_StateUnderTest_ExpectedBehavior()
-        {
-            // Arrange
-            var service = this.CreateService();
-
-            // Act
-            var result = service.ToString();
-
-            // Assert
-            Output(result);
-        }
+        // Assert
+        Output(result);
     }
 }

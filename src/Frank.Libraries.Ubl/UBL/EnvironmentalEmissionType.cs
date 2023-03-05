@@ -1,76 +1,57 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("EnvironmentalEmission", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class EnvironmentalEmissionType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("EnvironmentalEmission", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class EnvironmentalEmissionType
 {
+    private DescriptionType[] descriptionField;
+
+    private EmissionCalculationMethodType[] emissionCalculationMethodField;
 
     private EnvironmentalEmissionTypeCodeType environmentalEmissionTypeCodeField;
 
     private ValueMeasureType valueMeasureField;
 
-    private DescriptionType[] descriptionField;
-
-    private EmissionCalculationMethodType[] emissionCalculationMethodField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public EnvironmentalEmissionTypeCodeType EnvironmentalEmissionTypeCode
     {
-        get
-        {
-            return this.environmentalEmissionTypeCodeField;
-        }
-        set
-        {
-            this.environmentalEmissionTypeCodeField = value;
-        }
+        get => environmentalEmissionTypeCodeField;
+        set => environmentalEmissionTypeCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ValueMeasureType ValueMeasure
     {
-        get
-        {
-            return this.valueMeasureField;
-        }
-        set
-        {
-            this.valueMeasureField = value;
-        }
+        get => valueMeasureField;
+        set => valueMeasureField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("EmissionCalculationMethod")]
+    /// <remarks />
+    [XmlElement("EmissionCalculationMethod")]
     public EmissionCalculationMethodType[] EmissionCalculationMethod
     {
-        get
-        {
-            return this.emissionCalculationMethodField;
-        }
-        set
-        {
-            this.emissionCalculationMethodField = value;
-        }
+        get => emissionCalculationMethodField;
+        set => emissionCalculationMethodField = value;
     }
 }

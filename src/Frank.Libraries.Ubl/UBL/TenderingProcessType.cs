@@ -1,373 +1,240 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("TenderingProcess", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class TenderingProcessType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("TenderingProcess", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class TenderingProcessType
 {
-
-    private IDType idField;
-
-    private OriginalContractingSystemIDType originalContractingSystemIDField;
-
-    private DescriptionType[] descriptionField;
-
-    private NegotiationDescriptionType[] negotiationDescriptionField;
-
-    private ProcedureCodeType procedureCodeField;
-
-    private UrgencyCodeType urgencyCodeField;
-
-    private ExpenseCodeType expenseCodeField;
-
-    private PartPresentationCodeType partPresentationCodeField;
-
-    private ContractingSystemCodeType contractingSystemCodeField;
-
-    private SubmissionMethodCodeType submissionMethodCodeField;
-
-    private CandidateReductionConstraintIndicatorType candidateReductionConstraintIndicatorField;
-
-    private GovernmentAgreementConstraintIndicatorType governmentAgreementConstraintIndicatorField;
-
-    private PeriodType documentAvailabilityPeriodField;
-
-    private PeriodType tenderSubmissionDeadlinePeriodField;
-
-    private PeriodType invitationSubmissionPeriodField;
-
-    private PeriodType participationRequestReceptionPeriodField;
-
-    private DocumentReferenceType[] noticeDocumentReferenceField;
-
     private DocumentReferenceType[] additionalDocumentReferenceField;
-
-    private ProcessJustificationType[] processJustificationField;
-
-    private EconomicOperatorShortListType economicOperatorShortListField;
-
-    private EventType[] openTenderEventField;
 
     private AuctionTermsType auctionTermsField;
 
+    private CandidateReductionConstraintIndicatorType candidateReductionConstraintIndicatorField;
+
+    private ContractingSystemCodeType contractingSystemCodeField;
+
+    private DescriptionType[] descriptionField;
+
+    private PeriodType documentAvailabilityPeriodField;
+
+    private EconomicOperatorShortListType economicOperatorShortListField;
+
+    private ExpenseCodeType expenseCodeField;
+
     private FrameworkAgreementType frameworkAgreementField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private GovernmentAgreementConstraintIndicatorType governmentAgreementConstraintIndicatorField;
+
+    private IDType idField;
+
+    private PeriodType invitationSubmissionPeriodField;
+
+    private NegotiationDescriptionType[] negotiationDescriptionField;
+
+    private DocumentReferenceType[] noticeDocumentReferenceField;
+
+    private EventType[] openTenderEventField;
+
+    private OriginalContractingSystemIDType originalContractingSystemIDField;
+
+    private PeriodType participationRequestReceptionPeriodField;
+
+    private PartPresentationCodeType partPresentationCodeField;
+
+    private ProcedureCodeType procedureCodeField;
+
+    private ProcessJustificationType[] processJustificationField;
+
+    private SubmissionMethodCodeType submissionMethodCodeField;
+
+    private PeriodType tenderSubmissionDeadlinePeriodField;
+
+    private UrgencyCodeType urgencyCodeField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public OriginalContractingSystemIDType OriginalContractingSystemID
     {
-        get
-        {
-            return this.originalContractingSystemIDField;
-        }
-        set
-        {
-            this.originalContractingSystemIDField = value;
-        }
+        get => originalContractingSystemIDField;
+        set => originalContractingSystemIDField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("Description", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public DescriptionType[] Description
     {
-        get
-        {
-            return this.descriptionField;
-        }
-        set
-        {
-            this.descriptionField = value;
-        }
+        get => descriptionField;
+        set => descriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("NegotiationDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("NegotiationDescription", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public NegotiationDescriptionType[] NegotiationDescription
     {
-        get
-        {
-            return this.negotiationDescriptionField;
-        }
-        set
-        {
-            this.negotiationDescriptionField = value;
-        }
+        get => negotiationDescriptionField;
+        set => negotiationDescriptionField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ProcedureCodeType ProcedureCode
     {
-        get
-        {
-            return this.procedureCodeField;
-        }
-        set
-        {
-            this.procedureCodeField = value;
-        }
+        get => procedureCodeField;
+        set => procedureCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UrgencyCodeType UrgencyCode
     {
-        get
-        {
-            return this.urgencyCodeField;
-        }
-        set
-        {
-            this.urgencyCodeField = value;
-        }
+        get => urgencyCodeField;
+        set => urgencyCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ExpenseCodeType ExpenseCode
     {
-        get
-        {
-            return this.expenseCodeField;
-        }
-        set
-        {
-            this.expenseCodeField = value;
-        }
+        get => expenseCodeField;
+        set => expenseCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PartPresentationCodeType PartPresentationCode
     {
-        get
-        {
-            return this.partPresentationCodeField;
-        }
-        set
-        {
-            this.partPresentationCodeField = value;
-        }
+        get => partPresentationCodeField;
+        set => partPresentationCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ContractingSystemCodeType ContractingSystemCode
     {
-        get
-        {
-            return this.contractingSystemCodeField;
-        }
-        set
-        {
-            this.contractingSystemCodeField = value;
-        }
+        get => contractingSystemCodeField;
+        set => contractingSystemCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SubmissionMethodCodeType SubmissionMethodCode
     {
-        get
-        {
-            return this.submissionMethodCodeField;
-        }
-        set
-        {
-            this.submissionMethodCodeField = value;
-        }
+        get => submissionMethodCodeField;
+        set => submissionMethodCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public CandidateReductionConstraintIndicatorType CandidateReductionConstraintIndicator
     {
-        get
-        {
-            return this.candidateReductionConstraintIndicatorField;
-        }
-        set
-        {
-            this.candidateReductionConstraintIndicatorField = value;
-        }
+        get => candidateReductionConstraintIndicatorField;
+        set => candidateReductionConstraintIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public GovernmentAgreementConstraintIndicatorType GovernmentAgreementConstraintIndicator
     {
-        get
-        {
-            return this.governmentAgreementConstraintIndicatorField;
-        }
-        set
-        {
-            this.governmentAgreementConstraintIndicatorField = value;
-        }
+        get => governmentAgreementConstraintIndicatorField;
+        set => governmentAgreementConstraintIndicatorField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType DocumentAvailabilityPeriod
     {
-        get
-        {
-            return this.documentAvailabilityPeriodField;
-        }
-        set
-        {
-            this.documentAvailabilityPeriodField = value;
-        }
+        get => documentAvailabilityPeriodField;
+        set => documentAvailabilityPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType TenderSubmissionDeadlinePeriod
     {
-        get
-        {
-            return this.tenderSubmissionDeadlinePeriodField;
-        }
-        set
-        {
-            this.tenderSubmissionDeadlinePeriodField = value;
-        }
+        get => tenderSubmissionDeadlinePeriodField;
+        set => tenderSubmissionDeadlinePeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType InvitationSubmissionPeriod
     {
-        get
-        {
-            return this.invitationSubmissionPeriodField;
-        }
-        set
-        {
-            this.invitationSubmissionPeriodField = value;
-        }
+        get => invitationSubmissionPeriodField;
+        set => invitationSubmissionPeriodField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType ParticipationRequestReceptionPeriod
     {
-        get
-        {
-            return this.participationRequestReceptionPeriodField;
-        }
-        set
-        {
-            this.participationRequestReceptionPeriodField = value;
-        }
+        get => participationRequestReceptionPeriodField;
+        set => participationRequestReceptionPeriodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("NoticeDocumentReference")]
+    /// <remarks />
+    [XmlElement("NoticeDocumentReference")]
     public DocumentReferenceType[] NoticeDocumentReference
     {
-        get
-        {
-            return this.noticeDocumentReferenceField;
-        }
-        set
-        {
-            this.noticeDocumentReferenceField = value;
-        }
+        get => noticeDocumentReferenceField;
+        set => noticeDocumentReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AdditionalDocumentReference")]
+    /// <remarks />
+    [XmlElement("AdditionalDocumentReference")]
     public DocumentReferenceType[] AdditionalDocumentReference
     {
-        get
-        {
-            return this.additionalDocumentReferenceField;
-        }
-        set
-        {
-            this.additionalDocumentReferenceField = value;
-        }
+        get => additionalDocumentReferenceField;
+        set => additionalDocumentReferenceField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ProcessJustification")]
+    /// <remarks />
+    [XmlElement("ProcessJustification")]
     public ProcessJustificationType[] ProcessJustification
     {
-        get
-        {
-            return this.processJustificationField;
-        }
-        set
-        {
-            this.processJustificationField = value;
-        }
+        get => processJustificationField;
+        set => processJustificationField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public EconomicOperatorShortListType EconomicOperatorShortList
     {
-        get
-        {
-            return this.economicOperatorShortListField;
-        }
-        set
-        {
-            this.economicOperatorShortListField = value;
-        }
+        get => economicOperatorShortListField;
+        set => economicOperatorShortListField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("OpenTenderEvent")]
+    /// <remarks />
+    [XmlElement("OpenTenderEvent")]
     public EventType[] OpenTenderEvent
     {
-        get
-        {
-            return this.openTenderEventField;
-        }
-        set
-        {
-            this.openTenderEventField = value;
-        }
+        get => openTenderEventField;
+        set => openTenderEventField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public AuctionTermsType AuctionTerms
     {
-        get
-        {
-            return this.auctionTermsField;
-        }
-        set
-        {
-            this.auctionTermsField = value;
-        }
+        get => auctionTermsField;
+        set => auctionTermsField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public FrameworkAgreementType FrameworkAgreement
     {
-        get
-        {
-            return this.frameworkAgreementField;
-        }
-        set
-        {
-            this.frameworkAgreementField = value;
-        }
+        get => frameworkAgreementField;
+        set => frameworkAgreementField = value;
     }
 }

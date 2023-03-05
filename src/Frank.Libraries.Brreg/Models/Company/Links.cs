@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace Frank.Libraries.Brreg.Models.Company
+namespace Frank.Libraries.Brreg.Models.Company;
+
+public class Links
 {
-    public class Links
-    {
-        [JsonProperty("self")] public Self? Self { get; set; }
-    }
+    [JsonProperty("self")] public Self? Self { get; set; }
 }

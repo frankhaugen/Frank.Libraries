@@ -14,7 +14,7 @@ using Frank.Libraries.IRC.Properties;
 
 namespace Frank.Libraries.IRC
 {
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public class StandardIrcClient : IrcClient
     {
         // Minimum duration of time to wait between sending successive raw messages.
@@ -23,13 +23,13 @@ namespace Frank.Libraries.IRC
         // Size of buffer for data received by socket, in bytes.
         private const int socketReceiveBufferSize = 0xFFFF;
 
+        // Queue of pending messages and their tokens to be sent when ready.
+        private readonly Queue<Tuple<string, object>> messageSendQueue;
+
         private Stream dataStream;
         private SafeLineReader dataStreamLineReader;
         private StreamReader dataStreamReader;
         private AutoResetEvent disconnectedEvent;
-
-        // Queue of pending messages and their tokens to be sent when ready.
-        private readonly Queue<Tuple<string, object>> messageSendQueue;
 
         private CircularBufferStream receiveStream;
         private Timer sendTimer;
@@ -101,50 +101,58 @@ namespace Frank.Libraries.IRC
             }
         }
 
-        protected override void WriteMessage(string line, object token)
-        {
+        protected override void WriteMessage(string line, object token) =>
             // Add message line to send queue.
             messageSendQueue.Enqueue(Tuple.Create(line + Environment.NewLine, token));
-        }
 
-        /// <inheritdoc cref="Connect(string, int, bool, IrcRegistrationInfo)"/>
+        /// <inheritdoc cref="Connect(string, int, bool, IrcRegistrationInfo)" />
         /// <summary>
-        /// Connects to a server using the specified URL and user information.
+        ///     Connects to a server using the specified URL and user information.
         /// </summary>
         public void Connect(Uri url, IrcRegistrationInfo registrationInfo)
         {
             CheckDisposed();
 
             if (registrationInfo == null)
+            {
                 throw new ArgumentNullException("registrationInfo");
+            }
 
             // Check URL scheme and decide whether to use SSL.
             bool useSsl;
             if (url.Scheme == "irc")
+            {
                 useSsl = false;
+            }
             else if (url.Scheme == "ircs")
+            {
                 useSsl = true;
+            }
             else
+            {
                 throw new ArgumentException(string.Format(Resources.MessageInvalidUrlScheme,
                                                           url.Scheme), "url");
+            }
 
             Connect(url.Host, url.Port == -1
                         ? DefaultPort
                         : url.Port, useSsl, registrationInfo);
         }
 
-        /// <inheritdoc cref="Connect(string, int, bool, IrcRegistrationInfo)"/>
+        /// <inheritdoc cref="Connect(string, int, bool, IrcRegistrationInfo)" />
         public void Connect(string hostName, bool useSsl, IrcRegistrationInfo registrationInfo)
         {
             CheckDisposed();
 
             if (registrationInfo == null)
+            {
                 throw new ArgumentNullException("registrationInfo");
+            }
 
             Connect(hostName, DefaultPort, useSsl, registrationInfo);
         }
 
-        /// <inheritdoc cref="Connect(EndPoint, bool, IrcRegistrationInfo)"/>
+        /// <inheritdoc cref="Connect(EndPoint, bool, IrcRegistrationInfo)" />
         /// <param name="hostName">The name of the remote host.</param>
         /// <param name="port">The port number of the remote host.</param>
         public void Connect(string hostName, int port, bool useSsl, IrcRegistrationInfo registrationInfo)
@@ -152,7 +160,9 @@ namespace Frank.Libraries.IRC
             CheckDisposed();
 
             if (registrationInfo == null)
+            {
                 throw new ArgumentNullException("registrationInfo");
+            }
 #if NETSTANDARD1_5
             var dnsTask = Dns.GetHostAddressesAsync(hostName);
             var addresses = dnsTask.Result;
@@ -163,18 +173,20 @@ namespace Frank.Libraries.IRC
 #endif
         }
 
-        /// <inheritdoc cref="Connect(IPAddress, int, bool, IrcRegistrationInfo)"/>
+        /// <inheritdoc cref="Connect(IPAddress, int, bool, IrcRegistrationInfo)" />
         public void Connect(IPAddress address, bool useSsl, IrcRegistrationInfo registrationInfo)
         {
             CheckDisposed();
 
             if (registrationInfo == null)
+            {
                 throw new ArgumentNullException("registrationInfo");
+            }
 
             Connect(address, DefaultPort, useSsl, registrationInfo);
         }
 
-        /// <inheritdoc cref="Connect(EndPoint, bool, IrcRegistrationInfo)"/>
+        /// <inheritdoc cref="Connect(EndPoint, bool, IrcRegistrationInfo)" />
         /// <param name="address">An IP addresses that designates the remote host.</param>
         /// <param name="port">The port number of the remote host.</param>
         public void Connect(IPAddress address, int port, bool useSsl, IrcRegistrationInfo registrationInfo)
@@ -182,19 +194,27 @@ namespace Frank.Libraries.IRC
             CheckDisposed();
 
             if (registrationInfo == null)
+            {
                 throw new ArgumentNullException("registrationInfo");
+            }
 
             Connect(new IPEndPoint(address, port), useSsl, registrationInfo);
         }
 
         /// <summary>
-        /// Connects asynchronously to the specified server.
+        ///     Connects asynchronously to the specified server.
         /// </summary>
         /// <param name="remoteEndPoint">The network endpoint (IP address and port) of the server to which to connect.</param>
-        /// <param name="useSsl"><see langword="true"/> to connect to the server via SSL; <see langword="false"/>, otherwise</param>
-        /// <param name="registrationInfo">The information used for registering the client. The type of the object may be either <see cref="IrcUserRegistrationInfo"/> or <see cref="IrcServiceRegistrationInfo"/>.</param>
-        /// <exception cref="ArgumentNullException"><paramref name="registrationInfo"/> is <see langword="null"/>.</exception>
-        /// <exception cref="ArgumentException"><paramref name="registrationInfo"/> does not specify valid registration information.</exception>
+        /// <param name="useSsl"><see langword="true" /> to connect to the server via SSL; <see langword="false" />, otherwise</param>
+        /// <param name="registrationInfo">
+        ///     The information used for registering the client. The type of the object may be either
+        ///     <see cref="IrcUserRegistrationInfo" /> or <see cref="IrcServiceRegistrationInfo" />.
+        /// </param>
+        /// <exception cref="ArgumentNullException"><paramref name="registrationInfo" /> is <see langword="null" />.</exception>
+        /// <exception cref="ArgumentException">
+        ///     <paramref name="registrationInfo" /> does not specify valid registration
+        ///     information.
+        /// </exception>
         /// <exception cref="ObjectDisposedException">The current instance has already been disposed.</exception>
         public virtual void Connect(EndPoint remoteEndPoint, bool useSsl, IrcRegistrationInfo registrationInfo)
         {
@@ -209,7 +229,9 @@ namespace Frank.Libraries.IRC
         {
             base.Quit(timeout, comment);
             if (!disconnectedEvent.WaitOne(timeout))
+            {
                 Disconnect();
+            }
         }
 
         protected override void ResetState()
@@ -218,11 +240,19 @@ namespace Frank.Libraries.IRC
 
             // Reset network I/O objects.
             if (receiveStream != null)
+            {
                 receiveStream.Dispose();
+            }
+
             if (dataStream != null)
+            {
                 dataStream.Dispose();
+            }
+
             if (dataStreamReader != null)
+            {
                 dataStreamReader = null;
+            }
         }
 
         private void WritePendingMessages(object state)
@@ -240,7 +270,9 @@ namespace Frank.Libraries.IRC
                     {
                         sendDelay = FloodPreventer.GetSendDelay();
                         if (sendDelay > 0)
+                        {
                             break;
+                        }
                     }
 
                     // Send next message in queue.
@@ -252,7 +284,9 @@ namespace Frank.Libraries.IRC
 
                     // Tell flood preventer mechanism that message has just been sent.
                     if (FloodPreventer != null)
+                    {
                         FloodPreventer.HandleMessageSent();
+                    }
                 }
 
                 // Make timer fire when next message in send queue should be written.
@@ -272,9 +306,6 @@ namespace Frank.Libraries.IRC
                 OnError(new IrcErrorEventArgs(ex));
             }
 #endif
-            finally
-            {
-            }
         }
 
         public override void Disconnect()
@@ -284,10 +315,7 @@ namespace Frank.Libraries.IRC
             DisconnectAsync();
         }
 
-        private void SendAsync(byte[] buffer, object token = null)
-        {
-            SendAsync(buffer, 0, buffer.Length, token);
-        }
+        private void SendAsync(byte[] buffer, object token = null) => SendAsync(buffer, 0, buffer.Length, token);
 
         private void SendAsync(byte[] buffer, int offset, int count, object token = null)
         {
@@ -298,7 +326,9 @@ namespace Frank.Libraries.IRC
             sendEventArgs.Completed += SendCompleted;
 
             if (!socket.SendAsync(sendEventArgs))
+            {
                 SendCompleted(socket, sendEventArgs);
+            }
         }
 
         private void SendCompleted(object sender, SocketAsyncEventArgs e)
@@ -346,7 +376,9 @@ namespace Frank.Libraries.IRC
             receiveEventArgs.Completed += ReceiveCompleted;
 
             if (!socket.ReceiveAsync(receiveEventArgs))
+            {
                 ReceiveCompleted(socket, receiveEventArgs);
+            }
         }
 
         private void ReceiveCompleted(object sender, SocketAsyncEventArgs e)
@@ -376,9 +408,14 @@ namespace Frank.Libraries.IRC
                     // Read next line from data stream.
                     var line = dataStreamLineReader.ReadLine();
                     if (line == null)
+                    {
                         break;
+                    }
+
                     if (line.Length == 0)
+                    {
                         continue;
+                    }
 
                     ParseMessage(line);
                 }
@@ -415,7 +452,9 @@ namespace Frank.Libraries.IRC
             connectEventArgs.Completed += ConnectCompleted;
 
             if (!socket.ConnectAsync(connectEventArgs))
+            {
                 ConnectCompleted(socket, connectEventArgs);
+            }
         }
 
         private void ConnectCompleted(object sender, SocketAsyncEventArgs e)
@@ -480,7 +519,9 @@ namespace Frank.Libraries.IRC
 #else
             disconnectEventArgs.DisconnectReuseSocket = true;
             if (!socket.DisconnectAsync(disconnectEventArgs))
+            {
                 DisconnectCompleted(socket, disconnectEventArgs);
+            }
 #endif
         }
 
@@ -528,7 +569,9 @@ namespace Frank.Libraries.IRC
         {
             // Ensure that client has not already handled disconnection.
             if (disconnectedEvent.WaitOne(0))
+            {
                 return;
+            }
 
             DebugUtilities.WriteEvent("Disconnected from server.");
 
@@ -541,10 +584,7 @@ namespace Frank.Libraries.IRC
             base.HandleClientDisconnected();
         }
 
-        private void HandleSocketError(SocketError error)
-        {
-            HandleSocketError(new SocketException((int)error));
-        }
+        private void HandleSocketError(SocketError error) => HandleSocketError(new SocketException((int)error));
 
         private void HandleSocketError(SocketException exception)
         {
@@ -562,14 +602,17 @@ namespace Frank.Libraries.IRC
         }
 
         /// <summary>
-        /// Returns a string representation of this instance.
+        ///     Returns a string representation of this instance.
         /// </summary>
         /// <returns>A string that represents this instance.</returns>
         public override string ToString()
         {
             if (!IsDisposed && IsConnected)
+            {
                 return string.Format("{0}@{1}", LocalUser.UserName,
                                      ServerName ?? socket.RemoteEndPoint.ToString());
+            }
+
             return "(Not connected)";
         }
 

@@ -7,21 +7,21 @@ public class FiringNet
 {
     private readonly NeuralNet _net;
     private readonly FiringNeuron[][] _neurons;
-    readonly FiringNeuron[]?[] _neuronsWithLayersReversed;
-
-    private FiringNeuron[] OutputLayer => _neurons[^1];
-
-    public IEnumerable<double> OutputValues => OutputLayer.Select(n => n.Output);
+    private readonly FiringNeuron[]?[] _neuronsWithLayersReversed;
 
     public FiringNet(NeuralNet net)
     {
         _net = net;
         _neurons = _net.Neurons.Select(layer => layer.Select(n => new FiringNeuron(n))
-                                                   .ToArray())
-                     .ToArray();
+                                                     .ToArray())
+                       .ToArray();
         _neuronsWithLayersReversed = _neurons.Reverse()
-                                           .ToArray();
+                                             .ToArray();
     }
+
+    private FiringNeuron[] OutputLayer => _neurons[^1];
+
+    public IEnumerable<double> OutputValues => OutputLayer.Select(n => n.Output);
 
     public void FeedForward(double[] inputValues)
     {
@@ -29,15 +29,19 @@ public class FiringNet
         foreach (var layer in _neurons)
         {
             foreach (var neuron in layer)
+            {
                 neuron.ComputeTotalInput(inputValues);
+            }
 
             _net.Activators[i++]
-               .ComputeOutputs(layer);
+                .ComputeOutputs(layer);
 
             // The outputs for this layer become the inputs for the next layer.
             if (layer != OutputLayer)
+            {
                 inputValues = layer.Select(l => l.Output)
                                    .ToArray();
+            }
         }
     }
 
@@ -51,16 +55,24 @@ public class FiringNet
         foreach (var layer in _neuronsWithLayersReversed)
         {
             var isOutputLayer = layerJustProcessed == null;
-            if (layer == null) continue;
+            if (layer == null)
+            {
+                continue;
+            }
 
             foreach (var neuron in layer)
             {
                 if (isOutputLayer)
                     // For neurons in the output layer, the loss vs output slope = -error.
+                {
                     neuron.OutputVotes = desiredOutputs[neuron.Neuron.Index] - neuron.Output;
+                }
                 else
                     // For hidden neurons, the loss vs output slope = weighted sum of next layer's input slopes.
-                if (layerJustProcessed != null) neuron.OutputVotes = layerJustProcessed.Sum(n => n.InputVotes * n.Neuron.InputWeights[neuron.Neuron.Index]);
+                if (layerJustProcessed != null)
+                {
+                    neuron.OutputVotes = layerJustProcessed.Sum(n => n.InputVotes * n.Neuron.InputWeights[neuron.Neuron.Index]);
+                }
 
                 // The loss vs input slope = loss vs output slope times activation function slope (chain rule).
                 neuron.InputVotes = neuron.OutputVotes * neuron.Neuron.Activator.GetActivationSlopeAt(neuron);
@@ -76,11 +88,15 @@ public class FiringNet
         foreach (var layer in _neurons)
         {
             foreach (var neuron in layer)
+            {
                 neuron.AdjustWeightsAndBias(inputValues, learningRate * learningRateMultiplier);
+            }
 
             if (layer != OutputLayer)
+            {
                 inputValues = layer.Select(l => l.Output)
                                    .ToArray();
+            }
 
             learningRateMultiplier--;
         }

@@ -1,45 +1,39 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-[System.Xml.Serialization.XmlRootAttribute("DigestMethod", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
-public partial class DigestMethodType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+[XmlRoot("DigestMethod", Namespace = "http://www.w3.org/2000/09/xmldsig#", IsNullable = false)]
+public class DigestMethodType
 {
-
-    private System.Xml.XmlNode[] anyField;
-
     private string algorithmField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlTextAttribute()]
-    [System.Xml.Serialization.XmlAnyElementAttribute()]
-    public System.Xml.XmlNode[] Any
+    private XmlNode[] anyField;
+
+    /// <remarks />
+    [XmlText]
+    [XmlAnyElement]
+    public XmlNode[] Any
     {
-        get
-        {
-            return this.anyField;
-        }
-        set
-        {
-            this.anyField = value;
-        }
+        get => anyField;
+        set => anyField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "anyURI")]
+    /// <remarks />
+    [XmlAttribute(DataType = "anyURI")]
     public string Algorithm
     {
-        get
-        {
-            return this.algorithmField;
-        }
-        set
-        {
-            this.algorithmField = value;
-        }
+        get => algorithmField;
+        set => algorithmField = value;
     }
 }

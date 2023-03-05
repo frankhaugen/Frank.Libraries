@@ -1,92 +1,67 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("SignedDataObjectProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class SignedDataObjectPropertiesType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("SignedDataObjectProperties", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class SignedDataObjectPropertiesType
 {
-
-    private DataObjectFormatType[] dataObjectFormatField;
+    private XAdESTimeStampType[] allDataObjectsTimeStampField;
 
     private CommitmentTypeIndicationType[] commitmentTypeIndicationField;
 
-    private XAdESTimeStampType[] allDataObjectsTimeStampField;
-
-    private XAdESTimeStampType[] individualDataObjectsTimeStampField;
+    private DataObjectFormatType[] dataObjectFormatField;
 
     private string idField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("DataObjectFormat")]
+    private XAdESTimeStampType[] individualDataObjectsTimeStampField;
+
+    /// <remarks />
+    [XmlElement("DataObjectFormat")]
     public DataObjectFormatType[] DataObjectFormat
     {
-        get
-        {
-            return this.dataObjectFormatField;
-        }
-        set
-        {
-            this.dataObjectFormatField = value;
-        }
+        get => dataObjectFormatField;
+        set => dataObjectFormatField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("CommitmentTypeIndication")]
+    /// <remarks />
+    [XmlElement("CommitmentTypeIndication")]
     public CommitmentTypeIndicationType[] CommitmentTypeIndication
     {
-        get
-        {
-            return this.commitmentTypeIndicationField;
-        }
-        set
-        {
-            this.commitmentTypeIndicationField = value;
-        }
+        get => commitmentTypeIndicationField;
+        set => commitmentTypeIndicationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AllDataObjectsTimeStamp")]
+    /// <remarks />
+    [XmlElement("AllDataObjectsTimeStamp")]
     public XAdESTimeStampType[] AllDataObjectsTimeStamp
     {
-        get
-        {
-            return this.allDataObjectsTimeStampField;
-        }
-        set
-        {
-            this.allDataObjectsTimeStampField = value;
-        }
+        get => allDataObjectsTimeStampField;
+        set => allDataObjectsTimeStampField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("IndividualDataObjectsTimeStamp")]
+    /// <remarks />
+    [XmlElement("IndividualDataObjectsTimeStamp")]
     public XAdESTimeStampType[] IndividualDataObjectsTimeStamp
     {
-        get
-        {
-            return this.individualDataObjectsTimeStampField;
-        }
-        set
-        {
-            this.individualDataObjectsTimeStampField = value;
-        }
+        get => individualDataObjectsTimeStampField;
+        set => individualDataObjectsTimeStampField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

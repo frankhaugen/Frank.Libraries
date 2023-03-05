@@ -1,76 +1,57 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-[System.Xml.Serialization.XmlRootAttribute("CompleteRevocationRefs", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
-public partial class CompleteRevocationRefsType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+[XmlRoot("CompleteRevocationRefs", Namespace = "http://uri.etsi.org/01903/v1.3.2#", IsNullable = false)]
+public class CompleteRevocationRefsType
 {
-
     private CRLRefType[] cRLRefsField;
+
+    private string idField;
 
     private OCSPRefType[] oCSPRefsField;
 
     private AnyType[] otherRefsField;
 
-    private string idField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("CRLRef", IsNullable = false)]
+    /// <remarks />
+    [XmlArrayItem("CRLRef", IsNullable = false)]
     public CRLRefType[] CRLRefs
     {
-        get
-        {
-            return this.cRLRefsField;
-        }
-        set
-        {
-            this.cRLRefsField = value;
-        }
+        get => cRLRefsField;
+        set => cRLRefsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("OCSPRef", IsNullable = false)]
+    /// <remarks />
+    [XmlArrayItem("OCSPRef", IsNullable = false)]
     public OCSPRefType[] OCSPRefs
     {
-        get
-        {
-            return this.oCSPRefsField;
-        }
-        set
-        {
-            this.oCSPRefsField = value;
-        }
+        get => oCSPRefsField;
+        set => oCSPRefsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlArrayItemAttribute("OtherRef", IsNullable = false)]
+    /// <remarks />
+    [XmlArrayItem("OtherRef", IsNullable = false)]
     public AnyType[] OtherRefs
     {
-        get
-        {
-            return this.otherRefsField;
-        }
-        set
-        {
-            this.otherRefsField = value;
-        }
+        get => otherRefsField;
+        set => otherRefsField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+    /// <remarks />
+    [XmlAttribute(DataType = "ID")]
     public string Id
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 }

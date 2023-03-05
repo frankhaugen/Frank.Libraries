@@ -1,120 +1,83 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("Consumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class ConsumptionType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("Consumption", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class ConsumptionType
 {
-
-    private UtilityStatementTypeCodeType utilityStatementTypeCodeField;
-
-    private PeriodType mainPeriodField;
-
     private AllowanceChargeType[] allowanceChargeField;
-
-    private TaxTotalType[] taxTotalField;
 
     private EnergyWaterSupplyType energyWaterSupplyField;
 
-    private TelecommunicationsSupplyType telecommunicationsSupplyField;
-
     private MonetaryTotalType legalMonetaryTotalField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private PeriodType mainPeriodField;
+
+    private TaxTotalType[] taxTotalField;
+
+    private TelecommunicationsSupplyType telecommunicationsSupplyField;
+
+    private UtilityStatementTypeCodeType utilityStatementTypeCodeField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public UtilityStatementTypeCodeType UtilityStatementTypeCode
     {
-        get
-        {
-            return this.utilityStatementTypeCodeField;
-        }
-        set
-        {
-            this.utilityStatementTypeCodeField = value;
-        }
+        get => utilityStatementTypeCodeField;
+        set => utilityStatementTypeCodeField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public PeriodType MainPeriod
     {
-        get
-        {
-            return this.mainPeriodField;
-        }
-        set
-        {
-            this.mainPeriodField = value;
-        }
+        get => mainPeriodField;
+        set => mainPeriodField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AllowanceCharge")]
+    /// <remarks />
+    [XmlElement("AllowanceCharge")]
     public AllowanceChargeType[] AllowanceCharge
     {
-        get
-        {
-            return this.allowanceChargeField;
-        }
-        set
-        {
-            this.allowanceChargeField = value;
-        }
+        get => allowanceChargeField;
+        set => allowanceChargeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxTotal")]
+    /// <remarks />
+    [XmlElement("TaxTotal")]
     public TaxTotalType[] TaxTotal
     {
-        get
-        {
-            return this.taxTotalField;
-        }
-        set
-        {
-            this.taxTotalField = value;
-        }
+        get => taxTotalField;
+        set => taxTotalField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public EnergyWaterSupplyType EnergyWaterSupply
     {
-        get
-        {
-            return this.energyWaterSupplyField;
-        }
-        set
-        {
-            this.energyWaterSupplyField = value;
-        }
+        get => energyWaterSupplyField;
+        set => energyWaterSupplyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public TelecommunicationsSupplyType TelecommunicationsSupply
     {
-        get
-        {
-            return this.telecommunicationsSupplyField;
-        }
-        set
-        {
-            this.telecommunicationsSupplyField = value;
-        }
+        get => telecommunicationsSupplyField;
+        set => telecommunicationsSupplyField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public MonetaryTotalType LegalMonetaryTotal
     {
-        get
-        {
-            return this.legalMonetaryTotalField;
-        }
-        set
-        {
-            this.legalMonetaryTotalField = value;
-        }
+        get => legalMonetaryTotalField;
+        set => legalMonetaryTotalField = value;
     }
 }

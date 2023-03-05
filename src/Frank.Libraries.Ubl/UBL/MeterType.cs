@@ -1,124 +1,87 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("Meter", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class MeterType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("Meter", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class MeterType
 {
-
-    private MeterNumberType meterNumberField;
-
-    private MeterNameType meterNameField;
+    private MeterConstantCodeType meterConstantCodeField;
 
     private MeterConstantType meterConstantField;
 
-    private MeterConstantCodeType meterConstantCodeField;
+    private MeterNameType meterNameField;
 
-    private TotalDeliveredQuantityType totalDeliveredQuantityField;
-
-    private MeterReadingType[] meterReadingField;
+    private MeterNumberType meterNumberField;
 
     private MeterPropertyType[] meterPropertyField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    private MeterReadingType[] meterReadingField;
+
+    private TotalDeliveredQuantityType totalDeliveredQuantityField;
+
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MeterNumberType MeterNumber
     {
-        get
-        {
-            return this.meterNumberField;
-        }
-        set
-        {
-            this.meterNumberField = value;
-        }
+        get => meterNumberField;
+        set => meterNumberField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MeterNameType MeterName
     {
-        get
-        {
-            return this.meterNameField;
-        }
-        set
-        {
-            this.meterNameField = value;
-        }
+        get => meterNameField;
+        set => meterNameField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MeterConstantType MeterConstant
     {
-        get
-        {
-            return this.meterConstantField;
-        }
-        set
-        {
-            this.meterConstantField = value;
-        }
+        get => meterConstantField;
+        set => meterConstantField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MeterConstantCodeType MeterConstantCode
     {
-        get
-        {
-            return this.meterConstantCodeField;
-        }
-        set
-        {
-            this.meterConstantCodeField = value;
-        }
+        get => meterConstantCodeField;
+        set => meterConstantCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public TotalDeliveredQuantityType TotalDeliveredQuantity
     {
-        get
-        {
-            return this.totalDeliveredQuantityField;
-        }
-        set
-        {
-            this.totalDeliveredQuantityField = value;
-        }
+        get => totalDeliveredQuantityField;
+        set => totalDeliveredQuantityField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("MeterReading")]
+    /// <remarks />
+    [XmlElement("MeterReading")]
     public MeterReadingType[] MeterReading
     {
-        get
-        {
-            return this.meterReadingField;
-        }
-        set
-        {
-            this.meterReadingField = value;
-        }
+        get => meterReadingField;
+        set => meterReadingField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("MeterProperty")]
+    /// <remarks />
+    [XmlElement("MeterProperty")]
     public MeterPropertyType[] MeterProperty
     {
-        get
-        {
-            return this.meterPropertyField;
-        }
-        set
-        {
-            this.meterPropertyField = value;
-        }
+        get => meterPropertyField;
+        set => meterPropertyField = value;
     }
 }

@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://api.fiken.no/api/v2*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateInboxDocument**](InboxApi.md#createinboxdocument) | **POST** /companies/{companySlug}/inbox |
-[**GetInbox**](InboxApi.md#getinbox) | **GET** /companies/{companySlug}/inbox |
-[**GetInboxDocument**](InboxApi.md#getinboxdocument) | **GET** /companies/{companySlug}/inbox/{inboxDocumentId} |
+ Method                                                     | HTTP request                                             | Description
+------------------------------------------------------------|----------------------------------------------------------|-------------
+ [**CreateInboxDocument**](InboxApi.md#createinboxdocument) | **POST** /companies/{companySlug}/inbox                  |
+ [**GetInbox**](InboxApi.md#getinbox)                       | **GET** /companies/{companySlug}/inbox                   |
+ [**GetInboxDocument**](InboxApi.md#getinboxdocument)       | **GET** /companies/{companySlug}/inbox/{inboxDocumentId} |
 
 <a name="createinboxdocument"></a>
 
@@ -59,13 +59,13 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**name** | **string**|  |
-**filename** | **string**|  |
-**description** | **string**|  |
-**file** | **byte[]****byte[]**|  |
-**companySlug** | **string**| Slug of company to retrieve |
+ Name            | Type                 | Description                 | Notes
+-----------------|----------------------|-----------------------------|-------
+ **name**        | **string**           |                             |
+ **filename**    | **string**           |                             |
+ **description** | **string**           |                             |
+ **file**        | **byte[]****byte[]** |                             |
+ **companySlug** | **string**           | Slug of company to retrieve |
 
 ### Return type
 
@@ -135,17 +135,17 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**page** | **
-int?**| Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.  | [optional] [default to 0]
-**pageSize** | **
-int?**| Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25.  | [optional] [default to 25]
-**sortBy** | **
-string**| Sorts results in either ascending (asc) or descending (desc) order based on the parameter value. | [optional] [default to createdDate desc]
-**status** | **string**|  | [optional] [default to all]
-**name** | **string**| Filter documents based on their name, case-insensitive substring match. | [optional]
+ Name            | Type                                                                                                                                           | Description                                                             | Notes
+-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------
+ **companySlug** | **string**                                                                                                                                     | Slug of company to retrieve                                             |
+ **page**        | **
+ int?**          | Returns the number of the page to return. Valid page values are integers from 0 to the total number of pages. Default value is 0.              | [optional] [default to 0]
+ **pageSize**    | **
+ int?**          | Defines the number of entries to return on each page. Maximum number of results that can be returned at one time are 100. Default value is 25. | [optional] [default to 25]
+ **sortBy**      | **
+ string**        | Sorts results in either ascending (asc) or descending (desc) order based on the parameter value.                                               | [optional] [default to createdDate desc]
+ **status**      | **string**                                                                                                                                     |                                                                         | [optional] [default to all]
+ **name**        | **string**                                                                                                                                     | Filter documents based on their name, case-insensitive substring match. | [optional]
 
 ### Return type
 
@@ -211,10 +211,10 @@ namespace Example
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**companySlug** | **string**| Slug of company to retrieve |
-**inboxDocumentId** | **long?**|  |
+ Name                | Type       | Description                 | Notes
+---------------------|------------|-----------------------------|-------
+ **companySlug**     | **string** | Slug of company to retrieve |
+ **inboxDocumentId** | **long?**  |                             |
 
 ### Return type
 

@@ -1,41 +1,34 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-public partial class OCSPRefType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+public class OCSPRefType
 {
+    private DigestAlgAndValueType digestAlgAndValueField;
 
     private OCSPIdentifierType oCSPIdentifierField;
 
-    private DigestAlgAndValueType digestAlgAndValueField;
-
-    /// <remarks/>
+    /// <remarks />
     public OCSPIdentifierType OCSPIdentifier
     {
-        get
-        {
-            return this.oCSPIdentifierField;
-        }
-        set
-        {
-            this.oCSPIdentifierField = value;
-        }
+        get => oCSPIdentifierField;
+        set => oCSPIdentifierField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public DigestAlgAndValueType DigestAlgAndValue
     {
-        get
-        {
-            return this.digestAlgAndValueField;
-        }
-        set
-        {
-            this.digestAlgAndValueField = value;
-        }
+        get => digestAlgAndValueField;
+        set => digestAlgAndValueField = value;
     }
 }

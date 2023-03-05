@@ -4,82 +4,81 @@ using NodaTime.Testing;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Frank.Libraries.Tests.Time
+namespace Frank.Libraries.Tests.Time;
+
+public class TimeServicesToStringTests
 {
-    public class TimeServicesToStringTests
+    private readonly IClock _clock;
+    private readonly ITestOutputHelper _outputHelper;
+
+    public TimeServicesToStringTests(ITestOutputHelper outputHelper)
     {
-        private readonly IClock _clock;
-        private readonly ITestOutputHelper _outputHelper;
+        _outputHelper = outputHelper;
+        _clock = new FakeClock(Instant.FromUtc(2021, 10, 10, 13, 37));
+    }
 
-        public TimeServicesToStringTests(ITestOutputHelper outputHelper)
-        {
-            _outputHelper = outputHelper;
-            _clock = new FakeClock(Instant.FromUtc(2021, 10, 10, 13, 37));
-        }
+    [Fact]
+    public void TimeServiceToString()
+    {
+        // Arrange
+        var service = new TimeService(_clock);
 
-        [Fact]
-        public void TimeServiceToString()
-        {
-            // Arrange
-            var service = new TimeService(_clock);
+        // Act
+        var result = service.ToString();
 
-            // Act
-            var result = service.ToString();
+        // Assert
+        _outputHelper.WriteLine(result);
+    }
 
-            // Assert
-            _outputHelper.WriteLine(result);
-        }
+    [Fact]
+    public void DateServiceToString()
+    {
+        // Arrange
+        var service = new DateService(_clock);
 
-        [Fact]
-        public void DateServiceToString()
-        {
-            // Arrange
-            var service = new DateService(_clock);
+        // Act
+        var result = service.ToString();
 
-            // Act
-            var result = service.ToString();
+        // Assert
+        _outputHelper.WriteLine(result);
+    }
 
-            // Assert
-            _outputHelper.WriteLine(result);
-        }
+    [Fact]
+    public void WeekServiceToString()
+    {
+        // Arrange
+        var service = new WeekService(_clock);
 
-        [Fact]
-        public void WeekServiceToString()
-        {
-            // Arrange
-            var service = new WeekService(_clock);
+        // Act
+        var result = service.ToString();
 
-            // Act
-            var result = service.ToString();
+        // Assert
+        _outputHelper.WriteLine(result);
+    }
 
-            // Assert
-            _outputHelper.WriteLine(result);
-        }
+    [Fact]
+    public void DateTimeServiceToString()
+    {
+        // Arrange
+        var service = new DateTimeService(_clock);
 
-        [Fact]
-        public void DateTimeServiceToString()
-        {
-            // Arrange
-            var service = new DateTimeService(_clock);
+        // Act
+        var result = service.ToString();
 
-            // Act
-            var result = service.ToString();
+        // Assert
+        _outputHelper.WriteLine(result);
+    }
 
-            // Assert
-            _outputHelper.WriteLine(result);
-        }
+    [Fact]
+    public void TimezoneServiceToString()
+    {
+        // Arrange
+        var service = new TimezoneService(_clock);
 
-        [Fact]
-        public void TimezoneServiceToString()
-        {
-            // Arrange
-            var service = new TimezoneService(_clock);
+        // Act
+        var result = service.ToString();
 
-            // Act
-            var result = service.ToString();
-
-            // Assert
-            _outputHelper.WriteLine(result);
-        }
+        // Assert
+        _outputHelper.WriteLine(result);
     }
 }

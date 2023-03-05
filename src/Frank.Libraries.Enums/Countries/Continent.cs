@@ -1,13 +1,12 @@
-﻿namespace Frank.Libraries.Enums.Countries
+﻿namespace Frank.Libraries.Enums.Countries;
+
+public enum Continent
 {
-    public enum Continent
-    {
-        Africa,
-        Antarctica,
-        Asia,
-        Europe,
-        Oceania,
-        NorthAmerica,
-        SouthAmerica
-    }
+    Africa,
+    Antarctica,
+    Asia,
+    Europe,
+    Oceania,
+    NorthAmerica,
+    SouthAmerica
 }

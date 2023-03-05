@@ -8,155 +8,158 @@ using Azure.Storage.Files.Shares;
 using Frank.Libraries.AzureStorage.FileShare.Exceptions;
 using Microsoft.Extensions.Options;
 
-namespace Frank.Libraries.AzureStorage.FileShare
+namespace Frank.Libraries.AzureStorage.FileShare;
+
+public class FileShareClient : IFileShareClient
 {
-    public class FileShareClient : IFileShareClient
+    private readonly ShareClient _shareClient;
+    private readonly IList<string> _shareDirectories;
+    private readonly IList<ShareFileMetadata> _shareFiles;
+
+    public FileShareClient(IOptions<FileShareConfiguration> options)
     {
-        private readonly ShareClient _shareClient;
-        private readonly IList<ShareFileMetadata> _shareFiles;
-        private readonly IList<string> _shareDirectories;
+        _shareClient = new ShareClient(options.Value.ConnectionString, options.Value.ShareName);
+        _shareFiles = new List<ShareFileMetadata>();
+        _shareDirectories = new List<string>();
+        Initialize();
+    }
 
-        public FileshareUploadException? UploadException { get; private set; }
-        public FileshareDownloadException? DownloadException { get; private set; }
+    public FileShareClient(FileShareConfiguration configuration)
+    {
+        _shareClient = new ShareClient(configuration.ConnectionString, configuration.ShareName);
+        _shareFiles = new List<ShareFileMetadata>();
+        _shareDirectories = new List<string>();
+        Initialize();
+    }
 
-        public FileShareClient(IOptions<FileShareConfiguration> options)
+    public FileShareClient(string connectionString, string shareName)
+    {
+        _shareClient = new ShareClient(connectionString, shareName);
+        _shareFiles = new List<ShareFileMetadata>();
+        _shareDirectories = new List<string>();
+        Initialize();
+    }
+
+    public FileshareUploadException? UploadException { get; private set; }
+    public FileshareDownloadException? DownloadException { get; private set; }
+
+    public IEnumerable<ShareFileMetadata> FileItems
+    {
+        get
         {
-            _shareClient = new ShareClient(options.Value.ConnectionString, options.Value.ShareName);
-            _shareFiles = new List<ShareFileMetadata>();
-            _shareDirectories = new List<string>();
-            Initialize();
-        }
-
-        public FileShareClient(FileShareConfiguration configuration)
-        {
-            _shareClient = new ShareClient(configuration.ConnectionString, configuration.ShareName);
-            _shareFiles = new List<ShareFileMetadata>();
-            _shareDirectories = new List<string>();
-            Initialize();
-        }
-
-        public FileShareClient(string connectionString, string shareName)
-        {
-            _shareClient = new ShareClient(connectionString, shareName);
-            _shareFiles = new List<ShareFileMetadata>();
-            _shareDirectories = new List<string>();
-            Initialize();
-        }
-
-        private void Initialize()
-        {
-            _shareClient.CreateIfNotExists();
-
-            var remaining = new Queue<ShareDirectoryClient>();
-            remaining.Enqueue(_shareClient.GetRootDirectoryClient());
-            while (remaining.Count > 0)
+            if (!_shareFiles.Any())
             {
-                var dir = remaining.Dequeue();
+                Initialize();
+            }
 
-                _shareDirectories.Add(HttpUtility.UrlDecode(dir.Path));
-                foreach (var item in dir.GetFilesAndDirectories())
+            return _shareFiles;
+        }
+    }
+
+    public IEnumerable<string> DirectoryItems
+    {
+        get
+        {
+            if (!_shareDirectories.Any())
+            {
+                Initialize();
+            }
+
+            return _shareDirectories;
+        }
+    }
+
+    public bool TryDownload(ShareFileMetadata shareFile, out byte[] fileData)
+    {
+        try
+        {
+            fileData = DownloadAsync(shareFile)
+                       .GetAwaiter()
+                       .GetResult();
+            return true;
+        }
+        catch (Exception e)
+        {
+            DownloadException = new FileshareDownloadException($"The file '{shareFile.Name}{shareFile.Extension}' could not be downloaded", e);
+            fileData = null!;
+            return false;
+        }
+    }
+
+    public async Task<byte[]> DownloadAsync(ShareFileMetadata shareFile)
+    {
+        var directory = _shareClient.GetDirectoryClient(shareFile.GetEncodedDirectoryPath);
+        var download = await directory.GetFileClient(shareFile.Name)
+                                      .DownloadAsync();
+        var stream = new MemoryStream();
+        try
+        {
+            await download.Value.Content.CopyToAsync(stream);
+            return stream.ToArray();
+        }
+        catch (Exception e)
+        {
+            throw new FileshareDownloadException($"The file '{shareFile.Name}{shareFile.Extension}' could not be downloaded", e);
+        }
+    }
+
+    public async Task<bool> TryUploadAsync(byte[] fileData, string filename, string directoryPath)
+    {
+        try
+        {
+            await UploadAsync(fileData, filename, directoryPath);
+            return true;
+        }
+        catch (Exception e)
+        {
+            UploadException = new FileshareUploadException($"The file '{filename}' could not be uploaded", e);
+            return false;
+        }
+    }
+
+    public async Task UploadAsync(byte[] fileData, string filename, string directoryPath)
+    {
+        var stream = new MemoryStream(fileData);
+        var directory = _shareClient.GetDirectoryClient(directoryPath);
+        try
+        {
+            await directory.GetFileClient(filename)
+                           .UploadAsync(stream);
+        }
+        catch (Exception e)
+        {
+            throw new FileshareUploadException($"The file '{filename}' could not be uploaded", e);
+        }
+    }
+
+    private void Initialize()
+    {
+        _shareClient.CreateIfNotExists();
+
+        var remaining = new Queue<ShareDirectoryClient>();
+        remaining.Enqueue(_shareClient.GetRootDirectoryClient());
+        while (remaining.Count > 0)
+        {
+            var dir = remaining.Dequeue();
+
+            _shareDirectories.Add(HttpUtility.UrlDecode(dir.Path));
+            foreach (var item in dir.GetFilesAndDirectories())
+            {
+                if (item.IsDirectory)
                 {
-                    if (item.IsDirectory)
-                        remaining.Enqueue(dir.GetSubdirectoryClient(item.Name));
-                    else if (item.FileSize != null) _shareFiles.Add(new ShareFileMetadata(item.Name, HttpUtility.UrlDecode(dir.Path) ?? string.Empty, item.FileSize.Value));
+                    remaining.Enqueue(dir.GetSubdirectoryClient(item.Name));
+                }
+                else if (item.FileSize != null)
+                {
+                    _shareFiles.Add(new ShareFileMetadata(item.Name, HttpUtility.UrlDecode(dir.Path) ?? string.Empty, item.FileSize.Value));
                 }
             }
         }
-
-        public bool Exist(string filename)
-        {
-            return _shareFiles.Any(x => string.Equals(x.Name, Path.GetFileNameWithoutExtension(filename), StringComparison.InvariantCultureIgnoreCase));
-        }
-
-        public IEnumerable<ShareFileMetadata> Search(string filename)
-        {
-            return _shareFiles.Where(x => x.Name.ToLowerInvariant()
-                                           .Contains(Path.GetFileNameWithoutExtension(filename)));
-        }
-
-        public IEnumerable<ShareFileMetadata> FileItems
-        {
-            get
-            {
-                if (!_shareFiles.Any())
-                    Initialize();
-
-                return _shareFiles;
-            }
-        }
-
-        public IEnumerable<string> DirectoryItems
-        {
-            get
-            {
-                if (!_shareDirectories.Any())
-                    Initialize();
-
-                return _shareDirectories;
-            }
-        }
-
-        public bool TryDownload(ShareFileMetadata shareFile, out byte[] fileData)
-        {
-            try
-            {
-                fileData = DownloadAsync(shareFile)
-                           .GetAwaiter()
-                           .GetResult();
-                return true;
-            }
-            catch (Exception e)
-            {
-                DownloadException = new FileshareDownloadException($"The file '{shareFile.Name}{shareFile.Extension}' could not be downloaded", e);
-                fileData = null!;
-                return false;
-            }
-        }
-
-        public async Task<byte[]> DownloadAsync(ShareFileMetadata shareFile)
-        {
-            var directory = _shareClient.GetDirectoryClient(shareFile.GetEncodedDirectoryPath);
-            var download = await directory.GetFileClient(shareFile.Name)
-                                          .DownloadAsync();
-            var stream = new MemoryStream();
-            try
-            {
-                await download.Value.Content.CopyToAsync(stream);
-                return stream.ToArray();
-            }
-            catch (Exception e)
-            {
-                throw new FileshareDownloadException($"The file '{shareFile.Name}{shareFile.Extension}' could not be downloaded", e);
-            }
-        }
-
-        public async Task<bool> TryUploadAsync(byte[] fileData, string filename, string directoryPath)
-        {
-            try
-            {
-                await UploadAsync(fileData, filename, directoryPath);
-                return true;
-            }
-            catch (Exception e)
-            {
-                UploadException = new FileshareUploadException($"The file '{filename}' could not be uploaded", e);
-                return false;
-            }
-        }
-
-        public async Task UploadAsync(byte[] fileData, string filename, string directoryPath)
-        {
-            var stream = new MemoryStream(fileData);
-            var directory = _shareClient.GetDirectoryClient(directoryPath);
-            try
-            {
-                await directory.GetFileClient(filename)
-                               .UploadAsync(stream);
-            }
-            catch (Exception e)
-            {
-                throw new FileshareUploadException($"The file '{filename}' could not be uploaded", e);
-            }
-        }
     }
+
+    public bool Exist(string filename) => _shareFiles.Any(x => string.Equals(x.Name, Path.GetFileNameWithoutExtension(filename), StringComparison.InvariantCultureIgnoreCase));
+
+    public IEnumerable<ShareFileMetadata> Search(string filename) =>
+        _shareFiles.Where(x => x.Name.ToLowerInvariant()
+                                .Contains(Path.GetFileNameWithoutExtension(filename)));
 }

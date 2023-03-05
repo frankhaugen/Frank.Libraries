@@ -1,15 +1,20 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("EventLineItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class EventLineItemType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("EventLineItem", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class EventLineItemType
 {
-
     private LineNumberNumericType lineNumberNumericField;
 
     private LocationType1 participatingLocationsLocationField;
@@ -18,57 +23,33 @@ public partial class EventLineItemType
 
     private ItemType supplyItemField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public LineNumberNumericType LineNumberNumeric
     {
-        get
-        {
-            return this.lineNumberNumericField;
-        }
-        set
-        {
-            this.lineNumberNumericField = value;
-        }
+        get => lineNumberNumericField;
+        set => lineNumberNumericField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public LocationType1 ParticipatingLocationsLocation
     {
-        get
-        {
-            return this.participatingLocationsLocationField;
-        }
-        set
-        {
-            this.participatingLocationsLocationField = value;
-        }
+        get => participatingLocationsLocationField;
+        set => participatingLocationsLocationField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("RetailPlannedImpact")]
+    /// <remarks />
+    [XmlElement("RetailPlannedImpact")]
     public RetailPlannedImpactType[] RetailPlannedImpact
     {
-        get
-        {
-            return this.retailPlannedImpactField;
-        }
-        set
-        {
-            this.retailPlannedImpactField = value;
-        }
+        get => retailPlannedImpactField;
+        set => retailPlannedImpactField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public ItemType SupplyItem
     {
-        get
-        {
-            return this.supplyItemField;
-        }
-        set
-        {
-            this.supplyItemField = value;
-        }
+        get => supplyItemField;
+        set => supplyItemField = value;
     }
 }

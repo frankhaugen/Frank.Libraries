@@ -7,6 +7,4 @@ public class CharacterController
     public CharacterController(Character character) => Character = character;
 
     public Character Character { get; }
-
-
 }

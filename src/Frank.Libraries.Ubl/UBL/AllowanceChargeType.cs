@@ -1,251 +1,166 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
-[System.Xml.Serialization.XmlRootAttribute("AllowanceCharge", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
-public partial class AllowanceChargeType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2")]
+[XmlRoot("AllowanceCharge", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2", IsNullable = false)]
+public class AllowanceChargeType
 {
+    private AccountingCostCodeType accountingCostCodeField;
 
-    private IDType idField;
-
-    private ChargeIndicatorType chargeIndicatorField;
+    private AccountingCostType accountingCostField;
 
     private AllowanceChargeReasonCodeType allowanceChargeReasonCodeField;
 
     private AllowanceChargeReasonType[] allowanceChargeReasonField;
 
+    private AmountType2 amountField;
+
+    private BaseAmountType baseAmountField;
+
+    private ChargeIndicatorType chargeIndicatorField;
+
+    private IDType idField;
+
     private MultiplierFactorNumericType multiplierFactorNumericField;
+
+    private PaymentMeansType[] paymentMeansField;
+
+    private PerUnitAmountType perUnitAmountField;
 
     private PrepaidIndicatorType prepaidIndicatorField;
 
     private SequenceNumericType sequenceNumericField;
 
-    private AmountType2 amountField;
-
-    private BaseAmountType baseAmountField;
-
-    private AccountingCostCodeType accountingCostCodeField;
-
-    private AccountingCostType accountingCostField;
-
-    private PerUnitAmountType perUnitAmountField;
-
     private TaxCategoryType[] taxCategoryField;
 
     private TaxTotalType taxTotalField;
 
-    private PaymentMeansType[] paymentMeansField;
-
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public IDType ID
     {
-        get
-        {
-            return this.idField;
-        }
-        set
-        {
-            this.idField = value;
-        }
+        get => idField;
+        set => idField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public ChargeIndicatorType ChargeIndicator
     {
-        get
-        {
-            return this.chargeIndicatorField;
-        }
-        set
-        {
-            this.chargeIndicatorField = value;
-        }
+        get => chargeIndicatorField;
+        set => chargeIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AllowanceChargeReasonCodeType AllowanceChargeReasonCode
     {
-        get
-        {
-            return this.allowanceChargeReasonCodeField;
-        }
-        set
-        {
-            this.allowanceChargeReasonCodeField = value;
-        }
+        get => allowanceChargeReasonCodeField;
+        set => allowanceChargeReasonCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("AllowanceChargeReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement("AllowanceChargeReason", Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AllowanceChargeReasonType[] AllowanceChargeReason
     {
-        get
-        {
-            return this.allowanceChargeReasonField;
-        }
-        set
-        {
-            this.allowanceChargeReasonField = value;
-        }
+        get => allowanceChargeReasonField;
+        set => allowanceChargeReasonField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public MultiplierFactorNumericType MultiplierFactorNumeric
     {
-        get
-        {
-            return this.multiplierFactorNumericField;
-        }
-        set
-        {
-            this.multiplierFactorNumericField = value;
-        }
+        get => multiplierFactorNumericField;
+        set => multiplierFactorNumericField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PrepaidIndicatorType PrepaidIndicator
     {
-        get
-        {
-            return this.prepaidIndicatorField;
-        }
-        set
-        {
-            this.prepaidIndicatorField = value;
-        }
+        get => prepaidIndicatorField;
+        set => prepaidIndicatorField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public SequenceNumericType SequenceNumeric
     {
-        get
-        {
-            return this.sequenceNumericField;
-        }
-        set
-        {
-            this.sequenceNumericField = value;
-        }
+        get => sequenceNumericField;
+        set => sequenceNumericField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AmountType2 Amount
     {
-        get
-        {
-            return this.amountField;
-        }
-        set
-        {
-            this.amountField = value;
-        }
+        get => amountField;
+        set => amountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public BaseAmountType BaseAmount
     {
-        get
-        {
-            return this.baseAmountField;
-        }
-        set
-        {
-            this.baseAmountField = value;
-        }
+        get => baseAmountField;
+        set => baseAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AccountingCostCodeType AccountingCostCode
     {
-        get
-        {
-            return this.accountingCostCodeField;
-        }
-        set
-        {
-            this.accountingCostCodeField = value;
-        }
+        get => accountingCostCodeField;
+        set => accountingCostCodeField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public AccountingCostType AccountingCost
     {
-        get
-        {
-            return this.accountingCostField;
-        }
-        set
-        {
-            this.accountingCostField = value;
-        }
+        get => accountingCostField;
+        set => accountingCostField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
+    /// <remarks />
+    [XmlElement(Namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2")]
     public PerUnitAmountType PerUnitAmount
     {
-        get
-        {
-            return this.perUnitAmountField;
-        }
-        set
-        {
-            this.perUnitAmountField = value;
-        }
+        get => perUnitAmountField;
+        set => perUnitAmountField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("TaxCategory")]
+    /// <remarks />
+    [XmlElement("TaxCategory")]
     public TaxCategoryType[] TaxCategory
     {
-        get
-        {
-            return this.taxCategoryField;
-        }
-        set
-        {
-            this.taxCategoryField = value;
-        }
+        get => taxCategoryField;
+        set => taxCategoryField = value;
     }
 
-    /// <remarks/>
+    /// <remarks />
     public TaxTotalType TaxTotal
     {
-        get
-        {
-            return this.taxTotalField;
-        }
-        set
-        {
-            this.taxTotalField = value;
-        }
+        get => taxTotalField;
+        set => taxTotalField = value;
     }
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("PaymentMeans")]
+    /// <remarks />
+    [XmlElement("PaymentMeans")]
     public PaymentMeansType[] PaymentMeans
     {
-        get
-        {
-            return this.paymentMeansField;
-        }
-        set
-        {
-            this.paymentMeansField = value;
-        }
+        get => paymentMeansField;
+        set => paymentMeansField = value;
     }
 }

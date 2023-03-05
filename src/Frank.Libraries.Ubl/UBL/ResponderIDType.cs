@@ -1,28 +1,27 @@
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
 namespace Frank.Libraries.Ubl;
 
-/// <remarks/>
-[System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
-[System.SerializableAttribute()]
-[System.Diagnostics.DebuggerStepThroughAttribute()]
-[System.ComponentModel.DesignerCategoryAttribute("code")]
-[System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
-public partial class ResponderIDType
+/// <remarks />
+[GeneratedCode("xsd", "4.8.3928.0")]
+[Serializable]
+[DebuggerStepThrough]
+[DesignerCategory("code")]
+[XmlType(Namespace = "http://uri.etsi.org/01903/v1.3.2#")]
+public class ResponderIDType
 {
-
     private object itemField;
 
-    /// <remarks/>
-    [System.Xml.Serialization.XmlElementAttribute("ByKey", typeof(byte[]), DataType = "base64Binary")]
-    [System.Xml.Serialization.XmlElementAttribute("ByName", typeof(string))]
+    /// <remarks />
+    [XmlElement("ByKey", typeof(byte[]), DataType = "base64Binary")]
+    [XmlElement("ByName", typeof(string))]
     public object Item
     {
-        get
-        {
-            return this.itemField;
-        }
-        set
-        {
-            this.itemField = value;
-        }
+        get => itemField;
+        set => itemField = value;
     }
 }
