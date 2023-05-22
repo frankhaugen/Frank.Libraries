@@ -1,25 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <IsPackable>true</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags>FileShare, Azure, Storage, File, Files, Share, Extension, Client</PackageTags>
         <Description>Working with fileshares and blobs in code is a hassle so I made this nice tool to help out</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Azure.Storage.Files.Shares" Version="12.8.0"/>
-        <PackageReference Include="Azure.Storage.Blobs" Version="12.13.0"/>
-        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0"/>
+        <PackageReference Include="Azure.Storage.Files.Shares" Version="12.14.0" />
+        <PackageReference Include="Azure.Storage.Blobs" Version="12.16.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -27,9 +16,5 @@
             <Pack>True</Pack>
             <PackagePath></PackagePath>
         </None>
-    </ItemGroup>
-
-    <ItemGroup>
-        <Folder Include="Blob\"/>
     </ItemGroup>
 </Project>

@@ -1,5 +1,3 @@
-using System;
-
 namespace Frank.Libraries.Logging.Shared;
 
 public class Log

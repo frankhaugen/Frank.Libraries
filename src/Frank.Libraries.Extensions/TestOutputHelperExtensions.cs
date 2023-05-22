@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Text.Json;
 using ConsoleTables;
 using Xunit.Abstractions;

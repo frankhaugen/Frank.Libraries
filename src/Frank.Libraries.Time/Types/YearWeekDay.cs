@@ -1,6 +1,4 @@
-using System;
-
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Types;
 
 public readonly partial struct YearWeekDay : IEquatable<YearWeekDay>
 {

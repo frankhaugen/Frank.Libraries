@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using Frank.Libraries.CodeGeneration.Generators;
+﻿using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.CodeGeneration.Generators.FuentCalculation;
 using Frank.Libraries.Tests.TestingInfrastructure;
 using Xunit;

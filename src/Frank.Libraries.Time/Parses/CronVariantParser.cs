@@ -1,7 +1,6 @@
-using System;
-using Frank.Libraries.Time.Parses;
+using Frank.Libraries.Time.Types;
 
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Parses;
 
 internal class CronVariantParser : IParser<CronVariant>
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Frank.Libraries.FluentValidation;
 

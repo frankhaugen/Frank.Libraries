@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-
 namespace Frank.Libraries.Rest;
 
 public static class RestClientExtensions

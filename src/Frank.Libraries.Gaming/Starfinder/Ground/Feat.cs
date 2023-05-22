@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Gaming.Starfinder.Characters;
+namespace Frank.Libraries.Gaming.Starfinder.Ground;
 
 public abstract class Feat
 {

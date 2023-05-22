@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.MongoDb;
+﻿namespace Frank.Libraries.MongoDb;
 
 [AttributeUsage(AttributeTargets.Class)]
 public sealed class CollectionName : Attribute

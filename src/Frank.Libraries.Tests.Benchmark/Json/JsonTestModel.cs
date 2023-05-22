@@ -1,5 +1,4 @@
-﻿using System;
-using Frank.Libraries.Json;
+﻿using Frank.Libraries.Json;
 
 namespace Frank.Libraries.Tests.Benchmark.Json;
 

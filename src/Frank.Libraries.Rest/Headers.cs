@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
 namespace Frank.Libraries.Rest;
 
 public sealed class Headers

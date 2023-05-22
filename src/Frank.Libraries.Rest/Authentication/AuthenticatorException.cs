@@ -1,5 +1,3 @@
-using System;
-
 namespace Frank.Libraries.Rest.Authentication;
 
 public class AuthenticatorException : Exception

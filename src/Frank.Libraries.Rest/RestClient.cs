@@ -1,5 +1,3 @@
-using System.Net.Http;
-using System.Threading.Tasks;
 using Frank.Libraries.Rest.Authentication;
 using Frank.Libraries.Rest.Internal;
 using Frank.Libraries.Rest.Serialization;

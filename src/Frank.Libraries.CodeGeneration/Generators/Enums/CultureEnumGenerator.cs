@@ -1,6 +1,5 @@
 using System.Globalization;
 using CodegenCS;
-using MoreLinq.Extensions;
 
 namespace Frank.Libraries.CodeGeneration.Generators.Enums;
 

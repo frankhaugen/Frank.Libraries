@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.Currency;
+﻿namespace Frank.Libraries.Currency;
 
 public class ApiCurrency
 {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.Gaming.Starfinder.Space;
+﻿namespace Frank.Libraries.Gaming.Starfinder.Space;
 
 public enum ShipSize
 {

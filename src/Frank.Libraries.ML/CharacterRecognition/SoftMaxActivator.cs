@@ -1,5 +1,3 @@
-using System;
-
 namespace Frank.Libraries.ML.CharacterRecognition;
 
 public class SoftMaxActivator : Activator

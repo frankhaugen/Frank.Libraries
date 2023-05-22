@@ -1,27 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <IsPackable>true</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags>Extensions, List, Enumerable, Helpers</PackageTags>
         <Description>Simply a bunch of extension methods that might help any developer</Description>
     </PropertyGroup>
-
-    <ItemGroup>
-        <None Include="..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="ConsoleTables" Version="2.4.2"/>

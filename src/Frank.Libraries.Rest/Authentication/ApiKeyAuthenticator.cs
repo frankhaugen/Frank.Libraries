@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 
 namespace Frank.Libraries.Rest.Authentication;

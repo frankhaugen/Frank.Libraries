@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Frank.Libraries.IRC.Properties;
+﻿using Frank.Libraries.IRC.Properties;
 
 namespace Frank.Libraries.IRC;
 

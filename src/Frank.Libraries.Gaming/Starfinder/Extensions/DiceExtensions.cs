@@ -1,4 +1,4 @@
-using Frank.Libraries.Gaming.Starfinder.Characters.Models.Enums;
+using Frank.Libraries.Gaming.Starfinder.Ground.Models.Enums;
 using Frank.Libraries.Gaming.Starfinder.Utilities;
 
 namespace Frank.Libraries.Gaming.Starfinder.Extensions;

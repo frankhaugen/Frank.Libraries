@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using CodegenCS;
+﻿using CodegenCS;
 using Frank.Libraries.CodeGeneration.Extensions;
 
 namespace Frank.Libraries.CodeGeneration.Generators.FuentCalculation;

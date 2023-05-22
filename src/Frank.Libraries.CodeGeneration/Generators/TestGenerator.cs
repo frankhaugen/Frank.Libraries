@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using CodegenCS;
 using Frank.Libraries.CodeGeneration.Extensions;
-using MoreLinq.Extensions;
 
 namespace Frank.Libraries.CodeGeneration.Generators;
 
@@ -57,6 +53,7 @@ public class TestGenerator : IGenerator
 
         namespaces.Where(x => !string.IsNullOrWhiteSpace(x))
                   .OrderBy(x => x)
+                  .ToList()
                   .ForEach(x => writer.WriteLine($"using {x};"));
 
         writer.Write(writer.NewLine);

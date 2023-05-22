@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.Xml;
+﻿namespace Frank.Libraries.Xml;
 
 public class XmlEntity
 {

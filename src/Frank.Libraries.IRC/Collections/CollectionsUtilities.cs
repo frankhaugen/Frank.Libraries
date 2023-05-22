@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Frank.Libraries.IRC.Collections;
+﻿namespace Frank.Libraries.IRC.Collections;
 
 /// <summary>
 ///     Contains common utilities for functionality relating to collections.

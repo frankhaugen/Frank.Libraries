@@ -1,7 +1,7 @@
 using System.CodeDom.Compiler;
 using System.Runtime.Serialization;
 
-namespace EveOnlineApi;
+namespace Frank.Libraries.Gaming.Apis.EveOnline;
 
 /// <summary>
 ///     Filter buy/sell orders, return all orders by default. If you query without type_id, we always return both buy and

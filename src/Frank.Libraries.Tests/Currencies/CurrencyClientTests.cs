@@ -1,6 +1,4 @@
-﻿using System.Net.Http;
-using System.Threading.Tasks;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Frank.Libraries.Currency;
 using Frank.Libraries.Json;
 using Microsoft.Extensions.DependencyInjection;

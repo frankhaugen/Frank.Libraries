@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Frank.Libraries.Calculators.FluentCalculation;
 using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.Extensions;

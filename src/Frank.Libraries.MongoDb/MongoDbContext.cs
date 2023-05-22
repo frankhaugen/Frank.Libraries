@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 

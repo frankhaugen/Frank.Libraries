@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using HidSharp;
+﻿using HidSharp;
 using NodaTime;
 
 namespace Frank.Libraries.Machine;

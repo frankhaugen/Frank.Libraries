@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Frank.Libraries.FluentValidation;
 using Xunit;
 using Xunit.Abstractions;

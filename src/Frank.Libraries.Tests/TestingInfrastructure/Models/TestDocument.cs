@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.Tests.TestingInfrastructure.Models;
+﻿namespace Frank.Libraries.Tests.TestingInfrastructure.Models;
 
 public class TestDocument
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using Frank.Libraries.IRC.Properties;
+﻿using Frank.Libraries.IRC.Properties;
 
 namespace Frank.Libraries.IRC;
 

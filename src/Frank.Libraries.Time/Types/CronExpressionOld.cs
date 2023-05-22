@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Types;
 
 public class CronExpressionOld
 {

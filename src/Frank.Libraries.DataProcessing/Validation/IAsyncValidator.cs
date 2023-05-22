@@ -1,4 +1,4 @@
-namespace Frank.Libraries.DataProcessing;
+namespace Frank.Libraries.DataProcessing.Validation;
 
 public interface IAsyncValidator<T> : IValidator<T>
 {

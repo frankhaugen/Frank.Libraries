@@ -1,5 +1,3 @@
-using System;
-
 namespace Frank.Libraries.CodeGeneration.Models;
 
 public class IntegrationPair

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Frank.Libraries.Security.PasswordGeneration;
 using Frank.Libraries.Security.Shared;
 using Xunit;

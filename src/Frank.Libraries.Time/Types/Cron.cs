@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Types;
 
 public enum CronVariant
 {

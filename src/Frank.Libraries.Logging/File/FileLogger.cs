@@ -1,5 +1,4 @@
-﻿using System;
-using Frank.Libraries.Logging.Shared;
+﻿using Frank.Libraries.Logging.Shared;
 using Microsoft.Extensions.Logging;
 
 namespace Frank.Libraries.Logging.File;

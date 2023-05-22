@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.Enums.Attributes;
+﻿namespace Frank.Libraries.Enums.Attributes;
 
 /// <summary>
 ///     Attribute to store an alternative name

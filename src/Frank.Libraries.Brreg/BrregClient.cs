@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Flurl;
+﻿using Flurl;
 using Flurl.Http;
 using Frank.Libraries.Brreg.Models.Company;
 using Frank.Libraries.Brreg.Models.Responses.CompanyList;

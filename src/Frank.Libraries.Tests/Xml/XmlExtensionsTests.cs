@@ -1,5 +1,4 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Frank.Libraries.Json;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Xml;

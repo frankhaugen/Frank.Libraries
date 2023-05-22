@@ -1,6 +1,3 @@
-using System;
-using System.Net.Http;
-
 namespace Frank.Libraries.Rest.Internal;
 
 public static class HttpMethodExtensions

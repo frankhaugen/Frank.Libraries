@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Frank.Libraries.Enums.Countries;
+﻿using Frank.Libraries.Enums.Countries;
 
 namespace Frank.Libraries.ML.LanguageDetection;
 

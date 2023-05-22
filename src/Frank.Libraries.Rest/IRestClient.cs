@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Frank.Libraries.Rest.Serialization;
 
 namespace Frank.Libraries.Rest;

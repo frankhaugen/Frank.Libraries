@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Frank.Libraries.Rest.Serialization;
 
 namespace Frank.Libraries.Rest.Internal;

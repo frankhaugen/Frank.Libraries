@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Frank.Libraries.ML.LanguageDetection;
+﻿namespace Frank.Libraries.ML.LanguageDetection;
 
 internal static class WordProbabilitiesExtensions
 {

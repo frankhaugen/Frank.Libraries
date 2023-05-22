@@ -1,5 +1,4 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 using Frank.Libraries.Calculators.FluentCalculation;
 
 namespace Frank.Libraries.Calculators.EuclideanCalculators;

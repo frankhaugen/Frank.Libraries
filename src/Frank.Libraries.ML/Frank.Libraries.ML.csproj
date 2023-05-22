@@ -1,34 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <IsPackable>true</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags>Language, Detection, Language Detection, ML, AI, Machine Learning, NLP, Ngram, Identification</PackageTags>
         <Description>This has it's roots, (not exactly a fork), in another non-maintained package, and has been conciderably re-factored for clean code and functionality</Description>
-        <NoWarn>CS8618</NoWarn>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
-
-    <ItemGroup>
-        <None Include="..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Remove="languages.json"/>
-        <None Remove="LICENSE"/>
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="DumpExtensions" Version="2.0.0"/>

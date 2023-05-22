@@ -1,5 +1,4 @@
-﻿using System;
-using Frank.Libraries.Time.Providers;
+﻿using Frank.Libraries.Time.Providers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Frank.Libraries.Time.DependencyInjection;

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.IRC;
+﻿namespace Frank.Libraries.IRC;
 
 /// <summary>
 ///     Represents a flood protector that throttles data sent by the client according to the standard rules implemented

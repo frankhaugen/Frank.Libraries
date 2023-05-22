@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 
 #pragma warning disable CA2100 // Review SQL queries for security vulnerabilities

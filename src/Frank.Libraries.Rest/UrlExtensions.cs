@@ -1,5 +1,3 @@
-using System;
-
 namespace Frank.Libraries.Rest;
 
 public static class UrlExtensions

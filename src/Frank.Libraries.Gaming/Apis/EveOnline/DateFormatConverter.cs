@@ -1,10 +1,9 @@
-using System;
 using System.CodeDom.Compiler;
 using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace EveOnlineApi;
+namespace Frank.Libraries.Gaming.Apis.EveOnline;
 
 [GeneratedCode("NJsonSchema", "13.15.5.0 (NJsonSchema v10.6.6.0 (Newtonsoft.Json v9.0.0.0))")]
 internal class DateFormatConverter : JsonConverter<DateTime>

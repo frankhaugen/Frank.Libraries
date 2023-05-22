@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Validators;
 
 public interface IValidator<in T>
 {

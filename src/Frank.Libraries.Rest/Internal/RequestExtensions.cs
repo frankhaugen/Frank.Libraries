@@ -1,5 +1,3 @@
-using System.Net.Http;
-
 namespace Frank.Libraries.Rest.Internal;
 
 internal static class RequestExtensions

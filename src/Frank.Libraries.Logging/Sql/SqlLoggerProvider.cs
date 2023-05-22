@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 using System.Data.SqlClient;
 using System.Text;
 using Frank.Libraries.Logging.Exceptions;

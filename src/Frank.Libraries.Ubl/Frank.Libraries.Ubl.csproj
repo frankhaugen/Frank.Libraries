@@ -1,26 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <!--<Nullable>enable</Nullable>-->
-        <IsPackable>true</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags>Frank, Libraries, UBL, Universal Business Ledger, Invoice, CreditNote, InvoiceType, 2.1, Invoice 2.1</PackageTags>
         <Description>Models and tools for UBLs</Description>
-        <NoWarn>CS8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
+        <EmbeddedResource Include="xsd\**\*.xsd" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CodegenCS.Core" Version="3.2.2" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.5.0" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
+        <PackageReference Include="System.CodeDom" Version="6.0.0" />
     </ItemGroup>
 </Project>

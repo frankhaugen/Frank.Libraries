@@ -1,5 +1,3 @@
-using System;
-
 namespace Frank.Libraries.Calculators.FluentCalculation;
 
 public static class FluentCalculatorPrimitivesConversions

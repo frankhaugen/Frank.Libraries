@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Frank.Libraries.Xml;
+﻿namespace Frank.Libraries.Xml;
 
 public interface IXmlContext<TEntity> where TEntity : XmlEntity, new()
 {

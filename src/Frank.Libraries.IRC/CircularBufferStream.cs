@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-
-namespace Frank.Libraries.IRC;
+﻿namespace Frank.Libraries.IRC;
 
 // Allows reading and writing to circular buffer as stream.
 // Note: Stream is non-blocking and non-thread-safe.

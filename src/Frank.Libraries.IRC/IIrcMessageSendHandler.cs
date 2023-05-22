@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Frank.Libraries.IRC;
+﻿namespace Frank.Libraries.IRC;
 
 /// <summary>
 ///     Represents an object that handles messages and notices sent by an IRC client.

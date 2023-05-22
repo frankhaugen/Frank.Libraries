@@ -1,28 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <IsPackable>false</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags></PackageTags>
         <Description>Not very useful at the moment, but is intended to become a helpful tool for accessing device information</Description>
-        <NoWarn>1701</NoWarn>
     </PropertyGroup>
-
-    <ItemGroup>
-        <None Include="..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
-    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="DeviceId" Version="6.3.0"/>

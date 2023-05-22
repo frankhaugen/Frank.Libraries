@@ -1,8 +1,3 @@
-using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace Frank.Libraries.ML.CharacterRecognition;
 
 public class Trainer

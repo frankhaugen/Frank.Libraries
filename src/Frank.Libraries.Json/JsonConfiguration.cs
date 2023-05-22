@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace Frank.Libraries.Json;
+﻿namespace Frank.Libraries.Json;
 
 public class JsonConfiguration
 {

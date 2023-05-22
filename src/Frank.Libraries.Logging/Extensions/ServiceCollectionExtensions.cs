@@ -1,4 +1,3 @@
-using System;
 using Frank.Libraries.Logging.EntityFramework;
 using Frank.Libraries.Logging.File;
 using Frank.Libraries.Logging.Http;

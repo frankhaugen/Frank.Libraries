@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Globalization;
-using System.Numerics;
 
-namespace Frank.Libraries.Rest;
+namespace Frank.Libraries.DataProcessing.Cloning;
 
 public static class HttpSchemeExtensions
 {

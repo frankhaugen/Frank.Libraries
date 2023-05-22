@@ -1,8 +1,7 @@
-using System;
 using System.CodeDom.Compiler;
 using System.Text.Json.Serialization;
 
-namespace EveOnlineApi;
+namespace Frank.Libraries.Gaming.Apis.EveOnline;
 
 /// <summary>
 ///     event

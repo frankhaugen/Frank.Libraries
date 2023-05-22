@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Frank.Libraries.Rest;
 using Microsoft.Extensions.DependencyInjection;
 

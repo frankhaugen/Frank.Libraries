@@ -1,5 +1,3 @@
-using System;
-using System.Threading.Tasks;
 using Frank.Libraries.Logging.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

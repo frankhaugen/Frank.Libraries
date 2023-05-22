@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Extensions;
-using Frank.Libraries.Gaming.Starfinder.Characters.Models.Enums;
+using Frank.Libraries.Gaming.Starfinder.Ground.Models.Enums;
 using Frank.Libraries.Gaming.Starfinder.Utilities;
 using Xunit;
 using Xunit.Abstractions;

@@ -1,7 +1,4 @@
-using System;
-using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 
 namespace Frank.Libraries.Rest.Authentication;

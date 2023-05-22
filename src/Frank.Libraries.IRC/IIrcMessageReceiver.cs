@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.IRC;
+﻿namespace Frank.Libraries.IRC;
 
 /// <summary>
 ///     Represents an object that raises an event when a message or notice has been received.

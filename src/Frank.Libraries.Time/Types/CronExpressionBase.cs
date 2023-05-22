@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Types;
 
 internal readonly record struct CronExpressionBase(string Second, string Minute, string Hour, string DayOfMonth, string Month, string DayOfWeek, string YearOrWeekday)
 {

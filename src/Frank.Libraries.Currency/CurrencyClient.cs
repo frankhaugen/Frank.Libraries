@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Frank.Libraries.Rest;
+﻿using Frank.Libraries.Rest;
 
 namespace Frank.Libraries.Currency;
 

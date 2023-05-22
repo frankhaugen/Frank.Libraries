@@ -1,5 +1,4 @@
-﻿using System.IO;
-using AutoBogus;
+﻿using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.SBDH;
 using Xunit;

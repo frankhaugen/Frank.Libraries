@@ -1,17 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <IsPackable>true</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags>Logging, SQL, Provider, ILogger, Core</PackageTags>
         <Description>Logging using ILogger is super-useful, but logging directly to a database is sadly lacking. This fixes this, by having a simple SQL logging provider that is easy to setup. You can use appsettings.json or other methods to configure this in your Startup.cs. Be aware that this uses ADO.net and very forcefully creates a table in your database if one does not exist. This only supports SQL Server at this time</Description>
     </PropertyGroup>
@@ -25,14 +14,6 @@
         <PackageReference Include="System.Data.SqlClient" Version="4.8.5"/>
         <PackageReference Include="xunit.abstractions" Version="2.0.3"/>
     </ItemGroup>
-
-    <ItemGroup>
-        <None Include="..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
-    </ItemGroup>
-
     <ItemGroup>
         <Folder Include="File\"/>
     </ItemGroup>

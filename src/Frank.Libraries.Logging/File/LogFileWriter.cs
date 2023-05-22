@@ -1,7 +1,4 @@
-﻿using System.IO;
-using System.Threading;
-
-namespace Frank.Libraries.Logging.File;
+﻿namespace Frank.Libraries.Logging.File;
 
 internal static class LogFileWriter
 {

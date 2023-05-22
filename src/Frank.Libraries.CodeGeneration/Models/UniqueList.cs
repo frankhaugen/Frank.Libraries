@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Frank.Libraries.CodeGeneration.Models;
 
 public class UniqueList<T> : List<T>

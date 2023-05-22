@@ -1,6 +1,3 @@
-using System;
-using System.Linq;
-
 namespace Frank.Libraries.ML.CharacterRecognition;
 
 public class Neuron

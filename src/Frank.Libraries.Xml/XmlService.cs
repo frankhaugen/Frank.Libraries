@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Xml;
+﻿using System.Xml;
 using System.Xml.Schema;
 
 namespace Frank.Libraries.Xml;

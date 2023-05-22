@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Frank.Libraries.DependencyInjection;
+namespace Frank.Libraries.DataProcessing.Mapping;
 
 public class Mapper
 {

@@ -1,6 +1,4 @@
-using System;
-
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Types;
 
 internal static class CronExpressionBaseExtensions
 {

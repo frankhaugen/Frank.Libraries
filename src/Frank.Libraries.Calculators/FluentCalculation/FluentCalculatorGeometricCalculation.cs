@@ -1,4 +1,3 @@
-using System;
 using System.Numerics;
 using DecimalMath;
 using Frank.Libraries.Calculators.Types;

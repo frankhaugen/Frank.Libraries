@@ -1,30 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <IsPackable>true</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags>Extensions, AutoFixture, Test, OmitRecursion, Recursion</PackageTags>
         <Description>This contains a very useful extension method for AutoFixture that allows you to OmitRecursion, (if a class has multiple nested objects, and/or self-reference, this simple extension method allows you to provent this from being an issue)</Description>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="AutoFixture" Version="4.17.0"/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Include="..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
     </ItemGroup>
 
 </Project>

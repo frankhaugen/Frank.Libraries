@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Frank.Libraries.Gaming.Starfinder.Characters.Models.Enums;
-using Frank.Libraries.Gaming.Starfinder.Extensions;
+﻿using Frank.Libraries.Gaming.Starfinder.Extensions;
+using Frank.Libraries.Gaming.Starfinder.Ground.Models.Enums;
 using Frank.Libraries.Gaming.Starfinder.Space;
 using Frank.Libraries.Gaming.Starfinder.Space.Models.Enums;
 

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Frank.Libraries.Json;
+﻿namespace Frank.Libraries.Json;
 
 public interface IJsonContext<TEntity> where TEntity : JsonEntity
 {

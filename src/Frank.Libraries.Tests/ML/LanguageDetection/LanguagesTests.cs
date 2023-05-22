@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Frank.Libraries.Enums.Extensions;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.ML.LanguageDetection;

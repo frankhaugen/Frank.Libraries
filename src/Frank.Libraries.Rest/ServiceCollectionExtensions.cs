@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Numerics;
-using System.Web;
 using Frank.Libraries.Rest.Authentication;
 using Frank.Libraries.Rest.Serialization;
 using Microsoft.Extensions.DependencyInjection;

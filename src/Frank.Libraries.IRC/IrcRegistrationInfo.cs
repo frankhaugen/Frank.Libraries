@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Frank.Libraries.IRC;
+﻿namespace Frank.Libraries.IRC;
 
 /// <summary>
 ///     Provides information used by an <see cref="IrcClient" /> for registering the connection as a service.

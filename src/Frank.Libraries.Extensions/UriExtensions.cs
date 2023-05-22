@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.Extensions;
+﻿namespace Frank.Libraries.Extensions;
 
 public static class UriExtensions
 {

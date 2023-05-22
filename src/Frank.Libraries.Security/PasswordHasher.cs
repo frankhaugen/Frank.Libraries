@@ -1,5 +1,4 @@
-﻿using System;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using Frank.Libraries.Security.PasswordHashing;
 
 namespace Frank.Libraries.Security;

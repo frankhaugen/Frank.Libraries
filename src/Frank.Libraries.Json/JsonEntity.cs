@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.Json;
+﻿namespace Frank.Libraries.Json;
 
 public class JsonEntity
 {

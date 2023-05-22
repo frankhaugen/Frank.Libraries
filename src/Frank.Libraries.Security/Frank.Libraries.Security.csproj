@@ -1,34 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <IsPackable>true</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags>Frank, Libraries, Password, Security, Hashing, Generation, Cryptography, SecOps, Strong</PackageTags>
         <Description>Generate, hash passwords and check password against hashed password, in one very small library without any frills</Description>
     </PropertyGroup>
-    <ItemGroup>
-        <None Remove="RandomPhraseGeneration\Resources\english-adjectives.txt"/>
-        <None Remove="RandomPhraseGeneration\Resources\english-nouns.txt"/>
-        <None Remove="RandomPhraseGeneration\Resources\english-verbs.txt"/>
-    </ItemGroup>
+
     <ItemGroup>
         <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-adjectives.txt"/>
         <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-nouns.txt"/>
         <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-verbs.txt"/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Include="..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
     </ItemGroup>
 </Project>

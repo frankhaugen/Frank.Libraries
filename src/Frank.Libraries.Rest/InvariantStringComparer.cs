@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace Frank.Libraries.Rest;
 
 public class InvariantStringComparer : IEqualityComparer<string>

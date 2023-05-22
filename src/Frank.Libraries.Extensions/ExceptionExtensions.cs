@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
-namespace Frank.Libraries.Extensions;
+﻿namespace Frank.Libraries.Extensions;
 
 public static class ExceptionExtensions
 {

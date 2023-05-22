@@ -1,6 +1,7 @@
 using Frank.Libraries.Time.Parses;
+using Frank.Libraries.Time.Validators;
 
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Types;
 
 public class CronExpressionValidator : IValidator<string>
 {

@@ -1,4 +1,3 @@
-using System;
 using System.Text;
 using Frank.Libraries.Logging.Shared;
 using Microsoft.Extensions.Logging;

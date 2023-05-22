@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
 using System.Text;
 
 namespace Frank.Libraries.Tests.TestingInfrastructure.Generators;

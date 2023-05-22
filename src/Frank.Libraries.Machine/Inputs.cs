@@ -1,5 +1,4 @@
-﻿using System;
-using H.Hooks;
+﻿using H.Hooks;
 
 namespace Frank.Libraries.Machine;
 

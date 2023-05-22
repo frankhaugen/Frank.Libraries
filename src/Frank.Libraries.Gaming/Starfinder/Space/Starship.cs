@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Frank.Libraries.Gaming.Starfinder.Space;
+﻿namespace Frank.Libraries.Gaming.Starfinder.Space;
 
 public class Starship : ShipBase
 {

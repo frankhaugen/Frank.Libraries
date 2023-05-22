@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Types;
 
 public readonly partial struct YearWeekDay
 {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Frank.Libraries.IRC;
+﻿namespace Frank.Libraries.IRC;
 
 // Indicates that method processes message for some protocol.
 internal class MessageProcessorAttribute : Attribute

@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Types;
 
 public readonly record struct Date(Year Year, int Month, int Day)
 {

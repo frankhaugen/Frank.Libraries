@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Gaming.Starfinder.Characters.Models.Enums;
+namespace Frank.Libraries.Gaming.Starfinder.Ground.Models.Enums;
 
 public enum Gender
 {

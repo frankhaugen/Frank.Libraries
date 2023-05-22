@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
+﻿using System.Globalization;
 using System.Security.Cryptography;
 using Frank.Libraries.Security.RandomPhraseGeneration;
 using Frank.Libraries.Security.Shared;

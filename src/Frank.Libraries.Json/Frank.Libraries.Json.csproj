@@ -1,17 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
-        <Nullable>enable</Nullable>
-        <IsPackable>true</IsPackable>
-        <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
-        <Authors>Frank R. Haugen</Authors>
         <PackageTags>Json, Flat-File, DB, Database, Context, NOSQL, Repository, Pattern, Dependency Injection</PackageTags>
         <Description>Ever wanted to use a flat-file NOSQL database? Here you'll find a repository-pattern-like IOC-ready set of tools, (among others), to give you this esoteric functionality</Description>
     </PropertyGroup>
@@ -20,12 +9,5 @@
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0"/>
         <PackageReference Include="System.IO.Abstractions" Version="19.1.5"/>
         <PackageReference Include="System.Text.Json" Version="7.0.1"/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Include="..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
     </ItemGroup>
 </Project>

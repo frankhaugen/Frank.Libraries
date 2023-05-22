@@ -1,8 +1,6 @@
-using System;
-using System.Collections.Generic;
-using Frank.Libraries.Time.Parses;
+using Frank.Libraries.Time.Types;
 
-namespace Frank.Libraries.Time.Providers;
+namespace Frank.Libraries.Time.Parses;
 
 internal class DayOfWeekNameParser : IParser<CronDayOfWeekName[]>
 {

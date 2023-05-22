@@ -1,4 +1,4 @@
-﻿namespace Frank.Libraries.Gaming.Starfinder.Space;
+﻿namespace Frank.Libraries.Gaming.Starfinder.Space.Models.Enums;
 
 public enum FrameName
 {

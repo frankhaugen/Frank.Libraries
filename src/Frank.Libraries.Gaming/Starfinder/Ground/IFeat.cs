@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-
-namespace Frank.Libraries.Gaming.Starfinder.Characters;
+namespace Frank.Libraries.Gaming.Starfinder.Ground;
 
 public interface IFeat
 {

@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Frank.Libraries.Extensions;
+﻿namespace Frank.Libraries.Extensions;
 
 public static class FileInfoExtensions
 {

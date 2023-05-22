@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-
-namespace Frank.Libraries.Extensions;
+﻿namespace Frank.Libraries.Extensions;
 
 public static class DirectoryInfoHelper
 {

@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace Frank.Libraries.ML.LanguageDetection;
+﻿namespace Frank.Libraries.ML.LanguageDetection;
 
 internal class ProbabilityEngine
 {

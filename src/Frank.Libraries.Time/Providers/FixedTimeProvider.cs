@@ -1,5 +1,3 @@
-using System;
-
 namespace Frank.Libraries.Time.Providers;
 
 public class FixedTimeProvider : ITimeProvider

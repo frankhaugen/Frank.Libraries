@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Frank.Libraries.CodeGeneration.Extensions;
+﻿namespace Frank.Libraries.CodeGeneration.Extensions;
 
 public static class EnumerableExtensions
 {

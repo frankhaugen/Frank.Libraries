@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Frank.Libraries.IRC.Ctcp;
+﻿namespace Frank.Libraries.IRC.Ctcp;
 
 // Defines all message senders for the client.
 partial class CtcpClient

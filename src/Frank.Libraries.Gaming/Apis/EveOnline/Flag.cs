@@ -1,7 +1,7 @@
 using System.CodeDom.Compiler;
 using System.Runtime.Serialization;
 
-namespace EveOnlineApi;
+namespace Frank.Libraries.Gaming.Apis.EveOnline;
 
 /// <summary>
 ///     route security preference

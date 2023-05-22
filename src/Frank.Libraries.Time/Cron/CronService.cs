@@ -1,4 +1,4 @@
-﻿namespace Frank.Libraries.Time;
+﻿namespace Frank.Libraries.Time.Cron;
 
 public class CronService
 {

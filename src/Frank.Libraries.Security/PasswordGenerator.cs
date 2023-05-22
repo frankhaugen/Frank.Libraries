@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Frank.Libraries.Security.PasswordGeneration;
+﻿using Frank.Libraries.Security.PasswordGeneration;
 using Frank.Libraries.Security.Shared;
 
 namespace Frank.Libraries.Security;

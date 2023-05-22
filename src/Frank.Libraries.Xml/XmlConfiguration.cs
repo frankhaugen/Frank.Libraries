@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace Frank.Libraries.Xml;
+﻿namespace Frank.Libraries.Xml;
 
 public class XmlConfiguration
 {

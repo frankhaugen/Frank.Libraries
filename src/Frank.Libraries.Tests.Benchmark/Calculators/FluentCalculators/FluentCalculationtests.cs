@@ -1,4 +1,3 @@
-using System;
 using BenchmarkDotNet.Attributes;
 
 namespace Frank.Libraries.Tests.Benchmark.Calculators.FluentCalculators;

@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Frank.Libraries.DataProcessing;
+namespace Frank.Libraries.DataProcessing.Validation;
 
 public class ValidationErrors<T> : IValidationErrors<T>
 {

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using AutoBogus;
+﻿using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Xml;

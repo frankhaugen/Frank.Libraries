@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
-using Frank.Libraries.Gaming.Starfinder.Characters.Models.Enums;
 using Frank.Libraries.Gaming.Starfinder.Extensions;
+using Frank.Libraries.Gaming.Starfinder.Ground.Models.Enums;
 
 namespace Frank.Libraries.Gaming.Starfinder.Utilities;
 
