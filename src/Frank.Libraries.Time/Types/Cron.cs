@@ -1,11 +1,5 @@
 namespace Frank.Libraries.Time.Types;
 
-public enum CronVariant
-{
-    SecondPrecision,
-    MinutePrecision
-}
-
 public readonly partial record struct Cron
 {
     internal CronExpressionBase Expression { get; init; }

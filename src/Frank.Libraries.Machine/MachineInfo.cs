@@ -31,20 +31,3 @@ public class MachineInfo
     public DateTimeOffset GetSystemTime() => SystemClock.Instance.GetCurrentInstant()
                                                         .ToDateTimeOffset();
 }
-
-public class DeviceInfo
-{
-    public string Id { get; set; }
-    public string Name { get; set; }
-    public string FriendlyName { get; set; }
-}
-
-public static class DeviceExtension
-{
-    public static DeviceInfo GetDeviceInfo(this Device device) => new()
-    {
-        Id = device.DevicePath,
-        Name = device.GetFileSystemName(),
-        FriendlyName = device.GetFriendlyName()
-    };
-}

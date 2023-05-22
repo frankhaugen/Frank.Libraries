@@ -5,8 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-adjectives.txt"/>
-        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-nouns.txt"/>
-        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-verbs.txt"/>
+        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-adjectives.txt" />
+        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-nouns.txt" />
+        <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-verbs.txt" />
     </ItemGroup>
 </Project>

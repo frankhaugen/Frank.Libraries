@@ -6,10 +6,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="CsvHelper" Version="30.0.1"/>
+        <PackageReference Include="CsvHelper" Version="30.0.1" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Libraries.Rest\Frank.Libraries.Rest.csproj"/>
+        <ProjectReference Include="..\Frank.Libraries.Rest\Frank.Libraries.Rest.csproj" />
     </ItemGroup>
 </Project>

@@ -7,17 +7,17 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="DumpExtensions" Version="2.0.0"/>
-        <PackageReference Include="Ikst.ImageUtil" Version="1.0.1"/>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.2"/>
-        <PackageReference Include="System.Text.Json" Version="7.0.1"/>
+        <PackageReference Include="DumpExtensions" Version="2.0.0" />
+        <PackageReference Include="Ikst.ImageUtil" Version="1.0.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+        <PackageReference Include="System.Text.Json" Version="7.0.1" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj"/>
+        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="LanguageDetection\languages.json"/>
+        <EmbeddedResource Include="LanguageDetection\languages.json" />
     </ItemGroup>
 </Project>

@@ -6,26 +6,26 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="BenchmarkDotNet" Version="0.13.4"/>
-        <PackageReference Include="AutoBogus" Version="2.13.1"/>
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.4" />
+        <PackageReference Include="AutoBogus" Version="2.13.1" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj"/>
-        <ProjectReference Include="..\Frank.Libraries.ML\Frank.Libraries.ML.csproj"/>
+        <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.ML\Frank.Libraries.ML.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <Compile Remove="BenchmarkDotNet.Artifacts\**"/>
+        <Compile Remove="BenchmarkDotNet.Artifacts\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**"/>
+        <EmbeddedResource Remove="BenchmarkDotNet.Artifacts\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="BenchmarkDotNet.Artifacts\**"/>
+        <None Remove="BenchmarkDotNet.Artifacts\**" />
         <None Update="LanguageDetection\Texts\NorwegianSult.txt">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>

@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="DecimalMath.DecimalEx" Version="1.0.2"/>
+        <PackageReference Include="DecimalMath.DecimalEx" Version="1.0.2" />
         <!--        <PackageReference Include="Frank.Analyzers.CodeLength" Version="1.0.0">-->
         <!--          <PrivateAssets>all</PrivateAssets>-->
         <!--          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->

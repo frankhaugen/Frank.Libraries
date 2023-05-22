@@ -8,5 +8,3 @@ public class Character
     public Abilities Abilities { get; set; }
     public Saves Type { get; set; }
 }
-
-public readonly record struct Saves(Abilities Abilities);

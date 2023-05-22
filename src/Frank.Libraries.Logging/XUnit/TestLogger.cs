@@ -26,10 +26,3 @@ public class TestLogger : ILogger
 
     public IDisposable? BeginScope<TState>(TState state) where TState : notnull => new Disposable();
 }
-
-public class Disposable : IDisposable
-{
-    public void Dispose()
-    {
-    }
-}
