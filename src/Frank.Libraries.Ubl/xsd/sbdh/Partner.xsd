@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" 
-    xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+           xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
 
     <xs:complexType name="Partner">
         <xs:sequence>

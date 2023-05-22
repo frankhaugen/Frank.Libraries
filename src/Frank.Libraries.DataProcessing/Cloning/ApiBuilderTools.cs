@@ -8,7 +8,6 @@ namespace Frank.Libraries.DataProcessing.Cloning;
 
 public class ApiBuilderTools
 {
-
 }
 
 public class HostEnvironment : IHostEnvironment
@@ -30,9 +29,6 @@ public class ApiHost : IHost
     public IServiceProvider Services { get; }
 }
 
-
-
-
 public class BuilderContext : IBuilderContext
 {
     public IHostEnvironment Environment { get; }
@@ -49,16 +45,10 @@ public class BuilderContext : IBuilderContext
     }
 }
 
-
-
-
-
 public interface IBuilder
 {
-    public IServiceProvider ServiceProvider {get;}
+    public IServiceProvider ServiceProvider { get; }
 }
-
-
 
 public interface IBuilderContext
 {

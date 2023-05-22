@@ -4,7 +4,7 @@
         <PackageTags>Frank, Libraries, Brreg, Brønnøysundsregisterene, Brønnøysund, Register, Company, Norway, Norwegian, Enhetsregisteret, Selskap, Bedrift, Info</PackageTags>
         <Description>Have you ever wanted to use data from the norwegian company registry in your application, but it's been too much of a hassle? Now you can do it in this simple and easy manner</Description>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0"/>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.2"/>

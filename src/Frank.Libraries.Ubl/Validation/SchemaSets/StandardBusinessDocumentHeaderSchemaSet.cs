@@ -11,15 +11,15 @@ public class StandardBusinessDocumentHeaderSchemaSet : XmlSchemaSet
     {
         var assembly = typeof(StandardBusinessDocumentHeaderSchemaSet).Assembly;
         var standardBusinessDocumentHeaderXsdNames = assembly.GetManifestResourceNames()
-            .Where(x => x.StartsWith("Semine.Common.Ubl.xsd.sbdh.") && x.EndsWith(".xsd"))
-            .Distinct(StringComparer.InvariantCultureIgnoreCase);
+                                                             .Where(x => x.StartsWith("Semine.Common.Ubl.xsd.sbdh.") && x.EndsWith(".xsd"))
+                                                             .Distinct(StringComparer.InvariantCultureIgnoreCase);
         foreach (var manifestResourceName in standardBusinessDocumentHeaderXsdNames)
         {
             using var stream = assembly.GetManifestResourceStream(manifestResourceName);
             if (stream == null) continue;
             var schema = XmlSchema.Read(stream,
-                (sender, args) =>
-                    Errors.Add(new ValidationError(args.Exception, args.Message, args.Severity, manifestResourceName)));
+                                        (sender, args) =>
+                                            Errors.Add(new ValidationError(args.Exception, args.Message, args.Severity, manifestResourceName)));
             if (schema != null) Add(schema);
         }
 

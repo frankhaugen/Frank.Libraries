@@ -5,7 +5,7 @@ namespace Frank.Libraries.Ubl.Validation;
 public class ValidationError
 {
     public ValidationError(XmlSchemaException? exception, string message, XmlSeverityType severity,
-        string? documentName)
+                           string? documentName)
     {
         Severity = severity;
         DocumentName = documentName;

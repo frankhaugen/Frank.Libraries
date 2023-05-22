@@ -19,7 +19,9 @@ internal class XsdResolver : XmlUrlResolver
         if (!absoluteUri.IsFile || absoluteUri.Segments.Length < 2)
             return base.GetEntity(absoluteUri, role, ofObjectToReturn);
 
-        var documentName = "." + absoluteUri.Segments[^1].Trim('/');
+        var documentName = "."
+                           + absoluteUri.Segments[^1]
+                                        .Trim('/');
 
         var fileName = _fileNames.FirstOrDefault(x => x.EndsWith(documentName, StringComparison.Ordinal));
 

@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<xs:schema targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" 
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-    xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema targetNamespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
     <xs:include schemaLocation="DocumentIdentification.xsd"/>
     <xs:include schemaLocation="Partner.xsd"/>
     <xs:include schemaLocation="Manifest.xsd"/>

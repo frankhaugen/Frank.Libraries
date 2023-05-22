@@ -1,8 +1,7 @@
-﻿
-
-// ReSharper disable TailRecursiveCall
+﻿// ReSharper disable TailRecursiveCall
 
 // ReSharper disable once CheckNamespace
+
 namespace FluentValidation;
 
 /// <summary>

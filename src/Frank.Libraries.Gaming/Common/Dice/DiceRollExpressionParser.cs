@@ -16,8 +16,10 @@ public static class DiceRollExpressionParser
 
         foreach (Match match in matches)
         {
-            var diceCount = match.Groups[1].Value;
-            var diceSides = match.Groups[2].Value;
+            var diceCount = match.Groups[1]
+                                 .Value;
+            var diceSides = match.Groups[2]
+                                 .Value;
             if (string.IsNullOrEmpty(diceCount))
             {
                 diceCollection.Add(new Die(int.Parse(diceSides)));
@@ -32,7 +34,6 @@ public static class DiceRollExpressionParser
         }
 
 
-
         return new DiceRoll();
     }
 
@@ -41,5 +42,4 @@ public static class DiceRollExpressionParser
         var matches = System.Text.RegularExpressions.Regex.Matches(expression, Regex);
         return matches;
     }
-
 }

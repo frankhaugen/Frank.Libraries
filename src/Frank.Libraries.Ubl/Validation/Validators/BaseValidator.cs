@@ -14,9 +14,7 @@ internal abstract class BaseValidator<T>
         var xmlReaderSettings = new XmlReaderSettings()
         {
             ValidationType = ValidationType.Schema,
-            ValidationFlags = XmlSchemaValidationFlags.ProcessIdentityConstraints |
-                              XmlSchemaValidationFlags.ProcessSchemaLocation |
-                              XmlSchemaValidationFlags.ReportValidationWarnings,
+            ValidationFlags = XmlSchemaValidationFlags.ProcessIdentityConstraints | XmlSchemaValidationFlags.ProcessSchemaLocation | XmlSchemaValidationFlags.ReportValidationWarnings,
             Schemas = schemaSet,
             XmlResolver = xsdResolver
         };
@@ -37,7 +35,7 @@ internal abstract class BaseValidator<T>
     }
 
     private static void ValidationHandler(ICollection<ValidationError> errors, bool suppressWarnings,
-        ValidationEventArgs e, string? documentName = null)
+                                          ValidationEventArgs e, string? documentName = null)
     {
         if (suppressWarnings && e.Severity == XmlSeverityType.Warning)
             return;

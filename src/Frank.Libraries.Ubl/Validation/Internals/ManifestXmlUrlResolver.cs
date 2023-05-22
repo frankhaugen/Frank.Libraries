@@ -17,7 +17,8 @@ public class ManifestXmlUrlResolver : XmlUrlResolver
     public override object GetEntity(Uri absoluteUri, string role, Type ofObjectToReturn)
     {
         var resourceName =
-            _fileNames.FirstOrDefault(x => x.EndsWith(absoluteUri.Segments[^1].Trim('/'), StringComparison.Ordinal));
+            _fileNames.FirstOrDefault(x => x.EndsWith(absoluteUri.Segments[^1]
+                                                                 .Trim('/'), StringComparison.Ordinal));
 
         using var stream = _assembly.GetManifestResourceStream(resourceName);
 

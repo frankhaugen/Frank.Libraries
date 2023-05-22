@@ -35,6 +35,7 @@ public class BlobStorageClient : IBlobStorageClient
         {
             _containerSemaphore.Release();
         }
+
         BlobClient blobClient = containerClient.GetBlobClient(blobReference.BlobName);
         return blobClient;
     }

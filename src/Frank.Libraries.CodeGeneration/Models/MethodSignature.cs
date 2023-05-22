@@ -23,7 +23,11 @@ public record MethodSignature
 
     /// <inheritdoc />
     public override string ToString() => new StringBuilder()
-                                         .Append($"public{(IsStatic ? " static" : " ")}{(IsAsync ? "async " : "")}")
+                                         .Append($"public{(IsStatic
+                                             ? " static"
+                                             : " ")}{(IsAsync
+                                             ? "async "
+                                             : "")}")
                                          .AppendIf(ReturnType?.Name ?? string.Empty, ReturnType != null, "void")
                                          .AppendIf("? ", IsNullable, " ")
                                          .Append(Name)

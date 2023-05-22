@@ -7,9 +7,7 @@ namespace Frank.Libraries.DataProcessing.Cloning;
 
 public class Humbugg
 {
-
 }
-
 
 public class UriInfoBase
 {
@@ -32,9 +30,12 @@ public class PathSegments : IEnumerable<PathSegment>
     private readonly SortedList<int, string> _segments = new();
 
     public void Add(string value) => _segments.Add(_segments.Count, value);
-    public void AddRange(IEnumerable<string> values) => values.ToList().ForEach(Add);
 
-    public IEnumerator<PathSegment> GetEnumerator() => _segments.Select(x => new PathSegment(x.Key, x.Value)).GetEnumerator();
+    public void AddRange(IEnumerable<string> values) => values.ToList()
+                                                              .ForEach(Add);
+
+    public IEnumerator<PathSegment> GetEnumerator() => _segments.Select(x => new PathSegment(x.Key, x.Value))
+                                                                .GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
@@ -65,7 +66,8 @@ public class Headers : IEnumerable<Header>
 
     public void Add(string key, string value) => _headers.Add(key, value);
 
-    public IEnumerator<Header> GetEnumerator() => _headers.Select(x => new Header(x.Key, x.Value)).GetEnumerator();
+    public IEnumerator<Header> GetEnumerator() => _headers.Select(x => new Header(x.Key, x.Value))
+                                                          .GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }

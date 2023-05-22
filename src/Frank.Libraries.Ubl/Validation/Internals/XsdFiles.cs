@@ -30,5 +30,5 @@ internal class XsdFiles
         string.IsNullOrWhiteSpace(subFolder)
             ? _xsdNames.Where(x => x.Contains(rootFolder, StringComparison.Ordinal))
             : _xsdNames.Where(x =>
-                x.Contains(rootFolder, StringComparison.Ordinal) && x.Contains(subFolder, StringComparison.Ordinal));
+                                  x.Contains(rootFolder, StringComparison.Ordinal) && x.Contains(subFolder, StringComparison.Ordinal));
 }

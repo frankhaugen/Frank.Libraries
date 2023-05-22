@@ -98,7 +98,9 @@ public record Class
                                          .AppendIf(string.Join("\n", UsingNamespaces.Order()), UsingNamespaces.Any())
                                          .AppendIndentedLine(0, $"namespace {Namespace}")
                                          .AppendIndentedLine(0, "{")
-                                         .AppendIndentedLine(1, $"public {(IsStatic ? "static" : "")} class {Name}")
+                                         .AppendIndentedLine(1, $"public {(IsStatic
+                                             ? "static"
+                                             : "")} class {Name}")
                                          .AppendIf($" : {Extender}", !string.IsNullOrWhiteSpace(Extender))
                                          .AppendIndentedLine(1, "{")
                                          .AppendIndentedLines(Properties.Select(x => $"public {x.Value} {x.Key} " + "{ get; set; }")

@@ -10,9 +10,9 @@ public static class HttpSchemeExtensions
     {
         return httpScheme switch
         {
-            HttpScheme.Http => "http",
+            HttpScheme.Http  => "http",
             HttpScheme.Https => "https",
-            _ => throw new ArgumentOutOfRangeException(nameof(httpScheme), httpScheme, null)
+            _                => throw new ArgumentOutOfRangeException(nameof(httpScheme), httpScheme, null)
         };
     }
 }
@@ -22,10 +22,6 @@ public enum HttpScheme
     Http,
     Https
 }
-
-
-
-
 
 public static class DefaultPortExtensions
 {
@@ -42,8 +38,8 @@ public static class DefaultPortExtensions
 
 public class PortList : IEnumerable<Port>
 {
-    private readonly List<Port> _ports = new() {
-
+    private readonly List<Port> _ports = new()
+    {
         new Port { Value = 1, Name = "tcpmux" },
         new Port { Value = 2, Name = "compressnet" },
         new Port { Value = 3, Name = "compressnet" },
@@ -106,7 +102,6 @@ public class PortList : IEnumerable<Port>
         new Port { Value = 8443, Name = "https-alt" },
         new Port { Value = 8888, Name = "http-alt" },
         new Port { Value = 8889, Name = "https-alt" },
-
     };
 
     public Port Get(ushort value) => _ports.Single(x => x.Value.Equals(value));
@@ -118,7 +113,6 @@ public class PortList : IEnumerable<Port>
         return GetEnumerator();
     }
 }
-
 
 public class Port
 {

@@ -27,6 +27,7 @@ public class ServiceBusProducer : IServiceBusProducer
                 _logger.LogError("Failed to send large message");
                 return false;
             }
+
             message.Properties.Add(Constants.MessageProperties.LargeMessage, true);
         }
 

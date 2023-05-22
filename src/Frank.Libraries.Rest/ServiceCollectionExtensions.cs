@@ -41,4 +41,3 @@ public class Response<T> : Response, IResponse<T>
 {
     public T? Data { get; init; }
 }
-

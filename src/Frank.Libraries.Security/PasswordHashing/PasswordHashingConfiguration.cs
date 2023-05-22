@@ -99,7 +99,9 @@ public class HashingHelper
         {
             var hash = hashingService.ComputeHash(Encoding.UTF8.GetBytes(input));
 
-            result = string.Concat(Array.ConvertAll(hash, h => h.ToString($"{(upperCase ? "X2" : "x2")}")));
+            result = string.Concat(Array.ConvertAll(hash, h => h.ToString($"{(upperCase
+                ? "X2"
+                : "x2")}")));
         }
 
         return result;

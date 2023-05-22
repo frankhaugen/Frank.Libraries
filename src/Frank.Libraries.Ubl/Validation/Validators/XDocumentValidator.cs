@@ -18,7 +18,7 @@ internal class XDocumentValidator : BaseValidator<XDocument>
     };
 
     public override bool IsValid(XDocument document, in ICollection<ValidationError> errors,
-        bool suppressWarnings = false)
+                                 bool suppressWarnings = false)
     {
         if (document == null) throw new ArgumentNullException(nameof(document));
         if (document.Root == null)

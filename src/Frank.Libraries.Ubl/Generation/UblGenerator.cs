@@ -40,6 +40,4 @@ public class CSharpGenerator
 
         return stringBuilder.ToString();
     }
-
 }
-

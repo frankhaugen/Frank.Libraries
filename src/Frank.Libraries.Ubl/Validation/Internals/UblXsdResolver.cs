@@ -21,7 +21,8 @@ internal class UblXsdResolver : XmlUrlResolver
         if (absoluteUri.IsFile && absoluteUri.Segments.Length >= 2)
         {
             var resourceName = _fileNames.FirstOrDefault(x =>
-                x.EndsWith(absoluteUri.Segments[^1].Trim('/'), StringComparison.Ordinal));
+                                                             x.EndsWith(absoluteUri.Segments[^1]
+                                                                                   .Trim('/'), StringComparison.Ordinal));
 
             var manifestStream = xsdResourceAssembly.GetManifestResourceStream(resourceName);
             if (manifestStream == null)

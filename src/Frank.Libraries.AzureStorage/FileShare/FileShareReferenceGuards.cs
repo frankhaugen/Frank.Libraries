@@ -3,7 +3,10 @@ namespace Frank.Libraries.AzureStorage.FileShare;
 internal static class FileShareReferenceGuards
 {
     private static readonly char[] InvalidChars = { '\"', '\\', '/', '[', ']', ':', '|', '<', '>', '+', '=', ';', ',', '*', '?' };
-    private static readonly char[] ControlChars = Enumerable.Range(0, 32).Select(i => (char)i).ToArray();
+
+    private static readonly char[] ControlChars = Enumerable.Range(0, 32)
+                                                            .Select(i => (char)i)
+                                                            .ToArray();
 
     public static void EnsureValid(string shareName)
     {

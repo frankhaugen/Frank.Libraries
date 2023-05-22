@@ -61,7 +61,10 @@ public class TestGenerator : IGenerator
         writer.WriteLine(" ");
         writer.WithCurlyBraces($"public class {type.Name}Tests", () =>
         {
-            var constructorParametersDictionary = constructorParameters.ToDictionary(x => $"_{x.ParameterType.Name.ToCamelcase()}", x => $"private readonly {x.ParameterType.Name} _{(x.ParameterType.IsInterface ? x.ParameterType.Name.Remove(0, 1).ToCamelcase() : x.ParameterType.Name.ToCamelcase())} = Substitute.For<{x.ParameterType.Name}>();");
+            var constructorParametersDictionary = constructorParameters.ToDictionary(x => $"_{x.ParameterType.Name.ToCamelcase()}", x => $"private readonly {x.ParameterType.Name} _{(x.ParameterType.IsInterface
+                ? x.ParameterType.Name.Remove(0, 1)
+                   .ToCamelcase()
+                : x.ParameterType.Name.ToCamelcase())} = Substitute.For<{x.ParameterType.Name}>();");
             constructorParametersDictionary.DoForEach(x => writer.WriteLine(x.Value));
 
             writer.WriteLine($"private readonly ITestOutputHelper _outputHelper;");
@@ -216,7 +219,8 @@ public class TestGenerator : IGenerator
                 awaitPrefix = "await ";
             }
 
-            writer.WriteLine($"var result = {awaitPrefix}{thisParameter.Name.ToCamelcase()}.{method.Name}({string.Join(", ", methodParameters.Where(x => !x.HasDefaultValue).Select(x => x.Name))});");
+            writer.WriteLine($"var result = {awaitPrefix}{thisParameter.Name.ToCamelcase()}.{method.Name}({string.Join(", ", methodParameters.Where(x => !x.HasDefaultValue)
+                                                                                                                                             .Select(x => x.Name))});");
             writer.Write(writer.NewLine);
 
             writer.WriteLine("// Assert");
@@ -247,7 +251,9 @@ public class TestGenerator : IGenerator
                 awaitPrefix = "await ";
             }
 
-            writer.WriteLine($"var result = {awaitPrefix}_sut{type.Name}.{method.Name}({string.Join(", ", method.GetParameters().Where(x => !x.HasDefaultValue).Select(x => x.Name))});");
+            writer.WriteLine($"var result = {awaitPrefix}_sut{type.Name}.{method.Name}({string.Join(", ", method.GetParameters()
+                                                                                                                .Where(x => !x.HasDefaultValue)
+                                                                                                                .Select(x => x.Name))});");
             writer.Write(writer.NewLine);
 
             writer.WriteLine("// Assert");

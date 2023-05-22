@@ -9,6 +9,7 @@ public class BlobReference
         BlobReferenceGuards.GuardContainerName(ContainerName);
         BlobReferenceGuards.GuardBlobName(BlobName);
     }
+
     public string ContainerName { get; }
     public string BlobName { get; }
 }

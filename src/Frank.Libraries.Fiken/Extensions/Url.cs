@@ -48,7 +48,9 @@ public static class UrlExtensions
         if (url.Segments.Any())
         {
             stringBuilder.Append('/');
-            stringBuilder.Append($"{string.Join("/", url.Segments.OrderBy(x => x.Key).Where(x => !string.IsNullOrWhiteSpace(x.Value)).Select(x => x.Value))}");
+            stringBuilder.Append($"{string.Join("/", url.Segments.OrderBy(x => x.Key)
+                                                        .Where(x => !string.IsNullOrWhiteSpace(x.Value))
+                                                        .Select(x => x.Value))}");
         }
 
         return new Uri(stringBuilder.ToString());

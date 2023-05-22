@@ -31,12 +31,22 @@ public static class BlobReferenceGuards
             throw new ArgumentException("Blob name cannot be null or empty.");
         }
 
-        if (blobName.Length > (hasHierarchicalNamespace ? 1024 : 256))
+        if (blobName.Length
+            > (hasHierarchicalNamespace
+                ? 1024
+                : 256))
         {
-            throw new ArgumentException("Blob name cannot be more than " + (hasHierarchicalNamespace ? "1,024" : "256") + " characters long.");
+            throw new ArgumentException("Blob name cannot be more than "
+                                        + (hasHierarchicalNamespace
+                                            ? "1,024"
+                                            : "256")
+                                        + " characters long.");
         }
 
-        if (!hasHierarchicalNamespace && blobName.Split('/').Length > 254)
+        if (!hasHierarchicalNamespace
+            && blobName.Split('/')
+                       .Length
+            > 254)
         {
             throw new ArgumentException("Blob name cannot have more than 254 path segments.");
         }
