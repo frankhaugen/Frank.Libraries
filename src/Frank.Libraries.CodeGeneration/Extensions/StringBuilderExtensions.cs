@@ -1,5 +1,4 @@
-﻿using System.Text;
-using Frank.Libraries.CodeGeneration.Models;
+﻿using Frank.Libraries.CodeGeneration.Models;
 
 namespace Frank.Libraries.CodeGeneration.Extensions;
 

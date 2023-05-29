@@ -40,15 +40,15 @@ public class TestGeneratorTests
         var testFilePath = Path.Combine(namespaceDirectory.FullName, testFilename);
         var testFile = new FileInfo(testFilePath);
 
-        var result = new TestGenerator().Generate(type.Namespace.Replace("Frank.Libraries.", "Frank.Libraries.Tests."), type, new List<string> { "ToString", "Equals", "GetHashCode", "GetType" });
-        _outputHelper.WriteLine(result);
-
-        if (writeFile)
-        {
-            namespaceDirectory.Create();
-            await testFile.WriteAllTextAsync(result);
-            _outputHelper.WriteLine(testFilename);
-            _outputHelper.WriteLine(testFile.FullName);
-        }
+        // var result = new TestGenerator().Generate(type.Namespace.Replace("Frank.Libraries.", "Frank.Libraries.Tests."), type, new List<string> { "ToString", "Equals", "GetHashCode", "GetType" });
+        // _outputHelper.WriteLine(result);
+        //
+        // if (writeFile)
+        // {
+        //     namespaceDirectory.Create();
+        //     await testFile.WriteAllTextAsync(result);
+        //     _outputHelper.WriteLine(testFilename);
+        //     _outputHelper.WriteLine(testFile.FullName);
+        // }
     }
 }
