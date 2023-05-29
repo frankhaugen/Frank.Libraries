@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using Frank.Libraries.Extensions;
 using Frank.Libraries.Json;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Xml;
@@ -41,7 +42,7 @@ public class XmlExtensionsTests
 
         // Act
         var result = xmlData.DeserializeObjectFromXml<XmlTestModel>();
-        _outputHelper.WriteLine(result!.ToJson());
+        _outputHelper.WriteLine(result);
 
         // Assert
         result?.Salary.Should()

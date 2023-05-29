@@ -9,6 +9,7 @@ public class JsonContext<TEntity> : IJsonContext<TEntity> where TEntity : JsonEn
     private readonly IFileSystem _fileSystem;
     private readonly JsonConfiguration _options;
     private readonly List<TEntity> _tempCollection;
+    private readonly IJsonSerializer _jsonSerializer = new JsonSerializer();
 
     private List<TEntity> _collection;
     private bool _unsavedChanges;
@@ -33,23 +34,19 @@ public class JsonContext<TEntity> : IJsonContext<TEntity> where TEntity : JsonEn
         //if (!_collection.Any())
         //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
         //return _collection;
-        _fileSystem.File.ReadAllText(_filePath)
-                   .FromJson<List<TEntity>>();
+        _jsonSerializer.Deserialize<List<TEntity>>(_fileSystem.File.ReadAllText(_filePath));
 
     public IEnumerable<TEntity> GetCollection() =>
         //if (!_collection.Any())
         //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
         //return _collection;
-        _fileSystem.File.ReadAllText(_filePath)
-                   .FromJson<List<TEntity>>();
+        _jsonSerializer.Deserialize<List<TEntity>>(_fileSystem.File.ReadAllText(_filePath)).AsQueryable();
 
     public IQueryable<TEntity> GetQueryable() =>
         //if (!_collection.Any())
         //    _collection = _fileSystem.File.ReadAllText(_filePath).FromJson<List<TEntity>>();
         //return _collection.AsQueryable();
-        _fileSystem.File.ReadAllText(_filePath)
-                   .FromJson<List<TEntity>>()
-                   .AsQueryable();
+        _jsonSerializer.Deserialize<List<TEntity>>(_fileSystem.File.ReadAllText(_filePath)).AsQueryable();
 
     public TEntity GetById(Guid id) => _collection.FirstOrDefault(x => x.Id == id)!;
 
@@ -81,7 +78,7 @@ public class JsonContext<TEntity> : IJsonContext<TEntity> where TEntity : JsonEn
 
         GetCollection();
         _collection.AddRange(_tempCollection);
-        _fileSystem.File.WriteAllText(_filePath, _collection.ToJson());
+        _fileSystem.File.WriteAllText(_filePath, _jsonSerializer.Serialize(_collection));
         _tempCollection.Clear();
 
         GetCollection();
@@ -105,10 +102,9 @@ public class JsonContext<TEntity> : IJsonContext<TEntity> where TEntity : JsonEn
 
         if (!_fileSystem.File.Exists(_filePath))
         {
-            _fileSystem.File.WriteAllText(_filePath, new List<TEntity>().ToJson());
+            _fileSystem.File.WriteAllText(_filePath, _jsonSerializer.Serialize(new List<TEntity>()));
         }
 
-        _collection = _fileSystem.File.ReadAllText(_filePath)
-                                 .FromJson<List<TEntity>>();
+        _collection = _jsonSerializer.Deserialize<List<TEntity>>(_fileSystem.File.ReadAllText(_filePath));
     }
 }

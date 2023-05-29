@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Enums.Countries;
 using Frank.Libraries.Enums.Extensions;
+using Frank.Libraries.Extensions;
 using Frank.Libraries.Json;
 using Frank.Libraries.ML.LanguageDetection;
 using Xunit;
@@ -59,7 +60,7 @@ public class LanguageDetectorTests
         var detector = new LanguageDetectionService(new LanguageDetectionOptions());
         var result = detector.DetectAll(text);
 
-        _outputHelper.WriteLine(result.ToJson());
+        _outputHelper.WriteLine(result);
     }
 
     [Fact]

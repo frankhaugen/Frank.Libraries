@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Currency;
-using Frank.Libraries.Json;
+using Frank.Libraries.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 using Xunit.Abstractions;
@@ -32,7 +32,7 @@ public class CurrencyClientTests
         result.Should()
               .NotBeNull();
         // result.Success.Should().BeTrue();
-        _outputHelper.WriteLine(result.ToJson());
+        _outputHelper.WriteLine(result);
     }
 
     // [Fact]
@@ -45,7 +45,7 @@ public class CurrencyClientTests
         result.Should()
               .NotBeNull();
         // result.Success.Should().BeTrue();
-        _outputHelper.WriteLine(result.ToJson());
+        _outputHelper.WriteLine(result);
     }
 
     //[Fact]

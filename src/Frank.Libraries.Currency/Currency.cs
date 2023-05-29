@@ -9,10 +9,11 @@ public class Currency
     [JsonPropertyName("timestamp")] public long Timestamp { get; set; }
 
     [JsonPropertyName("date")]
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public DateTime Date { get; set; }
 
-    [JsonPropertyName("base")] public CurrencyCode Base { get; set; }
+    [JsonPropertyName("base")]
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public CurrencyCode Base { get; set; }
 
     [JsonPropertyName("rates")] public Dictionary<CurrencyCode, decimal> Rates { get; set; }
 }
