@@ -3,7 +3,6 @@ using FluentAssertions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Frank.Libraries.Xml;
 using Microsoft.Extensions.Options;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Xml;
 

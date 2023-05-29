@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Calculators.BeerCalculators;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Calculators.BeerCalculators;
 

@@ -2,7 +2,6 @@
 using Frank.Libraries.Currency;
 using Frank.Libraries.Extensions;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Currencies;

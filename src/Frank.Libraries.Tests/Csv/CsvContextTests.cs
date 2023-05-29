@@ -2,7 +2,6 @@ using FluentAssertions;
 using Frank.Libraries.Csv;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Csv;

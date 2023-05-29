@@ -1,7 +1,6 @@
 ﻿using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.Ubl;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Ubl;
 

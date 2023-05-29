@@ -1,6 +1,4 @@
-﻿using Xunit;
-
-namespace Frank.Libraries.Tests.Logging;
+﻿namespace Frank.Libraries.Tests.Logging;
 
 public class FileLoggingTests : LoggerTestBase
 {

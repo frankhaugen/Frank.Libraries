@@ -3,7 +3,6 @@ using System.Xml.Schema;
 using Frank.Libraries.Tests.TestingInfrastructure;
 using Frank.Libraries.Ubl.Generation;
 using Frank.Libraries.Ubl.Validation.Internals;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Ubl.CodeGeneration;

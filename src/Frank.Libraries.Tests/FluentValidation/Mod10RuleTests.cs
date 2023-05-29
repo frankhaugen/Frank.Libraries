@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using FluentValidation;
 using Frank.Libraries.FluentValidation;
-using Xunit;
 
 namespace Frank.Libraries.Tests.FluentValidation;
 

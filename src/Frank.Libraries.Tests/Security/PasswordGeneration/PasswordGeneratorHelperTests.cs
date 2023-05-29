@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Security.PasswordGeneration;
 using Frank.Libraries.Security.Shared;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Security.PasswordGeneration;

@@ -2,7 +2,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using WorkflowCore.Interface;
 using WorkflowCore.Models;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.DataProcessing.Workflows;

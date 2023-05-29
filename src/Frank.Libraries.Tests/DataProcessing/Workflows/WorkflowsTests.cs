@@ -1,7 +1,6 @@
 using Frank.Libraries.DataProcessing.Workflows;
 using Frank.Libraries.Logging.Extensions;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.DataProcessing.Workflows;

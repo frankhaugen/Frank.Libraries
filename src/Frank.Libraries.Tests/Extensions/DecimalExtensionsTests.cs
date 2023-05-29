@@ -1,6 +1,5 @@
 using FluentAssertions;
 using Frank.Libraries.Calculators.FluentCalculation;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Extensions;
 

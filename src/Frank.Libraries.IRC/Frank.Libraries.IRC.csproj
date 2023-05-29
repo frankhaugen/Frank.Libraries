@@ -1,22 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <PackageTags></PackageTags>
-        <Description>A fork of an existing repo that has been "dead" for ages. It's functionality is unclear at the moment</Description>
+        <PackageTags>Irc,Clien,Server</PackageTags>
+        <Description>My take on a modern IRC infrastructure</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Update="Properties\Resources.Designer.cs">
-            <DesignTime>True</DesignTime>
-            <AutoGen>True</AutoGen>
-            <DependentUpon>Resources.resx</DependentUpon>
-        </Compile>
+        <PackageReference Include="LiteDB" Version="5.0.16" />
+        <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.5" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     </ItemGroup>
-
     <ItemGroup>
-        <EmbeddedResource Update="Properties\Resources.resx">
-            <Generator>PublicResXFileCodeGenerator</Generator>
-            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
+      <Folder Include="Common\Extensions\" />
     </ItemGroup>
 
 </Project>

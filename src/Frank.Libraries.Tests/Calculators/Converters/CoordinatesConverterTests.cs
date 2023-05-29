@@ -2,7 +2,6 @@
 using Frank.Libraries.Calculators.Converters;
 using Frank.Libraries.Calculators.FluentCalculation;
 using Frank.Libraries.Calculators.Types;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Calculators.Converters;

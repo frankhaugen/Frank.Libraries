@@ -4,7 +4,6 @@ using FluentAssertions;
 using Frank.Libraries.Json;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
 using Microsoft.Extensions.Options;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Json;
 

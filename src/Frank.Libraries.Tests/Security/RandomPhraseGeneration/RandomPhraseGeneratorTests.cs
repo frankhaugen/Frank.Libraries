@@ -2,7 +2,6 @@
 using FluentAssertions;
 using Frank.Libraries.Security;
 using Frank.Libraries.Security.Shared;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration;

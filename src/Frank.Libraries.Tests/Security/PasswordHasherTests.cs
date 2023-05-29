@@ -1,6 +1,5 @@
 using FluentAssertions;
 using Frank.Libraries.Security;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Security;
 

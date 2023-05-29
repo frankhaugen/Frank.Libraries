@@ -1,5 +1,4 @@
 ﻿using Frank.Libraries.Security.RandomPhraseGeneration;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration;

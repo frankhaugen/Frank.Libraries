@@ -3,7 +3,6 @@ using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Extensions;
 

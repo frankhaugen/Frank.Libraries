@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Security.RandomPhraseGeneration;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Security.RandomPhraseGeneration;
 

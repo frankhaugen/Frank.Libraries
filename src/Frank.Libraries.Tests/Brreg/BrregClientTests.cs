@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Brreg;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Brreg;
 

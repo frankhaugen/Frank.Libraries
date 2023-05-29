@@ -3,7 +3,6 @@ using Bogus;
 using FluentAssertions;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Tests.TestingInfrastructure.Models;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Extensions;

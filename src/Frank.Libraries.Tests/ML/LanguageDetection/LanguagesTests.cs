@@ -2,7 +2,6 @@
 using Frank.Libraries.Enums.Extensions;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.ML.LanguageDetection;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.ML.LanguageDetection;

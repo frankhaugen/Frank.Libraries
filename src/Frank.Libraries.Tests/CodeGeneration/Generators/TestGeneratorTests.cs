@@ -3,7 +3,6 @@ using Frank.Libraries.CodeGeneration.Generators;
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Fiken.Clients;
 using Frank.Libraries.Gaming.Starfinder;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.CodeGeneration.Generators;

@@ -7,7 +7,6 @@ using Microsoft.Extensions.Options;
 using Mongo2Go;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using Xunit;
 
 namespace Frank.Libraries.Tests.MongoDb;
 

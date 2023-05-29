@@ -2,7 +2,6 @@
 using Frank.Libraries.Time;
 using NodaTime;
 using NodaTime.Testing;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Time;

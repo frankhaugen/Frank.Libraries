@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Calculators.Converters;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Calculators.Converters;
 

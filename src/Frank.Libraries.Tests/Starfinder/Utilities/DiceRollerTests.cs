@@ -2,7 +2,6 @@
 using Frank.Libraries.Extensions;
 using Frank.Libraries.Gaming.Starfinder.Ground.Models.Enums;
 using Frank.Libraries.Gaming.Starfinder.Utilities;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.Starfinder.Utilities;

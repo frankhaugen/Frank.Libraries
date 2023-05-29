@@ -1,7 +1,6 @@
 ﻿using AutoBogus;
 using FluentAssertions;
 using Frank.Libraries.SBDH;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace Frank.Libraries.Tests.SDBH;

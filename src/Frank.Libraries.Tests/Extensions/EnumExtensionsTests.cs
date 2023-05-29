@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using Frank.Libraries.Extensions;
 using Microsoft.VisualStudio.TestPlatform.PlatformAbstractions;
-using Xunit;
 
 namespace Frank.Libraries.Tests.Extensions;
 
