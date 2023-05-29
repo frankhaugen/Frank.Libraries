@@ -10,7 +10,7 @@
         <RepositoryType>Git</RepositoryType>
         <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
         <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2020 Frank R. Haugen</Copyright>
+        <Copyright>Copyright (c) 2023 Frank R. Haugen</Copyright>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageIcon>icon.png</PackageIcon>
