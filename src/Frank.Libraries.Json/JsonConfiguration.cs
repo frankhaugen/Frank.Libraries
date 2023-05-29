@@ -2,5 +2,5 @@
 
 public class JsonConfiguration
 {
-    public string Folder { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "Data");
+    public string Folder { get; set; } = Path.Combine(AppContext.BaseDirectory, "Data");
 }
