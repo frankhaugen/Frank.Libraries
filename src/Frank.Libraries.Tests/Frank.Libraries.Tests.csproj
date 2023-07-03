@@ -72,6 +72,7 @@
     </ItemGroup>
 
     <ItemGroup>
+        <Folder Include="Irc\" />
         <Folder Include="Logging\Sql\" />
         <Folder Include="ML" />
     </ItemGroup>

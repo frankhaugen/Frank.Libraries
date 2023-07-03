@@ -5,13 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Bedrock.Framework" Version="0.1.63-alpha.gf69fa1b135" />
         <PackageReference Include="LiteDB" Version="5.0.16" />
         <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.5" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Common\Extensions\" />
     </ItemGroup>
 
 </Project>
