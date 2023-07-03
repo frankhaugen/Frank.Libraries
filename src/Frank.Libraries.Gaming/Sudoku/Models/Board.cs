@@ -14,7 +14,7 @@ public class Board
         {
             for (var j = 1; j < 10; j++)
             {
-                output[i, j] = new Cell(Position.Initialize(i, j));
+                output[i, j] = new Cell(new Position(i, j));
             }
         }
 

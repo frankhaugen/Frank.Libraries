@@ -5,8 +5,8 @@
         <Description>Some simple CSV-tools to improve your applications</Description>
     </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="CsvHelper" Version="30.0.1"/>
-    </ItemGroup>
+
+
+
 
 </Project>
