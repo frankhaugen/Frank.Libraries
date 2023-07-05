@@ -12,6 +12,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.DataStorage\Frank.Libraries.DataStorage.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Calculators\Frank.Libraries.Calculators.csproj" />
         <ProjectReference Include="..\Frank.Libraries.ML\Frank.Libraries.ML.csproj" />
     </ItemGroup>

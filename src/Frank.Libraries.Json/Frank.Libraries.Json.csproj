@@ -1,13 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageTags>Json, Flat-File, DB, Database, Context, NOSQL, Repository, Pattern, Dependency Injection</PackageTags>
-        <Description>Ever wanted to use a flat-file NOSQL database? Here you'll find a repository-pattern-like IOC-ready set of tools, (among others), to give you this esoteric functionality</Description>
+        <PackageTags>Json, Dependency Injection, Mockable</PackageTags>
+        <Description>An interface for Json serialization. Uses DI and IOptions(JsonSerializationOptions), for the default JsonProvider</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
-        <PackageReference Include="System.IO.Abstractions" Version="19.2.29" />
-        <PackageReference Include="System.Text.Json" Version="7.0.2" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
     </ItemGroup>
 </Project>

@@ -15,7 +15,7 @@ public class JsonContextBenchmark
     private const string TestFolder = "c:/tests";
     private readonly IFileSystem _fileSystem;
     private readonly Guid _guid = Guid.NewGuid();
-    private JsonContext<JsonTestModel> _jsonContext;
+    // private JsonContext<JsonTestModel> _jsonContext;
 
     public JsonContextBenchmark()
     {
@@ -34,29 +34,29 @@ public class JsonContextBenchmark
     {
         var entities = new AutoFaker<JsonTestModel>().Generate(Records);
 
-        _jsonContext = new JsonContext<JsonTestModel>(Options.Create(new JsonConfiguration { Folder = Path.Combine(TestFolder, _guid.ToString()) }), _fileSystem);
-        _jsonContext.Add(entities);
-        _jsonContext.SaveChanges();
+        // _jsonContext = new JsonContext<JsonTestModel>(Options.Create(new JsonConfiguration { Folder = Path.Combine(TestFolder, _guid.ToString()) }), _fileSystem);
+        // _jsonContext.Add(entities);
+        // _jsonContext.SaveChanges();
     }
 
     [Benchmark]
     public void GetList()
     {
-        var result = _jsonContext.GetList();
+        // var result = _jsonContext.GetList();
     }
 
     [Benchmark]
     public void GetCollection()
     {
-        var result = _jsonContext.GetCollection();
-        var list = result.ToList();
+        // var result = _jsonContext.GetCollection();
+        // var list = result.ToList();
     }
 
     [Benchmark]
     public void GetQueryable()
     {
-        var result = _jsonContext.GetQueryable();
-        var list = result.ToList();
+        // var result = _jsonContext.GetQueryable();
+        // var list = result.ToList();
     }
 
     [GlobalCleanup]

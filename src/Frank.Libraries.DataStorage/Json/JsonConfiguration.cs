@@ -1,4 +1,4 @@
-﻿namespace Frank.Libraries.Json;
+﻿namespace Frank.Libraries.DataStorage.Json;
 
 public class JsonConfiguration
 {

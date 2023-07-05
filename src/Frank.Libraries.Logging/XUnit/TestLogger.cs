@@ -16,7 +16,7 @@ public class TestLogger : ILogger
 
     public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
-        _testOutputHelper.WriteLine($"{logLevel} - {eventId} - {_categoryName} - {exception.Message}");
+        _testOutputHelper.WriteLine($"{logLevel} - {eventId} - {_categoryName} - {exception?.Message}");
         _testOutputHelper.WriteLine(formatter(state, exception));
         // _testOutputHelper.WriteLine(new JsonFormatter().Format(state));
         _testOutputHelper.WriteLine("");
