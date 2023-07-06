@@ -1,72 +1,35 @@
-﻿using System.Text;
-
-namespace Frank.Libraries.ML.LanguageDetection;
+﻿namespace Frank.Libraries.ML.LanguageDetection;
 
 public class NGram
 {
     public const int NGramLength = 3;
 
-    private StringBuilder _buffer = new(" ", NGramLength);
+    private readonly StringBuilder _buffer = new(" ", NGramLength);
     private bool _capital;
 
     public void Add(char c)
     {
-        var lastChar = _buffer[^1];
-
-        if (lastChar == ' ')
+        if (_buffer[^1] == ' ')
         {
-            _buffer = new StringBuilder(" ");
+            _buffer.Clear()
+                   .Append(' ');
             _capital = false;
-            if (c == ' ')
-            {
-                return;
-            }
-        }
-        else if (_buffer.Length >= NGramLength)
-        {
-            _buffer.Remove(0, 1);
-        }
-
-        _buffer.Append(c);
-
-        if (char.IsUpper(c))
-        {
-            if (char.IsUpper(lastChar))
-            {
-                _capital = true;
-            }
+            if (c != ' ') _buffer.Append(c);
         }
         else
         {
-            _capital = false;
+            if (_buffer.Length >= NGramLength) _buffer.Remove(0, 1);
+            _buffer.Append(c);
+            _capital = char.IsUpper(c) && char.IsUpper(_buffer[^2]);
         }
     }
 
-    public string? Get(int n)
-    {
-        if (_capital)
-        {
-            return null;
-        }
+    public string? Get(int n) => !IsValidNGram(n) ? null : n != 1 ? _buffer.ToString(_buffer.Length - n, n) : GetCharacterAsNullableString();
 
-        if (n < 1)
-        {
-            return null;
-        }
+    private bool IsValidNGram(int n) => !_capital && n is >= 1 and <= NGramLength && _buffer.Length >= n;
 
-        if (n > NGramLength || _buffer.Length < n)
-        {
-            return null;
-        }
-
-        if (n != 1)
-        {
-            return _buffer.ToString(_buffer.Length - n, n);
-        }
-
-        var c = _buffer[^1];
-        return c == ' '
-            ? null
-            : c.ToString();
-    }
+    private string? GetCharacterAsNullableString() => _buffer[^1] == ' '
+        ? null
+        : _buffer[^1]
+            .ToString();
 }

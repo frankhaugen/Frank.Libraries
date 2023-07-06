@@ -1,7 +1,4 @@
-﻿using System.Text;
-using System.Text.RegularExpressions;
-
-namespace Frank.Libraries.ML.LanguageDetection;
+﻿namespace Frank.Libraries.ML.LanguageDetection;
 
 internal class TextNormalizer
 {

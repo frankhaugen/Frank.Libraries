@@ -26,6 +26,8 @@
 
     <ItemGroup>
         <InternalsVisibleTo Include="Frank.Libraries.Tests"/>
+        <InternalsVisibleTo Include="Frank.Libraries.Tests.Benchmark"/>
+        <InternalsVisibleTo Include="Frank.Libraries.Tests.Application"/>
         <InternalsVisibleTo Include="LINQPadQuery"/>
     </ItemGroup>
 </Project>
