@@ -1,5 +1,3 @@
-using Frank.Libraries.Gaming.Starfinder.Space.Models.Enums;
-
 namespace Frank.Libraries.Gaming.Starfinder.Space;
 
 public record ShipWeapon

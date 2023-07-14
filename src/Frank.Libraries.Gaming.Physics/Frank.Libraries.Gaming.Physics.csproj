@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Frank.Libraries.Physics</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Frank.Libraries.Gaming.Primitives\Frank.Libraries.Gaming.Primitives\Frank.Libraries.Gaming.Primitives.csproj" />
+    </ItemGroup>
+
+</Project>
