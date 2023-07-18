@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Rendering;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Rendering;
 
 public interface IGraphicsDeviceContext
 {
@@ -15,12 +15,4 @@ public interface IGraphicsDeviceContext
     void SetFullscreen(bool fullscreen);
 
     void SetVSync(bool vsync);
-
-    void SetFixedTimeStep(bool fixedTimeStep);
-
-    void SetShowFps(bool showFps);
-
-    void SetShowDebugInfo(bool showDebugInfo);
-
-    void SetShowMouse(bool showMouse);
 }

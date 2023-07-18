@@ -1,8 +1,8 @@
-﻿using Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+﻿using Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
+using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Ai;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Ai;
 
 public class PongAi
 {
@@ -26,9 +26,18 @@ public class PongAi
 
     private void MovePaddle(Vector2 targetPosition, Vector2 paddlePosition)
     {
-        if (targetPosition.Y > paddlePosition.Y)
+        var tolerance = 5;
+        var heightDifference = Distance(new Vector3(0,targetPosition.Y,0), new Vector3(0, paddlePosition.Y,0));
+        if (targetPosition.Y > paddlePosition.Y && heightDifference > tolerance)
             _paddle.MoveUp(Speed);
-        else if (targetPosition.Y < paddlePosition.Y)
+        else if (targetPosition.Y < paddlePosition.Y && heightDifference > tolerance)
             _paddle.MoveDown(Speed);
+    }
+
+    private static float Distance(Vector3 pointA, Vector3 pointB)
+    {
+        return (float)Math.Sqrt(Math.Pow((pointB.X - pointA.X), 2)
+                                + Math.Pow((pointB.Y - pointA.Y), 2)
+                                + Math.Pow((pointB.Z - pointA.Z), 2));
     }
 }

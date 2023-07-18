@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Collisions;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Collisions;
 
 public interface IRaycastable
 {

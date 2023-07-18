@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine;
 
 public static class WorldState
 {

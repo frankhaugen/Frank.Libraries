@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Premades;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Premades;
 
 public interface IBounceable
 {

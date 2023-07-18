@@ -1,9 +1,8 @@
 using FluentAssertions;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Premades;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Premades.Shapes;
+using Frank.Libraries.Gaming.Engines.MonoEngine;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Premades;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Premades.Shapes;
 using Microsoft.Xna.Framework;
 using Xunit.Abstractions;
 

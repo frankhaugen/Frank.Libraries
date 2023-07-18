@@ -1,7 +1,7 @@
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
+using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Helper;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Helper;
 
 public static class BoundsHelper
 {

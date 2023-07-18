@@ -3,25 +3,50 @@ using System.Numerics;
 
 namespace Frank.Libraries.Gaming.Primitives;
 
-public class Polygon<T> : IEnumerable<T> where T : struct
+public class Polygon : IEnumerable<Vector3>
 {
-    private readonly T[] _vertices;
+    private readonly Vector3[] _vertices;
+    private readonly Edge[] _edges;
 
-    internal Polygon(params T[] vertices)
+    private Polygon()
     {
-        if (typeof(T) != typeof(Vector2) && typeof(T) != typeof(Vector3))
-        {
-            throw new ArgumentException($"Invalid type {typeof(T).Name}. Only Vector2 and Vector3 are supported.");
-        }
+        _vertices = Array.Empty<Vector3>();
+        _edges = Array.Empty<Edge>();
+    }
 
-        _vertices = vertices ?? throw new ArgumentNullException(nameof(vertices));
+    public Polygon(IEnumerable<Vector3> vertices)
+    {
+        _vertices = vertices.ToArray();
+        _edges = new Edge[_vertices.Length];
+        for (var i = 0; i < _vertices.Length; i++)
+        {
+            var a = _vertices[i];
+            var b = _vertices[(i + 1) % _vertices.Length];
+            _edges[i] = new Edge(a, b);
+        }
     }
 
     public int Length => _vertices.Length;
 
-    public IEnumerator<T> GetEnumerator() => ((IEnumerable<T>)_vertices).GetEnumerator();
+    public IEnumerator<Vector3> GetEnumerator() => ((IEnumerable<Vector3>)_vertices).GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 
-    public T this[int i] => _vertices[i];
+    public Vector3 this[int i]
+    {
+        get => _vertices[i];
+        set => _vertices[i] = value;
+    }
+
+    public IEnumerable<Edge> Edges => _edges;
+
+    public Vector3 Position => _vertices.Aggregate((a, b) => a + b) / _vertices.Length;
+
+    public float Width => _vertices.Max(x => x.X) - _vertices.Min(x => x.X);
+
+    public float Height => _vertices.Max(x => x.Y) - _vertices.Min(x => x.Y);
+
+    public float Depth => _vertices.Max(x => x.Z) - _vertices.Min(x => x.Z);
+
+    public override string ToString() => $"Vertices: {string.Join(", ", _vertices)}";
 }

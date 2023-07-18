@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Physics;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Physics;
 
 public readonly struct RayCastResult
 {

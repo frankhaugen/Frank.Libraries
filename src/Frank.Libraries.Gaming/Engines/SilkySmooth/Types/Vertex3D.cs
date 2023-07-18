@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Gaming.Engines.SilkySmooth.Shaders.Types;
+namespace Frank.Libraries.Gaming.Engines.SilkySmooth.Types;
 
 public readonly struct Vertex3D
 {

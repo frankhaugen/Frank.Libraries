@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 using Frank.Libraries.Gaming.Engines.SilkySmooth.Shaders;
-using Frank.Libraries.Gaming.Engines.SilkySmooth.Shaders.Types;
+using Frank.Libraries.Gaming.Engines.SilkySmooth.Types;
 using Silk.NET.Input;
 using Silk.NET.Maths;
 using Silk.NET.OpenGL;

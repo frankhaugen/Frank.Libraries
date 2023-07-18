@@ -1,8 +1,8 @@
-﻿using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Premades.Shapes;
+﻿using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Premades.Shapes;
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Premades;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Premades;
 
 public class OuterBounds : GameObject, IOuterBounds
 {

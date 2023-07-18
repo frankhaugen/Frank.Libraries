@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Rendering;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Rendering;
 
 public class TextBox
 {

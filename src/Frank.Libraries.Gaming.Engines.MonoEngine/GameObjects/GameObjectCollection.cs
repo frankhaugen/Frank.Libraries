@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 
 public class GameObjectCollection : IEnumerable<GameObject>
 {

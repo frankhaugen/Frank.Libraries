@@ -1,16 +1,16 @@
 using System.Text;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Ai;
 using Frank.Libraries.Gaming.Engines.MonoEngine.Collisions;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Ai;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Physics;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Premades;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Rendering;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
+using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Physics;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Premades;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Rendering;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine;
 
 public class PongGame : Game
 {

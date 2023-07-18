@@ -2,16 +2,21 @@ using System.Drawing;
 
 namespace Frank.Libraries.Gaming.Primitives;
 
-public class Scene2D
+public class Scene
 {
-    public Scene2D(string name)
+    public Scene(string name)
     {
         Name = name;
+        Id = Guid.NewGuid();
     }
 
     public string Name { get; }
+
+    public Guid Id { get; }
+
     public Color BackgroundColor { get; set; }
-    public List<Polygon2D> Polygons { get; set; } = new();
+
+    public List<GameObject> GameObjects { get; } = new();
 
     public Rectangle SceneSize { get; set; }
 

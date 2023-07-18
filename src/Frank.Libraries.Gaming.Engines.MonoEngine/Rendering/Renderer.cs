@@ -1,9 +1,9 @@
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
+using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Rendering;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Rendering;
 
 public class Renderer : IRenderer
 {

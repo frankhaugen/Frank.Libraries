@@ -19,6 +19,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Frank.Libraries.Gaming.Engines.MonoEngine\Frank.Libraries.Gaming.Engines.MonoEngine.csproj" />
+      <ProjectReference Include="..\Frank.Libraries.Gaming.Rendering.MonoGame\Frank.Libraries.Gaming.Rendering.MonoGame.csproj" />
+      <ProjectReference Include="..\Frank.Libraries.Gaming.Rendering.OpenTk\Frank.Libraries.Gaming.Rendering.OpenTk.csproj" />
       <ProjectReference Include="..\Frank.Libraries.Gaming\Frank.Libraries.Gaming.csproj" />
     </ItemGroup>
 </Project>

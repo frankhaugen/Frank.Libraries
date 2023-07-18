@@ -1,4 +1,4 @@
-﻿namespace Frank.GameEngine.Lagacy.OldCore.Constants;
+﻿namespace Frank.Libraries.Gaming.Constants;
 
 public static class PhysicalConstants
 {

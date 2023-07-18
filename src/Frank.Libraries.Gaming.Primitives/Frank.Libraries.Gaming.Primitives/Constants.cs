@@ -80,6 +80,11 @@ public static class Constants
         public const float Rad2Deg2 = 57.29578f;
     }
 
+    public static class PhysicsConstants
+    {
+        public const float GunpowderEnergyPerGramInJoules = 3000;
+    }
+
     public static class AspectRatioConstants
     {
         public const float Landscape = 1.333f;
@@ -92,5 +97,18 @@ public static class Constants
         public const float Standard = 1.333f;
         public const float Widescreen = 1.6f;
         public const float SuperUltrawide = 3.37f;
+    }
+
+    public static class VectorConstants
+    {
+        public static class PhysicsConstants
+        {
+            public static readonly Vector3 EarthGravity = Down * TerrestrialConstants.EarthGravity;
+        }
+
+        public static Vector3 Up = new Vector3(0, 0, 1);
+        public static Vector3 Down = new Vector3(0, -1, 0);
+        public static Vector3 Left = new Vector3(-1,0, 0);
+        public static Vector3 Right = new Vector3(1, 0, 0);
     }
 }

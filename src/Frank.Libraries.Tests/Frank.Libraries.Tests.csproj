@@ -25,6 +25,7 @@
         <PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.19.0" />
         <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="19.2.29" />
         <PackageReference Include="Tortuga.TestMonkey" Version="0.3.0" />
+        <PackageReference Include="VarDump" Version="0.2.2" />
         <PackageReference Include="xunit" Version="2.4.2" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
             <PrivateAssets>all</PrivateAssets>
@@ -48,6 +49,7 @@
         <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Extensions\Frank.Libraries.Extensions.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Fiken\Frank.Libraries.Fiken.csproj" />
+        <ProjectReference Include="..\Frank.Libraries.Gaming.Core\Frank.Libraries.Gaming.Core.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Gaming.Engines.MonoEngine\Frank.Libraries.Gaming.Engines.MonoEngine.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Gaming.Physics\Frank.Libraries.Gaming.Physics.csproj" />
         <ProjectReference Include="..\Frank.Libraries.Gaming.Testing\Frank.Libraries.Gaming.Testing.csproj" />

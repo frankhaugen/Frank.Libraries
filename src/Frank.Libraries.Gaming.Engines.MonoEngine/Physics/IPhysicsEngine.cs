@@ -1,7 +1,7 @@
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Physics;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Physics;
 
 public interface IPhysicsEngine
 {

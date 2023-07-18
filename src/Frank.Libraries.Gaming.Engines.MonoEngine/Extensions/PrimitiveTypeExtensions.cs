@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
 
 public static class PrimitiveTypeExtensions
 {

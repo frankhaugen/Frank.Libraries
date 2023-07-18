@@ -1,8 +1,8 @@
-﻿using Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+﻿using Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
+using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Premades.Shapes;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Premades.Shapes;
 
 public class Circle : Shape
 {

@@ -1,4 +1,4 @@
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Premades.Shapes;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Premades.Shapes;
 
 public class Size
 {

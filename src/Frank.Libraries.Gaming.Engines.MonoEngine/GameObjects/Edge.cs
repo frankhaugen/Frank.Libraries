@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 
 public readonly struct Edge : IEquatable<Edge>
 {

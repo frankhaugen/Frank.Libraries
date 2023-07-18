@@ -1,3 +1,4 @@
+using Frank.Libraries.Gaming.Engines.SilkySmooth.Types;
 using Silk.NET.Input;
 
 namespace Frank.Libraries.Gaming.Engines.SilkySmooth;

@@ -1,7 +1,7 @@
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
 using Microsoft.Xna.Framework;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Physics;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Physics;
 
 public readonly struct Ray
 {

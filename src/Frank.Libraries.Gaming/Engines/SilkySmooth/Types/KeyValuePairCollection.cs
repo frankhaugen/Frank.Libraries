@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace Frank.Libraries.Gaming.Engines.SilkySmooth;
+namespace Frank.Libraries.Gaming.Engines.SilkySmooth.Types;
 
 public abstract class KeyValuePairCollection<TKey, TValue> : ICollection<KeyValuePair<TKey, TValue>>
 {

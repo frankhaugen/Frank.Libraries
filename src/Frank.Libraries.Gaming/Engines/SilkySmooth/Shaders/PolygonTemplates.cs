@@ -1,5 +1,5 @@
 using System.Drawing;
-using Frank.Libraries.Gaming.Engines.SilkySmooth.Shaders.Types;
+using Frank.Libraries.Gaming.Engines.SilkySmooth.Types;
 
 namespace Frank.Libraries.Gaming.Engines.SilkySmooth.Shaders;
 

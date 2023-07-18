@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Hosting;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine;
 
 public class MonoGameHost : BackgroundService
 {

@@ -1,6 +1,6 @@
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Rendering;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Rendering;
 
 public interface IRenderer
 {

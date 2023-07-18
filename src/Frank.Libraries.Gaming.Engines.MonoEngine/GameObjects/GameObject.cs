@@ -1,6 +1,6 @@
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
+using Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 
 public abstract class GameObject
 {

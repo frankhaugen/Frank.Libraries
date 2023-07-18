@@ -1,8 +1,8 @@
-using Frank.Libraries.Gaming.Engines.MonoGameEngine.GameObjects;
+using Frank.Libraries.Gaming.Engines.MonoEngine.GameObjects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Frank.Libraries.Gaming.Engines.MonoGameEngine.Extensions;
+namespace Frank.Libraries.Gaming.Engines.MonoEngine.Extensions;
 
 public static class EdgeExtensions
 {
