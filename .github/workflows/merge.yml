@@ -3,7 +3,6 @@ on:
   push:
     branches: master
 
-
 jobs:
   nugets:
     timeout-minutes: 10
@@ -14,19 +13,16 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 7.0.x
-    - name: Restore
-      run: dotnet restore -v m
-      working-directory: src
     - name: Build
-      run: dotnet build --configuration Release --no-restore -v m
+      run: .\build.ps1 -configuration Release
       working-directory: src
-    - name: Test
-      run: dotnet test Frank.Libraries.Tests --configuration Release --no-build --no-restore -v m /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-      working-directory: src
-    - name: Codecoverage
-      uses: codecov/codecov-action@v1.0.13
-      with:
-        fail_ci_if_error: false
+    #- name: Test
+    #  run: dotnet test --configuration Release -v m /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+    #  working-directory: src
+    #- name: Codecoverage
+    #  uses: codecov/codecov-action@v1.0.13
+    #  with:
+    #    fail_ci_if_error: false
     #- name: Sonarcloud
     #  uses: spoland/dotnet-sonarcloud-analysis@v1.0
     #  with:
@@ -37,15 +33,15 @@ jobs:
     #  env:
     #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Find Latest Tag
-      id: find
-      uses: oprypin/find-latest-tag@v1.0.4
-      with:
-        repository: ${{ github.repository }}
-        releases-only: true
-        
-    - name: Pack NuGet
-      run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER
-      working-directory: src
+    #- name: Find Latest Tag
+    #  id: find
+    #  uses: oprypin/find-latest-tag@v1.0.4
+    #  with:
+    #    repository: ${{ github.repository }}
+    #    releases-only: true   
+    #- name: Pack NuGet
+    #  run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER
     - name: Push NuGets
-      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+      working-directory: src
+      #run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
