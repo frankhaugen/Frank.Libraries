@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		nuget.config = nuget.config
 		global.json = global.json
 		Directory.Build.props = Directory.Build.props
+		build.ps1 = build.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frank.Libraries.AutoFixture", "Frank.Libraries.AutoFixture", "{F394BB2A-81FC-413E-ADDD-18667DA6E0E7}"

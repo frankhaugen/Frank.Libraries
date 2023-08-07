@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Time", "Frank.Libraries.Time\Frank.Libraries.Time.csproj", "{2F38F86E-BC1F-4959-A113-E9721286E373}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Time.Tests", "Frank.Libraries.Time.Tests\Frank.Libraries.Time.Tests.csproj", "{B0E3E365-8452-426C-A6E5-03046921B3EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2F38F86E-BC1F-4959-A113-E9721286E373}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F38F86E-BC1F-4959-A113-E9721286E373}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F38F86E-BC1F-4959-A113-E9721286E373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E3E365-8452-426C-A6E5-03046921B3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E3E365-8452-426C-A6E5-03046921B3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E3E365-8452-426C-A6E5-03046921B3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E3E365-8452-426C-A6E5-03046921B3EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

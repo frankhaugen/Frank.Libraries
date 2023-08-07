@@ -21,7 +21,6 @@
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
         <Copyright>Copyright (c) 2023 Frank R. Haugen</Copyright>
-        <PackageOutputDir>.artifacts\packages</PackageOutputDir>
     </PropertyGroup>
 
     <ItemGroup>
@@ -33,6 +32,7 @@
             <Pack>True</Pack>
             <PackagePath>readme.md</PackagePath>
         </None>
+
     </ItemGroup>
 
     <ItemGroup>
@@ -41,5 +41,4 @@
         <InternalsVisibleTo Include="Frank.Libraries.Tests.Application"/>
         <InternalsVisibleTo Include="LINQPadQuery"/>
     </ItemGroup>
-    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>
