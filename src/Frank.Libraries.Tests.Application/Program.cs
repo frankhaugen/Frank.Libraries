@@ -4,9 +4,7 @@ using Frank.Libraries.Gaming.Core;
 using Frank.Libraries.Gaming.Engines.ConsoleRenderer;
 using Frank.Libraries.Gaming.Engines.MonoEngine;
 using Frank.Libraries.Gaming.Engines.SilkySmooth;
-using Frank.Libraries.Gaming.Primitives;
 using Frank.Libraries.Gaming.Rendering.MonoGame;
-using Frank.Libraries.Gaming.Rendering.OpenTk;
 
 var builder = Host.CreateApplicationBuilder();
 
