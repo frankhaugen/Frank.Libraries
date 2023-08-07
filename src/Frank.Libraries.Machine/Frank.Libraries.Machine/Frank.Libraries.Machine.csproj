@@ -13,7 +13,7 @@
         <PackageReference Include="hidlibrary" Version="3.3.40" />
         <PackageReference Include="HidSharp" Version="2.1.0" />
         <PackageReference Include="ILGPU" Version="1.4.0" />
-        <PackageReference Include="IPNetwork2" Version="2.6.568" />
+        <PackageReference Include="IPNetwork2" Version="2.6.601" />
         <PackageReference Include="LibreHardwareMonitorLib" Version="0.9.2" />
         <PackageReference Include="Network" Version="6.2.5.23" />
         <PackageReference Include="NodaTime" Version="3.1.9" />

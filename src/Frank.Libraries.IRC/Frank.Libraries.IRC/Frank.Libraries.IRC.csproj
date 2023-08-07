@@ -6,9 +6,9 @@
 
     <ItemGroup>
         <PackageReference Include="Bedrock.Framework" Version="0.1.63-alpha.gf69fa1b135" />
-        <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.5" />
+        <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.9" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
     </ItemGroup>
 
     <ItemGroup>

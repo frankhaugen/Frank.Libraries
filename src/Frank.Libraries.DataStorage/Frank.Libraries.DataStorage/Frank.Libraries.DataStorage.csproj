@@ -5,9 +5,9 @@
 
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.5" />
+        <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.9" />
         <PackageReference Include="Namotion.Reflection" Version="2.1.2" />
-        <PackageReference Include="System.IO.Abstractions" Version="19.2.29" />
+        <PackageReference Include="System.IO.Abstractions" Version="19.2.51" />
         <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
     </ItemGroup>
 

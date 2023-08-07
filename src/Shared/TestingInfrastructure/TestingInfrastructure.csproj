@@ -6,23 +6,23 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Atc.Test" Version="1.0.75"/>
+        <PackageReference Include="Atc.Test" Version="1.0.77" />
         <PackageReference Include="AutoBogus" Version="2.13.1"/>
         <PackageReference Include="AutoMapper" Version="12.0.1"/>
         <PackageReference Include="ConsoleTableExt" Version="3.2.0"/>
-        <PackageReference Include="ConsoleTables" Version="2.4.2"/>
+        <PackageReference Include="ConsoleTables" Version="2.5.0" />
         <PackageReference Include="CsvHelper" Version="30.0.1"/>
         <PackageReference Include="Divergic.Logging.Xunit" Version="4.2.0"/>
         <PackageReference Include="EntityFrameworkCoreMock.NSubstitute" Version="2.4.0"/>
-        <PackageReference Include="Extensions.Configuration.Object" Version="1.0.6"/>
+        <PackageReference Include="Extensions.Configuration.Object" Version="1.1.0" />
         <PackageReference Include="FluentAssertions" Version="6.11.0"/>
-        <PackageReference Include="Markdig" Version="0.31.0"/>
+        <PackageReference Include="Markdig" Version="0.32.0" />
         <PackageReference Include="Mongo2Go" Version="3.1.3"/>
         <PackageReference Include="NodaTime.Testing" Version="3.1.9"/>
         <PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.19.0"/>
-        <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="19.2.29"/>
+        <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="19.2.51" />
         <PackageReference Include="Tortuga.TestMonkey" Version="0.3.0"/>
-        <PackageReference Include="VarDump" Version="0.2.2"/>
+        <PackageReference Include="VarDump" Version="0.2.5" />
     </ItemGroup>
 
     <ItemGroup>

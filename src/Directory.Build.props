@@ -1,26 +1,37 @@
-<Project>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <OutputType>Library</OutputType>
+        <IsPackable>true</IsPackable>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <BuildProjectReferences>true</BuildProjectReferences>
+
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <NoWarn>CS1570;CS1591;CS8618</NoWarn>
-        <IsPackable>true</IsPackable>
+
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
         <RepositoryType>Git</RepositoryType>
         <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
         <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
-        <Copyright>Copyright (c) 2023 Frank R. Haugen</Copyright>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <PackageIcon>icon.png</PackageIcon>
         <Authors>Frank R. Haugen</Authors>
-        <InvariantGlobalization>true</InvariantGlobalization>
+        <Copyright>Copyright (c) 2023 Frank R. Haugen</Copyright>
+        <PackageOutputDir>.artifacts\packages</PackageOutputDir>
     </PropertyGroup>
 
     <ItemGroup>
         <None Include="..\..\icon.png">
             <Pack>True</Pack>
+            <PackagePath>icon.png</PackagePath>
+        </None>
+        <None Include="readme.md" Condition="Exists('readme.md')">
+            <Pack>True</Pack>
+            <PackagePath>readme.md</PackagePath>
         </None>
     </ItemGroup>
 
