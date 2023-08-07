@@ -5,4 +5,5 @@
         <Description>A large collection of enums to simplify your life</Description>
     </PropertyGroup>
 
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

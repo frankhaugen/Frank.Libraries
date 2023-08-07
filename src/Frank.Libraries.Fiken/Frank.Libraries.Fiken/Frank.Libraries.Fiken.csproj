@@ -10,4 +10,5 @@
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="RestSharp" Version="110.2.0" />
     </ItemGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

@@ -12,4 +12,5 @@
         <!--          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->
         <!--        </PackageReference>-->
     </ItemGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

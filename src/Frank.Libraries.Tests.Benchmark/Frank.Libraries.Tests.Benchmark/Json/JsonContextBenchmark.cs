@@ -2,8 +2,6 @@
 using AutoBogus;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Loggers;
-using Frank.Libraries.Json;
-using Microsoft.Extensions.Options;
 
 namespace Frank.Libraries.Tests.Benchmark.Json;
 

@@ -1,7 +1,6 @@
 ﻿using Frank.Libraries.CodeGeneration.Extensions;
-using Frank.Libraries.CodeGeneration.Generators;
 
-namespace Frank.Libraries.CodeGeneration;
+namespace Frank.Libraries.CodeGeneration.Generators.Xunit;
 
 public class TestClassGenerator : IClassGenerator
 {

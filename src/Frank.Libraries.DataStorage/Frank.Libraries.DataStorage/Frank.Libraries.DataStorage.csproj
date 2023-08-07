@@ -17,6 +17,7 @@
 
 
     <ItemGroup>
-      <ProjectReference Include="..\Frank.Libraries.Json\Frank.Libraries.Json.csproj" />
+        <ProjectReference Include="..\..\Frank.Libraries.Json\Frank.Libraries.Json\Frank.Libraries.Json.csproj"/>
     </ItemGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

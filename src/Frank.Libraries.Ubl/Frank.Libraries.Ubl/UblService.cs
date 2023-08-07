@@ -1,6 +1,7 @@
 ﻿using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using Frank.Libraries.Ubl.UBL;
 
 namespace Frank.Libraries.Ubl;
 

@@ -9,4 +9,5 @@
         <PackageReference Include="AutoFixture" Version="4.18.0" />
     </ItemGroup>
 
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

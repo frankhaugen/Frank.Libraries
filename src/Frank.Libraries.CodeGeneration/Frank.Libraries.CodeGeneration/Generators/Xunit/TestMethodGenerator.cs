@@ -1,6 +1,6 @@
 using Frank.Libraries.CodeGeneration.Extensions;
 
-namespace Frank.Libraries.CodeGeneration.Generators;
+namespace Frank.Libraries.CodeGeneration.Generators.Xunit;
 
 public class TestMethodGenerator : IMethodGenerator
 {

@@ -1,18 +1,14 @@
-using System.Diagnostics;
-using System.Numerics;
-using Frank.Libraries.Gaming.Core;
 using Frank.Libraries.Gaming.Engines.ConsoleRenderer;
-using Frank.Libraries.Gaming.Engines.MonoEngine;
 using Frank.Libraries.Gaming.Engines.SilkySmooth;
-using Frank.Libraries.Gaming.Rendering.MonoGame;
+using Frank.Libraries.Tests.Application;
 
 var builder = Host.CreateApplicationBuilder();
 
 builder.Logging.ClearProviders();
 
-builder.Services.AddComponent<MonoGameHost>(services =>
-{
-}, false);
+// builder.Services.AddComponent<MonoGameHost>(services =>
+// {
+// }, false);
 
 builder.Services.AddComponent<SilkHost>(services =>
 {
@@ -27,12 +23,12 @@ builder.Services.AddComponent<RendererService>(services =>
 
 // var host = builder.Build();
 // host.Run();
-
-var gameEngine = new GameEngine();
-using var monogameEngine = new MonogameEngine(gameEngine);
-
-monogameEngine.Run();
-
+//
+// var gameEngine = new GameEngine();
+// using var monogameEngine = new MonogameEngine(gameEngine);
+//
+// monogameEngine.Run();
+//
 
 
 

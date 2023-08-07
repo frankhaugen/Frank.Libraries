@@ -3,4 +3,5 @@
     <PropertyGroup>
     </PropertyGroup>
 
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

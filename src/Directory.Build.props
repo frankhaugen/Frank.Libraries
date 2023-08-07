@@ -1,7 +1,7 @@
 <Project>
     <PropertyGroup>
-        <OutputType>Library</OutputType>
         <TargetFramework>net7.0</TargetFramework>
+        <OutputType>Library</OutputType>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -19,16 +19,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\icon.png">
+        <None Include="..\..\icon.png">
             <Pack>True</Pack>
-            <PackagePath></PackagePath>
         </None>
     </ItemGroup>
 
     <ItemGroup>
-        <InternalsVisibleTo Include="Frank.Libraries.Tests"/>
+        <InternalsVisibleTo Include="$(AssemblyName).Tests"/>
         <InternalsVisibleTo Include="Frank.Libraries.Tests.Benchmark"/>
         <InternalsVisibleTo Include="Frank.Libraries.Tests.Application"/>
         <InternalsVisibleTo Include="LINQPadQuery"/>
     </ItemGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

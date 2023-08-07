@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Xml.Serialization;
 
-namespace Frank.Libraries.Ubl;
+namespace Frank.Libraries.Ubl.UBL;
 
 /// <remarks />
 [XmlInclude(typeof(TargetCurrencyBaseRateType))]

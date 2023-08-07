@@ -1,6 +1,7 @@
 using System.Globalization;
+using Frank.Libraries.CodeGeneration.SyntaxFactories;
 
-namespace Frank.Libraries.CodeGeneration.Generators.Generators.Enums;
+namespace Frank.Libraries.CodeGeneration.Generators.Enums;
 
 public class CultureEnumGenerator : IEnumGenerator
 {

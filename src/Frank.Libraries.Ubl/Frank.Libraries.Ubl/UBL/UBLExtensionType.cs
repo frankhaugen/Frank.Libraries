@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Frank.Libraries.Ubl;
+namespace Frank.Libraries.Ubl.UBL;
 
 /// <remarks />
 [GeneratedCode("xsd", "4.8.3928.0")]

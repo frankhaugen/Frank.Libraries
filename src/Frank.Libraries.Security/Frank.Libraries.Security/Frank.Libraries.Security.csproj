@@ -9,4 +9,5 @@
         <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-nouns.txt" />
         <EmbeddedResource Include="RandomPhraseGeneration\Resources\english-verbs.txt" />
     </ItemGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

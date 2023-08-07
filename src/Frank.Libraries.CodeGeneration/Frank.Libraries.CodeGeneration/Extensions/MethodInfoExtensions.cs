@@ -1,5 +1,3 @@
-using Frank.Libraries.CodeGeneration.Generators;
-
 namespace Frank.Libraries.CodeGeneration.Extensions;
 
 public static class MethodInfoExtensions

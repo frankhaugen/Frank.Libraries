@@ -16,11 +16,12 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Libraries.RuleEngine\Frank.Libraries.RuleEngine.csproj" />
+        <ProjectReference Include="..\..\Frank.Libraries.RuleEngine\Frank.Libraries.RuleEngine\Frank.Libraries.RuleEngine.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
         <Folder Include="Engines\SilkySmooth\Input\" />
     </ItemGroup>
 
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

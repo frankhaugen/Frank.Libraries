@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj" />
+        <ProjectReference Include="..\..\Frank.Libraries.Enums\Frank.Libraries.Enums\Frank.Libraries.Enums.csproj"/>
     </ItemGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

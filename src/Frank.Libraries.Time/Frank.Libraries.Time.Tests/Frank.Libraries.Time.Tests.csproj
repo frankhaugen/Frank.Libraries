@@ -1,16 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
   <ItemGroup>
+      <PackageReference Include="ConsoleTableExt" Version="3.2.0"/>
+      <PackageReference Include="FluentAssertions" Version="6.11.0"/>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+      <PackageReference Include="NodaTime.Testing" Version="3.1.9"/>
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,4 +23,10 @@
     </PackageReference>
   </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\..\Shared\TestingInfrastructure\TestingInfrastructure.csproj"/>
+        <ProjectReference Include="..\Frank.Libraries.Time\Frank.Libraries.Time.csproj"/>
+    </ItemGroup>
+
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

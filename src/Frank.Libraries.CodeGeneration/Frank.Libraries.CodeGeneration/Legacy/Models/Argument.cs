@@ -1,6 +1,6 @@
 using Frank.Libraries.CodeGeneration.Extensions;
 
-namespace Frank.Libraries.CodeGeneration.Models;
+namespace Frank.Libraries.CodeGeneration.Legacy.Models;
 
 public record Argument
 {

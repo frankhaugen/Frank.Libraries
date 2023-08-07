@@ -4,4 +4,5 @@
         <PackageTags>Frank, Libraries, SBDH, Standard Business Document Header, XML</PackageTags>
         <Description>Models and tools for the SBDH or Standard Business Document Header</Description>
     </PropertyGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

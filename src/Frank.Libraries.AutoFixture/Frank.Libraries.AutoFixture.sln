@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.AutoFixture", "Frank.Libraries.AutoFixture\Frank.Libraries.AutoFixture.csproj", "{6324CAD5-F28D-4AE5-AD5F-00A83B8C9F76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.AutoFixture.Tests", "Frank.Libraries.AutoFixture.Tests\Frank.Libraries.AutoFixture.Tests.csproj", "{E80B4078-6DD9-4D53-BA8E-681A04D12727}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{6324CAD5-F28D-4AE5-AD5F-00A83B8C9F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6324CAD5-F28D-4AE5-AD5F-00A83B8C9F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6324CAD5-F28D-4AE5-AD5F-00A83B8C9F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E80B4078-6DD9-4D53-BA8E-681A04D12727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E80B4078-6DD9-4D53-BA8E-681A04D12727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E80B4078-6DD9-4D53-BA8E-681A04D12727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E80B4078-6DD9-4D53-BA8E-681A04D12727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

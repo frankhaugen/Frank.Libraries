@@ -1,4 +1,4 @@
-﻿using Frank.Libraries.CodeGeneration.Models;
+﻿using Frank.Libraries.CodeGeneration.Legacy.Models;
 
 namespace Frank.Libraries.CodeGeneration.Extensions;
 

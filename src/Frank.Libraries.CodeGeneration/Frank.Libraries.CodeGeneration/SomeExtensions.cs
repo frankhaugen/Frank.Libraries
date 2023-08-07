@@ -1,4 +1,4 @@
-namespace Frank.Libraries.CodeGeneration.Generators;
+namespace Frank.Libraries.CodeGeneration;
 
 public static class SomeExtensions
 {

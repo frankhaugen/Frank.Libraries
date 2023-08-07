@@ -17,4 +17,5 @@
     <ItemGroup>
         <Folder Include="File\" />
     </ItemGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

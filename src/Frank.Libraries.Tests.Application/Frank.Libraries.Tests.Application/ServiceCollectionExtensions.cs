@@ -1,3 +1,5 @@
+namespace Frank.Libraries.Tests.Application;
+
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddComponent<THostedService>(this IServiceCollection services, Action<IServiceCollection> registerServices, bool shouldRun)

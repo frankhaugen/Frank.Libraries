@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace Frank.Libraries.CodeGeneration.Generators;
+namespace Frank.Libraries.CodeGeneration;
 
 internal static class EnumNameGuards
 {

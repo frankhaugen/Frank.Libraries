@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Frank.Libraries.Gaming\Frank.Libraries.Gaming.csproj" />
+        <ProjectReference Include="..\..\Frank.Libraries.Gaming\Frank.Libraries.Gaming\Frank.Libraries.Gaming.csproj"/>
     </ItemGroup>
+    <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>

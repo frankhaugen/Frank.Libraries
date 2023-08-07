@@ -1,4 +1,4 @@
-﻿namespace Frank.Libraries.CodeGeneration.Models;
+﻿namespace Frank.Libraries.CodeGeneration.Legacy.Models;
 
 public static class Helpers
 {

@@ -1,5 +1,3 @@
-using System.Text.Json;
-
 namespace Frank.Libraries.Json;
 
 public interface IJsonSerializer
