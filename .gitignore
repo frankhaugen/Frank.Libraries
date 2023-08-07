@@ -352,3 +352,4 @@ MigrationBackup/
 
 # Rider
 /Frank.Libraries.Tests/coverage.opencover.xml
+.idea/
