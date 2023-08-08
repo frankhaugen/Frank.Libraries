@@ -14,7 +14,7 @@ jobs:
       with:
         dotnet-version: 7.0.x
     - name: Build
-      run: .\build.ps1 -configuration Release
+      run: build.ps1 -configuration Release
       working-directory: src
     #- name: Test
     #  run: dotnet test --configuration Release -v m /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
