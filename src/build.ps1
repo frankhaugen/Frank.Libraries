@@ -39,7 +39,7 @@ if (Test-Path $publishDir) { Remove-Item "$publishDir/*" -Recurse }
 if (Test-Path $packageDir) { Remove-Item "$packageDir/*" -Recurse }
 
 # Build the solution in the specified mode
-Write-Host "Building solution in $configuration mode with version $version..." -ForegroundColor DarkCyan
+Write-Host "Building solution in $configuration mode with version $version$versionSuffix..." -ForegroundColor DarkCyan
 dotnet build $tempSln --configuration $configuration /p:Version=$version | Out-Null
 Write-Host "Build in $configuration mode completed." -ForegroundColor Green
 
