@@ -13,9 +13,14 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 7.0.x
+    - name: Set execution permissions for build.ps1
+      run: chmod +x src/build.ps1
     - name: Build
-      run: build.ps1 -configuration Release
+      run: pwsh src/build.ps1 -configuration Release
+    - name: Push NuGets
+      run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
       working-directory: src
+    
     #- name: Test
     #  run: dotnet test --configuration Release -v m /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
     #  working-directory: src
@@ -41,7 +46,5 @@ jobs:
     #    releases-only: true   
     #- name: Pack NuGet
     #  run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER
-    - name: Push NuGets
-      run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
-      working-directory: src
-      #run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+    
+    #run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
