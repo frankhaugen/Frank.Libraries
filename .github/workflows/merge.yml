@@ -16,8 +16,14 @@ jobs:
     - name: Set execution permissions for build.ps1
       run: chmod +x build.ps1
       working-directory: src
+    - name: Find Latest Tag
+      id: find
+      uses: oprypin/find-latest-tag@v1.0.4
+      with:
+       repository: ${{ github.repository }}
+       releases-only: true   
     - name: Build
-      run: pwsh build.ps1 -configuration Release
+      run: pwsh build.ps1 -configuration Release -version ${{ steps.find.outputs.tag }} -versionSuffix "-build$GITHUB_RUN_NUMBER"
       working-directory: src
     - name: Push NuGets
       run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
@@ -40,13 +46,3 @@ jobs:
     #  env:
     #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #- name: Find Latest Tag
-    #  id: find
-    #  uses: oprypin/find-latest-tag@v1.0.4
-    #  with:
-    #    repository: ${{ github.repository }}
-    #    releases-only: true   
-    #- name: Pack NuGet
-    #  run: dotnet pack --configuration Release -v m --output nupkgs -p:PackageVersion=${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER
-    
-    #run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}-build$GITHUB_RUN_NUMBER.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
