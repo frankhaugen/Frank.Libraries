@@ -13,6 +13,7 @@
         <InvariantGlobalization>true</InvariantGlobalization>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
         <RepositoryType>Git</RepositoryType>
         <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
         <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
@@ -30,7 +31,7 @@
         </None>
         <None Include="readme.md" Condition="Exists('readme.md')">
             <Pack>True</Pack>
-            <PackagePath>readme.md</PackagePath>
+            <PackagePath>\</PackagePath>
         </None>
 
     </ItemGroup>
