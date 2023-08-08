@@ -1,11 +1,25 @@
 param (
     [Parameter(Mandatory=$false)]
     [ValidateSet('Debug', 'Release')]
-    [string]$configuration = 'Debug'
+    [string]$configuration = 'Debug',
+    [Parameter(Mandatory=$false)]
+    [string]$version = (Get-Date -Format 'yyyy.MM.dd'),
+    [Parameter(Mandatory=$false)]
+    [string]$build = (Get-Date -Format 'HHmmss'),
+    [Parameter(Mandatory=$false)]
+    [string]$versionSuffix = ''
 )
 
-# Get the current date and time
-$date = Get-Date -Format 'yyyy.MM.dd.HHmmss'
+function RemoveProjectsFromSolution ($solutionPath, $projectsToRemove) {
+    Write-Host "Removing projects from solution:" -ForegroundColor DarkCyan
+    foreach ($project in $projectsToRemove) {
+        Write-Host "    $($project.Name)" -ForegroundColor DarkCyan
+        dotnet sln $solutionPath remove $project.FullName | Out-Null
+    }
+}
+
+$version = "$version.$build"
+
 $publishDir = "./.artifacts/publish"
 $packageDir = "./.artifacts/packages"
 $tempSln = "./temp.sln"
@@ -18,27 +32,25 @@ Copy-Item $solution -Destination $tempSln
 $testProjects = Get-ChildItem -Path . -Filter *.csproj -Recurse | Where-Object {$_.FullName.Contains(".Tests") -or $_.FullName.Contains("TestingInfrastructure")}
 
 # Remove all test projects from the temporary solution
-foreach ($project in $testProjects) {
-    Write-Host "Removing $($project.FullName) from the solution..." -ForegroundColor DarkCyan
-    dotnet sln $tempSln remove $project.FullName
-}
+RemoveProjectsFromSolution -solutionPath $tempSln -projectsToRemove $testProjects
 
 # Clean output directories
 if (Test-Path $publishDir) { Remove-Item "$publishDir/*" -Recurse }
 if (Test-Path $packageDir) { Remove-Item "$packageDir/*" -Recurse }
 
 # Build the solution in the specified mode
-Write-Host "Building solution in $configuration mode with version $date..." -ForegroundColor DarkCyan
-dotnet build $tempSln --configuration $configuration /p:Version=$date
+Write-Host "Building solution in $configuration mode with version $version..." -ForegroundColor DarkCyan
+dotnet build $tempSln --configuration $configuration /p:Version=$version | Out-Null
 Write-Host "Build in $configuration mode completed." -ForegroundColor Green
 
 # Publish the solution and pack nugets
 Write-Host "Publishing the solution..." -ForegroundColor DarkCyan
-dotnet publish $tempSln --configuration $configuration --output $publishDir /p:Version=$date
+dotnet publish $tempSln --configuration $configuration --output $publishDir /p:Version=$version /p:PackageVersion=$version$versionSuffix | Out-Null
 Write-Host "Solution has been published." -ForegroundColor Green
 
+# Pack NuGet packages
 Write-Host "Packing NuGet packages..." -ForegroundColor DarkCyan
-dotnet pack $tempSln --configuration $configuration --output $packageDir /p:Version=$date
+dotnet pack $tempSln --configuration $configuration --output $packageDir /p:Version=$version /p:PackageVersion=$version$versionSuffix | Out-Null
 Write-Host "NuGet packages have been packed." -ForegroundColor Green
 
 # Delete the temporary solution file
