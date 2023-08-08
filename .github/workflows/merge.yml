@@ -19,12 +19,6 @@ jobs:
     - name: Build
       run: pwsh build.ps1 -configuration Release
       working-directory: src
-    - name: Create directories
-      run: mkdir ".artifacts/packages"
-      working-directory: src
-    - name: List directory contents
-      run: ls -R
-      working-directory: src
     - name: Push NuGets
       run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
       working-directory: src
