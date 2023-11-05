@@ -11,9 +11,10 @@
 
     <ItemGroup>
         <PackageReference Include="CodegenCS.Core" Version="3.3.1" />
-        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.6.0" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.7.0" PrivateAssets="all" />
         <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all" />
         <PackageReference Include="System.CodeDom" Version="7.0.0" />
     </ItemGroup>
+    
     <Import Project="..\..\Directory.Build.props" Condition="Exists('..\..\Directory.Build.props')"/>
 </Project>
