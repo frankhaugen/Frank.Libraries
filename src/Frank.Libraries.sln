@@ -204,6 +204,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{77EEA3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingInfrastructure", "Shared\TestingInfrastructure\TestingInfrastructure.csproj", "{5CCB0894-23EF-4F9B-95BB-60A2B8D612A5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHubActions", "GitHubActions", "{641036F4-FCB3-4B2E-90A2-D4F659EF25FE}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\codeql-analysis.yml = ..\.github\workflows\codeql-analysis.yml
+		..\.github\workflows\merge.yml = ..\.github\workflows\merge.yml
+		..\.github\workflows\prerelease.yml = ..\.github\workflows\prerelease.yml
+		..\.github\workflows\pullrequest.yml = ..\.github\workflows\pullrequest.yml
+		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1015,5 +1024,6 @@ Global
 		{0D9A4F23-4921-4B9C-B96D-985090AD05E3} = {BF4508F8-DE53-41A3-80D5-2C39B1015D78}
 		{C410B0FE-953A-4944-8E19-CE20711FE7DC} = {BF4508F8-DE53-41A3-80D5-2C39B1015D78}
 		{5CCB0894-23EF-4F9B-95BB-60A2B8D612A5} = {77EEA39D-1A91-43EE-A903-4ED47C07520C}
+		{641036F4-FCB3-4B2E-90A2-D4F659EF25FE} = {B59B3D8F-E264-43C5-AC5D-B2C9D016A6FA}
 	EndGlobalSection
 EndGlobal

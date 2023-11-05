@@ -28,21 +28,3 @@ jobs:
     - name: Push NuGets
       run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
       working-directory: src
-      
-    #- name: Test
-    #  run: dotnet test --configuration Release -v m /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
-    #  working-directory: src
-    #- name: Codecoverage
-    #  uses: codecov/codecov-action@v1.0.13
-    #  with:
-    #    fail_ci_if_error: false
-    #- name: Sonarcloud
-    #  uses: spoland/dotnet-sonarcloud-analysis@v1.0
-    #  with:
-    #    project-key: frankhaugen_Frank.Libraries
-    #    sonar-host-url: https://sonarcloud.io
-    #    sonar-organization: frankhaugen
-    #    opencover-reports-paths: "**/*.opencover.xml"
-    #  env:
-    #    SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

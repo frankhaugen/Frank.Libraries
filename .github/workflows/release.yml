@@ -4,32 +4,29 @@ on:
   release:
     branches: master
     type: published
+    
 jobs:
   nugets:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '6.0.x'
-    
-    - name: Find Latest Tag
-      id: find
-      uses: oprypin/find-latest-tag@v1.0.4
-      with:
-        repository: ${{ github.repository }}
-        releases-only: true
-    
-    - name: Pack
-      working-directory: src
-      run: dotnet pack --configuration Release -p:Version=${{ steps.find.outputs.tag }} -v m
-    
-    - uses: AButler/upload-release-assets@v2.0
-      with:
-        files: "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg"
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: Publish
-      working-directory: src
-      run: dotnet nuget push "**/Frank.Libraries.*.${{ steps.find.outputs.tag }}.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
-
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 7.0.x
+      - name: Set execution permissions for build.ps1
+        run: chmod +x build.ps1
+        working-directory: src
+      - name: Find Latest Tag
+        id: find
+        uses: oprypin/find-latest-tag@v1.0.4
+        with:
+          repository: ${{ github.repository }}
+          releases-only: true
+      - name: Build
+        run: pwsh build.ps1 -configuration Release -version ${{ steps.find.outputs.tag }} -build $GITHUB_RUN_NUMBER
+        working-directory: src
+      - name: Push NuGets
+        run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
+        working-directory: src
