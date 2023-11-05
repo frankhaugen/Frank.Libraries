@@ -5,7 +5,7 @@ param (
     [Parameter(Mandatory=$false)]
     [string]$version = (Get-Date -Format 'yyyy.MM.dd'),
     [Parameter(Mandatory=$false)]
-    [string]$build = (Get-Date -Format 'HHmmss'),
+    [string]$build = '',
     [Parameter(Mandatory=$false)]
     [string]$versionSuffix = ''
 )
@@ -18,7 +18,17 @@ function RemoveProjectsFromSolution ($solutionPath, $projectsToRemove) {
     }
 }
 
-$version = "$version.$build"
+# If build number is specified and it is "GetTime" then get the current time in HHmm format
+if ($build -eq 'GetTime') {
+    Write-Host "Build number is set to 'GetTime'. Getting current time in HHmmss format..." -ForegroundColor DarkCyan
+    $build = (Get-Date -Format 'HHmmss')
+}
+
+# Set the version with the build number if it is specified
+if ($build -ne '') {
+    Write-Host "Build number is specified. Setting version to $version.$build" -ForegroundColor DarkCyan
+    $version = "$version.$build"
+}
 
 $publishDir = "./.artifacts/publish"
 $packageDir = "./.artifacts/packages"

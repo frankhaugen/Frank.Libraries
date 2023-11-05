@@ -25,7 +25,7 @@ jobs:
           repository: ${{ github.repository }}
           releases-only: true
       - name: Build
-        run: pwsh build.ps1 -configuration Release -version ${{ steps.find.outputs.tag }} -build $GITHUB_RUN_NUMBER
+        run: pwsh build.ps1 -configuration Release -version ${{ steps.find.outputs.tag }}
         working-directory: src
       - name: Push NuGets
         run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
