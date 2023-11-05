@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Ubl", "Frank.Libraries.Ubl\Frank.Libraries.Ubl.csproj", "{60639810-9651-4CEB-9DB6-DA6F37F1B733}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frank.Libraries.Ubl.Tests", "Frank.Libraries.Ubl.Tests\Frank.Libraries.Ubl.Tests.csproj", "{4EA40AC0-F242-4A46-A33D-D9CAB9A10ECB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{60639810-9651-4CEB-9DB6-DA6F37F1B733}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60639810-9651-4CEB-9DB6-DA6F37F1B733}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60639810-9651-4CEB-9DB6-DA6F37F1B733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EA40AC0-F242-4A46-A33D-D9CAB9A10ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA40AC0-F242-4A46-A33D-D9CAB9A10ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA40AC0-F242-4A46-A33D-D9CAB9A10ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA40AC0-F242-4A46-A33D-D9CAB9A10ECB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
