@@ -206,10 +206,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingInfrastructure", "Sh
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHubActions", "GitHubActions", "{641036F4-FCB3-4B2E-90A2-D4F659EF25FE}"
 	ProjectSection(SolutionItems) = preProject
-		..\.github\workflows\codeql-analysis.yml = ..\.github\workflows\codeql-analysis.yml
 		..\.github\workflows\merge.yml = ..\.github\workflows\merge.yml
-		..\.github\workflows\prerelease.yml = ..\.github\workflows\prerelease.yml
-		..\.github\workflows\pullrequest.yml = ..\.github\workflows\pullrequest.yml
 		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
 	EndProjectSection
 EndProject
