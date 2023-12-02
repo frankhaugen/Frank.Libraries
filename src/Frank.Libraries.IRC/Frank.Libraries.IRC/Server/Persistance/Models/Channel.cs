@@ -1,18 +1,18 @@
-﻿using Frank.Libraries.DataStorage.Abstractions;
+﻿using Frank.Libraries.DataStorage;
 
 namespace Frank.Libraries.IRC.Server.Persistance.Models;
 
-public class IrcChannel : IEntity
+public class IrcChannel : IKeyed
 {
     public Guid Id { get; set; }
 }
 
-public class IrcUser : IEntity
+public class IrcUser : IKeyed
 {
     public Guid Id { get; set; }
 }
 
-public class IrcUserChannel : IEntity
+public class IrcUserChannel : IKeyed
 {
     public Guid Id { get; set; }
 }

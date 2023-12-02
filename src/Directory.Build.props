@@ -13,26 +13,26 @@
         <InvariantGlobalization>true</InvariantGlobalization>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
-        <PackageReadmeFile>readme.md</PackageReadmeFile>
+<!--        <PackageReadmeFile>readme.md</PackageReadmeFile>-->
         <RepositoryType>Git</RepositoryType>
         <RepositoryUrl>https://github.com/frankhaugen/Frank.Libraries</RepositoryUrl>
         <PackageProjectUrl>https://github.com/frankhaugen/Frank.Libraries</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageIcon>icon.png</PackageIcon>
+<!--        <PackageIcon condition="Exists('icon.png')">icon.png</PackageIcon>-->
         <Authors>Frank R. Haugen</Authors>
         <Copyright>Copyright (c) 2023 Frank R. Haugen</Copyright>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\..\icon.png">
-            <Pack>True</Pack>
-            <PackagePath>icon.png</PackagePath>
-        </None>
-        <None Include="readme.md" Condition="Exists('readme.md')">
-            <Pack>True</Pack>
-            <PackagePath>\</PackagePath>
-        </None>
+<!--        <None Include="..\..\icon.png">-->
+<!--            <Pack>True</Pack>-->
+<!--            <PackagePath>icon.png</PackagePath>-->
+<!--        </None>-->
+<!--        <None Include="readme.md" Condition="Exists('readme.md')">-->
+<!--            <Pack>True</Pack>-->
+<!--            <PackagePath>\</PackagePath>-->
+<!--        </None>-->
 
     </ItemGroup>
 

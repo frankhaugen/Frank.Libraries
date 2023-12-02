@@ -1,43 +1,26 @@
-﻿using System.Linq.Expressions;
-using Frank.Libraries.DataStorage.Abstractions;
-
 namespace Frank.Libraries.DataStorage.Json;
 
-public class JsonRepository<T> : IRepository<T> where T : class, IEntity
+public class JsonRepository<T> : IRepository<T> where T : class, IKeyed, new()
 {
-     private readonly IJsonDirectory<T> _jsonDirectory;
+    private readonly JsonTable<T> _table;
 
-     public JsonRepository(IJsonDirectory<T> jsonDirectory)
-     {
-         _jsonDirectory = jsonDirectory;
-     }
+    public JsonRepository(JsonContext context)
+    {
+        _table = context.GetTable<T>();
+    }
 
-     public async Task<T> GetAsync(Guid id) => await _jsonDirectory.LoadAsync(id) ?? throw new FileNotFoundException($"No {typeof(T).Name} with id {id} found on disk");
+    public IQueryable<T> GetAll() => _table.GetAll()
+                                           .AsQueryable();
 
-     public async Task<IEnumerable<T>> GetAllAsync()
-     {
-         var list = new List<T>();
-         await foreach (var entity in _jsonDirectory.LoadAsync())
-         {
-             list.Add(entity);
-         }
-         return list;
-     }
+    public void Add(T entity) => _table.Save(entity.Id, entity);
 
-     public async Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate)
-     {
-         var list = new List<T>();
-         await foreach (var entity in _jsonDirectory.LoadAsync())
-         {
-             if (predicate.Compile().Invoke(entity))
-                    list.Add(entity);
-         }
-         return list;
-     }
+    public void Update(T entity) => _table.Save(entity.Id, entity);
 
-     public async Task AddAsync(T entity) => await _jsonDirectory.SaveAsync(entity);
+    public void Delete(Guid id) => _table.Delete(id);
 
-     public async Task RemoveAsync(T entity) => await _jsonDirectory.RemoveAsync(entity.Id);
+    public T? GetById(Guid id) => _table.Get(id);
 
-     public async Task UpdateAsync(T entity) => await _jsonDirectory.SaveAsync(entity);
+    public void SaveChanges()
+    {
+    }
 }

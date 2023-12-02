@@ -1,5 +1,4 @@
-﻿using System.IO.Abstractions;
-using AutoBogus;
+﻿using AutoBogus;
 using BenchmarkDotNet.Attributes;
 using BenchmarkDotNet.Loggers;
 
@@ -11,14 +10,11 @@ namespace Frank.Libraries.Tests.Benchmark.Json;
 public class JsonContextBenchmark
 {
     private const string TestFolder = "c:/tests";
-    private readonly IFileSystem _fileSystem;
     private readonly Guid _guid = Guid.NewGuid();
     // private JsonContext<JsonTestModel> _jsonContext;
 
     public JsonContextBenchmark()
     {
-        _fileSystem = new FileSystem();
-
         if (!Directory.Exists(TestFolder))
         {
             Directory.CreateDirectory(TestFolder);

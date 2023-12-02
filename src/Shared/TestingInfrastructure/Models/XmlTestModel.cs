@@ -1,8 +1,8 @@
-﻿using Frank.Libraries.DataStorage.Abstractions;
+﻿using Frank.Libraries.DataStorage;
 
 namespace TestingInfrastructure.Models;
 
-public class XmlTestModel : IEntity
+public class XmlTestModel : IKeyed
 {
     public string? Name { get; set; }
     public DateTime DateOfBirth { get; set; }
