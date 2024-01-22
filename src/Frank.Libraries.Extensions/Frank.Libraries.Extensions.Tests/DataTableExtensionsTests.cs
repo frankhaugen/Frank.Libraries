@@ -44,7 +44,7 @@ public class DataTableExtensionsTests
         var dataTable = items.ToDataTable();
 
         // Act
-        var result = dataTable.Pivot(dataTable.Columns[1], dataTable.Columns[3]);
+        var result = dataTable.Pivot(dataTable.Columns[1], dataTable.Columns[2]);
         _outputHelper.WriteTable(result.ToEnumerable<Currency>());
 
         // Assert

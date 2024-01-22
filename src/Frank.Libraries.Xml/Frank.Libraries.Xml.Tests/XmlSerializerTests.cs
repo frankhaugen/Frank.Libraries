@@ -17,7 +17,7 @@ public class XmlSerializerTests
     {
         // Arrange
         var xmlSerializer = new XmlSerializer();
-        var xmlTestModel = new XmlTestModel
+        var xmlTestModel = new InternalXmlSerializerTests.XmlTestModel
         {
             Name = "Frank",
             DateOfBirth = new DateTime(1990, 1, 1),
@@ -29,7 +29,7 @@ public class XmlSerializerTests
         var xml = xmlSerializer.Serialize(xmlTestModel);
         _outputHelper.WriteLine(xml);
 
-        var deserializedXmlTestModel = xmlSerializer.Deserialize<XmlTestModel>(xml);
+        var deserializedXmlTestModel = xmlSerializer.Deserialize<InternalXmlSerializerTests.XmlTestModel>(xml);
 
         // Assert
         Assert.NotNull(xml);

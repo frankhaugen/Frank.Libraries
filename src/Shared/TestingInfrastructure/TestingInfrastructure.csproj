@@ -26,7 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\Frank.Libraries.DataStorage\Frank.Libraries.DataStorage\Frank.Libraries.DataStorage.csproj"/>
         <ProjectReference Include="..\..\Frank.Libraries.Extensions\Frank.Libraries.Extensions\Frank.Libraries.Extensions.csproj"/>
         <ProjectReference Include="..\..\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb\Frank.Libraries.MongoDb.csproj"/>
     </ItemGroup>

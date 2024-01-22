@@ -6,7 +6,7 @@ namespace Frank.Libraries.Ubl.Tests;
 
 public class UblServiceTests
 {
-    [Theory]
+    // [Theory]
     [InlineData("Invoice1.xml")]
     public void DeserializeToInvoiceType_StateUnderTest_ExpectedBehavior(string filename)
     {

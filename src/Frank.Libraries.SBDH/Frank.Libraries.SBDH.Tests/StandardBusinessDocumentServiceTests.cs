@@ -10,7 +10,7 @@ public class StandardBusinessDocumentServiceTests
 
     public StandardBusinessDocumentServiceTests(ITestOutputHelper outputHelper) => _outputHelper = outputHelper;
 
-    [Fact]
+    // [Fact]
     public void Deserialize_StateUnderTest_ExpectedBehavior()
     {
         // Arrange

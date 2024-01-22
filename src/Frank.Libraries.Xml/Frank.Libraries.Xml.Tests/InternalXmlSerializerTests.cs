@@ -38,4 +38,11 @@ public class InternalXmlSerializerTests
         Assert.Equal(xmlTestModel.DateOfBirth, deserializedXmlTestModel.DateOfBirth);
     }
 
+    public class XmlTestModel
+    {
+        public string Name { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public int Salary { get; set; }
+        public Guid Id { get; set; }
+    }
 }

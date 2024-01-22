@@ -25,10 +25,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-<!--        <None Include="..\..\icon.png">-->
-<!--            <Pack>True</Pack>-->
-<!--            <PackagePath>icon.png</PackagePath>-->
-<!--        </None>-->
+        <None Include="..\..\icon.png" Condition="Exists('..\..\icon.png')">
+            <Pack>True</Pack>
+            <PackagePath>icon.png</PackagePath>
+        </None>
 <!--        <None Include="readme.md" Condition="Exists('readme.md')">-->
 <!--            <Pack>True</Pack>-->
 <!--            <PackagePath>\</PackagePath>-->

@@ -58,7 +58,7 @@ public static class ThrowRule
     private static string ToTitleCase<T>(this T source) where T : Exception
     {
         var sentenceCase = source.ToSentenceCase();
-        var textInfo = new CultureInfo("en-US", false).TextInfo;
+        var textInfo = CultureInfo.InvariantCulture.TextInfo;
         return textInfo.ToTitleCase(sentenceCase);
     }
 }

@@ -103,6 +103,7 @@ public enum CurrencyCode
     MNT,
     MOP,
     MRO,
+    MRU,
     MUR,
     MVR,
     MWK,

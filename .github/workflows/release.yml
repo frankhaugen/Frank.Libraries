@@ -1,32 +1,14 @@
-name: Release
+name: Release Workflow
 
 on:
   release:
-    branches: master
-    type: published
-    
+    types: [published]
+  workflow_dispatch:
+
 jobs:
-  nugets:
-    timeout-minutes: 10
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 7.0.x
-      - name: Set execution permissions for build.ps1
-        run: chmod +x build.ps1
-        working-directory: src
-      - name: Find Latest Tag
-        id: find
-        uses: oprypin/find-latest-tag@v1.0.4
-        with:
-          repository: ${{ github.repository }}
-          releases-only: true
-      - name: Build
-        run: pwsh build.ps1 -configuration Release -version ${{ steps.find.outputs.tag }}
-        working-directory: src
-      - name: Push NuGets
-        run: dotnet nuget push ".artifacts/packages/*.nupkg" -k ${{ secrets.NugetKey }} -s https://api.nuget.org/v3/index.json --skip-duplicate
-        working-directory: src
+  release_job:
+    name: Release Job
+    if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
+    uses: frankhaugen/Workflows/.github/workflows/dotnet-publish-release.yml@main
+    secrets: inherit
+    
