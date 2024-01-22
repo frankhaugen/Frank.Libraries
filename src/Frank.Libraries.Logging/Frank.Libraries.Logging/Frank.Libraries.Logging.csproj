@@ -11,7 +11,7 @@
         <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="7.0.13" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
         <PackageReference Include="RestSharp" Version="110.2.0" />
-        <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+        <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
         <PackageReference Include="xunit.abstractions" Version="2.0.3" />
     </ItemGroup>
     <ItemGroup>
