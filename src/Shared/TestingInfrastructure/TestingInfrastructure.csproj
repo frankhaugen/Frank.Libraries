@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <UsePropsFile>false</UsePropsFile>
     </PropertyGroup>
 
@@ -10,9 +10,7 @@
         <PackageReference Include="AutoBogus" Version="2.13.1"/>
         <PackageReference Include="AutoMapper" Version="12.0.1"/>
         <PackageReference Include="ConsoleTableExt" Version="3.2.0"/>
-        <PackageReference Include="ConsoleTables" Version="2.6.1" />
         <PackageReference Include="CsvHelper" Version="30.0.1"/>
-        <PackageReference Include="Divergic.Logging.Xunit" Version="4.2.0"/>
         <PackageReference Include="EntityFrameworkCoreMock.NSubstitute" Version="2.4.0"/>
         <PackageReference Include="Extensions.Configuration.Object" Version="1.1.0" />
         <PackageReference Include="FluentAssertions" Version="6.12.0" />
@@ -22,7 +20,6 @@
         <PackageReference Include="NSwag.CodeGeneration.CSharp" Version="13.20.0" />
         <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="19.2.69" />
         <PackageReference Include="Tortuga.TestMonkey" Version="0.3.0"/>
-        <PackageReference Include="VarDump" Version="0.2.6" />
     </ItemGroup>
 
     <ItemGroup>
