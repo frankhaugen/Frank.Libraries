@@ -6,11 +6,24 @@
     <AnalysisLevel>latest</AnalysisLevel>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
   </PropertyGroup>
+  <PropertyGroup Label="NuGet compatibility">
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);NU1504;NU1510;NU1603;NU1605;NU1608;NU1901;NU1902;NU1903;NU1904;NU1701</WarningsNotAsErrors>
+  </PropertyGroup>
+
   <PropertyGroup Label="Artifacts">
     <UseArtifactsOutput>true</UseArtifactsOutput>
     <ArtifactsPath>$(MSBuildThisFileDirectory)artifacts</ArtifactsPath>
   </PropertyGroup>
   <PropertyGroup Label="Continuous integration" Condition="'$(CI)' == 'true' Or '$(GITHUB_ACTIONS)' == 'true' Or '$(TF_BUILD)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nullable and legacy warnings">
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);CS0067;CS0108;CS0168;CS0219;CS0433;CS4014;CS1574;CS1717;CS8600;CS8601;CS8602;CS8603;CS8604;CS8618;CS8619;CS8620;CS8625;CS8629;CS8631;CS8632;CS8765;DV2001;RS1014</WarningsNotAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(MSBuildProjectDirectory.Contains('.Tests'))">
+    <NoWarn>$(NoWarn);CA1001;CA1051;CA1062;CA1707;CA1716;CA2007;CA2200;CA2234;xUnit1008;xUnit1013;xUnit1026</NoWarn>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
   </PropertyGroup>
 </Project>
