@@ -1,0 +1,13 @@
+﻿name: Auto release from signal
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  signal_release:
+    uses: frankhaugen/Workflows/.github/workflows/dotnet-auto-release-from-signal.yml@main
+    secrets: inherit
