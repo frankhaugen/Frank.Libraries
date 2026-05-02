@@ -1,4 +1,4 @@
-﻿name: Auto release from signal
+name: Release: signal
 
 on:
   push:
@@ -9,5 +9,6 @@ permissions:
 
 jobs:
   signal_release:
+    name: Release: signal
     uses: frankhaugen/Workflows/.github/workflows/dotnet-auto-release-from-signal.yml@main
     secrets: inherit

@@ -1,4 +1,4 @@
-name: Release Workflow
+name: Publish: NuGet
 
 on:
   release:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   release_job:
-    name: Release Job
+    name: Publish NuGet
     if: github.event_name == 'release' || github.event_name == 'workflow_dispatch'
     uses: frankhaugen/Workflows/.github/workflows/dotnet-publish-on-release.yml@main
     secrets: inherit
